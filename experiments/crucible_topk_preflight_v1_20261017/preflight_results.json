@@ -1,0 +1,222 @@
+{
+  "checkpoint_created": false,
+  "device": "cpu",
+  "optimizer_constructed": false,
+  "optimizer_step_count": 0,
+  "original_files_modified": false,
+  "probes": [
+    {
+      "d_ff": 6894,
+      "experts": 1,
+      "gradient_parameter_count": 59,
+      "layers": {
+        "layer_0_moe": {
+          "count_shape": [
+            1
+          ],
+          "expected_hard_assignment_count": 16,
+          "hard_assignment_count": 16,
+          "load_ratio": 1.0,
+          "normalized_entropy": 0.0,
+          "router_cv": 0.0,
+          "top_k": 1,
+          "valid_tokens": 16
+        },
+        "layer_1_moe": {
+          "count_shape": [
+            1
+          ],
+          "expected_hard_assignment_count": 16,
+          "hard_assignment_count": 16,
+          "load_ratio": 1.0,
+          "normalized_entropy": 0.0,
+          "router_cv": 0.0,
+          "top_k": 1,
+          "valid_tokens": 16
+        },
+        "layer_2_moe": {
+          "count_shape": [
+            1
+          ],
+          "expected_hard_assignment_count": 16,
+          "hard_assignment_count": 16,
+          "load_ratio": 1.0,
+          "normalized_entropy": 0.0,
+          "router_cv": 0.0,
+          "top_k": 1,
+          "valid_tokens": 16
+        },
+        "layer_3_moe": {
+          "count_shape": [
+            1
+          ],
+          "expected_hard_assignment_count": 16,
+          "hard_assignment_count": 16,
+          "load_ratio": 1.0,
+          "normalized_entropy": 0.0,
+          "router_cv": 0.0,
+          "top_k": 1,
+          "valid_tokens": 16
+        }
+      },
+      "logits_shape": [
+        2,
+        8,
+        259
+      ],
+      "loss": 0.3413711190223694,
+      "parameter_count": 21969664,
+      "parameter_digest_unchanged_without_optimizer": true,
+      "top_k": 1
+    },
+    {
+      "d_ff": 3447,
+      "experts": 2,
+      "gradient_parameter_count": 71,
+      "layers": {
+        "layer_0_moe": {
+          "count_shape": [
+            2
+          ],
+          "expected_hard_assignment_count": 32,
+          "hard_assignment_count": 32,
+          "load_ratio": 1.0,
+          "normalized_entropy": 0.9140126327855367,
+          "router_cv": 0.0,
+          "top_k": 2,
+          "valid_tokens": 16
+        },
+        "layer_1_moe": {
+          "count_shape": [
+            2
+          ],
+          "expected_hard_assignment_count": 32,
+          "hard_assignment_count": 32,
+          "load_ratio": 1.0,
+          "normalized_entropy": 0.8908331550708932,
+          "router_cv": 0.0,
+          "top_k": 2,
+          "valid_tokens": 16
+        },
+        "layer_2_moe": {
+          "count_shape": [
+            2
+          ],
+          "expected_hard_assignment_count": 32,
+          "hard_assignment_count": 32,
+          "load_ratio": 1.0,
+          "normalized_entropy": 0.8464344578958576,
+          "router_cv": 0.0,
+          "top_k": 2,
+          "valid_tokens": 16
+        },
+        "layer_3_moe": {
+          "count_shape": [
+            2
+          ],
+          "expected_hard_assignment_count": 32,
+          "hard_assignment_count": 32,
+          "load_ratio": 1.0,
+          "normalized_entropy": 0.9222256642763053,
+          "router_cv": 0.0,
+          "top_k": 2,
+          "valid_tokens": 16
+        }
+      },
+      "logits_shape": [
+        2,
+        8,
+        259
+      ],
+      "loss": 0.3445074260234833,
+      "parameter_count": 21970688,
+      "parameter_digest_unchanged_without_optimizer": true,
+      "top_k": 2
+    },
+    {
+      "d_ff": 3447,
+      "experts": 4,
+      "gradient_parameter_count": 95,
+      "layers": {
+        "layer_0_moe": {
+          "count_shape": [
+            4
+          ],
+          "expected_hard_assignment_count": 32,
+          "hard_assignment_count": 32,
+          "load_ratio": 1.6666666269302368,
+          "normalized_entropy": 0.9386627342152062,
+          "router_cv": 0.2282177358865738,
+          "top_k": 2,
+          "valid_tokens": 16
+        },
+        "layer_1_moe": {
+          "count_shape": [
+            4
+          ],
+          "expected_hard_assignment_count": 32,
+          "hard_assignment_count": 32,
+          "load_ratio": 2.200000047683716,
+          "normalized_entropy": 0.9260987996313063,
+          "router_cv": 0.36799004673957825,
+          "top_k": 2,
+          "valid_tokens": 16
+        },
+        "layer_2_moe": {
+          "count_shape": [
+            4
+          ],
+          "expected_hard_assignment_count": 32,
+          "hard_assignment_count": 32,
+          "load_ratio": 1.6666666269302368,
+          "normalized_entropy": 0.9129087622069855,
+          "router_cv": 0.20412415266036987,
+          "top_k": 2,
+          "valid_tokens": 16
+        },
+        "layer_3_moe": {
+          "count_shape": [
+            4
+          ],
+          "expected_hard_assignment_count": 32,
+          "hard_assignment_count": 32,
+          "load_ratio": 1.6666666269302368,
+          "normalized_entropy": 0.9155777609655329,
+          "router_cv": 0.20412415266036987,
+          "top_k": 2,
+          "valid_tokens": 16
+        }
+      },
+      "logits_shape": [
+        2,
+        8,
+        259
+      ],
+      "loss": 0.3464537262916565,
+      "parameter_count": 43151104,
+      "parameter_digest_unchanged_without_optimizer": true,
+      "top_k": 2
+    }
+  ],
+  "protocol": "crucible_generalized_topk_preflight_v1",
+  "reference_compatibility": {
+    "compatible_within_tolerance": true,
+    "generalized_parameter_count": 43151104,
+    "max_abs_logit_difference": 0.0,
+    "reference_parameter_count": 43151104
+  },
+  "small_E8_top2_forward": {
+    "finite": true,
+    "logits_shape": [
+      2,
+      8,
+      32
+    ],
+    "parameter_count": 109728
+  },
+  "source_hashes": {
+    "generalized_model_core_sha256": "0c5fe5f53663f6feca5938b3aaf6906d45ac786a7491c73535655ea9dae6bba3",
+    "reference_model_core_sha256": "94a2a3f54cbf8450990ef5ca3a46aa0bb61c9a2322c9255d9ee8ee35742ea577"
+  },
+  "training_started": false
+}

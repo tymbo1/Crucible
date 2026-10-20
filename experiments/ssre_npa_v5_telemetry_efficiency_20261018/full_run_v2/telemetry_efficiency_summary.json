@@ -1,0 +1,2535 @@
+{
+  "anchor_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+  "binary_report": {
+    "bytes": 204800000,
+    "load_ns": 260493431,
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/stories_train.bin",
+    "samples": 100000,
+    "sha256": "c8d6056d01f91ad391dba99a1b04d48e2b300829c5e6801d910249043bbebf88"
+  },
+  "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+  "context_root": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128",
+  "cuda_runtime": "13.0",
+  "deterministic_control": "torch deterministic algorithms warn_only; frozen CUDA telemetry bincount has no deterministic implementation",
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "equivalence": [
+    {
+      "candidate": "current_full",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 1
+    },
+    {
+      "candidate": "gpu_full_batched",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 1
+    },
+    {
+      "candidate": "minimal_scientific",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 1
+    },
+    {
+      "candidate": "buffered_full",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 1
+    },
+    {
+      "candidate": "current_full",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 2
+    },
+    {
+      "candidate": "gpu_full_batched",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 2
+    },
+    {
+      "candidate": "minimal_scientific",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 2
+    },
+    {
+      "candidate": "buffered_full",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 2
+    }
+  ],
+  "input_report": {
+    "candidate_plan_sha256": "e913a100e6e0fc4f270b5ae53f4f764b2fe8d584751e0f079af22acc003aca8e",
+    "exact_equivalence": true,
+    "prefix_batches": 32,
+    "reference_plan_sha256": "e913a100e6e0fc4f270b5ae53f4f764b2fe8d584751e0f079af22acc003aca8e"
+  },
+  "integrity": {
+    "all_full_telemetry_counters_pass": true,
+    "all_input_prefixes_exact": true,
+    "all_loss_tolerances_pass": true,
+    "all_model_state_equivalent": true,
+    "all_primary_telemetry_counters_pass": true,
+    "all_runs_finite": true
+  },
+  "limitations": [
+    "This is a short local engineering benchmark, not a scientific training run.",
+    "Reporting/JSON timing is outside the end-to-end step wall time, matching the frozen runner's checkpoint reporting boundary.",
+    "Buffered reporting is measured as deferred batched extraction/serialization; actual filesystem fsync is not placed in the GPU critical path here.",
+    "Profiler category labels cover forward attention and MoE modules; backward is reported as a measured total, while routing/indexing is summarized from profiled CUDA operators."
+  ],
+  "parameters": {
+    "context": 128,
+    "model_parameter_count": 170233600,
+    "num_experts": 16,
+    "repetitions": 2,
+    "timed_steps": 8,
+    "top_k": 2,
+    "warmup_steps": 2
+  },
+  "profiler": {
+    "attention_labeled_cuda_us": 10121.625999999995,
+    "backward_cuda_event_us": 224476.25732421875,
+    "backward_record_function_cuda_us": 11.168000000005122,
+    "moe_labeled_cuda_us": 163447.49000000017,
+    "optimizer_cuda_event_us": 48426.07879638672,
+    "optimizer_record_function_cuda_us": 40647.09299999935,
+    "profile_scope": "one disposable batch, forward + backward + optimizer",
+    "routing_indexing_ops": {
+      "TopkBackward0": 262.4220000006608,
+      "aten::_index_put_impl_": 18133.370000000563,
+      "aten::bincount": 372.0599999999431,
+      "aten::gather": 19.711999999990667,
+      "aten::index_add_": 186.97499999986576,
+      "aten::index_put": 4872.872000000061,
+      "aten::index_put_": 9618.547000000153,
+      "aten::scatter_": 254.45400000055088,
+      "aten::topk": 52.128000000003794,
+      "autograd::engine::evaluate_function: TopkBackward0": 262.4220000006608,
+      "void at::native::_scatter_gather_elementwise_kernel<128, 8, at::native::_cuda_scatter_gather_internal_kernel<false, at::native::OpaqueType<4>, long>::operator()<at::native::TensorAssign>(at::TensorIterator&, long, long, long, at::native::TensorAssign const&)::{lambda(int)#1}>(int, at::native::_cuda_scatter_gather_internal_kernel<false, at::native::OpaqueType<4>, long>::operator()<at::native::TensorAssign>(at::TensorIterator&, long, long, long, at::native::TensorAssign const&)::{lambda(int)#1})": 17.663999999990665,
+      "void at::native::sbtopk::gatherTopK<float, unsigned int, 2, false>(at::cuda::detail::TensorInfo<float const, unsigned int>, unsigned int, unsigned int, bool, unsigned int, unsigned int, at::cuda::detail::TensorInfo<float, unsigned int>, unsigned int, at::cuda::detail::TensorInfo<long, unsigned int>, unsigned int, float*)": 31.07300000000305,
+      "void at::native::vectorized_gather_kernel<16, long>(char*, char*, long*, int, long, long, long, long, bool)": 528.1190000000449
+    },
+    "routing_indexing_ops_cuda_us": 34611.818000002495,
+    "top_cuda_ops": [
+      {
+        "cuda_us": 150876.49300000002,
+        "op": "forward_total",
+        "self_cuda_us": 150876.49300000002
+      },
+      {
+        "cuda_us": 42382.24200000003,
+        "op": "Optimizer.step#AdamW.step",
+        "self_cuda_us": 42382.24200000003
+      },
+      {
+        "cuda_us": 35875.130999999994,
+        "op": "moe_layer_2",
+        "self_cuda_us": 35875.130999999994
+      },
+      {
+        "cuda_us": 35690.459,
+        "op": "moe_layer_1",
+        "self_cuda_us": 35690.459
+      },
+      {
+        "cuda_us": 34472.255,
+        "op": "moe_layer_0",
+        "self_cuda_us": 34472.255
+      },
+      {
+        "cuda_us": 33792.22600000001,
+        "op": "moe_layer_3",
+        "self_cuda_us": 33792.22600000001
+      },
+      {
+        "cuda_us": 21316.63100000019,
+        "op": "aten::mm",
+        "self_cuda_us": 21316.63100000019
+      },
+      {
+        "cuda_us": 17971.031000002084,
+        "op": "aten::fill_",
+        "self_cuda_us": 17969.880000002086
+      },
+      {
+        "cuda_us": 11106.220000000427,
+        "op": "void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<float>, std::array<char*, 1ul> >(int, at::native::FillFunctor<float>, std::array<char*, 1ul>)",
+        "self_cuda_us": 11106.220000000427
+      },
+      {
+        "cuda_us": 7846.629000000118,
+        "op": "aten::copy_",
+        "self_cuda_us": 7846.629000000118
+      },
+      {
+        "cuda_us": 7294.053000000014,
+        "op": "aten::_foreach_mul_",
+        "self_cuda_us": 7294.053000000014
+      },
+      {
+        "cuda_us": 7183.435999999871,
+        "op": "void cutlass::Kernel2<cutlass_75_wmma_tensorop_bf16_s161616gemm_bf16_32x32_32x1_nn_align1>(cutlass_75_wmma_tensorop_bf16_s161616gemm_bf16_32x32_32x1_nn_align1::Params)",
+        "self_cuda_us": 7183.435999999871
+      },
+      {
+        "cuda_us": 7998.699000001494,
+        "op": "aten::nonzero",
+        "self_cuda_us": 5773.866000001086
+      },
+      {
+        "cuda_us": 5353.900000000023,
+        "op": "optimizer_total",
+        "self_cuda_us": 5353.900000000023
+      },
+      {
+        "cuda_us": 5344.600000001543,
+        "op": "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<long>, std::array<char*, 1ul> >(int, at::native::FillFunctor<long>, std::array<char*, 1ul>)",
+        "self_cuda_us": 5344.600000001543
+      },
+      {
+        "cuda_us": 4865.805999999982,
+        "op": "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListMetadata<1>, at::native::(anonymous namespace)::BinaryOpScalarFunctor<float, 1, 1, 0>, std::multiplies<float>, float>(at::native::(anonymous namespace)::TensorListMetadata<1>, at::native::(anonymous namespace)::BinaryOpScalarFunctor<float, 1, 1, 0>, std::multiplies<float>, float)",
+        "self_cuda_us": 4865.805999999982
+      },
+      {
+        "cuda_us": 4786.093999999983,
+        "op": "aten::_foreach_addcdiv_",
+        "self_cuda_us": 4786.093999999983
+      },
+      {
+        "cuda_us": 4786.093999999983,
+        "op": "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 3>, at::native::(anonymous namespace)::PointwiseOpScalarListFunctor<float, 3, 3, 0>, std::divides<float> >(at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 3>, at::native::(anonymous namespace)::PointwiseOpScalarListFunctor<float, 3, 3, 0>, std::divides<float>)",
+        "self_cuda_us": 4786.093999999983
+      },
+      {
+        "cuda_us": 18133.370000000563,
+        "op": "aten::_index_put_impl_",
+        "self_cuda_us": 4170.526999999663
+      },
+      {
+        "cuda_us": 4006.992999999716,
+        "op": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+        "self_cuda_us": 4006.992999999716
+      },
+      {
+        "cuda_us": 3795.571000000101,
+        "op": "void cutlass::Kernel2<cutlass_75_wmma_tensorop_bf16_s161616gemm_bf16_32x32_32x1_tn_align1>(cutlass_75_wmma_tensorop_bf16_s161616gemm_bf16_32x32_32x1_tn_align1::Params)",
+        "self_cuda_us": 3795.571000000101
+      },
+      {
+        "cuda_us": 3649.331000000064,
+        "op": "aten::_foreach_addcmul_",
+        "self_cuda_us": 3649.331000000064
+      },
+      {
+        "cuda_us": 3649.331000000064,
+        "op": "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListMetadata<3>, at::native::(anonymous namespace)::PointwiseOpScalarFunctor<float, 3, 3, 0>, std::multiplies<float>, float>(at::native::(anonymous namespace)::TensorListMetadata<3>, at::native::(anonymous namespace)::PointwiseOpScalarFunctor<float, 3, 3, 0>, std::multiplies<float>, float)",
+        "self_cuda_us": 3649.331000000064
+      },
+      {
+        "cuda_us": 3607.728999999992,
+        "op": "aten::_foreach_lerp_",
+        "self_cuda_us": 3607.728999999992
+      },
+      {
+        "cuda_us": 3607.728999999992,
+        "op": "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListMetadata<2>, at::native::(anonymous namespace)::TernaryOpScalarFunctor<float, 2, 2, 0>, at::native::LerpFunctor<float>, float>(at::native::(anonymous namespace)::TensorListMetadata<2>, at::native::(anonymous namespace)::TernaryOpScalarFunctor<float, 2, 2, 0>, at::native::LerpFunctor<float>, float)",
+        "self_cuda_us": 3607.728999999992
+      }
+    ]
+  },
+  "runs": [
+    {
+      "backend": "baseline_off",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "38cb4577f504b69590ed04310e41ef274df5d16fb4234547646bd929c88a7e7f",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3421638656,
+      "peak_cuda_reserved_bytes": 4263510016,
+      "phase_sums": {
+        "backward_cuda_event_ns": 7223465984,
+        "backward_host_ns": 7224662260,
+        "cpu_batch_prepare_ns": 10721685,
+        "forward_cuda_event_ns": 4639069094,
+        "forward_host_ns": 4641100334,
+        "h2d_ns": 5707575,
+        "non_compute_ns_proxy": 293760916,
+        "optimizer_ns": 500046075,
+        "wall_ns": 12156295994
+      },
+      "repetition": 1,
+      "report_json_ns": 0,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": null,
+      "telemetry": false,
+      "telemetry_finalize_ns": 0,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 869891331,
+          "backward_host_ns": 870032462,
+          "cpu_batch_prepare_ns": 1317716,
+          "forward_cuda_event_ns": 553428121,
+          "forward_host_ns": 553604411,
+          "h2d_ns": 636618,
+          "loss_values": [
+            0.4810226261615753,
+            0.5110329389572144,
+            0.4836297333240509,
+            0.5004774928092957,
+            0.468336820602417,
+            0.5462911128997803,
+            0.5913745164871216,
+            0.4558742940425873
+          ],
+          "non_compute_ns_proxy": 36670158,
+          "optimizer_ns": 62831936,
+          "phase": "timed",
+          "step": 3,
+          "wall_ns": 1459989610
+        },
+        {
+          "backward_cuda_event_ns": 853310779,
+          "backward_host_ns": 853451130,
+          "cpu_batch_prepare_ns": 1321815,
+          "forward_cuda_event_ns": 547366650,
+          "forward_host_ns": 547540883,
+          "h2d_ns": 637258,
+          "loss_values": [
+            0.5461578965187073,
+            0.4373478293418884,
+            0.4305388927459717,
+            0.497444748878479,
+            0.529654324054718,
+            0.5024217367172241,
+            0.47065573930740356,
+            0.2915396988391876
+          ],
+          "non_compute_ns_proxy": 36482382,
+          "optimizer_ns": 62611898,
+          "phase": "timed",
+          "step": 4,
+          "wall_ns": 1437159811
+        },
+        {
+          "backward_cuda_event_ns": 939872759,
+          "backward_host_ns": 940031868,
+          "cpu_batch_prepare_ns": 1333298,
+          "forward_cuda_event_ns": 605729787,
+          "forward_host_ns": 605927741,
+          "h2d_ns": 829295,
+          "loss_values": [
+            0.4903397560119629,
+            0.48205262422561646,
+            0.3989757001399994,
+            0.35195550322532654,
+            0.3569839298725128,
+            0.419217586517334,
+            0.41389989852905273,
+            0.41012606024742126,
+            0.12171880900859833
+          ],
+          "non_compute_ns_proxy": 37420767,
+          "optimizer_ns": 63715614,
+          "phase": "timed",
+          "step": 5,
+          "wall_ns": 1583023313
+        },
+        {
+          "backward_cuda_event_ns": 852936153,
+          "backward_host_ns": 853075064,
+          "cpu_batch_prepare_ns": 1263756,
+          "forward_cuda_event_ns": 543602367,
+          "forward_host_ns": 544314860,
+          "h2d_ns": 802820,
+          "loss_values": [
+            0.4664129316806793,
+            0.4120512902736664,
+            0.33326616883277893,
+            0.3979140818119049,
+            0.36760541796684265,
+            0.4265408217906952,
+            0.40900692343711853,
+            0.4712596833705902
+          ],
+          "non_compute_ns_proxy": 37193701,
+          "optimizer_ns": 62421968,
+          "phase": "timed",
+          "step": 6,
+          "wall_ns": 1433732221
+        },
+        {
+          "backward_cuda_event_ns": 952850489,
+          "backward_host_ns": 953010736,
+          "cpu_batch_prepare_ns": 1301305,
+          "forward_cuda_event_ns": 619032393,
+          "forward_host_ns": 619237292,
+          "h2d_ns": 723088,
+          "loss_values": [
+            0.3107675313949585,
+            0.40530893206596375,
+            0.426129549741745,
+            0.4369398057460785,
+            0.4740428030490875,
+            0.43894484639167786,
+            0.333739310503006,
+            0.318233460187912,
+            0.08890889585018158
+          ],
+          "non_compute_ns_proxy": 36234434,
+          "optimizer_ns": 61611430,
+          "phase": "timed",
+          "step": 7,
+          "wall_ns": 1608117316
+        },
+        {
+          "backward_cuda_event_ns": 949871036,
+          "backward_host_ns": 950032675,
+          "cpu_batch_prepare_ns": 1386994,
+          "forward_cuda_event_ns": 608241816,
+          "forward_host_ns": 608438044,
+          "h2d_ns": 715318,
+          "loss_values": [
+            0.4654633104801178,
+            0.39511963725090027,
+            0.38204988837242126,
+            0.3725963234901428,
+            0.3932628035545349,
+            0.32469773292541504,
+            0.2900402545928955,
+            0.4066445827484131,
+            0.08960138261318207
+          ],
+          "non_compute_ns_proxy": 36963414,
+          "optimizer_ns": 62878858,
+          "phase": "timed",
+          "step": 8,
+          "wall_ns": 1595076266
+        },
+        {
+          "backward_cuda_event_ns": 965414241,
+          "backward_host_ns": 965570668,
+          "cpu_batch_prepare_ns": 1491224,
+          "forward_cuda_event_ns": 620528675,
+          "forward_host_ns": 620724543,
+          "h2d_ns": 741958,
+          "loss_values": [
+            0.33023160696029663,
+            0.3836813271045685,
+            0.38939324021339417,
+            0.30621063709259033,
+            0.3975699841976166,
+            0.3524143397808075,
+            0.34583044052124023,
+            0.3639387786388397,
+            0.19956143200397491
+          ],
+          "non_compute_ns_proxy": 36800956,
+          "optimizer_ns": 62280269,
+          "phase": "timed",
+          "step": 9,
+          "wall_ns": 1622743872
+        },
+        {
+          "backward_cuda_event_ns": 839319196,
+          "backward_host_ns": 839457657,
+          "cpu_batch_prepare_ns": 1305577,
+          "forward_cuda_event_ns": 541139285,
+          "forward_host_ns": 541312560,
+          "h2d_ns": 621220,
+          "loss_values": [
+            0.3612597584724426,
+            0.36992117762565613,
+            0.38012799620628357,
+            0.3682501018047333,
+            0.43601956963539124,
+            0.4267146587371826,
+            0.40813595056533813,
+            0.21886679530143738
+          ],
+          "non_compute_ns_proxy": 35995104,
+          "optimizer_ns": 61694102,
+          "phase": "timed",
+          "step": 10,
+          "wall_ns": 1416453585
+        }
+      ],
+      "total_wall_ns": 15526838015
+    },
+    {
+      "backend": "current_full",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "38cb4577f504b69590ed04310e41ef274df5d16fb4234547646bd929c88a7e7f",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3421825536,
+      "peak_cuda_reserved_bytes": 4263510016,
+      "phase_sums": {
+        "backward_cuda_event_ns": 7228685634,
+        "backward_host_ns": 7229897080,
+        "cpu_batch_prepare_ns": 11125808,
+        "forward_cuda_event_ns": 6065154507,
+        "forward_host_ns": 6066655946,
+        "h2d_ns": 5428059,
+        "non_compute_ns_proxy": 291768781,
+        "optimizer_ns": 496706159,
+        "wall_ns": 13585608922
+      },
+      "repetition": 1,
+      "report_json_ns": 3167160,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "3356798b3261fb63d941178aceeab45931bde43d19befcf489dd9448ba55d30b",
+      "telemetry": true,
+      "telemetry_finalize_ns": 1872374,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 863702915,
+          "backward_host_ns": 863845650,
+          "cpu_batch_prepare_ns": 1362696,
+          "forward_cuda_event_ns": 723251065,
+          "forward_host_ns": 723424449,
+          "h2d_ns": 666817,
+          "loss_values": [
+            0.4810226261615753,
+            0.5110329389572144,
+            0.4836297333240509,
+            0.5004774928092957,
+            0.468336820602417,
+            0.5462911128997803,
+            0.5913745164871216,
+            0.4558742940425873
+          ],
+          "non_compute_ns_proxy": 36466990,
+          "optimizer_ns": 62282959,
+          "phase": "timed",
+          "step": 3,
+          "wall_ns": 1623420970
+        },
+        {
+          "backward_cuda_event_ns": 853288288,
+          "backward_host_ns": 853425782,
+          "cpu_batch_prepare_ns": 1311376,
+          "forward_cuda_event_ns": 716251163,
+          "forward_host_ns": 716424651,
+          "h2d_ns": 628810,
+          "loss_values": [
+            0.5461578965187073,
+            0.4373478293418884,
+            0.4305388927459717,
+            0.497444748878479,
+            0.529654324054718,
+            0.5024217367172241,
+            0.47065573930740356,
+            0.2915396988391876
+          ],
+          "non_compute_ns_proxy": 36393343,
+          "optimizer_ns": 62467210,
+          "phase": "timed",
+          "step": 4,
+          "wall_ns": 1605932794
+        },
+        {
+          "backward_cuda_event_ns": 942531840,
+          "backward_host_ns": 942697537,
+          "cpu_batch_prepare_ns": 1406946,
+          "forward_cuda_event_ns": 790237628,
+          "forward_host_ns": 790431206,
+          "h2d_ns": 706628,
+          "loss_values": [
+            0.4903397560119629,
+            0.48205262422561646,
+            0.3989757001399994,
+            0.35195550322532654,
+            0.3569839298725128,
+            0.419217586517334,
+            0.41389989852905273,
+            0.41012606024742126,
+            0.12171880900859833
+          ],
+          "non_compute_ns_proxy": 36353404,
+          "optimizer_ns": 61599680,
+          "phase": "timed",
+          "step": 5,
+          "wall_ns": 1769122872
+        },
+        {
+          "backward_cuda_event_ns": 853502231,
+          "backward_host_ns": 853641932,
+          "cpu_batch_prepare_ns": 1336466,
+          "forward_cuda_event_ns": 717406040,
+          "forward_host_ns": 717591628,
+          "h2d_ns": 627647,
+          "loss_values": [
+            0.4664129316806793,
+            0.4120512902736664,
+            0.33326616883277893,
+            0.3979140818119049,
+            0.36760541796684265,
+            0.4265408217906952,
+            0.40900692343711853,
+            0.4712596833705902
+          ],
+          "non_compute_ns_proxy": 36304518,
+          "optimizer_ns": 62206250,
+          "phase": "timed",
+          "step": 6,
+          "wall_ns": 1607212789
+        },
+        {
+          "backward_cuda_event_ns": 951631252,
+          "backward_host_ns": 951793900,
+          "cpu_batch_prepare_ns": 1420856,
+          "forward_cuda_event_ns": 802518521,
+          "forward_host_ns": 802713246,
+          "h2d_ns": 711968,
+          "loss_values": [
+            0.3107675313949585,
+            0.40530893206596375,
+            0.426129549741745,
+            0.4369398057460785,
+            0.4740428030490875,
+            0.43894484639167786,
+            0.333739310503006,
+            0.318233460187912,
+            0.08890889585018158
+          ],
+          "non_compute_ns_proxy": 36425724,
+          "optimizer_ns": 61657091,
+          "phase": "timed",
+          "step": 7,
+          "wall_ns": 1790575497
+        },
+        {
+          "backward_cuda_event_ns": 950910105,
+          "backward_host_ns": 951070823,
+          "cpu_batch_prepare_ns": 1402445,
+          "forward_cuda_event_ns": 796148218,
+          "forward_host_ns": 796343847,
+          "h2d_ns": 706457,
+          "loss_values": [
+            0.4654633104801178,
+            0.39511963725090027,
+            0.38204988837242126,
+            0.3725963234901428,
+            0.3932628035545349,
+            0.32469773292541504,
+            0.2900402545928955,
+            0.4066445827484131,
+            0.08960138261318207
+          ],
+          "non_compute_ns_proxy": 36616295,
+          "optimizer_ns": 62239308,
+          "phase": "timed",
+          "step": 8,
+          "wall_ns": 1783674618
+        },
+        {
+          "backward_cuda_event_ns": 970676159,
+          "backward_host_ns": 970838742,
+          "cpu_batch_prepare_ns": 1578604,
+          "forward_cuda_event_ns": 809154422,
+          "forward_host_ns": 809355547,
+          "h2d_ns": 738038,
+          "loss_values": [
+            0.33023160696029663,
+            0.3836813271045685,
+            0.38939324021339417,
+            0.30621063709259033,
+            0.3975699841976166,
+            0.3524143397808075,
+            0.34583044052124023,
+            0.3639387786388397,
+            0.19956143200397491
+          ],
+          "non_compute_ns_proxy": 37056485,
+          "optimizer_ns": 62368270,
+          "phase": "timed",
+          "step": 9,
+          "wall_ns": 1816887066
+        },
+        {
+          "backward_cuda_event_ns": 842442844,
+          "backward_host_ns": 842582714,
+          "cpu_batch_prepare_ns": 1306419,
+          "forward_cuda_event_ns": 710187450,
+          "forward_host_ns": 710371372,
+          "h2d_ns": 641694,
+          "loss_values": [
+            0.3612597584724426,
+            0.36992117762565613,
+            0.38012799620628357,
+            0.3682501018047333,
+            0.43601956963539124,
+            0.4267146587371826,
+            0.40813595056533813,
+            0.21886679530143738
+          ],
+          "non_compute_ns_proxy": 36152022,
+          "optimizer_ns": 61885391,
+          "phase": "timed",
+          "step": 10,
+          "wall_ns": 1588782316
+        }
+      ],
+      "total_wall_ns": 17095764052
+    },
+    {
+      "backend": "gpu_full_batched",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "38cb4577f504b69590ed04310e41ef274df5d16fb4234547646bd929c88a7e7f",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3422110208,
+      "peak_cuda_reserved_bytes": 4263510016,
+      "phase_sums": {
+        "backward_cuda_event_ns": 7275333302,
+        "backward_host_ns": 7276547284,
+        "cpu_batch_prepare_ns": 11497559,
+        "forward_cuda_event_ns": 5366050840,
+        "forward_host_ns": 5367535927,
+        "h2d_ns": 5448734,
+        "non_compute_ns_proxy": 292711499,
+        "optimizer_ns": 497498745,
+        "wall_ns": 12934095641
+      },
+      "repetition": 1,
+      "report_json_ns": 3967678,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "5c74e41da713ff63ae710f400ca7a2cad343e0453484c97e158f586ff4bfa06f",
+      "telemetry": true,
+      "telemetry_finalize_ns": 1679075,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 903171040,
+          "backward_host_ns": 903316678,
+          "cpu_batch_prepare_ns": 1504264,
+          "forward_cuda_event_ns": 648850323,
+          "forward_host_ns": 649022908,
+          "h2d_ns": 648708,
+          "loss_values": [
+            0.4810226261615753,
+            0.5110329389572144,
+            0.4836297333240509,
+            0.5004774928092957,
+            0.468336820602417,
+            0.5462911128997803,
+            0.5913745164871216,
+            0.4558742940425873
+          ],
+          "non_compute_ns_proxy": 36534503,
+          "optimizer_ns": 62138449,
+          "phase": "timed",
+          "step": 3,
+          "wall_ns": 1588555866
+        },
+        {
+          "backward_cuda_event_ns": 855595173,
+          "backward_host_ns": 855736895,
+          "cpu_batch_prepare_ns": 1355716,
+          "forward_cuda_event_ns": 630206423,
+          "forward_host_ns": 630375675,
+          "h2d_ns": 632128,
+          "loss_values": [
+            0.5461578965187073,
+            0.4373478293418884,
+            0.4305388927459717,
+            0.497444748878479,
+            0.529654324054718,
+            0.5024217367172241,
+            0.47065573930740356,
+            0.2915396988391876
+          ],
+          "non_compute_ns_proxy": 36230295,
+          "optimizer_ns": 62141900,
+          "phase": "timed",
+          "step": 4,
+          "wall_ns": 1522031891
+        },
+        {
+          "backward_cuda_event_ns": 944337497,
+          "backward_host_ns": 944504353,
+          "cpu_batch_prepare_ns": 1529408,
+          "forward_cuda_event_ns": 698666049,
+          "forward_host_ns": 698860428,
+          "h2d_ns": 743827,
+          "loss_values": [
+            0.4903397560119629,
+            0.48205262422561646,
+            0.3989757001399994,
+            0.35195550322532654,
+            0.3569839298725128,
+            0.419217586517334,
+            0.41389989852905273,
+            0.41012606024742126,
+            0.12171880900859833
+          ],
+          "non_compute_ns_proxy": 36174473,
+          "optimizer_ns": 60862084,
+          "phase": "timed",
+          "step": 5,
+          "wall_ns": 1679178019
+        },
+        {
+          "backward_cuda_event_ns": 855659167,
+          "backward_host_ns": 855801213,
+          "cpu_batch_prepare_ns": 1323639,
+          "forward_cuda_event_ns": 633924642,
+          "forward_host_ns": 634105337,
+          "h2d_ns": 619218,
+          "loss_values": [
+            0.4664129316806793,
+            0.4120512902736664,
+            0.33326616883277893,
+            0.3979140818119049,
+            0.36760541796684265,
+            0.4265408217906952,
+            0.40900692343711853,
+            0.4712596833705902
+          ],
+          "non_compute_ns_proxy": 36730368,
+          "optimizer_ns": 62865376,
+          "phase": "timed",
+          "step": 6,
+          "wall_ns": 1526314177
+        },
+        {
+          "backward_cuda_event_ns": 953327570,
+          "backward_host_ns": 953490754,
+          "cpu_batch_prepare_ns": 1493375,
+          "forward_cuda_event_ns": 716113308,
+          "forward_host_ns": 716317073,
+          "h2d_ns": 723817,
+          "loss_values": [
+            0.3107675313949585,
+            0.40530893206596375,
+            0.426129549741745,
+            0.4369398057460785,
+            0.4740428030490875,
+            0.43894484639167786,
+            0.333739310503006,
+            0.318233460187912,
+            0.08890889585018158
+          ],
+          "non_compute_ns_proxy": 36443809,
+          "optimizer_ns": 61336242,
+          "phase": "timed",
+          "step": 7,
+          "wall_ns": 1705884687
+        },
+        {
+          "backward_cuda_event_ns": 950660570,
+          "backward_host_ns": 950817115,
+          "cpu_batch_prepare_ns": 1449747,
+          "forward_cuda_event_ns": 701981334,
+          "forward_host_ns": 702176886,
+          "h2d_ns": 735618,
+          "loss_values": [
+            0.4654633104801178,
+            0.39511963725090027,
+            0.38204988837242126,
+            0.3725963234901428,
+            0.3932628035545349,
+            0.32469773292541504,
+            0.2900402545928955,
+            0.4066445827484131,
+            0.08960138261318207
+          ],
+          "non_compute_ns_proxy": 36850603,
+          "optimizer_ns": 62435159,
+          "phase": "timed",
+          "step": 8,
+          "wall_ns": 1689492507
+        },
+        {
+          "backward_cuda_event_ns": 971022640,
+          "backward_host_ns": 971180610,
+          "cpu_batch_prepare_ns": 1523136,
+          "forward_cuda_event_ns": 712356639,
+          "forward_host_ns": 712552676,
+          "h2d_ns": 721668,
+          "loss_values": [
+            0.33023160696029663,
+            0.3836813271045685,
+            0.38939324021339417,
+            0.30621063709259033,
+            0.3975699841976166,
+            0.3524143397808075,
+            0.34583044052124023,
+            0.3639387786388397,
+            0.19956143200397491
+          ],
+          "non_compute_ns_proxy": 37426892,
+          "optimizer_ns": 63413646,
+          "phase": "timed",
+          "step": 9,
+          "wall_ns": 1720806171
+        },
+        {
+          "backward_cuda_event_ns": 841559645,
+          "backward_host_ns": 841699666,
+          "cpu_batch_prepare_ns": 1318274,
+          "forward_cuda_event_ns": 623952122,
+          "forward_host_ns": 624124944,
+          "h2d_ns": 623750,
+          "loss_values": [
+            0.3612597584724426,
+            0.36992117762565613,
+            0.38012799620628357,
+            0.3682501018047333,
+            0.43601956963539124,
+            0.4267146587371826,
+            0.40813595056533813,
+            0.21886679530143738
+          ],
+          "non_compute_ns_proxy": 36320556,
+          "optimizer_ns": 62305889,
+          "phase": "timed",
+          "step": 10,
+          "wall_ns": 1501832323
+        }
+      ],
+      "total_wall_ns": 16254038404
+    },
+    {
+      "backend": "minimal_scientific",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "38cb4577f504b69590ed04310e41ef274df5d16fb4234547646bd929c88a7e7f",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3422253568,
+      "peak_cuda_reserved_bytes": 4265607168,
+      "phase_sums": {
+        "backward_cuda_event_ns": 7228632823,
+        "backward_host_ns": 7229848041,
+        "cpu_batch_prepare_ns": 11095927,
+        "forward_cuda_event_ns": 4767986297,
+        "forward_host_ns": 4769496532,
+        "h2d_ns": 5526113,
+        "non_compute_ns_proxy": 292662119,
+        "optimizer_ns": 497987144,
+        "wall_ns": 12289281239
+      },
+      "repetition": 1,
+      "report_json_ns": 2139153,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "70a98099e0e04383b69fe436a4c19dc9d0c157ea1bd26955e4ba8a8a91fcc9aa",
+      "telemetry": true,
+      "telemetry_finalize_ns": 797148,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 862867229,
+          "backward_host_ns": 863008332,
+          "cpu_batch_prepare_ns": 1374905,
+          "forward_cuda_event_ns": 565350467,
+          "forward_host_ns": 565524595,
+          "h2d_ns": 632328,
+          "loss_values": [
+            0.4810226261615753,
+            0.5110329389572144,
+            0.4836297333240509,
+            0.5004774928092957,
+            0.468336820602417,
+            0.5462911128997803,
+            0.5913745164871216,
+            0.4558742940425873
+          ],
+          "non_compute_ns_proxy": 36426561,
+          "optimizer_ns": 62138730,
+          "phase": "timed",
+          "step": 3,
+          "wall_ns": 1464644257
+        },
+        {
+          "backward_cuda_event_ns": 854991680,
+          "backward_host_ns": 855134366,
+          "cpu_batch_prepare_ns": 1334886,
+          "forward_cuda_event_ns": 564470683,
+          "forward_host_ns": 564650967,
+          "h2d_ns": 636537,
+          "loss_values": [
+            0.5461578965187073,
+            0.4373478293418884,
+            0.4305388927459717,
+            0.497444748878479,
+            0.529654324054718,
+            0.5024217367172241,
+            0.47065573930740356,
+            0.2915396988391876
+          ],
+          "non_compute_ns_proxy": 36540750,
+          "optimizer_ns": 62386848,
+          "phase": "timed",
+          "step": 4,
+          "wall_ns": 1456003113
+        },
+        {
+          "backward_cuda_event_ns": 941890360,
+          "backward_host_ns": 942047848,
+          "cpu_batch_prepare_ns": 1445753,
+          "forward_cuda_event_ns": 625376795,
+          "forward_host_ns": 625575261,
+          "h2d_ns": 727270,
+          "loss_values": [
+            0.4903397560119629,
+            0.48205262422561646,
+            0.3989757001399994,
+            0.35195550322532654,
+            0.3569839298725128,
+            0.419217586517334,
+            0.41389989852905273,
+            0.41012606024742126,
+            0.12171880900859833
+          ],
+          "non_compute_ns_proxy": 36593085,
+          "optimizer_ns": 61879390,
+          "phase": "timed",
+          "step": 5,
+          "wall_ns": 1603860240
+        },
+        {
+          "backward_cuda_event_ns": 856674946,
+          "backward_host_ns": 856830312,
+          "cpu_batch_prepare_ns": 1365218,
+          "forward_cuda_event_ns": 566354022,
+          "forward_host_ns": 566545022,
+          "h2d_ns": 654599,
+          "loss_values": [
+            0.4664129316806793,
+            0.4120512902736664,
+            0.33326616883277893,
+            0.3979140818119049,
+            0.36760541796684265,
+            0.4265408217906952,
+            0.40900692343711853,
+            0.4712596833705902
+          ],
+          "non_compute_ns_proxy": 36803704,
+          "optimizer_ns": 63019508,
+          "phase": "timed",
+          "step": 6,
+          "wall_ns": 1459832672
+        },
+        {
+          "backward_cuda_event_ns": 948286235,
+          "backward_host_ns": 948445412,
+          "cpu_batch_prepare_ns": 1348257,
+          "forward_cuda_event_ns": 625452007,
+          "forward_host_ns": 625636511,
+          "h2d_ns": 821377,
+          "loss_values": [
+            0.3107675313949585,
+            0.40530893206596375,
+            0.426129549741745,
+            0.4369398057460785,
+            0.4740428030490875,
+            0.43894484639167786,
+            0.333739310503006,
+            0.318233460187912,
+            0.08890889585018158
+          ],
+          "non_compute_ns_proxy": 36290989,
+          "optimizer_ns": 61643402,
+          "phase": "timed",
+          "step": 7,
+          "wall_ns": 1610029231
+        },
+        {
+          "backward_cuda_event_ns": 951036160,
+          "backward_host_ns": 951196293,
+          "cpu_batch_prepare_ns": 1412755,
+          "forward_cuda_event_ns": 629930270,
+          "forward_host_ns": 630131608,
+          "h2d_ns": 711058,
+          "loss_values": [
+            0.4654633104801178,
+            0.39511963725090027,
+            0.38204988837242126,
+            0.3725963234901428,
+            0.3932628035545349,
+            0.32469773292541504,
+            0.2900402545928955,
+            0.4066445827484131,
+            0.08960138261318207
+          ],
+          "non_compute_ns_proxy": 36908406,
+          "optimizer_ns": 62669077,
+          "phase": "timed",
+          "step": 8,
+          "wall_ns": 1617874836
+        },
+        {
+          "backward_cuda_event_ns": 967672649,
+          "backward_host_ns": 967831342,
+          "cpu_batch_prepare_ns": 1479476,
+          "forward_cuda_event_ns": 638529567,
+          "forward_host_ns": 638736253,
+          "h2d_ns": 711047,
+          "loss_values": [
+            0.33023160696029663,
+            0.3836813271045685,
+            0.38939324021339417,
+            0.30621063709259033,
+            0.3975699841976166,
+            0.3524143397808075,
+            0.34583044052124023,
+            0.3639387786388397,
+            0.19956143200397491
+          ],
+          "non_compute_ns_proxy": 36848003,
+          "optimizer_ns": 62201399,
+          "phase": "timed",
+          "step": 9,
+          "wall_ns": 1643050219
+        },
+        {
+          "backward_cuda_event_ns": 845213564,
+          "backward_host_ns": 845354136,
+          "cpu_batch_prepare_ns": 1334677,
+          "forward_cuda_event_ns": 552522486,
+          "forward_host_ns": 552696315,
+          "h2d_ns": 631897,
+          "loss_values": [
+            0.3612597584724426,
+            0.36992117762565613,
+            0.38012799620628357,
+            0.3682501018047333,
+            0.43601956963539124,
+            0.4267146587371826,
+            0.40813595056533813,
+            0.21886679530143738
+          ],
+          "non_compute_ns_proxy": 36250621,
+          "optimizer_ns": 62048790,
+          "phase": "timed",
+          "step": 10,
+          "wall_ns": 1433986671
+        }
+      ],
+      "total_wall_ns": 15510515005
+    },
+    {
+      "backend": "buffered_full",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "38cb4577f504b69590ed04310e41ef274df5d16fb4234547646bd929c88a7e7f",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3422538240,
+      "peak_cuda_reserved_bytes": 4265607168,
+      "phase_sums": {
+        "backward_cuda_event_ns": 7221496820,
+        "backward_host_ns": 7222687797,
+        "cpu_batch_prepare_ns": 10573928,
+        "forward_cuda_event_ns": 5337090270,
+        "forward_host_ns": 5338522549,
+        "h2d_ns": 5172946,
+        "non_compute_ns_proxy": 290607951,
+        "optimizer_ns": 498728512,
+        "wall_ns": 12849195041
+      },
+      "repetition": 1,
+      "report_json_ns": 4084168,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "5c74e41da713ff63ae710f400ca7a2cad343e0453484c97e158f586ff4bfa06f",
+      "telemetry": true,
+      "telemetry_finalize_ns": 1651635,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 863058978,
+          "backward_host_ns": 863200074,
+          "cpu_batch_prepare_ns": 1368855,
+          "forward_cuda_event_ns": 636196417,
+          "forward_host_ns": 636369117,
+          "h2d_ns": 638538,
+          "loss_values": [
+            0.4810226261615753,
+            0.5110329389572144,
+            0.4836297333240509,
+            0.5004774928092957,
+            0.468336820602417,
+            0.5462911128997803,
+            0.5913745164871216,
+            0.4558742940425873
+          ],
+          "non_compute_ns_proxy": 36937932,
+          "optimizer_ns": 63251486,
+          "phase": "timed",
+          "step": 3,
+          "wall_ns": 1536193327
+        },
+        {
+          "backward_cuda_event_ns": 855574917,
+          "backward_host_ns": 855715816,
+          "cpu_batch_prepare_ns": 1360748,
+          "forward_cuda_event_ns": 630826777,
+          "forward_host_ns": 631002035,
+          "h2d_ns": 645759,
+          "loss_values": [
+            0.5461578965187073,
+            0.4373478293418884,
+            0.4305388927459717,
+            0.497444748878479,
+            0.529654324054718,
+            0.5024217367172241,
+            0.47065573930740356,
+            0.2915396988391876
+          ],
+          "non_compute_ns_proxy": 36516194,
+          "optimizer_ns": 62370288,
+          "phase": "timed",
+          "step": 4,
+          "wall_ns": 1522917888
+        },
+        {
+          "backward_cuda_event_ns": 942478740,
+          "backward_host_ns": 942635659,
+          "cpu_batch_prepare_ns": 1433575,
+          "forward_cuda_event_ns": 699453075,
+          "forward_host_ns": 699647824,
+          "h2d_ns": 725659,
+          "loss_values": [
+            0.4903397560119629,
+            0.48205262422561646,
+            0.3989757001399994,
+            0.35195550322532654,
+            0.3569839298725128,
+            0.419217586517334,
+            0.41389989852905273,
+            0.41012606024742126,
+            0.12171880900859833
+          ],
+          "non_compute_ns_proxy": 36409456,
+          "optimizer_ns": 61644082,
+          "phase": "timed",
+          "step": 5,
+          "wall_ns": 1678341271
+        },
+        {
+          "backward_cuda_event_ns": 851045337,
+          "backward_host_ns": 851185889,
+          "cpu_batch_prepare_ns": 1254886,
+          "forward_cuda_event_ns": 629645764,
+          "forward_host_ns": 629816357,
+          "h2d_ns": 615776,
+          "loss_values": [
+            0.4664129316806793,
+            0.4120512902736664,
+            0.33326616883277893,
+            0.3979140818119049,
+            0.36760541796684265,
+            0.4265408217906952,
+            0.40900692343711853,
+            0.4712596833705902
+          ],
+          "non_compute_ns_proxy": 36097116,
+          "optimizer_ns": 62690999,
+          "phase": "timed",
+          "step": 6,
+          "wall_ns": 1516788217
+        },
+        {
+          "backward_cuda_event_ns": 951303805,
+          "backward_host_ns": 951463382,
+          "cpu_batch_prepare_ns": 1229385,
+          "forward_cuda_event_ns": 704781956,
+          "forward_host_ns": 704958656,
+          "h2d_ns": 631548,
+          "loss_values": [
+            0.3107675313949585,
+            0.40530893206596375,
+            0.426129549741745,
+            0.4369398057460785,
+            0.4740428030490875,
+            0.43894484639167786,
+            0.333739310503006,
+            0.318233460187912,
+            0.08890889585018158
+          ],
+          "non_compute_ns_proxy": 35274680,
+          "optimizer_ns": 60851163,
+          "phase": "timed",
+          "step": 7,
+          "wall_ns": 1691360441
+        },
+        {
+          "backward_cuda_event_ns": 947417872,
+          "backward_host_ns": 947571683,
+          "cpu_batch_prepare_ns": 1214137,
+          "forward_cuda_event_ns": 698764407,
+          "forward_host_ns": 698937696,
+          "h2d_ns": 626680,
+          "loss_values": [
+            0.4654633104801178,
+            0.39511963725090027,
+            0.38204988837242126,
+            0.3725963234901428,
+            0.3932628035545349,
+            0.32469773292541504,
+            0.2900402545928955,
+            0.4066445827484131,
+            0.08960138261318207
+          ],
+          "non_compute_ns_proxy": 36843618,
+          "optimizer_ns": 63934774,
+          "phase": "timed",
+          "step": 8,
+          "wall_ns": 1683025897
+        },
+        {
+          "backward_cuda_event_ns": 967814235,
+          "backward_host_ns": 967971591,
+          "cpu_batch_prepare_ns": 1396956,
+          "forward_cuda_event_ns": 710981722,
+          "forward_host_ns": 711178848,
+          "h2d_ns": 661979,
+          "loss_values": [
+            0.33023160696029663,
+            0.3836813271045685,
+            0.38939324021339417,
+            0.30621063709259033,
+            0.3975699841976166,
+            0.3524143397808075,
+            0.34583044052124023,
+            0.3639387786388397,
+            0.19956143200397491
+          ],
+          "non_compute_ns_proxy": 36513011,
+          "optimizer_ns": 62231820,
+          "phase": "timed",
+          "step": 9,
+          "wall_ns": 1715308968
+        },
+        {
+          "backward_cuda_event_ns": 842802936,
+          "backward_host_ns": 842943703,
+          "cpu_batch_prepare_ns": 1315386,
+          "forward_cuda_event_ns": 626440152,
+          "forward_host_ns": 626612016,
+          "h2d_ns": 627007,
+          "loss_values": [
+            0.3612597584724426,
+            0.36992117762565613,
+            0.38012799620628357,
+            0.3682501018047333,
+            0.43601956963539124,
+            0.4267146587371826,
+            0.40813595056533813,
+            0.21886679530143738
+          ],
+          "non_compute_ns_proxy": 36015944,
+          "optimizer_ns": 61753900,
+          "phase": "timed",
+          "step": 10,
+          "wall_ns": 1505259032
+        }
+      ],
+      "total_wall_ns": 16218641652
+    },
+    {
+      "backend": "baseline_off",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "38cb4577f504b69590ed04310e41ef274df5d16fb4234547646bd929c88a7e7f",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3422538240,
+      "peak_cuda_reserved_bytes": 4265607168,
+      "phase_sums": {
+        "backward_cuda_event_ns": 7240256825,
+        "backward_host_ns": 7241490065,
+        "cpu_batch_prepare_ns": 11338474,
+        "forward_cuda_event_ns": 4709422080,
+        "forward_host_ns": 4710947664,
+        "h2d_ns": 5698535,
+        "non_compute_ns_proxy": 293776975,
+        "optimizer_ns": 498639420,
+        "wall_ns": 12243455880
+      },
+      "repetition": 2,
+      "report_json_ns": 0,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": null,
+      "telemetry": false,
+      "telemetry_finalize_ns": 0,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 866763515,
+          "backward_host_ns": 866909680,
+          "cpu_batch_prepare_ns": 1418774,
+          "forward_cuda_event_ns": 618100978,
+          "forward_host_ns": 618291222,
+          "h2d_ns": 648229,
+          "loss_values": [
+            0.4810226261615753,
+            0.5110329389572144,
+            0.4836297333240509,
+            0.5004774928092957,
+            0.468336820602417,
+            0.5462911128997803,
+            0.5913745164871216,
+            0.4558742940425873
+          ],
+          "non_compute_ns_proxy": 36834048,
+          "optimizer_ns": 62745967,
+          "phase": "timed",
+          "step": 3,
+          "wall_ns": 1521698541
+        },
+        {
+          "backward_cuda_event_ns": 865955753,
+          "backward_host_ns": 866100272,
+          "cpu_batch_prepare_ns": 1415494,
+          "forward_cuda_event_ns": 555475903,
+          "forward_host_ns": 555657514,
+          "h2d_ns": 670809,
+          "loss_values": [
+            0.5461578965187073,
+            0.4373478293418884,
+            0.4305388927459717,
+            0.497444748878479,
+            0.529654324054718,
+            0.5024217367172241,
+            0.47065573930740356,
+            0.2915396988391876
+          ],
+          "non_compute_ns_proxy": 36773491,
+          "optimizer_ns": 62528018,
+          "phase": "timed",
+          "step": 4,
+          "wall_ns": 1458205147
+        },
+        {
+          "backward_cuda_event_ns": 944389651,
+          "backward_host_ns": 944548533,
+          "cpu_batch_prepare_ns": 1493596,
+          "forward_cuda_event_ns": 603745445,
+          "forward_host_ns": 603939096,
+          "h2d_ns": 714169,
+          "loss_values": [
+            0.4903397560119629,
+            0.48205262422561646,
+            0.3989757001399994,
+            0.35195550322532654,
+            0.3569839298725128,
+            0.419217586517334,
+            0.41389989852905273,
+            0.41012606024742126,
+            0.12171880900859833
+          ],
+          "non_compute_ns_proxy": 36367613,
+          "optimizer_ns": 61391141,
+          "phase": "timed",
+          "step": 5,
+          "wall_ns": 1584502709
+        },
+        {
+          "backward_cuda_event_ns": 853041911,
+          "backward_host_ns": 853189581,
+          "cpu_batch_prepare_ns": 1331816,
+          "forward_cuda_event_ns": 551024532,
+          "forward_host_ns": 551201518,
+          "h2d_ns": 626508,
+          "loss_values": [
+            0.4664129316806793,
+            0.4120512902736664,
+            0.33326616883277893,
+            0.3979140818119049,
+            0.36760541796684265,
+            0.4265408217906952,
+            0.40900692343711853,
+            0.4712596833705902
+          ],
+          "non_compute_ns_proxy": 36615148,
+          "optimizer_ns": 62888788,
+          "phase": "timed",
+          "step": 6,
+          "wall_ns": 1440681591
+        },
+        {
+          "backward_cuda_event_ns": 948626225,
+          "backward_host_ns": 948785719,
+          "cpu_batch_prepare_ns": 1431468,
+          "forward_cuda_event_ns": 608270370,
+          "forward_host_ns": 608467756,
+          "h2d_ns": 706236,
+          "loss_values": [
+            0.3107675313949585,
+            0.40530893206596375,
+            0.426129549741745,
+            0.4369398057460785,
+            0.4740428030490875,
+            0.43894484639167786,
+            0.333739310503006,
+            0.318233460187912,
+            0.08890889585018158
+          ],
+          "non_compute_ns_proxy": 36341667,
+          "optimizer_ns": 61591540,
+          "phase": "timed",
+          "step": 7,
+          "wall_ns": 1593238262
+        },
+        {
+          "backward_cuda_event_ns": 948319735,
+          "backward_host_ns": 948481952,
+          "cpu_batch_prepare_ns": 1455756,
+          "forward_cuda_event_ns": 613568599,
+          "forward_host_ns": 613772618,
+          "h2d_ns": 980768,
+          "loss_values": [
+            0.4654633104801178,
+            0.39511963725090027,
+            0.38204988837242126,
+            0.3725963234901428,
+            0.3932628035545349,
+            0.32469773292541504,
+            0.2900402545928955,
+            0.4066445827484131,
+            0.08960138261318207
+          ],
+          "non_compute_ns_proxy": 37332740,
+          "optimizer_ns": 62591168,
+          "phase": "timed",
+          "step": 8,
+          "wall_ns": 1599221074
+        },
+        {
+          "backward_cuda_event_ns": 970011302,
+          "backward_host_ns": 970177534,
+          "cpu_batch_prepare_ns": 1481275,
+          "forward_cuda_event_ns": 618590687,
+          "forward_host_ns": 618796771,
+          "h2d_ns": 708478,
+          "loss_values": [
+            0.33023160696029663,
+            0.3836813271045685,
+            0.38939324021339417,
+            0.30621063709259033,
+            0.3975699841976166,
+            0.3524143397808075,
+            0.34583044052124023,
+            0.3639387786388397,
+            0.19956143200397491
+          ],
+          "non_compute_ns_proxy": 37578063,
+          "optimizer_ns": 63716186,
+          "phase": "timed",
+          "step": 9,
+          "wall_ns": 1626180052
+        },
+        {
+          "backward_cuda_event_ns": 843148733,
+          "backward_host_ns": 843296794,
+          "cpu_batch_prepare_ns": 1310295,
+          "forward_cuda_event_ns": 540645566,
+          "forward_host_ns": 540821169,
+          "h2d_ns": 643338,
+          "loss_values": [
+            0.3612597584724426,
+            0.36992117762565613,
+            0.38012799620628357,
+            0.3682501018047333,
+            0.43601956963539124,
+            0.4267146587371826,
+            0.40813595056533813,
+            0.21886679530143738
+          ],
+          "non_compute_ns_proxy": 35934205,
+          "optimizer_ns": 61186612,
+          "phase": "timed",
+          "step": 10,
+          "wall_ns": 1419728504
+        }
+      ],
+      "total_wall_ns": 15384079533
+    },
+    {
+      "backend": "current_full",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "38cb4577f504b69590ed04310e41ef274df5d16fb4234547646bd929c88a7e7f",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3422538240,
+      "peak_cuda_reserved_bytes": 4265607168,
+      "phase_sums": {
+        "backward_cuda_event_ns": 7234602566,
+        "backward_host_ns": 7235812243,
+        "cpu_batch_prepare_ns": 11221559,
+        "forward_cuda_event_ns": 6090674848,
+        "forward_host_ns": 6092175809,
+        "h2d_ns": 5648060,
+        "non_compute_ns_proxy": 292090942,
+        "optimizer_ns": 496630970,
+        "wall_ns": 13617368356
+      },
+      "repetition": 2,
+      "report_json_ns": 3224571,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "3356798b3261fb63d941178aceeab45931bde43d19befcf489dd9448ba55d30b",
+      "telemetry": true,
+      "telemetry_finalize_ns": 1677644,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 863578975,
+          "backward_host_ns": 863721760,
+          "cpu_batch_prepare_ns": 1348015,
+          "forward_cuda_event_ns": 724234645,
+          "forward_host_ns": 724408447,
+          "h2d_ns": 648408,
+          "loss_values": [
+            0.4810226261615753,
+            0.5110329389572144,
+            0.4836297333240509,
+            0.5004774928092957,
+            0.468336820602417,
+            0.5462911128997803,
+            0.5913745164871216,
+            0.4558742940425873
+          ],
+          "non_compute_ns_proxy": 36382667,
+          "optimizer_ns": 62125900,
+          "phase": "timed",
+          "step": 3,
+          "wall_ns": 1624196287
+        },
+        {
+          "backward_cuda_event_ns": 861330204,
+          "backward_host_ns": 861471989,
+          "cpu_batch_prepare_ns": 1352285,
+          "forward_cuda_event_ns": 724063412,
+          "forward_host_ns": 724243077,
+          "h2d_ns": 655130,
+          "loss_values": [
+            0.5461578965187073,
+            0.4373478293418884,
+            0.4305388927459717,
+            0.497444748878479,
+            0.529654324054718,
+            0.5024217367172241,
+            0.47065573930740356,
+            0.2915396988391876
+          ],
+          "non_compute_ns_proxy": 36356159,
+          "optimizer_ns": 62134800,
+          "phase": "timed",
+          "step": 4,
+          "wall_ns": 1621749775
+        },
+        {
+          "backward_cuda_event_ns": 942271893,
+          "backward_host_ns": 942432549,
+          "cpu_batch_prepare_ns": 1439696,
+          "forward_cuda_event_ns": 794707485,
+          "forward_host_ns": 794901980,
+          "h2d_ns": 718686,
+          "loss_values": [
+            0.4903397560119629,
+            0.48205262422561646,
+            0.3989757001399994,
+            0.35195550322532654,
+            0.3569839298725128,
+            0.419217586517334,
+            0.41389989852905273,
+            0.41012606024742126,
+            0.12171880900859833
+          ],
+          "non_compute_ns_proxy": 36424902,
+          "optimizer_ns": 61671042,
+          "phase": "timed",
+          "step": 5,
+          "wall_ns": 1773404280
+        },
+        {
+          "backward_cuda_event_ns": 853191646,
+          "backward_host_ns": 853333022,
+          "cpu_batch_prepare_ns": 1340268,
+          "forward_cuda_event_ns": 723127735,
+          "forward_host_ns": 723306393,
+          "h2d_ns": 649947,
+          "loss_values": [
+            0.4664129316806793,
+            0.4120512902736664,
+            0.33326616883277893,
+            0.3979140818119049,
+            0.36760541796684265,
+            0.4265408217906952,
+            0.40900692343711853,
+            0.4712596833705902
+          ],
+          "non_compute_ns_proxy": 36532181,
+          "optimizer_ns": 62687978,
+          "phase": "timed",
+          "step": 6,
+          "wall_ns": 1612851562
+        },
+        {
+          "backward_cuda_event_ns": 950629596,
+          "backward_host_ns": 950797553,
+          "cpu_batch_prepare_ns": 1418626,
+          "forward_cuda_event_ns": 796028384,
+          "forward_host_ns": 796228917,
+          "h2d_ns": 714016,
+          "loss_values": [
+            0.3107675313949585,
+            0.40530893206596375,
+            0.426129549741745,
+            0.4369398057460785,
+            0.4740428030490875,
+            0.43894484639167786,
+            0.333739310503006,
+            0.318233460187912,
+            0.08890889585018158
+          ],
+          "non_compute_ns_proxy": 36514300,
+          "optimizer_ns": 61895461,
+          "phase": "timed",
+          "step": 7,
+          "wall_ns": 1783172280
+        },
+        {
+          "backward_cuda_event_ns": 950532626,
+          "backward_host_ns": 950689963,
+          "cpu_batch_prepare_ns": 1440495,
+          "forward_cuda_event_ns": 804208728,
+          "forward_host_ns": 804404043,
+          "h2d_ns": 728099,
+          "loss_values": [
+            0.4654633104801178,
+            0.39511963725090027,
+            0.38204988837242126,
+            0.3725963234901428,
+            0.3932628035545349,
+            0.32469773292541504,
+            0.2900402545928955,
+            0.4066445827484131,
+            0.08960138261318207
+          ],
+          "non_compute_ns_proxy": 36819480,
+          "optimizer_ns": 62318889,
+          "phase": "timed",
+          "step": 8,
+          "wall_ns": 1791560834
+        },
+        {
+          "backward_cuda_event_ns": 971542231,
+          "backward_host_ns": 971699619,
+          "cpu_batch_prepare_ns": 1545677,
+          "forward_cuda_event_ns": 811819889,
+          "forward_host_ns": 812023679,
+          "h2d_ns": 894495,
+          "loss_values": [
+            0.33023160696029663,
+            0.3836813271045685,
+            0.38939324021339417,
+            0.30621063709259033,
+            0.3975699841976166,
+            0.3524143397808075,
+            0.34583044052124023,
+            0.3639387786388397,
+            0.19956143200397491
+          ],
+          "non_compute_ns_proxy": 37101715,
+          "optimizer_ns": 62286208,
+          "phase": "timed",
+          "step": 9,
+          "wall_ns": 1820463835
+        },
+        {
+          "backward_cuda_event_ns": 841525395,
+          "backward_host_ns": 841665788,
+          "cpu_batch_prepare_ns": 1336497,
+          "forward_cuda_event_ns": 712484570,
+          "forward_host_ns": 712659273,
+          "h2d_ns": 639279,
+          "loss_values": [
+            0.3612597584724426,
+            0.36992117762565613,
+            0.38012799620628357,
+            0.3682501018047333,
+            0.43601956963539124,
+            0.4267146587371826,
+            0.40813595056533813,
+            0.21886679530143738
+          ],
+          "non_compute_ns_proxy": 35959538,
+          "optimizer_ns": 61510692,
+          "phase": "timed",
+          "step": 10,
+          "wall_ns": 1589969503
+        }
+      ],
+      "total_wall_ns": 17126586938
+    },
+    {
+      "backend": "gpu_full_batched",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "38cb4577f504b69590ed04310e41ef274df5d16fb4234547646bd929c88a7e7f",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3422538240,
+      "peak_cuda_reserved_bytes": 4265607168,
+      "phase_sums": {
+        "backward_cuda_event_ns": 7250958347,
+        "backward_host_ns": 7252174857,
+        "cpu_batch_prepare_ns": 11263045,
+        "forward_cuda_event_ns": 5342066501,
+        "forward_host_ns": 5343567844,
+        "h2d_ns": 5710943,
+        "non_compute_ns_proxy": 294688674,
+        "optimizer_ns": 501628623,
+        "wall_ns": 12887713522
+      },
+      "repetition": 2,
+      "report_json_ns": 3171770,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "5c74e41da713ff63ae710f400ca7a2cad343e0453484c97e158f586ff4bfa06f",
+      "telemetry": true,
+      "telemetry_finalize_ns": 1378176,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 865696353,
+          "backward_host_ns": 865836946,
+          "cpu_batch_prepare_ns": 1415037,
+          "forward_cuda_event_ns": 640474230,
+          "forward_host_ns": 640649715,
+          "h2d_ns": 665197,
+          "loss_values": [
+            0.4810226261615753,
+            0.5110329389572144,
+            0.4836297333240509,
+            0.5004774928092957,
+            0.468336820602417,
+            0.5462911128997803,
+            0.5913745164871216,
+            0.4558742940425873
+          ],
+          "non_compute_ns_proxy": 36876813,
+          "optimizer_ns": 62963738,
+          "phase": "timed",
+          "step": 3,
+          "wall_ns": 1543047396
+        },
+        {
+          "backward_cuda_event_ns": 857992069,
+          "backward_host_ns": 858131959,
+          "cpu_batch_prepare_ns": 1357836,
+          "forward_cuda_event_ns": 630983258,
+          "forward_host_ns": 631156092,
+          "h2d_ns": 819558,
+          "loss_values": [
+            0.5461578965187073,
+            0.4373478293418884,
+            0.4305388927459717,
+            0.497444748878479,
+            0.529654324054718,
+            0.5024217367172241,
+            0.47065573930740356,
+            0.2915396988391876
+          ],
+          "non_compute_ns_proxy": 38393857,
+          "optimizer_ns": 66018007,
+          "phase": "timed",
+          "step": 4,
+          "wall_ns": 1527369184
+        },
+        {
+          "backward_cuda_event_ns": 947865588,
+          "backward_host_ns": 948027799,
+          "cpu_batch_prepare_ns": 1468105,
+          "forward_cuda_event_ns": 696949658,
+          "forward_host_ns": 697146642,
+          "h2d_ns": 713769,
+          "loss_values": [
+            0.4903397560119629,
+            0.48205262422561646,
+            0.3989757001399994,
+            0.35195550322532654,
+            0.3569839298725128,
+            0.419217586517334,
+            0.41389989852905273,
+            0.41012606024742126,
+            0.12171880900859833
+          ],
+          "non_compute_ns_proxy": 36535856,
+          "optimizer_ns": 61644470,
+          "phase": "timed",
+          "step": 5,
+          "wall_ns": 1681351102
+        },
+        {
+          "backward_cuda_event_ns": 856388218,
+          "backward_host_ns": 856537313,
+          "cpu_batch_prepare_ns": 1368515,
+          "forward_cuda_event_ns": 631199443,
+          "forward_host_ns": 631372003,
+          "h2d_ns": 624187,
+          "loss_values": [
+            0.4664129316806793,
+            0.4120512902736664,
+            0.33326616883277893,
+            0.3979140818119049,
+            0.36760541796684265,
+            0.4265408217906952,
+            0.40900692343711853,
+            0.4712596833705902
+          ],
+          "non_compute_ns_proxy": 36390293,
+          "optimizer_ns": 62356308,
+          "phase": "timed",
+          "step": 6,
+          "wall_ns": 1523977954
+        },
+        {
+          "backward_cuda_event_ns": 951519687,
+          "backward_host_ns": 951686632,
+          "cpu_batch_prepare_ns": 1430953,
+          "forward_cuda_event_ns": 700710130,
+          "forward_host_ns": 700905427,
+          "h2d_ns": 739578,
+          "loss_values": [
+            0.3107675313949585,
+            0.40530893206596375,
+            0.426129549741745,
+            0.4369398057460785,
+            0.4740428030490875,
+            0.43894484639167786,
+            0.333739310503006,
+            0.318233460187912,
+            0.08890889585018158
+          ],
+          "non_compute_ns_proxy": 36560032,
+          "optimizer_ns": 61917131,
+          "phase": "timed",
+          "step": 7,
+          "wall_ns": 1688789849
+        },
+        {
+          "backward_cuda_event_ns": 956974047,
+          "backward_host_ns": 957131903,
+          "cpu_batch_prepare_ns": 1416845,
+          "forward_cuda_event_ns": 702911411,
+          "forward_host_ns": 703108883,
+          "h2d_ns": 706208,
+          "loss_values": [
+            0.4654633104801178,
+            0.39511963725090027,
+            0.38204988837242126,
+            0.3725963234901428,
+            0.3932628035545349,
+            0.32469773292541504,
+            0.2900402545928955,
+            0.4066445827484131,
+            0.08960138261318207
+          ],
+          "non_compute_ns_proxy": 36993586,
+          "optimizer_ns": 62828257,
+          "phase": "timed",
+          "step": 8,
+          "wall_ns": 1696879044
+        },
+        {
+          "backward_cuda_event_ns": 969381436,
+          "backward_host_ns": 969539077,
+          "cpu_batch_prepare_ns": 1526377,
+          "forward_cuda_event_ns": 714092524,
+          "forward_host_ns": 714297637,
+          "h2d_ns": 723398,
+          "loss_values": [
+            0.33023160696029663,
+            0.3836813271045685,
+            0.38939324021339417,
+            0.30621063709259033,
+            0.3975699841976166,
+            0.3524143397808075,
+            0.34583044052124023,
+            0.3639387786388397,
+            0.19956143200397491
+          ],
+          "non_compute_ns_proxy": 36883413,
+          "optimizer_ns": 62300880,
+          "phase": "timed",
+          "step": 9,
+          "wall_ns": 1720357373
+        },
+        {
+          "backward_cuda_event_ns": 845140949,
+          "backward_host_ns": 845283228,
+          "cpu_batch_prepare_ns": 1279377,
+          "forward_cuda_event_ns": 624745847,
+          "forward_host_ns": 624931445,
+          "h2d_ns": 719048,
+          "loss_values": [
+            0.3612597584724426,
+            0.36992117762565613,
+            0.38012799620628357,
+            0.3682501018047333,
+            0.43601956963539124,
+            0.4267146587371826,
+            0.40813595056533813,
+            0.21886679530143738
+          ],
+          "non_compute_ns_proxy": 36054824,
+          "optimizer_ns": 61599832,
+          "phase": "timed",
+          "step": 10,
+          "wall_ns": 1505941620
+        }
+      ],
+      "total_wall_ns": 16278495039
+    },
+    {
+      "backend": "minimal_scientific",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "38cb4577f504b69590ed04310e41ef274df5d16fb4234547646bd929c88a7e7f",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3422538240,
+      "peak_cuda_reserved_bytes": 4265607168,
+      "phase_sums": {
+        "backward_cuda_event_ns": 7235164365,
+        "backward_host_ns": 7236373720,
+        "cpu_batch_prepare_ns": 11523363,
+        "forward_cuda_event_ns": 4772839643,
+        "forward_host_ns": 4774350641,
+        "h2d_ns": 5595513,
+        "non_compute_ns_proxy": 294393219,
+        "optimizer_ns": 500117976,
+        "wall_ns": 12302397227
+      },
+      "repetition": 2,
+      "report_json_ns": 2176723,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "70a98099e0e04383b69fe436a4c19dc9d0c157ea1bd26955e4ba8a8a91fcc9aa",
+      "telemetry": true,
+      "telemetry_finalize_ns": 820608,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 863244189,
+          "backward_host_ns": 863386341,
+          "cpu_batch_prepare_ns": 1413576,
+          "forward_cuda_event_ns": 568195796,
+          "forward_host_ns": 568369976,
+          "h2d_ns": 640028,
+          "loss_values": [
+            0.4810226261615753,
+            0.5110329389572144,
+            0.4836297333240509,
+            0.5004774928092957,
+            0.468336820602417,
+            0.5462911128997803,
+            0.5913745164871216,
+            0.4558742940425873
+          ],
+          "non_compute_ns_proxy": 36532361,
+          "optimizer_ns": 62299918,
+          "phase": "timed",
+          "step": 3,
+          "wall_ns": 1467972346
+        },
+        {
+          "backward_cuda_event_ns": 855660030,
+          "backward_host_ns": 855800212,
+          "cpu_batch_prepare_ns": 1368984,
+          "forward_cuda_event_ns": 564198804,
+          "forward_host_ns": 564373489,
+          "h2d_ns": 627568,
+          "loss_values": [
+            0.5461578965187073,
+            0.4373478293418884,
+            0.4305388927459717,
+            0.497444748878479,
+            0.529654324054718,
+            0.5024217367172241,
+            0.47065573930740356,
+            0.2915396988391876
+          ],
+          "non_compute_ns_proxy": 36571057,
+          "optimizer_ns": 62580567,
+          "phase": "timed",
+          "step": 4,
+          "wall_ns": 1456429891
+        },
+        {
+          "backward_cuda_event_ns": 942436122,
+          "backward_host_ns": 942594639,
+          "cpu_batch_prepare_ns": 1463926,
+          "forward_cuda_event_ns": 623779413,
+          "forward_host_ns": 623977717,
+          "h2d_ns": 722228,
+          "loss_values": [
+            0.4903397560119629,
+            0.48205262422561646,
+            0.3989757001399994,
+            0.35195550322532654,
+            0.3569839298725128,
+            0.419217586517334,
+            0.41389989852905273,
+            0.41012606024742126,
+            0.12171880900859833
+          ],
+          "non_compute_ns_proxy": 36205969,
+          "optimizer_ns": 61168682,
+          "phase": "timed",
+          "step": 5,
+          "wall_ns": 1602421504
+        },
+        {
+          "backward_cuda_event_ns": 854311864,
+          "backward_host_ns": 854453567,
+          "cpu_batch_prepare_ns": 1471715,
+          "forward_cuda_event_ns": 568422818,
+          "forward_host_ns": 568613724,
+          "h2d_ns": 754127,
+          "loss_values": [
+            0.4664129316806793,
+            0.4120512902736664,
+            0.33326616883277893,
+            0.3979140818119049,
+            0.36760541796684265,
+            0.4265408217906952,
+            0.40900692343711853,
+            0.4712596833705902
+          ],
+          "non_compute_ns_proxy": 36500141,
+          "optimizer_ns": 62039510,
+          "phase": "timed",
+          "step": 6,
+          "wall_ns": 1459234823
+        },
+        {
+          "backward_cuda_event_ns": 947885883,
+          "backward_host_ns": 948044901,
+          "cpu_batch_prepare_ns": 1443494,
+          "forward_cuda_event_ns": 627986448,
+          "forward_host_ns": 628181032,
+          "h2d_ns": 712159,
+          "loss_values": [
+            0.3107675313949585,
+            0.40530893206596375,
+            0.426129549741745,
+            0.4369398057460785,
+            0.4740428030490875,
+            0.43894484639167786,
+            0.333739310503006,
+            0.318233460187912,
+            0.08890889585018158
+          ],
+          "non_compute_ns_proxy": 36465753,
+          "optimizer_ns": 61704712,
+          "phase": "timed",
+          "step": 7,
+          "wall_ns": 1612338084
+        },
+        {
+          "backward_cuda_event_ns": 951164417,
+          "backward_host_ns": 951321383,
+          "cpu_batch_prepare_ns": 1428495,
+          "forward_cuda_event_ns": 625424701,
+          "forward_host_ns": 625618109,
+          "h2d_ns": 695539,
+          "loss_values": [
+            0.4654633104801178,
+            0.39511963725090027,
+            0.38204988837242126,
+            0.3725963234901428,
+            0.3932628035545349,
+            0.32469773292541504,
+            0.2900402545928955,
+            0.4066445827484131,
+            0.08960138261318207
+          ],
+          "non_compute_ns_proxy": 38903766,
+          "optimizer_ns": 66772116,
+          "phase": "timed",
+          "step": 8,
+          "wall_ns": 1615492884
+        },
+        {
+          "backward_cuda_event_ns": 974439998,
+          "backward_host_ns": 974607263,
+          "cpu_batch_prepare_ns": 1576188,
+          "forward_cuda_event_ns": 638743708,
+          "forward_host_ns": 638948881,
+          "h2d_ns": 734786,
+          "loss_values": [
+            0.33023160696029663,
+            0.3836813271045685,
+            0.38939324021339417,
+            0.30621063709259033,
+            0.3975699841976166,
+            0.3524143397808075,
+            0.34583044052124023,
+            0.3639387786388397,
+            0.19956143200397491
+          ],
+          "non_compute_ns_proxy": 37270031,
+          "optimizer_ns": 62386099,
+          "phase": "timed",
+          "step": 9,
+          "wall_ns": 1650453737
+        },
+        {
+          "backward_cuda_event_ns": 846021862,
+          "backward_host_ns": 846165414,
+          "cpu_batch_prepare_ns": 1356985,
+          "forward_cuda_event_ns": 556087955,
+          "forward_host_ns": 556267713,
+          "h2d_ns": 709078,
+          "loss_values": [
+            0.3612597584724426,
+            0.36992117762565613,
+            0.38012799620628357,
+            0.3682501018047333,
+            0.43601956963539124,
+            0.4267146587371826,
+            0.40813595056533813,
+            0.21886679530143738
+          ],
+          "non_compute_ns_proxy": 35944141,
+          "optimizer_ns": 61166372,
+          "phase": "timed",
+          "step": 10,
+          "wall_ns": 1438053958
+        }
+      ],
+      "total_wall_ns": 15530922122
+    },
+    {
+      "backend": "buffered_full",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "38cb4577f504b69590ed04310e41ef274df5d16fb4234547646bd929c88a7e7f",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3422538240,
+      "peak_cuda_reserved_bytes": 4265607168,
+      "phase_sums": {
+        "backward_cuda_event_ns": 7195424129,
+        "backward_host_ns": 7196633303,
+        "cpu_batch_prepare_ns": 9732910,
+        "forward_cuda_event_ns": 5318197461,
+        "forward_host_ns": 5319549400,
+        "h2d_ns": 4704672,
+        "non_compute_ns_proxy": 291630665,
+        "optimizer_ns": 507530701,
+        "wall_ns": 12805252255
+      },
+      "repetition": 2,
+      "report_json_ns": 3239470,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "5c74e41da713ff63ae710f400ca7a2cad343e0453484c97e158f586ff4bfa06f",
+      "telemetry": true,
+      "telemetry_finalize_ns": 1397066,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 860164805,
+          "backward_host_ns": 860301911,
+          "cpu_batch_prepare_ns": 1160079,
+          "forward_cuda_event_ns": 634534840,
+          "forward_host_ns": 634700243,
+          "h2d_ns": 547807,
+          "loss_values": [
+            0.4810226261615753,
+            0.5110329389572144,
+            0.4836297333240509,
+            0.5004774928092957,
+            0.468336820602417,
+            0.5462911128997803,
+            0.5913745164871216,
+            0.4558742940425873
+          ],
+          "non_compute_ns_proxy": 36022669,
+          "optimizer_ns": 62833707,
+          "phase": "timed",
+          "step": 3,
+          "wall_ns": 1530722314
+        },
+        {
+          "backward_cuda_event_ns": 852028156,
+          "backward_host_ns": 852165653,
+          "cpu_batch_prepare_ns": 1186737,
+          "forward_cuda_event_ns": 628797841,
+          "forward_host_ns": 628953973,
+          "h2d_ns": 542467,
+          "loss_values": [
+            0.5461578965187073,
+            0.4373478293418884,
+            0.4305388927459717,
+            0.497444748878479,
+            0.529654324054718,
+            0.5024217367172241,
+            0.47065573930740356,
+            0.2915396988391876
+          ],
+          "non_compute_ns_proxy": 36090740,
+          "optimizer_ns": 63016177,
+          "phase": "timed",
+          "step": 4,
+          "wall_ns": 1516916737
+        },
+        {
+          "backward_cuda_event_ns": 938310580,
+          "backward_host_ns": 938483532,
+          "cpu_batch_prepare_ns": 1271286,
+          "forward_cuda_event_ns": 694340411,
+          "forward_host_ns": 694532099,
+          "h2d_ns": 682877,
+          "loss_values": [
+            0.4903397560119629,
+            0.48205262422561646,
+            0.3989757001399994,
+            0.35195550322532654,
+            0.3569839298725128,
+            0.419217586517334,
+            0.41389989852905273,
+            0.41012606024742126,
+            0.12171880900859833
+          ],
+          "non_compute_ns_proxy": 35580981,
+          "optimizer_ns": 61175192,
+          "phase": "timed",
+          "step": 5,
+          "wall_ns": 1668231972
+        },
+        {
+          "backward_cuda_event_ns": 850370846,
+          "backward_host_ns": 850510561,
+          "cpu_batch_prepare_ns": 1154925,
+          "forward_cuda_event_ns": 628555606,
+          "forward_host_ns": 628709602,
+          "h2d_ns": 538779,
+          "loss_values": [
+            0.4664129316806793,
+            0.4120512902736664,
+            0.33326616883277893,
+            0.3979140818119049,
+            0.36760541796684265,
+            0.4265408217906952,
+            0.40900692343711853,
+            0.4712596833705902
+          ],
+          "non_compute_ns_proxy": 35823171,
+          "optimizer_ns": 62704637,
+          "phase": "timed",
+          "step": 6,
+          "wall_ns": 1514749623
+        },
+        {
+          "backward_cuda_event_ns": 943987194,
+          "backward_host_ns": 944140192,
+          "cpu_batch_prepare_ns": 1250055,
+          "forward_cuda_event_ns": 697933054,
+          "forward_host_ns": 698112559,
+          "h2d_ns": 611499,
+          "loss_values": [
+            0.3107675313949585,
+            0.40530893206596375,
+            0.426129549741745,
+            0.4369398057460785,
+            0.4740428030490875,
+            0.43894484639167786,
+            0.333739310503006,
+            0.318233460187912,
+            0.08890889585018158
+          ],
+          "non_compute_ns_proxy": 35893944,
+          "optimizer_ns": 61986429,
+          "phase": "timed",
+          "step": 7,
+          "wall_ns": 1677814192
+        },
+        {
+          "backward_cuda_event_ns": 948006702,
+          "backward_host_ns": 948175542,
+          "cpu_batch_prepare_ns": 1245465,
+          "forward_cuda_event_ns": 700745655,
+          "forward_host_ns": 700920019,
+          "h2d_ns": 617058,
+          "loss_values": [
+            0.4654633104801178,
+            0.39511963725090027,
+            0.38204988837242126,
+            0.3725963234901428,
+            0.3932628035545349,
+            0.32469773292541504,
+            0.2900402545928955,
+            0.4066445827484131,
+            0.08960138261318207
+          ],
+          "non_compute_ns_proxy": 36015514,
+          "optimizer_ns": 62314849,
+          "phase": "timed",
+          "step": 8,
+          "wall_ns": 1684767871
+        },
+        {
+          "backward_cuda_event_ns": 964474666,
+          "backward_host_ns": 964629733,
+          "cpu_batch_prepare_ns": 1321407,
+          "forward_cuda_event_ns": 710193904,
+          "forward_host_ns": 710367739,
+          "h2d_ns": 607236,
+          "loss_values": [
+            0.33023160696029663,
+            0.3836813271045685,
+            0.38939324021339417,
+            0.30621063709259033,
+            0.3975699841976166,
+            0.3524143397808075,
+            0.34583044052124023,
+            0.3639387786388397,
+            0.19956143200397491
+          ],
+          "non_compute_ns_proxy": 38614584,
+          "optimizer_ns": 67317883,
+          "phase": "timed",
+          "step": 9,
+          "wall_ns": 1713283154
+        },
+        {
+          "backward_cuda_event_ns": 838081180,
+          "backward_host_ns": 838226179,
+          "cpu_batch_prepare_ns": 1142956,
+          "forward_cuda_event_ns": 623096150,
+          "forward_host_ns": 623253166,
+          "h2d_ns": 556949,
+          "loss_values": [
+            0.3612597584724426,
+            0.36992117762565613,
+            0.38012799620628357,
+            0.3682501018047333,
+            0.43601956963539124,
+            0.4267146587371826,
+            0.40813595056533813,
+            0.21886679530143738
+          ],
+          "non_compute_ns_proxy": 37589062,
+          "optimizer_ns": 66181827,
+          "phase": "timed",
+          "step": 10,
+          "wall_ns": 1498766392
+        }
+      ],
+      "total_wall_ns": 16119227867
+    }
+  ],
+  "schedule_report": {
+    "batches": 25987,
+    "examples": 100000,
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/schedule_seed_42.json",
+    "permutation_sha256": "835c5ee000222e6a3582ce071559fb465e76b80668f6e4814cada6eb733865b6",
+    "seed": 42,
+    "sha256": "ec449a68230663f06d57589aa744626d596c5efaf1ba43c1b57fc5bb0cb32879",
+    "source_bytes": 9856480,
+    "steps": 3125
+  },
+  "schema_version": "ssre-npa-v5-summary",
+  "source_report": {
+    "count": 100000,
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/../source/packed_train.jsonl",
+    "sha256": "dca93acdadec204409f7312b6b5b6ea4897bdd846bbd4eb9a62c71b8dce36cce",
+    "source_bytes": 9856480,
+    "validation_ns": 859635563
+  },
+  "telemetry_equivalence": {
+    "rep_1_buffered_full": {
+      "all_required_fields_present": true,
+      "exact_counter_fields_equal": true,
+      "float_fields_within_tolerance": true,
+      "float_tolerance": 1e-06,
+      "layers_equal": true,
+      "max_float_abs_delta": 5.960464477539063e-08,
+      "missing_fields": [],
+      "pass": true
+    },
+    "rep_1_gpu_full_batched": {
+      "all_required_fields_present": true,
+      "exact_counter_fields_equal": true,
+      "float_fields_within_tolerance": true,
+      "float_tolerance": 1e-06,
+      "layers_equal": true,
+      "max_float_abs_delta": 5.960464477539063e-08,
+      "missing_fields": [],
+      "pass": true
+    },
+    "rep_1_minimal_scientific": {
+      "all_required_fields_present": true,
+      "exact_counter_fields_equal": true,
+      "float_fields_within_tolerance": true,
+      "float_tolerance": 1e-06,
+      "layers_equal": true,
+      "max_float_abs_delta": 5.960464477539063e-08,
+      "missing_fields": [],
+      "pass": true
+    },
+    "rep_2_buffered_full": {
+      "all_required_fields_present": true,
+      "exact_counter_fields_equal": true,
+      "float_fields_within_tolerance": true,
+      "float_tolerance": 1e-06,
+      "layers_equal": true,
+      "max_float_abs_delta": 5.960464477539063e-08,
+      "missing_fields": [],
+      "pass": true
+    },
+    "rep_2_gpu_full_batched": {
+      "all_required_fields_present": true,
+      "exact_counter_fields_equal": true,
+      "float_fields_within_tolerance": true,
+      "float_tolerance": 1e-06,
+      "layers_equal": true,
+      "max_float_abs_delta": 5.960464477539063e-08,
+      "missing_fields": [],
+      "pass": true
+    },
+    "rep_2_minimal_scientific": {
+      "all_required_fields_present": true,
+      "exact_counter_fields_equal": true,
+      "float_fields_within_tolerance": true,
+      "float_tolerance": 1e-06,
+      "layers_equal": true,
+      "max_float_abs_delta": 5.960464477539063e-08,
+      "missing_fields": [],
+      "pass": true
+    }
+  },
+  "torch_version": "2.12.0+cu130"
+}

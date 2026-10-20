@@ -1,0 +1,30 @@
+{
+  "schema": "ssre_npa_v0_artifact_hashes_v1",
+  "files": {
+    "ARCHITECTURE.md": "bad8239846cc8bac26c228b96a5939d2764940648f9c69eeccde82f3c32122fa",
+    "INTERFACES.md": "3717645825f7bee093067806b122701e620a3cf8ad36b5254b0219e40dc5c7c8",
+    "PROFILING_PLAN.md": "f945122cddbc38604e0cc19b8ff1596ed4520cfa945e4862c54440600260e240",
+    "README.md": "c41f017a98751fd11eca9298fe95c1e3d27f752c74809fc58fd777701d6e938e",
+    "interfaces.py": "e525fa0ebdf473289e6bdf17233d77247dd5f3c923b95d3275f92c54c43ed453",
+    "synthetic_benchmark.py": "2f7b29d05e01c6fc960e23380a6a1467a378f78f1a158293b98ed31a16d39a12",
+    "synthetic_benchmark_result_1.json": "a908236c67e04080791cb0ec7ae504a1c948aacad4ff10ca70185b8389e4e138",
+    "synthetic_benchmark_result_2.json": "d4e4e63d10adb7c1da5f486c1f1ff0a62218d5f8e63ac08966210aaaeacf5c85",
+    "synthetic_benchmark_backpressure_1.json": "eb896bbe3a8f5a2843157a96a92b56dacf065ccc06b4c98e79047c69e2966f94",
+    "synthetic_benchmark_backpressure_2.json": "afb180a8776b5c36981ee0e04c8189d506610f0f70a936a40fab79561a9b984b"
+  },
+  "validation": {
+    "ast_parse": "passed",
+    "cpu_only": true,
+    "cuda_used": false,
+    "model_training": false,
+    "ordered_digest_matches_serial": true,
+    "all_packets_consumed": true,
+    "bounded_queues_respected": true,
+    "manifest_mismatches": 0,
+    "duplicate_packets": 0,
+    "missing_packets": 0,
+    "malformed_packets": 0,
+    "backpressure_stress_blocked_puts": 6701,
+    "backpressure_stress_ordered_digest": "d397ede27de0f3d3198d28dcde2b9933c62b0f32c35493c6f5d43fe7239f9575"
+  }
+}

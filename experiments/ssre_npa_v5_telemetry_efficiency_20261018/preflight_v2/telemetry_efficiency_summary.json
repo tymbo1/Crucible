@@ -1,0 +1,402 @@
+{
+  "anchor_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+  "binary_report": {
+    "bytes": 204800000,
+    "load_ns": 259427234,
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/stories_train.bin",
+    "samples": 100000,
+    "sha256": "c8d6056d01f91ad391dba99a1b04d48e2b300829c5e6801d910249043bbebf88"
+  },
+  "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+  "context_root": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128",
+  "cuda_runtime": "13.0",
+  "deterministic_control": "torch deterministic algorithms warn_only; frozen CUDA telemetry bincount has no deterministic implementation",
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "equivalence": [
+    {
+      "candidate": "current_full",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 1
+    },
+    {
+      "candidate": "gpu_full_batched",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 1
+    },
+    {
+      "candidate": "minimal_scientific",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 1
+    },
+    {
+      "candidate": "buffered_full",
+      "final_state_sha_equal": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 1
+    }
+  ],
+  "input_report": {
+    "candidate_plan_sha256": "6f830f0834589b717e781306599aa173178839269f0f8e858096f8b61b4039f5",
+    "exact_equivalence": true,
+    "prefix_batches": 17,
+    "reference_plan_sha256": "6f830f0834589b717e781306599aa173178839269f0f8e858096f8b61b4039f5"
+  },
+  "integrity": {
+    "all_full_telemetry_counters_pass": false,
+    "all_input_prefixes_exact": true,
+    "all_loss_tolerances_pass": true,
+    "all_model_state_equivalent": true,
+    "all_primary_telemetry_counters_pass": false,
+    "all_runs_finite": true
+  },
+  "limitations": [
+    "This is a short local engineering benchmark, not a scientific training run.",
+    "Reporting/JSON timing is outside the end-to-end step wall time, matching the frozen runner's checkpoint reporting boundary.",
+    "Buffered reporting is measured as deferred batched extraction/serialization; actual filesystem fsync is not placed in the GPU critical path here.",
+    "Profiler category labels cover forward attention and MoE modules; backward is reported as a measured total, while routing/indexing is summarized from profiled CUDA operators."
+  ],
+  "parameters": {
+    "context": 128,
+    "model_parameter_count": 170233600,
+    "num_experts": 16,
+    "repetitions": 1,
+    "timed_steps": 1,
+    "top_k": 2,
+    "warmup_steps": 1
+  },
+  "profiler": null,
+  "runs": [
+    {
+      "backend": "baseline_off",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "b2c8c3603b743d3bd0f46d5166d7f164f55cf61e544bc079b4ce94b4b0b1da9a",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3421638656,
+      "peak_cuda_reserved_bytes": 4263510016,
+      "phase_sums": {
+        "backward_cuda_event_ns": 874592992,
+        "backward_host_ns": 874744847,
+        "cpu_batch_prepare_ns": 1315895,
+        "forward_cuda_event_ns": 567644383,
+        "forward_host_ns": 567836088,
+        "h2d_ns": 659169,
+        "non_compute_ns_proxy": 36345358,
+        "optimizer_ns": 62022019,
+        "wall_ns": 1478582733
+      },
+      "repetition": 1,
+      "report_json_ns": 0,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": null,
+      "telemetry": false,
+      "telemetry_finalize_ns": 0,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 874592992,
+          "backward_host_ns": 874744847,
+          "cpu_batch_prepare_ns": 1315895,
+          "forward_cuda_event_ns": 567644383,
+          "forward_host_ns": 567836088,
+          "h2d_ns": 659169,
+          "loss_values": [
+            0.616843044757843,
+            0.6654475331306458,
+            0.5514183640480042,
+            0.5454007387161255,
+            0.64329594373703,
+            0.5199484825134277,
+            0.6955001950263977,
+            0.4034727215766907
+          ],
+          "non_compute_ns_proxy": 36345358,
+          "optimizer_ns": 62022019,
+          "phase": "timed",
+          "step": 2,
+          "wall_ns": 1478582733
+        }
+      ],
+      "total_wall_ns": 3434778112
+    },
+    {
+      "backend": "current_full",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "b2c8c3603b743d3bd0f46d5166d7f164f55cf61e544bc079b4ce94b4b0b1da9a",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3421825536,
+      "peak_cuda_reserved_bytes": 4263510016,
+      "phase_sums": {
+        "backward_cuda_event_ns": 875451199,
+        "backward_host_ns": 875598822,
+        "cpu_batch_prepare_ns": 1395963,
+        "forward_cuda_event_ns": 731802515,
+        "forward_host_ns": 731977914,
+        "h2d_ns": 661130,
+        "non_compute_ns_proxy": 36290714,
+        "optimizer_ns": 62079210,
+        "wall_ns": 1643544428
+      },
+      "repetition": 1,
+      "report_json_ns": 2984721,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "68d749996c21dc207e4284153d0d94721178c199dc74dc4c6f23052864784111",
+      "telemetry": true,
+      "telemetry_finalize_ns": 1865254,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 875451199,
+          "backward_host_ns": 875598822,
+          "cpu_batch_prepare_ns": 1395963,
+          "forward_cuda_event_ns": 731802515,
+          "forward_host_ns": 731977914,
+          "h2d_ns": 661130,
+          "loss_values": [
+            0.616843044757843,
+            0.6654475331306458,
+            0.5514183640480042,
+            0.5454007387161255,
+            0.64329594373703,
+            0.5199484825134277,
+            0.6955001950263977,
+            0.4034727215766907
+          ],
+          "non_compute_ns_proxy": 36290714,
+          "optimizer_ns": 62079210,
+          "phase": "timed",
+          "step": 2,
+          "wall_ns": 1643544428
+        }
+      ],
+      "total_wall_ns": 3596740856
+    },
+    {
+      "backend": "gpu_full_batched",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "b2c8c3603b743d3bd0f46d5166d7f164f55cf61e544bc079b4ce94b4b0b1da9a",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3422110208,
+      "peak_cuda_reserved_bytes": 4263510016,
+      "phase_sums": {
+        "backward_cuda_event_ns": 893023707,
+        "backward_host_ns": 893175530,
+        "cpu_batch_prepare_ns": 1409418,
+        "forward_cuda_event_ns": 652879955,
+        "forward_host_ns": 653071907,
+        "h2d_ns": 701578,
+        "non_compute_ns_proxy": 36808762,
+        "optimizer_ns": 62486978,
+        "wall_ns": 1582712424
+      },
+      "repetition": 1,
+      "report_json_ns": 3890328,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "9d57ec2d240507fead760d80094cef140e98572db39255fecfe57bc4aa327d56",
+      "telemetry": true,
+      "telemetry_finalize_ns": 1732285,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 893023707,
+          "backward_host_ns": 893175530,
+          "cpu_batch_prepare_ns": 1409418,
+          "forward_cuda_event_ns": 652879955,
+          "forward_host_ns": 653071907,
+          "h2d_ns": 701578,
+          "loss_values": [
+            0.616843044757843,
+            0.6654475331306458,
+            0.5514183640480042,
+            0.5454007387161255,
+            0.64329594373703,
+            0.5199484825134277,
+            0.6955001950263977,
+            0.4034727215766907
+          ],
+          "non_compute_ns_proxy": 36808762,
+          "optimizer_ns": 62486978,
+          "phase": "timed",
+          "step": 2,
+          "wall_ns": 1582712424
+        }
+      ],
+      "total_wall_ns": 3426913556
+    },
+    {
+      "backend": "minimal_scientific",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "b2c8c3603b743d3bd0f46d5166d7f164f55cf61e544bc079b4ce94b4b0b1da9a",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3422253568,
+      "peak_cuda_reserved_bytes": 4263510016,
+      "phase_sums": {
+        "backward_cuda_event_ns": 914829136,
+        "backward_host_ns": 914978221,
+        "cpu_batch_prepare_ns": 1362085,
+        "forward_cuda_event_ns": 585971036,
+        "forward_host_ns": 586145712,
+        "h2d_ns": 937027,
+        "non_compute_ns_proxy": 36792890,
+        "optimizer_ns": 62174499,
+        "wall_ns": 1537593062
+      },
+      "repetition": 1,
+      "report_json_ns": 2035593,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "23b176640151f8e03e16d72f9c2cfa5c98007acf670291162ed42fca97fa0a4b",
+      "telemetry": true,
+      "telemetry_finalize_ns": 809918,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 914829136,
+          "backward_host_ns": 914978221,
+          "cpu_batch_prepare_ns": 1362085,
+          "forward_cuda_event_ns": 585971036,
+          "forward_host_ns": 586145712,
+          "h2d_ns": 937027,
+          "loss_values": [
+            0.616843044757843,
+            0.6654475331306458,
+            0.5514183640480042,
+            0.5454007387161255,
+            0.64329594373703,
+            0.5199484825134277,
+            0.6955001950263977,
+            0.4034727215766907
+          ],
+          "non_compute_ns_proxy": 36792890,
+          "optimizer_ns": 62174499,
+          "phase": "timed",
+          "step": 2,
+          "wall_ns": 1537593062
+        }
+      ],
+      "total_wall_ns": 3266043180
+    },
+    {
+      "backend": "buffered_full",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "final_state_sha256": "b2c8c3603b743d3bd0f46d5166d7f164f55cf61e544bc079b4ce94b4b0b1da9a",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_losses": true
+      },
+      "peak_cuda_allocated_bytes": 3422538240,
+      "peak_cuda_reserved_bytes": 4265607168,
+      "phase_sums": {
+        "backward_cuda_event_ns": 909557728,
+        "backward_host_ns": 909708470,
+        "cpu_batch_prepare_ns": 1483279,
+        "forward_cuda_event_ns": 647358334,
+        "forward_host_ns": 647699064,
+        "h2d_ns": 766536,
+        "non_compute_ns_proxy": 37174167,
+        "optimizer_ns": 62506418,
+        "wall_ns": 1594090229
+      },
+      "repetition": 1,
+      "report_json_ns": 3005810,
+      "schema_version": "ssre-npa-telemetry-efficiency-v5",
+      "summary_sha256": "9d57ec2d240507fead760d80094cef140e98572db39255fecfe57bc4aa327d56",
+      "telemetry": true,
+      "telemetry_finalize_ns": 1197837,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 909557728,
+          "backward_host_ns": 909708470,
+          "cpu_batch_prepare_ns": 1483279,
+          "forward_cuda_event_ns": 647358334,
+          "forward_host_ns": 647699064,
+          "h2d_ns": 766536,
+          "loss_values": [
+            0.616843044757843,
+            0.6654475331306458,
+            0.5514183640480042,
+            0.5454007387161255,
+            0.64329594373703,
+            0.5199484825134277,
+            0.6955001950263977,
+            0.4034727215766907
+          ],
+          "non_compute_ns_proxy": 37174167,
+          "optimizer_ns": 62506418,
+          "phase": "timed",
+          "step": 2,
+          "wall_ns": 1594090229
+        }
+      ],
+      "total_wall_ns": 3410872225
+    }
+  ],
+  "schedule_report": {
+    "batches": 25987,
+    "examples": 100000,
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/schedule_seed_42.json",
+    "permutation_sha256": "835c5ee000222e6a3582ce071559fb465e76b80668f6e4814cada6eb733865b6",
+    "seed": 42,
+    "sha256": "ec449a68230663f06d57589aa744626d596c5efaf1ba43c1b57fc5bb0cb32879",
+    "source_bytes": 9856480,
+    "steps": 3125
+  },
+  "schema_version": "ssre-npa-v5-summary",
+  "source_report": {
+    "count": 100000,
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/../source/packed_train.jsonl",
+    "sha256": "dca93acdadec204409f7312b6b5b6ea4897bdd846bbd4eb9a62c71b8dce36cce",
+    "source_bytes": 9856480,
+    "validation_ns": 863390871
+  },
+  "telemetry_equivalence": {
+    "rep_1_buffered_full": {
+      "all_required_fields_present": true,
+      "exact_counter_fields_equal": true,
+      "float_fields_within_tolerance": false,
+      "float_tolerance": 1e-08,
+      "layers_equal": true,
+      "max_float_abs_delta": 1.1920928955078125e-07,
+      "missing_fields": [],
+      "pass": false
+    },
+    "rep_1_gpu_full_batched": {
+      "all_required_fields_present": true,
+      "exact_counter_fields_equal": true,
+      "float_fields_within_tolerance": false,
+      "float_tolerance": 1e-08,
+      "layers_equal": true,
+      "max_float_abs_delta": 1.1920928955078125e-07,
+      "missing_fields": [],
+      "pass": false
+    },
+    "rep_1_minimal_scientific": {
+      "all_required_fields_present": true,
+      "exact_counter_fields_equal": true,
+      "float_fields_within_tolerance": false,
+      "float_tolerance": 1e-08,
+      "layers_equal": true,
+      "max_float_abs_delta": 1.1920928955078125e-07,
+      "missing_fields": [],
+      "pass": false
+    }
+  },
+  "torch_version": "2.12.0+cu130"
+}

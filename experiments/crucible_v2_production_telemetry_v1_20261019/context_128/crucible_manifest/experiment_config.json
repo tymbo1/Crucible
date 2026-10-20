@@ -1,0 +1,219 @@
+{
+  "anchors": {
+    "1337": {
+      "binary_payload_sha256": "f8481e113f6404e1e9ea623f31f7d4405d4cd80ce6977269fe6c8d77377bc42f",
+      "relative_path": "initial_seed_anchor_1337.pt"
+    },
+    "42": {
+      "binary_payload_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+      "relative_path": "initial_seed_anchor_42.pt"
+    }
+  },
+  "code_provenance": {
+    "manifest_compiler_sha256": "d0281418d31a77cfedd3a301dbcfa4fe4af1f03f438ddc20f45142631d1fd360",
+    "model_core_sha256": "febc61bc38d23b32593c5e1682ea3ef44b272913878d52ad8e4576c732112415",
+    "runner_sha256": "948fe1ba2b466b8ddbd55d67e32890314407ba6b3d413b250c2faa756f9a335b",
+    "source_preprocessor_sha256": "a8d1b7abbedf2856da451504acf385ec74675c35f037352f8d03431ad42bb858",
+    "source_verifier_sha256": "ece9de5349932d3add33efa509fcd82eab1da1181c01fa29d57281dad023aa0b"
+  },
+  "contract": {
+    "architectural_branches": [
+      "B"
+    ],
+    "checkpoint_intervals": [
+      100,
+      250,
+      500,
+      750,
+      1000,
+      1500,
+      2000,
+      2500,
+      3125
+    ],
+    "learning_rate_candidates": [
+      0.0003
+    ],
+    "num_optimizer_updates": 3125,
+    "seeds": [
+      42,
+      1337
+    ],
+    "selection_note": "E16 context gate; matched raw UTF-8 source bytes, dynamic byte-balanced step groups, EOS-excluded raw-byte NLL/BPB primary endpoint"
+  },
+  "experiment_variant": {
+    "active_compute_reference": "matched_active_e16",
+    "context_length": 128,
+    "expert_count": 16,
+    "expert_hidden_width": 3447,
+    "id": "context_128",
+    "regime": "fixed_active_compute",
+    "top_k": 2
+  },
+  "hyperparameters": {
+    "adamw_beta1": 0.9,
+    "adamw_beta2": 0.95,
+    "adamw_eps": 1e-08,
+    "batching_mode": "dynamic_source_byte_groups_v1",
+    "branch_b_aux_coef": 0.1,
+    "branch_c_bias_step": 0.01,
+    "checkpoint_intervals": [
+      100,
+      250,
+      500,
+      750,
+      1000,
+      1500,
+      2000,
+      2500,
+      3125
+    ],
+    "context_window_length": 128,
+    "d_ff": 3447,
+    "d_model": 256,
+    "effective_batch_size": 32,
+    "expected_parameter_geometry": 170233600,
+    "expert_count_variant": "matched_active_e16",
+    "gradient_accumulation_steps": null,
+    "latent_dim_kv": 64,
+    "latent_dim_q": 64,
+    "max_norm_clip": 1.0,
+    "max_source_utf8_bytes": 127,
+    "microbatch_size": 4,
+    "n_heads": 4,
+    "n_layers": 4,
+    "nominal_corpus_passes": 1.0,
+    "num_experts": 16,
+    "num_steps": 3125,
+    "pe_dim": 32,
+    "raw_byte_primary_metric": "validation_raw_byte_nll_eos_excluded",
+    "reference_source_bytes": 9856480,
+    "reference_validation_source_bytes": 493539,
+    "target_source_bytes_per_update": 3154.0736,
+    "top_k": 2,
+    "vocab_size": 259,
+    "warmup_steps": 313,
+    "weight_decay": 0.1
+  },
+  "meta": {
+    "context_dataset_statistics_relative_path": "../source/context_dataset_statistics.json",
+    "context_dataset_statistics_sha256": "1cafb9c3b119de5101b90bad4900ea256fd1fe8c0ae3df569daab65afa39e505",
+    "cross_split_exact_duplicates": 0,
+    "dataset_name": "Crucible E16 context gate 128 byte context",
+    "endianness": "little",
+    "experiment_family": "crucible_context_gate_v1",
+    "official_split_preserved": true,
+    "raw_byte_budget_policy": {
+      "eos_excluded_primary_metric": true,
+      "optimizer_updates": 3125,
+      "train_actual_source_bytes": 9856480,
+      "train_target_source_bytes": 9856480,
+      "validation_actual_source_bytes": 493539,
+      "validation_reference_source_bytes": 493539
+    },
+    "reference_e16_manifest_sha256": "1a3f760043a06d0b98e17d41bf4bb49b079855831dbf2585a4b7747423ead5ab",
+    "reference_e16_model_core_sha256": "271cfde17e073077947a3540c1d41fdcbe382309fa1021d89d42307a9a5cd6ab",
+    "source_corpus_sha256": "fb5ffda4f979eeee66306b427ee69baefbf12885b484366fde8c039c82d484fe",
+    "source_files": [
+      {
+        "bytes": 2227753162,
+        "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-train.txt",
+        "selected_packed_examples": 100000,
+        "sha256": "6418d412de72888f52b5142c761ac21a582f7d1166f0bfbdb5f03ccfdec90443",
+        "split": "train",
+        "url": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/main/TinyStoriesV2-GPT4-train.txt?download=true"
+      },
+      {
+        "bytes": 22502601,
+        "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-valid.txt",
+        "selected_packed_examples": 5000,
+        "sha256": "6874bae9a4c1a4e7edcf0e53b86c17817e9cf881fc75ff2368da457b80c0585d",
+        "split": "validation",
+        "url": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/main/TinyStoriesV2-GPT4-valid.txt?download=true"
+      }
+    ],
+    "source_language": "English",
+    "source_license": "cdla-sharing-1.0",
+    "source_upstream_repository": "roneneldan/TinyStories",
+    "source_upstream_revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+    "tensor_data_type": "int64",
+    "tokenizer_specification": "LosslessByteTransformerStandard",
+    "train_examples": 100000,
+    "train_source_utf8_bytes": 9856480,
+    "training_started": false,
+    "truncation_count": 0,
+    "validation_examples": 5000,
+    "validation_source_utf8_bytes": 493539,
+    "variant_id": "context_128"
+  },
+  "schedule_summaries": {
+    "1337": {
+      "max_examples": 37,
+      "max_source_bytes": 3279,
+      "mean_examples": 32.0,
+      "mean_source_bytes": 3154.0736,
+      "min_examples": 28,
+      "min_source_bytes": 3034
+    },
+    "42": {
+      "max_examples": 37,
+      "max_source_bytes": 3270,
+      "mean_examples": 32.0,
+      "mean_source_bytes": 3154.0736,
+      "min_examples": 28,
+      "min_source_bytes": 3038
+    }
+  },
+  "schedules": {
+    "1337": {
+      "binary_payload_sha256": "41073cb37fb568bb2211b70704bff32d56df314594f2ead2d8f344a3eaab6372",
+      "is_single_train_permutation": true,
+      "num_indices": 100000,
+      "num_steps": 3125,
+      "relative_path": "schedule_seed_1337.json",
+      "schema": "crucible_dynamic_source_byte_schedule_v1",
+      "target_source_bytes_per_update": 3154.0736
+    },
+    "42": {
+      "binary_payload_sha256": "ec449a68230663f06d57589aa744626d596c5efaf1ba43c1b57fc5bb0cb32879",
+      "is_single_train_permutation": true,
+      "num_indices": 100000,
+      "num_steps": 3125,
+      "relative_path": "schedule_seed_42.json",
+      "schema": "crucible_dynamic_source_byte_schedule_v1",
+      "target_source_bytes_per_update": 3154.0736
+    }
+  },
+  "splits": {
+    "train": {
+      "binary_payload_sha256": "c8d6056d01f91ad391dba99a1b04d48e2b300829c5e6801d910249043bbebf88",
+      "max_source_utf8_bytes": 127,
+      "nonpad_target_tokens": 9956480,
+      "provenance_record_count": 100000,
+      "provenance_relative_path": "../source/provenance_train.jsonl",
+      "provenance_schema": "crucible_context_provenance_v1",
+      "provenance_sha256": "acad7883a82add9f089999b746bb41d1f62404b6e403e1b14bb7d2686ef915e6",
+      "relative_path": "stories_train.bin",
+      "source_jsonl_relative_path": "../source/packed_train.jsonl",
+      "source_jsonl_sha256": "dca93acdadec204409f7312b6b5b6ea4897bdd846bbd4eb9a62c71b8dce36cce",
+      "source_utf8_bytes": 9856480,
+      "total_constructed_examples": 100000,
+      "truncation_count": 0
+    },
+    "validation": {
+      "binary_payload_sha256": "0f2ac7dba972bc39b13d7e0dc26d7cf29611c041bdab82956813dad4525eb731",
+      "max_source_utf8_bytes": 127,
+      "nonpad_target_tokens": 498539,
+      "provenance_record_count": 5000,
+      "provenance_relative_path": "../source/provenance_validation.jsonl",
+      "provenance_schema": "crucible_context_provenance_v1",
+      "provenance_sha256": "b8138bb91388ac22c7477c76e229a5cf5dc3a2b908227614e54d46a4390f4e58",
+      "relative_path": "stories_validation.bin",
+      "source_jsonl_relative_path": "../source/packed_validation.jsonl",
+      "source_jsonl_sha256": "0892f91dc2fee04619ebbd795b7da7f67a7829b9d6423eac1545c50c5512fa23",
+      "source_utf8_bytes": 493539,
+      "total_constructed_examples": 5000,
+      "truncation_count": 0
+    }
+  }
+}

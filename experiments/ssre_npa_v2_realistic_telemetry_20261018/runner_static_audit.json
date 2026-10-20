@@ -1,0 +1,1631 @@
+{
+  "model": {
+    "bytes": 22891,
+    "call_lines": {
+      "<dynamic>.__init__": [
+        11,
+        29,
+        157,
+        286,
+        339
+      ],
+      "<dynamic>.contiguous": [
+        143
+      ],
+      "<dynamic>.cpu": [
+        589,
+        590,
+        594,
+        600
+      ],
+      "<dynamic>.double": [
+        494,
+        497,
+        508,
+        524,
+        545
+      ],
+      "<dynamic>.expand": [
+        114
+      ],
+      "<dynamic>.float": [
+        62,
+        216,
+        224,
+        491,
+        545
+      ],
+      "<dynamic>.index_add_": [
+        518,
+        526
+      ],
+      "<dynamic>.item": [
+        266,
+        478,
+        478,
+        553,
+        563,
+        569,
+        573,
+        606,
+        611
+      ],
+      "<dynamic>.items": [
+        552
+      ],
+      "<dynamic>.mean": [
+        219,
+        266
+      ],
+      "<dynamic>.norm": [
+        545
+      ],
+      "<dynamic>.repeat": [
+        67,
+        68
+      ],
+      "<dynamic>.squeeze": [
+        85
+      ],
+      "<dynamic>.sum": [
+        524,
+        529
+      ],
+      "<dynamic>.to": [
+        67,
+        68,
+        245
+      ],
+      "<dynamic>.tolist": [
+        264,
+        587,
+        588,
+        589,
+        590,
+        591,
+        592,
+        593,
+        594,
+        598,
+        599,
+        600
+      ],
+      "<dynamic>.transpose": [
+        110,
+        111,
+        521
+      ],
+      "<dynamic>.unsqueeze": [
+        67,
+        68,
+        80,
+        122,
+        125,
+        245
+      ],
+      "<dynamic>.view": [
+        55,
+        70,
+        103,
+        106,
+        143
+      ],
+      "ExperimentalTransformerBlock": [
+        344
+      ],
+      "F.scaled_dot_product_attention": [
+        135
+      ],
+      "F.silu": [
+        17
+      ],
+      "F.softmax": [
+        201,
+        219
+      ],
+      "MultiHeadLatentAttention": [
+        289
+      ],
+      "ResearchMoELayer": [
+        292
+      ],
+      "SwiGLU": [
+        169
+      ],
+      "ValueError": [
+        31,
+        33,
+        161,
+        456,
+        472,
+        477,
+        479,
+        485,
+        571,
+        575
+      ],
+      "accumulator.get": [
+        585
+      ],
+      "activation_count.cpu": [
+        599
+      ],
+      "activation_sum.cpu": [
+        598
+      ],
+      "attn_out.transpose": [
+        143
+      ],
+      "cache.evict_history_": [
+        140
+      ],
+      "cache.update": [
+        93
+      ],
+      "cached_positions.unsqueeze": [
+        133
+      ],
+      "cls._init_layer_buffers": [
+        480
+      ],
+      "combined_mask.unsqueeze": [
+        132
+      ],
+      "current_tokens.reshape": [
+        184
+      ],
+      "delta_tensor.abs": [
+        266
+      ],
+      "enumerate": [
+        232,
+        372
+      ],
+      "error.cpu": [
+        264
+      ],
+      "expert": [
+        236
+      ],
+      "expert_output.detach": [
+        545
+      ],
+      "final_mask.unsqueeze": [
+        136
+      ],
+      "float": [
+        567
+      ],
+      "full_compressed_kv.size": [
+        102
+      ],
+      "full_k_pe.unsqueeze": [
+        114
+      ],
+      "hard_assignments.cpu": [
+        591
+      ],
+      "hard_assignments.max": [
+        607
+      ],
+      "hard_assignments.mean": [
+        565
+      ],
+      "hard_assignments.min": [
+        608
+      ],
+      "hard_assignments.numel": [
+        557
+      ],
+      "hard_assignments.size": [
+        567
+      ],
+      "hard_assignments.std": [
+        564
+      ],
+      "indices.numel": [
+        514
+      ],
+      "indices.reshape": [
+        492,
+        498,
+        507,
+        512
+      ],
+      "int": [
+        159,
+        455,
+        457,
+        475,
+        586
+      ],
+      "layer": [
+        374
+      ],
+      "logits.float": [
+        201
+      ],
+      "math.log": [
+        567
+      ],
+      "nn.Embedding": [
+        341
+      ],
+      "nn.Linear": [
+        12,
+        13,
+        14,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        167,
+        360
+      ],
+      "nn.ModuleList": [
+        168,
+        342
+      ],
+      "nn.RMSNorm": [
+        287,
+        288,
+        359
+      ],
+      "non_pad_mask.any": [
+        189
+      ],
+      "normalized_selected.reshape": [
+        508
+      ],
+      "normalized_selected.sum": [
+        504
+      ],
+      "norms.numel": [
+        547
+      ],
+      "norms.sum": [
+        546
+      ],
+      "out_flat.view": [
+        190,
+        252
+      ],
+      "probabilities.double": [
+        521
+      ],
+      "probs.detach": [
+        468
+      ],
+      "range": [
+        169,
+        233,
+        356,
+        523
+      ],
+      "raw_logits.float": [
+        219
+      ],
+      "selected.any": [
+        235
+      ],
+      "selected_counts.cpu": [
+        588
+      ],
+      "selected_counts.sum": [
+        573
+      ],
+      "selected_probability_count.cpu": [
+        593
+      ],
+      "selected_probability_sum.cpu": [
+        592
+      ],
+      "self.accumulated_expert_counts.sum": [
+        258
+      ],
+      "self.accumulated_expert_counts.zero_": [
+        268
+      ],
+      "self.attn": [
+        311
+      ],
+      "self.attn_norm": [
+        312
+      ],
+      "self.bias_tracking_weights.unsqueeze": [
+        196
+      ],
+      "self.ffn_norm": [
+        318
+      ],
+      "self.final_norm": [
+        383
+      ],
+      "self.gate": [
+        194
+      ],
+      "self.k_pe_proj": [
+        80
+      ],
+      "self.k_up_proj": [
+        103
+      ],
+      "self.kv_down_proj": [
+        79
+      ],
+      "self.lm_head": [
+        383
+      ],
+      "self.moe": [
+        317
+      ],
+      "self.out_proj": [
+        142
+      ],
+      "self.q_down_proj": [
+        54
+      ],
+      "self.q_pe_proj": [
+        70
+      ],
+      "self.q_up_proj": [
+        55
+      ],
+      "self.register_buffer": [
+        171,
+        172
+      ],
+      "self.token_emb": [
+        371
+      ],
+      "self.v_up_proj": [
+        106
+      ],
+      "self.w1": [
+        17
+      ],
+      "self.w2": [
+        17
+      ],
+      "self.w3": [
+        17
+      ],
+      "seq_idx.float": [
+        66
+      ],
+      "seq_idx.unsqueeze": [
+        133
+      ],
+      "super": [
+        11,
+        29,
+        157,
+        286,
+        339
+      ],
+      "telemetry_class.record_expert_output": [
+        238
+      ],
+      "telemetry_class.record_routing": [
+        207
+      ],
+      "token_affinity.cpu": [
+        587
+      ],
+      "token_affinity.sum": [
+        569
+      ],
+      "topk_indices.detach": [
+        469
+      ],
+      "topk_indices.reshape": [
+        217,
+        225
+      ],
+      "topk_probs.sum": [
+        229
+      ],
+      "torch.any": [
+        525
+      ],
+      "torch.arange": [
+        62,
+        122,
+        125
+      ],
+      "torch.bincount": [
+        216,
+        224,
+        491,
+        494,
+        497,
+        506,
+        511
+      ],
+      "torch.cat": [
+        73,
+        81,
+        110,
+        111
+      ],
+      "torch.cos": [
+        68
+      ],
+      "torch.einsum": [
+        66
+      ],
+      "torch.gather": [
+        500
+      ],
+      "torch.log": [
+        530
+      ],
+      "torch.no_grad": [
+        223,
+        257
+      ],
+      "torch.ones": [
+        513
+      ],
+      "torch.sin": [
+        67
+      ],
+      "torch.sum": [
+        220,
+        529
+      ],
+      "torch.tensor": [
+        173,
+        188
+      ],
+      "torch.topk": [
+        202
+      ],
+      "torch.zeros": [
+        171,
+        172,
+        407,
+        410,
+        413,
+        419,
+        425,
+        431,
+        434,
+        437,
+        440,
+        443,
+        446
+      ],
+      "torch.zeros_like": [
+        186,
+        231
+      ],
+      "v_heads.transpose": [
+        120
+      ],
+      "valid_tokens.max": [
+        478
+      ],
+      "valid_tokens.min": [
+        478
+      ],
+      "valid_tokens.numel": [
+        218
+      ],
+      "x.reshape": [
+        183
+      ]
+    },
+    "calls": {
+      "<dynamic>.__init__": 5,
+      "<dynamic>.contiguous": 1,
+      "<dynamic>.cpu": 4,
+      "<dynamic>.double": 5,
+      "<dynamic>.expand": 1,
+      "<dynamic>.float": 5,
+      "<dynamic>.index_add_": 2,
+      "<dynamic>.item": 9,
+      "<dynamic>.items": 1,
+      "<dynamic>.mean": 2,
+      "<dynamic>.norm": 1,
+      "<dynamic>.repeat": 2,
+      "<dynamic>.squeeze": 1,
+      "<dynamic>.sum": 2,
+      "<dynamic>.to": 3,
+      "<dynamic>.tolist": 12,
+      "<dynamic>.transpose": 3,
+      "<dynamic>.unsqueeze": 6,
+      "<dynamic>.view": 5,
+      "ExperimentalTransformerBlock": 1,
+      "F.scaled_dot_product_attention": 1,
+      "F.silu": 1,
+      "F.softmax": 2,
+      "MultiHeadLatentAttention": 1,
+      "ResearchMoELayer": 1,
+      "SwiGLU": 1,
+      "ValueError": 10,
+      "accumulator.get": 1,
+      "activation_count.cpu": 1,
+      "activation_sum.cpu": 1,
+      "attn_out.transpose": 1,
+      "cache.evict_history_": 1,
+      "cache.update": 1,
+      "cached_positions.unsqueeze": 1,
+      "cls._init_layer_buffers": 1,
+      "combined_mask.unsqueeze": 1,
+      "current_tokens.reshape": 1,
+      "delta_tensor.abs": 1,
+      "enumerate": 2,
+      "error.cpu": 1,
+      "expert": 1,
+      "expert_output.detach": 1,
+      "final_mask.unsqueeze": 1,
+      "float": 1,
+      "full_compressed_kv.size": 1,
+      "full_k_pe.unsqueeze": 1,
+      "hard_assignments.cpu": 1,
+      "hard_assignments.max": 1,
+      "hard_assignments.mean": 1,
+      "hard_assignments.min": 1,
+      "hard_assignments.numel": 1,
+      "hard_assignments.size": 1,
+      "hard_assignments.std": 1,
+      "indices.numel": 1,
+      "indices.reshape": 4,
+      "int": 5,
+      "layer": 1,
+      "logits.float": 1,
+      "math.log": 1,
+      "nn.Embedding": 1,
+      "nn.Linear": 13,
+      "nn.ModuleList": 2,
+      "nn.RMSNorm": 3,
+      "non_pad_mask.any": 1,
+      "normalized_selected.reshape": 1,
+      "normalized_selected.sum": 1,
+      "norms.numel": 1,
+      "norms.sum": 1,
+      "out_flat.view": 2,
+      "probabilities.double": 1,
+      "probs.detach": 1,
+      "range": 4,
+      "raw_logits.float": 1,
+      "selected.any": 1,
+      "selected_counts.cpu": 1,
+      "selected_counts.sum": 1,
+      "selected_probability_count.cpu": 1,
+      "selected_probability_sum.cpu": 1,
+      "self.accumulated_expert_counts.sum": 1,
+      "self.accumulated_expert_counts.zero_": 1,
+      "self.attn": 1,
+      "self.attn_norm": 1,
+      "self.bias_tracking_weights.unsqueeze": 1,
+      "self.ffn_norm": 1,
+      "self.final_norm": 1,
+      "self.gate": 1,
+      "self.k_pe_proj": 1,
+      "self.k_up_proj": 1,
+      "self.kv_down_proj": 1,
+      "self.lm_head": 1,
+      "self.moe": 1,
+      "self.out_proj": 1,
+      "self.q_down_proj": 1,
+      "self.q_pe_proj": 1,
+      "self.q_up_proj": 1,
+      "self.register_buffer": 2,
+      "self.token_emb": 1,
+      "self.v_up_proj": 1,
+      "self.w1": 1,
+      "self.w2": 1,
+      "self.w3": 1,
+      "seq_idx.float": 1,
+      "seq_idx.unsqueeze": 1,
+      "super": 5,
+      "telemetry_class.record_expert_output": 1,
+      "telemetry_class.record_routing": 1,
+      "token_affinity.cpu": 1,
+      "token_affinity.sum": 1,
+      "topk_indices.detach": 1,
+      "topk_indices.reshape": 2,
+      "topk_probs.sum": 1,
+      "torch.any": 1,
+      "torch.arange": 3,
+      "torch.bincount": 7,
+      "torch.cat": 4,
+      "torch.cos": 1,
+      "torch.einsum": 1,
+      "torch.gather": 1,
+      "torch.log": 1,
+      "torch.no_grad": 2,
+      "torch.ones": 1,
+      "torch.sin": 1,
+      "torch.sum": 2,
+      "torch.tensor": 2,
+      "torch.topk": 1,
+      "torch.zeros": 13,
+      "torch.zeros_like": 2,
+      "v_heads.transpose": 1,
+      "valid_tokens.max": 1,
+      "valid_tokens.min": 1,
+      "valid_tokens.numel": 1,
+      "x.reshape": 1
+    },
+    "data_loader_calls": [],
+    "device_transfer_calls": [
+      {
+        "keywords": {},
+        "line": 67,
+        "non_blocking_explicit": false
+      },
+      {
+        "keywords": {},
+        "line": 68,
+        "non_blocking_explicit": false
+      },
+      {
+        "keywords": {},
+        "line": 245,
+        "non_blocking_explicit": false
+      }
+    ],
+    "lines": 615,
+    "method_count": 17,
+    "methods": [
+      "__init__",
+      "forward",
+      "__init__",
+      "forward",
+      "__init__",
+      "forward",
+      "execute_global_bias_step_update_",
+      "__init__",
+      "forward",
+      "__init__",
+      "forward",
+      "reset_step_buffer",
+      "_init_layer_buffers",
+      "configure",
+      "record_routing",
+      "record_expert_output",
+      "get_summary"
+    ],
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261018/shared/model_core.py",
+    "relevant_loops": [
+      {
+        "iterable": "enumerate(self.experts)",
+        "line": 232,
+        "target": "(expert_index, expert)"
+      },
+      {
+        "iterable": "range(self.top_k)",
+        "line": 233,
+        "target": "rank"
+      },
+      {
+        "iterable": "range(num_experts)",
+        "line": 523,
+        "target": "expert_index"
+      }
+    ],
+    "sha256": "271cfde17e073077947a3540c1d41fdcbe382309fa1021d89d42307a9a5cd6ab"
+  },
+  "observations": [
+    {
+      "evidence": "ImmutableBinaryDataset.__init__ calls read() on the complete binary payload before exposing samples.",
+      "id": "dataset_full_read",
+      "implication": "A prepared indexed/mmap adapter can remove repeated sample slicing and reduce host-copy pressure, but must preserve hashes and geometry.",
+      "severity": "medium",
+      "signals": [
+        "handle.read",
+        "torch.frombuffer",
+        "bytearray"
+      ],
+      "source": "/home/timbushnell/crucible_context_gate_v1_20261018/shared/context_runner.py"
+    },
+    {
+      "evidence": "Training constructs each microbatch with a Python list of dataset[index] calls followed by torch.stack; __getitem__ clones both x and y.",
+      "id": "per_sample_clone_and_stack",
+      "implication": "This is a primary candidate for precomputed contiguous batch assembly or bounded worker preparation.",
+      "severity": "high",
+      "signals": [
+        "torch.stack",
+        "Tensor.clone"
+      ],
+      "source": "/home/timbushnell/crucible_context_gate_v1_20261018/shared/context_runner.py"
+    },
+    {
+      "evidence": "Training and validation call .to(device) without an explicit non_blocking argument.",
+      "id": "synchronous_device_transfer",
+      "implication": "Pinned staging and nonblocking handoff are future adapter questions; they must be measured, not assumed beneficial.",
+      "severity": "medium",
+      "signals": [
+        "Tensor.to"
+      ],
+      "source": "/home/timbushnell/crucible_context_gate_v1_20261018/shared/context_runner.py"
+    },
+    {
+      "evidence": "The validation DataLoader omits num_workers, pin_memory and persistent_workers.",
+      "id": "validation_single_process_loader",
+      "implication": "Validation timing may include serial host assembly and should be separated from training throughput.",
+      "severity": "medium",
+      "signals": [
+        "DataLoader"
+      ],
+      "source": "/home/timbushnell/crucible_context_gate_v1_20261018/shared/context_runner.py"
+    },
+    {
+      "evidence": "Each trial re-reads and validates source JSONL records and provenance counts before constructing binary datasets.",
+      "id": "source_integrity_reread",
+      "implication": "This is appropriate for fail-closed launch validation but should be excluded from per-step throughput claims.",
+      "severity": "medium",
+      "signals": [
+        "read_jsonl_source_lengths",
+        "assert_file_sha256_integrity"
+      ],
+      "source": "/home/timbushnell/crucible_context_gate_v1_20261018/shared/context_runner.py"
+    },
+    {
+      "evidence": "The runner explicitly synchronizes CUDA before checkpoint telemetry and after validation.",
+      "id": "explicit_cuda_barriers",
+      "implication": "These barriers are valid for interval timing but must be accounted for separately from steady-state step timing.",
+      "severity": "medium",
+      "signals": [
+        "torch.cuda.synchronize"
+      ],
+      "source": "/home/timbushnell/crucible_context_gate_v1_20261018/shared/context_runner.py"
+    },
+    {
+      "evidence": "The runner calls os.fsync after writing each metric row.",
+      "id": "durable_metrics_flush",
+      "implication": "Durability is desirable, but metric-write latency should be recorded outside the model-step critical path where possible.",
+      "severity": "low",
+      "signals": [
+        "os.fsync"
+      ],
+      "source": "/home/timbushnell/crucible_context_gate_v1_20261018/shared/context_runner.py"
+    },
+    {
+      "evidence": "Each MoE layer loops over every expert and top-k rank, selects tokens with boolean masks, and evaluates an expert only when selected.",
+      "id": "expert_dispatch_loop",
+      "implication": "Routing/dispatch and telemetry overhead need independent timing fields; CPU data scheduling alone may not solve GPU under-utilization.",
+      "severity": "high",
+      "signals": [
+        "for expert_index",
+        "for rank",
+        "record_routing",
+        "record_expert_output"
+      ],
+      "source": "/home/timbushnell/crucible_context_gate_v1_20261018/shared/model_core.py"
+    },
+    {
+      "evidence": "Routing telemetry uses bincount/index_add_ accumulation and expert-output norm collection during the model forward path.",
+      "id": "gpu_telemetry_accumulation",
+      "implication": "A representative telemetry-heavy workload is required before deciding whether telemetry belongs on the critical path.",
+      "severity": "high",
+      "signals": [
+        "torch.bincount",
+        "index_add_",
+        "record_expert_output"
+      ],
+      "source": "/home/timbushnell/crucible_context_gate_v1_20261018/shared/model_core.py"
+    }
+  ],
+  "profile_boundary": {
+    "measured": false,
+    "next_measurement": "Attach the v2 event collector to deterministic scheduler packet boundaries and separately time preparation, H2D, forward/backward, synchronization, telemetry and commit phases.",
+    "reason": "This artifact intentionally performs no live model or GPU benchmark."
+  },
+  "runner": {
+    "bytes": 23277,
+    "call_lines": {
+      "<dynamic>.append": [
+        246
+      ],
+      "<dynamic>.clone": [
+        62,
+        63
+      ],
+      "<dynamic>.encode": [
+        91
+      ],
+      "<dynamic>.expand": [
+        298,
+        346
+      ],
+      "<dynamic>.get": [
+        435
+      ],
+      "<dynamic>.hexdigest": [
+        44,
+        99
+      ],
+      "<dynamic>.item": [
+        183,
+        183,
+        283,
+        317,
+        369,
+        385,
+        386,
+        387
+      ],
+      "<dynamic>.mean": [
+        307
+      ],
+      "<dynamic>.sum": [
+        183,
+        183
+      ],
+      "<dynamic>.to": [
+        229,
+        296,
+        297,
+        344,
+        345
+      ],
+      "<dynamic>.unsqueeze": [
+        298,
+        346
+      ],
+      "BraidPrototypeLM": [
+        229
+      ],
+      "DataLoader": [
+        341
+      ],
+      "F.cross_entropy": [
+        175
+      ],
+      "ImmutableBinaryDataset": [
+        211,
+        215
+      ],
+      "ResearchMoETelemetry.configure": [
+        228
+      ],
+      "ResearchMoETelemetry.get_summary": [
+        333
+      ],
+      "ResearchMoETelemetry.reset_step_buffer": [
+        278,
+        334,
+        415
+      ],
+      "RuntimeError": [
+        445
+      ],
+      "SystemExit": [
+        478
+      ],
+      "ValueError": [
+        46,
+        49,
+        53,
+        78,
+        93,
+        96,
+        98,
+        100,
+        103,
+        109,
+        111,
+        127,
+        129,
+        132,
+        136,
+        139,
+        141,
+        144,
+        146,
+        148,
+        150,
+        153,
+        155,
+        157,
+        163,
+        220,
+        225,
+        236,
+        251,
+        290,
+        436,
+        438,
+        440
+      ],
+      "any": [
+        140
+      ],
+      "argparse.ArgumentParser": [
+        424
+      ],
+      "assert_file_sha256_integrity": [
+        83,
+        105,
+        123,
+        206,
+        431,
+        442
+      ],
+      "auxiliary_loss.item": [
+        314
+      ],
+      "bytearray": [
+        54
+      ],
+      "ce_sum.item": [
+        310
+      ],
+      "digest.hexdigest": [
+        72
+      ],
+      "digest.update": [
+        71
+      ],
+      "enumerate": [
+        87,
+        134,
+        294
+      ],
+      "flattened.extend": [
+        151
+      ],
+      "float": [
+        254,
+        257,
+        257,
+        257,
+        308,
+        310,
+        311,
+        314,
+        317,
+        317,
+        324,
+        355,
+        356,
+        385,
+        386,
+        387,
+        390,
+        391,
+        392,
+        453,
+        461
+      ],
+      "generate_frozen_lr_vector": [
+        259
+      ],
+      "grad_tensor.max": [
+        386
+      ],
+      "grad_tensor.mean": [
+        385
+      ],
+      "handle.read": [
+        43,
+        70
+      ],
+      "hashlib.sha256": [
+        44,
+        68,
+        99
+      ],
+      "id": [
+        247,
+        248,
+        249
+      ],
+      "int": [
+        95,
+        97,
+        102,
+        108,
+        128,
+        128,
+        131,
+        135,
+        137,
+        142,
+        143,
+        145,
+        147,
+        149,
+        156,
+        183,
+        183,
+        203,
+        204,
+        213,
+        217,
+        222,
+        228,
+        230,
+        230,
+        230,
+        231,
+        231,
+        231,
+        232,
+        232,
+        232,
+        235,
+        259,
+        259,
+        286,
+        287,
+        288,
+        291,
+        341,
+        365,
+        453,
+        459,
+        463,
+        464,
+        465
+      ],
+      "interval_grad_norms.append": [
+        323
+      ],
+      "isinstance": [
+        131,
+        246
+      ],
+      "iter": [
+        70
+      ],
+      "json.dumps": [
+        468
+      ],
+      "json.load": [
+        125,
+        434
+      ],
+      "json.loads": [
+        90
+      ],
+      "layer_zero.get": [
+        390,
+        391,
+        392
+      ],
+      "len": [
+        48,
+        51,
+        95,
+        97,
+        101,
+        102,
+        110,
+        131,
+        140,
+        147,
+        149,
+        152,
+        152,
+        152,
+        152,
+        154,
+        219,
+        219,
+        219,
+        219,
+        292,
+        294
+      ],
+      "lengths.append": [
+        101
+      ],
+      "line.strip": [
+        88,
+        107,
+        473
+      ],
+      "list": [
+        154
+      ],
+      "load_schedule": [
+        221
+      ],
+      "logits.reshape": [
+        176
+      ],
+      "logits.size": [
+        176
+      ],
+      "loss.backward": [
+        309
+      ],
+      "loss_sums": [
+        306,
+        354
+      ],
+      "main": [
+        478
+      ],
+      "math.cos": [
+        170
+      ],
+      "math.exp": [
+        380,
+        384
+      ],
+      "math.isfinite": [
+        319
+      ],
+      "math.log": [
+        379
+      ],
+      "max": [
+        361,
+        362,
+        372,
+        373,
+        388,
+        393,
+        396,
+        397
+      ],
+      "min": [
+        380,
+        384
+      ],
+      "model": [
+        301,
+        349
+      ],
+      "model.eval": [
+        335
+      ],
+      "model.load_state_dict": [
+        237
+      ],
+      "model.modules": [
+        242
+      ],
+      "model.parameters": [
+        234,
+        249,
+        317
+      ],
+      "model.train": [
+        279,
+        417
+      ],
+      "module.named_parameters": [
+        243
+      ],
+      "name.endswith": [
+        246
+      ],
+      "nn.utils.clip_grad_norm_": [
+        317
+      ],
+      "nullcontext": [
+        260
+      ],
+      "open": [
+        42,
+        69,
+        86,
+        106,
+        124,
+        433,
+        449,
+        472
+      ],
+      "optimizer.step": [
+        326
+      ],
+      "optimizer.zero_grad": [
+        284,
+        321
+      ],
+      "os.fsync": [
+        470
+      ],
+      "os.makedirs": [
+        448
+      ],
+      "os.path.abspath": [
+        430,
+        441,
+        447
+      ],
+      "os.path.dirname": [
+        432,
+        441,
+        448
+      ],
+      "os.path.join": [
+        82,
+        104,
+        122,
+        205,
+        212,
+        216,
+        441
+      ],
+      "output.fileno": [
+        470
+      ],
+      "output.flush": [
+        469
+      ],
+      "output.write": [
+        468
+      ],
+      "parameter.numel": [
+        234
+      ],
+      "parser.add_argument": [
+        425,
+        426,
+        427,
+        428
+      ],
+      "parser.parse_args": [
+        429
+      ],
+      "print": [
+        471,
+        473
+      ],
+      "range": [
+        154,
+        165,
+        168,
+        281,
+        294
+      ],
+      "raw.sum": [
+        183
+      ],
+      "raw_ce_sum.item": [
+        311
+      ],
+      "read_jsonl_source_lengths": [
+        209,
+        210
+      ],
+      "run_trial": [
+        452
+      ],
+      "schedule.get": [
+        126,
+        130
+      ],
+      "seen.add": [
+        94
+      ],
+      "set": [
+        85,
+        152
+      ],
+      "sha256_file": [
+        76,
+        471
+      ],
+      "sorted": [
+        154
+      ],
+      "str": [
+        91,
+        453,
+        454
+      ],
+      "sum": [
+        107,
+        142,
+        156,
+        234,
+        382,
+        473
+      ],
+      "synchronize": [
+        331,
+        359
+      ],
+      "targets.reshape": [
+        177,
+        180
+      ],
+      "time.perf_counter": [
+        277,
+        332,
+        336,
+        360,
+        416
+      ],
+      "torch.amp.autocast": [
+        260
+      ],
+      "torch.arange": [
+        298,
+        299,
+        346,
+        347
+      ],
+      "torch.cuda.is_available": [
+        443
+      ],
+      "torch.cuda.is_bf16_supported": [
+        444
+      ],
+      "torch.cuda.max_memory_allocated": [
+        365
+      ],
+      "torch.cuda.reset_peak_memory_stats": [
+        262
+      ],
+      "torch.cuda.synchronize": [
+        188
+      ],
+      "torch.device": [
+        443
+      ],
+      "torch.frombuffer": [
+        54
+      ],
+      "torch.load": [
+        237
+      ],
+      "torch.no_grad": [
+        342
+      ],
+      "torch.optim.AdamW": [
+        252
+      ],
+      "torch.quantile": [
+        387
+      ],
+      "torch.stack": [
+        296,
+        297,
+        307
+      ],
+      "torch.tensor": [
+        171,
+        363,
+        363
+      ],
+      "train_summary.get": [
+        364
+      ],
+      "trajectory.append": [
+        366
+      ],
+      "val_ce.item": [
+        355
+      ],
+      "val_raw_ce.item": [
+        356
+      ],
+      "valid.sum": [
+        183
+      ],
+      "values.append": [
+        166,
+        170
+      ],
+      "x_batch.size": [
+        298,
+        298,
+        299
+      ],
+      "x_val.size": [
+        346,
+        346,
+        347
+      ]
+    },
+    "calls": {
+      "<dynamic>.append": 1,
+      "<dynamic>.clone": 2,
+      "<dynamic>.encode": 1,
+      "<dynamic>.expand": 2,
+      "<dynamic>.get": 1,
+      "<dynamic>.hexdigest": 2,
+      "<dynamic>.item": 8,
+      "<dynamic>.mean": 1,
+      "<dynamic>.sum": 2,
+      "<dynamic>.to": 5,
+      "<dynamic>.unsqueeze": 2,
+      "BraidPrototypeLM": 1,
+      "DataLoader": 1,
+      "F.cross_entropy": 1,
+      "ImmutableBinaryDataset": 2,
+      "ResearchMoETelemetry.configure": 1,
+      "ResearchMoETelemetry.get_summary": 1,
+      "ResearchMoETelemetry.reset_step_buffer": 3,
+      "RuntimeError": 1,
+      "SystemExit": 1,
+      "ValueError": 33,
+      "any": 1,
+      "argparse.ArgumentParser": 1,
+      "assert_file_sha256_integrity": 6,
+      "auxiliary_loss.item": 1,
+      "bytearray": 1,
+      "ce_sum.item": 1,
+      "digest.hexdigest": 1,
+      "digest.update": 1,
+      "enumerate": 3,
+      "flattened.extend": 1,
+      "float": 21,
+      "generate_frozen_lr_vector": 1,
+      "grad_tensor.max": 1,
+      "grad_tensor.mean": 1,
+      "handle.read": 2,
+      "hashlib.sha256": 3,
+      "id": 3,
+      "int": 46,
+      "interval_grad_norms.append": 1,
+      "isinstance": 2,
+      "iter": 1,
+      "json.dumps": 1,
+      "json.load": 2,
+      "json.loads": 1,
+      "layer_zero.get": 3,
+      "len": 22,
+      "lengths.append": 1,
+      "line.strip": 3,
+      "list": 1,
+      "load_schedule": 1,
+      "logits.reshape": 1,
+      "logits.size": 1,
+      "loss.backward": 1,
+      "loss_sums": 2,
+      "main": 1,
+      "math.cos": 1,
+      "math.exp": 2,
+      "math.isfinite": 1,
+      "math.log": 1,
+      "max": 8,
+      "min": 2,
+      "model": 2,
+      "model.eval": 1,
+      "model.load_state_dict": 1,
+      "model.modules": 1,
+      "model.parameters": 3,
+      "model.train": 2,
+      "module.named_parameters": 1,
+      "name.endswith": 1,
+      "nn.utils.clip_grad_norm_": 1,
+      "nullcontext": 1,
+      "open": 8,
+      "optimizer.step": 1,
+      "optimizer.zero_grad": 2,
+      "os.fsync": 1,
+      "os.makedirs": 1,
+      "os.path.abspath": 3,
+      "os.path.dirname": 3,
+      "os.path.join": 7,
+      "output.fileno": 1,
+      "output.flush": 1,
+      "output.write": 1,
+      "parameter.numel": 1,
+      "parser.add_argument": 4,
+      "parser.parse_args": 1,
+      "print": 2,
+      "range": 5,
+      "raw.sum": 1,
+      "raw_ce_sum.item": 1,
+      "read_jsonl_source_lengths": 2,
+      "run_trial": 1,
+      "schedule.get": 2,
+      "seen.add": 1,
+      "set": 2,
+      "sha256_file": 2,
+      "sorted": 1,
+      "str": 3,
+      "sum": 6,
+      "synchronize": 2,
+      "targets.reshape": 2,
+      "time.perf_counter": 5,
+      "torch.amp.autocast": 1,
+      "torch.arange": 4,
+      "torch.cuda.is_available": 1,
+      "torch.cuda.is_bf16_supported": 1,
+      "torch.cuda.max_memory_allocated": 1,
+      "torch.cuda.reset_peak_memory_stats": 1,
+      "torch.cuda.synchronize": 1,
+      "torch.device": 1,
+      "torch.frombuffer": 1,
+      "torch.load": 1,
+      "torch.no_grad": 1,
+      "torch.optim.AdamW": 1,
+      "torch.quantile": 1,
+      "torch.stack": 3,
+      "torch.tensor": 3,
+      "train_summary.get": 1,
+      "trajectory.append": 1,
+      "val_ce.item": 1,
+      "val_raw_ce.item": 1,
+      "valid.sum": 1,
+      "values.append": 2,
+      "x_batch.size": 3,
+      "x_val.size": 3
+    },
+    "data_loader_calls": [
+      {
+        "keywords": {
+          "batch_size": "int(hp['microbatch_size'])",
+          "shuffle": "False"
+        },
+        "line": 341,
+        "num_workers_explicit": false,
+        "persistent_workers_explicit": false,
+        "pin_memory_explicit": false
+      }
+    ],
+    "device_transfer_calls": [
+      {
+        "keywords": {},
+        "line": 229,
+        "non_blocking_explicit": false
+      },
+      {
+        "keywords": {},
+        "line": 296,
+        "non_blocking_explicit": false
+      },
+      {
+        "keywords": {},
+        "line": 297,
+        "non_blocking_explicit": false
+      },
+      {
+        "keywords": {},
+        "line": 344,
+        "non_blocking_explicit": false
+      },
+      {
+        "keywords": {},
+        "line": 345,
+        "non_blocking_explicit": false
+      }
+    ],
+    "lines": 478,
+    "method_count": 12,
+    "methods": [
+      "__init__",
+      "__len__",
+      "__getitem__",
+      "sha256_file",
+      "assert_file_sha256_integrity",
+      "read_jsonl_source_lengths",
+      "load_schedule",
+      "generate_frozen_lr_vector",
+      "loss_sums",
+      "synchronize",
+      "run_trial",
+      "main"
+    ],
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261018/shared/context_runner.py",
+    "relevant_loops": [
+      {
+        "iterable": "enumerate(range(0, len(indices), microbatch_size))",
+        "line": 294,
+        "target": "(microbatch_index, start)"
+      },
+      {
+        "iterable": "val_loader",
+        "line": 343,
+        "target": "validation_batch"
+      }
+    ],
+    "sha256": "948fe1ba2b466b8ddbd55d67e32890314407ba6b3d413b250c2faa756f9a335b"
+  },
+  "schema_version": "ssre-npa-runner-static-audit-v2",
+  "scope": "read-only structural audit; no Torch/CUDA import or execution",
+  "source_summary": {
+    "model_bincount_calls": 7,
+    "model_index_add_calls": 2,
+    "runner_cuda_sync_calls": 1,
+    "runner_fsync_calls": 1,
+    "runner_stack_calls": 3
+  }
+}

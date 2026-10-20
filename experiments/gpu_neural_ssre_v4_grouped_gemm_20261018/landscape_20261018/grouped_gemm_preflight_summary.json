@@ -1,0 +1,731 @@
+{
+  "cuda_runtime": "13.0",
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "integrity": {
+    "all_losses_finite": true,
+    "all_metadata_matches": true,
+    "all_strict_equivalence_pass": true
+  },
+  "interpretation_limits": [
+    "This is a dispatch-only preflight using frozen E16 layer-0 expert weights.",
+    "It is not a full-model training result.",
+    "Grouped-GEMM backend timing may differ across GPU architectures and matrix shapes.",
+    "A candidate that changes numerical behavior beyond tolerance is not eligible for the strict path."
+  ],
+  "matrix": {
+    "expert_counts": [
+      16
+    ],
+    "fixtures": [
+      "balanced",
+      "high_skew"
+    ],
+    "timed": 3,
+    "token_counts": [
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "variants": [
+      "cpu_grouped_reference",
+      "gpu_grouped_gemm"
+    ],
+    "warmup": 1
+  },
+  "mode": "landscape",
+  "reports": [
+    {
+      "expert_count": 16,
+      "fixture": "balanced",
+      "metadata_integrity": {
+        "active_offsets_match": true,
+        "active_pair_ids_match": true,
+        "candidate_active_groups": 16,
+        "candidate_pair_counts": [
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64
+        ],
+        "pair_counts_match": true
+      },
+      "token_count": 512,
+      "variants": {
+        "cpu_grouped_reference": {
+          "engine_info": {
+            "active_groups": -1,
+            "grouped_gemm_ff": -1,
+            "grouped_mm_calls": -1,
+            "original_expert_ff": -1,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 0.0,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_backward_cuda_ns": 3872074.0,
+          "mean_backward_host_ns": 3891054.3333333335,
+          "mean_forward_cuda_ns": 6237215.666666667,
+          "mean_forward_host_ns": 6287415.333333333,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "gpu_grouped_gemm": {
+          "engine_info": {
+            "active_groups": 16,
+            "grouped_gemm_ff": 3448,
+            "grouped_mm_calls": 3,
+            "original_expert_ff": 3447,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 1.4901161193847656e-07,
+          "max_output_abs_delta_vs_reference": 0.0029296875,
+          "mean_backward_cuda_ns": 8734698.333333334,
+          "mean_backward_host_ns": 8752775.333333334,
+          "mean_forward_cuda_ns": 8696746.0,
+          "mean_forward_host_ns": 8742892.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "high_skew",
+      "metadata_integrity": {
+        "active_offsets_match": true,
+        "active_pair_ids_match": true,
+        "candidate_active_groups": 16,
+        "candidate_pair_counts": [
+          409,
+          0,
+          0,
+          409,
+          15,
+          0,
+          0,
+          15,
+          15,
+          0,
+          0,
+          15,
+          15,
+          0,
+          0,
+          15,
+          15,
+          0,
+          0,
+          15,
+          15,
+          0,
+          0,
+          15,
+          14,
+          0,
+          0,
+          14,
+          14,
+          0,
+          0,
+          14
+        ],
+        "pair_counts_match": true
+      },
+      "token_count": 512,
+      "variants": {
+        "cpu_grouped_reference": {
+          "engine_info": {
+            "active_groups": -1,
+            "grouped_gemm_ff": -1,
+            "grouped_mm_calls": -1,
+            "original_expert_ff": -1,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 0.0,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_backward_cuda_ns": 4025589.0,
+          "mean_backward_host_ns": 4043788.0,
+          "mean_forward_cuda_ns": 6026687.333333333,
+          "mean_forward_host_ns": 6077652.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "gpu_grouped_gemm": {
+          "engine_info": {
+            "active_groups": 16,
+            "grouped_gemm_ff": 3448,
+            "grouped_mm_calls": 3,
+            "original_expert_ff": 3447,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 1.1920928955078125e-07,
+          "max_output_abs_delta_vs_reference": 0.00244140625,
+          "mean_backward_cuda_ns": 8835615.666666666,
+          "mean_backward_host_ns": 8853685.0,
+          "mean_forward_cuda_ns": 8753770.0,
+          "mean_forward_host_ns": 8797825.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "balanced",
+      "metadata_integrity": {
+        "active_offsets_match": true,
+        "active_pair_ids_match": true,
+        "candidate_active_groups": 16,
+        "candidate_pair_counts": [
+          128,
+          0,
+          0,
+          128,
+          128,
+          0,
+          0,
+          128,
+          128,
+          0,
+          0,
+          128,
+          128,
+          0,
+          0,
+          128,
+          128,
+          0,
+          0,
+          128,
+          128,
+          0,
+          0,
+          128,
+          128,
+          0,
+          0,
+          128,
+          128,
+          0,
+          0,
+          128
+        ],
+        "pair_counts_match": true
+      },
+      "token_count": 1024,
+      "variants": {
+        "cpu_grouped_reference": {
+          "engine_info": {
+            "active_groups": -1,
+            "grouped_gemm_ff": -1,
+            "grouped_mm_calls": -1,
+            "original_expert_ff": -1,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 0.0,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_backward_cuda_ns": 4589631.666666667,
+          "mean_backward_host_ns": 4610147.0,
+          "mean_forward_cuda_ns": 6862719.333333333,
+          "mean_forward_host_ns": 6912640.333333333,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "gpu_grouped_gemm": {
+          "engine_info": {
+            "active_groups": 16,
+            "grouped_gemm_ff": 3448,
+            "grouped_mm_calls": 3,
+            "original_expert_ff": 3447,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 4.470348358154297e-08,
+          "max_output_abs_delta_vs_reference": 0.00244140625,
+          "mean_backward_cuda_ns": 9743701.333333334,
+          "mean_backward_host_ns": 9764064.0,
+          "mean_forward_cuda_ns": 9423402.333333334,
+          "mean_forward_host_ns": 9466507.666666666,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "high_skew",
+      "metadata_integrity": {
+        "active_offsets_match": true,
+        "active_pair_ids_match": true,
+        "candidate_active_groups": 16,
+        "candidate_pair_counts": [
+          819,
+          0,
+          0,
+          819,
+          30,
+          0,
+          0,
+          30,
+          30,
+          0,
+          0,
+          30,
+          29,
+          0,
+          0,
+          29,
+          29,
+          0,
+          0,
+          29,
+          29,
+          0,
+          0,
+          29,
+          29,
+          0,
+          0,
+          29,
+          29,
+          0,
+          0,
+          29
+        ],
+        "pair_counts_match": true
+      },
+      "token_count": 1024,
+      "variants": {
+        "cpu_grouped_reference": {
+          "engine_info": {
+            "active_groups": -1,
+            "grouped_gemm_ff": -1,
+            "grouped_mm_calls": -1,
+            "original_expert_ff": -1,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 0.0,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_backward_cuda_ns": 4779711.666666667,
+          "mean_backward_host_ns": 4800857.0,
+          "mean_forward_cuda_ns": 6235146.333333333,
+          "mean_forward_host_ns": 6280001.333333333,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "gpu_grouped_gemm": {
+          "engine_info": {
+            "active_groups": 16,
+            "grouped_gemm_ff": 3448,
+            "grouped_mm_calls": 3,
+            "original_expert_ff": 3447,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 5.960464477539063e-08,
+          "max_output_abs_delta_vs_reference": 0.00244140625,
+          "mean_backward_cuda_ns": 9155434.333333334,
+          "mean_backward_host_ns": 9175701.0,
+          "mean_forward_cuda_ns": 8773183.666666666,
+          "mean_forward_host_ns": 8820344.666666666,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "balanced",
+      "metadata_integrity": {
+        "active_offsets_match": true,
+        "active_pair_ids_match": true,
+        "candidate_active_groups": 16,
+        "candidate_pair_counts": [
+          256,
+          0,
+          0,
+          256,
+          256,
+          0,
+          0,
+          256,
+          256,
+          0,
+          0,
+          256,
+          256,
+          0,
+          0,
+          256,
+          256,
+          0,
+          0,
+          256,
+          256,
+          0,
+          0,
+          256,
+          256,
+          0,
+          0,
+          256,
+          256,
+          0,
+          0,
+          256
+        ],
+        "pair_counts_match": true
+      },
+      "token_count": 2048,
+      "variants": {
+        "cpu_grouped_reference": {
+          "engine_info": {
+            "active_groups": -1,
+            "grouped_gemm_ff": -1,
+            "grouped_mm_calls": -1,
+            "original_expert_ff": -1,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 0.0,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_backward_cuda_ns": 4365919.666666667,
+          "mean_backward_host_ns": 4385067.666666667,
+          "mean_forward_cuda_ns": 6090346.666666667,
+          "mean_forward_host_ns": 6133312.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "gpu_grouped_gemm": {
+          "engine_info": {
+            "active_groups": 16,
+            "grouped_gemm_ff": 3448,
+            "grouped_mm_calls": 3,
+            "original_expert_ff": 3447,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 2.9802322387695312e-08,
+          "max_output_abs_delta_vs_reference": 0.0029296875,
+          "mean_backward_cuda_ns": 10622975.666666666,
+          "mean_backward_host_ns": 10643489.333333334,
+          "mean_forward_cuda_ns": 9843989.0,
+          "mean_forward_host_ns": 9888480.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "high_skew",
+      "metadata_integrity": {
+        "active_offsets_match": true,
+        "active_pair_ids_match": true,
+        "candidate_active_groups": 16,
+        "candidate_pair_counts": [
+          1638,
+          0,
+          0,
+          1638,
+          59,
+          0,
+          0,
+          59,
+          59,
+          0,
+          0,
+          59,
+          59,
+          0,
+          0,
+          59,
+          59,
+          0,
+          0,
+          59,
+          58,
+          0,
+          0,
+          58,
+          58,
+          0,
+          0,
+          58,
+          58,
+          0,
+          0,
+          58
+        ],
+        "pair_counts_match": true
+      },
+      "token_count": 2048,
+      "variants": {
+        "cpu_grouped_reference": {
+          "engine_info": {
+            "active_groups": -1,
+            "grouped_gemm_ff": -1,
+            "grouped_mm_calls": -1,
+            "original_expert_ff": -1,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 0.0,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_backward_cuda_ns": 5575391.666666667,
+          "mean_backward_host_ns": 5595255.666666667,
+          "mean_forward_cuda_ns": 6250101.0,
+          "mean_forward_host_ns": 6295485.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "gpu_grouped_gemm": {
+          "engine_info": {
+            "active_groups": 16,
+            "grouped_gemm_ff": 3448,
+            "grouped_mm_calls": 3,
+            "original_expert_ff": 3447,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 5.960464477539063e-08,
+          "max_output_abs_delta_vs_reference": 0.003173828125,
+          "mean_backward_cuda_ns": 9742260.666666666,
+          "mean_backward_host_ns": 9762800.333333334,
+          "mean_forward_cuda_ns": 9673215.333333334,
+          "mean_forward_host_ns": 9716567.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "balanced",
+      "metadata_integrity": {
+        "active_offsets_match": true,
+        "active_pair_ids_match": true,
+        "candidate_active_groups": 16,
+        "candidate_pair_counts": [
+          512,
+          0,
+          0,
+          512,
+          512,
+          0,
+          0,
+          512,
+          512,
+          0,
+          0,
+          512,
+          512,
+          0,
+          0,
+          512,
+          512,
+          0,
+          0,
+          512,
+          512,
+          0,
+          0,
+          512,
+          512,
+          0,
+          0,
+          512,
+          512,
+          0,
+          0,
+          512
+        ],
+        "pair_counts_match": true
+      },
+      "token_count": 4096,
+      "variants": {
+        "cpu_grouped_reference": {
+          "engine_info": {
+            "active_groups": -1,
+            "grouped_gemm_ff": -1,
+            "grouped_mm_calls": -1,
+            "original_expert_ff": -1,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 0.0,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_backward_cuda_ns": 5604074.0,
+          "mean_backward_host_ns": 5624526.333333333,
+          "mean_forward_cuda_ns": 6605130.333333333,
+          "mean_forward_host_ns": 6651164.666666667,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "gpu_grouped_gemm": {
+          "engine_info": {
+            "active_groups": 16,
+            "grouped_gemm_ff": 3448,
+            "grouped_mm_calls": 3,
+            "original_expert_ff": 3447,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 2.9802322387695312e-08,
+          "max_output_abs_delta_vs_reference": 0.0029296875,
+          "mean_backward_cuda_ns": 11971285.333333334,
+          "mean_backward_host_ns": 11991761.0,
+          "mean_forward_cuda_ns": 10945333.0,
+          "mean_forward_host_ns": 10988722.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "high_skew",
+      "metadata_integrity": {
+        "active_offsets_match": true,
+        "active_pair_ids_match": true,
+        "candidate_active_groups": 16,
+        "candidate_pair_counts": [
+          3276,
+          0,
+          0,
+          3276,
+          118,
+          0,
+          0,
+          118,
+          117,
+          0,
+          0,
+          117,
+          117,
+          0,
+          0,
+          117,
+          117,
+          0,
+          0,
+          117,
+          117,
+          0,
+          0,
+          117,
+          117,
+          0,
+          0,
+          117,
+          117,
+          0,
+          0,
+          117
+        ],
+        "pair_counts_match": true
+      },
+      "token_count": 4096,
+      "variants": {
+        "cpu_grouped_reference": {
+          "engine_info": {
+            "active_groups": -1,
+            "grouped_gemm_ff": -1,
+            "grouped_mm_calls": -1,
+            "original_expert_ff": -1,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 0.0,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_backward_cuda_ns": 6884351.666666667,
+          "mean_backward_host_ns": 6904604.0,
+          "mean_forward_cuda_ns": 6578388.666666667,
+          "mean_forward_host_ns": 6628327.666666667,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "gpu_grouped_gemm": {
+          "engine_info": {
+            "active_groups": 16,
+            "grouped_gemm_ff": 3448,
+            "grouped_mm_calls": 3,
+            "original_expert_ff": 3447,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 2.9802322387695312e-08,
+          "max_output_abs_delta_vs_reference": 0.00341796875,
+          "mean_backward_cuda_ns": 11394004.333333334,
+          "mean_backward_host_ns": 11416304.666666666,
+          "mean_forward_cuda_ns": 11230303.666666666,
+          "mean_forward_host_ns": 11275915.333333334,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      }
+    }
+  ],
+  "schema_version": "gpu-neural-ssre-v4-grouped-gemm-20261018",
+  "source_hashes": {
+    "anchor_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+    "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+    "v1_source_sha256": "223aa756a36235df02858ea8171a7516c2e9afbceacf4005a9c8b7b138df6b90",
+    "v2_benchmark_source_sha256": "d81fbb7a990ad9e64d16cb8cbd6e1d68d4cb6de784e92088d5940b0970c32d4f",
+    "v2_dispatch_source_sha256": "fa5a4c98e6bbcafe7efed1f2256b1e0742a15f83d51afda2dbbdc139a9c9ab6d",
+    "v4_source_sha256": "195dc8c247ef66b41d9fc8020e46fca242bc1615d896b7ba5a57c089a70c7c4e"
+  },
+  "torch_version": "2.12.0+cu130",
+  "triton_available": true,
+  "triton_version": "3.7.0"
+}

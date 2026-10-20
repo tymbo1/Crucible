@@ -1,0 +1,161 @@
+{
+  "context_length": 512,
+  "deduplication": {
+    "final_cross_split_exact_duplicates": 0,
+    "train_exact_duplicates_removed": 41,
+    "validation_cross_split_duplicates_removed": 7,
+    "validation_exact_duplicates_removed": 0
+  },
+  "integrity": {
+    "oversized_chunks": 0,
+    "provenance_records": 27957,
+    "truncation_count": 0,
+    "utf8_decode_failures": 0
+  },
+  "max_source_utf8_bytes": 511,
+  "preferred_floor_bytes": 384,
+  "preprocessor": {
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261017/build/prepare_context_corpus.py",
+    "sha256": "d8d311a863cef1e968ebeacd0f8278f7f8253b18b64ad72218b23f92caf7ba48",
+    "truncation_count": 0
+  },
+  "source": {
+    "dataset_name": "TinyStoriesV2-GPT4 context-length staging corpus",
+    "language": "English",
+    "license": "cdla-sharing-1.0",
+    "packing": {
+      "context_length": 512,
+      "cross_split_exact_duplicates": 0,
+      "exact_deduplication": "after packing, independently within split",
+      "final_tail_merge": "merge backward when result remains within context byte limit",
+      "max_source_utf8_bytes": 511,
+      "official_split_preserved": true,
+      "preferred_floor_bytes": 384,
+      "strategy": "greedy consecutive sentence/phrase units within story"
+    },
+    "source_files": [
+      {
+        "bytes": 2227753162,
+        "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-train.txt",
+        "sha256": "6418d412de72888f52b5142c761ac21a582f7d1166f0bfbdb5f03ccfdec90443",
+        "split": "train"
+      },
+      {
+        "bytes": 22502601,
+        "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-valid.txt",
+        "sha256": "6874bae9a4c1a4e7edcf0e53b86c17817e9cf881fc75ff2368da457b80c0585d",
+        "split": "validation"
+      }
+    ],
+    "source_root": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source",
+    "upstream_repository": "roneneldan/TinyStories",
+    "upstream_revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64"
+  },
+  "splits": {
+    "train": {
+      "distribution": {
+        "below_thresholds": {
+          "112": {
+            "count": 2153,
+            "percentage": 8.086688701923077
+          },
+          "32": {
+            "count": 61,
+            "percentage": 0.22911658653846154
+          },
+          "64": {
+            "count": 679,
+            "percentage": 2.5503305288461537
+          },
+          "96": {
+            "count": 1616,
+            "percentage": 6.069711538461538
+          }
+        },
+        "count": 26624,
+        "exactly_max_bytes": 323,
+        "max_bytes": 511,
+        "mean_bytes": 373.0066481370192,
+        "median_bytes": 463.0,
+        "min_bytes": 8,
+        "p05_bytes": 86.0,
+        "p25_bytes": 242.0,
+        "p75_bytes": 492.0,
+        "p95_bytes": 508.0,
+        "tiny_standalone_chunks_below_16": 3,
+        "total_nonpad_target_tokens": 9957553,
+        "total_valid_utf8_bytes": 9930929,
+        "unavoidable_final_tails": 10150
+      },
+      "duplicate_against_previous_split_removed": 0,
+      "duplicate_within_split_removed": 41,
+      "jsonl_sha256": "10a3747be37ae07b9f3d15e4c9844345c7d4eef925bf0875bdb02f9c776018b8",
+      "long_word_split_components": 0,
+      "packed_candidates_scanned": 26748,
+      "packed_chunks_with_multiple_components": 25410,
+      "packed_chunks_with_tail_merge": 0,
+      "provenance_sha256": "35b5b09c2c5687076d7b4e423bb856b36152069e5217b424da773539f39dd202",
+      "selected_nonpad_tokens": 9957553,
+      "selected_prefix_candidate_count": 26624,
+      "selected_unique_examples": 26624,
+      "selection_search_margin_tokens": 32704,
+      "source_story_bytes_scanned": 9994590,
+      "stories_scanned": 12301,
+      "target_nonpad_tokens": 9956480,
+      "text_sha256": "2e2375c3ed715606b62c71f31fc080abb4ec14eb9e721c59baa9eef0b3d35cad"
+    },
+    "validation": {
+      "distribution": {
+        "below_thresholds": {
+          "112": {
+            "count": 100,
+            "percentage": 7.501875468867217
+          },
+          "32": {
+            "count": 2,
+            "percentage": 0.15003750937734434
+          },
+          "64": {
+            "count": 28,
+            "percentage": 2.100525131282821
+          },
+          "96": {
+            "count": 71,
+            "percentage": 5.326331582895724
+          }
+        },
+        "count": 1333,
+        "exactly_max_bytes": 19,
+        "max_bytes": 511,
+        "mean_bytes": 373.04651162790697,
+        "median_bytes": 464.0,
+        "min_bytes": 21,
+        "p05_bytes": 93.0,
+        "p25_bytes": 230.0,
+        "p75_bytes": 492.0,
+        "p95_bytes": 507.0,
+        "tiny_standalone_chunks_below_16": 0,
+        "total_nonpad_target_tokens": 498604,
+        "total_valid_utf8_bytes": 497271,
+        "unavoidable_final_tails": 505
+      },
+      "duplicate_against_previous_split_removed": 7,
+      "duplicate_within_split_removed": 0,
+      "jsonl_sha256": "84551f5e7a28bf9006ad5a5c3d6a88fbe0053d4509a5072663def9dc90528c8e",
+      "long_word_split_components": 0,
+      "packed_candidates_scanned": 1347,
+      "packed_chunks_with_multiple_components": 1288,
+      "packed_chunks_with_tail_merge": 0,
+      "provenance_sha256": "83b26eaf52de1053320160ad4a06e027645c3b2324e8042ff8659e6cd3f9ea20",
+      "selected_nonpad_tokens": 498604,
+      "selected_prefix_candidate_count": 1333,
+      "selected_unique_examples": 1333,
+      "selection_search_margin_tokens": 2044,
+      "source_story_bytes_scanned": 501095,
+      "stories_scanned": 635,
+      "target_nonpad_tokens": 498539,
+      "text_sha256": "d547997da0ab0e96cd82e3984c3373ed01446456516f71b16c9f17f65df1b5dc"
+    }
+  },
+  "status": "staged"
+}

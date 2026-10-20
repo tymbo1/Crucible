@@ -1,0 +1,215 @@
+{
+  "anchors": {
+    "1337": {
+      "binary_payload_sha256": "f8481e113f6404e1e9ea623f31f7d4405d4cd80ce6977269fe6c8d77377bc42f",
+      "relative_path": "initial_seed_anchor_1337.pt"
+    },
+    "42": {
+      "binary_payload_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+      "relative_path": "initial_seed_anchor_42.pt"
+    }
+  },
+  "code_provenance": {
+    "manifest_compiler_sha256": "9eea6c8602fcd8ba045a49830ae80b269969121721e14898de3ffae95d9258dc",
+    "model_core_sha256": "271cfde17e073077947a3540c1d41fdcbe382309fa1021d89d42307a9a5cd6ab",
+    "runner_sha256": "948fe1ba2b466b8ddbd55d67e32890314407ba6b3d413b250c2faa756f9a335b",
+    "source_preprocessor_sha256": "5c457482c376a7e54815ffa97bf2c7ca7bb491208df343a188973b6f96ea79b3",
+    "source_verifier_sha256": "1a896d3ff2bce284d124e16c522bf8f8e29e77efa3a86b48dc36f6391c1b03e7"
+  },
+  "contract": {
+    "architectural_branches": [
+      "B"
+    ],
+    "checkpoint_intervals": [
+      100,
+      250,
+      500,
+      750,
+      1000,
+      1500,
+      2000,
+      2500,
+      3125
+    ],
+    "learning_rate_candidates": [
+      0.0003
+    ],
+    "num_optimizer_updates": 3125,
+    "seeds": [
+      42,
+      1337
+    ],
+    "selection_note": "E16 context gate; matched raw UTF-8 source bytes, dynamic byte-balanced step groups, EOS-excluded raw-byte NLL/BPB primary endpoint"
+  },
+  "experiment_variant": {
+    "active_compute_reference": "matched_active_e16",
+    "context_length": 512,
+    "expert_count": 16,
+    "expert_hidden_width": 3447,
+    "id": "context_512",
+    "regime": "fixed_active_compute",
+    "top_k": 2
+  },
+  "hyperparameters": {
+    "adamw_beta1": 0.9,
+    "adamw_beta2": 0.95,
+    "adamw_eps": 1e-08,
+    "batching_mode": "dynamic_source_byte_groups_v1",
+    "branch_b_aux_coef": 0.1,
+    "branch_c_bias_step": 0.01,
+    "checkpoint_intervals": [
+      100,
+      250,
+      500,
+      750,
+      1000,
+      1500,
+      2000,
+      2500,
+      3125
+    ],
+    "context_window_length": 512,
+    "d_ff": 3447,
+    "d_model": 256,
+    "effective_batch_size": 32,
+    "expected_parameter_geometry": 170233600,
+    "expert_count_variant": "matched_active_e16",
+    "gradient_accumulation_steps": null,
+    "latent_dim_kv": 64,
+    "latent_dim_q": 64,
+    "max_norm_clip": 1.0,
+    "max_source_utf8_bytes": 511,
+    "microbatch_size": 1,
+    "n_heads": 4,
+    "n_layers": 4,
+    "nominal_corpus_passes": 1.0,
+    "num_experts": 16,
+    "num_steps": 3125,
+    "pe_dim": 32,
+    "raw_byte_primary_metric": "validation_raw_byte_nll_eos_excluded",
+    "reference_source_bytes": 9856480,
+    "reference_validation_source_bytes": 493539,
+    "target_source_bytes_per_update": 3154.95552,
+    "top_k": 2,
+    "vocab_size": 259,
+    "warmup_steps": 313,
+    "weight_decay": 0.1
+  },
+  "meta": {
+    "context_dataset_statistics_relative_path": "../source/context_dataset_statistics.json",
+    "context_dataset_statistics_sha256": "cc9d3865d61d49a0eddedac26d3566eaed2fb7d1a9e30a939bd35a462a2e5652",
+    "cross_split_exact_duplicates": 0,
+    "dataset_name": "Crucible E16 context gate 512 byte context",
+    "endianness": "little",
+    "experiment_family": "crucible_context_gate_v1",
+    "official_split_preserved": true,
+    "raw_byte_budget_policy": {
+      "eos_excluded_primary_metric": true,
+      "optimizer_updates": 3125,
+      "train_actual_source_bytes": 9859236,
+      "train_target_source_bytes": 9856480,
+      "validation_actual_source_bytes": 493372,
+      "validation_reference_source_bytes": 493539
+    },
+    "reference_e16_manifest_sha256": "1a3f760043a06d0b98e17d41bf4bb49b079855831dbf2585a4b7747423ead5ab",
+    "reference_e16_model_core_sha256": "271cfde17e073077947a3540c1d41fdcbe382309fa1021d89d42307a9a5cd6ab",
+    "source_corpus_sha256": "fb5ffda4f979eeee66306b427ee69baefbf12885b484366fde8c039c82d484fe",
+    "source_files": [
+      {
+        "bytes": 2227753162,
+        "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-train.txt",
+        "sha256": "6418d412de72888f52b5142c761ac21a582f7d1166f0bfbdb5f03ccfdec90443",
+        "split": "train"
+      },
+      {
+        "bytes": 22502601,
+        "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-valid.txt",
+        "sha256": "6874bae9a4c1a4e7edcf0e53b86c17817e9cf881fc75ff2368da457b80c0585d",
+        "split": "validation"
+      }
+    ],
+    "source_language": "English",
+    "source_license": "cdla-sharing-1.0",
+    "source_upstream_repository": "roneneldan/TinyStories",
+    "source_upstream_revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+    "tensor_data_type": "int64",
+    "tokenizer_specification": "LosslessByteTransformerStandard",
+    "train_examples": 26432,
+    "train_source_utf8_bytes": 9859236,
+    "training_started": false,
+    "truncation_count": 0,
+    "validation_examples": 1324,
+    "validation_source_utf8_bytes": 493372,
+    "variant_id": "context_512"
+  },
+  "schedule_summaries": {
+    "1337": {
+      "max_examples": 14,
+      "max_source_bytes": 3647,
+      "mean_examples": 8.45824,
+      "mean_source_bytes": 3154.95552,
+      "min_examples": 6,
+      "min_source_bytes": 2655
+    },
+    "42": {
+      "max_examples": 14,
+      "max_source_bytes": 3640,
+      "mean_examples": 8.45824,
+      "mean_source_bytes": 3154.95552,
+      "min_examples": 6,
+      "min_source_bytes": 2678
+    }
+  },
+  "schedules": {
+    "1337": {
+      "binary_payload_sha256": "96eb620b15fe45f8f8e1155bb6a9ef9e700000e4a673da1dcf4761a286e7c63d",
+      "is_single_train_permutation": true,
+      "num_indices": 26432,
+      "num_steps": 3125,
+      "relative_path": "schedule_seed_1337.json",
+      "schema": "crucible_dynamic_source_byte_schedule_v1",
+      "target_source_bytes_per_update": 3154.95552
+    },
+    "42": {
+      "binary_payload_sha256": "34996300f266181ae0b5c37be7f1486964af7c677ff2f8ec9f5bafa7f3510767",
+      "is_single_train_permutation": true,
+      "num_indices": 26432,
+      "num_steps": 3125,
+      "relative_path": "schedule_seed_42.json",
+      "schema": "crucible_dynamic_source_byte_schedule_v1",
+      "target_source_bytes_per_update": 3154.95552
+    }
+  },
+  "splits": {
+    "train": {
+      "binary_payload_sha256": "69305cda8290b197536f2924e7af8c450a2bc8494c8169eb95f7314a3ce80e59",
+      "max_source_utf8_bytes": 511,
+      "nonpad_target_tokens": 9885668,
+      "provenance_record_count": 26432,
+      "provenance_relative_path": "../source/provenance_train.jsonl",
+      "provenance_schema": "crucible_context_provenance_v1",
+      "provenance_sha256": "96c4b17d1f3eed4d1947746de8a588a5b3aacd9c23b5297a242c0dfda10162b3",
+      "relative_path": "stories_train.bin",
+      "source_jsonl_relative_path": "../source/packed_train.jsonl",
+      "source_jsonl_sha256": "8bc1fdcadb8416b078ee72b61f4c3cf20b8fe618a4ec3711063c1293c68743a4",
+      "source_utf8_bytes": 9859236,
+      "total_constructed_examples": 26432,
+      "truncation_count": 0
+    },
+    "validation": {
+      "binary_payload_sha256": "a3d01634ac61c0362e4d44ba94427312209b3877701bbe20a9a4fdccf9d28807",
+      "max_source_utf8_bytes": 511,
+      "nonpad_target_tokens": 494696,
+      "provenance_record_count": 1324,
+      "provenance_relative_path": "../source/provenance_validation.jsonl",
+      "provenance_schema": "crucible_context_provenance_v1",
+      "provenance_sha256": "b61397f27bf421a8dcc4e7e3e9491c23c274f2cfaa076875d9c2e0e0f133786f",
+      "relative_path": "stories_validation.bin",
+      "source_jsonl_relative_path": "../source/packed_validation.jsonl",
+      "source_jsonl_sha256": "088e2a4ce9ffb1167224841dd3fa711363e5b4832fa23157f97afecdcff1f30d",
+      "source_utf8_bytes": 493372,
+      "total_constructed_examples": 1324,
+      "truncation_count": 0
+    }
+  }
+}

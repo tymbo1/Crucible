@@ -1,0 +1,74 @@
+{
+  "builder_sha256": "36974b4a630e62cc2aa95dbd74c2737a85fc884c897bdbde2aa357b1b6fce054",
+  "model_core_sha256": "0c5fe5f53663f6feca5938b3aaf6906d45ac786a7491c73535655ea9dae6bba3",
+  "runner_sha256": "359febc034e9cfb5881b7f5d311886b7f6adf8e8a7f8c3dc6ace61ee22cc3046",
+  "source_dataset_root": "/home/timbushnell/crucible_large_tinystories_v2_packed_v1_20261015",
+  "source_manifest_sha256": "bd708aff413282885f0680e4868c642e652b93216c504e5c792aed4824548984",
+  "variants": [
+    {
+      "anchor_sha256": {
+        "1337": "a527f847bf40d390826b5bffda22dbd91935472e4a6a887a54ea684a98d57fdb",
+        "42": "2765b1da8f4cf025be4b9b5fdc6365a1e5582265c924cd8610ba68a31c57212c"
+      },
+      "d_ff": 13788,
+      "id": "fixed_total_e1",
+      "manifest_sha256": "9cb7475fd71c085ff24c8378a9e0a6ae650ede4d7cab7c0226d66731e1c8af6c",
+      "num_experts": 1,
+      "parameter_count": 43148032,
+      "regime": "fixed_total_parameters",
+      "top_k": 1
+    },
+    {
+      "anchor_sha256": {
+        "1337": "5a483e68c97e964d8ceadc8a29e4029dc3bfd724ec1290cbd9ec6de7e0f437c3",
+        "42": "4c28750c54a5e38227eb9368c7b8a6682b304ff8effb7d0cb69d5d35bd382940"
+      },
+      "d_ff": 6894,
+      "id": "fixed_total_e2",
+      "manifest_sha256": "e5428b2d124a3627f27af9918ce31afb2cca2dfee360fdd166f22d68713ceb4c",
+      "num_experts": 2,
+      "parameter_count": 43149056,
+      "regime": "fixed_total_parameters",
+      "top_k": 2
+    },
+    {
+      "anchor_sha256": {
+        "1337": "285e4c2bd28d193e72c776ea237e1161f94774b298f8ac2f7ea9a37d644567d4",
+        "42": "aa5afa8471e0849a7fdff1733d43b02b4913da80b614d75847d3e4bf0ee979e0"
+      },
+      "d_ff": 3447,
+      "id": "reference_e4",
+      "manifest_sha256": "185f4db3d8debc6094b71956a92f93d97bb6d8360e4a06724e68fc3cae46075d",
+      "num_experts": 4,
+      "parameter_count": 43151104,
+      "regime": "shared_reference",
+      "top_k": 2
+    },
+    {
+      "anchor_sha256": {
+        "1337": "b7028fc5eff8a413e8ff4e891ee4d7900bd2dc519d7d5c8705dfd94942718a1f",
+        "42": "c0b78b178e443d13ab97af09797bb39c6229ec871e9886bdc9a36aee97dbca55"
+      },
+      "d_ff": 6894,
+      "id": "fixed_active_e1",
+      "manifest_sha256": "5679de260c46175438b64521dc0aba3a6dc88822d49fe96d91df94823e973ca3",
+      "num_experts": 1,
+      "parameter_count": 21969664,
+      "regime": "fixed_active_compute",
+      "top_k": 1
+    },
+    {
+      "anchor_sha256": {
+        "1337": "5c9c92c32d1db08fc4fe5dc9415e8c1341f3ec7eeb01a808b97096d4168a79a3",
+        "42": "5e65ab90983e6c0964cf26be79ec87a7e903bb1224887e5a5bd13bac69d38fd5"
+      },
+      "d_ff": 3447,
+      "id": "fixed_active_e2",
+      "manifest_sha256": "6cae6c3755dcf9b5ec31e74126f562f7f4a79d24344c2380af7b05614649a45a",
+      "num_experts": 2,
+      "parameter_count": 21970688,
+      "regime": "fixed_active_compute",
+      "top_k": 2
+    }
+  ]
+}

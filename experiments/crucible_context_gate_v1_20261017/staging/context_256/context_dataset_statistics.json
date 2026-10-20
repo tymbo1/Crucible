@@ -1,0 +1,161 @@
+{
+  "context_length": 256,
+  "deduplication": {
+    "final_cross_split_exact_duplicates": 0,
+    "train_exact_duplicates_removed": 93,
+    "validation_cross_split_duplicates_removed": 4,
+    "validation_exact_duplicates_removed": 0
+  },
+  "integrity": {
+    "oversized_chunks": 0,
+    "provenance_records": 50241,
+    "truncation_count": 0,
+    "utf8_decode_failures": 0
+  },
+  "max_source_utf8_bytes": 255,
+  "preferred_floor_bytes": 192,
+  "preprocessor": {
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261017/build/prepare_context_corpus.py",
+    "sha256": "d8d311a863cef1e968ebeacd0f8278f7f8253b18b64ad72218b23f92caf7ba48",
+    "truncation_count": 0
+  },
+  "source": {
+    "dataset_name": "TinyStoriesV2-GPT4 context-length staging corpus",
+    "language": "English",
+    "license": "cdla-sharing-1.0",
+    "packing": {
+      "context_length": 256,
+      "cross_split_exact_duplicates": 0,
+      "exact_deduplication": "after packing, independently within split",
+      "final_tail_merge": "merge backward when result remains within context byte limit",
+      "max_source_utf8_bytes": 255,
+      "official_split_preserved": true,
+      "preferred_floor_bytes": 192,
+      "strategy": "greedy consecutive sentence/phrase units within story"
+    },
+    "source_files": [
+      {
+        "bytes": 2227753162,
+        "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-train.txt",
+        "sha256": "6418d412de72888f52b5142c761ac21a582f7d1166f0bfbdb5f03ccfdec90443",
+        "split": "train"
+      },
+      {
+        "bytes": 22502601,
+        "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-valid.txt",
+        "sha256": "6874bae9a4c1a4e7edcf0e53b86c17817e9cf881fc75ff2368da457b80c0585d",
+        "split": "validation"
+      }
+    ],
+    "source_root": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source",
+    "upstream_repository": "roneneldan/TinyStories",
+    "upstream_revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64"
+  },
+  "splits": {
+    "train": {
+      "distribution": {
+        "below_thresholds": {
+          "112": {
+            "count": 4371,
+            "percentage": 9.136705685618729
+          },
+          "32": {
+            "count": 129,
+            "percentage": 0.26964882943143814
+          },
+          "64": {
+            "count": 1233,
+            "percentage": 2.577341137123746
+          },
+          "96": {
+            "count": 3340,
+            "percentage": 6.981605351170568
+          }
+        },
+        "count": 47840,
+        "exactly_max_bytes": 878,
+        "max_bytes": 255,
+        "mean_bytes": 207.16877090301003,
+        "median_bytes": 225.0,
+        "min_bytes": 7,
+        "p05_bytes": 81.0,
+        "p25_bytes": 197.0,
+        "p75_bytes": 241.0,
+        "p95_bytes": 253.0,
+        "tiny_standalone_chunks_below_16": 10,
+        "total_nonpad_target_tokens": 9958794,
+        "total_valid_utf8_bytes": 9910954,
+        "unavoidable_final_tails": 8773
+      },
+      "duplicate_against_previous_split_removed": 0,
+      "duplicate_within_split_removed": 93,
+      "jsonl_sha256": "1bd34e60f6f3bad8a82746bfd2646442ad510b4cfbe39a75db4b9b5da1ad4781",
+      "long_word_split_components": 0,
+      "packed_candidates_scanned": 48001,
+      "packed_chunks_with_multiple_components": 44700,
+      "packed_chunks_with_tail_merge": 0,
+      "provenance_sha256": "c04c3a11ad77dbebcfb0c16f324e53da5940b3da4545f67e8e61b007ab31add7",
+      "selected_nonpad_tokens": 9958794,
+      "selected_prefix_candidate_count": 47840,
+      "selected_unique_examples": 47840,
+      "selection_search_margin_tokens": 16320,
+      "source_story_bytes_scanned": 9979476,
+      "stories_scanned": 12284,
+      "target_nonpad_tokens": 9956480,
+      "text_sha256": "ac2fed9bcdc5774e3149af24d44beb9d4705882d5ea7030716771fe65975f9bf"
+    },
+    "validation": {
+      "distribution": {
+        "below_thresholds": {
+          "112": {
+            "count": 217,
+            "percentage": 9.037900874635568
+          },
+          "32": {
+            "count": 5,
+            "percentage": 0.20824656393169513
+          },
+          "64": {
+            "count": 61,
+            "percentage": 2.5406080799666806
+          },
+          "96": {
+            "count": 165,
+            "percentage": 6.872136609745939
+          }
+        },
+        "count": 2401,
+        "exactly_max_bytes": 54,
+        "max_bytes": 255,
+        "mean_bytes": 206.6018325697626,
+        "median_bytes": 226.0,
+        "min_bytes": 14,
+        "p05_bytes": 78.0,
+        "p25_bytes": 196.0,
+        "p75_bytes": 241.0,
+        "p95_bytes": 253.0,
+        "tiny_standalone_chunks_below_16": 1,
+        "total_nonpad_target_tokens": 498452,
+        "total_valid_utf8_bytes": 496051,
+        "unavoidable_final_tails": 450
+      },
+      "duplicate_against_previous_split_removed": 4,
+      "duplicate_within_split_removed": 0,
+      "jsonl_sha256": "8e8a3e0805a609a773e69bddbdabd247a07855a60fb98961bffcd4df56f393d3",
+      "long_word_split_components": 0,
+      "packed_candidates_scanned": 2411,
+      "packed_chunks_with_multiple_components": 2255,
+      "packed_chunks_with_tail_merge": 0,
+      "provenance_sha256": "731f27ed53d6206fdcdcc77614f0382d1d279d173eaa8a4869958f64a320bf11",
+      "selected_nonpad_tokens": 498452,
+      "selected_prefix_candidate_count": 2401,
+      "selected_unique_examples": 2401,
+      "selection_search_margin_tokens": 1020,
+      "source_story_bytes_scanned": 499875,
+      "stories_scanned": 633,
+      "target_nonpad_tokens": 498539,
+      "text_sha256": "d5d372a81daf17f38e48745e26548d5289c88fe247bd634a6e97faaed6c5d97f"
+    }
+  },
+  "status": "staged"
+}

@@ -1,0 +1,66 @@
+{
+  "accepted": true,
+  "config_path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/experiment_config.json",
+  "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+  "cross_variant_terminal_hashes": {
+    "1337": {
+      "gradient_sha256": true,
+      "model_state_sha256": true,
+      "optimizer_state_sha256": true
+    },
+    "42": {
+      "gradient_sha256": true,
+      "model_state_sha256": true,
+      "optimizer_state_sha256": true
+    }
+  },
+  "frozen_artifacts_modified": false,
+  "interpretation": "CPU-reference telemetry does not change terminal training state across variants",
+  "max_steps": 100,
+  "repetitions_per_variant": 1,
+  "runs": {
+    "grouped_rank_preserving": [
+      {
+        "metrics_path": "/home/timbushnell/crucible_v2_sustained_validation_20261019_telemetry_causality/weighted_bincount_cpu_correct_100/grouped_rank_preserving/repeat_1/metrics.jsonl",
+        "metrics_sha256": "e4bb83d6d13b51115f5d6b6b5f035a34d85ad49821cb91dc60b6c79670f7e8fc",
+        "runtime": [
+          {
+            "gradient_sha256": "23b366639166abbf25936a7d05d62df3091207b57bdc1bc2086aec110bd6d332",
+            "model_state_sha256": "48c492350ee3175836b1384c6cef36255e1de8fe95638017baa8c5d41eb4a116",
+            "optimizer_state_sha256": "be3c3c5e497359ef59fed30b9158b97aae48655f8ff45d093a95f551220dc5a4",
+            "seed": 42
+          },
+          {
+            "gradient_sha256": "e73f5d202c3ef83b627ba15661ad004c495fc1b88de52dbaebae523f1ec3d667",
+            "model_state_sha256": "6656740544df3b13dff4fbc39969bbad805d4c8a86043b09ffadcb868973a20a",
+            "optimizer_state_sha256": "a267638217159bf199b431a6b11a42098b0b00019865b06ca844500339631388",
+            "seed": 1337
+          }
+        ]
+      }
+    ],
+    "original": [
+      {
+        "metrics_path": "/home/timbushnell/crucible_v2_sustained_validation_20261019_telemetry_causality/weighted_bincount_cpu_correct_100/original/repeat_1/metrics.jsonl",
+        "metrics_sha256": "92ea2ff4330500a385a5769843e534f86046e43ae80251f87a23327f4b6976f0",
+        "runtime": [
+          {
+            "gradient_sha256": "23b366639166abbf25936a7d05d62df3091207b57bdc1bc2086aec110bd6d332",
+            "model_state_sha256": "48c492350ee3175836b1384c6cef36255e1de8fe95638017baa8c5d41eb4a116",
+            "optimizer_state_sha256": "be3c3c5e497359ef59fed30b9158b97aae48655f8ff45d093a95f551220dc5a4",
+            "seed": 42
+          },
+          {
+            "gradient_sha256": "e73f5d202c3ef83b627ba15661ad004c495fc1b88de52dbaebae523f1ec3d667",
+            "model_state_sha256": "6656740544df3b13dff4fbc39969bbad805d4c8a86043b09ffadcb868973a20a",
+            "optimizer_state_sha256": "a267638217159bf199b431a6b11a42098b0b00019865b06ca844500339631388",
+            "seed": 1337
+          }
+        ]
+      }
+    ]
+  },
+  "schema_version": "crucible-v2-telemetry-causality-cpu-reference-20261019",
+  "telemetry_backend": "weighted_bincount_cpu",
+  "within_variant_reproducibility": {}
+}

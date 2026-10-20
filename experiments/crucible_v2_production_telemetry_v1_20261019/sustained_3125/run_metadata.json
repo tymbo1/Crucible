@@ -1,0 +1,18 @@
+{
+  "config_path": "/home/timbushnell/crucible_v2_production_telemetry_v1_20261019/context_128/crucible_manifest/experiment_config.json",
+  "config_sha256": "3d7b4e4e3ce976004df88e78b8588456c974b40a38e57f8cba79583f1f3695d0",
+  "context_runner_sha256": "948fe1ba2b466b8ddbd55d67e32890314407ba6b3d413b250c2faa756f9a335b",
+  "execution_scope": "all MoE layers",
+  "execution_variant": "grouped_rank_preserving",
+  "max_steps": 3125,
+  "measurement_protocol_sha256": "b1b95f6d4b835b4857973f04b3119f132f302be26c4c5d126e5c329c78eceb4b",
+  "metrics_path": "/home/timbushnell/crucible_v2_production_telemetry_v1_20261019/sustained_3125/metrics.jsonl",
+  "metrics_sha256": "21a348fdf5b42a14dd58f2421ada9143eb1b6b3e72a81634958e210e096d8f1c",
+  "model_core_sha256": "febc61bc38d23b32593c5e1682ea3ef44b272913878d52ad8e4576c732112415",
+  "note": "The frozen runner performed all scientific checks; this wrapper only patched model construction in memory.",
+  "readme_sha256": "77de3d788dc109cd2b6643ecd7566b1d13e9e6279cfaf7f23adbb850ec0c1a29",
+  "schema_version": "crucible-v2-production-telemetry-sustained-validation-20261019",
+  "v1_grouped_source_sha256": "223aa756a36235df02858ea8171a7516c2e9afbceacf4005a9c8b7b138df6b90",
+  "v2_source_sha256": "d81fbb7a990ad9e64d16cb8cbd6e1d68d4cb6de784e92088d5940b0970c32d4f",
+  "wrapper_sha256": "0ff95bd1fa9d9014f1f2a486fb9b183c48d1b67926abfa20dfcfae6c47a1f608"
+}

@@ -1,0 +1,205 @@
+{
+  "anchor_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+  "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+  "cuda_runtime": "13.0",
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "integrity": {
+    "all_losses_finite": true,
+    "all_strict_candidate_fixture_pass": true,
+    "workload_count": 2
+  },
+  "interpretation_limits": [
+    "This is a dispatch-only control using the first N frozen E16 layer-0 expert weights, not retrained E4/E8/E16 language models.",
+    "Only rank-preserving candidates are eligible for the strict execution-plan gate.",
+    "Shape-changing combined-rank and padded-batched timings are diagnostic when their output or gradient deltas exceed the strict tolerances."
+  ],
+  "matrix": {
+    "expert_counts": [
+      4
+    ],
+    "fixtures": [
+      "balanced",
+      "high_skew"
+    ],
+    "timed": 2,
+    "token_counts": [
+      512
+    ],
+    "variants": [
+      "original",
+      "grouped_rank_preserving",
+      "grouped_rank_major",
+      "grouped_sorted",
+      "batched_padded"
+    ],
+    "warmup": 1
+  },
+  "mode": "preflight",
+  "reports": [
+    {
+      "expert_count": 4,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 784224256,
+      "peak_cuda_reserved_bytes": 937426944,
+      "token_count": 512,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00390625,
+          "max_gradient_abs_delta_vs_original": 1.1920928955078125e-07,
+          "mean_backward_cuda_ns": 1824255.5,
+          "mean_backward_host_ns": 1849267.0,
+          "mean_forward_cuda_ns": 2170511.5,
+          "mean_forward_host_ns": 2206125.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1415759.0,
+          "mean_backward_host_ns": 1439682.0,
+          "mean_forward_cuda_ns": 2835631.5,
+          "mean_forward_host_ns": 2867275.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1205664.0,
+          "mean_backward_host_ns": 1223998.0,
+          "mean_forward_cuda_ns": 2079247.0,
+          "mean_forward_host_ns": 2109391.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1379743.5,
+          "mean_backward_host_ns": 1399942.0,
+          "mean_forward_cuda_ns": 2296991.5,
+          "mean_forward_host_ns": 2325555.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1687040.0,
+          "mean_backward_host_ns": 1706131.5,
+          "mean_forward_cuda_ns": 2603855.0,
+          "mean_forward_host_ns": 2633895.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          256,
+          256,
+          256,
+          256
+        ],
+        "max": 256,
+        "max_min_ratio": 1.0,
+        "min": 256
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 802668544,
+      "peak_cuda_reserved_bytes": 954204160,
+      "token_count": 512,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 1.7881393432617188e-07,
+          "mean_backward_cuda_ns": 1962064.0,
+          "mean_backward_host_ns": 1987061.0,
+          "mean_forward_cuda_ns": 2365040.0,
+          "mean_forward_host_ns": 2398696.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1611136.0,
+          "mean_backward_host_ns": 1633207.0,
+          "mean_forward_cuda_ns": 3032255.5,
+          "mean_forward_host_ns": 3065204.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1536463.0,
+          "mean_backward_host_ns": 1556217.5,
+          "mean_forward_cuda_ns": 2379375.0,
+          "mean_forward_host_ns": 2410756.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1617759.5,
+          "mean_backward_host_ns": 1641522.0,
+          "mean_forward_cuda_ns": 2741695.5,
+          "mean_forward_host_ns": 2775585.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1768911.5,
+          "mean_backward_host_ns": 1790652.0,
+          "mean_forward_cuda_ns": 2898831.5,
+          "mean_forward_host_ns": 2928485.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.59765625,
+        "counts": [
+          409,
+          409,
+          103,
+          103
+        ],
+        "max": 409,
+        "max_min_ratio": 3.970873786407767,
+        "min": 103
+      }
+    }
+  ],
+  "schema_version": "gpu-neural-ssre-v2-dispatch-landscape-20261018",
+  "torch_version": "2.12.0+cu130",
+  "v2_source_sha256": "fa5a4c98e6bbcafe7efed1f2256b1e0742a15f83d51afda2dbbdc139a9c9ab6d"
+}

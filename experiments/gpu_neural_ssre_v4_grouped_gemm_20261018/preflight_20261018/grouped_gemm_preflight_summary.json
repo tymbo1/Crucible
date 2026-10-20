@@ -1,0 +1,217 @@
+{
+  "cuda_runtime": "13.0",
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "integrity": {
+    "all_losses_finite": true,
+    "all_metadata_matches": true,
+    "all_strict_equivalence_pass": true
+  },
+  "interpretation_limits": [
+    "This is a dispatch-only preflight using frozen E16 layer-0 expert weights.",
+    "It is not a full-model training result.",
+    "Grouped-GEMM backend timing may differ across GPU architectures and matrix shapes.",
+    "A candidate that changes numerical behavior beyond tolerance is not eligible for the strict path."
+  ],
+  "matrix": {
+    "expert_counts": [
+      16
+    ],
+    "fixtures": [
+      "balanced",
+      "high_skew"
+    ],
+    "timed": 2,
+    "token_counts": [
+      512
+    ],
+    "variants": [
+      "cpu_grouped_reference",
+      "gpu_grouped_gemm"
+    ],
+    "warmup": 1
+  },
+  "reports": [
+    {
+      "expert_count": 16,
+      "fixture": "balanced",
+      "metadata_integrity": {
+        "active_offsets_match": true,
+        "active_pair_ids_match": true,
+        "candidate_active_groups": 16,
+        "candidate_pair_counts": [
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64
+        ],
+        "pair_counts_match": true
+      },
+      "token_count": 512,
+      "variants": {
+        "cpu_grouped_reference": {
+          "engine_info": {
+            "active_groups": -1,
+            "grouped_gemm_ff": -1,
+            "grouped_mm_calls": -1,
+            "original_expert_ff": -1,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 0.0,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_backward_cuda_ns": 4187744.0,
+          "mean_backward_host_ns": 4207524.5,
+          "mean_forward_cuda_ns": 6294591.0,
+          "mean_forward_host_ns": 6355366.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "gpu_grouped_gemm": {
+          "engine_info": {
+            "active_groups": 16,
+            "grouped_gemm_ff": 3448,
+            "grouped_mm_calls": 3,
+            "original_expert_ff": 3447,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 1.4901161193847656e-07,
+          "max_output_abs_delta_vs_reference": 0.0029296875,
+          "mean_backward_cuda_ns": 8776383.0,
+          "mean_backward_host_ns": 8795678.0,
+          "mean_forward_cuda_ns": 8672367.5,
+          "mean_forward_host_ns": 8718849.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "high_skew",
+      "metadata_integrity": {
+        "active_offsets_match": true,
+        "active_pair_ids_match": true,
+        "candidate_active_groups": 16,
+        "candidate_pair_counts": [
+          409,
+          0,
+          0,
+          409,
+          15,
+          0,
+          0,
+          15,
+          15,
+          0,
+          0,
+          15,
+          15,
+          0,
+          0,
+          15,
+          15,
+          0,
+          0,
+          15,
+          15,
+          0,
+          0,
+          15,
+          14,
+          0,
+          0,
+          14,
+          14,
+          0,
+          0,
+          14
+        ],
+        "pair_counts_match": true
+      },
+      "token_count": 512,
+      "variants": {
+        "cpu_grouped_reference": {
+          "engine_info": {
+            "active_groups": -1,
+            "grouped_gemm_ff": -1,
+            "grouped_mm_calls": -1,
+            "original_expert_ff": -1,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 0.0,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_backward_cuda_ns": 4621216.0,
+          "mean_backward_host_ns": 4640849.0,
+          "mean_forward_cuda_ns": 6016735.5,
+          "mean_forward_host_ns": 6058262.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "gpu_grouped_gemm": {
+          "engine_info": {
+            "active_groups": 16,
+            "grouped_gemm_ff": 3448,
+            "grouped_mm_calls": 3,
+            "original_expert_ff": 3447,
+            "total_groups": 32
+          },
+          "losses_finite": true,
+          "max_gradient_abs_delta_vs_reference": 1.1920928955078125e-07,
+          "max_output_abs_delta_vs_reference": 0.00244140625,
+          "mean_backward_cuda_ns": 8945664.0,
+          "mean_backward_host_ns": 8965813.5,
+          "mean_forward_cuda_ns": 8875775.5,
+          "mean_forward_host_ns": 8928758.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      }
+    }
+  ],
+  "schema_version": "gpu-neural-ssre-v4-grouped-gemm-20261018",
+  "source_hashes": {
+    "anchor_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+    "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+    "v1_source_sha256": "223aa756a36235df02858ea8171a7516c2e9afbceacf4005a9c8b7b138df6b90",
+    "v2_benchmark_source_sha256": "d81fbb7a990ad9e64d16cb8cbd6e1d68d4cb6de784e92088d5940b0970c32d4f",
+    "v2_dispatch_source_sha256": "fa5a4c98e6bbcafe7efed1f2256b1e0742a15f83d51afda2dbbdc139a9c9ab6d",
+    "v4_source_sha256": "80088d05ebcc249b88f6c7a7ce7a607e5b10968a9678808535d24b4f59570d35"
+  },
+  "torch_version": "2.12.0+cu130",
+  "triton_available": true,
+  "triton_version": "3.7.0"
+}

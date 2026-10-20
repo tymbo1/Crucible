@@ -1,0 +1,43 @@
+{
+  "schema_version": "crucible-v2-production-telemetry-seal-20261019",
+  "package": "crucible_v2_production_telemetry_v1_20261019",
+  "sealed_at": "2026-10-19 Australia/Brisbane",
+  "notes": [
+    "Frozen source packages, manifests, anchors, schedules and datasets were not modified.",
+    "The hash index intentionally excludes itself to avoid a circular self-hash.",
+    "The initial seed-42 benchmark attempt that exhausted the harness VRAM is preserved but excluded from the authoritative benchmark outputs."
+  ],
+  "binding": {
+    "context_128/crucible_manifest/experiment_config.json": "3d7b4e4e3ce976004df88e78b8588456c974b40a38e57f8cba79583f1f3695d0",
+    "context_128/crucible_manifest/manifest_sha256.txt": "c0767e3f9d488768542342323ae047a5a3c8c805cf30778f8dec2b2594f976f0"
+  },
+  "source": {
+    "README.md": "77de3d788dc109cd2b6643ecd7566b1d13e9e6279cfaf7f23adbb850ec0c1a29",
+    "MEASUREMENT_PROTOCOL.md": "b1b95f6d4b835b4857973f04b3119f132f302be26c4c5d126e5c329c78eceb4b",
+    "shared/model_core.py": "febc61bc38d23b32593c5e1682ea3ef44b272913878d52ad8e4576c732112415",
+    "shared/context_runner.py": "948fe1ba2b466b8ddbd55d67e32890314407ba6b3d413b250c2faa756f9a335b",
+    "run_equivalence_gate.py": "3ff7230f50a2cd4e8ec07dca441cc32296053760bfdec5e582a1f75bf16b05ea",
+    "run_v2_validation.py": "0ff95bd1fa9d9014f1f2a486fb9b183c48d1b67926abfa20dfcfae6c47a1f608",
+    "production_telemetry_benchmark.py": "7915c16b7d747139aa8a39564e4e6172bb72de06d3e74cdf6210949b413ebbb0"
+  },
+  "equivalence_100": {
+    "equivalence_100/equivalence_report.json": "d460f2ec42c80440acb9d40dca7c4bfe1f50ea32b49dded30aa85c6797d5ac19",
+    "equivalence_100/equivalence_hashes.json": "9d3ff3cac92586d557fd5f3b12b96cd25dc259880e768127e63689fdb3349266",
+    "equivalence_100/original_metrics.jsonl": "7879ce8a36815a0b6e648507296d4d1f3dc29fb7877db3a9201b28daab465a82",
+    "equivalence_100/grouped_rank_preserving_metrics.jsonl": "29e935a958e4013c06c8d054573720acc7b5dc5416680e64326193e320d621a2",
+    "equivalence_100/equivalence_report_corrected.json": "42c9a918b0d3cb916e52e1c81e0c456a65965e52684374ecd74e5dce3d7fc02a",
+    "equivalence_100/equivalence_hashes_corrected.json": "e841342ba47bda0f3dd9999435b6e0a2bf79cc4a5514452c519c282d66d091e4"
+  },
+  "paired_benchmark": {
+    "overhead_seed42_retry1/gpu_step_benchmark_summary.json": "ebfe8cbdff70593e3881a2049efa641301c3dc096ae7ea7e78f3b3dc0a70136c",
+    "overhead_seed1337/gpu_step_benchmark_summary.json": "f89de722ec23b551bb990a48bd8117d194d5d8656ceba44863b1bac2504d4697"
+  },
+  "sustained_3125": {
+    "sustained_3125/metrics.jsonl": "21a348fdf5b42a14dd58f2421ada9143eb1b6b3e72a81634958e210e096d8f1c",
+    "sustained_3125/run_metadata.json": "1a122523ac4d30a41c78b519bcd8d67f926525dcd9f6a67c9f59a1bb10ce2b43",
+    "sustained_3125/SUSTAINED_VALIDATION_REPORT.md": "3953f54fbbf27b3e215cd487c96684c66baac82218506b9bb2fc4d9772e23559"
+  },
+  "reports": {
+    "PRODUCTION_TELEMETRY_RESULTS.md": "5f9bdb1a9d66e37c22950c2011508a0cc776b87bc92e51d9d46100bcf8086b40"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "dataset_name": "TinyStoriesV2-GPT4 context-length staging corpus",
+  "language": "English",
+  "license": "cdla-sharing-1.0",
+  "packing": {
+    "context_length": 256,
+    "cross_split_exact_duplicates": 0,
+    "exact_deduplication": "after packing, independently within split",
+    "final_tail_merge": "merge backward when result remains within context byte limit",
+    "max_source_utf8_bytes": 255,
+    "official_split_preserved": true,
+    "preferred_floor_bytes": 192,
+    "strategy": "greedy consecutive sentence/phrase units within story"
+  },
+  "source_files": [
+    {
+      "bytes": 2227753162,
+      "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-train.txt",
+      "sha256": "6418d412de72888f52b5142c761ac21a582f7d1166f0bfbdb5f03ccfdec90443",
+      "split": "train"
+    },
+    {
+      "bytes": 22502601,
+      "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-valid.txt",
+      "sha256": "6874bae9a4c1a4e7edcf0e53b86c17817e9cf881fc75ff2368da457b80c0585d",
+      "split": "validation"
+    }
+  ],
+  "source_root": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source",
+  "upstream_repository": "roneneldan/TinyStories",
+  "upstream_revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64"
+}

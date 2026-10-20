@@ -1,0 +1,55 @@
+{
+  "cpu_only": true,
+  "cuda_used": false,
+  "equivalence": {
+    "all_packets_consumed": true,
+    "bounded_queues_respected": true,
+    "ordered_digest_matches_serial": true
+  },
+  "interpretation": "Mechanical pipeline validation only; throughput is not a neural-training or GPU-acceleration claim.",
+  "manifest_sha256": "4915a742236955cfdfb3621369820c0bae02f2155d5e61f3594cacb7b749eabe",
+  "model_training": false,
+  "parameters": {
+    "consume_delay_s": 0.005,
+    "packets": 256,
+    "queue_capacity": 4,
+    "work_scale": 4,
+    "workers": 4
+  },
+  "reservoir": {
+    "consume_delay_s": 0.005,
+    "elapsed_s": 1.2973805340006948,
+    "integrity": {
+      "blocked_puts": 6374,
+      "duplicate_packets": 0,
+      "extra": {},
+      "malformed_packets": 0,
+      "manifest_mismatches": 0,
+      "max_reorder_buffer": 63,
+      "missing_packets": 0,
+      "packets_consumed": 256,
+      "packets_generated": 256
+    },
+    "mode": "bounded_reservoir",
+    "packets": 256,
+    "queue_capacity": 4,
+    "queue_high_water": {
+      "done": 4,
+      "input": 4,
+      "stage": 4
+    },
+    "result_digest": "d397ede27de0f3d3198d28dcde2b9933c62b0f32c35493c6f5d43fe7239f9575",
+    "result_order_ok": true,
+    "workers": 4,
+    "workers_finished": true
+  },
+  "schema": "ssre_npa_synthetic_benchmark_v1",
+  "seed": 42,
+  "serial": {
+    "elapsed_s": 0.0012459549761842936,
+    "mode": "serial_reference",
+    "packets": 256,
+    "result_digest": "d397ede27de0f3d3198d28dcde2b9933c62b0f32c35493c6f5d43fe7239f9575",
+    "result_order_ok": true
+  }
+}

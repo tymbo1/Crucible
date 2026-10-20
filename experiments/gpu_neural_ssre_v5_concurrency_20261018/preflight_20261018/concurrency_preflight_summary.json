@@ -1,0 +1,373 @@
+{
+  "compute_capability": [
+    8,
+    6
+  ],
+  "cuda_runtime": "13.0",
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "integrity": {
+    "all_outputs_finite": true,
+    "all_stream_output_pass": true
+  },
+  "interpretation_limits": [
+    "Forward-only dispatch feasibility; no backward or optimizer equivalence was tested.",
+    "CUDA streams are a deterministic concurrency control, not a neural scheduler.",
+    "A stream plan is not eligible for full-model integration without a separate training-state gate."
+  ],
+  "matrix": {
+    "expert_count": 16,
+    "fixtures": [
+      "balanced",
+      "high_skew"
+    ],
+    "stream_counts": [
+      2,
+      4,
+      8
+    ],
+    "timed": 3,
+    "token_counts": [
+      512,
+      2048,
+      4096
+    ],
+    "warmup": 1
+  },
+  "reports": [
+    {
+      "fixture": "balanced",
+      "token_count": 512,
+      "variants": {
+        "reference": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": -1,
+            "stream_count": 1
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 5725813.0,
+          "mean_host_ns": 5756815.333333333,
+          "strict_output_pass": true
+        },
+        "streams_2": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 2
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 6681312.0,
+          "mean_host_ns": 6705261.0,
+          "strict_output_pass": true
+        },
+        "streams_4": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 4
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 7087328.0,
+          "mean_host_ns": 7112830.333333333,
+          "strict_output_pass": true
+        },
+        "streams_8": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 8
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 6586644.333333333,
+          "mean_host_ns": 6610274.333333333,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "fixture": "high_skew",
+      "token_count": 512,
+      "variants": {
+        "reference": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": -1,
+            "stream_count": 1
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 5684756.666666667,
+          "mean_host_ns": 5709865.666666667,
+          "strict_output_pass": true
+        },
+        "streams_2": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 2
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 6257802.333333333,
+          "mean_host_ns": 6281661.333333333,
+          "strict_output_pass": true
+        },
+        "streams_4": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 4
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 6437396.666666667,
+          "mean_host_ns": 6461008.0,
+          "strict_output_pass": true
+        },
+        "streams_8": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 8
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 6569023.333333333,
+          "mean_host_ns": 6592408.333333333,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "fixture": "balanced",
+      "token_count": 2048,
+      "variants": {
+        "reference": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": -1,
+            "stream_count": 1
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 5591103.333333333,
+          "mean_host_ns": 5617999.666666667,
+          "strict_output_pass": true
+        },
+        "streams_2": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 2
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 7115465.666666667,
+          "mean_host_ns": 7140144.0,
+          "strict_output_pass": true
+        },
+        "streams_4": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 4
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 6617055.666666667,
+          "mean_host_ns": 6643544.666666667,
+          "strict_output_pass": true
+        },
+        "streams_8": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 8
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 7415647.333333333,
+          "mean_host_ns": 7439960.333333333,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "fixture": "high_skew",
+      "token_count": 2048,
+      "variants": {
+        "reference": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": -1,
+            "stream_count": 1
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 5604831.333333333,
+          "mean_host_ns": 5629626.0,
+          "strict_output_pass": true
+        },
+        "streams_2": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 2
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 6856596.666666667,
+          "mean_host_ns": 6882337.333333333,
+          "strict_output_pass": true
+        },
+        "streams_4": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 4
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 7082836.666666667,
+          "mean_host_ns": 7109217.0,
+          "strict_output_pass": true
+        },
+        "streams_8": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 8
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 7131519.666666667,
+          "mean_host_ns": 7155130.666666667,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "fixture": "balanced",
+      "token_count": 4096,
+      "variants": {
+        "reference": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": -1,
+            "stream_count": 1
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 6252703.666666667,
+          "mean_host_ns": 6279518.0,
+          "strict_output_pass": true
+        },
+        "streams_2": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 2
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 7169482.333333333,
+          "mean_host_ns": 7194463.333333333,
+          "strict_output_pass": true
+        },
+        "streams_4": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 4
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 7133855.333333333,
+          "mean_host_ns": 7158183.666666667,
+          "strict_output_pass": true
+        },
+        "streams_8": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 8
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 8780554.333333334,
+          "mean_host_ns": 8807571.666666666,
+          "strict_output_pass": true
+        }
+      }
+    },
+    {
+      "fixture": "high_skew",
+      "token_count": 4096,
+      "variants": {
+        "reference": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": -1,
+            "stream_count": 1
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 5602527.666666667,
+          "mean_host_ns": 5629426.0,
+          "strict_output_pass": true
+        },
+        "streams_2": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 2
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 6767573.0,
+          "mean_host_ns": 6792227.666666667,
+          "strict_output_pass": true
+        },
+        "streams_4": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 4
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 7348554.0,
+          "mean_host_ns": 7373300.0,
+          "strict_output_pass": true
+        },
+        "streams_8": {
+          "all_finite": true,
+          "engine_info": {
+            "active_segments": 16,
+            "stream_count": 8
+          },
+          "forward_tolerance": 0.005,
+          "max_output_abs_delta_vs_reference": 0.0,
+          "mean_cuda_ns": 7825460.333333333,
+          "mean_host_ns": 7850113.0,
+          "strict_output_pass": true
+        }
+      }
+    }
+  ],
+  "schema_version": "gpu-neural-ssre-v5-concurrency-20261018",
+  "source_hashes": {
+    "anchor_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+    "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+    "dependency_audit_sha256": "3dfe8478e6f7b7c666d1e0bfd8b3d9cc3a00b249647d67a40bfc109bc6b8537f",
+    "model_core_sha256": "271cfde17e073077947a3540c1d41fdcbe382309fa1021d89d42307a9a5cd6ab",
+    "v1_source_sha256": "223aa756a36235df02858ea8171a7516c2e9afbceacf4005a9c8b7b138df6b90",
+    "v2_dispatch_source_sha256": "fa5a4c98e6bbcafe7efed1f2256b1e0742a15f83d51afda2dbbdc139a9c9ab6d",
+    "v5_source_sha256": "f54c7f27652ced9b46f1d94c09944dca23ce97c6bee396aa0ba80821e03c84a5"
+  },
+  "torch_version": "2.12.0+cu130"
+}

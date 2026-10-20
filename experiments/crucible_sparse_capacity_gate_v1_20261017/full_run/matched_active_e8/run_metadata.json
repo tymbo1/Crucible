@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/timbushnell/crucible_sparse_capacity_gate_v1_20261017/crucible_runner.py",
+    "--config-path",
+    "/home/timbushnell/crucible_sparse_capacity_gate_v1_20261017/matched_active_e8/crucible_manifest/experiment_config.json",
+    "--config-sha256",
+    "e21b93f514eb556d4a78d8d19fb9b3c81c9d9fe0b755b7608bff47216383b976",
+    "--output-path",
+    "/home/timbushnell/crucible_sparse_capacity_gate_v1_20261017/full_run/matched_active_e8/metrics.jsonl.attempt"
+  ],
+  "elapsed_seconds": 5070.405840765001,
+  "finished_utc": "2026-10-17T08:35:17.137556+00:00",
+  "manifest_sha256": "e21b93f514eb556d4a78d8d19fb9b3c81c9d9fe0b755b7608bff47216383b976",
+  "metrics_sha256": "e4978606c5aad4dbfaf9fb40a5ff69a8899df16aea2ca48a5e0647b9d59b66bb",
+  "regime": "fixed_active_compute",
+  "returncode": 0,
+  "rows": 18,
+  "runner_sha256": "45d10df931127877ce11d117f0c71ae3f9de565b4ade9b6305a586d568f2911c",
+  "started_utc": "2026-10-17T07:10:46.658699+00:00",
+  "telemetry_schema": "byte_affinity_v1",
+  "variant_id": "matched_active_e8"
+}

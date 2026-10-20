@@ -1,0 +1,24 @@
+# Raw corpora and packed datasets
+*.bin
+*.txt
+*.pt
+*.pth
+*.safetensors
+*.tar
+*.tar.gz
+
+# Python/build caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local credentials and environment files
+.env
+.env.*
+*api_key*
+*secret*
+*.pem
+
+# Large generated traces; retain summaries and hashes instead
+*trace*.jsonl
+*batch_trace*.jsonl

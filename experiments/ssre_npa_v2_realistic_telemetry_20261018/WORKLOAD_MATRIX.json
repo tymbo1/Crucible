@@ -1,0 +1,101 @@
+{
+  "schema_version": "ssre-npa-workload-matrix-v2",
+  "source_kind": "deterministic_virtual_workload_proxy",
+  "packet_count": 96,
+  "global_window_packets": 16,
+  "global_window_bytes": 4194304,
+  "scheduler_arms": {
+    "serial_reference": {
+      "workers": 1,
+      "queue_capacity": 1,
+      "adaptive": false,
+      "preparation_factor": 1.0
+    },
+    "indexed_precomputed_proxy": {
+      "workers": 2,
+      "queue_capacity": 4,
+      "adaptive": false,
+      "preparation_factor": 0.18
+    },
+    "fixed_reservoir": {
+      "workers": 4,
+      "queue_capacity": 4,
+      "adaptive": false,
+      "preparation_factor": 1.0
+    },
+    "heuristic_reservoir": {
+      "workers": 4,
+      "queue_capacity": 4,
+      "adaptive": true,
+      "preparation_factor": 1.0
+    }
+  },
+  "scenarios": [
+    {
+      "id": "steady_medium",
+      "description": "Moderate fixed-size packets with stable preparation and consumer costs.",
+      "seed": 1101,
+      "payload_bytes": [8192, 65536],
+      "prep_ms": [0.6, 2.0],
+      "gpu_ms": [1.0, 1.8],
+      "cache_states": {"hot": 1.0},
+      "straggler_fraction": 0.0,
+      "telemetry_factor": 0.0
+    },
+    {
+      "id": "variable_lengths",
+      "description": "Length-bucketed packets with broad payload and preparation variance.",
+      "seed": 1102,
+      "payload_bytes": [1024, 262144],
+      "prep_ms": [0.3, 7.0],
+      "gpu_ms": [1.0, 3.0],
+      "cache_states": {"hot": 0.45, "warm": 0.4, "cold": 0.15},
+      "straggler_fraction": 0.03,
+      "telemetry_factor": 0.2
+    },
+    {
+      "id": "cold_warm_cache",
+      "description": "Hot, warm and cold source/cache paths with cold-packet stalls.",
+      "seed": 1103,
+      "payload_bytes": [16384, 524288],
+      "prep_ms": [0.4, 12.0],
+      "gpu_ms": [1.2, 2.5],
+      "cache_states": {"hot": 0.6, "warm": 0.3, "cold": 0.1},
+      "straggler_fraction": 0.02,
+      "telemetry_factor": 0.1
+    },
+    {
+      "id": "straggler_tail",
+      "description": "Mostly regular packets with deterministic long-tail preparation.",
+      "seed": 1104,
+      "payload_bytes": [4096, 131072],
+      "prep_ms": [0.5, 3.0],
+      "gpu_ms": [1.0, 2.0],
+      "cache_states": {"hot": 0.8, "warm": 0.2},
+      "straggler_fraction": 0.08,
+      "telemetry_factor": 0.0
+    },
+    {
+      "id": "slow_consumer",
+      "description": "Preparation can outrun a deliberately slow consumer and exercise backpressure.",
+      "seed": 1105,
+      "payload_bytes": [8192, 131072],
+      "prep_ms": [0.4, 2.5],
+      "gpu_ms": [7.0, 12.0],
+      "cache_states": {"hot": 0.7, "warm": 0.25, "cold": 0.05},
+      "straggler_fraction": 0.02,
+      "telemetry_factor": 0.0
+    },
+    {
+      "id": "telemetry_heavy",
+      "description": "Preparation includes substantial routing/activation telemetry aggregation cost.",
+      "seed": 1106,
+      "payload_bytes": [65536, 524288],
+      "prep_ms": [1.0, 6.0],
+      "gpu_ms": [1.5, 3.0],
+      "cache_states": {"hot": 0.5, "warm": 0.35, "cold": 0.15},
+      "straggler_fraction": 0.04,
+      "telemetry_factor": 1.0
+    }
+  ]
+}

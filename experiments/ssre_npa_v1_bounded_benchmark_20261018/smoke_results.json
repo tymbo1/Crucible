@@ -1,0 +1,1756 @@
+{
+  "checks": {
+    "all_global_windows_bounded": true,
+    "all_reorder_buffers_bounded": true,
+    "all_standard_digests_match": true,
+    "cancellation_recovery_covered": true,
+    "fault_recovered": true
+  },
+  "cpu_only": true,
+  "cuda_used": false,
+  "interpretation": "Scheduler mechanics and resource bounds only; no neural-training or GPU-acceleration claim.",
+  "manifest_sha256": "96bb4faa2d2795077281af8f4a40943a610baba6d76f5f83d597c0657e212677",
+  "model_training": false,
+  "parameters": {
+    "consume_delay_s": 0.0005,
+    "max_packet_bytes": 262144,
+    "packets": 48,
+    "payload_window_bytes": 2097152,
+    "queue_capacity": 4,
+    "window_capacity": 8,
+    "workers": 4
+  },
+  "peak_rss_kb": 21484,
+  "scenarios": {
+    "cancellation_recovery": {
+      "cancelled_run": {
+        "cancelled": true,
+        "committed": 12,
+        "shutdown_events": 1
+      },
+      "combined_no_duplicates": true,
+      "combined_sequence_coverage": true,
+      "note": "The sequence-coverage check is the cancellation/recovery gate; the uninterrupted serial digest remains the immutable reference.",
+      "recovery_run": {
+        "committed": 36,
+        "complete": true,
+        "duplicates": 0,
+        "missing": 0
+      },
+      "serial_reference_digest": "4fa171e468b7b99aeb1575e08a15f28967d9efc328511fe2d50bbdcae74d84fa"
+    },
+    "fault_injection": {
+      "digest_matches_serial": true,
+      "failure_observed": true,
+      "retry_observed": true,
+      "run": {
+        "adaptive_decisions": [],
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "counters": {
+          "cancellation_events": 0,
+          "consumed": 48,
+          "dispatched": 48,
+          "duplicates": 0,
+          "failures": 1,
+          "generated": 48,
+          "malformed": 0,
+          "manifest_mismatches": 0,
+          "missing": 0,
+          "retries": 1,
+          "shutdown_events": 0
+        },
+        "elapsed_s": 0.002343001018743962,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 1.428e-05,
+          "p50_s": 7.26e-06,
+          "p95_s": 1.1657849999999999e-05
+        },
+        "mode": "fixed",
+        "payload_window_bytes": 2097152,
+        "pending_reorder_max": 7,
+        "process_cpu_core_equivalent": 1.2259883700519594,
+        "process_cpu_s": 0.0028724919999999904,
+        "queue_capacity": 4,
+        "queue_metrics": {
+          "done": {
+            "get_wait": {
+              "count": 13,
+              "max_s": 0.00045918801333755255,
+              "p50_s": 0.00012644898379221559,
+              "p95_s": 0.00028213520417921204,
+              "total_s": 0.0018570019747130573
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 7.561000529676676e-05,
+              "p50_s": 7.561000529676676e-05,
+              "p95_s": 7.561000529676676e-05,
+              "total_s": 7.561000529676676e-05
+            }
+          },
+          "input": {
+            "get_wait": {
+              "count": 18,
+              "max_s": 0.0016435729921795428,
+              "p50_s": 0.00010903499787673354,
+              "p95_s": 0.0011547575486474662,
+              "total_s": 0.007418424967909232
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 0.0001106100098695606,
+              "p50_s": 0.0001106100098695606,
+              "p95_s": 0.0001106100098695606,
+              "total_s": 0.0001106100098695606
+            }
+          },
+          "stage": {
+            "get_wait": {
+              "count": 13,
+              "max_s": 0.0006078769802115858,
+              "p50_s": 0.00013186997966840863,
+              "p95_s": 0.0003727142000570888,
+              "total_s": 0.0020144719746895134
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 4.618000821210444e-05,
+              "p50_s": 4.618000821210444e-05,
+              "p95_s": 4.618000821210444e-05,
+              "total_s": 4.618000821210444e-05
+            }
+          }
+        },
+        "result_digest": "4fa171e468b7b99aeb1575e08a15f28967d9efc328511fe2d50bbdcae74d84fa",
+        "retry_backlog_remaining": 0,
+        "throughput_packets_s": 20486.546790206638,
+        "throughput_payload_bytes_s": 681792277.178077,
+        "window_acquire_wait": {
+          "count": 11,
+          "max_s": 0.0001711790100671351,
+          "p50_s": 0.00011360898497514427,
+          "p95_s": 0.0001599495008122176,
+          "total_s": 0.0013286340108606964
+        },
+        "window_capacity": 8,
+        "window_max_in_flight": 8,
+        "window_max_in_flight_bytes": 307200,
+        "workers": 4
+      }
+    },
+    "large": {
+      "adaptive": {
+        "adaptive_decisions": [
+          {
+            "limit": 1,
+            "reason": "drain_safe"
+          },
+          {
+            "limit": 2,
+            "reason": "input_pressure"
+          },
+          {
+            "limit": 1,
+            "reason": "stage_pressure"
+          }
+        ],
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "counters": {
+          "cancellation_events": 0,
+          "consumed": 48,
+          "dispatched": 48,
+          "duplicates": 0,
+          "failures": 0,
+          "generated": 48,
+          "malformed": 0,
+          "manifest_mismatches": 0,
+          "missing": 0,
+          "retries": 0,
+          "shutdown_events": 0
+        },
+        "elapsed_s": 0.029558840004028752,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 0.002065603,
+          "p50_s": 7.0349999999999996e-06,
+          "p95_s": 0.0013454944499999971
+        },
+        "mode": "adaptive",
+        "payload_window_bytes": 2097152,
+        "pending_reorder_max": 7,
+        "process_cpu_core_equivalent": 0.1993655028139402,
+        "process_cpu_s": 0.0058930130000000025,
+        "queue_capacity": 4,
+        "queue_metrics": {
+          "done": {
+            "get_wait": {
+              "count": 6,
+              "max_s": 0.0025555900065228343,
+              "p50_s": 0.000278634499409236,
+              "p95_s": 0.0020381970025482588,
+              "total_s": 0.003730255994014442
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 0,
+              "max_s": 0.0,
+              "p50_s": 0.0,
+              "p95_s": 0.0,
+              "total_s": 0.0
+            }
+          },
+          "input": {
+            "get_wait": {
+              "count": 48,
+              "max_s": 0.007785961002809927,
+              "p50_s": 0.000632973009487614,
+              "p95_s": 0.005943666843813844,
+              "total_s": 0.08647766499780118
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 7.47299927752465e-05,
+              "p50_s": 7.47299927752465e-05,
+              "p95_s": 7.47299927752465e-05,
+              "total_s": 7.47299927752465e-05
+            }
+          },
+          "stage": {
+            "get_wait": {
+              "count": 1,
+              "max_s": 0.002706719998968765,
+              "p50_s": 0.002706719998968765,
+              "p95_s": 0.002706719998968765,
+              "total_s": 0.002706719998968765
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 43,
+              "max_s": 0.0006255469925235957,
+              "p50_s": 0.0005555370007641613,
+              "p95_s": 0.0005585958744632081,
+              "total_s": 0.022712194971973076
+            }
+          }
+        },
+        "result_digest": "128adb855a201ce2089899efb4b4d1de67a166330f324dd97689481a30749a3c",
+        "retry_backlog_remaining": 0,
+        "throughput_packets_s": 1623.8796919452113,
+        "throughput_payload_bytes_s": 266056448.72830343,
+        "window_acquire_wait": {
+          "count": 40,
+          "max_s": 0.0022000120079610497,
+          "p50_s": 0.0005515230004675686,
+          "p95_s": 0.0005596290080575272,
+          "total_s": 0.0236178221530281
+        },
+        "window_capacity": 8,
+        "window_max_in_flight": 8,
+        "window_max_in_flight_bytes": 1310720,
+        "workers": 4
+      },
+      "adaptive_digest_matches_serial": true,
+      "adaptive_global_bound_ok": true,
+      "adaptive_reorder_bound_ok": true,
+      "fixed": {
+        "adaptive_decisions": [],
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "counters": {
+          "cancellation_events": 0,
+          "consumed": 48,
+          "dispatched": 48,
+          "duplicates": 0,
+          "failures": 0,
+          "generated": 48,
+          "malformed": 0,
+          "manifest_mismatches": 0,
+          "missing": 0,
+          "retries": 0,
+          "shutdown_events": 0
+        },
+        "elapsed_s": 0.02935535099823028,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 0.002067153,
+          "p50_s": 6.725e-06,
+          "p95_s": 0.0013446617999999973
+        },
+        "mode": "fixed",
+        "payload_window_bytes": 2097152,
+        "pending_reorder_max": 1,
+        "process_cpu_core_equivalent": 0.18087847085596442,
+        "process_cpu_s": 0.0053097510000000014,
+        "queue_capacity": 4,
+        "queue_metrics": {
+          "done": {
+            "get_wait": {
+              "count": 7,
+              "max_s": 0.0024518310092389584,
+              "p50_s": 6.402999861165881e-05,
+              "p95_s": 0.001858592103235422,
+              "total_s": 0.003577956958906725
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 0,
+              "max_s": 0.0,
+              "p50_s": 0.0,
+              "p95_s": 0.0,
+              "total_s": 0.0
+            }
+          },
+          "input": {
+            "get_wait": {
+              "count": 47,
+              "max_s": 0.009552905015880242,
+              "p50_s": 0.0010655359947122633,
+              "p95_s": 0.005187499002204277,
+              "total_s": 0.08586548193125054
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 7.093997555784881e-05,
+              "p50_s": 7.093997555784881e-05,
+              "p95_s": 7.093997555784881e-05,
+              "total_s": 7.093997555784881e-05
+            }
+          },
+          "stage": {
+            "get_wait": {
+              "count": 1,
+              "max_s": 0.0025229300081264228,
+              "p50_s": 0.0025229300081264228,
+              "p95_s": 0.0025229300081264228,
+              "total_s": 0.0025229300081264228
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 43,
+              "max_s": 0.0005622379831038415,
+              "p50_s": 0.0005563680024351925,
+              "p95_s": 0.0005575110000791027,
+              "total_s": 0.022685175004880875
+            }
+          }
+        },
+        "result_digest": "128adb855a201ce2089899efb4b4d1de67a166330f324dd97689481a30749a3c",
+        "retry_backlog_remaining": 0,
+        "throughput_packets_s": 1635.1362994397082,
+        "throughput_payload_bytes_s": 267900731.30020177,
+        "window_acquire_wait": {
+          "count": 40,
+          "max_s": 0.002059881982859224,
+          "p50_s": 0.0005511775088962168,
+          "p95_s": 0.000555790496582631,
+          "total_s": 0.023455251968698576
+        },
+        "window_capacity": 8,
+        "window_max_in_flight": 8,
+        "window_max_in_flight_bytes": 1310720,
+        "workers": 4
+      },
+      "fixed_digest_matches_serial": true,
+      "fixed_global_bound_ok": true,
+      "fixed_reorder_bound_ok": true,
+      "serial": {
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "elapsed_s": 0.006465385988121852,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 0.002065713,
+          "p50_s": 5.15e-06,
+          "p95_s": 0.001340105449999997
+        },
+        "mode": "serial",
+        "process_cpu_core_equivalent": 0.048521465010185,
+        "process_cpu_s": 0.0003137099999999948,
+        "result_digest": "128adb855a201ce2089899efb4b4d1de67a166330f324dd97689481a30749a3c",
+        "throughput_packets_s": 7424.150713999931,
+        "throughput_payload_bytes_s": 1216372852.9817488
+      }
+    },
+    "mixed": {
+      "adaptive": {
+        "adaptive_decisions": [
+          {
+            "limit": 1,
+            "reason": "drain_safe"
+          }
+        ],
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "counters": {
+          "cancellation_events": 0,
+          "consumed": 48,
+          "dispatched": 48,
+          "duplicates": 0,
+          "failures": 0,
+          "generated": 48,
+          "malformed": 0,
+          "manifest_mismatches": 0,
+          "missing": 0,
+          "retries": 0,
+          "shutdown_events": 0
+        },
+        "elapsed_s": 0.02765055699273944,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 3.1589e-05,
+          "p50_s": 8e-06,
+          "p95_s": 1.41135e-05
+        },
+        "mode": "adaptive",
+        "payload_window_bytes": 2097152,
+        "pending_reorder_max": 1,
+        "process_cpu_core_equivalent": 0.22327271749430166,
+        "process_cpu_s": 0.006173615,
+        "queue_capacity": 4,
+        "queue_metrics": {
+          "done": {
+            "get_wait": {
+              "count": 2,
+              "max_s": 0.0005370079888962209,
+              "p50_s": 0.0003444989997660741,
+              "p95_s": 0.0005177570899832063,
+              "total_s": 0.0006889979995321482
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 4.893000004813075e-05,
+              "p50_s": 4.893000004813075e-05,
+              "p95_s": 4.893000004813075e-05,
+              "total_s": 4.893000004813075e-05
+            }
+          },
+          "input": {
+            "get_wait": {
+              "count": 46,
+              "max_s": 0.008420308993663639,
+              "p50_s": 0.0016664885042700917,
+              "p95_s": 0.005446780254715122,
+              "total_s": 0.09786197490757331
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 0.00011165000614710152,
+              "p50_s": 0.00011165000614710152,
+              "p95_s": 0.00011165000614710152,
+              "total_s": 0.00011165000614710152
+            }
+          },
+          "stage": {
+            "get_wait": {
+              "count": 1,
+              "max_s": 0.000686846993630752,
+              "p50_s": 0.000686846993630752,
+              "p95_s": 0.000686846993630752,
+              "total_s": 0.000686846993630752
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 43,
+              "max_s": 0.0006057879945728928,
+              "p50_s": 0.0005558179982472211,
+              "p95_s": 0.000561182014644146,
+              "total_s": 0.023843701899750158
+            }
+          }
+        },
+        "result_digest": "4fa171e468b7b99aeb1575e08a15f28967d9efc328511fe2d50bbdcae74d84fa",
+        "retry_backlog_remaining": 0,
+        "throughput_packets_s": 1735.9505637663638,
+        "throughput_payload_bytes_s": 57772434.76214459,
+        "window_acquire_wait": {
+          "count": 40,
+          "max_s": 0.0005666879878845066,
+          "p50_s": 0.0005503779975697398,
+          "p95_s": 0.0005603105120826512,
+          "total_s": 0.02158599006361328
+        },
+        "window_capacity": 8,
+        "window_max_in_flight": 8,
+        "window_max_in_flight_bytes": 331776,
+        "workers": 4
+      },
+      "adaptive_digest_matches_serial": true,
+      "adaptive_global_bound_ok": true,
+      "adaptive_reorder_bound_ok": true,
+      "fixed": {
+        "adaptive_decisions": [],
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "counters": {
+          "cancellation_events": 0,
+          "consumed": 48,
+          "dispatched": 48,
+          "duplicates": 0,
+          "failures": 0,
+          "generated": 48,
+          "malformed": 0,
+          "manifest_mismatches": 0,
+          "missing": 0,
+          "retries": 0,
+          "shutdown_events": 0
+        },
+        "elapsed_s": 0.027571287006139755,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 1.583e-05,
+          "p50_s": 8.23e-06,
+          "p95_s": 1.250765e-05
+        },
+        "mode": "fixed",
+        "payload_window_bytes": 2097152,
+        "pending_reorder_max": 1,
+        "process_cpu_core_equivalent": 0.20560806605573442,
+        "process_cpu_s": 0.005668878999999995,
+        "queue_capacity": 4,
+        "queue_metrics": {
+          "done": {
+            "get_wait": {
+              "count": 2,
+              "max_s": 0.00044260898721404374,
+              "p50_s": 0.0002870139869628474,
+              "p95_s": 0.00042704948718892406,
+              "total_s": 0.0005740279739256948
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 4.544999683275819e-05,
+              "p50_s": 4.544999683275819e-05,
+              "p95_s": 4.544999683275819e-05,
+              "total_s": 4.544999683275819e-05
+            }
+          },
+          "input": {
+            "get_wait": {
+              "count": 46,
+              "max_s": 0.004518563015153632,
+              "p50_s": 0.0022237965022213757,
+              "p95_s": 0.00393232823262224,
+              "total_s": 0.09756507800193503
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 0.00010428001405671239,
+              "p50_s": 0.00010428001405671239,
+              "p95_s": 0.00010428001405671239,
+              "total_s": 0.00010428001405671239
+            }
+          },
+          "stage": {
+            "get_wait": {
+              "count": 1,
+              "max_s": 0.0005929379840381444,
+              "p50_s": 0.0005929379840381444,
+              "p95_s": 0.0005929379840381444,
+              "total_s": 0.0005929379840381444
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 43,
+              "max_s": 0.00062758699641563,
+              "p50_s": 0.000556517974473536,
+              "p95_s": 0.0005593709967797623,
+              "total_s": 0.023881342029199004
+            }
+          }
+        },
+        "result_digest": "4fa171e468b7b99aeb1575e08a15f28967d9efc328511fe2d50bbdcae74d84fa",
+        "retry_backlog_remaining": 0,
+        "throughput_packets_s": 1740.9415813382611,
+        "throughput_payload_bytes_s": 57938535.82693733,
+        "window_acquire_wait": {
+          "count": 40,
+          "max_s": 0.0005628079816233367,
+          "p50_s": 0.0005511780182132497,
+          "p95_s": 0.0005580969984293916,
+          "total_s": 0.021612709941109642
+        },
+        "window_capacity": 8,
+        "window_max_in_flight": 8,
+        "window_max_in_flight_bytes": 331776,
+        "workers": 4
+      },
+      "fixed_digest_matches_serial": true,
+      "fixed_global_bound_ok": true,
+      "fixed_reorder_bound_ok": true,
+      "serial": {
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "elapsed_s": 0.0003387089818716049,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 1.064e-05,
+          "p50_s": 5.565e-06,
+          "p95_s": 9.645499999999998e-06
+        },
+        "mode": "serial",
+        "process_cpu_core_equivalent": 0.9993830046358834,
+        "process_cpu_s": 0.00033850000000000546,
+        "result_digest": "4fa171e468b7b99aeb1575e08a15f28967d9efc328511fe2d50bbdcae74d84fa",
+        "throughput_packets_s": 141714.5767282766,
+        "throughput_payload_bytes_s": 4716261113.517045
+      }
+    },
+    "stragglers": {
+      "adaptive": {
+        "adaptive_decisions": [
+          {
+            "limit": 1,
+            "reason": "drain_safe"
+          },
+          {
+            "limit": 2,
+            "reason": "input_pressure"
+          },
+          {
+            "limit": 3,
+            "reason": "input_pressure"
+          },
+          {
+            "limit": 2,
+            "reason": "stage_pressure"
+          },
+          {
+            "limit": 1,
+            "reason": "stage_pressure"
+          },
+          {
+            "limit": 2,
+            "reason": "input_pressure"
+          },
+          {
+            "limit": 1,
+            "reason": "stage_pressure"
+          }
+        ],
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "counters": {
+          "cancellation_events": 0,
+          "consumed": 48,
+          "dispatched": 48,
+          "duplicates": 0,
+          "failures": 0,
+          "generated": 48,
+          "malformed": 0,
+          "manifest_mismatches": 0,
+          "missing": 0,
+          "retries": 0,
+          "shutdown_events": 0
+        },
+        "elapsed_s": 0.03148364298976958,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 0.004075885,
+          "p50_s": 6.9499999999999995e-06,
+          "p95_s": 0.002645579249999994
+        },
+        "mode": "adaptive",
+        "payload_window_bytes": 2097152,
+        "pending_reorder_max": 6,
+        "process_cpu_core_equivalent": 0.19590861838968962,
+        "process_cpu_s": 0.006167916999999995,
+        "queue_capacity": 4,
+        "queue_metrics": {
+          "done": {
+            "get_wait": {
+              "count": 12,
+              "max_s": 0.004545213014353067,
+              "p50_s": 4.5854991185478866e-05,
+              "p95_s": 0.0034014594086329442,
+              "total_s": 0.009850482980255038
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 0,
+              "max_s": 0.0,
+              "p50_s": 0.0,
+              "p95_s": 0.0,
+              "total_s": 0.0
+            }
+          },
+          "input": {
+            "get_wait": {
+              "count": 43,
+              "max_s": 0.009693683998193592,
+              "p50_s": 0.0011080060212407261,
+              "p95_s": 0.006344104290474205,
+              "total_s": 0.08038283805944957
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 8.621998131275177e-05,
+              "p50_s": 8.621998131275177e-05,
+              "p95_s": 8.621998131275177e-05,
+              "total_s": 8.621998131275177e-05
+            }
+          },
+          "stage": {
+            "get_wait": {
+              "count": 1,
+              "max_s": 0.0046551929845009,
+              "p50_s": 0.0046551929845009,
+              "p95_s": 0.0046551929845009,
+              "total_s": 0.0046551929845009
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 37,
+              "max_s": 0.0006175879971124232,
+              "p50_s": 0.0005565680039580911,
+              "p95_s": 0.0005671280028764157,
+              "total_s": 0.01986045591183938
+            }
+          }
+        },
+        "result_digest": "1a7f9ff278ca1bd22a8bf4c705be8444e04a9a33c64008ad57ee1876d7ab640d",
+        "retry_backlog_remaining": 0,
+        "throughput_packets_s": 1524.601203729737,
+        "throughput_payload_bytes_s": 53080515.50905453,
+        "window_acquire_wait": {
+          "count": 40,
+          "max_s": 0.0041191950149368495,
+          "p50_s": 0.0005515529919648543,
+          "p95_s": 0.0005585849779890851,
+          "total_s": 0.02550331494421698
+        },
+        "window_capacity": 8,
+        "window_max_in_flight": 8,
+        "window_max_in_flight_bytes": 344064,
+        "workers": 4
+      },
+      "adaptive_digest_matches_serial": true,
+      "adaptive_global_bound_ok": true,
+      "adaptive_reorder_bound_ok": true,
+      "fixed": {
+        "adaptive_decisions": [],
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "counters": {
+          "cancellation_events": 0,
+          "consumed": 48,
+          "dispatched": 48,
+          "duplicates": 0,
+          "failures": 0,
+          "generated": 48,
+          "malformed": 0,
+          "manifest_mismatches": 0,
+          "missing": 0,
+          "retries": 0,
+          "shutdown_events": 0
+        },
+        "elapsed_s": 0.0313619340013247,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 0.004079624,
+          "p50_s": 6.18e-06,
+          "p95_s": 0.002645990249999994
+        },
+        "mode": "fixed",
+        "payload_window_bytes": 2097152,
+        "pending_reorder_max": 6,
+        "process_cpu_core_equivalent": 0.16467810944892122,
+        "process_cpu_s": 0.005164623999999993,
+        "queue_capacity": 4,
+        "queue_metrics": {
+          "done": {
+            "get_wait": {
+              "count": 12,
+              "max_s": 0.004466712998691946,
+              "p50_s": 1.8304999684914947e-05,
+              "p95_s": 0.0033928858465515064,
+              "total_s": 0.009731342957820743
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 8,
+              "max_s": 0.00013040899648331106,
+              "p50_s": 7.413400453515351e-05,
+              "p95_s": 0.00012473550013964997,
+              "total_s": 0.0006902839813847095
+            }
+          },
+          "input": {
+            "get_wait": {
+              "count": 43,
+              "max_s": 0.012443704006727785,
+              "p50_s": 0.0005502380081452429,
+              "p95_s": 0.008218259512796065,
+              "total_s": 0.08000862406333908
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 8.231902029365301e-05,
+              "p50_s": 8.231902029365301e-05,
+              "p95_s": 8.231902029365301e-05,
+              "total_s": 8.231902029365301e-05
+            }
+          },
+          "stage": {
+            "get_wait": {
+              "count": 1,
+              "max_s": 0.004538132983725518,
+              "p50_s": 0.004538132983725518,
+              "p95_s": 0.004538132983725518,
+              "total_s": 0.004538132983725518
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 37,
+              "max_s": 0.0005609079962596297,
+              "p50_s": 0.0005564780149143189,
+              "p95_s": 0.0005583760037552565,
+              "total_s": 0.019862265995470807
+            }
+          }
+        },
+        "result_digest": "1a7f9ff278ca1bd22a8bf4c705be8444e04a9a33c64008ad57ee1876d7ab640d",
+        "retry_backlog_remaining": 0,
+        "throughput_packets_s": 1530.5178563915263,
+        "throughput_payload_bytes_s": 53286509.688127376,
+        "window_acquire_wait": {
+          "count": 40,
+          "max_s": 0.004062884981976822,
+          "p50_s": 0.000551493008970283,
+          "p95_s": 0.0005605669939541257,
+          "total_s": 0.025477344926912338
+        },
+        "window_capacity": 8,
+        "window_max_in_flight": 8,
+        "window_max_in_flight_bytes": 344064,
+        "workers": 4
+      },
+      "fixed_digest_matches_serial": true,
+      "fixed_global_bound_ok": true,
+      "fixed_reorder_bound_ok": true,
+      "serial": {
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "elapsed_s": 0.01249340400681831,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 0.004074264,
+          "p50_s": 5.17e-06,
+          "p95_s": 0.002642751749999994
+        },
+        "mode": "serial",
+        "process_cpu_core_equivalent": 0.027424071118889295,
+        "process_cpu_s": 0.0003426200000000018,
+        "result_digest": "1a7f9ff278ca1bd22a8bf4c705be8444e04a9a33c64008ad57ee1876d7ab640d",
+        "throughput_packets_s": 3842.0273589010544,
+        "throughput_payload_bytes_s": 133764024.52749911
+      }
+    },
+    "uniform": {
+      "adaptive": {
+        "adaptive_decisions": [
+          {
+            "limit": 1,
+            "reason": "drain_safe"
+          }
+        ],
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "counters": {
+          "cancellation_events": 0,
+          "consumed": 48,
+          "dispatched": 48,
+          "duplicates": 0,
+          "failures": 0,
+          "generated": 48,
+          "malformed": 0,
+          "manifest_mismatches": 0,
+          "missing": 0,
+          "retries": 0,
+          "shutdown_events": 0
+        },
+        "elapsed_s": 0.0022355820110533386,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 9.87e-06,
+          "p50_s": 4.02e-06,
+          "p95_s": 8.271849999999996e-06
+        },
+        "mode": "adaptive",
+        "payload_window_bytes": 2097152,
+        "pending_reorder_max": 1,
+        "process_cpu_core_equivalent": 1.2596276880368993,
+        "process_cpu_s": 0.0028160009999999985,
+        "queue_capacity": 4,
+        "queue_metrics": {
+          "done": {
+            "get_wait": {
+              "count": 12,
+              "max_s": 0.000524717994267121,
+              "p50_s": 0.0001141995016951114,
+              "p95_s": 0.00032714205153752093,
+              "total_s": 0.0017656320123933256
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 0,
+              "max_s": 0.0,
+              "p50_s": 0.0,
+              "p95_s": 0.0,
+              "total_s": 0.0
+            }
+          },
+          "input": {
+            "get_wait": {
+              "count": 16,
+              "max_s": 0.0018216330208815634,
+              "p50_s": 0.00010034498700406402,
+              "p95_s": 0.0018155880097765476,
+              "total_s": 0.006977423967327923
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 0.00010985002154484391,
+              "p50_s": 0.00010985002154484391,
+              "p95_s": 0.00010985002154484391,
+              "total_s": 0.00010985002154484391
+            }
+          },
+          "stage": {
+            "get_wait": {
+              "count": 12,
+              "max_s": 0.0006818670080974698,
+              "p50_s": 0.00010854499123524874,
+              "p95_s": 0.0004203816031804305,
+              "total_s": 0.0018892730004154146
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 0,
+              "max_s": 0.0,
+              "p50_s": 0.0,
+              "p95_s": 0.0,
+              "total_s": 0.0
+            }
+          }
+        },
+        "result_digest": "afcad790104af3adec3ff229dc2ded2d74453847ec1a1e43fcf034513c5daff6",
+        "retry_backlog_remaining": 0,
+        "throughput_packets_s": 21470.918876012896,
+        "throughput_payload_bytes_s": 87944883.71614882,
+        "window_acquire_wait": {
+          "count": 10,
+          "max_s": 0.00015065900515764952,
+          "p50_s": 0.00011351949069648981,
+          "p95_s": 0.00014150150091154498,
+          "total_s": 0.001099705055821687
+        },
+        "window_capacity": 8,
+        "window_max_in_flight": 8,
+        "window_max_in_flight_bytes": 32768,
+        "workers": 4
+      },
+      "adaptive_digest_matches_serial": true,
+      "adaptive_global_bound_ok": true,
+      "adaptive_reorder_bound_ok": true,
+      "fixed": {
+        "adaptive_decisions": [],
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "counters": {
+          "cancellation_events": 0,
+          "consumed": 48,
+          "dispatched": 48,
+          "duplicates": 0,
+          "failures": 0,
+          "generated": 48,
+          "malformed": 0,
+          "manifest_mismatches": 0,
+          "missing": 0,
+          "retries": 0,
+          "shutdown_events": 0
+        },
+        "elapsed_s": 0.0022777709818910807,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 9.82e-06,
+          "p50_s": 3.28e-06,
+          "p95_s": 5.2165e-06
+        },
+        "mode": "fixed",
+        "payload_window_bytes": 2097152,
+        "pending_reorder_max": 1,
+        "process_cpu_core_equivalent": 1.2375445215566425,
+        "process_cpu_s": 0.0028188430000000014,
+        "queue_capacity": 4,
+        "queue_metrics": {
+          "done": {
+            "get_wait": {
+              "count": 12,
+              "max_s": 0.0005830180016346276,
+              "p50_s": 0.00011172400263603777,
+              "p95_s": 0.00034008409711532267,
+              "total_s": 0.001731324038701132
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 0,
+              "max_s": 0.0,
+              "p50_s": 0.0,
+              "p95_s": 0.0,
+              "total_s": 0.0
+            }
+          },
+          "input": {
+            "get_wait": {
+              "count": 16,
+              "max_s": 0.0017100939876399934,
+              "p50_s": 0.0001078094937838614,
+              "p95_s": 0.0016775890107965097,
+              "total_s": 0.006680535065243021
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 1,
+              "max_s": 0.0001076500047929585,
+              "p50_s": 0.0001076500047929585,
+              "p95_s": 0.0001076500047929585,
+              "total_s": 0.0001076500047929585
+            }
+          },
+          "stage": {
+            "get_wait": {
+              "count": 12,
+              "max_s": 0.0007775679987389594,
+              "p50_s": 9.879449498839676e-05,
+              "p95_s": 0.00044140910467831373,
+              "total_s": 0.0018882740114349872
+            },
+            "high_water": 4,
+            "put_wait": {
+              "count": 0,
+              "max_s": 0.0,
+              "p50_s": 0.0,
+              "p95_s": 0.0,
+              "total_s": 0.0
+            }
+          }
+        },
+        "result_digest": "afcad790104af3adec3ff229dc2ded2d74453847ec1a1e43fcf034513c5daff6",
+        "retry_backlog_remaining": 0,
+        "throughput_packets_s": 21073.23360496445,
+        "throughput_payload_bytes_s": 86315964.84593439,
+        "window_acquire_wait": {
+          "count": 10,
+          "max_s": 0.00016713902004994452,
+          "p50_s": 0.00010306949843652546,
+          "p95_s": 0.00014619645517086605,
+          "total_s": 0.0010350460361223668
+        },
+        "window_capacity": 8,
+        "window_max_in_flight": 8,
+        "window_max_in_flight_bytes": 32768,
+        "workers": 4
+      },
+      "fixed_digest_matches_serial": true,
+      "fixed_global_bound_ok": true,
+      "fixed_reorder_bound_ok": true,
+      "serial": {
+        "cancelled": false,
+        "committed_packets": 48,
+        "committed_sequences": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "complete": true,
+        "elapsed_s": 0.00022422900656238198,
+        "expected_packets": 48,
+        "latency": {
+          "max_s": 8.83e-06,
+          "p50_s": 3.03e-06,
+          "p95_s": 4.821e-06
+        },
+        "mode": "serial",
+        "process_cpu_core_equivalent": 0.9965704412012978,
+        "process_cpu_s": 0.0002234600000000017,
+        "result_digest": "afcad790104af3adec3ff229dc2ded2d74453847ec1a1e43fcf034513c5daff6",
+        "throughput_packets_s": 214066.86287327454,
+        "throughput_payload_bytes_s": 876817870.3289325
+      }
+    }
+  },
+  "schema": "ssre_npa_v1_bounded_benchmark_v1",
+  "seed": 42
+}

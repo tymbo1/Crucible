@@ -1,0 +1,24 @@
+{
+  "context_length": 512,
+  "cross_split_exact_duplicates": 0,
+  "max_source_utf8_bytes": 511,
+  "status": "verified",
+  "train": {
+    "count": 26624,
+    "jsonl_sha256": "10a3747be37ae07b9f3d15e4c9844345c7d4eef925bf0875bdb02f9c776018b8",
+    "provenance_sha256": "35b5b09c2c5687076d7b4e423bb856b36152069e5217b424da773539f39dd202",
+    "source_offset_records_verified": 26624,
+    "text_sha256": "2e2375c3ed715606b62c71f31fc080abb4ec14eb9e721c59baa9eef0b3d35cad",
+    "total_nonpad_target_tokens": 9957553,
+    "total_valid_utf8_bytes": 9930929
+  },
+  "validation": {
+    "count": 1333,
+    "jsonl_sha256": "84551f5e7a28bf9006ad5a5c3d6a88fbe0053d4509a5072663def9dc90528c8e",
+    "provenance_sha256": "83b26eaf52de1053320160ad4a06e027645c3b2324e8042ff8659e6cd3f9ea20",
+    "source_offset_records_verified": 1333,
+    "text_sha256": "d547997da0ab0e96cd82e3984c3373ed01446456516f71b16c9f17f65df1b5dc",
+    "total_nonpad_target_tokens": 498604,
+    "total_valid_utf8_bytes": 497271
+  }
+}

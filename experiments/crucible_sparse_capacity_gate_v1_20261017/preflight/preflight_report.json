@@ -1,0 +1,37 @@
+{
+  "finished_utc": "2026-10-17T06:20:20.334841+00:00",
+  "full_training_started": false,
+  "package_plan_sha256": "61ba709fa82a3165e3df5a16c52e79db94cae5a03f6cbd74a0062c869a0444f6",
+  "protocol": "crucible_sparse_capacity_preflight_v1",
+  "runner_sha256": "45d10df931127877ce11d117f0c71ae3f9de565b4ade9b6305a586d568f2911c",
+  "started_utc": "2026-10-17T06:07:56.654469+00:00",
+  "variants": [
+    {
+      "full_training_started": false,
+      "id": "reference_e4",
+      "log_sha256": "f554dc69903422cf385d682d9b1bf14e8842e58b3a1e949f63c9dc48cdf5741a",
+      "metrics_sha256": "5537585ca4490857a94dc371c5624cc8964eb6af9f3db06debc5184091a87e3a",
+      "parameter_count": 43151104,
+      "preflight_steps": 100,
+      "rows": 2
+    },
+    {
+      "full_training_started": false,
+      "id": "matched_active_e8",
+      "log_sha256": "ba68f5f3fdb91ef9d258d9e4397fcf82bb8f51d3ca8edbca5d3776bcbb6dfe73",
+      "metrics_sha256": "845ddb03f15b39e9c7d08f3a0e5e764dde8d38b0793c6565cbf6bfb7a807e1af",
+      "parameter_count": 85511936,
+      "preflight_steps": 100,
+      "rows": 2
+    },
+    {
+      "full_training_started": false,
+      "id": "matched_active_e16",
+      "log_sha256": "cd6afd9a01aafc32803f64dc871bc44bf2c300603a5e1b3141de8bb70bc10bf8",
+      "metrics_sha256": "89404b3b4808aeb31e8eb0629bb09df7d55a3610c1fc434d55cbdb659b46e8af",
+      "parameter_count": 170233600,
+      "preflight_steps": 100,
+      "rows": 2
+    }
+  ]
+}

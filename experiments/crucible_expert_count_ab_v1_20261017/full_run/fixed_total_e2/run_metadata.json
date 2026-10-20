@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/timbushnell/crucible_expert_count_ab_v1_20261017/crucible_runner.py",
+    "--config-path",
+    "/home/timbushnell/crucible_expert_count_ab_v1_20261017/fixed_total_e2/crucible_manifest/experiment_config.json",
+    "--config-sha256",
+    "e5428b2d124a3627f27af9918ce31afb2cca2dfee360fdd166f22d68713ceb4c",
+    "--output-path",
+    "/home/timbushnell/crucible_expert_count_ab_v1_20261017/full_run/fixed_total_e2/metrics.jsonl.attempt"
+  ],
+  "elapsed_seconds": 2070.221335522001,
+  "finished_utc": "2026-10-17T02:21:54.311806+00:00",
+  "manifest_sha256": "e5428b2d124a3627f27af9918ce31afb2cca2dfee360fdd166f22d68713ceb4c",
+  "metrics_sha256": "f75a91ddef802036072905a3b15ae42c381c17f03ffa6d511625b80f8a0a0d32",
+  "regime": "fixed_total_parameters",
+  "returncode": 0,
+  "rows": 18,
+  "runner_sha256": "359febc034e9cfb5881b7f5d311886b7f6adf8e8a7f8c3dc6ace61ee22cc3046",
+  "started_utc": "2026-10-17T01:47:24.090027+00:00",
+  "variant_id": "fixed_total_e2"
+}

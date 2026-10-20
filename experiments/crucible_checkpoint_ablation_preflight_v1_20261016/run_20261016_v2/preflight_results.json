@@ -1,0 +1,1640 @@
+{
+  "ablation": {
+    "categories": [
+      "whitespace",
+      "lowercase",
+      "uppercase",
+      "digit",
+      "punctuation",
+      "other"
+    ],
+    "conditions": [
+      {
+        "delta_nll_by_category": {
+          "all": 0.0,
+          "digit": 0.0,
+          "lowercase": 0.0,
+          "other": 0.0,
+          "punctuation": 0.0,
+          "uppercase": 0.0,
+          "whitespace": 0.0
+        },
+        "donor": null,
+        "expert": null,
+        "layer": null,
+        "mode": "intact",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.667922496795654,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.8929243087768555,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.499297142028809,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.930816173553467,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.648925304412842,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.636421203613281,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.399148941040039,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0018277168273925781,
+          "digit": -0.011521339416503906,
+          "lowercase": -0.0032796859741210938,
+          "other": -0.0046138763427734375,
+          "punctuation": -0.0036001205444335938,
+          "uppercase": 0.003795146942138672,
+          "whitespace": 0.008250236511230469
+        },
+        "donor": null,
+        "expert": 0,
+        "layer": 0,
+        "mode": "zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.666094779968262,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.881402969360352,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.4960174560546875,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.926202297210693,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.645325183868408,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.64021635055542,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.4073991775512695,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.004419803619384766,
+          "digit": 0.006543159484863281,
+          "lowercase": -0.0115814208984375,
+          "other": 0.013761043548583984,
+          "punctuation": 0.015915393829345703,
+          "uppercase": -0.00766754150390625,
+          "whitespace": 0.009550094604492188
+        },
+        "donor": null,
+        "expert": 3,
+        "layer": 0,
+        "mode": "random_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.672342300415039,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.899467468261719,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.487715721130371,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.944577217102051,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.6648406982421875,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.628753662109375,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.408699035644531,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0007672309875488281,
+          "digit": -0.008749961853027344,
+          "lowercase": -0.0070781707763671875,
+          "other": 0.008397579193115234,
+          "punctuation": 0.0015096664428710938,
+          "uppercase": 0.0013151168823242188,
+          "whitespace": 0.0
+        },
+        "donor": null,
+        "expert": 2,
+        "layer": 0,
+        "mode": "matched_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.6671552658081055,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.884174346923828,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.492218971252441,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.939213752746582,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.650434970855713,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.6377363204956055,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.399148941040039,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0015149116516113281,
+          "digit": -0.009696006774902344,
+          "lowercase": -0.005156040191650391,
+          "other": 0.004419803619384766,
+          "punctuation": -0.011071205139160156,
+          "uppercase": 0.007257938385009766,
+          "whitespace": 0.005157470703125
+        },
+        "donor": 1,
+        "expert": 0,
+        "layer": 0,
+        "mode": "substitute",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.666407585144043,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.883228302001953,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.494141101837158,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.935235977172852,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.637854099273682,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.643679141998291,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.404306411743164,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.0010905265808105469,
+          "digit": 0.004033565521240234,
+          "lowercase": -0.00023365020751953125,
+          "other": -0.00087738037109375,
+          "punctuation": -0.01204824447631836,
+          "uppercase": -0.011067390441894531,
+          "whitespace": 0.026735305786132812
+        },
+        "donor": null,
+        "expert": 1,
+        "layer": 0,
+        "mode": "zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.669013023376465,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.896957874298096,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.499063491821289,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.929938793182373,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.636877059936523,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.625353813171387,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.425884246826172,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0018277168273925781,
+          "digit": -0.011521339416503906,
+          "lowercase": -0.0032796859741210938,
+          "other": -0.0046138763427734375,
+          "punctuation": -0.0036001205444335938,
+          "uppercase": 0.003795146942138672,
+          "whitespace": 0.008250236511230469
+        },
+        "donor": null,
+        "expert": 0,
+        "layer": 0,
+        "mode": "random_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.666094779968262,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.881402969360352,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.4960174560546875,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.926202297210693,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.645325183868408,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.64021635055542,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.4073991775512695,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0007672309875488281,
+          "digit": -0.008749961853027344,
+          "lowercase": -0.0070781707763671875,
+          "other": 0.008397579193115234,
+          "punctuation": 0.0015096664428710938,
+          "uppercase": 0.0013151168823242188,
+          "whitespace": 0.0
+        },
+        "donor": null,
+        "expert": 2,
+        "layer": 0,
+        "mode": "matched_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.6671552658081055,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.884174346923828,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.492218971252441,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.939213752746582,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.650434970855713,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.6377363204956055,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.399148941040039,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.0016651153564453125,
+          "digit": 0.0030107498168945312,
+          "lowercase": 0.0085296630859375,
+          "other": -0.01155996322631836,
+          "punctuation": -0.0036644935607910156,
+          "uppercase": -0.012204170227050781,
+          "whitespace": 0.02587747573852539
+        },
+        "donor": 0,
+        "expert": 1,
+        "layer": 0,
+        "mode": "substitute",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.6695876121521,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.89593505859375,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.507826805114746,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.919256210327148,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.645260810852051,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.6242170333862305,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.4250264167785645,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0007672309875488281,
+          "digit": -0.008749961853027344,
+          "lowercase": -0.0070781707763671875,
+          "other": 0.008397579193115234,
+          "punctuation": 0.0015096664428710938,
+          "uppercase": 0.0013151168823242188,
+          "whitespace": 0.0
+        },
+        "donor": null,
+        "expert": 2,
+        "layer": 0,
+        "mode": "zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.6671552658081055,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.884174346923828,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.492218971252441,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.939213752746582,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.650434970855713,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.6377363204956055,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.399148941040039,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.0010905265808105469,
+          "digit": 0.004033565521240234,
+          "lowercase": -0.00023365020751953125,
+          "other": -0.00087738037109375,
+          "punctuation": -0.01204824447631836,
+          "uppercase": -0.011067390441894531,
+          "whitespace": 0.026735305786132812
+        },
+        "donor": null,
+        "expert": 1,
+        "layer": 0,
+        "mode": "random_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.669013023376465,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.896957874298096,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.499063491821289,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.929938793182373,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.636877059936523,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.625353813171387,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.425884246826172,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0018277168273925781,
+          "digit": -0.011521339416503906,
+          "lowercase": -0.0032796859741210938,
+          "other": -0.0046138763427734375,
+          "punctuation": -0.0036001205444335938,
+          "uppercase": 0.003795146942138672,
+          "whitespace": 0.008250236511230469
+        },
+        "donor": null,
+        "expert": 0,
+        "layer": 0,
+        "mode": "matched_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.666094779968262,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.881402969360352,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.4960174560546875,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.926202297210693,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.645325183868408,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.64021635055542,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.4073991775512695,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.007089138031005859,
+          "digit": -0.009428977966308594,
+          "lowercase": -0.006522178649902344,
+          "other": -0.02449655532836914,
+          "punctuation": 0.002810955047607422,
+          "uppercase": -0.004899024963378906,
+          "whitespace": 0.0
+        },
+        "donor": 0,
+        "expert": 2,
+        "layer": 0,
+        "mode": "substitute",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.660833358764648,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.883495330810547,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.492774963378906,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.906319618225098,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.651736259460449,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.631522178649902,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.399148941040039,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.004419803619384766,
+          "digit": 0.006543159484863281,
+          "lowercase": -0.0115814208984375,
+          "other": 0.013761043548583984,
+          "punctuation": 0.015915393829345703,
+          "uppercase": -0.00766754150390625,
+          "whitespace": 0.009550094604492188
+        },
+        "donor": null,
+        "expert": 3,
+        "layer": 0,
+        "mode": "zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.672342300415039,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.899467468261719,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.487715721130371,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.944577217102051,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.6648406982421875,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.628753662109375,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.408699035644531,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0007672309875488281,
+          "digit": -0.008749961853027344,
+          "lowercase": -0.0070781707763671875,
+          "other": 0.008397579193115234,
+          "punctuation": 0.0015096664428710938,
+          "uppercase": 0.0013151168823242188,
+          "whitespace": 0.0
+        },
+        "donor": null,
+        "expert": 2,
+        "layer": 0,
+        "mode": "random_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.6671552658081055,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.884174346923828,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.492218971252441,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.939213752746582,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.650434970855713,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.6377363204956055,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.399148941040039,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0018277168273925781,
+          "digit": -0.011521339416503906,
+          "lowercase": -0.0032796859741210938,
+          "other": -0.0046138763427734375,
+          "punctuation": -0.0036001205444335938,
+          "uppercase": 0.003795146942138672,
+          "whitespace": 0.008250236511230469
+        },
+        "donor": null,
+        "expert": 0,
+        "layer": 0,
+        "mode": "matched_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.666094779968262,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.881402969360352,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.4960174560546875,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.926202297210693,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.645325183868408,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.64021635055542,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.4073991775512695,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.002274036407470703,
+          "digit": 0.012843608856201172,
+          "lowercase": -0.000736236572265625,
+          "other": 0.004483699798583984,
+          "punctuation": 0.014209270477294922,
+          "uppercase": -0.009372711181640625,
+          "whitespace": -0.007782936096191406
+        },
+        "donor": 0,
+        "expert": 3,
+        "layer": 0,
+        "mode": "substitute",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.670196533203125,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.905767917633057,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.498560905456543,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.935299873352051,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.663134574890137,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.627048492431641,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.391366004943848,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0016093254089355469,
+          "digit": -0.00351715087890625,
+          "lowercase": -0.0012903213500976562,
+          "other": -0.004265308380126953,
+          "punctuation": 0.012830734252929688,
+          "uppercase": -0.0034041404724121094,
+          "whitespace": -0.010011672973632812
+        },
+        "donor": null,
+        "expert": 0,
+        "layer": 1,
+        "mode": "zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.666313171386719,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.889407157897949,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.498006820678711,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.92655086517334,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.6617560386657715,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.633017063140869,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.389137268066406,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0023097991943359375,
+          "digit": 0.00696563720703125,
+          "lowercase": -0.010331153869628906,
+          "other": -0.0005726814270019531,
+          "punctuation": -0.006762981414794922,
+          "uppercase": -0.00021648406982421875,
+          "whitespace": -0.0029435157775878906
+        },
+        "donor": null,
+        "expert": 3,
+        "layer": 1,
+        "mode": "random_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.665612697601318,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.899889945983887,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.48896598815918,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.930243492126465,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.642162322998047,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.636204719543457,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.396205425262451,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.0017123222351074219,
+          "digit": -0.0001430511474609375,
+          "lowercase": -0.004446506500244141,
+          "other": -0.0016398429870605469,
+          "punctuation": 0.01041269302368164,
+          "uppercase": 0.0048923492431640625,
+          "whitespace": 0.0011982917785644531
+        },
+        "donor": null,
+        "expert": 1,
+        "layer": 1,
+        "mode": "matched_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.669634819030762,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.8927812576293945,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.4948506355285645,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.929176330566406,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.659337997436523,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.641313552856445,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.4003472328186035,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0013561248779296875,
+          "digit": -0.00021982192993164062,
+          "lowercase": 0.005105495452880859,
+          "other": -0.002456188201904297,
+          "punctuation": 0.013190269470214844,
+          "uppercase": -0.00446319580078125,
+          "whitespace": -0.019293785095214844
+        },
+        "donor": 1,
+        "expert": 0,
+        "layer": 1,
+        "mode": "substitute",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.666566371917725,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.892704486846924,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.5044026374816895,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.9283599853515625,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.662115573883057,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.6319580078125,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.379855155944824,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.0017123222351074219,
+          "digit": -0.0001430511474609375,
+          "lowercase": -0.004446506500244141,
+          "other": -0.0016398429870605469,
+          "punctuation": 0.01041269302368164,
+          "uppercase": 0.0048923492431640625,
+          "whitespace": 0.0011982917785644531
+        },
+        "donor": null,
+        "expert": 1,
+        "layer": 1,
+        "mode": "zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.669634819030762,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.8927812576293945,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.4948506355285645,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.929176330566406,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.659337997436523,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.641313552856445,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.4003472328186035,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0020279884338378906,
+          "digit": 0.018959522247314453,
+          "lowercase": -0.0036296844482421875,
+          "other": -0.0036797523498535156,
+          "punctuation": 0.0017428398132324219,
+          "uppercase": -0.01922607421875,
+          "whitespace": -0.006336212158203125
+        },
+        "donor": null,
+        "expert": 2,
+        "layer": 1,
+        "mode": "random_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.665894508361816,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.91188383102417,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.495667457580566,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.927136421203613,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.650668144226074,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.617195129394531,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.392812728881836,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0020279884338378906,
+          "digit": 0.018959522247314453,
+          "lowercase": -0.0036296844482421875,
+          "other": -0.0036797523498535156,
+          "punctuation": 0.0017428398132324219,
+          "uppercase": -0.01922607421875,
+          "whitespace": -0.006336212158203125
+        },
+        "donor": null,
+        "expert": 2,
+        "layer": 1,
+        "mode": "matched_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.665894508361816,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.91188383102417,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.495667457580566,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.927136421203613,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.650668144226074,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.617195129394531,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.392812728881836,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.006263256072998047,
+          "digit": -0.006914615631103516,
+          "lowercase": -0.0006771087646484375,
+          "other": 0.005037784576416016,
+          "punctuation": 0.0061855316162109375,
+          "uppercase": 0.0073375701904296875,
+          "whitespace": 0.02660846710205078
+        },
+        "donor": 0,
+        "expert": 1,
+        "layer": 1,
+        "mode": "substitute",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.674185752868652,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.886009693145752,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.49862003326416,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.935853958129883,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.655110836029053,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.643758773803711,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.42575740814209,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0020279884338378906,
+          "digit": 0.018959522247314453,
+          "lowercase": -0.0036296844482421875,
+          "other": -0.0036797523498535156,
+          "punctuation": 0.0017428398132324219,
+          "uppercase": -0.01922607421875,
+          "whitespace": -0.006336212158203125
+        },
+        "donor": null,
+        "expert": 2,
+        "layer": 1,
+        "mode": "zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.665894508361816,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.91188383102417,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.495667457580566,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.927136421203613,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.650668144226074,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.617195129394531,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.392812728881836,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0016093254089355469,
+          "digit": -0.00351715087890625,
+          "lowercase": -0.0012903213500976562,
+          "other": -0.004265308380126953,
+          "punctuation": 0.012830734252929688,
+          "uppercase": -0.0034041404724121094,
+          "whitespace": -0.010011672973632812
+        },
+        "donor": null,
+        "expert": 0,
+        "layer": 1,
+        "mode": "random_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.666313171386719,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.889407157897949,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.498006820678711,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.92655086517334,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.6617560386657715,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.633017063140869,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.389137268066406,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.0017123222351074219,
+          "digit": -0.0001430511474609375,
+          "lowercase": -0.004446506500244141,
+          "other": -0.0016398429870605469,
+          "punctuation": 0.01041269302368164,
+          "uppercase": 0.0048923492431640625,
+          "whitespace": 0.0011982917785644531
+        },
+        "donor": null,
+        "expert": 1,
+        "layer": 1,
+        "mode": "matched_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.669634819030762,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.8927812576293945,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.4948506355285645,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.929176330566406,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.659337997436523,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.641313552856445,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.4003472328186035,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0011630058288574219,
+          "digit": 0.006762981414794922,
+          "lowercase": -0.005720615386962891,
+          "other": 0.01224660873413086,
+          "punctuation": -0.0012617111206054688,
+          "uppercase": -0.011258125305175781,
+          "whitespace": -0.00774383544921875
+        },
+        "donor": 0,
+        "expert": 2,
+        "layer": 1,
+        "mode": "substitute",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.666759490966797,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.89968729019165,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.493576526641846,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.943062782287598,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.647663593292236,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.6251630783081055,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.39140510559082,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0023097991943359375,
+          "digit": 0.00696563720703125,
+          "lowercase": -0.010331153869628906,
+          "other": -0.0005726814270019531,
+          "punctuation": -0.006762981414794922,
+          "uppercase": -0.00021648406982421875,
+          "whitespace": -0.0029435157775878906
+        },
+        "donor": null,
+        "expert": 3,
+        "layer": 1,
+        "mode": "zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.665612697601318,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.899889945983887,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.48896598815918,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.930243492126465,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.642162322998047,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.636204719543457,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.396205425262451,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.0017123222351074219,
+          "digit": -0.0001430511474609375,
+          "lowercase": -0.004446506500244141,
+          "other": -0.0016398429870605469,
+          "punctuation": 0.01041269302368164,
+          "uppercase": 0.0048923492431640625,
+          "whitespace": 0.0011982917785644531
+        },
+        "donor": null,
+        "expert": 1,
+        "layer": 1,
+        "mode": "random_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.669634819030762,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.8927812576293945,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.4948506355285645,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.929176330566406,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.659337997436523,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.641313552856445,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.4003472328186035,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": -0.0020279884338378906,
+          "digit": 0.018959522247314453,
+          "lowercase": -0.0036296844482421875,
+          "other": -0.0036797523498535156,
+          "punctuation": 0.0017428398132324219,
+          "uppercase": -0.01922607421875,
+          "whitespace": -0.006336212158203125
+        },
+        "donor": null,
+        "expert": 2,
+        "layer": 1,
+        "mode": "matched_zero",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.665894508361816,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.91188383102417,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.495667457580566,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.927136421203613,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.650668144226074,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.617195129394531,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.392812728881836,
+            "token_count": 16
+          }
+        }
+      },
+      {
+        "delta_nll_by_category": {
+          "all": 0.006886959075927734,
+          "digit": -0.0068378448486328125,
+          "lowercase": -0.0025281906127929688,
+          "other": 0.027836322784423828,
+          "punctuation": -0.006251335144042969,
+          "uppercase": 0.005016326904296875,
+          "whitespace": 0.024086952209472656
+        },
+        "donor": 0,
+        "expert": 3,
+        "layer": 1,
+        "mode": "substitute",
+        "nll_by_category": {
+          "all": {
+            "nll": 5.674809455871582,
+            "token_count": 96
+          },
+          "digit": {
+            "nll": 5.886086463928223,
+            "token_count": 16
+          },
+          "lowercase": {
+            "nll": 5.496768951416016,
+            "token_count": 16
+          },
+          "other": {
+            "nll": 5.958652496337891,
+            "token_count": 16
+          },
+          "punctuation": {
+            "nll": 5.642673969268799,
+            "token_count": 16
+          },
+          "uppercase": {
+            "nll": 5.641437530517578,
+            "token_count": 16
+          },
+          "whitespace": {
+            "nll": 5.423235893249512,
+            "token_count": 16
+          }
+        }
+      }
+    ],
+    "routing_top2_counts": {
+      "layer_0_moe": [
+        46,
+        54,
+        47,
+        45
+      ],
+      "layer_1_moe": [
+        37,
+        49,
+        51,
+        55
+      ]
+    },
+    "status": "PASS"
+  },
+  "checkpoint_budget": {
+    "adam_moment_bytes_estimate": 345208832,
+    "assumed_parameter_dtype": "float32",
+    "full_model_optimizer_checkpoint_bytes_estimate": 517813248,
+    "full_model_parameters": 43151104,
+    "model_only_nine_checkpoints_four_cells_gib_estimate": 5.787014007568359,
+    "model_state_bytes_estimate": 172604416,
+    "nine_checkpoints_four_cells_bytes_estimate": 18641276928,
+    "nine_checkpoints_four_cells_gib_estimate": 17.361042022705078
+  },
+  "checkpoint_resume": {
+    "baseline_losses": [
+      5.789275169372559,
+      5.810762405395508,
+      5.7164082527160645,
+      5.665655136108398,
+      5.705297946929932,
+      5.568882942199707
+    ],
+    "checkpoint_fields": [
+      "format",
+      "model_config",
+      "model_state_dict",
+      "optimizer_state_dict",
+      "rng_state",
+      "scheduler_state_dict",
+      "step"
+    ],
+    "checkpoint_path": "/home/timbushnell/crucible_checkpoint_ablation_preflight_v1_20261016/run_20261016_v2/mini_resume_checkpoint.pt",
+    "checkpoint_sha256": "781c077ac9ee4bde964de21e902fb6bb8dea02fcd9032528e620dad085875072",
+    "checkpoint_step": 3,
+    "declared_resume_tolerance": 2e-05,
+    "max_loss_abs_delta": 0.0,
+    "max_model_state_abs_delta": 0.0,
+    "max_optimizer_state_abs_delta": 0.0,
+    "max_scheduler_state_abs_delta": 0.0,
+    "resumed_losses": [
+      5.789275169372559,
+      5.810762405395508,
+      5.7164082527160645,
+      5.665655136108398,
+      5.705297946929932,
+      5.568882942199707
+    ],
+    "status": "PASS"
+  },
+  "device": "cuda",
+  "float64_telemetry": {
+    "layers": {
+      "layer_0_moe": [
+        {
+          "affinity_mass": 94.99999956414104,
+          "finite": true,
+          "nonnegative": true,
+          "relative_error": 4.5879891044215154e-09,
+          "shape": [
+            4,
+            259
+          ],
+          "top1_count": 95.0
+        },
+        {
+          "affinity_mass": 94.99999964982271,
+          "finite": true,
+          "nonnegative": true,
+          "relative_error": 3.686076716372841e-09,
+          "shape": [
+            4,
+            259
+          ],
+          "top1_count": 95.0
+        }
+      ],
+      "layer_1_moe": [
+        {
+          "affinity_mass": 95.00000011175871,
+          "finite": true,
+          "nonnegative": true,
+          "relative_error": 1.1764074626721833e-09,
+          "shape": [
+            4,
+            259
+          ],
+          "top1_count": 95.0
+        },
+        {
+          "affinity_mass": 94.9999990388751,
+          "finite": true,
+          "nonnegative": true,
+          "relative_error": 1.0117104178980777e-08,
+          "shape": [
+            4,
+            259
+          ],
+          "top1_count": 95.0
+        }
+      ]
+    },
+    "max_relative_error": 1.0117104178980777e-08,
+    "status": "PASS"
+  },
+  "model_config": {
+    "d_ff": 64,
+    "d_model": 32,
+    "latent_dim_kv": 16,
+    "latent_dim_q": 16,
+    "n_heads": 4,
+    "n_layers": 2,
+    "num_experts": 4,
+    "pe_dim": 4,
+    "vocab_size": 259
+  },
+  "protocol": "crucible.checkpoint_ablation_preflight.v1",
+  "source_hashes": {
+    "float64_model_core_sha256": "d5a42f6daa595f1e9e4a53ac2771bae5db5c19820604972592d9659fc1c05b93",
+    "preflight_script_sha256": "efd0756b5263b12d8c2b46960030700ab19a4c70184d959cd5313796ba07a1c5"
+  },
+  "status": "PASS",
+  "torch_version": "2.12.0+cu130",
+  "training": {
+    "batch_size": 6,
+    "branch": "B",
+    "checkpoint_split_step": 3,
+    "sequence_length": 16,
+    "total_steps": 6
+  }
+}

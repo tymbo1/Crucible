@@ -1,0 +1,270 @@
+{
+  "accepted": false,
+  "candidate_variant": "grouped_rank_preserving",
+  "config_path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/experiment_config.json",
+  "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+  "max_steps": 100,
+  "metric_report": {
+    "accepted": false,
+    "same_seeds": true,
+    "seeds": {
+      "1337": {
+        "accepted": false,
+        "exact_field_mismatches": {},
+        "numeric_deltas": {
+          "byte_perplexity": 0.012214096963365506,
+          "grad_norm_max": 5.078315734863281e-05,
+          "grad_norm_mean": 0.0006153583526611328,
+          "grad_norm_p95": 5.888938903808594e-05,
+          "interval_branch_b_aux_loss": 0.00026111684631446863,
+          "interval_clipped_fraction": 0.0,
+          "interval_train_ce": 0.000260547671755873,
+          "interval_train_raw_byte_nll": 0.0002883220713068013,
+          "router_interval_cv": 0.0011163949966430664,
+          "router_interval_entropy": 2.829479565424897e-06,
+          "router_interval_load_ratio": 0.09983682632446289,
+          "validation_bits_per_raw_byte": 0.0011236743522533565,
+          "validation_nll": 0.0009787843242015093,
+          "validation_raw_byte_nll": 0.0007788717091319342,
+          "validation_raw_byte_perplexity": 0.009865881227181461
+        },
+        "numeric_fields_within_tolerance": false,
+        "numeric_tolerance": 1e-05,
+        "telemetry": {
+          "accepted": false,
+          "layers": {
+            "layer_0_moe": {
+              "accepted": false,
+              "count_fields_equal": false,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 3.2082200050354004e-05,
+                "global_hard_cv": 0.0011163949966430664,
+                "max_min_hard_ratio": 0.09983682632446289,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 2.829479565424897e-06,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 25.92519610375166
+            },
+            "layer_1_moe": {
+              "accepted": false,
+              "count_fields_equal": false,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 1.246575266122818e-06,
+                "global_hard_cv": 0.006314694881439209,
+                "max_min_hard_ratio": 0.14740276336669922,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 4.039082079698719e-05,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 71.21580901741982
+            },
+            "layer_2_moe": {
+              "accepted": false,
+              "count_fields_equal": false,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 0.0001019742339849472,
+                "global_hard_cv": 0.0008713304996490479,
+                "max_min_hard_ratio": 0.3422675132751465,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 5.6377380341809946e-05,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 67.90339922904968
+            },
+            "layer_3_moe": {
+              "accepted": false,
+              "count_fields_equal": false,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 2.4599023163318634e-05,
+                "global_hard_cv": 0.0004207491874694824,
+                "max_min_hard_ratio": 0.09519696235656738,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 7.781068805945424e-07,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 43.46298263221979
+            }
+          },
+          "max_affinity_abs_delta": 71.21580901741982,
+          "same_layers": true,
+          "tolerance": 1e-05
+        }
+      },
+      "42": {
+        "accepted": false,
+        "exact_field_mismatches": {},
+        "numeric_deltas": {
+          "byte_perplexity": 0.009853304471500124,
+          "grad_norm_max": 0.00016927719116210938,
+          "grad_norm_mean": 0.0011440515518188477,
+          "grad_norm_p95": 6.890296936035156e-05,
+          "interval_branch_b_aux_loss": 0.000210724452097244,
+          "interval_clipped_fraction": 0.0,
+          "interval_train_ce": 0.00016751447460139346,
+          "interval_train_raw_byte_nll": 0.0001513010857974173,
+          "router_interval_cv": 0.001856386661529541,
+          "router_interval_entropy": 2.5461640759116833e-06,
+          "router_interval_load_ratio": 0.02957916259765625,
+          "validation_bits_per_raw_byte": 0.0009286973687836486,
+          "validation_nll": 0.0007733138222070224,
+          "validation_raw_byte_nll": 0.0006437239627659075,
+          "validation_raw_byte_perplexity": 0.00833465062560812
+        },
+        "numeric_fields_within_tolerance": false,
+        "numeric_tolerance": 1e-05,
+        "telemetry": {
+          "accepted": false,
+          "layers": {
+            "layer_0_moe": {
+              "accepted": false,
+              "count_fields_equal": false,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 4.2026862502098083e-05,
+                "global_hard_cv": 0.001856386661529541,
+                "max_min_hard_ratio": 0.02957916259765625,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 2.5461640759116833e-06,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 12.159818083047867
+            },
+            "layer_1_moe": {
+              "accepted": false,
+              "count_fields_equal": false,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 4.191882908344269e-06,
+                "global_hard_cv": 0.0018000006675720215,
+                "max_min_hard_ratio": 0.0007381439208984375,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 1.3579541738750756e-05,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 113.6933035068214
+            },
+            "layer_2_moe": {
+              "accepted": false,
+              "count_fields_equal": false,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 7.718801498413086e-06,
+                "global_hard_cv": 0.0037288665771484375,
+                "max_min_hard_ratio": 0.21231555938720703,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 9.13789996169756e-05,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 29.29434774070978
+            },
+            "layer_3_moe": {
+              "accepted": false,
+              "count_fields_equal": false,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 9.438954293727875e-06,
+                "global_hard_cv": 0.0005701780319213867,
+                "max_min_hard_ratio": 0.2235560417175293,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 4.05971716564979e-05,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 48.24375533312559
+            }
+          },
+          "max_affinity_abs_delta": 113.6933035068214,
+          "same_layers": true,
+          "tolerance": 1e-05
+        }
+      }
+    }
+  },
+  "notes": [
+    "Both variants used the frozen context runner and the same local CUDA device.",
+    "Timing fields are intentionally excluded from equivalence checks.",
+    "The grouped patch was installed only in memory; frozen source and artifacts were not modified."
+  ],
+  "reference_variant": "original",
+  "runtime_equivalence_report": {
+    "accepted": false,
+    "same_seeds": true,
+    "seeds": {
+      "1337": {
+        "accepted": false,
+        "comparison_contract": "exact SHA-256 equality for terminal model, gradient and optimizer state",
+        "gradient_sha256": {
+          "candidate": "9934b79f8cceb20ee7bbc57bb1b5d5fc0003e5b1ce238bdfa5b6d243bccff96b",
+          "equal": false,
+          "reference": "3017c144d8c357fc927a2940dc963391ba62cbeea09102f76ff69eedfea15682"
+        },
+        "model_state_sha256": {
+          "candidate": "900b0b5669290b5826a85a4101e5bafb385be6343b4100081efd77f506f50462",
+          "equal": false,
+          "reference": "04b865cdc8e8c34547c573e578c11582f402687a34fe1c1c6fbd298326e4cbc2"
+        },
+        "optimizer_state_sha256": {
+          "candidate": "79f8ffff0b1b468be5cad01098aa56a52fd578b94d7f6fe7f82e25dc0fa120ed",
+          "equal": false,
+          "reference": "7375c9bf6a5ec5172b88b13b42b2b8b305908508e78639ef6c05d6c6317b00fd"
+        }
+      },
+      "42": {
+        "accepted": false,
+        "comparison_contract": "exact SHA-256 equality for terminal model, gradient and optimizer state",
+        "gradient_sha256": {
+          "candidate": "36975c53bf17b8548a483e41c6439bea08fe4327ff41a74c4118247af98e6e52",
+          "equal": false,
+          "reference": "ee297cc5b0b201006ad130b8fa3b0dbafd3f28b414583fbd59f8efc77e27e088"
+        },
+        "model_state_sha256": {
+          "candidate": "737b431765fc2c0c9dd994aa15892f22f60bfc573806d5a86f2eca578e8a07ed",
+          "equal": false,
+          "reference": "8e255e1794747617b2157b07b8f51f73dce1d27526047d4554b3217dbcae2888"
+        },
+        "optimizer_state_sha256": {
+          "candidate": "bf0c0e28ced4320d5327620f390d72ce3e1d59130501b446d1cbced008538bc5",
+          "equal": false,
+          "reference": "edf1caeacb139c6a24829f54adf42357925e1337bf4cf8d79724608d8fa9597a"
+        }
+      }
+    }
+  },
+  "schema_version": "crucible-v2-same-device-equivalence-gate-20261018"
+}

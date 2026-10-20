@@ -1,0 +1,270 @@
+{
+  "accepted": false,
+  "candidate_variant": "grouped_rank_preserving",
+  "config_path": "/home/timbushnell/crucible_v2_production_telemetry_v1_20261019/context_128/crucible_manifest/experiment_config.json",
+  "config_sha256": "3d7b4e4e3ce976004df88e78b8588456c974b40a38e57f8cba79583f1f3695d0",
+  "max_steps": 100,
+  "metric_report": {
+    "accepted": false,
+    "same_seeds": true,
+    "seeds": {
+      "1337": {
+        "accepted": false,
+        "exact_field_mismatches": {},
+        "numeric_deltas": {
+          "byte_perplexity": 0.0,
+          "grad_norm_max": 0.0,
+          "grad_norm_mean": 0.0,
+          "grad_norm_p95": 0.0,
+          "interval_branch_b_aux_loss": 0.0,
+          "interval_clipped_fraction": 0.0,
+          "interval_train_ce": 0.0,
+          "interval_train_raw_byte_nll": 0.0,
+          "router_interval_cv": 0.0,
+          "router_interval_entropy": 0.0,
+          "router_interval_load_ratio": 0.0,
+          "validation_bits_per_raw_byte": 0.0,
+          "validation_nll": 0.0,
+          "validation_raw_byte_nll": 0.0,
+          "validation_raw_byte_perplexity": 0.0
+        },
+        "numeric_fields_within_tolerance": true,
+        "numeric_tolerance": 1e-05,
+        "telemetry": {
+          "accepted": false,
+          "layers": {
+            "layer_0_moe": {
+              "accepted": false,
+              "count_fields_equal": true,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 0.0,
+                "global_hard_cv": 0.0,
+                "max_min_hard_ratio": 0.0,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 0.0,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 0.0
+            },
+            "layer_1_moe": {
+              "accepted": false,
+              "count_fields_equal": true,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 0.0,
+                "global_hard_cv": 0.0,
+                "max_min_hard_ratio": 0.0,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 0.0,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 0.0
+            },
+            "layer_2_moe": {
+              "accepted": false,
+              "count_fields_equal": true,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 0.0,
+                "global_hard_cv": 0.0,
+                "max_min_hard_ratio": 0.0,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 0.0,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 0.0
+            },
+            "layer_3_moe": {
+              "accepted": false,
+              "count_fields_equal": true,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 0.0,
+                "global_hard_cv": 0.0,
+                "max_min_hard_ratio": 0.0,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 0.0,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 0.0
+            }
+          },
+          "max_affinity_abs_delta": 0.0,
+          "same_layers": true,
+          "tolerance": 1e-05
+        }
+      },
+      "42": {
+        "accepted": false,
+        "exact_field_mismatches": {},
+        "numeric_deltas": {
+          "byte_perplexity": 0.0,
+          "grad_norm_max": 0.0,
+          "grad_norm_mean": 0.0,
+          "grad_norm_p95": 0.0,
+          "interval_branch_b_aux_loss": 0.0,
+          "interval_clipped_fraction": 0.0,
+          "interval_train_ce": 0.0,
+          "interval_train_raw_byte_nll": 0.0,
+          "router_interval_cv": 0.0,
+          "router_interval_entropy": 0.0,
+          "router_interval_load_ratio": 0.0,
+          "validation_bits_per_raw_byte": 0.0,
+          "validation_nll": 0.0,
+          "validation_raw_byte_nll": 0.0,
+          "validation_raw_byte_perplexity": 0.0
+        },
+        "numeric_fields_within_tolerance": true,
+        "numeric_tolerance": 1e-05,
+        "telemetry": {
+          "accepted": false,
+          "layers": {
+            "layer_0_moe": {
+              "accepted": false,
+              "count_fields_equal": true,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 0.0,
+                "global_hard_cv": 0.0,
+                "max_min_hard_ratio": 0.0,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 0.0,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 0.0
+            },
+            "layer_1_moe": {
+              "accepted": false,
+              "count_fields_equal": true,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 0.0,
+                "global_hard_cv": 0.0,
+                "max_min_hard_ratio": 0.0,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 0.0,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 0.0
+            },
+            "layer_2_moe": {
+              "accepted": false,
+              "count_fields_equal": true,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 0.0,
+                "global_hard_cv": 0.0,
+                "max_min_hard_ratio": 0.0,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 0.0,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 0.0
+            },
+            "layer_3_moe": {
+              "accepted": false,
+              "count_fields_equal": true,
+              "float_deltas": {
+                "activation_norm_count": Infinity,
+                "activation_norm_sum": Infinity,
+                "affinity_mass_total": 0.0,
+                "global_hard_cv": 0.0,
+                "max_min_hard_ratio": 0.0,
+                "mean_expert_output_norm": Infinity,
+                "mean_selected_probability": Infinity,
+                "normalized_entropy": 0.0,
+                "selected_probability_count": Infinity,
+                "selected_probability_sum": Infinity,
+                "selected_token_mass_total": 0.0
+              },
+              "max_affinity_abs_delta": 0.0
+            }
+          },
+          "max_affinity_abs_delta": 0.0,
+          "same_layers": true,
+          "tolerance": 1e-05
+        }
+      }
+    }
+  },
+  "notes": [
+    "Both variants used the frozen context runner and the same local CUDA device.",
+    "Timing fields are intentionally excluded from equivalence checks.",
+    "The grouped patch was installed only in memory; frozen source and artifacts were not modified."
+  ],
+  "reference_variant": "original",
+  "runtime_equivalence_report": {
+    "accepted": true,
+    "same_seeds": true,
+    "seeds": {
+      "1337": {
+        "accepted": true,
+        "comparison_contract": "exact SHA-256 equality for terminal model, gradient and optimizer state",
+        "gradient_sha256": {
+          "candidate": "e73f5d202c3ef83b627ba15661ad004c495fc1b88de52dbaebae523f1ec3d667",
+          "equal": true,
+          "reference": "e73f5d202c3ef83b627ba15661ad004c495fc1b88de52dbaebae523f1ec3d667"
+        },
+        "model_state_sha256": {
+          "candidate": "6656740544df3b13dff4fbc39969bbad805d4c8a86043b09ffadcb868973a20a",
+          "equal": true,
+          "reference": "6656740544df3b13dff4fbc39969bbad805d4c8a86043b09ffadcb868973a20a"
+        },
+        "optimizer_state_sha256": {
+          "candidate": "a267638217159bf199b431a6b11a42098b0b00019865b06ca844500339631388",
+          "equal": true,
+          "reference": "a267638217159bf199b431a6b11a42098b0b00019865b06ca844500339631388"
+        }
+      },
+      "42": {
+        "accepted": true,
+        "comparison_contract": "exact SHA-256 equality for terminal model, gradient and optimizer state",
+        "gradient_sha256": {
+          "candidate": "23b366639166abbf25936a7d05d62df3091207b57bdc1bc2086aec110bd6d332",
+          "equal": true,
+          "reference": "23b366639166abbf25936a7d05d62df3091207b57bdc1bc2086aec110bd6d332"
+        },
+        "model_state_sha256": {
+          "candidate": "48c492350ee3175836b1384c6cef36255e1de8fe95638017baa8c5d41eb4a116",
+          "equal": true,
+          "reference": "48c492350ee3175836b1384c6cef36255e1de8fe95638017baa8c5d41eb4a116"
+        },
+        "optimizer_state_sha256": {
+          "candidate": "be3c3c5e497359ef59fed30b9158b97aae48655f8ff45d093a95f551220dc5a4",
+          "equal": true,
+          "reference": "be3c3c5e497359ef59fed30b9158b97aae48655f8ff45d093a95f551220dc5a4"
+        }
+      }
+    }
+  },
+  "schema_version": "crucible-v2-production-telemetry-equivalence-gate-20261019"
+}

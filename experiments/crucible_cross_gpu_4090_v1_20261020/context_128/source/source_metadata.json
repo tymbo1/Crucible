@@ -1,0 +1,35 @@
+{
+  "dataset_name": "TinyStoriesV2-GPT4 packed byte-127 corpus",
+  "language": "English",
+  "license": "cdla-sharing-1.0",
+  "packing": {
+    "cross_split_exact_duplicates": 0,
+    "deduplicate_after_packing": true,
+    "final_tail_merge": "merge backward when result remains <=127 bytes",
+    "max_utf8_bytes": 127,
+    "official_split_preserved": true,
+    "preferred_floor_bytes": 96,
+    "strategy": "greedy consecutive sentence/phrase units within story"
+  },
+  "source_files": [
+    {
+      "bytes": 2227753162,
+      "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-train.txt",
+      "selected_packed_examples": 100000,
+      "sha256": "6418d412de72888f52b5142c761ac21a582f7d1166f0bfbdb5f03ccfdec90443",
+      "split": "train",
+      "url": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/main/TinyStoriesV2-GPT4-train.txt?download=true"
+    },
+    {
+      "bytes": 22502601,
+      "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-valid.txt",
+      "selected_packed_examples": 5000,
+      "sha256": "6874bae9a4c1a4e7edcf0e53b86c17817e9cf881fc75ff2368da457b80c0585d",
+      "split": "validation",
+      "url": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/main/TinyStoriesV2-GPT4-valid.txt?download=true"
+    }
+  ],
+  "source_root": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source",
+  "upstream_repository": "roneneldan/TinyStories",
+  "upstream_revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64"
+}

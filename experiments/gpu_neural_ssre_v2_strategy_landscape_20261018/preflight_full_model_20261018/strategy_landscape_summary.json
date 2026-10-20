@@ -1,0 +1,552 @@
+{
+  "cells": [
+    {
+      "anchor_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+      "binary_report": {
+        "bytes": 204800000,
+        "load_ns": 264778049,
+        "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/stories_train.bin",
+        "samples": 100000,
+        "sha256": "c8d6056d01f91ad391dba99a1b04d48e2b300829c5e6801d910249043bbebf88"
+      },
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "context": "context_128",
+      "equivalence": {
+        "grouped_rank_largest_first": {
+          "accepted": true,
+          "forward": {
+            "max_logits_abs": 0.0,
+            "tolerance": 0.005,
+            "within_tolerance": true
+          },
+          "gradients": {
+            "max_abs": 0.0,
+            "same_keys": true,
+            "tolerance": 0.0005,
+            "within_tolerance": true,
+            "worst_tensor": null
+          },
+          "loss": {
+            "max_abs": 0.0,
+            "tolerance": 1e-05,
+            "within_tolerance": true
+          },
+          "model_state_sha256": {
+            "candidate": "e7a29d277130dfb603133e8faf41f404c9c431b06a6482b6e62b982877d3d729",
+            "equal": true,
+            "reference": "e7a29d277130dfb603133e8faf41f404c9c431b06a6482b6e62b982877d3d729"
+          },
+          "optimizer_state_sha256": {
+            "candidate": "ac90443214b3c5851283c5754ac033ce50402f473a6f9afb3052d1cb828b1a24",
+            "equal": true,
+            "reference": "ac90443214b3c5851283c5754ac033ce50402f473a6f9afb3052d1cb828b1a24"
+          },
+          "post_optimizer_parameters": {
+            "max_abs": 0.0,
+            "same_keys": true,
+            "tolerance": 0.0005,
+            "within_tolerance": true,
+            "worst_tensor": null
+          },
+          "variant": "grouped_rank_largest_first"
+        },
+        "grouped_rank_major": {
+          "accepted": true,
+          "forward": {
+            "max_logits_abs": 0.0,
+            "tolerance": 0.005,
+            "within_tolerance": true
+          },
+          "gradients": {
+            "max_abs": 0.0,
+            "same_keys": true,
+            "tolerance": 0.0005,
+            "within_tolerance": true,
+            "worst_tensor": null
+          },
+          "loss": {
+            "max_abs": 0.0,
+            "tolerance": 1e-05,
+            "within_tolerance": true
+          },
+          "model_state_sha256": {
+            "candidate": "e7a29d277130dfb603133e8faf41f404c9c431b06a6482b6e62b982877d3d729",
+            "equal": true,
+            "reference": "e7a29d277130dfb603133e8faf41f404c9c431b06a6482b6e62b982877d3d729"
+          },
+          "optimizer_state_sha256": {
+            "candidate": "ac90443214b3c5851283c5754ac033ce50402f473a6f9afb3052d1cb828b1a24",
+            "equal": true,
+            "reference": "ac90443214b3c5851283c5754ac033ce50402f473a6f9afb3052d1cb828b1a24"
+          },
+          "post_optimizer_parameters": {
+            "max_abs": 0.0,
+            "same_keys": true,
+            "tolerance": 0.0005,
+            "within_tolerance": true,
+            "worst_tensor": null
+          },
+          "variant": "grouped_rank_major"
+        },
+        "grouped_rank_preserving": {
+          "accepted": true,
+          "forward": {
+            "max_logits_abs": 0.0,
+            "tolerance": 0.005,
+            "within_tolerance": true
+          },
+          "gradients": {
+            "max_abs": 0.0,
+            "same_keys": true,
+            "tolerance": 0.0005,
+            "within_tolerance": true,
+            "worst_tensor": null
+          },
+          "loss": {
+            "max_abs": 0.0,
+            "tolerance": 1e-05,
+            "within_tolerance": true
+          },
+          "model_state_sha256": {
+            "candidate": "e7a29d277130dfb603133e8faf41f404c9c431b06a6482b6e62b982877d3d729",
+            "equal": true,
+            "reference": "e7a29d277130dfb603133e8faf41f404c9c431b06a6482b6e62b982877d3d729"
+          },
+          "optimizer_state_sha256": {
+            "candidate": "ac90443214b3c5851283c5754ac033ce50402f473a6f9afb3052d1cb828b1a24",
+            "equal": true,
+            "reference": "ac90443214b3c5851283c5754ac033ce50402f473a6f9afb3052d1cb828b1a24"
+          },
+          "post_optimizer_parameters": {
+            "max_abs": 0.0,
+            "same_keys": true,
+            "tolerance": 0.0005,
+            "within_tolerance": true,
+            "worst_tensor": null
+          },
+          "variant": "grouped_rank_preserving"
+        }
+      },
+      "input_report": {
+        "candidate_plan_sha256": "3d0a37b289cb6450078c1da2108ab550bcfe711e58db8c1b2fbfdc0bb19f119a",
+        "exact_equivalence": true,
+        "prefix_batches": 25,
+        "reference_plan_sha256": "3d0a37b289cb6450078c1da2108ab550bcfe711e58db8c1b2fbfdc0bb19f119a"
+      },
+      "integrity": {
+        "all_runs_finite": true,
+        "input_prefix_exact": true,
+        "strict_equivalence_probes_pass": true,
+        "strict_final_state_comparisons_pass": true
+      },
+      "parameters": {
+        "context": 128,
+        "equivalence_tolerances": {
+          "forward_abs": 0.005,
+          "gradient_abs": 0.0005,
+          "loss_abs": 1e-05,
+          "parameter_abs": 0.0005
+        },
+        "model_parameter_count": 170233600,
+        "num_experts": 16,
+        "repetitions": 1,
+        "timed_steps": 2,
+        "top_k": 2,
+        "warmup_steps": 1
+      },
+      "runs": [
+        {
+          "all_finite_losses": true,
+          "context": "context_128",
+          "final_model_state_sha256": "c72c6c29a4c0a883590e420e278d25a43b004002886cf1576ae4c05c57efb7cd",
+          "final_optimizer_state_sha256": "009004e9c9dfdbaf9835ddd486c7c39a3ab3a45f30648373780de9e92a3b20f6",
+          "initial_model_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+          "initial_optimizer_state_sha256": "3458f248d0bd6a694bf9fa55bbe04d79823ad115335821e11e1f705db07fd0e9",
+          "peak_cuda_allocated_bytes": 3421542912,
+          "peak_cuda_reserved_bytes": 4263510016,
+          "phase_sums": {
+            "backward_cuda_event_ns": 1842418701,
+            "backward_host_ns": 1842735198,
+            "cpu_batch_prepare_ns": 2074684,
+            "forward_cuda_event_ns": 1183850836,
+            "forward_host_ns": 1184235323,
+            "h2d_ns": 1181420,
+            "optimizer_ns": 64059214,
+            "wall_ns": 3096306604
+          },
+          "repetition": 1,
+          "seed": 42,
+          "timed_records": [
+            {
+              "backward_cuda_event_ns": 978016567,
+              "backward_host_ns": 978184095,
+              "cpu_batch_prepare_ns": 1022148,
+              "forward_cuda_event_ns": 627491733,
+              "forward_host_ns": 627695693,
+              "h2d_ns": 630280,
+              "loss_values": [
+                0.6033668518066406,
+                0.5481454730033875,
+                0.5122559666633606,
+                0.5923882722854614,
+                0.6077793836593628,
+                0.4748222827911377,
+                0.551445722579956,
+                0.6177969574928284,
+                0.12028838694095612
+              ],
+              "microbatches": 9,
+              "optimizer_ns": 32121722,
+              "phase": "timed",
+              "raw_targets": 3212,
+              "step": 1,
+              "valid_targets": 3245,
+              "wall_ns": 1640717804
+            },
+            {
+              "backward_cuda_event_ns": 864402134,
+              "backward_host_ns": 864551103,
+              "cpu_batch_prepare_ns": 1052536,
+              "forward_cuda_event_ns": 556359103,
+              "forward_host_ns": 556539630,
+              "h2d_ns": 551140,
+              "loss_values": [
+                0.5365071296691895,
+                0.5642912983894348,
+                0.47253668308258057,
+                0.4738488793373108,
+                0.5538974404335022,
+                0.4498135447502136,
+                0.5998646020889282,
+                0.3491165339946747
+              ],
+              "microbatches": 8,
+              "optimizer_ns": 31937492,
+              "phase": "timed",
+              "raw_targets": 3129,
+              "step": 2,
+              "valid_targets": 3160,
+              "wall_ns": 1455588800
+            }
+          ],
+          "timed_steps": 2,
+          "variant": "original",
+          "warmup_steps": 1
+        },
+        {
+          "all_finite_losses": true,
+          "context": "context_128",
+          "final_model_state_sha256": "c72c6c29a4c0a883590e420e278d25a43b004002886cf1576ae4c05c57efb7cd",
+          "final_optimizer_state_sha256": "009004e9c9dfdbaf9835ddd486c7c39a3ab3a45f30648373780de9e92a3b20f6",
+          "initial_model_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+          "initial_optimizer_state_sha256": "3458f248d0bd6a694bf9fa55bbe04d79823ad115335821e11e1f705db07fd0e9",
+          "peak_cuda_allocated_bytes": 3421542912,
+          "peak_cuda_reserved_bytes": 4263510016,
+          "phase_sums": {
+            "backward_cuda_event_ns": 1067215847,
+            "backward_host_ns": 1067536385,
+            "cpu_batch_prepare_ns": 4932691,
+            "forward_cuda_event_ns": 809796404,
+            "forward_host_ns": 810189969,
+            "h2d_ns": 1177869,
+            "optimizer_ns": 64363044,
+            "wall_ns": 1950249144
+          },
+          "repetition": 1,
+          "seed": 42,
+          "timed_records": [
+            {
+              "backward_cuda_event_ns": 563641891,
+              "backward_host_ns": 563810369,
+              "cpu_batch_prepare_ns": 2588936,
+              "forward_cuda_event_ns": 426641017,
+              "forward_host_ns": 426841695,
+              "h2d_ns": 612900,
+              "loss_values": [
+                0.6033668518066406,
+                0.5481454730033875,
+                0.5122559666633606,
+                0.5923882722854614,
+                0.6077793836593628,
+                0.4748222827911377,
+                0.551445722579956,
+                0.6177969574928284,
+                0.12028838694095612
+              ],
+              "microbatches": 9,
+              "optimizer_ns": 32081572,
+              "phase": "timed",
+              "raw_targets": 3212,
+              "step": 1,
+              "valid_targets": 3245,
+              "wall_ns": 1026996728
+            },
+            {
+              "backward_cuda_event_ns": 503573956,
+              "backward_host_ns": 503726016,
+              "cpu_batch_prepare_ns": 2343755,
+              "forward_cuda_event_ns": 383155387,
+              "forward_host_ns": 383348274,
+              "h2d_ns": 564969,
+              "loss_values": [
+                0.5365071296691895,
+                0.5642912983894348,
+                0.47253668308258057,
+                0.4738488793373108,
+                0.5538974404335022,
+                0.4498135447502136,
+                0.5998646020889282,
+                0.3491165339946747
+              ],
+              "microbatches": 8,
+              "optimizer_ns": 32281472,
+              "phase": "timed",
+              "raw_targets": 3129,
+              "step": 2,
+              "valid_targets": 3160,
+              "wall_ns": 923252416
+            }
+          ],
+          "timed_steps": 2,
+          "variant": "grouped_rank_preserving",
+          "warmup_steps": 1
+        },
+        {
+          "all_finite_losses": true,
+          "context": "context_128",
+          "final_model_state_sha256": "c72c6c29a4c0a883590e420e278d25a43b004002886cf1576ae4c05c57efb7cd",
+          "final_optimizer_state_sha256": "009004e9c9dfdbaf9835ddd486c7c39a3ab3a45f30648373780de9e92a3b20f6",
+          "initial_model_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+          "initial_optimizer_state_sha256": "3458f248d0bd6a694bf9fa55bbe04d79823ad115335821e11e1f705db07fd0e9",
+          "peak_cuda_allocated_bytes": 3421542912,
+          "peak_cuda_reserved_bytes": 4263510016,
+          "phase_sums": {
+            "backward_cuda_event_ns": 1071555129,
+            "backward_host_ns": 1071880457,
+            "cpu_batch_prepare_ns": 5700609,
+            "forward_cuda_event_ns": 812223987,
+            "forward_host_ns": 812650144,
+            "h2d_ns": 1374038,
+            "optimizer_ns": 64843402,
+            "wall_ns": 1958755167
+          },
+          "repetition": 1,
+          "seed": 42,
+          "timed_records": [
+            {
+              "backward_cuda_event_ns": 567631515,
+              "backward_host_ns": 567805251,
+              "cpu_batch_prepare_ns": 3006964,
+              "forward_cuda_event_ns": 429999546,
+              "forward_host_ns": 430226478,
+              "h2d_ns": 724780,
+              "loss_values": [
+                0.6033668518066406,
+                0.5481454730033875,
+                0.5122559666633606,
+                0.5923882722854614,
+                0.6077793836593628,
+                0.4748222827911377,
+                0.551445722579956,
+                0.6177969574928284,
+                0.12028838694095612
+              ],
+              "microbatches": 9,
+              "optimizer_ns": 32574961,
+              "phase": "timed",
+              "raw_targets": 3212,
+              "step": 1,
+              "valid_targets": 3245,
+              "wall_ns": 1035559802
+            },
+            {
+              "backward_cuda_event_ns": 503923614,
+              "backward_host_ns": 504075206,
+              "cpu_batch_prepare_ns": 2693645,
+              "forward_cuda_event_ns": 382224441,
+              "forward_host_ns": 382423666,
+              "h2d_ns": 649258,
+              "loss_values": [
+                0.5365071296691895,
+                0.5642912983894348,
+                0.47253668308258057,
+                0.4738488793373108,
+                0.5538974404335022,
+                0.4498135447502136,
+                0.5998646020889282,
+                0.3491165339946747
+              ],
+              "microbatches": 8,
+              "optimizer_ns": 32268441,
+              "phase": "timed",
+              "raw_targets": 3129,
+              "step": 2,
+              "valid_targets": 3160,
+              "wall_ns": 923195365
+            }
+          ],
+          "timed_steps": 2,
+          "variant": "grouped_rank_largest_first",
+          "warmup_steps": 1
+        },
+        {
+          "all_finite_losses": true,
+          "context": "context_128",
+          "final_model_state_sha256": "c72c6c29a4c0a883590e420e278d25a43b004002886cf1576ae4c05c57efb7cd",
+          "final_optimizer_state_sha256": "009004e9c9dfdbaf9835ddd486c7c39a3ab3a45f30648373780de9e92a3b20f6",
+          "initial_model_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+          "initial_optimizer_state_sha256": "3458f248d0bd6a694bf9fa55bbe04d79823ad115335821e11e1f705db07fd0e9",
+          "peak_cuda_allocated_bytes": 3421542912,
+          "peak_cuda_reserved_bytes": 4263510016,
+          "phase_sums": {
+            "backward_cuda_event_ns": 1077379744,
+            "backward_host_ns": 1077710885,
+            "cpu_batch_prepare_ns": 3635792,
+            "forward_cuda_event_ns": 809655417,
+            "forward_host_ns": 810094219,
+            "h2d_ns": 1774839,
+            "optimizer_ns": 64663393,
+            "wall_ns": 1960193176
+          },
+          "repetition": 1,
+          "seed": 42,
+          "timed_records": [
+            {
+              "backward_cuda_event_ns": 571078617,
+              "backward_host_ns": 571258244,
+              "cpu_batch_prepare_ns": 1640397,
+              "forward_cuda_event_ns": 428439677,
+              "forward_host_ns": 428666332,
+              "h2d_ns": 1074879,
+              "loss_values": [
+                0.6033668518066406,
+                0.5481454730033875,
+                0.5122559666633606,
+                0.5923882722854614,
+                0.6077793836593628,
+                0.4748222827911377,
+                0.551445722579956,
+                0.6177969574928284,
+                0.12028838694095612
+              ],
+              "microbatches": 9,
+              "optimizer_ns": 32461301,
+              "phase": "timed",
+              "raw_targets": 3212,
+              "step": 1,
+              "valid_targets": 3245,
+              "wall_ns": 1036335731
+            },
+            {
+              "backward_cuda_event_ns": 506301127,
+              "backward_host_ns": 506452641,
+              "cpu_batch_prepare_ns": 1995395,
+              "forward_cuda_event_ns": 381215740,
+              "forward_host_ns": 381427887,
+              "h2d_ns": 699960,
+              "loss_values": [
+                0.5365071296691895,
+                0.5642912983894348,
+                0.47253668308258057,
+                0.4738488793373108,
+                0.5538974404335022,
+                0.4498135447502136,
+                0.5998646020889282,
+                0.3491165339946747
+              ],
+              "microbatches": 8,
+              "optimizer_ns": 32202092,
+              "phase": "timed",
+              "raw_targets": 3129,
+              "step": 2,
+              "valid_targets": 3160,
+              "wall_ns": 923857445
+            }
+          ],
+          "timed_steps": 2,
+          "variant": "grouped_rank_major",
+          "warmup_steps": 1
+        }
+      ],
+      "schedule_report": {
+        "batches": 25987,
+        "examples": 100000,
+        "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/schedule_seed_42.json",
+        "permutation_sha256": "835c5ee000222e6a3582ce071559fb465e76b80668f6e4814cada6eb733865b6",
+        "seed": 42,
+        "sha256": "ec449a68230663f06d57589aa744626d596c5efaf1ba43c1b57fc5bb0cb32879",
+        "source_bytes": 9856480,
+        "steps": 3125
+      },
+      "seed": 42,
+      "source_report": {
+        "count": 100000,
+        "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/../source/packed_train.jsonl",
+        "sha256": "dca93acdadec204409f7312b6b5b6ea4897bdd846bbd4eb9a62c71b8dce36cce",
+        "source_bytes": 9856480,
+        "validation_ns": 861975206
+      },
+      "state_comparisons_to_original": {
+        "grouped_rank_largest_first": [
+          {
+            "model_state_equal": true,
+            "optimizer_state_equal": true,
+            "repetition": 1
+          }
+        ],
+        "grouped_rank_major": [
+          {
+            "model_state_equal": true,
+            "optimizer_state_equal": true,
+            "repetition": 1
+          }
+        ],
+        "grouped_rank_preserving": [
+          {
+            "model_state_equal": true,
+            "optimizer_state_equal": true,
+            "repetition": 1
+          }
+        ]
+      }
+    }
+  ],
+  "cuda_runtime": "13.0",
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "integrity": {
+    "all_input_prefixes_exact": true,
+    "all_runs_finite": true,
+    "all_strict_final_state_comparisons_pass": true,
+    "all_strict_probes_pass": true,
+    "cell_count": 1,
+    "scientific_training_run": false
+  },
+  "limitations": [
+    "This is a disposable local execution benchmark, not scientific training.",
+    "The context/seed matrix holds the frozen model geometry at E16; expert-count fragmentation is measured separately in the dispatch fixture.",
+    "Optimizer-state hashes are now included; matching optimizer configuration alone is not treated as state equivalence.",
+    "No neural scheduler was trained or evaluated."
+  ],
+  "matrix": {
+    "contexts": [
+      "context_128"
+    ],
+    "repetitions": 1,
+    "seeds": [
+      42
+    ],
+    "timed_steps": 2,
+    "variants": [
+      "original",
+      "grouped_rank_preserving",
+      "grouped_rank_largest_first",
+      "grouped_rank_major"
+    ],
+    "warmup_steps": 1
+  },
+  "mode": "preflight",
+  "schema_version": "gpu-neural-ssre-v2-strategy-landscape-20261018",
+  "torch_version": "2.12.0+cu130",
+  "v1_source_sha256": "223aa756a36235df02858ea8171a7516c2e9afbceacf4005a9c8b7b138df6b90",
+  "v2_source_sha256": "d81fbb7a990ad9e64d16cb8cbd6e1d68d4cb6de784e92088d5940b0970c32d4f"
+}

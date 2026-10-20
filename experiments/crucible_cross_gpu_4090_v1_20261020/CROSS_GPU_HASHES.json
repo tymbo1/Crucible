@@ -1,0 +1,26 @@
+{
+  "schema": "crucible-cross-gpu-4090-v1-hashes-20261020",
+  "hash_algorithm": "sha256",
+  "hash_scope": "All listed files were hashed after result collection. This index intentionally excludes its own self-hash.",
+  "device": "NVIDIA GeForce RTX 4090",
+  "evaluator_source": {
+    "portable_benchmark.py": "5ca01b8e7e44b168cc56e08ef87a96b037faf44871109526101074f0f1a2431b",
+    "grouped_impl/grouped_expert_benchmark.py": "223aa756a36235df02858ea8171a7516c2e9afbceacf4005a9c8b7b138df6b90",
+    "grouped_impl/gpu_step_benchmark.py": "be72ef9ada367da5b70c82cb51eae8a50c30c73930e13008bcc408e0743b5a50",
+    "shared/model_core.py": "febc61bc38d23b32593c5e1682ea3ef44b272913878d52ad8e4576c732112415"
+  },
+  "frozen_inputs": {
+    "context_128/crucible_manifest/experiment_config.json": "3d7b4e4e3ce976004df88e78b8588456c974b40a38e57f8cba79583f1f3695d0",
+    "context_128/crucible_manifest/manifest_sha256.txt": "c0767e3f9d488768542342323ae047a5a3c8c805cf30778f8dec2b2594f976f0",
+    "context_128/crucible_manifest/initial_seed_anchor_42.pt": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+    "context_128/crucible_manifest/initial_seed_anchor_1337.pt": "f8481e113f6404e1e9ea623f31f7d4405d4cd80ce6977269fe6c8d77377bc42f",
+    "context_128/crucible_manifest/schedule_seed_42.json": "ec449a68230663f06d57589aa744626d596c5efaf1ba43c1b57fc5bb0cb32879",
+    "context_128/crucible_manifest/schedule_seed_1337.json": "41073cb37fb568bb2211b70704bff32d56df314594f2ead2d8f344a3eaab6372"
+  },
+  "generated_results": {
+    "results/preflight3_seed42/gpu_step_benchmark_summary.json": "80e2d0fee345b16ebe392110340e58c1f7fa4eb1017de0912053f083b8d5583f",
+    "results/seed42/gpu_step_benchmark_summary.json": "8ceb1b08c2880784ca5eb99175817d1b7f7984cc3d115aa70e89469086746bea",
+    "results/seed1337/gpu_step_benchmark_summary.json": "3a694961f32fedd6bdd73358b4740e58fbbae0c7f326dee5c646d1bcad041fdf",
+    "CROSS_GPU_RESULTS_SUMMARY.md": "673606df05af6e089bbfa8f3e6a5c65c93f7ae21f49bd5dfe6336c77d60064b1"
+  }
+}

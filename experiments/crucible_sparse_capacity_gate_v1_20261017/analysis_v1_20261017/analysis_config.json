@@ -1,0 +1,32 @@
+{
+  "analyzer_sha256": "b71e0f829e79e05b546c6cc8796d386afa14a839df10d4a5dcea424556da13c2",
+  "branch": "B",
+  "checkpoints": [
+    100,
+    250,
+    500,
+    750,
+    1000,
+    1500,
+    2000,
+    2500,
+    3125
+  ],
+  "descriptive_null": "P0(E,T)=P(E)P(T)",
+  "does_not_claim": [
+    "semantic specialization",
+    "syntactic specialization",
+    "causal expert identity"
+  ],
+  "input_ledger_sha256": "98b9e8cdc765a90e8a5cb80b298a772c4d35ceedae8fa19d1fe3a30dc56b89f0",
+  "input_package_plan_sha256": "61ba709fa82a3165e3df5a16c52e79db94cae5a03f6cbd74a0062c869a0444f6",
+  "learning_rate": 0.0003,
+  "protocol": "crucible_sparse_capacity_gate_postflight_v1",
+  "raw_byte_ids": "3..258; PAD excluded; BOS/EOS reported separately",
+  "scope": "fixed-active-compute E4/E8/E16 final and trajectory audit",
+  "seeds": [
+    42,
+    1337
+  ],
+  "telemetry_schema": "byte_affinity_v1"
+}

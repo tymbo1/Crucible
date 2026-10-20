@@ -1,0 +1,164 @@
+{
+  "budget_basis": "raw_utf8_source_bytes",
+  "context_length": 512,
+  "deduplication": {
+    "final_cross_split_exact_duplicates": 0,
+    "train_exact_duplicates_removed": 41,
+    "validation_cross_split_duplicates_removed": 7,
+    "validation_exact_duplicates_removed": 0
+  },
+  "integrity": {
+    "oversized_chunks": 0,
+    "provenance_records": 27756,
+    "truncation_count": 0,
+    "utf8_decode_failures": 0
+  },
+  "max_source_utf8_bytes": 511,
+  "preferred_floor_bytes": 384,
+  "preprocessor": {
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261017/build/prepare_context_corpus.py",
+    "sha256": "5c457482c376a7e54815ffa97bf2c7ca7bb491208df343a188973b6f96ea79b3",
+    "truncation_count": 0
+  },
+  "source": {
+    "dataset_name": "TinyStoriesV2-GPT4 context-length staging corpus",
+    "language": "English",
+    "license": "cdla-sharing-1.0",
+    "packing": {
+      "context_length": 512,
+      "cross_split_exact_duplicates": 0,
+      "exact_deduplication": "after packing, independently within split",
+      "final_tail_merge": "merge backward when result remains within context byte limit",
+      "max_source_utf8_bytes": 511,
+      "official_split_preserved": true,
+      "preferred_floor_bytes": 384,
+      "strategy": "greedy consecutive sentence/phrase units within story"
+    },
+    "source_files": [
+      {
+        "bytes": 2227753162,
+        "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-train.txt",
+        "sha256": "6418d412de72888f52b5142c761ac21a582f7d1166f0bfbdb5f03ccfdec90443",
+        "split": "train"
+      },
+      {
+        "bytes": 22502601,
+        "local_path": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source/TinyStoriesV2-GPT4-valid.txt",
+        "sha256": "6874bae9a4c1a4e7edcf0e53b86c17817e9cf881fc75ff2368da457b80c0585d",
+        "split": "validation"
+      }
+    ],
+    "source_root": "/home/timbushnell/crucible_large_tinystories_v2_20261015/source",
+    "upstream_repository": "roneneldan/TinyStories",
+    "upstream_revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64"
+  },
+  "splits": {
+    "train": {
+      "distribution": {
+        "below_thresholds": {
+          "112": {
+            "count": 2135,
+            "percentage": 8.077330508474576
+          },
+          "32": {
+            "count": 59,
+            "percentage": 0.22321428571428573
+          },
+          "64": {
+            "count": 673,
+            "percentage": 2.5461561743341403
+          },
+          "96": {
+            "count": 1602,
+            "percentage": 6.0608353510895885
+          }
+        },
+        "count": 26432,
+        "exactly_max_bytes": 320,
+        "max_bytes": 511,
+        "mean_bytes": 373.0037832929782,
+        "median_bytes": 463.0,
+        "min_bytes": 8,
+        "p05_bytes": 86.0,
+        "p25_bytes": 242.0,
+        "p75_bytes": 492.0,
+        "p95_bytes": 508.0,
+        "tiny_standalone_chunks_below_16": 3,
+        "total_nonpad_target_tokens": 9885668,
+        "total_valid_utf8_bytes": 9859236,
+        "unavoidable_final_tails": 10080
+      },
+      "duplicate_against_previous_split_removed": 0,
+      "duplicate_within_split_removed": 41,
+      "jsonl_sha256": "8bc1fdcadb8416b078ee72b61f4c3cf20b8fe618a4ec3711063c1293c68743a4",
+      "long_word_split_components": 0,
+      "packed_candidates_scanned": 26553,
+      "packed_chunks_with_multiple_components": 25226,
+      "packed_chunks_with_tail_merge": 0,
+      "provenance_sha256": "96c4b17d1f3eed4d1947746de8a588a5b3aacd9c23b5297a242c0dfda10162b3",
+      "selected_nonpad_tokens": 9885668,
+      "selected_prefix_candidate_count": 26432,
+      "selected_source_bytes": 9859236,
+      "selected_unique_examples": 26432,
+      "selection_search_margin_source_bytes": 32704,
+      "source_story_bytes_scanned": 9920541,
+      "stories_scanned": 12212,
+      "target_source_bytes": 9856480,
+      "text_sha256": "cc7a356aae86d4fd0eb29ca7ec13d253f20d5a7308d1fb2ff20ef355d13c09af"
+    },
+    "validation": {
+      "distribution": {
+        "below_thresholds": {
+          "112": {
+            "count": 100,
+            "percentage": 7.552870090634441
+          },
+          "32": {
+            "count": 2,
+            "percentage": 0.1510574018126888
+          },
+          "64": {
+            "count": 28,
+            "percentage": 2.1148036253776437
+          },
+          "96": {
+            "count": 71,
+            "percentage": 5.362537764350453
+          }
+        },
+        "count": 1324,
+        "exactly_max_bytes": 19,
+        "max_bytes": 511,
+        "mean_bytes": 372.63746223564954,
+        "median_bytes": 463.0,
+        "min_bytes": 21,
+        "p05_bytes": 93.0,
+        "p25_bytes": 230.0,
+        "p75_bytes": 492.0,
+        "p95_bytes": 507.0,
+        "tiny_standalone_chunks_below_16": 0,
+        "total_nonpad_target_tokens": 494696,
+        "total_valid_utf8_bytes": 493372,
+        "unavoidable_final_tails": 503
+      },
+      "duplicate_against_previous_split_removed": 7,
+      "duplicate_within_split_removed": 0,
+      "jsonl_sha256": "088e2a4ce9ffb1167224841dd3fa711363e5b4832fa23157f97afecdcff1f30d",
+      "long_word_split_components": 0,
+      "packed_candidates_scanned": 1337,
+      "packed_chunks_with_multiple_components": 1279,
+      "packed_chunks_with_tail_merge": 0,
+      "provenance_sha256": "b61397f27bf421a8dcc4e7e3e9491c23c274f2cfaa076875d9c2e0e0f133786f",
+      "selected_nonpad_tokens": 494696,
+      "selected_prefix_candidate_count": 1324,
+      "selected_source_bytes": 493372,
+      "selected_unique_examples": 1324,
+      "selection_search_margin_source_bytes": 2044,
+      "source_story_bytes_scanned": 497514,
+      "stories_scanned": 631,
+      "target_source_bytes": 493539,
+      "text_sha256": "2637661e4b75e39ae86451f9e05b7a7ae04ed59dbec7f6a474fc8a859259114b"
+    }
+  },
+  "status": "staged"
+}

@@ -1,0 +1,355 @@
+{
+  "anchor_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+  "binary_report": {
+    "bytes": 204800000,
+    "load_ns": 264643292,
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/stories_train.bin",
+    "samples": 100000,
+    "sha256": "c8d6056d01f91ad391dba99a1b04d48e2b300829c5e6801d910249043bbebf88"
+  },
+  "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+  "context_root": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128",
+  "cuda_runtime": "13.0",
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "equivalence": {
+    "batched_padded": {
+      "accepted": false,
+      "forward": {
+        "max_logits_abs": 0.18359375,
+        "tolerance": 0.005,
+        "within_tolerance": false
+      },
+      "gradients": {
+        "max_abs": 0.00012936443090438843,
+        "same_keys": true,
+        "tolerance": 0.0005,
+        "within_tolerance": true,
+        "worst_tensor": "lm_head.weight"
+      },
+      "loss": {
+        "max_abs": 0.00012415647506713867,
+        "tolerance": 1e-05,
+        "within_tolerance": false
+      },
+      "post_optimizer_parameters": {
+        "max_abs": 0.000599774532020092,
+        "same_keys": true,
+        "tolerance": 0.0005,
+        "within_tolerance": false,
+        "worst_tensor": "layers.2.moe.experts.10.w3.weight"
+      },
+      "variant": "batched_padded"
+    },
+    "grouped_largest_first": {
+      "accepted": false,
+      "forward": {
+        "max_logits_abs": 0.1875,
+        "tolerance": 0.005,
+        "within_tolerance": false
+      },
+      "gradients": {
+        "max_abs": 0.0001231469213962555,
+        "same_keys": true,
+        "tolerance": 0.0005,
+        "within_tolerance": true,
+        "worst_tensor": "lm_head.weight"
+      },
+      "loss": {
+        "max_abs": 0.00013250112533569336,
+        "tolerance": 1e-05,
+        "within_tolerance": false
+      },
+      "post_optimizer_parameters": {
+        "max_abs": 0.0005993042141199112,
+        "same_keys": true,
+        "tolerance": 0.0005,
+        "within_tolerance": false,
+        "worst_tensor": "layers.3.moe.gate.weight"
+      },
+      "variant": "grouped_largest_first"
+    },
+    "grouped_sorted": {
+      "accepted": false,
+      "forward": {
+        "max_logits_abs": 0.1875,
+        "tolerance": 0.005,
+        "within_tolerance": false
+      },
+      "gradients": {
+        "max_abs": 0.00012312456965446472,
+        "same_keys": true,
+        "tolerance": 0.0005,
+        "within_tolerance": true,
+        "worst_tensor": "lm_head.weight"
+      },
+      "loss": {
+        "max_abs": 0.00013250112533569336,
+        "tolerance": 1e-05,
+        "within_tolerance": false
+      },
+      "post_optimizer_parameters": {
+        "max_abs": 0.0005993042141199112,
+        "same_keys": true,
+        "tolerance": 0.0005,
+        "within_tolerance": false,
+        "worst_tensor": "layers.3.moe.gate.weight"
+      },
+      "variant": "grouped_sorted"
+    }
+  },
+  "input_report": {
+    "candidate_plan_sha256": "6f830f0834589b717e781306599aa173178839269f0f8e858096f8b61b4039f5",
+    "exact_equivalence": true,
+    "prefix_batches": 17,
+    "reference_plan_sha256": "6f830f0834589b717e781306599aa173178839269f0f8e858096f8b61b4039f5"
+  },
+  "integrity": {
+    "all_grouped_equivalence_pass": false,
+    "all_runs_finite": true,
+    "input_prefix_exact": true,
+    "optimizer_step_is_disposable": true
+  },
+  "limitations": [
+    "This is a local engineering benchmark, not a scientific training run.",
+    "The grouped variants retain a Python loop over expert modules; they are deterministic baselines, not custom fused CUDA kernels.",
+    "The batched padded arm intentionally measures padding waste and is not presumed to win.",
+    "No neural scheduling controller was trained or evaluated."
+  ],
+  "parameters": {
+    "context": 128,
+    "equivalence_tolerances": {
+      "forward_abs": 0.005,
+      "gradient_abs": 0.0005,
+      "loss_abs": 1e-05,
+      "parameter_abs": 0.0005
+    },
+    "model_parameter_count": 170233600,
+    "num_experts": 16,
+    "repetitions": 1,
+    "seed": 42,
+    "timed_steps": 1,
+    "top_k": 2,
+    "warmup_steps": 1
+  },
+  "runs": [
+    {
+      "all_finite_losses": true,
+      "final_state_sha256": "d511f6ac0fb6b0ffd831f5da3e95f55822d0762234440e00f63f14114bec696c",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "peak_cuda_allocated_bytes": 3423787520,
+      "peak_cuda_reserved_bytes": 4221566976,
+      "phase_sums": {
+        "backward_cuda_event_ns": 804934070,
+        "backward_host_ns": 805103462,
+        "cpu_batch_prepare_ns": 1015195,
+        "forward_cuda_event_ns": 491244056,
+        "forward_host_ns": 491452097,
+        "h2d_ns": 504020,
+        "optimizer_ns": 29597666,
+        "wall_ns": 1328630828
+      },
+      "repetition": 1,
+      "seed": 42,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 804934070,
+          "backward_host_ns": 805103462,
+          "cpu_batch_prepare_ns": 1015195,
+          "forward_cuda_event_ns": 491244056,
+          "forward_host_ns": 491452097,
+          "h2d_ns": 504020,
+          "loss_values": [
+            0.6034627556800842,
+            0.5481858849525452,
+            0.5123212337493896,
+            0.5924107432365417,
+            0.6076558232307434,
+            0.47476232051849365,
+            0.5514799952507019,
+            0.6177971363067627,
+            0.12032046169042587
+          ],
+          "microbatches": 9,
+          "optimizer_ns": 29597666,
+          "phase": "timed",
+          "raw_targets": 3212,
+          "step": 1,
+          "valid_targets": 3245,
+          "wall_ns": 1328630828
+        }
+      ],
+      "timed_steps": 1,
+      "variant": "original",
+      "warmup_steps": 1
+    },
+    {
+      "all_finite_losses": true,
+      "final_state_sha256": "1832388359eee3d3120412f19bb0eafd21a40fda141a309305ff713902b0aed4",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "peak_cuda_allocated_bytes": 3421542912,
+      "peak_cuda_reserved_bytes": 4242538496,
+      "phase_sums": {
+        "backward_cuda_event_ns": 286626141,
+        "backward_host_ns": 286828086,
+        "cpu_batch_prepare_ns": 1842265,
+        "forward_cuda_event_ns": 189638747,
+        "forward_host_ns": 189834879,
+        "h2d_ns": 483858,
+        "optimizer_ns": 30068496,
+        "wall_ns": 509964213
+      },
+      "repetition": 1,
+      "seed": 42,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 286626141,
+          "backward_host_ns": 286828086,
+          "cpu_batch_prepare_ns": 1842265,
+          "forward_cuda_event_ns": 189638747,
+          "forward_host_ns": 189834879,
+          "h2d_ns": 483858,
+          "loss_values": [
+            0.6036263704299927,
+            0.5482013821601868,
+            0.5122494697570801,
+            0.5924481749534607,
+            0.6078042387962341,
+            0.47470957040786743,
+            0.5514094233512878,
+            0.6178709864616394,
+            0.12044826149940491
+          ],
+          "microbatches": 9,
+          "optimizer_ns": 30068496,
+          "phase": "timed",
+          "raw_targets": 3212,
+          "step": 1,
+          "valid_targets": 3245,
+          "wall_ns": 509964213
+        }
+      ],
+      "timed_steps": 1,
+      "variant": "grouped_sorted",
+      "warmup_steps": 1
+    },
+    {
+      "all_finite_losses": true,
+      "final_state_sha256": "603c0fc4c951914275ad8185410668f2e6c7bb6c4148b7c609f4b515ea759cff",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "peak_cuda_allocated_bytes": 3421542912,
+      "peak_cuda_reserved_bytes": 4240441344,
+      "phase_sums": {
+        "backward_cuda_event_ns": 286859934,
+        "backward_host_ns": 287034607,
+        "cpu_batch_prepare_ns": 1880797,
+        "forward_cuda_event_ns": 190135998,
+        "forward_host_ns": 190334515,
+        "h2d_ns": 484529,
+        "optimizer_ns": 29835906,
+        "wall_ns": 510474202
+      },
+      "repetition": 1,
+      "seed": 42,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 286859934,
+          "backward_host_ns": 287034607,
+          "cpu_batch_prepare_ns": 1880797,
+          "forward_cuda_event_ns": 190135998,
+          "forward_host_ns": 190334515,
+          "h2d_ns": 484529,
+          "loss_values": [
+            0.6034426689147949,
+            0.5481663346290588,
+            0.512397289276123,
+            0.5922884345054626,
+            0.6076465845108032,
+            0.474702924489975,
+            0.5513936877250671,
+            0.617730438709259,
+            0.12043383717536926
+          ],
+          "microbatches": 9,
+          "optimizer_ns": 29835906,
+          "phase": "timed",
+          "raw_targets": 3212,
+          "step": 1,
+          "valid_targets": 3245,
+          "wall_ns": 510474202
+        }
+      ],
+      "timed_steps": 1,
+      "variant": "grouped_largest_first",
+      "warmup_steps": 1
+    },
+    {
+      "all_finite_losses": true,
+      "final_state_sha256": "fe90d26cc457f74976caf0bd930d8cb57844aaaec54f5301e554b9a450f05356",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "peak_cuda_allocated_bytes": 3559912448,
+      "peak_cuda_reserved_bytes": 4104126464,
+      "phase_sums": {
+        "backward_cuda_event_ns": 203019229,
+        "backward_host_ns": 203185824,
+        "cpu_batch_prepare_ns": 943678,
+        "forward_cuda_event_ns": 157614204,
+        "forward_host_ns": 157821377,
+        "h2d_ns": 499930,
+        "optimizer_ns": 31150653,
+        "wall_ns": 394486290
+      },
+      "repetition": 1,
+      "seed": 42,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 203019229,
+          "backward_host_ns": 203185824,
+          "cpu_batch_prepare_ns": 943678,
+          "forward_cuda_event_ns": 157614204,
+          "forward_host_ns": 157821377,
+          "h2d_ns": 499930,
+          "loss_values": [
+            0.603285551071167,
+            0.5482271909713745,
+            0.5124284625053406,
+            0.5924432277679443,
+            0.6077950596809387,
+            0.4748287498950958,
+            0.5513657927513123,
+            0.6177310943603516,
+            0.12033229321241379
+          ],
+          "microbatches": 9,
+          "optimizer_ns": 31150653,
+          "phase": "timed",
+          "raw_targets": 3212,
+          "step": 1,
+          "valid_targets": 3245,
+          "wall_ns": 394486290
+        }
+      ],
+      "timed_steps": 1,
+      "variant": "batched_padded",
+      "warmup_steps": 1
+    }
+  ],
+  "schedule_report": {
+    "batches": 25987,
+    "examples": 100000,
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/schedule_seed_42.json",
+    "permutation_sha256": "835c5ee000222e6a3582ce071559fb465e76b80668f6e4814cada6eb733865b6",
+    "seed": 42,
+    "sha256": "ec449a68230663f06d57589aa744626d596c5efaf1ba43c1b57fc5bb0cb32879",
+    "source_bytes": 9856480,
+    "steps": 3125
+  },
+  "schema_version": "gpu-neural-ssre-v1-grouped-expert-20261018",
+  "source_report": {
+    "count": 100000,
+    "path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/../source/packed_train.jsonl",
+    "sha256": "dca93acdadec204409f7312b6b5b6ea4897bdd846bbd4eb9a62c71b8dce36cce",
+    "source_bytes": 9856480,
+    "validation_ns": 871328644
+  },
+  "torch_version": "2.12.0+cu130"
+}

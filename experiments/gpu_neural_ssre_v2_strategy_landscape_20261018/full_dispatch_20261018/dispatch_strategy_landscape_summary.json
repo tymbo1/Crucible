@@ -1,0 +1,3157 @@
+{
+  "anchor_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+  "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+  "cuda_runtime": "13.0",
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "integrity": {
+    "all_losses_finite": true,
+    "all_strict_candidate_fixture_pass": true,
+    "workload_count": 36
+  },
+  "interpretation_limits": [
+    "This is a dispatch-only control using the first N frozen E16 layer-0 expert weights, not retrained E4/E8/E16 language models.",
+    "Only rank-preserving candidates are eligible for the strict execution-plan gate.",
+    "Shape-changing combined-rank and padded-batched timings are diagnostic when their output or gradient deltas exceed the strict tolerances."
+  ],
+  "matrix": {
+    "expert_counts": [
+      4,
+      8,
+      16
+    ],
+    "fixtures": [
+      "balanced",
+      "moderate_skew",
+      "high_skew"
+    ],
+    "timed": 8,
+    "token_counts": [
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "variants": [
+      "original",
+      "grouped_rank_preserving",
+      "grouped_rank_major",
+      "grouped_sorted",
+      "batched_padded"
+    ],
+    "warmup": 2
+  },
+  "mode": "full",
+  "reports": [
+    {
+      "expert_count": 4,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 787369984,
+      "peak_cuda_reserved_bytes": 939524096,
+      "token_count": 512,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00390625,
+          "max_gradient_abs_delta_vs_original": 1.1920928955078125e-07,
+          "mean_backward_cuda_ns": 1587047.5,
+          "mean_backward_host_ns": 1605457.625,
+          "mean_forward_cuda_ns": 1691523.375,
+          "mean_forward_host_ns": 1712994.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1277307.5,
+          "mean_backward_host_ns": 1295448.875,
+          "mean_forward_cuda_ns": 2408411.5,
+          "mean_forward_host_ns": 2430820.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1280615.625,
+          "mean_backward_host_ns": 1298873.875,
+          "mean_forward_cuda_ns": 2048659.375,
+          "mean_forward_host_ns": 2071104.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1434567.5,
+          "mean_backward_host_ns": 1453255.0,
+          "mean_forward_cuda_ns": 2300179.375,
+          "mean_forward_host_ns": 2324605.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1543367.375,
+          "mean_backward_host_ns": 1563026.375,
+          "mean_forward_cuda_ns": 2568531.375,
+          "mean_forward_host_ns": 2593504.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          256,
+          256,
+          256,
+          256
+        ],
+        "max": 256,
+        "max_min_ratio": 1.0,
+        "min": 256
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 787369984,
+      "peak_cuda_reserved_bytes": 939524096,
+      "token_count": 512,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00390625,
+          "max_gradient_abs_delta_vs_original": 1.1920928955078125e-07,
+          "mean_backward_cuda_ns": 1595331.875,
+          "mean_backward_host_ns": 1618727.5,
+          "mean_forward_cuda_ns": 1771663.25,
+          "mean_forward_host_ns": 1794334.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1322179.625,
+          "mean_backward_host_ns": 1340775.0,
+          "mean_forward_cuda_ns": 2492555.5,
+          "mean_forward_host_ns": 2517976.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1374959.25,
+          "mean_backward_host_ns": 1393941.25,
+          "mean_forward_cuda_ns": 2148083.375,
+          "mean_forward_host_ns": 2171358.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1390811.75,
+          "mean_backward_host_ns": 1409142.5,
+          "mean_forward_cuda_ns": 2164291.375,
+          "mean_forward_host_ns": 2187515.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1520727.5,
+          "mean_backward_host_ns": 1538764.75,
+          "mean_forward_cuda_ns": 2506779.75,
+          "mean_forward_host_ns": 2531031.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          256,
+          256,
+          256,
+          256
+        ],
+        "max": 256,
+        "max_min_ratio": 1.0,
+        "min": 256
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 805814272,
+      "peak_cuda_reserved_bytes": 956301312,
+      "token_count": 512,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 1.7881393432617188e-07,
+          "mean_backward_cuda_ns": 1809263.5,
+          "mean_backward_host_ns": 1828616.125,
+          "mean_forward_cuda_ns": 2118615.75,
+          "mean_forward_host_ns": 2140348.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1430039.625,
+          "mean_backward_host_ns": 1447948.875,
+          "mean_forward_cuda_ns": 2516635.75,
+          "mean_forward_host_ns": 2539929.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1505211.625,
+          "mean_backward_host_ns": 1524522.25,
+          "mean_forward_cuda_ns": 2193671.625,
+          "mean_forward_host_ns": 2217668.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1453559.5,
+          "mean_backward_host_ns": 1471271.375,
+          "mean_forward_cuda_ns": 1995403.5,
+          "mean_forward_host_ns": 2016443.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1659463.625,
+          "mean_backward_host_ns": 1676763.625,
+          "mean_forward_cuda_ns": 2495211.375,
+          "mean_forward_host_ns": 2516297.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.59765625,
+        "counts": [
+          409,
+          409,
+          103,
+          103
+        ],
+        "max": 409,
+        "max_min_ratio": 3.970873786407767,
+        "min": 103
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 827906048,
+      "peak_cuda_reserved_bytes": 962592768,
+      "token_count": 1024,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0029296875,
+          "max_gradient_abs_delta_vs_original": 8.940696716308594e-08,
+          "mean_backward_cuda_ns": 1981547.75,
+          "mean_backward_host_ns": 2002159.5,
+          "mean_forward_cuda_ns": 2196139.375,
+          "mean_forward_host_ns": 2219465.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1664871.375,
+          "mean_backward_host_ns": 1684448.5,
+          "mean_forward_cuda_ns": 2654023.375,
+          "mean_forward_host_ns": 2676745.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1656663.625,
+          "mean_backward_host_ns": 1676149.875,
+          "mean_forward_cuda_ns": 2234067.5,
+          "mean_forward_host_ns": 2255694.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1650247.75,
+          "mean_backward_host_ns": 1668943.75,
+          "mean_forward_cuda_ns": 2191635.75,
+          "mean_forward_host_ns": 2213009.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1881243.625,
+          "mean_backward_host_ns": 1898418.375,
+          "mean_forward_cuda_ns": 2802959.875,
+          "mean_forward_host_ns": 2822656.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "max": 512,
+        "max_min_ratio": 1.0,
+        "min": 512
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 827906048,
+      "peak_cuda_reserved_bytes": 962592768,
+      "token_count": 1024,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0029296875,
+          "max_gradient_abs_delta_vs_original": 8.940696716308594e-08,
+          "mean_backward_cuda_ns": 1981127.5,
+          "mean_backward_host_ns": 2001879.75,
+          "mean_forward_cuda_ns": 2155299.5,
+          "mean_forward_host_ns": 2178008.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1631147.5,
+          "mean_backward_host_ns": 1650215.0,
+          "mean_forward_cuda_ns": 2552059.75,
+          "mean_forward_host_ns": 2573669.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1671911.5,
+          "mean_backward_host_ns": 1691617.375,
+          "mean_forward_cuda_ns": 2287827.75,
+          "mean_forward_host_ns": 2310192.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1699103.375,
+          "mean_backward_host_ns": 1718657.375,
+          "mean_forward_cuda_ns": 2282263.25,
+          "mean_forward_host_ns": 2304716.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1851867.125,
+          "mean_backward_host_ns": 1868850.875,
+          "mean_forward_cuda_ns": 2774719.25,
+          "mean_forward_host_ns": 2793777.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "max": 512,
+        "max_min_ratio": 1.0,
+        "min": 512
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 864964608,
+      "peak_cuda_reserved_bytes": 1040187392,
+      "token_count": 1024,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.002197265625,
+          "max_gradient_abs_delta_vs_original": 5.960464477539063e-08,
+          "mean_backward_cuda_ns": 2557387.25,
+          "mean_backward_host_ns": 2576795.25,
+          "mean_forward_cuda_ns": 2512771.25,
+          "mean_forward_host_ns": 2535040.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1688935.5,
+          "mean_backward_host_ns": 1709247.5,
+          "mean_forward_cuda_ns": 2504839.625,
+          "mean_forward_host_ns": 2527135.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1727395.375,
+          "mean_backward_host_ns": 1748933.5,
+          "mean_forward_cuda_ns": 2098107.375,
+          "mean_forward_host_ns": 2119802.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1781583.25,
+          "mean_backward_host_ns": 1802038.5,
+          "mean_forward_cuda_ns": 2131939.375,
+          "mean_forward_host_ns": 2153884.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 1861447.375,
+          "mean_backward_host_ns": 1878463.375,
+          "mean_forward_cuda_ns": 2613187.5,
+          "mean_forward_host_ns": 2632306.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.599609375,
+        "counts": [
+          819,
+          819,
+          205,
+          205
+        ],
+        "max": 819,
+        "max_min_ratio": 3.995121951219512,
+        "min": 205
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 905203712,
+      "peak_cuda_reserved_bytes": 1084227584,
+      "token_count": 2048,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00439453125,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 2960319.625,
+          "mean_backward_host_ns": 2979407.625,
+          "mean_forward_cuda_ns": 2892271.625,
+          "mean_forward_host_ns": 2914393.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2542399.5,
+          "mean_backward_host_ns": 2561476.75,
+          "mean_forward_cuda_ns": 3051047.375,
+          "mean_forward_host_ns": 3073242.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2516163.75,
+          "mean_backward_host_ns": 2536645.25,
+          "mean_forward_cuda_ns": 2832607.375,
+          "mean_forward_host_ns": 2856381.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2574635.5,
+          "mean_backward_host_ns": 2592994.25,
+          "mean_forward_cuda_ns": 2659715.375,
+          "mean_forward_host_ns": 2680863.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2726839.375,
+          "mean_backward_host_ns": 2744152.625,
+          "mean_forward_cuda_ns": 3288407.875,
+          "mean_forward_host_ns": 3308113.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          1024,
+          1024,
+          1024,
+          1024
+        ],
+        "max": 1024,
+        "max_min_ratio": 1.0,
+        "min": 1024
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 905203712,
+      "peak_cuda_reserved_bytes": 1084227584,
+      "token_count": 2048,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00439453125,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 2957011.5,
+          "mean_backward_host_ns": 2975894.875,
+          "mean_forward_cuda_ns": 2867543.25,
+          "mean_forward_host_ns": 2888799.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2543427.25,
+          "mean_backward_host_ns": 2561869.125,
+          "mean_forward_cuda_ns": 2972551.375,
+          "mean_forward_host_ns": 2993251.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2691155.625,
+          "mean_backward_host_ns": 2711551.375,
+          "mean_forward_cuda_ns": 2867143.75,
+          "mean_forward_host_ns": 2892008.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2562855.5,
+          "mean_backward_host_ns": 2581872.875,
+          "mean_forward_cuda_ns": 2678455.5,
+          "mean_forward_host_ns": 2699497.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2781287.375,
+          "mean_backward_host_ns": 2798366.375,
+          "mean_forward_cuda_ns": 3322587.375,
+          "mean_forward_host_ns": 3341801.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          1024,
+          1024,
+          1024,
+          1024
+        ],
+        "max": 1024,
+        "max_min_ratio": 1.0,
+        "min": 1024
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 1015115776,
+      "peak_cuda_reserved_bytes": 1184890880,
+      "token_count": 2048,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 5.960464477539063e-08,
+          "mean_backward_cuda_ns": 4265187.625,
+          "mean_backward_host_ns": 4285406.125,
+          "mean_forward_cuda_ns": 4130119.25,
+          "mean_forward_host_ns": 4153066.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2730587.625,
+          "mean_backward_host_ns": 2749217.75,
+          "mean_forward_cuda_ns": 3282331.375,
+          "mean_forward_host_ns": 3303124.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2883591.5,
+          "mean_backward_host_ns": 2903644.625,
+          "mean_forward_cuda_ns": 3050995.5,
+          "mean_forward_host_ns": 3073844.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2734919.25,
+          "mean_backward_host_ns": 2754169.875,
+          "mean_forward_cuda_ns": 2941003.75,
+          "mean_forward_host_ns": 2964030.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2890327.875,
+          "mean_backward_host_ns": 2907391.25,
+          "mean_forward_cuda_ns": 3535995.625,
+          "mean_forward_host_ns": 3555892.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.599609375,
+        "counts": [
+          1638,
+          1638,
+          410,
+          410
+        ],
+        "max": 1638,
+        "max_min_ratio": 3.995121951219512,
+        "min": 410
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 1098072064,
+      "peak_cuda_reserved_bytes": 1289748480,
+      "token_count": 4096,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0029296875,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 5625411.25,
+          "mean_backward_host_ns": 5644296.625,
+          "mean_forward_cuda_ns": 5245055.5,
+          "mean_forward_host_ns": 5266736.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4717387.5,
+          "mean_backward_host_ns": 4735977.25,
+          "mean_forward_cuda_ns": 4832243.5,
+          "mean_forward_host_ns": 4852997.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4788375.625,
+          "mean_backward_host_ns": 4807472.25,
+          "mean_forward_cuda_ns": 4500819.5,
+          "mean_forward_host_ns": 4521226.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4842127.375,
+          "mean_backward_host_ns": 4860723.625,
+          "mean_forward_cuda_ns": 4564839.75,
+          "mean_forward_host_ns": 4585583.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5019387.25,
+          "mean_backward_host_ns": 5036914.5,
+          "mean_forward_cuda_ns": 5098623.5,
+          "mean_forward_host_ns": 5118424.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          2048,
+          2048,
+          2048,
+          2048
+        ],
+        "max": 2048,
+        "max_min_ratio": 1.0,
+        "min": 2048
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 1098072064,
+      "peak_cuda_reserved_bytes": 1289748480,
+      "token_count": 4096,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 5295663.5,
+          "mean_backward_host_ns": 5314681.625,
+          "mean_forward_cuda_ns": 4909351.625,
+          "mean_forward_host_ns": 4930724.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4797403.375,
+          "mean_backward_host_ns": 4816124.75,
+          "mean_forward_cuda_ns": 4837695.75,
+          "mean_forward_host_ns": 4858448.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4768119.625,
+          "mean_backward_host_ns": 4787969.875,
+          "mean_forward_cuda_ns": 4513851.75,
+          "mean_forward_host_ns": 4535676.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4814059.25,
+          "mean_backward_host_ns": 4833258.375,
+          "mean_forward_cuda_ns": 4521347.25,
+          "mean_forward_host_ns": 4542954.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4976991.5,
+          "mean_backward_host_ns": 4994903.25,
+          "mean_forward_cuda_ns": 5011927.5,
+          "mean_forward_host_ns": 5032311.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          2048,
+          2048,
+          2048,
+          2048
+        ],
+        "max": 2048,
+        "max_min_ratio": 1.0,
+        "min": 2048
+      }
+    },
+    {
+      "expert_count": 4,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 1305686016,
+      "peak_cuda_reserved_bytes": 1509949440,
+      "token_count": 4096,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0039215087890625,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 8501707.625,
+          "mean_backward_host_ns": 8520099.25,
+          "mean_forward_cuda_ns": 7672331.5,
+          "mean_forward_host_ns": 7692337.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4690507.875,
+          "mean_backward_host_ns": 4709188.75,
+          "mean_forward_cuda_ns": 4946263.375,
+          "mean_forward_host_ns": 4966792.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4776935.375,
+          "mean_backward_host_ns": 4796094.75,
+          "mean_forward_cuda_ns": 4692415.375,
+          "mean_forward_host_ns": 4713781.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4803231.625,
+          "mean_backward_host_ns": 4822043.25,
+          "mean_forward_cuda_ns": 4666635.625,
+          "mean_forward_host_ns": 4687577.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4947135.5,
+          "mean_backward_host_ns": 4965776.75,
+          "mean_forward_cuda_ns": 5151139.125,
+          "mean_forward_host_ns": 5171662.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.599609375,
+        "counts": [
+          3276,
+          3276,
+          820,
+          820
+        ],
+        "max": 3276,
+        "max_min_ratio": 3.995121951219512,
+        "min": 820
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 1305686016,
+      "peak_cuda_reserved_bytes": 1509949440,
+      "token_count": 512,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 8.940696716308594e-08,
+          "mean_backward_cuda_ns": 2223015.375,
+          "mean_backward_host_ns": 2242493.125,
+          "mean_forward_cuda_ns": 2030531.5,
+          "mean_forward_host_ns": 2053045.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2289115.5,
+          "mean_backward_host_ns": 2307357.875,
+          "mean_forward_cuda_ns": 3824247.625,
+          "mean_forward_host_ns": 3847609.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2456583.5,
+          "mean_backward_host_ns": 2475100.375,
+          "mean_forward_cuda_ns": 3733927.625,
+          "mean_forward_host_ns": 3759902.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2461123.5,
+          "mean_backward_host_ns": 2479346.875,
+          "mean_forward_cuda_ns": 3639663.375,
+          "mean_forward_host_ns": 3663655.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2677443.5,
+          "mean_backward_host_ns": 2695393.875,
+          "mean_forward_cuda_ns": 4415027.375,
+          "mean_forward_host_ns": 4438327.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128
+        ],
+        "max": 128,
+        "max_min_ratio": 1.0,
+        "min": 128
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 1305686016,
+      "peak_cuda_reserved_bytes": 1509949440,
+      "token_count": 512,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.002197265625,
+          "max_gradient_abs_delta_vs_original": 1.1920928955078125e-07,
+          "mean_backward_cuda_ns": 2673687.75,
+          "mean_backward_host_ns": 2693510.375,
+          "mean_forward_cuda_ns": 2514839.375,
+          "mean_forward_host_ns": 2538071.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2121275.25,
+          "mean_backward_host_ns": 2139192.125,
+          "mean_forward_cuda_ns": 3816923.5,
+          "mean_forward_host_ns": 3840499.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2177723.5,
+          "mean_backward_host_ns": 2196533.25,
+          "mean_forward_cuda_ns": 3693899.625,
+          "mean_forward_host_ns": 3718068.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2326319.375,
+          "mean_backward_host_ns": 2344874.125,
+          "mean_forward_cuda_ns": 3609819.625,
+          "mean_forward_host_ns": 3632558.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2421387.625,
+          "mean_backward_host_ns": 2438565.625,
+          "mean_forward_cuda_ns": 4309099.625,
+          "mean_forward_host_ns": 4329642.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.5773590787883871,
+        "counts": [
+          256,
+          256,
+          86,
+          86,
+          85,
+          85,
+          85,
+          85
+        ],
+        "max": 256,
+        "max_min_ratio": 3.011764705882353,
+        "min": 85
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 1305686016,
+      "peak_cuda_reserved_bytes": 1509949440,
+      "token_count": 512,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0029296875,
+          "max_gradient_abs_delta_vs_original": 1.4901161193847656e-07,
+          "mean_backward_cuda_ns": 3288271.375,
+          "mean_backward_host_ns": 3307922.125,
+          "mean_forward_cuda_ns": 3132307.875,
+          "mean_forward_host_ns": 3155436.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2206911.375,
+          "mean_backward_host_ns": 2225000.625,
+          "mean_forward_cuda_ns": 3875975.625,
+          "mean_forward_host_ns": 3897809.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2309127.75,
+          "mean_backward_host_ns": 2329373.0,
+          "mean_forward_cuda_ns": 3614827.625,
+          "mean_forward_host_ns": 3638154.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2405731.625,
+          "mean_backward_host_ns": 2425523.0,
+          "mean_forward_cuda_ns": 3615171.875,
+          "mean_forward_host_ns": 3637334.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2693847.5,
+          "mean_backward_host_ns": 2711104.0,
+          "mean_forward_cuda_ns": 4544247.25,
+          "mean_forward_host_ns": 4565859.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 1.2674682757679283,
+        "counts": [
+          409,
+          409,
+          35,
+          35,
+          34,
+          34,
+          34,
+          34
+        ],
+        "max": 409,
+        "max_min_ratio": 12.029411764705882,
+        "min": 34
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 1305686016,
+      "peak_cuda_reserved_bytes": 1509949440,
+      "token_count": 1024,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 5.960464477539063e-08,
+          "mean_backward_cuda_ns": 2766959.5,
+          "mean_backward_host_ns": 2786475.125,
+          "mean_forward_cuda_ns": 2548187.5,
+          "mean_forward_host_ns": 2570544.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2319607.5,
+          "mean_backward_host_ns": 2339240.25,
+          "mean_forward_cuda_ns": 4200919.5,
+          "mean_forward_host_ns": 4225092.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2213991.25,
+          "mean_backward_host_ns": 2232699.375,
+          "mean_forward_cuda_ns": 3695379.5,
+          "mean_forward_host_ns": 3719094.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2304707.5,
+          "mean_backward_host_ns": 2323293.25,
+          "mean_forward_cuda_ns": 3602395.375,
+          "mean_forward_host_ns": 3625608.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2632231.625,
+          "mean_backward_host_ns": 2649747.875,
+          "mean_forward_cuda_ns": 4373455.625,
+          "mean_forward_host_ns": 4393666.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "max": 256,
+        "max_min_ratio": 1.0,
+        "min": 256
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 1305686016,
+      "peak_cuda_reserved_bytes": 1509949440,
+      "token_count": 1024,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 8.940696716308594e-08,
+          "mean_backward_cuda_ns": 3570515.625,
+          "mean_backward_host_ns": 3624670.625,
+          "mean_forward_cuda_ns": 3175875.625,
+          "mean_forward_host_ns": 3197907.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2460707.875,
+          "mean_backward_host_ns": 2479700.375,
+          "mean_forward_cuda_ns": 4059491.375,
+          "mean_forward_host_ns": 4084092.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2567307.375,
+          "mean_backward_host_ns": 2585890.125,
+          "mean_forward_cuda_ns": 3658731.625,
+          "mean_forward_host_ns": 3684157.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2634575.5,
+          "mean_backward_host_ns": 2653207.75,
+          "mean_forward_cuda_ns": 3670835.5,
+          "mean_forward_host_ns": 3694644.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2904583.625,
+          "mean_backward_host_ns": 2922262.75,
+          "mean_forward_cuda_ns": 4636227.125,
+          "mean_forward_host_ns": 4658403.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.5773524716019182,
+        "counts": [
+          512,
+          512,
+          171,
+          171,
+          171,
+          171,
+          170,
+          170
+        ],
+        "max": 512,
+        "max_min_ratio": 3.011764705882353,
+        "min": 170
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 1305686016,
+      "peak_cuda_reserved_bytes": 1509949440,
+      "token_count": 1024,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 1.1920928955078125e-07,
+          "mean_backward_cuda_ns": 4887879.5,
+          "mean_backward_host_ns": 4907553.25,
+          "mean_forward_cuda_ns": 4316631.25,
+          "mean_forward_host_ns": 4341381.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2542251.625,
+          "mean_backward_host_ns": 2561114.25,
+          "mean_forward_cuda_ns": 3898487.75,
+          "mean_forward_host_ns": 3922038.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2814295.75,
+          "mean_backward_host_ns": 2833055.25,
+          "mean_forward_cuda_ns": 3596471.375,
+          "mean_forward_host_ns": 3621933.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 2881351.5,
+          "mean_backward_host_ns": 2899839.0,
+          "mean_forward_cuda_ns": 3584539.25,
+          "mean_forward_host_ns": 3608081.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3194651.75,
+          "mean_backward_host_ns": 3212048.875,
+          "mean_forward_cuda_ns": 4727403.5,
+          "mean_forward_host_ns": 4749529.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 1.2697205387730133,
+        "counts": [
+          819,
+          819,
+          69,
+          69,
+          68,
+          68,
+          68,
+          68
+        ],
+        "max": 819,
+        "max_min_ratio": 12.044117647058824,
+        "min": 68
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 1305686016,
+      "peak_cuda_reserved_bytes": 1509949440,
+      "token_count": 2048,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0029296875,
+          "max_gradient_abs_delta_vs_original": 4.470348358154297e-08,
+          "mean_backward_cuda_ns": 3638115.375,
+          "mean_backward_host_ns": 3657589.375,
+          "mean_forward_cuda_ns": 3199443.625,
+          "mean_forward_host_ns": 3223124.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3028011.375,
+          "mean_backward_host_ns": 3046431.25,
+          "mean_forward_cuda_ns": 4204539.125,
+          "mean_forward_host_ns": 4226713.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3036031.625,
+          "mean_backward_host_ns": 3054553.875,
+          "mean_forward_cuda_ns": 3934807.5,
+          "mean_forward_host_ns": 3957690.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3060811.625,
+          "mean_backward_host_ns": 3078931.25,
+          "mean_forward_cuda_ns": 3832783.5,
+          "mean_forward_host_ns": 3855833.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3696259.75,
+          "mean_backward_host_ns": 3714080.625,
+          "mean_forward_cuda_ns": 5665147.75,
+          "mean_forward_host_ns": 5688470.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512
+        ],
+        "max": 512,
+        "max_min_ratio": 1.0,
+        "min": 512
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 1305686016,
+      "peak_cuda_reserved_bytes": 1509949440,
+      "token_count": 2048,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0029296875,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 5818331.0,
+          "mean_backward_host_ns": 5838026.375,
+          "mean_forward_cuda_ns": 5017663.75,
+          "mean_forward_host_ns": 5040898.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3117875.625,
+          "mean_backward_host_ns": 3136888.625,
+          "mean_forward_cuda_ns": 3940531.625,
+          "mean_forward_host_ns": 3963380.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3221355.5,
+          "mean_backward_host_ns": 3274318.5,
+          "mean_forward_cuda_ns": 3716963.5,
+          "mean_forward_host_ns": 3739625.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3077915.375,
+          "mean_backward_host_ns": 3096047.375,
+          "mean_forward_cuda_ns": 3511227.75,
+          "mean_forward_host_ns": 3534260.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3837135.5,
+          "mean_backward_host_ns": 3855221.75,
+          "mean_forward_cuda_ns": 5596091.5,
+          "mean_forward_host_ns": 5619511.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.5773508197934865,
+        "counts": [
+          1024,
+          1024,
+          342,
+          342,
+          341,
+          341,
+          341,
+          341
+        ],
+        "max": 1024,
+        "max_min_ratio": 3.002932551319648,
+        "min": 341
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 1305686016,
+      "peak_cuda_reserved_bytes": 1535115264,
+      "token_count": 2048,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 5.960464477539063e-08,
+          "mean_backward_cuda_ns": 8553687.25,
+          "mean_backward_host_ns": 8573728.875,
+          "mean_forward_cuda_ns": 7359523.375,
+          "mean_forward_host_ns": 7382360.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3321267.375,
+          "mean_backward_host_ns": 3339713.5,
+          "mean_forward_cuda_ns": 3848327.375,
+          "mean_forward_host_ns": 3869920.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3497143.625,
+          "mean_backward_host_ns": 3515915.75,
+          "mean_forward_cuda_ns": 3611339.125,
+          "mean_forward_host_ns": 3633149.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3610711.5,
+          "mean_backward_host_ns": 3629815.625,
+          "mean_forward_cuda_ns": 3642307.75,
+          "mean_forward_host_ns": 3665794.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3772991.375,
+          "mean_backward_host_ns": 3790760.625,
+          "mean_forward_cuda_ns": 5462103.125,
+          "mean_forward_host_ns": 5483761.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 1.2697197876828565,
+        "counts": [
+          1638,
+          1638,
+          137,
+          137,
+          137,
+          137,
+          136,
+          136
+        ],
+        "max": 1638,
+        "max_min_ratio": 12.044117647058824,
+        "min": 136
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 1305686016,
+      "peak_cuda_reserved_bytes": 1535115264,
+      "token_count": 4096,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 1.4901161193847656e-08,
+          "mean_backward_cuda_ns": 6290211.375,
+          "mean_backward_host_ns": 6308862.125,
+          "mean_forward_cuda_ns": 5403631.125,
+          "mean_forward_host_ns": 5426249.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5116123.375,
+          "mean_backward_host_ns": 5135446.875,
+          "mean_forward_cuda_ns": 5307879.5,
+          "mean_forward_host_ns": 5330615.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5184323.5,
+          "mean_backward_host_ns": 5203915.5,
+          "mean_forward_cuda_ns": 4986987.5,
+          "mean_forward_host_ns": 5010263.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5170339.5,
+          "mean_backward_host_ns": 5189204.5,
+          "mean_forward_cuda_ns": 4975859.375,
+          "mean_forward_host_ns": 4997629.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5744555.625,
+          "mean_backward_host_ns": 5763832.625,
+          "mean_forward_cuda_ns": 7040975.5,
+          "mean_forward_host_ns": 7064581.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          1024,
+          1024,
+          1024,
+          1024,
+          1024,
+          1024,
+          1024,
+          1024
+        ],
+        "max": 1024,
+        "max_min_ratio": 1.0,
+        "min": 1024
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 1460318208,
+      "peak_cuda_reserved_bytes": 1698693120,
+      "token_count": 4096,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 10987887.375,
+          "mean_backward_host_ns": 11006145.625,
+          "mean_forward_cuda_ns": 9374623.5,
+          "mean_forward_host_ns": 9396017.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5267539.5,
+          "mean_backward_host_ns": 5286233.0,
+          "mean_forward_cuda_ns": 5432659.625,
+          "mean_forward_host_ns": 5455027.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5392787.25,
+          "mean_backward_host_ns": 5412168.0,
+          "mean_forward_cuda_ns": 5140951.5,
+          "mean_forward_host_ns": 5163108.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5365471.5,
+          "mean_backward_host_ns": 5384321.75,
+          "mean_forward_cuda_ns": 5125707.125,
+          "mean_forward_host_ns": 5150804.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5823763.75,
+          "mean_backward_host_ns": 5841523.75,
+          "mean_forward_cuda_ns": 6835919.5,
+          "mean_forward_host_ns": 6859309.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.5773504068406402,
+        "counts": [
+          2048,
+          2048,
+          683,
+          683,
+          683,
+          683,
+          682,
+          682
+        ],
+        "max": 2048,
+        "max_min_ratio": 3.002932551319648,
+        "min": 682
+      }
+    },
+    {
+      "expert_count": 8,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 1874969600,
+      "peak_cuda_reserved_bytes": 2139095040,
+      "token_count": 4096,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 16649227.625,
+          "mean_backward_host_ns": 16667671.25,
+          "mean_forward_cuda_ns": 14197371.625,
+          "mean_forward_host_ns": 14217856.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5281875.5,
+          "mean_backward_host_ns": 5300262.875,
+          "mean_forward_cuda_ns": 5686187.75,
+          "mean_forward_host_ns": 5707146.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5301743.75,
+          "mean_backward_host_ns": 5321636.75,
+          "mean_forward_cuda_ns": 5400759.625,
+          "mean_forward_host_ns": 5423799.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5385163.5,
+          "mean_backward_host_ns": 5403940.5,
+          "mean_forward_cuda_ns": 5395243.625,
+          "mean_forward_host_ns": 5416866.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5809515.5,
+          "mean_backward_host_ns": 5827391.625,
+          "mean_forward_cuda_ns": 7079867.375,
+          "mean_forward_host_ns": 7102110.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 1.269719599910248,
+        "counts": [
+          3276,
+          3276,
+          274,
+          274,
+          273,
+          273,
+          273,
+          273
+        ],
+        "max": 3276,
+        "max_min_ratio": 12.0,
+        "min": 273
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 1874969600,
+      "peak_cuda_reserved_bytes": 2139095040,
+      "token_count": 512,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0028076171875,
+          "max_gradient_abs_delta_vs_original": 1.7881393432617188e-07,
+          "mean_backward_cuda_ns": 3632363.625,
+          "mean_backward_host_ns": 3652262.0,
+          "mean_forward_cuda_ns": 2803587.875,
+          "mean_forward_host_ns": 2826771.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4267951.375,
+          "mean_backward_host_ns": 4285678.75,
+          "mean_forward_cuda_ns": 6514559.5,
+          "mean_forward_host_ns": 6540593.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4297931.375,
+          "mean_backward_host_ns": 4316785.125,
+          "mean_forward_cuda_ns": 6303151.375,
+          "mean_forward_host_ns": 6326353.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4618403.75,
+          "mean_backward_host_ns": 4636536.0,
+          "mean_forward_cuda_ns": 6476027.5,
+          "mean_forward_host_ns": 6499013.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5232696.0,
+          "mean_backward_host_ns": 5251818.125,
+          "mean_forward_cuda_ns": 8856699.375,
+          "mean_forward_host_ns": 8879672.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "max": 64,
+        "max_min_ratio": 1.0,
+        "min": 64
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 1874969600,
+      "peak_cuda_reserved_bytes": 2139095040,
+      "token_count": 512,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0029296875,
+          "max_gradient_abs_delta_vs_original": 1.4901161193847656e-07,
+          "mean_backward_cuda_ns": 4927307.375,
+          "mean_backward_host_ns": 4948119.625,
+          "mean_forward_cuda_ns": 3943615.75,
+          "mean_forward_host_ns": 3968112.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4307555.375,
+          "mean_backward_host_ns": 4325476.5,
+          "mean_forward_cuda_ns": 6748495.625,
+          "mean_forward_host_ns": 6772077.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4291211.5,
+          "mean_backward_host_ns": 4310141.375,
+          "mean_forward_cuda_ns": 6530891.625,
+          "mean_forward_host_ns": 6556668.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4564379.25,
+          "mean_backward_host_ns": 4582462.5,
+          "mean_forward_cuda_ns": 6367787.0,
+          "mean_forward_host_ns": 6390833.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5223359.25,
+          "mean_backward_host_ns": 5242470.75,
+          "mean_forward_cuda_ns": 8902035.5,
+          "mean_forward_host_ns": 8924798.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 1.1339164879136823,
+        "counts": [
+          256,
+          256,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          36,
+          36,
+          36,
+          36,
+          36,
+          36
+        ],
+        "max": 256,
+        "max_min_ratio": 7.111111111111111,
+        "min": 36
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 1874969600,
+      "peak_cuda_reserved_bytes": 2139095040,
+      "token_count": 512,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 1.7881393432617188e-07,
+          "mean_backward_cuda_ns": 6170339.375,
+          "mean_backward_host_ns": 6190339.75,
+          "mean_forward_cuda_ns": 5304363.375,
+          "mean_forward_host_ns": 5329038.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4322167.5,
+          "mean_backward_host_ns": 4339978.75,
+          "mean_forward_cuda_ns": 6439919.625,
+          "mean_forward_host_ns": 6463233.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4374267.625,
+          "mean_backward_host_ns": 4392512.5,
+          "mean_forward_cuda_ns": 6130699.625,
+          "mean_forward_host_ns": 6155540.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4480671.625,
+          "mean_backward_host_ns": 4498269.75,
+          "mean_forward_cuda_ns": 6207231.5,
+          "mean_forward_host_ns": 6230819.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5234395.625,
+          "mean_backward_host_ns": 5251984.125,
+          "mean_forward_cuda_ns": 9342723.75,
+          "mean_forward_host_ns": 9365490.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 2.0374754360099043,
+        "counts": [
+          409,
+          409,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          14,
+          14,
+          14,
+          14
+        ],
+        "max": 409,
+        "max_min_ratio": 29.214285714285715,
+        "min": 14
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 1874969600,
+      "peak_cuda_reserved_bytes": 2139095040,
+      "token_count": 1024,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 5.960464477539063e-08,
+          "mean_backward_cuda_ns": 4160483.625,
+          "mean_backward_host_ns": 4181486.5,
+          "mean_forward_cuda_ns": 3189155.625,
+          "mean_forward_host_ns": 3214229.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4301351.375,
+          "mean_backward_host_ns": 4319003.75,
+          "mean_forward_cuda_ns": 6619275.5,
+          "mean_forward_host_ns": 6642899.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4243699.5,
+          "mean_backward_host_ns": 4263387.5,
+          "mean_forward_cuda_ns": 6240839.625,
+          "mean_forward_host_ns": 6264138.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4632331.5,
+          "mean_backward_host_ns": 4650493.5,
+          "mean_forward_cuda_ns": 6378611.625,
+          "mean_forward_host_ns": 6402034.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5134467.625,
+          "mean_backward_host_ns": 5151941.875,
+          "mean_forward_cuda_ns": 8665859.5,
+          "mean_forward_host_ns": 8688156.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128
+        ],
+        "max": 128,
+        "max_min_ratio": 1.0,
+        "min": 128
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 1874969600,
+      "peak_cuda_reserved_bytes": 2139095040,
+      "token_count": 1024,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 5.960464477539063e-08,
+          "mean_backward_cuda_ns": 6721979.5,
+          "mean_backward_host_ns": 6740599.375,
+          "mean_forward_cuda_ns": 5291611.75,
+          "mean_forward_host_ns": 5313381.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4325223.5,
+          "mean_backward_host_ns": 4343044.0,
+          "mean_forward_cuda_ns": 6483575.5,
+          "mean_forward_host_ns": 6506668.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4445391.375,
+          "mean_backward_host_ns": 4463245.125,
+          "mean_forward_cuda_ns": 6365099.75,
+          "mean_forward_host_ns": 6388932.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4776143.25,
+          "mean_backward_host_ns": 4794617.125,
+          "mean_forward_cuda_ns": 6514807.375,
+          "mean_forward_host_ns": 6538130.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5300551.75,
+          "mean_backward_host_ns": 5318165.75,
+          "mean_forward_cuda_ns": 8928315.375,
+          "mean_forward_host_ns": 8951521.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 1.1338963026640982,
+        "counts": [
+          512,
+          512,
+          74,
+          74,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73
+        ],
+        "max": 512,
+        "max_min_ratio": 7.013698630136986,
+        "min": 73
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 1874969600,
+      "peak_cuda_reserved_bytes": 2139095040,
+      "token_count": 1024,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 5.960464477539063e-08,
+          "mean_backward_cuda_ns": 9305179.25,
+          "mean_backward_host_ns": 9323939.875,
+          "mean_forward_cuda_ns": 7651283.75,
+          "mean_forward_host_ns": 7673597.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4531503.375,
+          "mean_backward_host_ns": 4550129.75,
+          "mean_forward_cuda_ns": 6555695.625,
+          "mean_forward_host_ns": 6578740.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4767455.625,
+          "mean_backward_host_ns": 4785263.625,
+          "mean_forward_cuda_ns": 6228975.625,
+          "mean_forward_host_ns": 6251874.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5045227.5,
+          "mean_backward_host_ns": 5063322.125,
+          "mean_forward_cuda_ns": 6354091.25,
+          "mean_forward_host_ns": 6378252.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5602095.25,
+          "mean_backward_host_ns": 5620595.5,
+          "mean_forward_cuda_ns": 8987935.5,
+          "mean_forward_host_ns": 9010485.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 2.0404202555689204,
+        "counts": [
+          819,
+          819,
+          30,
+          30,
+          30,
+          30,
+          29,
+          29,
+          29,
+          29,
+          29,
+          29,
+          29,
+          29,
+          29,
+          29
+        ],
+        "max": 819,
+        "max_min_ratio": 28.24137931034483,
+        "min": 29
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 1874969600,
+      "peak_cuda_reserved_bytes": 2139095040,
+      "token_count": 2048,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 5219143.25,
+          "mean_backward_host_ns": 5239647.0,
+          "mean_forward_cuda_ns": 4062419.75,
+          "mean_forward_host_ns": 4088591.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4009635.75,
+          "mean_backward_host_ns": 4027419.125,
+          "mean_forward_cuda_ns": 6376383.625,
+          "mean_forward_host_ns": 6399717.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3977467.5,
+          "mean_backward_host_ns": 3995244.25,
+          "mean_forward_cuda_ns": 6031291.625,
+          "mean_forward_host_ns": 6052776.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4182815.25,
+          "mean_backward_host_ns": 4200843.875,
+          "mean_forward_cuda_ns": 6124815.75,
+          "mean_forward_host_ns": 6147737.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5148339.5,
+          "mean_backward_host_ns": 5166590.75,
+          "mean_forward_cuda_ns": 8823299.375,
+          "mean_forward_host_ns": 8844097.5,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "max": 256,
+        "max_min_ratio": 1.0,
+        "min": 256
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 1874969600,
+      "peak_cuda_reserved_bytes": 2139095040,
+      "token_count": 2048,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00244140625,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 10958011.375,
+          "mean_backward_host_ns": 10977183.5,
+          "mean_forward_cuda_ns": 9333931.625,
+          "mean_forward_host_ns": 9355462.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4287095.75,
+          "mean_backward_host_ns": 4305112.75,
+          "mean_forward_cuda_ns": 6339627.875,
+          "mean_forward_host_ns": 6360829.75,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4460887.375,
+          "mean_backward_host_ns": 4478978.75,
+          "mean_forward_cuda_ns": 5921295.625,
+          "mean_forward_host_ns": 5942075.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 4773735.625,
+          "mean_backward_host_ns": 4791725.875,
+          "mean_forward_cuda_ns": 6103151.625,
+          "mean_forward_host_ns": 6124348.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5340667.5,
+          "mean_backward_host_ns": 5358495.5,
+          "mean_forward_cuda_ns": 9135067.75,
+          "mean_forward_host_ns": 9156006.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 1.1338946205437466,
+        "counts": [
+          1024,
+          1024,
+          147,
+          147,
+          147,
+          147,
+          146,
+          146,
+          146,
+          146,
+          146,
+          146,
+          146,
+          146,
+          146,
+          146
+        ],
+        "max": 1024,
+        "max_min_ratio": 7.013698630136986,
+        "min": 146
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 1884431360,
+      "peak_cuda_reserved_bytes": 2208301056,
+      "token_count": 2048,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.00262451171875,
+          "max_gradient_abs_delta_vs_original": 5.960464477539063e-08,
+          "mean_backward_cuda_ns": 16287475.5,
+          "mean_backward_host_ns": 16305511.375,
+          "mean_forward_cuda_ns": 14089439.875,
+          "mean_forward_host_ns": 14110108.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5038655.375,
+          "mean_backward_host_ns": 5057549.5,
+          "mean_forward_cuda_ns": 6701475.5,
+          "mean_forward_host_ns": 6724679.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5580951.625,
+          "mean_backward_host_ns": 5600346.5,
+          "mean_forward_cuda_ns": 6215495.375,
+          "mean_forward_host_ns": 6239086.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5841007.375,
+          "mean_backward_host_ns": 5859468.75,
+          "mean_forward_cuda_ns": 6301051.625,
+          "mean_forward_host_ns": 6322975.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 6347599.75,
+          "mean_backward_host_ns": 6365978.25,
+          "mean_forward_cuda_ns": 9726955.375,
+          "mean_forward_host_ns": 9749069.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 2.040418386003568,
+        "counts": [
+          1638,
+          1638,
+          59,
+          59,
+          59,
+          59,
+          59,
+          59,
+          59,
+          59,
+          58,
+          58,
+          58,
+          58,
+          58,
+          58
+        ],
+        "max": 1638,
+        "max_min_ratio": 28.24137931034483,
+        "min": 58
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "balanced",
+      "peak_cuda_allocated_bytes": 1884431360,
+      "peak_cuda_reserved_bytes": 2208301056,
+      "token_count": 4096,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0029296875,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 7228623.125,
+          "mean_backward_host_ns": 7248430.375,
+          "mean_forward_cuda_ns": 5826419.5,
+          "mean_forward_host_ns": 5849201.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 6308471.25,
+          "mean_backward_host_ns": 6327632.25,
+          "mean_forward_cuda_ns": 7509935.375,
+          "mean_forward_host_ns": 7533048.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 6307563.25,
+          "mean_backward_host_ns": 6326872.0,
+          "mean_forward_cuda_ns": 7144627.125,
+          "mean_forward_host_ns": 7167007.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 6354580.0,
+          "mean_backward_host_ns": 6373446.0,
+          "mean_forward_cuda_ns": 7205459.875,
+          "mean_forward_host_ns": 7227855.25,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 7368039.5,
+          "mean_backward_host_ns": 7386418.625,
+          "mean_forward_cuda_ns": 11356011.5,
+          "mean_forward_host_ns": 11378117.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 0.0,
+        "counts": [
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512,
+          512
+        ],
+        "max": 512,
+        "max_min_ratio": 1.0,
+        "min": 512
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "moderate_skew",
+      "peak_cuda_allocated_bytes": 2184957952,
+      "peak_cuda_reserved_bytes": 2520776704,
+      "token_count": 4096,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0029296875,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 20624695.375,
+          "mean_backward_host_ns": 20644091.5,
+          "mean_forward_cuda_ns": 17558967.375,
+          "mean_forward_host_ns": 17580614.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 6470147.25,
+          "mean_backward_host_ns": 6489173.25,
+          "mean_forward_cuda_ns": 7209599.5,
+          "mean_forward_host_ns": 7232718.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 6483043.625,
+          "mean_backward_host_ns": 6501736.875,
+          "mean_forward_cuda_ns": 6875195.625,
+          "mean_forward_host_ns": 6898059.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 6584423.5,
+          "mean_backward_host_ns": 6603311.125,
+          "mean_forward_cuda_ns": 6786999.125,
+          "mean_forward_host_ns": 6809720.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 7803771.5,
+          "mean_backward_host_ns": 7821863.25,
+          "mean_forward_cuda_ns": 10909367.75,
+          "mean_forward_host_ns": 10931989.625,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 1.133893779482635,
+        "counts": [
+          2048,
+          2048,
+          293,
+          293,
+          293,
+          293,
+          293,
+          293,
+          293,
+          293,
+          292,
+          292,
+          292,
+          292,
+          292,
+          292
+        ],
+        "max": 2048,
+        "max_min_ratio": 7.013698630136986,
+        "min": 292
+      }
+    },
+    {
+      "expert_count": 16,
+      "fixture": "high_skew",
+      "peak_cuda_allocated_bytes": 3015112704,
+      "peak_cuda_reserved_bytes": 3397386240,
+      "token_count": 4096,
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0029296875,
+          "max_gradient_abs_delta_vs_original": 2.9802322387695312e-08,
+          "mean_backward_cuda_ns": 31009103.625,
+          "mean_backward_host_ns": 31028234.125,
+          "mean_forward_cuda_ns": 28960499.5,
+          "mean_forward_host_ns": 28981734.375,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_major": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 6537071.5,
+          "mean_backward_host_ns": 6555495.875,
+          "mean_forward_cuda_ns": 6717011.375,
+          "mean_forward_host_ns": 6738823.125,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 7100619.625,
+          "mean_backward_host_ns": 7118991.5,
+          "mean_forward_cuda_ns": 6404595.375,
+          "mean_forward_host_ns": 6426526.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 7347087.625,
+          "mean_backward_host_ns": 7366439.0,
+          "mean_forward_cuda_ns": 6402695.75,
+          "mean_forward_host_ns": 6424376.875,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "max_gradient_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 7704767.75,
+          "mean_backward_host_ns": 7723621.25,
+          "mean_forward_cuda_ns": 10713903.5,
+          "mean_forward_host_ns": 10735567.0,
+          "strict_equivalence_pass": true,
+          "strict_gradient_pass": true,
+          "strict_output_pass": true
+        }
+      },
+      "workload": {
+        "coefficient_of_variation": 2.0404176849161195,
+        "counts": [
+          3276,
+          3276,
+          118,
+          118,
+          117,
+          117,
+          117,
+          117,
+          117,
+          117,
+          117,
+          117,
+          117,
+          117,
+          117,
+          117
+        ],
+        "max": 3276,
+        "max_min_ratio": 28.0,
+        "min": 117
+      }
+    }
+  ],
+  "schema_version": "gpu-neural-ssre-v2-dispatch-landscape-20261018",
+  "torch_version": "2.12.0+cu130",
+  "v2_source_sha256": "fa5a4c98e6bbcafe7efed1f2256b1e0742a15f83d51afda2dbbdc139a9c9ab6d"
+}

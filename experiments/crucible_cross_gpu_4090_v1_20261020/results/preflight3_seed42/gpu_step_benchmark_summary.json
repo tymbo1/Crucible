@@ -1,0 +1,469 @@
+{
+  "anchor_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+  "binary_report": {
+    "bytes": 204800000,
+    "load_ns": 405616991,
+    "path": "/workspace/crucible_cross_gpu_4090_v1_20261020/context_128/crucible_manifest/stories_train.bin",
+    "samples": 100000,
+    "sha256": "c8d6056d01f91ad391dba99a1b04d48e2b300829c5e6801d910249043bbebf88"
+  },
+  "config_sha256": "3d7b4e4e3ce976004df88e78b8588456c974b40a38e57f8cba79583f1f3695d0",
+  "context_root": "/workspace/crucible_cross_gpu_4090_v1_20261020/context_128",
+  "cuda_runtime": "12.8",
+  "deterministic_mode": true,
+  "device": "NVIDIA GeForce RTX 4090",
+  "device_index": 0,
+  "equivalence": [
+    {
+      "final_state_sha_equal": true,
+      "input_prefix_exact": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 1,
+      "telemetry": false
+    },
+    {
+      "final_state_sha_equal": true,
+      "input_prefix_exact": true,
+      "loss_tolerance": 1e-05,
+      "losses_within_tolerance": true,
+      "max_loss_abs_delta": 0.0,
+      "repetition": 1,
+      "telemetry": true
+    }
+  ],
+  "input_report": {
+    "candidate_plan_sha256": "3d0a37b289cb6450078c1da2108ab550bcfe711e58db8c1b2fbfdc0bb19f119a",
+    "exact_equivalence": true,
+    "prefix_batches": 25,
+    "reference_plan_sha256": "3d0a37b289cb6450078c1da2108ab550bcfe711e58db8c1b2fbfdc0bb19f119a"
+  },
+  "integrity": {
+    "all_final_state_hashes_equal": true,
+    "all_input_prefixes_exact": true,
+    "all_loss_tolerances_pass": true,
+    "all_runs_finite": true
+  },
+  "measurement_limitations": [
+    "This is a short disposable local benchmark, not a scientific training run.",
+    "Host-to-device timings use synchronous .to(device), matching the current runner; pinned/nonblocking staging is not tested here.",
+    "Forward/backward CUDA event time is paired with host wall time; their difference is a launch/synchronization proxy, not a hardware counter.",
+    "GPU idle time is reported as a non-compute proxy, not sampled utilization."
+  ],
+  "parameters": {
+    "context": 128,
+    "execution_variants": [
+      "original",
+      "grouped_rank_preserving"
+    ],
+    "model_parameter_count": 170233600,
+    "num_experts": 16,
+    "repetitions": 1,
+    "seed": 42,
+    "telemetry_modes": [
+      false,
+      true
+    ],
+    "timed_steps": 2,
+    "top_k": 2,
+    "warmup_steps": 1
+  },
+  "runs": [
+    {
+      "arm": "original",
+      "config_sha256": "3d7b4e4e3ce976004df88e78b8588456c974b40a38e57f8cba79583f1f3695d0",
+      "cpu_time_over_wall": 1.0223736196275195,
+      "final_state_sha256": "93e1235163a7b1386f6166522059a7538215deb5749deb2ccadf7dea8d4e5d40",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_grad_norms": true,
+        "all_finite_losses": true,
+        "total_raw_targets": 6357,
+        "total_valid_targets": 6419
+      },
+      "parameter_count": 170233600,
+      "peak_cuda_allocated_bytes": 3471512576,
+      "peak_cuda_reserved_bytes": 4294967296,
+      "phase_sums": {
+        "backward_cuda_event_ns": 3474785376,
+        "backward_host_ns": 3475192101,
+        "cpu_batch_prepare_ns": 3902609,
+        "forward_cuda_event_ns": 2017098617,
+        "forward_host_ns": 2017551539,
+        "h2d_ns": 1594962,
+        "non_compute_ns_proxy": 60974114,
+        "optimizer_ns": 44501793,
+        "wall_ns": 5552858107
+      },
+      "process_cpu_ns": 9441248861,
+      "repetition": 1,
+      "schema_version": "crucible-cross-gpu-4090-validation-v1-20261020",
+      "seed": 42,
+      "telemetry": false,
+      "telemetry_finalize_ns": 0,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 1734326167,
+          "backward_host_ns": 1734523880,
+          "cpu_batch_prepare_ns": 1957875,
+          "forward_cuda_event_ns": 1010034680,
+          "forward_host_ns": 1010269128,
+          "grad_norm": 1.9018609523773193,
+          "h2d_ns": 777445,
+          "loss_values": [
+            0.6166610717773438,
+            0.6652647256851196,
+            0.5517311692237854,
+            0.545359194278717,
+            0.6433725953102112,
+            0.5200990438461304,
+            0.6954830288887024,
+            0.4035210609436035
+          ],
+          "microbatches": 8,
+          "non_compute_ns_proxy": 30479399,
+          "optimizer_ns": 22244831,
+          "phase": "timed",
+          "raw_targets": 3129,
+          "source_bytes": 3129,
+          "step": 2,
+          "valid_targets": 3160,
+          "wall_ns": 2774840246
+        },
+        {
+          "backward_cuda_event_ns": 1740459209,
+          "backward_host_ns": 1740668221,
+          "cpu_batch_prepare_ns": 1944734,
+          "forward_cuda_event_ns": 1007063937,
+          "forward_host_ns": 1007282411,
+          "grad_norm": 1.5209482908248901,
+          "h2d_ns": 817517,
+          "loss_values": [
+            0.48088499903678894,
+            0.5109909176826477,
+            0.4836214780807495,
+            0.500403106212616,
+            0.4680686295032501,
+            0.5462207198143005,
+            0.5910595059394836,
+            0.45598679780960083
+          ],
+          "microbatches": 8,
+          "non_compute_ns_proxy": 30494715,
+          "optimizer_ns": 22256962,
+          "phase": "timed",
+          "raw_targets": 3228,
+          "source_bytes": 3228,
+          "step": 3,
+          "valid_targets": 3259,
+          "wall_ns": 2778017861
+        }
+      ],
+      "timed_steps": 2,
+      "total_wall_ns": 9234636614,
+      "warmup_steps": 1
+    },
+    {
+      "arm": "original",
+      "config_sha256": "3d7b4e4e3ce976004df88e78b8588456c974b40a38e57f8cba79583f1f3695d0",
+      "cpu_time_over_wall": 1.0273865370224646,
+      "final_state_sha256": "93e1235163a7b1386f6166522059a7538215deb5749deb2ccadf7dea8d4e5d40",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_grad_norms": true,
+        "all_finite_losses": true,
+        "total_raw_targets": 6357,
+        "total_valid_targets": 6419
+      },
+      "parameter_count": 170233600,
+      "peak_cuda_allocated_bytes": 3471797248,
+      "peak_cuda_reserved_bytes": 4294967296,
+      "phase_sums": {
+        "backward_cuda_event_ns": 3481563986,
+        "backward_host_ns": 3481990097,
+        "cpu_batch_prepare_ns": 4099876,
+        "forward_cuda_event_ns": 2575539208,
+        "forward_host_ns": 2575991657,
+        "h2d_ns": 1647864,
+        "non_compute_ns_proxy": 61360547,
+        "optimizer_ns": 44978270,
+        "wall_ns": 6118463741
+      },
+      "process_cpu_ns": 9941196539,
+      "repetition": 1,
+      "schema_version": "crucible-cross-gpu-4090-validation-v1-20261020",
+      "seed": 42,
+      "telemetry": true,
+      "telemetry_finalize_ns": 3335309,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 1750917934,
+          "backward_host_ns": 1751146796,
+          "cpu_batch_prepare_ns": 2168412,
+          "forward_cuda_event_ns": 1297037335,
+          "forward_host_ns": 1297269388,
+          "grad_norm": 1.9018609523773193,
+          "h2d_ns": 914040,
+          "loss_values": [
+            0.6166610717773438,
+            0.6652647256851196,
+            0.5517311692237854,
+            0.545359194278717,
+            0.6433725953102112,
+            0.5200990438461304,
+            0.6954830288887024,
+            0.4035210609436035
+          ],
+          "microbatches": 8,
+          "non_compute_ns_proxy": 31073823,
+          "optimizer_ns": 22641925,
+          "phase": "timed",
+          "raw_targets": 3129,
+          "source_bytes": 3129,
+          "step": 2,
+          "valid_targets": 3160,
+          "wall_ns": 3079029092
+        },
+        {
+          "backward_cuda_event_ns": 1730646052,
+          "backward_host_ns": 1730843301,
+          "cpu_batch_prepare_ns": 1931464,
+          "forward_cuda_event_ns": 1278501873,
+          "forward_host_ns": 1278722269,
+          "grad_norm": 1.5209482908248901,
+          "h2d_ns": 733824,
+          "loss_values": [
+            0.48088499903678894,
+            0.5109909176826477,
+            0.4836214780807495,
+            0.500403106212616,
+            0.4680686295032501,
+            0.5462207198143005,
+            0.5910595059394836,
+            0.45598679780960083
+          ],
+          "microbatches": 8,
+          "non_compute_ns_proxy": 30286724,
+          "optimizer_ns": 22336345,
+          "phase": "timed",
+          "raw_targets": 3228,
+          "source_bytes": 3228,
+          "step": 3,
+          "valid_targets": 3259,
+          "wall_ns": 3039434649
+        }
+      ],
+      "timed_steps": 2,
+      "total_wall_ns": 9676198958,
+      "warmup_steps": 1
+    },
+    {
+      "arm": "grouped_rank_preserving",
+      "config_sha256": "3d7b4e4e3ce976004df88e78b8588456c974b40a38e57f8cba79583f1f3695d0",
+      "cpu_time_over_wall": 1.0434786582712068,
+      "final_state_sha256": "93e1235163a7b1386f6166522059a7538215deb5749deb2ccadf7dea8d4e5d40",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_grad_norms": true,
+        "all_finite_losses": true,
+        "total_raw_targets": 6357,
+        "total_valid_targets": 6419
+      },
+      "parameter_count": 170233600,
+      "peak_cuda_allocated_bytes": 3471512576,
+      "peak_cuda_reserved_bytes": 4294967296,
+      "phase_sums": {
+        "backward_cuda_event_ns": 2420200659,
+        "backward_host_ns": 2420592157,
+        "cpu_batch_prepare_ns": 3911907,
+        "forward_cuda_event_ns": 1573138480,
+        "forward_host_ns": 1573584618,
+        "h2d_ns": 1552331,
+        "non_compute_ns_proxy": 59802712,
+        "optimizer_ns": 44773993,
+        "wall_ns": 4053141851
+      },
+      "process_cpu_ns": 6738938675,
+      "repetition": 1,
+      "schema_version": "crucible-cross-gpu-4090-validation-v1-20261020",
+      "seed": 42,
+      "telemetry": false,
+      "telemetry_finalize_ns": 0,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 1211405834,
+          "backward_host_ns": 1211608401,
+          "cpu_batch_prepare_ns": 2030745,
+          "forward_cuda_event_ns": 801879031,
+          "forward_host_ns": 802104732,
+          "grad_norm": 1.9018609523773193,
+          "h2d_ns": 836187,
+          "loss_values": [
+            0.6166610717773438,
+            0.6652647256851196,
+            0.5517311692237854,
+            0.545359194278717,
+            0.6433725953102112,
+            0.5200990438461304,
+            0.6954830288887024,
+            0.4035210609436035
+          ],
+          "microbatches": 8,
+          "non_compute_ns_proxy": 30185986,
+          "optimizer_ns": 22462969,
+          "phase": "timed",
+          "raw_targets": 3129,
+          "source_bytes": 3129,
+          "step": 2,
+          "valid_targets": 3160,
+          "wall_ns": 2043470851
+        },
+        {
+          "backward_cuda_event_ns": 1208794825,
+          "backward_host_ns": 1208983756,
+          "cpu_batch_prepare_ns": 1881162,
+          "forward_cuda_event_ns": 771259449,
+          "forward_host_ns": 771479886,
+          "grad_norm": 1.5209482908248901,
+          "h2d_ns": 716144,
+          "loss_values": [
+            0.48088499903678894,
+            0.5109909176826477,
+            0.4836214780807495,
+            0.500403106212616,
+            0.4680686295032501,
+            0.5462207198143005,
+            0.5910595059394836,
+            0.45598679780960083
+          ],
+          "microbatches": 8,
+          "non_compute_ns_proxy": 29616726,
+          "optimizer_ns": 22311024,
+          "phase": "timed",
+          "raw_targets": 3228,
+          "source_bytes": 3228,
+          "step": 3,
+          "valid_targets": 3259,
+          "wall_ns": 2009671000
+        }
+      ],
+      "timed_steps": 2,
+      "total_wall_ns": 6458147104,
+      "warmup_steps": 1
+    },
+    {
+      "arm": "grouped_rank_preserving",
+      "config_sha256": "3d7b4e4e3ce976004df88e78b8588456c974b40a38e57f8cba79583f1f3695d0",
+      "cpu_time_over_wall": 1.0274465350479647,
+      "final_state_sha256": "93e1235163a7b1386f6166522059a7538215deb5749deb2ccadf7dea8d4e5d40",
+      "initial_state_sha256": "e99d193d671ef4080042285077bdff1dea4e752853bc06d69e296215345133ad",
+      "numerical": {
+        "all_finite_grad_norms": true,
+        "all_finite_losses": true,
+        "total_raw_targets": 6357,
+        "total_valid_targets": 6419
+      },
+      "parameter_count": 170233600,
+      "peak_cuda_allocated_bytes": 3471797248,
+      "peak_cuda_reserved_bytes": 4294967296,
+      "phase_sums": {
+        "backward_cuda_event_ns": 2498640892,
+        "backward_host_ns": 2499066567,
+        "cpu_batch_prepare_ns": 4473119,
+        "forward_cuda_event_ns": 2111316901,
+        "forward_host_ns": 2111775651,
+        "h2d_ns": 1709807,
+        "non_compute_ns_proxy": 62219250,
+        "optimizer_ns": 45493256,
+        "wall_ns": 4672177043
+      },
+      "process_cpu_ns": 7734492865,
+      "repetition": 1,
+      "schema_version": "crucible-cross-gpu-4090-validation-v1-20261020",
+      "seed": 42,
+      "telemetry": true,
+      "telemetry_finalize_ns": 2543234,
+      "timed_records": [
+        {
+          "backward_cuda_event_ns": 1256395305,
+          "backward_host_ns": 1256611631,
+          "cpu_batch_prepare_ns": 2510982,
+          "forward_cuda_event_ns": 1063799778,
+          "forward_host_ns": 1064042519,
+          "grad_norm": 1.9018609523773193,
+          "h2d_ns": 926941,
+          "loss_values": [
+            0.6166610717773438,
+            0.6652647256851196,
+            0.5517311692237854,
+            0.545359194278717,
+            0.6433725953102112,
+            0.5200990438461304,
+            0.6954830288887024,
+            0.4035210609436035
+          ],
+          "microbatches": 8,
+          "non_compute_ns_proxy": 31249388,
+          "optimizer_ns": 22421847,
+          "phase": "timed",
+          "raw_targets": 3129,
+          "source_bytes": 3129,
+          "step": 2,
+          "valid_targets": 3160,
+          "wall_ns": 2351444471
+        },
+        {
+          "backward_cuda_event_ns": 1242245587,
+          "backward_host_ns": 1242454936,
+          "cpu_batch_prepare_ns": 1962137,
+          "forward_cuda_event_ns": 1047517123,
+          "forward_host_ns": 1047733132,
+          "grad_norm": 1.5209482908248901,
+          "h2d_ns": 782866,
+          "loss_values": [
+            0.48088499903678894,
+            0.5109909176826477,
+            0.4836214780807495,
+            0.500403106212616,
+            0.4680686295032501,
+            0.5462207198143005,
+            0.5910595059394836,
+            0.45598679780960083
+          ],
+          "microbatches": 8,
+          "non_compute_ns_proxy": 30969862,
+          "optimizer_ns": 23071409,
+          "phase": "timed",
+          "raw_targets": 3228,
+          "source_bytes": 3228,
+          "step": 3,
+          "valid_targets": 3259,
+          "wall_ns": 2320732572
+        }
+      ],
+      "timed_steps": 2,
+      "total_wall_ns": 7527878679,
+      "warmup_steps": 1
+    }
+  ],
+  "schedule_report": {
+    "batches": 25987,
+    "examples": 100000,
+    "path": "/workspace/crucible_cross_gpu_4090_v1_20261020/context_128/crucible_manifest/schedule_seed_42.json",
+    "permutation_sha256": "835c5ee000222e6a3582ce071559fb465e76b80668f6e4814cada6eb733865b6",
+    "seed": 42,
+    "sha256": "ec449a68230663f06d57589aa744626d596c5efaf1ba43c1b57fc5bb0cb32879",
+    "source_bytes": 9856480,
+    "steps": 3125
+  },
+  "schema_version": "crucible-v2-production-telemetry-overhead-summary-20261019",
+  "source_report": {
+    "count": 100000,
+    "path": "/workspace/crucible_cross_gpu_4090_v1_20261020/context_128/crucible_manifest/../source/packed_train.jsonl",
+    "sha256": "dca93acdadec204409f7312b6b5b6ea4897bdd846bbd4eb9a62c71b8dce36cce",
+    "source_bytes": 9856480,
+    "validation_ns": 1476018447
+  },
+  "torch_version": "2.8.0+cu128"
+}

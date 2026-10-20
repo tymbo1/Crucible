@@ -1,0 +1,142 @@
+{
+  "anchor_sha256": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+  "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+  "context_root": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128",
+  "cuda_runtime": "13.0",
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "interpretation_limits": [
+    "This is a dispatch-only control using real frozen E16 expert weights, not a full transformer training benchmark.",
+    "The grouped arms are compared for execution behavior; only rank-preserving arms retain the strict numerical contract."
+  ],
+  "parameters": {
+    "d_model": 256,
+    "num_experts": 16,
+    "seed": 42,
+    "timed": 8,
+    "token_count": 2048,
+    "top_k": 2,
+    "warmup": 2
+  },
+  "reports": {
+    "balanced": {
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0029296875,
+          "mean_backward_cuda_ns": 5406503.375,
+          "mean_backward_host_ns": 5423937.75,
+          "mean_forward_cuda_ns": 4031871.5,
+          "mean_forward_host_ns": 4049911.125
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3964387.625,
+          "mean_backward_host_ns": 3981728.875,
+          "mean_forward_cuda_ns": 5735907.5,
+          "mean_forward_host_ns": 5753795.75
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 3971087.75,
+          "mean_backward_host_ns": 3988151.25,
+          "mean_forward_cuda_ns": 5820583.5,
+          "mean_forward_host_ns": 5837984.375
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5581491.625,
+          "mean_backward_host_ns": 5599344.625,
+          "mean_forward_cuda_ns": 9403247.375,
+          "mean_forward_host_ns": 9421176.5
+        }
+      },
+      "workload": {
+        "counts": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "max": 256,
+        "max_min_ratio": 1.0,
+        "min": 256
+      }
+    },
+    "imbalanced": {
+      "variants": {
+        "batched_padded": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.002685546875,
+          "mean_backward_cuda_ns": 17300943.25,
+          "mean_backward_host_ns": 17318994.875,
+          "mean_forward_cuda_ns": 15078851.375,
+          "mean_forward_host_ns": 15097287.25
+        },
+        "grouped_rank_preserving": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5120552.0,
+          "mean_backward_host_ns": 5137732.125,
+          "mean_forward_cuda_ns": 5844435.375,
+          "mean_forward_host_ns": 5862210.5
+        },
+        "grouped_sorted": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5359067.5,
+          "mean_backward_host_ns": 5376310.5,
+          "mean_forward_cuda_ns": 5923087.375,
+          "mean_forward_host_ns": 5940731.375
+        },
+        "original": {
+          "losses_finite": true,
+          "max_forward_abs_delta_vs_original": 0.0,
+          "mean_backward_cuda_ns": 5864767.5,
+          "mean_backward_host_ns": 5882069.25,
+          "mean_forward_cuda_ns": 9253891.375,
+          "mean_forward_host_ns": 9271235.75
+        }
+      },
+      "workload": {
+        "counts": [
+          1638,
+          1638,
+          59,
+          59,
+          59,
+          59,
+          59,
+          59,
+          59,
+          59,
+          58,
+          58,
+          58,
+          58,
+          58,
+          58
+        ],
+        "max": 1638,
+        "max_min_ratio": 28.24137931034483,
+        "min": 58
+      }
+    }
+  },
+  "schema_version": "gpu-neural-ssre-v1-dispatch-fixtures-20261018",
+  "torch_version": "2.12.0+cu130"
+}

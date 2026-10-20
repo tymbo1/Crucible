@@ -1,0 +1,144 @@
+{
+  "config_path": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest/experiment_config.json",
+  "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+  "cross_variant_terminal_hashes": {
+    "1337": {
+      "gradient_sha256": true,
+      "model_state_sha256": true,
+      "optimizer_state_sha256": true
+    },
+    "42": {
+      "gradient_sha256": true,
+      "model_state_sha256": true,
+      "optimizer_state_sha256": true
+    }
+  },
+  "deterministic_settings": {
+    "flash_sdp": false,
+    "math_sdp": true,
+    "mem_efficient_sdp": false,
+    "torch_use_deterministic_algorithms": true,
+    "warn_only": false
+  },
+  "interpretation": {
+    "cross_variant_equal_through_prefix": true,
+    "reproducible_grouped": true,
+    "reproducible_original": true
+  },
+  "max_steps": 25,
+  "repetitions_per_variant": 2,
+  "runs": {
+    "grouped_rank_preserving": [
+      {
+        "metrics_path": "/home/timbushnell/crucible_v2_sustained_validation_20261018/prefix_25_strict_no_telemetry_20261018/grouped_rank_preserving/repeat_1/metrics.jsonl",
+        "metrics_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "repetition": 1,
+        "runtime": [
+          {
+            "gradient_sha256": "9e1954c8162c0a070c6904aff81f7d0be3f7e331cbabe2a561f45e7edc1d8934",
+            "model_state_sha256": "1b2c5dfffd49e3f3c2fd23fb54c7ea33e15ed4ad8a9ca1e2ea97ffcb50792d2b",
+            "optimizer_state_sha256": "addcc7d70f2ae6edddd8245e679751ed3615ccc2c7e92bb6debba7c6895863a8",
+            "seed": 42
+          },
+          {
+            "gradient_sha256": "0868ffad1a1ebf53ba9406cb0b5dbfcf519f093787f40e3ac5a34981a5cb0861",
+            "model_state_sha256": "31656320f39d7fb8dda093e83531e8fbc545385dab045f91aba5ae5ab5397944",
+            "optimizer_state_sha256": "0180f366b70ac9861b7a60d19d2c1cd8a1953236772f6db744ae1f159cf9856a",
+            "seed": 1337
+          }
+        ]
+      },
+      {
+        "metrics_path": "/home/timbushnell/crucible_v2_sustained_validation_20261018/prefix_25_strict_no_telemetry_20261018/grouped_rank_preserving/repeat_2/metrics.jsonl",
+        "metrics_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "repetition": 2,
+        "runtime": [
+          {
+            "gradient_sha256": "9e1954c8162c0a070c6904aff81f7d0be3f7e331cbabe2a561f45e7edc1d8934",
+            "model_state_sha256": "1b2c5dfffd49e3f3c2fd23fb54c7ea33e15ed4ad8a9ca1e2ea97ffcb50792d2b",
+            "optimizer_state_sha256": "addcc7d70f2ae6edddd8245e679751ed3615ccc2c7e92bb6debba7c6895863a8",
+            "seed": 42
+          },
+          {
+            "gradient_sha256": "0868ffad1a1ebf53ba9406cb0b5dbfcf519f093787f40e3ac5a34981a5cb0861",
+            "model_state_sha256": "31656320f39d7fb8dda093e83531e8fbc545385dab045f91aba5ae5ab5397944",
+            "optimizer_state_sha256": "0180f366b70ac9861b7a60d19d2c1cd8a1953236772f6db744ae1f159cf9856a",
+            "seed": 1337
+          }
+        ]
+      }
+    ],
+    "original": [
+      {
+        "metrics_path": "/home/timbushnell/crucible_v2_sustained_validation_20261018/prefix_25_strict_no_telemetry_20261018/original/repeat_1/metrics.jsonl",
+        "metrics_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "repetition": 1,
+        "runtime": [
+          {
+            "gradient_sha256": "9e1954c8162c0a070c6904aff81f7d0be3f7e331cbabe2a561f45e7edc1d8934",
+            "model_state_sha256": "1b2c5dfffd49e3f3c2fd23fb54c7ea33e15ed4ad8a9ca1e2ea97ffcb50792d2b",
+            "optimizer_state_sha256": "addcc7d70f2ae6edddd8245e679751ed3615ccc2c7e92bb6debba7c6895863a8",
+            "seed": 42
+          },
+          {
+            "gradient_sha256": "0868ffad1a1ebf53ba9406cb0b5dbfcf519f093787f40e3ac5a34981a5cb0861",
+            "model_state_sha256": "31656320f39d7fb8dda093e83531e8fbc545385dab045f91aba5ae5ab5397944",
+            "optimizer_state_sha256": "0180f366b70ac9861b7a60d19d2c1cd8a1953236772f6db744ae1f159cf9856a",
+            "seed": 1337
+          }
+        ]
+      },
+      {
+        "metrics_path": "/home/timbushnell/crucible_v2_sustained_validation_20261018/prefix_25_strict_no_telemetry_20261018/original/repeat_2/metrics.jsonl",
+        "metrics_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "repetition": 2,
+        "runtime": [
+          {
+            "gradient_sha256": "9e1954c8162c0a070c6904aff81f7d0be3f7e331cbabe2a561f45e7edc1d8934",
+            "model_state_sha256": "1b2c5dfffd49e3f3c2fd23fb54c7ea33e15ed4ad8a9ca1e2ea97ffcb50792d2b",
+            "optimizer_state_sha256": "addcc7d70f2ae6edddd8245e679751ed3615ccc2c7e92bb6debba7c6895863a8",
+            "seed": 42
+          },
+          {
+            "gradient_sha256": "0868ffad1a1ebf53ba9406cb0b5dbfcf519f093787f40e3ac5a34981a5cb0861",
+            "model_state_sha256": "31656320f39d7fb8dda093e83531e8fbc545385dab045f91aba5ae5ab5397944",
+            "optimizer_state_sha256": "0180f366b70ac9861b7a60d19d2c1cd8a1953236772f6db744ae1f159cf9856a",
+            "seed": 1337
+          }
+        ]
+      }
+    ]
+  },
+  "schema_version": "crucible-v2-prefix-reproducibility-20261018",
+  "telemetry": "disabled for this isolated execution diagnostic",
+  "variants": [
+    "original",
+    "grouped_rank_preserving"
+  ],
+  "within_variant_reproducibility": {
+    "grouped_rank_preserving": {
+      "1337": {
+        "gradient_sha256": true,
+        "model_state_sha256": true,
+        "optimizer_state_sha256": true
+      },
+      "42": {
+        "gradient_sha256": true,
+        "model_state_sha256": true,
+        "optimizer_state_sha256": true
+      }
+    },
+    "original": {
+      "1337": {
+        "gradient_sha256": true,
+        "model_state_sha256": true,
+        "optimizer_state_sha256": true
+      },
+      "42": {
+        "gradient_sha256": true,
+        "model_state_sha256": true,
+        "optimizer_state_sha256": true
+      }
+    }
+  }
+}

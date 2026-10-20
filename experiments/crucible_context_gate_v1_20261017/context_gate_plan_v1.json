@@ -1,0 +1,96 @@
+{
+  "protocol": "crucible_context_gate_v1",
+  "status": "staged_not_frozen",
+  "training_started": false,
+  "reference": {
+    "variant": "matched_active_e16",
+    "context_length": 128,
+    "manifest_path": "/home/timbushnell/crucible_sparse_capacity_gate_v1_20261017/matched_active_e16/crucible_manifest/experiment_config.json",
+    "manifest_sha256": "1a3f760043a06d0b98e17d41bf4bb49b079855831dbf2585a4b7747423ead5ab",
+    "model_core_sha256": "271cfde17e073077947a3540c1d41fdcbe382309fa1021d89d42307a9a5cd6ab",
+    "num_experts": 16,
+    "top_k": 2,
+    "d_ff": 3447,
+    "train_examples": 100000,
+    "validation_examples": 5000,
+    "train_source_bytes": 9856480,
+    "validation_source_bytes": 493539,
+    "train_nonpad_target_tokens": 9956480,
+    "validation_nonpad_target_tokens": 498539,
+    "effective_batch_size": 32,
+    "optimizer_updates": 3125
+  },
+  "comparison_contract": {
+    "architectural_change": "context length only",
+    "expert_geometry_frozen": true,
+    "branch": "B",
+    "peak_learning_rate": 0.0003,
+    "seeds": [42, 1337],
+    "budget_basis": "raw_utf8_source_bytes",
+    "budget_target_train_bytes": 9856480,
+    "budget_target_validation_bytes": 493539,
+    "train_count_multiple": 32,
+    "source_split_preserved": true,
+    "max_source_bytes": "context_length - 1",
+    "packing": "greedy consecutive sentence/phrase units within one story; final short tail merged backward when it fits",
+    "provenance": "one JSONL sidecar record per selected example",
+    "no_training_in_this_stage": true
+  },
+  "conditions": {
+    "context_256": {
+      "context_length": 256,
+      "max_source_bytes": 255,
+      "preferred_floor_bytes": 192,
+      "staging_root": "staging_raw_budget/context_256",
+      "statistics_sha256": "bc38b5aa069fb70b68b747a8ec0ce6c3e1e2abc0b51a28bb4c1ca09649285628",
+      "verification_sha256": "b195d7f02995d01966ffe6c15be5c1388d16dae7e342f3a4cb0f7b55af07210e",
+      "train_examples": 47584,
+      "validation_examples": 2389,
+      "train_source_bytes": 9857821,
+      "validation_source_bytes": 493550,
+      "train_nonpad_target_tokens": 9905405,
+      "validation_nonpad_target_tokens": 495939,
+      "train_jsonl_sha256": "2ef7d589a76455ef524ca03bd564fc1c9f384c90d14884a6cbbd6137b4649c84",
+      "validation_jsonl_sha256": "c9e072545e0435ca8baefc9a6c578dba093ba68ae80684d88bda510d4bd345da",
+      "train_provenance_sha256": "2a374b988784c81b904260ee3ce4771084465cb34e104c55ca2d9e66e9b27c86",
+      "validation_provenance_sha256": "639184df78a34f90886a9552ad6c34fb1093975f133b7082a614ec92aeb736e7",
+      "cross_split_exact_duplicates": 0,
+      "truncation_count": 0
+    },
+    "context_512": {
+      "context_length": 512,
+      "max_source_bytes": 511,
+      "preferred_floor_bytes": 384,
+      "staging_root": "staging_raw_budget/context_512",
+      "statistics_sha256": "cc9d3865d61d49a0eddedac26d3566eaed2fb7d1a9e30a939bd35a462a2e5652",
+      "verification_sha256": "4dec7191e90ae1103f4b01ea443b18e28aac4bd2e0a1aa86bbd270815ab13dff",
+      "train_examples": 26432,
+      "validation_examples": 1324,
+      "train_source_bytes": 9859236,
+      "validation_source_bytes": 493372,
+      "train_nonpad_target_tokens": 9885668,
+      "validation_nonpad_target_tokens": 494696,
+      "train_jsonl_sha256": "8bc1fdcadb8416b078ee72b61f4c3cf20b8fe618a4ec3711063c1293c68743a4",
+      "validation_jsonl_sha256": "088e2a4ce9ffb1167224841dd3fa711363e5b4832fa23157f97afecdcff1f30d",
+      "train_provenance_sha256": "96c4b17d1f3eed4d1947746de8a588a5b3aacd9c23b5297a242c0dfda10162b3",
+      "validation_provenance_sha256": "b61397f27bf421a8dcc4e7e3e9491c23c274f2cfaa076875d9c2e0e0f133786f",
+      "cross_split_exact_duplicates": 0,
+      "truncation_count": 0
+    }
+  },
+  "builder": {
+    "path": "build/prepare_context_corpus.py",
+    "sha256": "5c457482c376a7e54815ffa97bf2c7ca7bb491208df343a188973b6f96ea79b3"
+  },
+  "verifier": {
+    "path": "build/verify_context_staging.py",
+    "sha256": "1a896d3ff2bce284d124e16c522bf8f8e29e77efa3a86b48dc36f6391c1b03e7"
+  },
+  "source": {
+    "train_sha256": "6418d412de72888f52b5142c761ac21a582f7d1166f0bfbdb5f03ccfdec90443",
+    "validation_sha256": "6874bae9a4c1a4e7edcf0e53b86c17817e9cf881fc75ff2368da457b80c0585d",
+    "upstream_repository": "roneneldan/TinyStories",
+    "upstream_revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+    "license": "cdla-sharing-1.0"
+  }
+}

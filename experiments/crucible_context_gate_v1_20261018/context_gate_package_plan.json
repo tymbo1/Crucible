@@ -1,0 +1,95 @@
+{
+  "compiler_sha256": "9eea6c8602fcd8ba045a49830ae80b269969121721e14898de3ffae95d9258dc",
+  "model_core_sha256": "271cfde17e073077947a3540c1d41fdcbe382309fa1021d89d42307a9a5cd6ab",
+  "protocol": "crucible_context_gate_v1",
+  "runner_sha256": "948fe1ba2b466b8ddbd55d67e32890314407ba6b3d413b250c2faa756f9a335b",
+  "source_e16_manifest_sha256": "1a3f760043a06d0b98e17d41bf4bb49b079855831dbf2585a4b7747423ead5ab",
+  "training_started": false,
+  "variants": [
+    {
+      "context": 128,
+      "manifest_dir": "/home/timbushnell/crucible_context_gate_v1_20261018/context_128/crucible_manifest",
+      "manifest_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "reused_existing": true,
+      "schedule_summaries": {
+        "1337": {
+          "max_examples": 37,
+          "max_source_bytes": 3279,
+          "mean_examples": 32.0,
+          "mean_source_bytes": 3154.0736,
+          "min_examples": 28,
+          "min_source_bytes": 3034
+        },
+        "42": {
+          "max_examples": 37,
+          "max_source_bytes": 3270,
+          "mean_examples": 32.0,
+          "mean_source_bytes": 3154.0736,
+          "min_examples": 28,
+          "min_source_bytes": 3038
+        }
+      },
+      "train_examples": 100000,
+      "train_source_bytes": 9856480,
+      "validation_examples": 5000,
+      "validation_source_bytes": 493539,
+      "variant_id": "context_128"
+    },
+    {
+      "context": 256,
+      "manifest_dir": "/home/timbushnell/crucible_context_gate_v1_20261018/context_256/crucible_manifest",
+      "manifest_sha256": "43e23eb51466f3b00e53efe74756a512fefb0d63a7d5f995496504b03b3cc1bc",
+      "schedule_summaries": {
+        "1337": {
+          "max_examples": 19,
+          "max_source_bytes": 3394,
+          "mean_examples": 15.22688,
+          "mean_source_bytes": 3154.50272,
+          "min_examples": 13,
+          "min_source_bytes": 2929
+        },
+        "42": {
+          "max_examples": 20,
+          "max_source_bytes": 3395,
+          "mean_examples": 15.22688,
+          "mean_source_bytes": 3154.50272,
+          "min_examples": 13,
+          "min_source_bytes": 2919
+        }
+      },
+      "train_examples": 47584,
+      "train_source_bytes": 9857821,
+      "validation_examples": 2389,
+      "validation_source_bytes": 493550,
+      "variant_id": "context_256"
+    },
+    {
+      "context": 512,
+      "manifest_dir": "/home/timbushnell/crucible_context_gate_v1_20261018/context_512/crucible_manifest",
+      "manifest_sha256": "3c12c9992df2af799369b7ce86cd9f61068d681b779cf8041ef6631996092980",
+      "schedule_summaries": {
+        "1337": {
+          "max_examples": 14,
+          "max_source_bytes": 3647,
+          "mean_examples": 8.45824,
+          "mean_source_bytes": 3154.95552,
+          "min_examples": 6,
+          "min_source_bytes": 2655
+        },
+        "42": {
+          "max_examples": 14,
+          "max_source_bytes": 3640,
+          "mean_examples": 8.45824,
+          "mean_source_bytes": 3154.95552,
+          "min_examples": 6,
+          "min_source_bytes": 2678
+        }
+      },
+      "train_examples": 26432,
+      "train_source_bytes": 9859236,
+      "validation_examples": 1324,
+      "validation_source_bytes": 493372,
+      "variant_id": "context_512"
+    }
+  ]
+}

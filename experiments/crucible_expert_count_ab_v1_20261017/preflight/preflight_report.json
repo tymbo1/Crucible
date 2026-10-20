@@ -1,0 +1,54 @@
+{
+  "device": "cuda",
+  "full_training_started": false,
+  "model_core_sha256": "0c5fe5f53663f6feca5938b3aaf6906d45ac786a7491c73535655ea9dae6bba3",
+  "protocol": "crucible_expert_count_preflight_v1",
+  "runner_sha256": "359febc034e9cfb5881b7f5d311886b7f6adf8e8a7f8c3dc6ace61ee22cc3046",
+  "variants": [
+    {
+      "full_training_started": false,
+      "log_sha256": "cfb82e077a98fb04db3945e2f68e63d8ac05a4d5fc9f73efd285882082d13fc9",
+      "metrics_sha256": "2bd14570cd95c144eaf29990cec822f880f12b5ecbda706eb51472769b871039",
+      "parameter_count": 43148032,
+      "preflight_steps": 100,
+      "rows": 2,
+      "variant_id": "fixed_total_e1"
+    },
+    {
+      "full_training_started": false,
+      "log_sha256": "64a86ab8acf85e13b81f718303d107d7f882fe983341e3a5f9a02a048f490b4c",
+      "metrics_sha256": "893b5c4423fc6f1935af2ba431784db81ad5800d2bb12bb2546f0fa9fd045c36",
+      "parameter_count": 43149056,
+      "preflight_steps": 100,
+      "rows": 2,
+      "variant_id": "fixed_total_e2"
+    },
+    {
+      "full_training_started": false,
+      "log_sha256": "16373af9fc4c0ad375ae09d89b013dc661163500a7d551e5d82b79a51cf102e5",
+      "metrics_sha256": "af476535371d364803a3e4049fc5ccc37a1b33544cb6fcc8e22077521e1cd36f",
+      "parameter_count": 43151104,
+      "preflight_steps": 100,
+      "rows": 2,
+      "variant_id": "reference_e4"
+    },
+    {
+      "full_training_started": false,
+      "log_sha256": "7ca652d3c36d813f3de3a55a33a6f048d120f7bf985e5d2cfa89f74c4b8c1a0f",
+      "metrics_sha256": "7247b339821c50c77be330ff71b284c1f78aa822e06f14b381857577c565f93b",
+      "parameter_count": 21969664,
+      "preflight_steps": 100,
+      "rows": 2,
+      "variant_id": "fixed_active_e1"
+    },
+    {
+      "full_training_started": false,
+      "log_sha256": "fd9b6130bb28f690f296062c711e05429a54d58608b3f1ec11d0ef4bcdce6aa3",
+      "metrics_sha256": "273a7f418567e5eb6f0c93c12c29747c86e3dabfcb03350788a92e40a188ff2b",
+      "parameter_count": 21970688,
+      "preflight_steps": 100,
+      "rows": 2,
+      "variant_id": "fixed_active_e2"
+    }
+  ]
+}

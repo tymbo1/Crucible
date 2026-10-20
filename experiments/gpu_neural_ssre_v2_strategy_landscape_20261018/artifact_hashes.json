@@ -1,0 +1,29 @@
+{
+  "generated_artifacts": {
+    "MEASUREMENT_PROTOCOL.md": "e1adb3c1000addaf0f69eb4ac91a8b447bc2c11c45b2efb19815138915a58d71",
+    "README.md": "ded4b98bbf7c4ee4af87e72b76876c20f4ef00d7ada17cf8468c4f12a1e16914",
+    "RESULTS_SUMMARY.md": "8489c4ebafe65206088e7ddb63d6364bc1be2cbf5988de86482f24e3a3f098ca",
+    "dispatch_strategy_landscape.py": "fa5a4c98e6bbcafe7efed1f2256b1e0742a15f83d51afda2dbbdc139a9c9ab6d",
+    "strategy_landscape_benchmark.py": "d81fbb7a990ad9e64d16cb8cbd6e1d68d4cb6de784e92088d5940b0970c32d4f",
+    "preflight_full_model_20261018/strategy_landscape_summary.json": "45f254aa7058caf46379e7b30c5f6b1259456a6e555c20340de8d4c9db7af3c1",
+    "preflight_full_model_20261018/strategy_landscape_output_hashes.json": "0cc07e93422872ec3c7b192b1ccd6c29107ddf60c7669099261cc75782693d3a",
+    "preflight_dispatch_20261018/dispatch_strategy_landscape_summary.json": "1b6a29afff046915fb4388ffaee081562d19a431577cfed7c6243cedd2787366",
+    "preflight_dispatch_20261018/dispatch_strategy_landscape_hashes.json": "8a2214422cad8d41a95feb762cabf1c2ab3de5b746e802ba94767aa110d628bd",
+    "full_model_20261018/strategy_landscape_summary.json": "d5fc0fcd51a18c0da8de6e6b08a44d04b83edc686c3cb61e753e6a68c7d041cf",
+    "full_model_20261018/strategy_landscape_output_hashes.json": "45162261a2cc2d0b6beb33734bac7e27718b103d4bdaefecbe21aa1269f6ebbf",
+    "full_dispatch_20261018/dispatch_strategy_landscape_summary.json": "09f28e8582294a5e9ea88553ebcfb3dd113a2b4de757d143c29b7e3cb5161c5e",
+    "full_dispatch_20261018/dispatch_strategy_landscape_hashes.json": "f61cec6cadb96392672b75d5f607321f7ca2e253235299ff5015081ba895491e",
+    "full_dispatch_repeat2_20261018/dispatch_strategy_landscape_summary.json": "6f069284eb5edbab9bc27b03206eca00b5bba84a79698b276b73e5ddfd6ef7fe",
+    "full_dispatch_repeat2_20261018/dispatch_strategy_landscape_hashes.json": "97b8b87ebfe1819c6964ae579cf37da3e266c4ee31eab42375b65bf22c85a46e"
+  },
+  "read_only_inputs": {
+    "v1_grouped_expert_benchmark.py": "223aa756a36235df02858ea8171a7516c2e9afbceacf4005a9c8b7b138df6b90",
+    "v4_gpu_step_benchmark.py": "be72ef9ada367da5b70c82cb51eae8a50c30c73930e13008bcc408e0743b5a50",
+    "context_128/experiment_config.json": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+    "context_128/initial_seed_anchor_42.pt": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+    "context_128/initial_seed_anchor_1337.pt": "f8481e113f6404e1e9ea623f31f7d4405d4cd80ce6977269fe6c8d77377bc42f",
+    "context_256/experiment_config.json": "43e23eb51466f3b00e53efe74756a512fefb0d63a7d5f995496504b03b3cc1bc",
+    "context_512/experiment_config.json": "3c12c9992df2af799369b7ce86cd9f61068d681b779cf8041ef6631996092980"
+  },
+  "note": "artifact_hashes.json intentionally does not contain its own digest; hash it externally when archiving the complete directory."
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "ssre_npa_v1_bounded_benchmark_artifact_hashes_v1",
+  "files": {
+    "README.md": "0a66db15daa218ca8809712ed9aaca1d963c0f4be75fd4c1594399f20206653b",
+    "BOUNDED_RESOURCE_SPEC.md": "4e19546844b124aed5a829b02fa4e9008fd76f2a6356e2b822245542d76e171a",
+    "bounded_benchmark.py": "6849ddeb1eaea1f6569057fb1be157408e48393f2aa4bb0cbaa05089bc61e6b3",
+    "RESULTS_SUMMARY.md": "10b7a530f4a1347018d0dc33480352f2df57fd3cfa61e769592c228bd0bf991c",
+    "smoke_results.json": "65b67a222a81242003b227b344e35f4b72f0a2f84108bb5e70c2d73b8dc5fb58",
+    "benchmark_results.json": "0642cd9696388ecf2c7bff320fc9252f5d4c60e25298efa1dfb330c9dc547fa0"
+  },
+  "validation": {
+    "syntax_compile": true,
+    "smoke_checks": true,
+    "full_checks": true,
+    "v0_artifact_hashes_reverified": true,
+    "cuda_used": false,
+    "model_training": false,
+    "neural_controller": false,
+    "per_core_cpu_attribution": false
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "model_core_sha256": "271cfde17e073077947a3540c1d41fdcbe382309fa1021d89d42307a9a5cd6ab",
+  "package_root": "/home/timbushnell/crucible_context_gate_v1_20261018",
+  "schema": "crucible_context_manifest_verification_v1",
+  "status": "PASS",
+  "variants": [
+    {
+      "anchors": {
+        "1337": "f8481e113f6404e1e9ea623f31f7d4405d4cd80ce6977269fe6c8d77377bc42f",
+        "42": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e"
+      },
+      "files": {
+        "crucible_manifest/experiment_config.json": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+        "crucible_manifest/initial_seed_anchor_1337.pt": "f8481e113f6404e1e9ea623f31f7d4405d4cd80ce6977269fe6c8d77377bc42f",
+        "crucible_manifest/initial_seed_anchor_42.pt": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+        "crucible_manifest/manifest_sha256.txt": "5f26ad0abf5914b4f7348268b62fef1644ddcba8412c4abc1579acab652dfaf1",
+        "crucible_manifest/schedule_seed_1337.json": "41073cb37fb568bb2211b70704bff32d56df314594f2ead2d8f344a3eaab6372",
+        "crucible_manifest/schedule_seed_42.json": "ec449a68230663f06d57589aa744626d596c5efaf1ba43c1b57fc5bb0cb32879",
+        "crucible_manifest/stories_train.bin": "c8d6056d01f91ad391dba99a1b04d48e2b300829c5e6801d910249043bbebf88",
+        "crucible_manifest/stories_validation.bin": "0f2ac7dba972bc39b13d7e0dc26d7cf29611c041bdab82956813dad4525eb731",
+        "source/packed_train.jsonl": "dca93acdadec204409f7312b6b5b6ea4897bdd846bbd4eb9a62c71b8dce36cce",
+        "source/packed_validation.jsonl": "0892f91dc2fee04619ebbd795b7da7f67a7829b9d6423eac1545c50c5512fa23",
+        "source/provenance_train.jsonl": "acad7883a82add9f089999b746bb41d1f62404b6e403e1b14bb7d2686ef915e6",
+        "source/provenance_validation.jsonl": "b8138bb91388ac22c7477c76e229a5cf5dc3a2b908227614e54d46a4390f4e58",
+        "source/source_metadata.json": "b9fdebf9f2e49fd496eea8c4e7b5a9fe94e8098928faf40c6c3c72f94523573c"
+      },
+      "manifest_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "schedules": {
+        "1337": {
+          "indices": 100000,
+          "max_step_bytes": 3279,
+          "min_step_bytes": 3034,
+          "schedule_sha256": "41073cb37fb568bb2211b70704bff32d56df314594f2ead2d8f344a3eaab6372",
+          "source_bytes": 9856480,
+          "steps": 3125
+        },
+        "42": {
+          "indices": 100000,
+          "max_step_bytes": 3270,
+          "min_step_bytes": 3038,
+          "schedule_sha256": "ec449a68230663f06d57589aa744626d596c5efaf1ba43c1b57fc5bb0cb32879",
+          "source_bytes": 9856480,
+          "steps": 3125
+        }
+      },
+      "splits": {
+        "train": {
+          "binary_sha256": "c8d6056d01f91ad391dba99a1b04d48e2b300829c5e6801d910249043bbebf88",
+          "examples": 100000,
+          "max_source_bytes": 127,
+          "nonpad_target_tokens": 9956480,
+          "provenance_records": 100000,
+          "source_bytes": 9856480
+        },
+        "validation": {
+          "binary_sha256": "0f2ac7dba972bc39b13d7e0dc26d7cf29611c041bdab82956813dad4525eb731",
+          "examples": 5000,
+          "max_source_bytes": 127,
+          "nonpad_target_tokens": 498539,
+          "provenance_records": 5000,
+          "source_bytes": 493539
+        }
+      },
+      "training_started": false,
+      "variant_id": "context_128"
+    },
+    {
+      "anchors": {
+        "1337": "f8481e113f6404e1e9ea623f31f7d4405d4cd80ce6977269fe6c8d77377bc42f",
+        "42": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e"
+      },
+      "files": {
+        "crucible_manifest/experiment_config.json": "43e23eb51466f3b00e53efe74756a512fefb0d63a7d5f995496504b03b3cc1bc",
+        "crucible_manifest/initial_seed_anchor_1337.pt": "f8481e113f6404e1e9ea623f31f7d4405d4cd80ce6977269fe6c8d77377bc42f",
+        "crucible_manifest/initial_seed_anchor_42.pt": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+        "crucible_manifest/manifest_sha256.txt": "19e2c4957facde7ce9d13e42f69ce7bdc7f3dc7cd885ac99505705fbadd08904",
+        "crucible_manifest/schedule_seed_1337.json": "5b68acffe85d0101fc26e13a0172e9bea989bffd7259195adb1f6937e66a4e41",
+        "crucible_manifest/schedule_seed_42.json": "afb8b8d6758aefbacd97ea74c36b0b24a0cde28c96c28ee31cbc514efedecb41",
+        "crucible_manifest/stories_train.bin": "22f45536af1cb57992a72255bda48538eff9da6914f4422b752cb8b0a8b23589",
+        "crucible_manifest/stories_validation.bin": "0781d69ad906cc3d21a788dfd61f6456a1e7b0b94b99399749546e22590058b7",
+        "source/packed_train.jsonl": "2ef7d589a76455ef524ca03bd564fc1c9f384c90d14884a6cbbd6137b4649c84",
+        "source/packed_validation.jsonl": "c9e072545e0435ca8baefc9a6c578dba093ba68ae80684d88bda510d4bd345da",
+        "source/provenance_train.jsonl": "2a374b988784c81b904260ee3ce4771084465cb34e104c55ca2d9e66e9b27c86",
+        "source/provenance_validation.jsonl": "639184df78a34f90886a9552ad6c34fb1093975f133b7082a614ec92aeb736e7",
+        "source/source_metadata.json": "4eb80a9eb3dbe569109a57987d4bd6de1f7cbf86fbc705492de64e0675407441"
+      },
+      "manifest_sha256": "43e23eb51466f3b00e53efe74756a512fefb0d63a7d5f995496504b03b3cc1bc",
+      "schedules": {
+        "1337": {
+          "indices": 47584,
+          "max_step_bytes": 3394,
+          "min_step_bytes": 2929,
+          "schedule_sha256": "5b68acffe85d0101fc26e13a0172e9bea989bffd7259195adb1f6937e66a4e41",
+          "source_bytes": 9857821,
+          "steps": 3125
+        },
+        "42": {
+          "indices": 47584,
+          "max_step_bytes": 3395,
+          "min_step_bytes": 2919,
+          "schedule_sha256": "afb8b8d6758aefbacd97ea74c36b0b24a0cde28c96c28ee31cbc514efedecb41",
+          "source_bytes": 9857821,
+          "steps": 3125
+        }
+      },
+      "splits": {
+        "train": {
+          "binary_sha256": "22f45536af1cb57992a72255bda48538eff9da6914f4422b752cb8b0a8b23589",
+          "examples": 47584,
+          "max_source_bytes": 255,
+          "nonpad_target_tokens": 9905405,
+          "provenance_records": 47584,
+          "source_bytes": 9857821
+        },
+        "validation": {
+          "binary_sha256": "0781d69ad906cc3d21a788dfd61f6456a1e7b0b94b99399749546e22590058b7",
+          "examples": 2389,
+          "max_source_bytes": 255,
+          "nonpad_target_tokens": 495939,
+          "provenance_records": 2389,
+          "source_bytes": 493550
+        }
+      },
+      "training_started": false,
+      "variant_id": "context_256"
+    },
+    {
+      "anchors": {
+        "1337": "f8481e113f6404e1e9ea623f31f7d4405d4cd80ce6977269fe6c8d77377bc42f",
+        "42": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e"
+      },
+      "files": {
+        "crucible_manifest/experiment_config.json": "3c12c9992df2af799369b7ce86cd9f61068d681b779cf8041ef6631996092980",
+        "crucible_manifest/initial_seed_anchor_1337.pt": "f8481e113f6404e1e9ea623f31f7d4405d4cd80ce6977269fe6c8d77377bc42f",
+        "crucible_manifest/initial_seed_anchor_42.pt": "317d2cc82f14f7877a3e84a76cf0f5bedaa0b1177389699f5246f6e998c3474e",
+        "crucible_manifest/manifest_sha256.txt": "c89a3880266f8408ccab618be7b31b10f22e56f77b82abcb936fdeb5efb5698a",
+        "crucible_manifest/schedule_seed_1337.json": "96eb620b15fe45f8f8e1155bb6a9ef9e700000e4a673da1dcf4761a286e7c63d",
+        "crucible_manifest/schedule_seed_42.json": "34996300f266181ae0b5c37be7f1486964af7c677ff2f8ec9f5bafa7f3510767",
+        "crucible_manifest/stories_train.bin": "69305cda8290b197536f2924e7af8c450a2bc8494c8169eb95f7314a3ce80e59",
+        "crucible_manifest/stories_validation.bin": "a3d01634ac61c0362e4d44ba94427312209b3877701bbe20a9a4fdccf9d28807",
+        "source/packed_train.jsonl": "8bc1fdcadb8416b078ee72b61f4c3cf20b8fe618a4ec3711063c1293c68743a4",
+        "source/packed_validation.jsonl": "088e2a4ce9ffb1167224841dd3fa711363e5b4832fa23157f97afecdcff1f30d",
+        "source/provenance_train.jsonl": "96c4b17d1f3eed4d1947746de8a588a5b3aacd9c23b5297a242c0dfda10162b3",
+        "source/provenance_validation.jsonl": "b61397f27bf421a8dcc4e7e3e9491c23c274f2cfaa076875d9c2e0e0f133786f",
+        "source/source_metadata.json": "ac022c58d9eb83502a22cf250c20fe74f37633b8752822be90cc15e3fa4b3ce9"
+      },
+      "manifest_sha256": "3c12c9992df2af799369b7ce86cd9f61068d681b779cf8041ef6631996092980",
+      "schedules": {
+        "1337": {
+          "indices": 26432,
+          "max_step_bytes": 3647,
+          "min_step_bytes": 2655,
+          "schedule_sha256": "96eb620b15fe45f8f8e1155bb6a9ef9e700000e4a673da1dcf4761a286e7c63d",
+          "source_bytes": 9859236,
+          "steps": 3125
+        },
+        "42": {
+          "indices": 26432,
+          "max_step_bytes": 3640,
+          "min_step_bytes": 2678,
+          "schedule_sha256": "34996300f266181ae0b5c37be7f1486964af7c677ff2f8ec9f5bafa7f3510767",
+          "source_bytes": 9859236,
+          "steps": 3125
+        }
+      },
+      "splits": {
+        "train": {
+          "binary_sha256": "69305cda8290b197536f2924e7af8c450a2bc8494c8169eb95f7314a3ce80e59",
+          "examples": 26432,
+          "max_source_bytes": 511,
+          "nonpad_target_tokens": 9885668,
+          "provenance_records": 26432,
+          "source_bytes": 9859236
+        },
+        "validation": {
+          "binary_sha256": "a3d01634ac61c0362e4d44ba94427312209b3877701bbe20a9a4fdccf9d28807",
+          "examples": 1324,
+          "max_source_bytes": 511,
+          "nonpad_target_tokens": 494696,
+          "provenance_records": 1324,
+          "source_bytes": 493372
+        }
+      },
+      "training_started": false,
+      "variant_id": "context_512"
+    }
+  ]
+}
