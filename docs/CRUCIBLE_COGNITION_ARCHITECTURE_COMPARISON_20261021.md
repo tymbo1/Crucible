@@ -22,10 +22,11 @@ resource-allocation and audit principles, but it is not a reasoning engine.
 Crucible currently contains evaluation and instrumentation plans, not a
 demonstrated integrated cognition runtime.
 
-The recursive fixed-point, future-value and training-loss equations quoted in
-the current conversation remain proposed research formulations unless their
-original exchange is independently recovered. They must not be attributed to
-the files below.
+The recursive fixed-point, future-value and memory equations below are treated
+as the user's conversation-provided research specification. Their original
+file provenance is still unresolved, so they must not be attributed to the
+files below. Their mathematical content is recorded exactly as supplied in
+the current exchange.
 
 ## Provenance audit
 
@@ -35,14 +36,14 @@ the files below.
 | BraidFormer trajectory policy | `/home/timbushnell/braidformer_lab/docs/TRAJECTORY_AWARE_TRAINING_PROPOSAL.md` | Present; explicitly deferred; no implementation or training authorized |
 | Crucible roadmap | `docs/CRUCIBLE_RESEARCH_ROADMAP_20261021.md` | Present; research plan, not capability evidence |
 | Crucible evaluation framework | `docs/CRUCIBLE_COGNITIVE_EVALUATION_FRAMEWORK_20261021.md` | Present; benchmark and gate design, not capability evidence |
-| Claimed `braid_exchange_2026-10-14_0721.txt` | Not found under `/home/timbushnell` | Unverified; do not cite as recovered source |
-| Claimed `braid_exchange_2026-10-14_0844_recursive_synthesis.txt` | Not found under `/home/timbushnell` | Unverified; do not cite as recovered source |
+| Claimed `braid_exchange_2026-10-14_0721.txt` | Not found under `/home/timbushnell` | File location unverified; equations are nevertheless preserved from the user's current exchange |
+| Claimed `braid_exchange_2026-10-14_0844_recursive_synthesis.txt` | Not found under `/home/timbushnell` | File location unverified; synthesis is preserved from the user's current exchange |
 | Actual `braid_exchange_2026-02-26_1434.txt` | `/home/timbushnell/Documents/Projectbrain/` | Present, but concerns ontology ingestion and `is_a` relations, not the quoted equations |
 | Actual `braid_memory_exchange.txt` | `/home/timbushnell/Documents/Projectbrain/` | Present, but only a short memory-related excerpt |
 
 The claimed October filenames may exist outside the inspected workspace, but
 there is currently no local evidence for them. The quoted equations are
-therefore recorded here as conversation-origin proposals, not recovered file
+therefore recorded as conversation-origin proposals, not recovered file
 contents.
 
 ## Mechanism comparison
@@ -143,8 +144,9 @@ requirements, but has not been run.
 
 ## Conversation-origin equations
 
-The equations below are useful hypotheses, but their original file provenance
-has not been recovered in this workspace:
+The equations below are the equations supplied in the current GPT exchange.
+They are useful hypotheses, but their original file provenance has not been
+recovered in this workspace:
 
 \[
 R^*=\operatorname{Fix}_R\left\{\arg\max_r\left[
@@ -163,17 +165,91 @@ M_{t+1}=\operatorname{Compress}(M_t\cup Evidence_t\cup R_t^*)
 and the recursive revision proposal:
 
 \[
+\Phi_0(R)=\operatorname{Reason}(R)
+\]
+
+\[
 \Phi_{k+1}(R)=\operatorname{Reason}\left(R,
 \operatorname{Critique}(\Phi_k),
 \operatorname{Counterexample}(\Phi_k),
 \operatorname{EvidenceSearch}(\Phi_k)\right).
 \]
 
+The synthesis also proposes selection over recursive candidates:
+
+\[
+R^*=\operatorname{Fix}_R\left\{\arg\max_k J(\Phi_k(R))\right\}
+\]
+
+with:
+
+\[
+\begin{aligned}
+J(R)=&\mathbb{E}[U+\gamma V]+\lambda IG+\rho C_{\mathrm{consistency}}\\
+&+\sigma Q_{\mathrm{self}}+\eta\Delta Competence_{\mathrm{future}}\\
+&-\beta H-\kappa Cost.
+\end{aligned}
+\]
+
+The proposed stopping conditions are convergence, low information gain, no
+unresolved contradictions, or marginal reasoning benefit below marginal
+compute cost. The earlier conversation also proposed a training objective,
+but it is separate from the runtime equations:
+
+\[
+\mathcal{L}=\mathcal{L}_{\mathrm{answer}}
++\lambda_c\mathcal{L}_{\mathrm{correction}}
++\lambda_v\mathcal{L}_{\mathrm{verification}}
++\lambda_s\mathcal{L}_{\mathrm{stopping}}.
+\]
+
+That loss is recorded as a conversation-level proposal, not as an implemented
+objective in either `cognitiion.MD` or Crucible.
+
 Before implementation, every term needs an operational definition, a bounded
 compute budget, a source of ground-truth feedback and a measurable stopping
 rule. In particular, `future competence` cannot be claimed from a current
 answer score; it requires held-out later tasks or a pre-registered transfer
 test.
+
+## Equation-to-architecture comparison
+
+The equations add an explicit decision and value layer around the older
+symbolic runtime:
+
+| Equation component | Closest older-runtime mechanism | What is still missing |
+| --- | --- | --- |
+| Current reasoning state (R) | Claims, goals, constraints, active world state and active symbolic memory | A single canonical state object joining all four layers |
+| `Reason(R)` | `reasoning.infer()` and symbolic bridge `derive/query` | A specified inference budget and typed result contract |
+| `Critique(Φ_k)` | Contradiction detection and self-model metrics | A separate critique operator that can assess an otherwise consistent answer |
+| `Counterexample(Φ_k)` | Counterfactual branches and invalid-state checks | A systematic counterexample generator with exact correctness checks |
+| `EvidenceSearch(Φ_k)` | Symbolic bridge queries and memory lookup | An information-gain estimator and evidence-quality ranking |
+| `Fix_R` | Repeated runtime cycles and revision | A convergence definition, cycle detector and bounded termination proof |
+| (U(r,w,G)) | Goal satisfaction, plan score and observed action effects | An explicit utility schema and outcome oracle |
+| (V(s)) | Branch simulation and ranking by score plus goal satisfaction | A learned or specified transition model (P(s'\mid s,a,R^*)) and recursive value backup |
+| (IG) | No direct equivalent | A measurable uncertainty-reduction or decision-relevance metric |
+| (C_{\mathrm{consistency}}) | Contradiction graph, confidence and global invariants | A normalized score that is comparable across candidate revisions |
+| (Q_{\mathrm{self}}) | `SelfModel` belief count, contradiction count, revision rate and cycle status | Calibration against actual future errors or task success |
+| \(\eta\Delta Competence_{\mathrm{future}}\) | No direct equivalent; the runtime has no later-task transfer measurement | A held-out future-task protocol and a causal definition of competence improvement |
+| (H(P(w\mid M,R))) | Confidence fields only | A probability distribution and entropy calculation |
+| `Cost(r)` / `Cost(a)` | No explicit runtime cost model | Time, memory, tool, risk and opportunity-cost accounting |
+| (M_{t+1}=\operatorname{Compress}(\cdots)) | Append-only symbolic log plus active/retracted view | Typed consolidation, provenance-preserving compression and rollback |
+| Convergence/low-IG stopping | No explicit stop policy in `cycle()` | A deterministic or learned stopping rule with false-stop audits |
+
+This makes the relationship clear: `cognitiion.MD` supplies the state,
+constraints, contradiction handling, simulation and verification substrate;
+the equations supply an optimization policy for choosing among candidate
+reasoning/actions and deciding whether another cycle is worth its cost.
+
+The older runtime already contains a small precursor to the objective. Its
+branch simulator returns a score and the plan layer ranks branches by score and
+goal satisfaction. Its weighted revision also minimizes discarded
+confidence/strength. Those are local deterministic heuristics, not the full
+expected-utility fixed point.
+
+The future-competence term from the later synthesis is a further extension. It
+cannot be inferred from the older `SelfModel`, which records current cycle
+statistics but does not test whether later tasks improve.
 
 ## Smallest falsifiable experiment sequence
 
