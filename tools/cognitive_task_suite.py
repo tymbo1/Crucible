@@ -16,6 +16,7 @@ from typing import Any, Dict, Iterable, List, Mapping, Sequence, Tuple
 
 SCHEMA_VERSION = "crucible_cognitive_task_suite_v1"
 GENERATOR_VERSION = "2026-10-21.v1"
+GENERATOR_VERSION_V2 = "2026-10-21.v2"
 FAMILIES = ("math", "relational_binding", "logic", "error_correction")
 SPLITS = ("train", "validation", "test")
 
@@ -270,6 +271,54 @@ def make_error_correction_record(seed: int, split: str, index: int) -> Dict[str,
     )
 
 
+def make_error_correction_record_v2(seed: int, split: str, index: int) -> Dict[str, Any]:
+    """Generate correction cases without a composition/label shortcut.
+
+    v1 used ``index % 2`` for the candidate status while composition selection
+    also depended on the index.  For two-composition validation/test splits,
+    that made prompt length reveal the label.  v2 combines the composition
+    slot and block number so status remains balanced within each composition
+    while also balancing the full split for the standard manifest sizes.
+    """
+    rng = _rng(seed, "error_correction_v2", split, index)
+    compositions = MATH_COMPOSITIONS[split]
+    case = _math_case(rng, split, index + 17)
+    expected = int(case["result"])
+    composition_slot = index % len(compositions)
+    composition_block = index // len(compositions)
+    candidate_is_correct = (composition_slot + composition_block) % 2 == 0
+    candidate = expected if candidate_is_correct else expected + (1 if expected != 0 else 2)
+    status = "correct" if candidate_is_correct else "incorrect"
+    prompt = (
+        "Question: apply the arithmetic steps "
+        + ", ".join(
+            f"{step['operation']} {step['operand']}" for step in case["steps"]
+        )
+        + f" to start value {case['start']}. Candidate answer: {candidate}. "
+        "Return exactly status|correct_answer."
+    )
+    return _record(
+        seed=seed,
+        family="error_correction",
+        split=split,
+        index=index,
+        prompt=prompt,
+        target=f"{status}|{expected}",
+        oracle={
+            "kind": "candidate_verification",
+            "candidate": candidate,
+            "expected": expected,
+            "status": status,
+        },
+        metadata={
+            "source_composition": case["operations"],
+            "candidate_is_correct": candidate_is_correct,
+            "held_out_composition": split != "train",
+            "label_assignment": "balanced_by_composition_block_v2",
+        },
+    )
+
+
 GENERATORS = {
     "math": make_math_record,
     "relational_binding": make_relational_record,
@@ -278,14 +327,25 @@ GENERATORS = {
 }
 
 
-def generate_records(seed: int, split: str, records_per_family: int) -> List[Dict[str, Any]]:
+GENERATORS_V2 = {**GENERATORS, "error_correction": make_error_correction_record_v2}
+
+
+def generate_records(
+    seed: int,
+    split: str,
+    records_per_family: int,
+    variant: str = "v1",
+) -> List[Dict[str, Any]]:
     if split not in SPLITS:
         raise ValueError(f"Unknown split: {split}")
     if records_per_family < 1:
         raise ValueError("records_per_family must be positive")
+    if variant not in {"v1", "v2"}:
+        raise ValueError(f"Unknown generator variant: {variant}")
+    generators = GENERATORS if variant == "v1" else GENERATORS_V2
     records: List[Dict[str, Any]] = []
     for family in FAMILIES:
-        generator = GENERATORS[family]
+        generator = generators[family]
         records.extend(
             generator(seed, split, index) for index in range(records_per_family)
         )

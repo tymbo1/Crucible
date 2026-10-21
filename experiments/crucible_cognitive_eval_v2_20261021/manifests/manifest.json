@@ -1,0 +1,58 @@
+{
+  "families": [
+    "math",
+    "relational_binding",
+    "logic",
+    "error_correction"
+  ],
+  "family_counts": {
+    "error_correction": {
+      "test": 64,
+      "train": 64,
+      "validation": 32
+    },
+    "logic": {
+      "test": 64,
+      "train": 64,
+      "validation": 32
+    },
+    "math": {
+      "test": 64,
+      "train": 64,
+      "validation": 32
+    },
+    "relational_binding": {
+      "test": 64,
+      "train": 64,
+      "validation": 32
+    }
+  },
+  "generator_version": "2026-10-21.v2",
+  "schema_version": "crucible_cognitive_task_suite_v1",
+  "seed": 20261021,
+  "splits": {
+    "test": {
+      "path": "test.jsonl",
+      "records": 256,
+      "sha256": "bee94a013c3708b9835b11e68e68d1f346416b2f09d9a7ee58111e3787a7247e"
+    },
+    "train": {
+      "path": "train.jsonl",
+      "records": 256,
+      "sha256": "a745373304ee52c1422150f47b6e559b6d47ff7c5322b214888b0dd8f144ba35"
+    },
+    "validation": {
+      "path": "validation.jsonl",
+      "records": 128,
+      "sha256": "52c86a67724f9680c20e7263d8ce9f35450bfdbf3fdf2fc8f9a7bed595279650"
+    }
+  },
+  "task_contract": {
+    "oracle_policy": "exact deterministic oracle fields are reference-only and must not be supplied as model input",
+    "test_composition_and_depth_holdouts": true,
+    "test_targets_present": true,
+    "train_targets_present": true,
+    "validation_targets_present": true
+  },
+  "variant": "v2"
+}

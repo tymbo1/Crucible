@@ -1,5 +1,11 @@
 # Crucible cognitive evaluation v1
 
+This is a preserved historical artifact, not the pilot input. The CPU
+shortcut audit found that v1 error-correction candidate status was correlated
+with arithmetic composition on validation, producing a 75% prompt-length
+bucket baseline. Use the corrected v2 manifests in
+`experiments/crucible_cognitive_eval_v2_20261021/` for any future training.
+
 This directory contains CPU-only task definitions and deterministic manifests.
 It is not a model-training result.
 

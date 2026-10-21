@@ -203,6 +203,12 @@ The current preparation artifacts are:
   replication, dense-control decision, checkpoint schema and cost envelope;
 - `tools/cognitive_task_suite.py` and `tools/build_cognitive_manifests.py` —
   deterministic CPU task generators, exact oracles and immutable manifests.
+- `experiments/crucible_cognitive_eval_v2_20261021/` — corrected manifests
+  for the instrumentation pilot after the v1 shortcut audit;
+- `tools/audit_cognitive_shortcuts.py` — CPU-only screening for target and
+  prompt-length shortcuts;
+- `docs/CRUCIBLE_COGNITIVE_INSTRUMENTATION_PILOT_20261021.md` — staged
+  learnability, state-saving and intervention proposal; no execution yet.
 
 Do not use a failure from a TinyStories-trained 130–170M model as a verdict on
 advanced recursive cognition, metacognition or autonomy. First establish a

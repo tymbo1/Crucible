@@ -51,6 +51,23 @@ class CognitiveTaskSuiteTests(unittest.TestCase):
             else:
                 self.fail(f"unknown oracle kind: {kind}")
 
+    def test_v2_correction_labels_are_balanced_within_holdout_compositions(self) -> None:
+        for split in ("validation", "test"):
+            records = [
+                record
+                for record in generate_records(20261021, split, 32, variant="v2")
+                if record["family"] == "error_correction"
+            ]
+            by_composition = {}
+            for record in records:
+                composition = tuple(record["metadata"]["source_composition"])
+                by_composition.setdefault(composition, []).append(
+                    record["metadata"]["candidate_is_correct"]
+                )
+            self.assertTrue(by_composition)
+            for statuses in by_composition.values():
+                self.assertEqual(statuses.count(True), statuses.count(False))
+
 
 if __name__ == "__main__":
     unittest.main()

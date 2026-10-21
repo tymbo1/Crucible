@@ -1,0 +1,76 @@
+{
+  "arithmetic_compositions": {
+    "test": [
+      [
+        "add",
+        "mul",
+        "sub"
+      ],
+      [
+        "mul",
+        "sub",
+        "add"
+      ]
+    ],
+    "train": [
+      [
+        "add",
+        "sub"
+      ],
+      [
+        "mul",
+        "add"
+      ],
+      [
+        "sub",
+        "mul"
+      ]
+    ],
+    "validation": [
+      [
+        "add",
+        "mul"
+      ],
+      [
+        "sub",
+        "add",
+        "mul"
+      ]
+    ]
+  },
+  "families": [
+    "error_correction",
+    "logic",
+    "math",
+    "relational_binding"
+  ],
+  "input_leakage": [],
+  "logic_rule_depths": {
+    "test": [
+      4
+    ],
+    "train": [
+      2
+    ],
+    "validation": [
+      3
+    ]
+  },
+  "oracle_checks": 640,
+  "records": {
+    "test": 256,
+    "train": 256,
+    "validation": 128
+  },
+  "relational_path_lengths": {
+    "test": [
+      4
+    ],
+    "train": [
+      2
+    ],
+    "validation": [
+      3
+    ]
+  }
+}

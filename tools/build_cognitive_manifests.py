@@ -12,6 +12,7 @@ from typing import Any, Dict
 from cognitive_task_suite import (
     FAMILIES,
     GENERATOR_VERSION,
+    GENERATOR_VERSION_V2,
     SCHEMA_VERSION,
     SPLITS,
     canonical_json,
@@ -38,10 +39,13 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=20261021)
+    parser.add_argument("--variant", choices=("v1", "v2"), default="v1")
     parser.add_argument("--train-per-family", type=int, default=64)
     parser.add_argument("--validation-per-family", type=int, default=32)
     parser.add_argument("--test-per-family", type=int, default=64)
     args = parser.parse_args()
+
+    generator_version = GENERATOR_VERSION if args.variant == "v1" else GENERATOR_VERSION_V2
 
     if args.output.exists() and any(args.output.iterdir()):
         raise SystemExit(f"Refusing to overwrite non-empty output: {args.output}")
@@ -56,7 +60,7 @@ def main() -> int:
     family_counts: Dict[str, Dict[str, int]] = {family: {} for family in FAMILIES}
 
     for split in SPLITS:
-        records = generate_records(args.seed, split, counts[split])
+        records = generate_records(args.seed, split, counts[split], variant=args.variant)
         path = args.output / f"{split}.jsonl"
         write_jsonl(path, records)
         for family in FAMILIES:
@@ -71,7 +75,7 @@ def main() -> int:
 
     manifest = {
         "schema_version": SCHEMA_VERSION,
-        "generator_version": GENERATOR_VERSION,
+        "generator_version": generator_version,
         "seed": args.seed,
         "families": list(FAMILIES),
         "splits": split_files,
@@ -84,6 +88,8 @@ def main() -> int:
             "oracle_policy": "exact deterministic oracle fields are reference-only and must not be supplied as model input",
         },
     }
+    if args.variant == "v2":
+        manifest["variant"] = "v2"
     manifest_path = args.output / "manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     (args.output / "manifest.sha256").write_text(
