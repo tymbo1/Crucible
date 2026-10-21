@@ -11,6 +11,7 @@ This repository contains the reproducible layer of the work:
 - protocols, design notes and reports;
 - compact metrics, manifests and integrity hashes;
 - SSRE-NPA and GPU Neural SSRE engineering experiments.
+- CPU-only cognitive task generators, exact oracles and evaluation manifests.
 
 Large raw corpora, packed datasets, model checkpoints and local credentials
 remain outside Git. They are referenced by the local experiment records and

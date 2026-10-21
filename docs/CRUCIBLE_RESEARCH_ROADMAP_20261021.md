@@ -185,3 +185,12 @@ prepare the task manifests and scoring contracts in the cognitive evaluation
 framework. The existing E4/E8/E16 package has metrics and initial anchors but
 no trained final checkpoints or routing traces for causal specialization
 interventions.
+
+The current preparation artifacts are:
+
+- `docs/CRUCIBLE_CONTEXT_GATE_AUDIT_20261021.md` — complete/partial context
+  coverage and verified metric hashes;
+- `docs/CRUCIBLE_STATE_SAVING_REPLICATION_PLAN_20261021.md` — staged sparse
+  replication, dense-control decision, checkpoint schema and cost envelope;
+- `tools/cognitive_task_suite.py` and `tools/build_cognitive_manifests.py` —
+  deterministic CPU task generators, exact oracles and immutable manifests.

@@ -1,0 +1,190 @@
+{
+  "cloud_root": "/home/timbushnell/crucible_context_gate_cloud_results_20261018",
+  "contexts": {
+    "128": {
+      "complete": true,
+      "config_path": "/home/timbushnell/Crucible/experiments/crucible_context_gate_v1_20261018/context_128/crucible_manifest/experiment_config.json",
+      "config_sha256": "15ed67b3e38db7a82ea6dcf7825f0e51c6ff2c66bd31da9aeead67aa3a309a72",
+      "context": 128,
+      "errors": [],
+      "expected_checkpoint_steps": [
+        100,
+        250,
+        500,
+        750,
+        1000,
+        1500,
+        2000,
+        2500,
+        3125
+      ],
+      "expected_seeds": [
+        42,
+        1337
+      ],
+      "metrics_path": "/home/timbushnell/crucible_context_gate_cloud_results_20261018/context_128/metrics.jsonl",
+      "metrics_sha256": "5dd005c1cf06f3633954733941b2a32d2d883a6dd5450d04dd024ed3beb6777e",
+      "missing": {
+        "1337": [],
+        "42": []
+      },
+      "observed": {
+        "1337": [
+          100,
+          250,
+          500,
+          750,
+          1000,
+          1500,
+          2000,
+          2500,
+          3125
+        ],
+        "42": [
+          100,
+          250,
+          500,
+          750,
+          1000,
+          1500,
+          2000,
+          2500,
+          3125
+        ]
+      },
+      "row_count": 18
+    },
+    "256": {
+      "complete": false,
+      "config_path": "/home/timbushnell/Crucible/experiments/crucible_context_gate_v1_20261018/context_256/crucible_manifest/experiment_config.json",
+      "config_sha256": "43e23eb51466f3b00e53efe74756a512fefb0d63a7d5f995496504b03b3cc1bc",
+      "context": 256,
+      "errors": [],
+      "expected_checkpoint_steps": [
+        100,
+        250,
+        500,
+        750,
+        1000,
+        1500,
+        2000,
+        2500,
+        3125
+      ],
+      "expected_seeds": [
+        42,
+        1337
+      ],
+      "metrics_path": "/home/timbushnell/crucible_context_gate_cloud_results_20261018/context_256/metrics_seed42.jsonl",
+      "metrics_sha256": "93996de7b5a862ded2be19724e70c159b9237c4d831d61ddfe76bd9ae9463f07",
+      "missing": {
+        "1337": [
+          100,
+          250,
+          500,
+          750,
+          1000,
+          1500,
+          2000,
+          2500,
+          3125
+        ],
+        "42": []
+      },
+      "observed": {
+        "1337": [],
+        "42": [
+          100,
+          250,
+          500,
+          750,
+          1000,
+          1500,
+          2000,
+          2500,
+          3125
+        ]
+      },
+      "row_count": 9
+    },
+    "512": {
+      "complete": false,
+      "config_path": "/home/timbushnell/Crucible/experiments/crucible_context_gate_v1_20261018/context_512/crucible_manifest/experiment_config.json",
+      "config_sha256": "3c12c9992df2af799369b7ce86cd9f61068d681b779cf8041ef6631996092980",
+      "context": 512,
+      "errors": [],
+      "expected_checkpoint_steps": [
+        100,
+        250,
+        500,
+        750,
+        1000,
+        1500,
+        2000,
+        2500,
+        3125
+      ],
+      "expected_seeds": [
+        42,
+        1337
+      ],
+      "metrics_path": "/home/timbushnell/crucible_context_gate_cloud_results_20261018/context_512/metrics_seed42.jsonl",
+      "metrics_sha256": "f2499fba0aa27a13a2aec8e228ce090afb35440bc668dba8c51c9d6700447e82",
+      "missing": {
+        "1337": [
+          100,
+          250,
+          500,
+          750,
+          1000,
+          1500,
+          2000,
+          2500,
+          3125
+        ],
+        "42": []
+      },
+      "observed": {
+        "1337": [],
+        "42": [
+          100,
+          250,
+          500,
+          750,
+          1000,
+          1500,
+          2000,
+          2500,
+          3125
+        ]
+      },
+      "row_count": 9
+    }
+  },
+  "repo_root": "/home/timbushnell/Crucible",
+  "schema_version": "crucible_context_gate_audit_v1",
+  "status_file": "/home/timbushnell/crucible_context_gate_cloud_results_20261018/COLLECTION_STATUS.md",
+  "status_hashes": {
+    "128": {
+      "filename": "context_128/metrics.jsonl",
+      "rows": 18,
+      "seeds": "42, 1337",
+      "sha256": "5dd005c1cf06f3633954733941b2a32d2d883a6dd5450d04dd024ed3beb6777e",
+      "status": "complete"
+    },
+    "256": {
+      "filename": "context_256/metrics_seed42.jsonl",
+      "rows": 9,
+      "seeds": "42",
+      "sha256": "93996de7b5a862ded2be19724e70c159b9237c4d831d61ddfe76bd9ae9463f07",
+      "status": "partial; seed 1337 pending"
+    },
+    "512": {
+      "filename": "context_512/metrics_seed42.jsonl",
+      "rows": 9,
+      "seeds": "42",
+      "sha256": "f2499fba0aa27a13a2aec8e228ce090afb35440bc668dba8c51c9d6700447e82",
+      "status": "partial; seed 1337 pending"
+    }
+  }
+}
