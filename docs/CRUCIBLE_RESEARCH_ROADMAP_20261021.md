@@ -14,6 +14,11 @@ problem-solving process.
 The system must be evaluated as a set of controlled components rather than as
 one undifferentiated claim of intelligence.
 
+The multidimensional evaluation protocol is defined in
+[`CRUCIBLE_COGNITIVE_EVALUATION_FRAMEWORK_20261021.md`](CRUCIBLE_COGNITIVE_EVALUATION_FRAMEWORK_20261021.md).
+NLL/BPB remains the language-competence measure; it is not the sole measure of
+architectural progress.
+
 ## Proposed components
 
 1. **Crucible neural substrate** — learned representations, sparse experts,
@@ -72,6 +77,11 @@ interruption. Those behaviours require instrumented task execution.
 | Goal pursuit | Can the system execute and revise a subgoal to completion? | Open-loop plan execution |
 | Continual learning | Can new validated information persist without damaging prior competence? | Isolated retraining and replay controls |
 | Meta-learning | Does experience improve later unfamiliar-task strategy? | Same-task repetition and no-history controls |
+
+The measurement design for these tracks is specified in
+[`CRUCIBLE_COGNITIVE_EVALUATION_FRAMEWORK_20261021.md`](CRUCIBLE_COGNITIVE_EVALUATION_FRAMEWORK_20261021.md).
+That framework is a design specification, not evidence that any listed
+capability has been demonstrated.
 
 ## Recommended sequencing
 
@@ -169,3 +179,9 @@ If that succeeds, add symbolic retrieval. Add CMS2 persistence only after the
 retrieval/verification contribution is separately measured. Delay neural
 internalization and autonomous goal pursuit until the external process has
 demonstrated a repeatable advantage.
+
+Before any substantial cognitive run, complete the CPU-only evidence audit and
+prepare the task manifests and scoring contracts in the cognitive evaluation
+framework. The existing E4/E8/E16 package has metrics and initial anchors but
+no trained final checkpoints or routing traces for causal specialization
+interventions.
