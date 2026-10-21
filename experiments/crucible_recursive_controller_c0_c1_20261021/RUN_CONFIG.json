@@ -1,0 +1,32 @@
+{
+  "budget": {
+    "actions": 8,
+    "cost": 12.0,
+    "counterexample_calls": 2,
+    "depth": 8,
+    "evidence_calls": 2,
+    "memory_writes": 2
+  },
+  "date": "2026-10-21",
+  "execution": "CPU-only; no model, CUDA, network or cloud execution",
+  "future_competence": "disabled",
+  "manifests": "experiments/crucible_cognitive_eval_v2_20261021/manifests",
+  "policy_order": [
+    "one_pass",
+    "fixed_depth_2",
+    "confidence_stop",
+    "verification_only",
+    "adaptive"
+  ],
+  "utility_config": {
+    "consistency": 0.5,
+    "cost": 0.1,
+    "entropy": 0.1,
+    "future_competence": 0.0,
+    "future_competence_status": "disabled_for_C0_C1",
+    "information_gain": 0.25,
+    "normalization": "all quality components clipped to [0,1]; cost is cost/12",
+    "self_quality": 0.25,
+    "utility": 1.0
+  }
+}

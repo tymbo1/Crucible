@@ -279,6 +279,68 @@ cost, or preserves accuracy while reducing total cost, across preregistered
 seeds and task families. A gain over one-pass alone is insufficient if a
 fixed-depth or verification-only policy performs as well.
 
+## C0/C1 operational addendum (2026-10-21)
+
+This addendum is preregistered for the CPU-only C0 contract simulator and C1
+frozen-task replay. It resolves four risks before any model evaluation.
+
+### Calibrated uncertainty and entropy safeguards
+
+The entropy term is not a license to reward confident predictions. A confidence
+value is treated as a probability only when it comes from a declared finite
+belief model whose calibration was established on data independent of policy
+selection. C0/C1 must report calibration status, Brier score and selective
+risk separately. If a candidate has no calibrated posterior and an action has
+no trusted likelihood model, its information gain and entropy reduction are
+`unavailable`, not zero-quality evidence silently converted into utility.
+
+An entropy decrease receives positive credit only when it is supported by a
+verified outcome or a preregistered calibrated evidence transition. A
+confident-but-wrong candidate therefore cannot improve its score merely by
+claiming certainty. Independent verification remains able to reject such a
+candidate, and a contradiction blocks a factual memory commit.
+
+### Units, normalization and coefficients
+
+Every utility component is normalized to a declared dimensionless range before
+coefficient application. C0/C1 use the fixed coefficient vector recorded in
+the result manifest; coefficients are not tuned after seeing policy outcomes.
+Measured resource cost is recorded in native units (action count, tool calls,
+evidence calls, estimated cost units and wall time) and mapped to a declared
+bounded penalty. The manifest records the coefficient vector, normalization
+rules, seed and policy configuration so a later run can reproduce the exact
+comparison.
+
+The operational C0/C1 vector is:
+
+\[
+(w_U,w_{IG},w_C,w_Q,w_H,w_{Cost},w_{Future})
+=(1.0,0.25,0.50,0.25,0.10,0.10,0.0).
+\]
+
+The future-competence coefficient is explicitly zero for C0/C1. It must not
+be replaced by a current-task heuristic and must remain disabled unless an
+independent future-task intervention protocol is available.
+
+### Contract validation versus policy advantage
+
+C0/C1 have two separate conclusions. Contract success means that typed state,
+budget inheritance, transition hashing, cycle detection, independent
+verification and transactional memory rules behave as specified. Policy
+advantage means that a policy improves outcomes on imperfect candidates and
+misleading/contradictory evidence at matched action, tool and cost budgets.
+Passing the first does not imply the second. Synthetic replay may establish
+implementation correctness and expose failure modes, but it is not evidence
+that a neural or adaptive policy is cognitively superior.
+
+### C0/C1 execution boundary
+
+C0/C1 use only deterministic CPU code, frozen v2 task manifests and synthetic
+candidate/evidence responses. They do not train or download a model, alter
+Crucible's neural architecture, access a GPU or spend cloud credit. The
+future-competence term is reported as disabled, and failed policy hypotheses
+are preserved rather than tuned away.
+
 ## Falsifiable hypotheses
 
 - **H1 — Adaptive effort:** a bounded adaptive policy achieves better

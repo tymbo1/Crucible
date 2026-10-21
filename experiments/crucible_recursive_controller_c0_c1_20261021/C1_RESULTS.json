@@ -1,0 +1,419 @@
+{
+  "aggregates": {
+    "adaptive": {
+      "accuracy": 0.80078125,
+      "by_category": {
+        "clean_correct": {
+          "accuracy": 1.0,
+          "count": 49,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "contradiction": {
+          "accuracy": 1.0,
+          "count": 54,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "detectable_wrong": {
+          "accuracy": 1.0,
+          "count": 48,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "misleading_evidence": {
+          "accuracy": 1.0,
+          "count": 54,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "shortcut_probe": {
+          "accuracy": 0.0,
+          "count": 51,
+          "false_corrections": 0,
+          "unresolved": 51
+        }
+      },
+      "calibration": {
+        "bins": {
+          "5": {
+            "accuracy": 0.0,
+            "count": 51,
+            "nominal_midpoint": 0.55
+          },
+          "6": {
+            "accuracy": 0.0,
+            "count": 48,
+            "nominal_midpoint": 0.65
+          },
+          "8": {
+            "accuracy": 1.0,
+            "count": 49,
+            "nominal_midpoint": 0.85
+          },
+          "9": {
+            "accuracy": 0.5,
+            "count": 108,
+            "nominal_midpoint": 0.95
+          }
+        },
+        "brier": 0.319644140625,
+        "count": 256,
+        "ece": 0.44999999999999996,
+        "status": "diagnostic_only"
+      },
+      "corrections": 102,
+      "estimated_cost_units": 1701.5,
+      "false_corrections": 0,
+      "initial_accuracy": 0.40234375,
+      "invalid_memory_attempts": 54,
+      "mean_actions": 5.61328125,
+      "policy": "adaptive",
+      "records": 256,
+      "transition_count": 1437,
+      "unresolved": 51,
+      "valid_memory_commits": 103
+    },
+    "confidence_stop": {
+      "accuracy": 0.40234375,
+      "by_category": {
+        "clean_correct": {
+          "accuracy": 1.0,
+          "count": 49,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "contradiction": {
+          "accuracy": 1.0,
+          "count": 54,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "detectable_wrong": {
+          "accuracy": 0.0,
+          "count": 48,
+          "false_corrections": 0,
+          "unresolved": 48
+        },
+        "misleading_evidence": {
+          "accuracy": 0.0,
+          "count": 54,
+          "false_corrections": 0,
+          "unresolved": 54
+        },
+        "shortcut_probe": {
+          "accuracy": 0.0,
+          "count": 51,
+          "false_corrections": 0,
+          "unresolved": 51
+        }
+      },
+      "calibration": {
+        "bins": {
+          "5": {
+            "accuracy": 0.0,
+            "count": 51,
+            "nominal_midpoint": 0.55
+          },
+          "6": {
+            "accuracy": 0.0,
+            "count": 48,
+            "nominal_midpoint": 0.65
+          },
+          "8": {
+            "accuracy": 1.0,
+            "count": 49,
+            "nominal_midpoint": 0.85
+          },
+          "9": {
+            "accuracy": 0.5,
+            "count": 108,
+            "nominal_midpoint": 0.95
+          }
+        },
+        "brier": 0.319644140625,
+        "count": 256,
+        "ece": 0.44999999999999996,
+        "status": "diagnostic_only"
+      },
+      "corrections": 0,
+      "estimated_cost_units": 454.0,
+      "false_corrections": 0,
+      "initial_accuracy": 0.40234375,
+      "invalid_memory_attempts": 0,
+      "mean_actions": 2.7734375,
+      "policy": "confidence_stop",
+      "records": 256,
+      "transition_count": 710,
+      "unresolved": 153,
+      "valid_memory_commits": 0
+    },
+    "fixed_depth_2": {
+      "accuracy": 0.7890625,
+      "by_category": {
+        "clean_correct": {
+          "accuracy": 1.0,
+          "count": 49,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "contradiction": {
+          "accuracy": 1.0,
+          "count": 54,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "detectable_wrong": {
+          "accuracy": 1.0,
+          "count": 48,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "misleading_evidence": {
+          "accuracy": 0.0,
+          "count": 54,
+          "false_corrections": 0,
+          "unresolved": 54
+        },
+        "shortcut_probe": {
+          "accuracy": 1.0,
+          "count": 51,
+          "false_corrections": 0,
+          "unresolved": 0
+        }
+      },
+      "calibration": {
+        "bins": {
+          "5": {
+            "accuracy": 0.0,
+            "count": 51,
+            "nominal_midpoint": 0.55
+          },
+          "6": {
+            "accuracy": 0.0,
+            "count": 48,
+            "nominal_midpoint": 0.65
+          },
+          "8": {
+            "accuracy": 1.0,
+            "count": 49,
+            "nominal_midpoint": 0.85
+          },
+          "9": {
+            "accuracy": 0.5,
+            "count": 108,
+            "nominal_midpoint": 0.95
+          }
+        },
+        "brier": 0.319644140625,
+        "count": 256,
+        "ece": 0.44999999999999996,
+        "status": "diagnostic_only"
+      },
+      "corrections": 99,
+      "estimated_cost_units": 1152.0,
+      "false_corrections": 0,
+      "initial_accuracy": 0.40234375,
+      "invalid_memory_attempts": 0,
+      "mean_actions": 5.0,
+      "policy": "fixed_depth_2",
+      "records": 256,
+      "transition_count": 1280,
+      "unresolved": 54,
+      "valid_memory_commits": 0
+    },
+    "one_pass": {
+      "accuracy": 0.40234375,
+      "by_category": {
+        "clean_correct": {
+          "accuracy": 1.0,
+          "count": 49,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "contradiction": {
+          "accuracy": 1.0,
+          "count": 54,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "detectable_wrong": {
+          "accuracy": 0.0,
+          "count": 48,
+          "false_corrections": 0,
+          "unresolved": 48
+        },
+        "misleading_evidence": {
+          "accuracy": 0.0,
+          "count": 54,
+          "false_corrections": 0,
+          "unresolved": 54
+        },
+        "shortcut_probe": {
+          "accuracy": 0.0,
+          "count": 51,
+          "false_corrections": 0,
+          "unresolved": 51
+        }
+      },
+      "calibration": {
+        "bins": {
+          "5": {
+            "accuracy": 0.0,
+            "count": 51,
+            "nominal_midpoint": 0.55
+          },
+          "6": {
+            "accuracy": 0.0,
+            "count": 48,
+            "nominal_midpoint": 0.65
+          },
+          "8": {
+            "accuracy": 1.0,
+            "count": 49,
+            "nominal_midpoint": 0.85
+          },
+          "9": {
+            "accuracy": 0.5,
+            "count": 108,
+            "nominal_midpoint": 0.95
+          }
+        },
+        "brier": 0.319644140625,
+        "count": 256,
+        "ece": 0.44999999999999996,
+        "status": "diagnostic_only"
+      },
+      "corrections": 0,
+      "estimated_cost_units": 256.0,
+      "false_corrections": 0,
+      "initial_accuracy": 0.40234375,
+      "invalid_memory_attempts": 0,
+      "mean_actions": 2.0,
+      "policy": "one_pass",
+      "records": 256,
+      "transition_count": 512,
+      "unresolved": 153,
+      "valid_memory_commits": 0
+    },
+    "verification_only": {
+      "accuracy": 1.0,
+      "by_category": {
+        "clean_correct": {
+          "accuracy": 1.0,
+          "count": 49,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "contradiction": {
+          "accuracy": 1.0,
+          "count": 54,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "detectable_wrong": {
+          "accuracy": 1.0,
+          "count": 48,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "misleading_evidence": {
+          "accuracy": 1.0,
+          "count": 54,
+          "false_corrections": 0,
+          "unresolved": 0
+        },
+        "shortcut_probe": {
+          "accuracy": 1.0,
+          "count": 51,
+          "false_corrections": 0,
+          "unresolved": 0
+        }
+      },
+      "calibration": {
+        "bins": {
+          "5": {
+            "accuracy": 0.0,
+            "count": 51,
+            "nominal_midpoint": 0.55
+          },
+          "6": {
+            "accuracy": 0.0,
+            "count": 48,
+            "nominal_midpoint": 0.65
+          },
+          "8": {
+            "accuracy": 1.0,
+            "count": 49,
+            "nominal_midpoint": 0.85
+          },
+          "9": {
+            "accuracy": 0.5,
+            "count": 108,
+            "nominal_midpoint": 0.95
+          }
+        },
+        "brier": 0.319644140625,
+        "count": 256,
+        "ece": 0.44999999999999996,
+        "status": "diagnostic_only"
+      },
+      "corrections": 153,
+      "estimated_cost_units": 1280.0,
+      "false_corrections": 0,
+      "initial_accuracy": 0.40234375,
+      "invalid_memory_attempts": 0,
+      "mean_actions": 4.0,
+      "policy": "verification_only",
+      "records": 256,
+      "transition_count": 1024,
+      "unresolved": 0,
+      "valid_memory_commits": 256
+    }
+  },
+  "policy_advantage": {
+    "adaptive_accuracy": 0.80078125,
+    "adaptive_estimated_cost_units": 1701.5,
+    "best_simple_accuracy": 1.0,
+    "best_simple_policy_by_accuracy": "verification_only",
+    "interpretation": "synthetic policy advantage is not evidence of cognitive superiority",
+    "status": "not_established"
+  },
+  "protocol": {
+    "budget": {
+      "actions": 8,
+      "cost": 12.0,
+      "counterexample_calls": 2,
+      "depth": 8,
+      "evidence_calls": 2,
+      "memory_writes": 2
+    },
+    "candidate_engine": "deterministic imperfect fixture; target hidden from policy actions",
+    "future_competence": "disabled",
+    "policies": [
+      "one_pass",
+      "fixed_depth_2",
+      "confidence_stop",
+      "verification_only",
+      "adaptive"
+    ],
+    "records": 256,
+    "utility_config": {
+      "consistency": 0.5,
+      "cost": 0.1,
+      "entropy": 0.1,
+      "future_competence": 0.0,
+      "future_competence_status": "disabled_for_C0_C1",
+      "information_gain": 0.25,
+      "normalization": "all quality components clipped to [0,1]; cost is cost/12",
+      "self_quality": 0.25,
+      "utility": 1.0
+    }
+  },
+  "shortcut_audit": {
+    "all_passed": true,
+    "checks": 1280,
+    "failed": 0,
+    "passed": 1280
+  }
+}
