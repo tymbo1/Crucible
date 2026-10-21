@@ -1,174 +1,270 @@
 # Crucible cognitive evaluation framework
 
 Date: 2026-10-21  
-Status: design-only; no benchmark training, checkpoint download, cloud rental or frozen-artifact modification authorized.
+Status: design-only; no training, checkpoint download, cloud rental or frozen-artifact modification authorized.
 
 ## Purpose
 
-Crucible currently has language-modelling evidence and preliminary sparse-capacity evidence. Those measurements are necessary, but they do not establish mathematical reasoning, abstraction, metacognition, planning, autonomy or persistent learning.
+Crucible's existing NLL/BPB results measure language prediction. They do not,
+by themselves, establish mathematical reasoning, abstraction, metacognition,
+planning, creativity, autonomy or persistent learning.
 
-This framework keeps language competence as one metric while adding task families that test the capabilities the project is intended to investigate. It also separates capability from architectural causality: a better score is not automatically evidence that MoE routing, recursion, symbolic memory or a pretrained initialization caused the improvement.
+This framework keeps language modelling as a necessary baseline while adding
+separate, falsifiable evaluations for the capabilities that motivate the
+larger ProjectBrain/Crucible programme.
+
+The central rule is:
+
+> A mechanism earns an architectural claim only when it improves a held-out
+> capability over a simpler control under matched or explicitly accounted
+> information, compute, memory and tool budgets.
 
 ## Current evidence boundary
 
-The E4/E8/E16 matched-active-compute results support a narrow claim:
+The E4/E8/E16 matched-active-compute results provide a preliminary sparse-
+capacity signal on the tested byte-level TinyStories-style task:
 
-> On the tested byte-level TinyStories-style task, increasing sparse capacity improved validation NLL/BPB in the recorded two-seed experiment.
+| Variant | Total parameters | Mean validation NLL |
+|---|---:|---:|
+| E4 | 43,151,104 | 0.792905 |
+| E8 | 85,511,936 | 0.761320 |
+| E16 | 170,233,600 | 0.749846 |
 
-They do not establish:
+This supports the narrow statement that additional sparse capacity improved
+language-modelling loss in that protocol. It does not establish functional
+expert specialization or improvement on unfamiliar reasoning tasks.
 
-- functional or transferable expert specialization;
-- mathematical, logical or relational reasoning;
-- metacognitive error detection;
-- autonomous goal generation or goal pursuit;
-- long-context generalization;
-- superiority at equal total parameters, wall time, memory or cost;
-- that the grouped execution backend improves model capability.
+The CPU-only artifact audit found metrics and initial seed anchors for the
+expert-count runs, but no trained final E4/E8/E16 checkpoints or routing traces
+that can support checkpoint-level causal expert ablations. Consequently,
+leave-one-expert-out and expert-replacement tests cannot be run from the
+existing package without a new state-saving experiment.
 
-The CPU-only checkpoint inventory found initial seed anchors and metrics for the expert-count runs, but no trained final E4/E8/E16 checkpoints or routing traces suitable for causal expert-ablation studies. The existing specialization analysis measures byte-conditioned routing-mass differentiation and explicitly does not claim semantic or causal specialization. A causal specialization gate therefore requires a future run that persists final checkpoints, routing traces and intervention metadata.
+Relevant source records:
 
-## Capability dimensions
+- `crucible_sparse_capacity_gate_v1_20261017/analysis_v1_20261017/`
+- `crucible_expert_count_ab_v1_20261017/full_run/run_ledger.json`
+- `crucible_telemetry_ab_100k_analysis_v1_20261016/specialization_analysis.json`
+- `docs/CRUCIBLE_MOE_ARCHITECTURE_STATUS_AND_GATES_20261021.md`
 
-| Dimension | Primary question | Required evidence | Invalid shortcut |
-|---|---|---|---|
-| Language competence | Does the model predict and generalize language? | EOS-excluded byte NLL/BPB, held-out stories, exposure and compute accounting | Treating lower TinyStories loss as general intelligence |
-| Mathematics | Can it apply rules to unseen instances? | Exact answers, proof/checker validity, compositional and extrapolation splits | Memorized templates or answer-string likelihood alone |
-| Logic | Can it maintain consistency and derive consequences? | Formal validity, contradiction detection, proof completion and counterexample tests | Self-described confidence without correctness correlation |
-| Relational cognition | Can it bind, retrieve and compose relations under distraction? | Delayed key-value retrieval, entity tracking, multi-hop composition, interference and length extrapolation | Routing entropy or attention maps without task intervention |
-| Metacognition | Does uncertainty predict errors and trigger useful correction? | Calibration, selective accuracy, error-detection AUROC, correction success and abstention utility | Saying “I may be wrong” |
-| Creativity | Can it produce novel, coherent, useful constrained solutions? | Blind constraint scoring, novelty against training data, usefulness and independent human/evaluator agreement | Subjective fluency or novelty without utility |
-| Planning | Can it execute and revise multi-step plans? | Dependency validity, task success, cost, replanning after failure and partial-progress measures | Textual plans that are never executed |
-| Autonomy | Can it preserve a bounded objective across time and interruption? | Goal persistence, subgoal quality, progress, completion, restart recovery and false-progress rate | Generating a plausible goal once |
-| Continual learning | Can new validated information persist without damaging old competence? | Retention, forward transfer, backward interference, rollback and provenance checks | Memory retrieval counted as weight learning |
+## Evaluation dimensions
 
-## Task design rules
+Each dimension needs its own task manifest, controls, primary metric and
+failure analysis. A model's fluent explanation is not accepted as evidence of
+the underlying capability.
 
-Each task family must have a generator or immutable manifest, separate train/validation/test instances and a known evaluation procedure. Where possible, the test split must contain new combinations of familiar primitives rather than merely new surface strings.
+| Dimension | What to measure | Required safeguards |
+|---|---|---|
+| Language competence | EOS-excluded byte NLL/BPB, held-out generalization and calibration | Match raw-byte exposure, context, tokenizer and optimizer updates |
+| Mathematics | Exact arithmetic, algebraic transformations, unseen-rule induction and proof validity | Hold out values, compositions and rule combinations; score answers independently |
+| Logic | Deduction, contradiction detection, consistency and proof checking | Include adversarial distractors and invalid-premise controls |
+| Relational cognition | Delayed key-value retrieval, entity tracking, analogy, multi-hop composition and binding under interference | Hold out relation combinations and test length extrapolation |
+| Metacognition | Error detection, confidence calibration, selective prediction and successful revision | Self-reported uncertainty alone does not count; use Brier/ECE, error AUROC and correction rate |
+| Creativity | Novel, coherent and useful outputs satisfying explicit constraints | Separate novelty from randomness; use held-out constraints, similarity checks and blinded scoring |
+| Planning | Subgoal quality, dependency handling, execution success, cost and replanning after failure | Require executable plans and measure outcomes, not plan prose |
+| Autonomy | Goal persistence, bounded subgoal generation, progress monitoring, interruption recovery and completion | Separate goal quality from goal pursuit; record false progress and unauthorized actions |
+| Continual learning | Retention, forward transfer, adaptation and forgetting after validated updates | Compare CMS2-only memory, weight updates, replay and no-update controls |
 
-### Minimum task families
+## Capability versus architecture
 
-1. **Language:** retain the existing byte-level TinyStories evaluation for continuity; add held-out story structure and longer-context splits when the context gate is complete.
-2. **Mathematics:** arithmetic and algebra with held-out values, compositions and rule combinations; use exact symbolic checkers where available.
-3. **Logic:** deduction, contradiction detection, entailment and proof-step completion with generated certificates.
-4. **Relational memory:** delayed retrieval, distractor insertion, relation reversal, multi-hop composition and length extrapolation.
-5. **Planning:** small executable environments with dependencies, resource limits, injected failures and replanning opportunities.
-6. **Metacognition:** answerable and unanswerable items with calibrated confidence, forced abstention and a second-pass correction budget.
-7. **Autonomy:** interrupted bounded objectives requiring state restoration, progress accounting and explicit completion criteria.
+Every comparison must state which source of improvement it is testing.
 
-The first version should be small enough to run on CPU for validator development. It should not be presented as a capability result until a model has received sufficient task-specific curriculum.
+### Capacity controls
 
-## Training sufficiency and evaluation modes
+At minimum, report separate comparisons for:
 
-Failure on an unfamiliar task can reflect missing curriculum, insufficient optimization, inadequate capacity or an architectural limitation. Every cognitive result must identify which of these explanations the experiment can exclude.
+1. **Matched active compute:** same active expert work, different dormant
+   capacity.
+2. **Matched total parameters:** same parameter budget, different routing or
+   allocation.
+3. **Matched wall-clock or GPU budget:** same measured execution budget,
+   different capability achieved.
+4. **Dense control:** a simpler dense model with explicitly matched training
+   bytes and active compute where feasible.
 
-Use three distinct modes:
+E4/E8/E16 must not be described as proving that experts are better than dense
+   capacity until the appropriate dense and total-parameter controls exist.
 
-### Mode A — frozen-model probes
+### Data and training controls
 
-Use existing checkpoints to test whether a capability is already present. Report this as probing only. Do not interpret a failure as an architectural impossibility.
+Record and match, or explicitly account for:
 
-### Mode B — controlled task training
-
-Train all compared systems on the same generated curriculum, raw-byte/token exposure, optimizer-update budget and task mixture. Evaluate on held-out instances, held-out combinations and, where possible, length or rule extrapolation.
-
-### Mode C — scaffold ablations
-
-Add recursion, retrieval, symbolic verification, CMS2 or adaptive compute one factor at a time. Compare against the same neural model with matched answer, tool, token and wall-time budgets.
-
-Pretrained initialization is a separate enabling ablation. It may reduce the language-competence burden, but it must not replace the from-scratch control or be used to attribute teacher knowledge to a new Crucible mechanism.
-
-## Causal comparison requirements
-
-For every architectural claim, record and match or explicitly account for:
-
-- total and active parameters;
-- expert count, expert width and routing policy;
-- training bytes/tokens and optimizer updates;
+- raw training bytes and optimizer updates;
+- task-family composition and example difficulty;
+- context length and packing rules;
 - tokenizer and vocabulary;
-- context length and batch construction;
 - initialization and pretrained status;
-- optimizer, precision and deterministic settings;
-- neural, tool and retrieval calls;
-- wall time, GPU time, peak VRAM and monetary cost;
-- task curriculum and information available at evaluation;
-- checkpoint, RNG, sample-order and provenance state.
+- optimizer, learning-rate schedule and precision;
+- active and total parameters;
+- tool calls, retrieval, memory reads and recursive passes;
+- wall time, GPU time, peak VRAM and energy/cost where available.
 
-The core comparisons should include, where feasible:
+Pretrained initialization is an enabling ablation, not a free architectural
+control. A pretrained foundation must be compared with a from-scratch model
+and its teacher, tokenizer conversion and distillation cost must be reported.
 
-1. a simple dense control at matched active compute;
-2. E4, E8 and E16 sparse variants under the same task curriculum;
-3. a fixed-total-parameter control where the question requires it;
-4. recursion-only, retrieval-only and full hybrid scaffolds;
-5. a no-memory or stateless restart control for persistence claims.
+## Task curriculum and sufficiency
 
-## Metacognition and autonomy acceptance rules
+A failure on an unfamiliar task is ambiguous if the model was never trained on
+the relevant task family. Evaluation therefore proceeds in stages.
 
-Metacognition passes only when confidence predicts correctness better than a declared baseline and an additional critique/revision step improves outcomes at a measured cost. Self-reported uncertainty is not sufficient.
+### Stage A — deterministic task generators
 
-Autonomy passes only when the system maintains a bounded objective across multiple steps, selects useful subgoals, produces measurable progress, recovers after interruption and distinguishes completion from failure. Goal generation quality and goal-pursuit success must be scored separately.
+Build CPU-testable generators and immutable manifests for arithmetic, symbolic
+rules, delayed retrieval, relation composition, planning dependencies and
+interruption/recovery. Split by underlying rule, composition, entity names,
+surface form and length—not merely by random examples.
 
-Persistent memory passes only when writes are typed and provenance-bearing, rejected or unresolved states remain distinguishable from verified facts, rollback works, and later performance improvements are separated into retrieval benefit versus neural-weight change.
+### Stage B — competence calibration
 
-## Research sequence
+Before making an architectural claim, establish that each model has learned
+the training task family above a declared competence floor. Report training,
+validation and held-out-composition performance separately.
 
-### Gate A — Evaluation infrastructure, CPU-only
+### Stage C — generalization evaluation
 
-- Freeze task schemas, generators, manifests and scoring code.
-- Add deterministic validators, exact checkers and provenance records.
-- Build a small baseline report without downloading models or running training.
-- Preserve the existing NLL/BPB reports as language-only baselines.
+Use held-out rules, relation combinations, distractor patterns, longer
+sequences and changed surface forms. Keep test generators and answers sealed
+from the training process.
 
-### Gate B — Neural architectural baselines
+### Stage D — mechanism ablations
 
-- Finish the context-collection audit before drawing long-context conclusions.
-- Preserve E4/E8/E16 metrics and add final-state persistence in the next authorized training package.
-- Run causal expert interventions only after trained checkpoints and routing traces exist.
-- Compare sparse variants with a dense matched-compute control on task families they have actually been trained to solve.
+Only after the task is learnable should the experiment remove or add sparse
+experts, persistent state, recursion, symbolic verification or adaptive
+compute. One mechanism changes per gate.
 
-### Gate C — Relational and adaptive computation
+## Expert specialization gate
 
-- Test long-distance binding and compositional generalization independently of recursive scaffolding.
-- Evaluate bounded recursive critique against additional neural recursion alone.
-- Add symbolic retrieval and verification as separate ablations.
+The existing routing statistics are useful for load and traffic analysis, but
+they are not causal evidence of expert roles. The next specialization test
+requires saved final checkpoints and routing records.
 
-### Gate D — Persistence and goals
+For each matched model, compare:
 
-- Add CMS2 only after retrieval/verification benefits are measured separately.
-- Test interruption, restart, rollback, false progress and provenance.
-- Add goal generation before claiming goal pursuit; measure both independently.
+1. normal routing;
+2. leave-one-expert-out execution;
+3. counterfactual replacement or rerouting;
+4. matched random expert permutations;
+5. cross-seed expert matching under the same intervention.
 
-### Gate E — Internalization
+Evidence for functional specialization requires consistent expert-specific
+effects on held-out task families, greater than a preregistered permutation
+null, across seeds and task variants. Routing entropy, load CV, activation
+frequency or byte-conditioned mutual information alone do not pass.
 
-Only after an external scaffold shows repeatable held-out gains should useful controllers or memory policies be trained into Crucible. Compare frozen scaffold, trained controller and from-scratch controls.
+The minimum new artifact requirement is a checkpoint plus canonical routing
+trace at the evaluation checkpoints. The existing expert-count package does
+not currently provide those final states.
 
-## First decisive cognitive gate
+## Cognitive scaffold gates
 
-The first narrow cognitive experiment should be:
+The external scaffold should be tested before attempting to internalize it in
+Crucible.
 
-> Does frozen neural generation plus bounded symbolic critique/retrieval improve held-out, verifiable problem solving over additional neural recursion alone at equal or measured compute cost?
+### Gate R1 — recursive computation
 
-This is downstream of CPU-only benchmark design and task-curriculum preparation. It should not be combined with expert-count changes, pretrained initialization, CMS2 persistence and autonomous goals in one run.
+Compare one-pass generation with bounded:
 
-## Reporting standard
+`propose -> critique -> counterexample -> revise -> stop`
 
-Every result must state:
+Use the same frozen model and answer/tool budget accounting. Primary outcomes
+are held-out accuracy, correction success and cost-adjusted gain. Also report
+contradiction rate, unsupported-claim rate and unnecessary-pass rate.
 
-- what was measured;
-- what was held constant;
-- what information the system had;
-- whether the task was trained, probed or held out;
-- the simpler baseline it beat;
-- compute and tool costs;
-- failure and contradiction rates;
-- which claims remain hypotheses.
+### Gate R2 — symbolic evidence
 
-The project should use “language-model improvement,” “sparse-capacity result,”
-“execution optimization,” “cognitive capability result” and “autonomous
-behaviour result” as separate labels. A result may satisfy one label without
-satisfying any of the others.
+Factor symbolic retrieval and verification separately:
 
-## Immediate decision
+| Condition | Neural recursion | Symbolic evidence | Persistent write |
+|---|---|---|---|
+| A | no | no | no |
+| B | yes | no | no |
+| C | yes | yes | no |
+| D | yes | yes | gated |
 
-Do not start a new Crucible training run or rent cloud hardware from this
-framework alone. Finish the CPU-only evaluation registry and evidence audit,
-then return a preregistered smallest-decisive gate for approval.
+The primary question is whether structured evidence helps the system detect
+and correct errors, not merely copy retrieved text.
+
+### Gate R3 — typed persistence
+
+CMS2 writes must distinguish at least verified fact, hypothesis, rejected
+conclusion, unresolved question and procedure. Test interruption, restart,
+contradiction, rollback and provenance failure. Compare memory-assisted
+performance with post-update neural performance; they are different claims.
+
+### Gate R4 — adaptive computation
+
+A small controller may choose answer, retrieve, critique, falsify, create a
+subgoal or stop. Compare it with fixed-depth, fixed-budget and deterministic
+heuristic controllers. It passes only if decision overhead is included and
+expected capability gain exceeds its cost.
+
+### Gate R5 — goals
+
+Evaluate goal generation and goal pursuit separately:
+
+- goal quality, boundedness and relevance;
+- progress per subgoal;
+- execution success and completion rate;
+- replanning after failure;
+- recovery after interruption;
+- false-progress and unsupported-completion rate.
+
+Text that describes a plan is not evidence that a goal was maintained or
+completed.
+
+## Statistical and reporting rules
+
+- Freeze manifests, splits, seeds, prompts and budgets before execution.
+- Use at least two seeds for an initial gate and add a third seed before
+  promoting a small effect as an architectural trend.
+- Report per-seed results, not only means.
+- Predeclare primary endpoints and tolerances.
+- Preserve negative and failed results.
+- Separate inference-time scaffold gains from learned-weight gains.
+- Include cost, latency and tool use in any claim of practical improvement.
+- Do not merge TinyStories language loss with cognitive-task scores into one
+  unqualified intelligence number.
+
+## Dependency-aware next steps
+
+### Now: CPU-only preparation
+
+1. Preserve the E4/E8/E16 metrics and initial anchors.
+2. Mark causal specialization as blocked by missing final checkpoints and
+   routing traces, rather than pretending the existing statistics answer it.
+3. Finalize deterministic task generators, manifests and scoring contracts.
+4. Audit the incomplete context-256/512 collection before using it for a
+   context claim.
+
+### Next paid or substantial GPU gate
+
+Choose one, after review:
+
+- a state-saving E4/E8/E16 replication for causal specialization; or
+- the smallest matched-compute dense-versus-MoE quality comparison.
+
+Do not start E32, recursive cognition, pretrained distillation and a new
+context sweep simultaneously. Each would add a different confound.
+
+### Later
+
+Run the external recursive/symbolic scaffold on the sealed cognitive suite.
+Introduce CMS2 persistence only after retrieval and verification are measured
+separately. Internalize useful controllers only after the external process
+shows a repeatable advantage.
+
+## Decision standard
+
+The project can claim an architectural improvement only when the result is:
+
+1. replicated across seeds;
+2. measured on held-out task structure;
+3. compared with the simplest relevant control;
+4. protected against data, capacity, tool and compute confounds; and
+5. supported by mechanism-specific ablations.
+
+Until then, use precise labels such as **language-modelling improvement**,
+**sparse-capacity signal**, **execution optimization** or **scaffold-assisted
+performance**. Reserve claims about reasoning, specialization, autonomy or
+learning for gates that directly measure those properties.
