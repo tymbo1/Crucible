@@ -46,7 +46,7 @@ state-saving gate.
 Use checkpoints at steps `100, 500, 1500, 2500, 3125`. The final checkpoint is
 mandatory even if an earlier save fails.
 
-Persist canonical, tensor-by-tensor records for:
+Capture canonical, tensor-by-tensor records for:
 
 1. model parameters and buffers, including names, shapes, dtype and SHA-256;
 2. optimizer state tensors and parameter-group configuration;
@@ -61,6 +61,14 @@ Persist canonical, tensor-by-tensor records for:
 The canonical state digest must hash sorted tensor names and raw contiguous
 bytes with a declared dtype/shape header. It must not depend on pickle order,
 filesystem ordering or device-specific serialization metadata.
+
+The default lean profile saves full model snapshots at every scheduled
+checkpoint, stores compact optimizer/RNG/sampler digests at every checkpoint,
+and saves the full resumable optimizer/RNG/sampler state at the final step.
+The full-resume profile saves those full training states at every checkpoint.
+The lean profile is sufficient for specialization-development analysis and a
+final restart test; it is not a claim that arbitrary intermediate checkpoints
+are resumable.
 
 ## Fixed routing probe
 
@@ -128,17 +136,26 @@ bytes per parameter per full model-plus-optimizer checkpoint: BF16 model
 weights, two FP32 Adam moments, a master-weight allowance and metadata.
 Actual files must be measured during a preflight.
 
-| State set | Checkpoints | Two seeds | Conservative storage |
+| State profile | Checkpoints | Two seeds | Conservative storage |
 |---|---:|---:|---:|
-| E4 + E8 + E16 | 5 each | 2 | approximately 47.8 GB / 44.5 GiB |
-| Dense upper-bound at E16 parameter count | 5 | 2 | approximately 27.2 GB / 25.4 GiB |
-| Sparse plus dense upper bound | — | — | approximately 75.0 GB / 69.9 GiB |
+| Lean: four model-only snapshots plus one full final state, E4 + E8 + E16 | 5 each | 2 | approximately 19.1 GB / 17.8 GiB |
+| Lean dense upper-bound at E16 parameter count | 5 | 2 | approximately 10.9 GB / 10.1 GiB |
+| Lean sparse plus dense upper bound | — | — | approximately 30.0 GB / 28.0 GiB |
+| Full-resume: five full states, E4 + E8 + E16 | 5 each | 2 | approximately 47.8 GB / 44.5 GiB |
+| Full-resume dense upper-bound at E16 parameter count | 5 | 2 | approximately 27.2 GB / 25.4 GiB |
+| Full-resume sparse plus dense upper bound | — | — | approximately 75.0 GB / 69.9 GiB |
 
-Add at least 25% for routing traces, manifests, temporary files and failed
-checkpoint cleanup. A 100 GB persistent volume is the minimum sensible target
-for the staged campaign; 150 GB is safer if the dense control proceeds.
+The lean profile needs approximately 25% headroom for routing traces, manifests,
+temporary files and failed checkpoint cleanup: a 50 GB volume is sufficient for
+the staged campaign. The full-resume profile needs approximately 25% headroom,
+so a 100 GB volume is the minimum sensible target; 150 GB is safer if the
+dense control proceeds or optional diagnostics are retained.
 The private Git repository should receive manifests, hashes and compact
 metrics, not raw checkpoints.
+
+Raw gradients, full activation tensors and unrestricted per-token traces are
+optional diagnostics and are excluded from these estimates. Compact gradient
+and optimizer digests remain required for equivalence checks.
 
 ## Hardware and cost estimate
 

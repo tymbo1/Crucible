@@ -32,6 +32,13 @@ hashes are the immutable v1 instance.
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover \
   -s tools -p 'test_*.py' -v
+
+PYTHONDONTWRITEBYTECODE=1 python3 tools/validate_cognitive_manifests.py \
+  --manifests experiments/crucible_cognitive_eval_v1_20261021/manifests
 ```
+
+The validator independently parses the task text, checks all 640 exact
+oracles, detects cross-split input leakage and verifies composition, path
+length and rule-depth holdouts.
 
 No training, cloud execution or checkpoint download is required.
