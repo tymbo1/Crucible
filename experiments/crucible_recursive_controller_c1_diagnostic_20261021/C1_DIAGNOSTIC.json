@@ -1,0 +1,552 @@
+{
+  "aggregates": {
+    "adaptive": {
+      "accuracy": 0.80078125,
+      "action_counts": {
+        "answer": 256,
+        "counterexample": 99,
+        "critique": 256,
+        "evidence_search": 157,
+        "revise": 256,
+        "stop": 256,
+        "verify": 157
+      },
+      "by_category": {
+        "clean_correct": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 49,
+            "critique": 49,
+            "evidence_search": 49,
+            "revise": 49,
+            "stop": 49,
+            "verify": 49
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 8.0,
+          "records": 49,
+          "unresolved": 0
+        },
+        "contradiction": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 54,
+            "critique": 54,
+            "evidence_search": 54,
+            "revise": 54,
+            "stop": 54,
+            "verify": 54
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 8.0,
+          "records": 54,
+          "unresolved": 0
+        },
+        "detectable_wrong": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 48,
+            "counterexample": 48,
+            "critique": 48,
+            "revise": 48,
+            "stop": 48
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 4.5,
+          "records": 48,
+          "unresolved": 0
+        },
+        "misleading_evidence": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 54,
+            "critique": 54,
+            "evidence_search": 54,
+            "revise": 54,
+            "stop": 54,
+            "verify": 54
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 8.0,
+          "records": 54,
+          "unresolved": 0
+        },
+        "shortcut_probe": {
+          "accuracy": 0.0,
+          "actions": {
+            "answer": 51,
+            "counterexample": 51,
+            "critique": 51,
+            "revise": 51,
+            "stop": 51
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 4.5,
+          "records": 51,
+          "unresolved": 51
+        }
+      },
+      "corrections": 102,
+      "false_corrections": 0,
+      "initial_accuracy": 0.40234375,
+      "invalid_memory_attempts": 54,
+      "mean_actions": 5.61328125,
+      "mean_cost_units": 6.646484375,
+      "policy": "adaptive",
+      "records": 256,
+      "unresolved": 51,
+      "valid_memory_commits": 103,
+      "verification_by_category": {
+        "clean_correct": 49,
+        "contradiction": 54,
+        "misleading_evidence": 54
+      },
+      "verification_signals": {
+        "verified_correct": 103,
+        "verified_incorrect": 54
+      }
+    },
+    "confidence_stop": {
+      "accuracy": 0.40234375,
+      "action_counts": {
+        "answer": 256,
+        "critique": 99,
+        "revise": 99,
+        "stop": 256
+      },
+      "by_category": {
+        "clean_correct": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 49,
+            "stop": 49
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 1.0,
+          "records": 49,
+          "unresolved": 0
+        },
+        "contradiction": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 54,
+            "stop": 54
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 1.0,
+          "records": 54,
+          "unresolved": 0
+        },
+        "detectable_wrong": {
+          "accuracy": 0.0,
+          "actions": {
+            "answer": 48,
+            "critique": 48,
+            "revise": 48,
+            "stop": 48
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 3.0,
+          "records": 48,
+          "unresolved": 48
+        },
+        "misleading_evidence": {
+          "accuracy": 0.0,
+          "actions": {
+            "answer": 54,
+            "stop": 54
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 1.0,
+          "records": 54,
+          "unresolved": 54
+        },
+        "shortcut_probe": {
+          "accuracy": 0.0,
+          "actions": {
+            "answer": 51,
+            "critique": 51,
+            "revise": 51,
+            "stop": 51
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 3.0,
+          "records": 51,
+          "unresolved": 51
+        }
+      },
+      "corrections": 0,
+      "false_corrections": 0,
+      "initial_accuracy": 0.40234375,
+      "invalid_memory_attempts": 0,
+      "mean_actions": 2.7734375,
+      "mean_cost_units": 1.7734375,
+      "policy": "confidence_stop",
+      "records": 256,
+      "unresolved": 153,
+      "valid_memory_commits": 0,
+      "verification_by_category": {},
+      "verification_signals": {}
+    },
+    "fixed_depth_2": {
+      "accuracy": 0.7890625,
+      "action_counts": {
+        "answer": 256,
+        "counterexample": 256,
+        "critique": 256,
+        "revise": 256,
+        "stop": 256
+      },
+      "by_category": {
+        "clean_correct": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 49,
+            "counterexample": 49,
+            "critique": 49,
+            "revise": 49,
+            "stop": 49
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 4.5,
+          "records": 49,
+          "unresolved": 0
+        },
+        "contradiction": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 54,
+            "counterexample": 54,
+            "critique": 54,
+            "revise": 54,
+            "stop": 54
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 4.5,
+          "records": 54,
+          "unresolved": 0
+        },
+        "detectable_wrong": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 48,
+            "counterexample": 48,
+            "critique": 48,
+            "revise": 48,
+            "stop": 48
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 4.5,
+          "records": 48,
+          "unresolved": 0
+        },
+        "misleading_evidence": {
+          "accuracy": 0.0,
+          "actions": {
+            "answer": 54,
+            "counterexample": 54,
+            "critique": 54,
+            "revise": 54,
+            "stop": 54
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 4.5,
+          "records": 54,
+          "unresolved": 54
+        },
+        "shortcut_probe": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 51,
+            "counterexample": 51,
+            "critique": 51,
+            "revise": 51,
+            "stop": 51
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 4.5,
+          "records": 51,
+          "unresolved": 0
+        }
+      },
+      "corrections": 99,
+      "false_corrections": 0,
+      "initial_accuracy": 0.40234375,
+      "invalid_memory_attempts": 0,
+      "mean_actions": 5.0,
+      "mean_cost_units": 4.5,
+      "policy": "fixed_depth_2",
+      "records": 256,
+      "unresolved": 54,
+      "valid_memory_commits": 0,
+      "verification_by_category": {},
+      "verification_signals": {}
+    },
+    "one_pass": {
+      "accuracy": 0.40234375,
+      "action_counts": {
+        "answer": 256,
+        "stop": 256
+      },
+      "by_category": {
+        "clean_correct": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 49,
+            "stop": 49
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 1.0,
+          "records": 49,
+          "unresolved": 0
+        },
+        "contradiction": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 54,
+            "stop": 54
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 1.0,
+          "records": 54,
+          "unresolved": 0
+        },
+        "detectable_wrong": {
+          "accuracy": 0.0,
+          "actions": {
+            "answer": 48,
+            "stop": 48
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 1.0,
+          "records": 48,
+          "unresolved": 48
+        },
+        "misleading_evidence": {
+          "accuracy": 0.0,
+          "actions": {
+            "answer": 54,
+            "stop": 54
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 1.0,
+          "records": 54,
+          "unresolved": 54
+        },
+        "shortcut_probe": {
+          "accuracy": 0.0,
+          "actions": {
+            "answer": 51,
+            "stop": 51
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 1.0,
+          "records": 51,
+          "unresolved": 51
+        }
+      },
+      "corrections": 0,
+      "false_corrections": 0,
+      "initial_accuracy": 0.40234375,
+      "invalid_memory_attempts": 0,
+      "mean_actions": 2.0,
+      "mean_cost_units": 1.0,
+      "policy": "one_pass",
+      "records": 256,
+      "unresolved": 153,
+      "valid_memory_commits": 0,
+      "verification_by_category": {},
+      "verification_signals": {}
+    },
+    "verification_only": {
+      "accuracy": 1.0,
+      "action_counts": {
+        "answer": 256,
+        "revise": 256,
+        "stop": 256,
+        "verify": 256
+      },
+      "by_category": {
+        "clean_correct": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 49,
+            "revise": 49,
+            "stop": 49,
+            "verify": 49
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 5.0,
+          "records": 49,
+          "unresolved": 0
+        },
+        "contradiction": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 54,
+            "revise": 54,
+            "stop": 54,
+            "verify": 54
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 5.0,
+          "records": 54,
+          "unresolved": 0
+        },
+        "detectable_wrong": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 48,
+            "revise": 48,
+            "stop": 48,
+            "verify": 48
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 5.0,
+          "records": 48,
+          "unresolved": 0
+        },
+        "misleading_evidence": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 54,
+            "revise": 54,
+            "stop": 54,
+            "verify": 54
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 5.0,
+          "records": 54,
+          "unresolved": 0
+        },
+        "shortcut_probe": {
+          "accuracy": 1.0,
+          "actions": {
+            "answer": 51,
+            "revise": 51,
+            "stop": 51,
+            "verify": 51
+          },
+          "false_corrections": 0,
+          "mean_cost_units": 5.0,
+          "records": 51,
+          "unresolved": 0
+        }
+      },
+      "corrections": 153,
+      "false_corrections": 0,
+      "initial_accuracy": 0.40234375,
+      "invalid_memory_attempts": 0,
+      "mean_actions": 4.0,
+      "mean_cost_units": 5.0,
+      "policy": "verification_only",
+      "records": 256,
+      "unresolved": 0,
+      "valid_memory_commits": 256,
+      "verification_by_category": {
+        "clean_correct": 49,
+        "contradiction": 54,
+        "detectable_wrong": 48,
+        "misleading_evidence": 54,
+        "shortcut_probe": 51
+      },
+      "verification_signals": {
+        "verified_correct": 103,
+        "verified_incorrect": 153
+      }
+    }
+  },
+  "conclusion": "Verification-only is the current fixture winner because exact verification is cheap and always available. Adaptive policy advantage is not established; the result primarily diagnoses a missing condition, not the recursive equations.",
+  "findings": [
+    {
+      "evidence": {
+        "verification_only_calls": 256,
+        "verification_only_records": 256,
+        "verification_signals": {
+          "verified_correct": 103,
+          "verified_incorrect": 153
+        }
+      },
+      "finding": "perfect_verifier_available",
+      "interpretation": "The fixture supplies an exact, always-available independent verifier at declared cost; this strongly favors verification-first behavior."
+    },
+    {
+      "evidence": {
+        "accuracy": 0.0,
+        "records": 51,
+        "unresolved": 51,
+        "verify_calls": 0
+      },
+      "finding": "adaptive_skips_verification_on_shortcut_probe",
+      "interpretation": "The current low-confidence adaptive branch uses critique/counterexample/revision but never escalates to verification, so it misses every shortcut-probe case."
+    },
+    {
+      "evidence": {
+        "adaptive_accuracy": 0.80078125,
+        "adaptive_mean_cost": 6.646484375,
+        "verification_only_accuracy": 1.0,
+        "verification_only_mean_cost": 5.0
+      },
+      "finding": "adaptive_spends_more_and_resolves_less",
+      "interpretation": "Under this fixture, adaptive is neither cost-dominant nor accuracy-dominant; it has higher mean cost and lower accuracy."
+    },
+    {
+      "evidence": {
+        "brier": 0.319644140625,
+        "ece": 0.45
+      },
+      "finding": "confidence_is_not_calibrated",
+      "interpretation": "The supplied confidence values are diagnostic synthetic signals, not a calibrated posterior. They cannot justify entropy or information-gain optimization."
+    },
+    {
+      "evidence": {
+        "adaptive_mean_cost": 6.646484375,
+        "shared_budget": {
+          "actions": 8,
+          "cost": 12.0,
+          "counterexample_calls": 2,
+          "depth": 8,
+          "evidence_calls": 2,
+          "memory_writes": 2
+        },
+        "verification_only_mean_cost": 5.0
+      },
+      "finding": "budgets_are_matched_as_ceilings_not_as_realized_cost",
+      "interpretation": "Policies receive the same maximum budget and action/tool types, but actual cost is not equalized. Efficiency claims therefore require a separate matched-cost analysis."
+    },
+    {
+      "evidence": {
+        "adaptive_invalid_memory_attempts": 54,
+        "adaptive_valid_memory_commits": 103
+      },
+      "finding": "memory_gate_exposes_contradiction_risk",
+      "interpretation": "Adaptive evidence paths create contradiction-linked proposals that are correctly quarantined rather than committed."
+    }
+  ],
+  "protocol": {
+    "execution": "CPU-only; no model, CUDA, network or cloud execution",
+    "future_competence": "disabled",
+    "policies": [
+      "adaptive",
+      "confidence_stop",
+      "fixed_depth_2",
+      "one_pass",
+      "verification_only"
+    ],
+    "records": 256,
+    "shared_budget": {
+      "actions": 8,
+      "cost": 12.0,
+      "counterexample_calls": 2,
+      "depth": 8,
+      "evidence_calls": 2,
+      "memory_writes": 2
+    }
+  },
+  "source": {
+    "input_directory": "experiments/crucible_recursive_controller_c0_c1_20261021",
+    "run_config_sha256": "05248f08cc67a134e658dfb70af300716b14b2b328ec54de8e999a26ce97cdc2",
+    "sealed_hash_index_entry": "b325c142f734523d088e1ab8533f45cc17fcd7fbce10d31b40921a48a8d36e98",
+    "trace_sha256": "b325c142f734523d088e1ab8533f45cc17fcd7fbce10d31b40921a48a8d36e98"
+  }
+}
