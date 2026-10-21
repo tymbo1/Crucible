@@ -19,6 +19,12 @@ The multidimensional evaluation protocol is defined in
 NLL/BPB remains the language-competence measure; it is not the sole measure of
 architectural progress.
 
+Capacity is an explicit experimental variable. The current 130–170M Crucible
+scale is appropriate for inexpensive mechanism discovery, but it should not be
+the sole judge of advanced cognition. The roadmap uses a small mechanism tier,
+an approximately 1B cognition tier and a later 7–12B integration tier; these
+are planning scales, not demonstrated capability thresholds.
+
 ## Proposed components
 
 1. **Crucible neural substrate** — learned representations, sparse experts,
@@ -157,6 +163,9 @@ Every mechanism must satisfy all applicable gates:
 - interruption, restart and rollback tests where persistent state is involved;
 - separate accounting for memory-assisted performance and learned-weight
   improvement.
+- capacity-versus-mechanism checks: task learnability, control competence,
+  training sufficiency and scale effects must be separated before declaring a
+  cognitive mechanism ineffective.
 
 ## Compute and cloud policy
 
@@ -194,3 +203,8 @@ The current preparation artifacts are:
   replication, dense-control decision, checkpoint schema and cost envelope;
 - `tools/cognitive_task_suite.py` and `tools/build_cognitive_manifests.py` —
   deterministic CPU task generators, exact oracles and immutable manifests.
+
+Do not use a failure from a TinyStories-trained 130–170M model as a verdict on
+advanced recursive cognition, metacognition or autonomy. First establish a
+task-specific competence floor, then determine whether the mechanism survives
+capacity and pretrained-reference controls.

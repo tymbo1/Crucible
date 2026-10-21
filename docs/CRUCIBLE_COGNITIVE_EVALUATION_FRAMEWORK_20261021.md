@@ -69,6 +69,46 @@ the underlying capability.
 
 Every comparison must state which source of improvement it is testing.
 
+### Capacity versus mechanism
+
+A failure on a cognitive task is not an architectural failure unless the task
+is learnable by an appropriate control at the tested scale and training
+budget. Before rejecting a mechanism, establish:
+
+1. a competence floor on the task family;
+2. a simpler control that can learn the task under the same exposure;
+3. sufficient optimization and inference budget;
+4. whether increasing capacity changes the result without changing the
+   mechanism;
+5. whether the mechanism still contributes after the capacity comparison.
+
+The inverse warning also applies: a larger model passing a task does not prove
+that its architecture is responsible. Scale, curriculum, pretrained knowledge
+and extra inference computation must be reported separately.
+
+Crucible should use three research tiers:
+
+| Tier | Intended use | Interpretation boundary |
+|---|---|---|
+| Approximately 130–170M | Routing, expert interventions, binding, retention, algorithmic generalization and small trained reasoning tasks | Cheap mechanism science; not the sole judge of advanced cognition |
+| Approximately 1B | Richer reasoning, calibration, adaptive computation and learned planning | Medium-scale mechanism validation; pretrained or distilled foundations are separate ablations |
+| Approximately 7–12B | Integrated recursive, symbolic, tool-using and goal-pursuit systems | Later integration tier; not the first architecture-discovery target |
+
+These are planning tiers, not established capability thresholds. The same task
+family should be evaluated across tiers only when the curriculum, tokenizer,
+compute accounting and control geometry are documented.
+
+Every MoE report must distinguish:
+
+- total parameters, which affect storage and aggregate capacity;
+- active parameters per token, which approximate conditional compute;
+- training exposure per expert, which affects how much opportunity each expert
+  has to learn;
+- context, data diversity and training duration.
+
+A sparse 170M-parameter model and a dense 170M-parameter model are not
+automatically equivalent in any of these quantities.
+
 ### Capacity controls
 
 At minimum, report separate comparisons for:
@@ -84,6 +124,12 @@ At minimum, report separate comparisons for:
 
 E4/E8/E16 must not be described as proving that experts are better than dense
    capacity until the appropriate dense and total-parameter controls exist.
+
+For advanced cognitive claims, include a competent pretrained model as a
+benchmark reference when practical. Its score establishes that the task and
+feedback loop are usable by a capable language system; it does not establish
+Crucible superiority. Teacher inference, tokenizer conversion and distillation
+cost remain part of the comparison.
 
 ### Data and training controls
 

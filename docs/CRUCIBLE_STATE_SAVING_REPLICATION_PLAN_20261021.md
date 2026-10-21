@@ -13,6 +13,10 @@ without adding a second confound.
 The existing E4/E8/E16 results remain frozen. This is a new state-saving
 replication, not a rewrite or extension of the old runs.
 
+This campaign is a small-scale mechanism and specialization gate. It is not
+intended to decide whether a 130–170M model can demonstrate advanced cognition;
+those claims require task-specific training and later capacity tiers.
+
 ## Recommended staged campaign
 
 ### Stage 1 — sparse state-saving replication
