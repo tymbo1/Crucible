@@ -1,0 +1,23 @@
+{
+  "decision": "PROCEED_CHECKPOINT_ONLY",
+  "experiment": "crucible_two_candidate_transfer_forensics_20261027_v1",
+  "no_training": true,
+  "not_novel": [
+    "The candidate-ID matching task",
+    "The two cyclic checkpoints",
+    "The canonical train and validation source records",
+    "The dense SHARED_SCORER architecture",
+    "Candidate-pair and counterfactual metrics"
+  ],
+  "novelty_claim": "No prior Crucible record evaluates the accepted two-candidate checkpoints with a frozen 2x2 counterfactual crossing familiar versus recombined candidate pairs with compact versus padded serialization.",
+  "related_records": [
+    "explicit-id-cardinality-transfer",
+    "cardinality-competence-diagnostic-v1",
+    "two-candidate-competence-gate-v1",
+    "shared-scorer-compositional-transfer"
+  ],
+  "repository_ledger_checked": true,
+  "schema_version": "crucible_novelty_audit_v1",
+  "sealed_test_accessed": false,
+  "status": "pre_execution"
+}

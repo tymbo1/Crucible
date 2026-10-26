@@ -1,0 +1,1389 @@
+{
+  "checkpoint_hashes": {
+    "DENSE_CYCLIC_SEED1337": "a01f8043f45fc4e5584435cbfedc91ec4300433149c8e608b4a93114be833bec",
+    "DENSE_CYCLIC_SEED42": "b45ce80c3bcea290bb89f0f807297340ea36935b16b41099a5a8dcfca8ea71c3"
+  },
+  "checkpoints_modified": false,
+  "context_sources": [
+    "TRAIN_SOURCE",
+    "VALIDATION_SOURCE"
+  ],
+  "data_audit": "experiments/crucible_two_candidate_matched_context_probe_20261027_v1/DATA_AUDIT.json",
+  "experiment": "crucible_two_candidate_matched_context_probe_20261027_v1",
+  "gate_summary": "experiments/crucible_two_candidate_competence_gate_20261027_v1/SUMMARY.json",
+  "metrics": {
+    "1337": {
+      "by_context_source": {
+        "TRAIN_SOURCE": {
+          "FAMILIAR": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 48,
+              "rows": 48
+            },
+            "accuracy": 1.0,
+            "by_candidate_set": {
+              "0,1": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "1,0": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "2,3": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "3,2": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "4,5": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "5,4": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "6,7": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "7,6": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              }
+            },
+            "by_context": {
+              "1,6": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "1,8": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "2,7": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "2,9": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "3,8": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "4,9": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              }
+            },
+            "correct": 144,
+            "errors_by_candidate_set": {},
+            "errors_by_context": {},
+            "paired": {
+              "both_correct": 48,
+              "groups": 48,
+              "predicted_flips": 48,
+              "target_flips": 48
+            },
+            "rows": 144,
+            "target_prediction_confusion": {
+              "target_0_pred_0": 48,
+              "target_1_pred_1": 48,
+              "target_8_pred_8": 48
+            }
+          },
+          "RECOMBINED": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 48,
+              "rows": 48
+            },
+            "accuracy": 0.8402777777777778,
+            "by_candidate_set": {
+              "0,3": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "1,4": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "2,5": {
+                "accuracy": 0.7222222222222222,
+                "correct": 13,
+                "rows": 18
+              },
+              "3,0": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "3,6": {
+                "accuracy": 0.6666666666666666,
+                "correct": 12,
+                "rows": 18
+              },
+              "4,1": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "5,2": {
+                "accuracy": 0.6666666666666666,
+                "correct": 12,
+                "rows": 18
+              },
+              "6,3": {
+                "accuracy": 0.6666666666666666,
+                "correct": 12,
+                "rows": 18
+              }
+            },
+            "by_context": {
+              "1,6": {
+                "accuracy": 0.8333333333333334,
+                "correct": 20,
+                "rows": 24
+              },
+              "1,8": {
+                "accuracy": 0.8333333333333334,
+                "correct": 20,
+                "rows": 24
+              },
+              "2,7": {
+                "accuracy": 0.8333333333333334,
+                "correct": 20,
+                "rows": 24
+              },
+              "2,9": {
+                "accuracy": 0.8333333333333334,
+                "correct": 20,
+                "rows": 24
+              },
+              "3,8": {
+                "accuracy": 0.8333333333333334,
+                "correct": 20,
+                "rows": 24
+              },
+              "4,9": {
+                "accuracy": 0.875,
+                "correct": 21,
+                "rows": 24
+              }
+            },
+            "correct": 121,
+            "errors_by_candidate_set": {
+              "2,5": 5,
+              "3,6": 6,
+              "5,2": 6,
+              "6,3": 6
+            },
+            "errors_by_context": {
+              "1,6": 4,
+              "1,8": 4,
+              "2,7": 4,
+              "2,9": 4,
+              "3,8": 4,
+              "4,9": 3
+            },
+            "paired": {
+              "both_correct": 25,
+              "groups": 48,
+              "predicted_flips": 25,
+              "target_flips": 48
+            },
+            "rows": 144,
+            "target_prediction_confusion": {
+              "target_0_pred_0": 37,
+              "target_0_pred_1": 11,
+              "target_1_pred_0": 12,
+              "target_1_pred_1": 36,
+              "target_8_pred_8": 48
+            }
+          }
+        },
+        "VALIDATION_SOURCE": {
+          "FAMILIAR": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 32,
+              "rows": 32
+            },
+            "accuracy": 1.0,
+            "by_candidate_set": {
+              "0,1": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "1,0": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "2,3": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "3,2": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "4,5": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "5,4": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "6,7": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "7,6": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              }
+            },
+            "by_context": {
+              "0,5": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "1,7": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "2,8": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "3,9": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              }
+            },
+            "correct": 96,
+            "errors_by_candidate_set": {},
+            "errors_by_context": {},
+            "paired": {
+              "both_correct": 32,
+              "groups": 32,
+              "predicted_flips": 32,
+              "target_flips": 32
+            },
+            "rows": 96,
+            "target_prediction_confusion": {
+              "target_0_pred_0": 32,
+              "target_1_pred_1": 32,
+              "target_8_pred_8": 32
+            }
+          },
+          "RECOMBINED": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 32,
+              "rows": 32
+            },
+            "accuracy": 0.8333333333333334,
+            "by_candidate_set": {
+              "0,3": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "1,4": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "2,5": {
+                "accuracy": 0.6666666666666666,
+                "correct": 8,
+                "rows": 12
+              },
+              "3,0": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "3,6": {
+                "accuracy": 0.6666666666666666,
+                "correct": 8,
+                "rows": 12
+              },
+              "4,1": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "5,2": {
+                "accuracy": 0.6666666666666666,
+                "correct": 8,
+                "rows": 12
+              },
+              "6,3": {
+                "accuracy": 0.6666666666666666,
+                "correct": 8,
+                "rows": 12
+              }
+            },
+            "by_context": {
+              "0,5": {
+                "accuracy": 0.8333333333333334,
+                "correct": 20,
+                "rows": 24
+              },
+              "1,7": {
+                "accuracy": 0.8333333333333334,
+                "correct": 20,
+                "rows": 24
+              },
+              "2,8": {
+                "accuracy": 0.8333333333333334,
+                "correct": 20,
+                "rows": 24
+              },
+              "3,9": {
+                "accuracy": 0.8333333333333334,
+                "correct": 20,
+                "rows": 24
+              }
+            },
+            "correct": 80,
+            "errors_by_candidate_set": {
+              "2,5": 4,
+              "3,6": 4,
+              "5,2": 4,
+              "6,3": 4
+            },
+            "errors_by_context": {
+              "0,5": 4,
+              "1,7": 4,
+              "2,8": 4,
+              "3,9": 4
+            },
+            "paired": {
+              "both_correct": 16,
+              "groups": 32,
+              "predicted_flips": 16,
+              "target_flips": 32
+            },
+            "rows": 96,
+            "target_prediction_confusion": {
+              "target_0_pred_0": 24,
+              "target_0_pred_1": 8,
+              "target_1_pred_0": 8,
+              "target_1_pred_1": 24,
+              "target_8_pred_8": 32
+            }
+          }
+        }
+      },
+      "overall": {
+        "FAMILIAR": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 80,
+            "rows": 80
+          },
+          "accuracy": 1.0,
+          "by_candidate_set": {
+            "0,1": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "1,0": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "2,3": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "3,2": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "4,5": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "5,4": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "6,7": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "7,6": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            }
+          },
+          "by_context": {
+            "0,5": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "1,6": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "1,7": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "1,8": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "2,7": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "2,8": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "2,9": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "3,8": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "3,9": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "4,9": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            }
+          },
+          "correct": 240,
+          "errors_by_candidate_set": {},
+          "errors_by_context": {},
+          "paired": {
+            "both_correct": 80,
+            "groups": 80,
+            "predicted_flips": 80,
+            "target_flips": 80
+          },
+          "rows": 240,
+          "target_prediction_confusion": {
+            "target_0_pred_0": 80,
+            "target_1_pred_1": 80,
+            "target_8_pred_8": 80
+          }
+        },
+        "RECOMBINED": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 80,
+            "rows": 80
+          },
+          "accuracy": 0.8375,
+          "by_candidate_set": {
+            "0,3": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "1,4": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "2,5": {
+              "accuracy": 0.7,
+              "correct": 21,
+              "rows": 30
+            },
+            "3,0": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "3,6": {
+              "accuracy": 0.6666666666666666,
+              "correct": 20,
+              "rows": 30
+            },
+            "4,1": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "5,2": {
+              "accuracy": 0.6666666666666666,
+              "correct": 20,
+              "rows": 30
+            },
+            "6,3": {
+              "accuracy": 0.6666666666666666,
+              "correct": 20,
+              "rows": 30
+            }
+          },
+          "by_context": {
+            "0,5": {
+              "accuracy": 0.8333333333333334,
+              "correct": 20,
+              "rows": 24
+            },
+            "1,6": {
+              "accuracy": 0.8333333333333334,
+              "correct": 20,
+              "rows": 24
+            },
+            "1,7": {
+              "accuracy": 0.8333333333333334,
+              "correct": 20,
+              "rows": 24
+            },
+            "1,8": {
+              "accuracy": 0.8333333333333334,
+              "correct": 20,
+              "rows": 24
+            },
+            "2,7": {
+              "accuracy": 0.8333333333333334,
+              "correct": 20,
+              "rows": 24
+            },
+            "2,8": {
+              "accuracy": 0.8333333333333334,
+              "correct": 20,
+              "rows": 24
+            },
+            "2,9": {
+              "accuracy": 0.8333333333333334,
+              "correct": 20,
+              "rows": 24
+            },
+            "3,8": {
+              "accuracy": 0.8333333333333334,
+              "correct": 20,
+              "rows": 24
+            },
+            "3,9": {
+              "accuracy": 0.8333333333333334,
+              "correct": 20,
+              "rows": 24
+            },
+            "4,9": {
+              "accuracy": 0.875,
+              "correct": 21,
+              "rows": 24
+            }
+          },
+          "correct": 201,
+          "errors_by_candidate_set": {
+            "2,5": 9,
+            "3,6": 10,
+            "5,2": 10,
+            "6,3": 10
+          },
+          "errors_by_context": {
+            "0,5": 4,
+            "1,6": 4,
+            "1,7": 4,
+            "1,8": 4,
+            "2,7": 4,
+            "2,8": 4,
+            "2,9": 4,
+            "3,8": 4,
+            "3,9": 4,
+            "4,9": 3
+          },
+          "paired": {
+            "both_correct": 41,
+            "groups": 80,
+            "predicted_flips": 41,
+            "target_flips": 80
+          },
+          "rows": 240,
+          "target_prediction_confusion": {
+            "target_0_pred_0": 61,
+            "target_0_pred_1": 19,
+            "target_1_pred_0": 20,
+            "target_1_pred_1": 60,
+            "target_8_pred_8": 80
+          }
+        }
+      }
+    },
+    "42": {
+      "by_context_source": {
+        "TRAIN_SOURCE": {
+          "FAMILIAR": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 48,
+              "rows": 48
+            },
+            "accuracy": 1.0,
+            "by_candidate_set": {
+              "0,1": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "1,0": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "2,3": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "3,2": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "4,5": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "5,4": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "6,7": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "7,6": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              }
+            },
+            "by_context": {
+              "1,6": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "1,8": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "2,7": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "2,9": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "3,8": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "4,9": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              }
+            },
+            "correct": 144,
+            "errors_by_candidate_set": {},
+            "errors_by_context": {},
+            "paired": {
+              "both_correct": 48,
+              "groups": 48,
+              "predicted_flips": 48,
+              "target_flips": 48
+            },
+            "rows": 144,
+            "target_prediction_confusion": {
+              "target_0_pred_0": 48,
+              "target_1_pred_1": 48,
+              "target_8_pred_8": 48
+            }
+          },
+          "RECOMBINED": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 48,
+              "rows": 48
+            },
+            "accuracy": 0.7708333333333334,
+            "by_candidate_set": {
+              "0,3": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "1,4": {
+                "accuracy": 0.8333333333333334,
+                "correct": 15,
+                "rows": 18
+              },
+              "2,5": {
+                "accuracy": 0.6666666666666666,
+                "correct": 12,
+                "rows": 18
+              },
+              "3,0": {
+                "accuracy": 1.0,
+                "correct": 18,
+                "rows": 18
+              },
+              "3,6": {
+                "accuracy": 0.6666666666666666,
+                "correct": 12,
+                "rows": 18
+              },
+              "4,1": {
+                "accuracy": 0.6666666666666666,
+                "correct": 12,
+                "rows": 18
+              },
+              "5,2": {
+                "accuracy": 0.6666666666666666,
+                "correct": 12,
+                "rows": 18
+              },
+              "6,3": {
+                "accuracy": 0.6666666666666666,
+                "correct": 12,
+                "rows": 18
+              }
+            },
+            "by_context": {
+              "1,6": {
+                "accuracy": 0.75,
+                "correct": 18,
+                "rows": 24
+              },
+              "1,8": {
+                "accuracy": 0.75,
+                "correct": 18,
+                "rows": 24
+              },
+              "2,7": {
+                "accuracy": 0.7916666666666666,
+                "correct": 19,
+                "rows": 24
+              },
+              "2,9": {
+                "accuracy": 0.7916666666666666,
+                "correct": 19,
+                "rows": 24
+              },
+              "3,8": {
+                "accuracy": 0.75,
+                "correct": 18,
+                "rows": 24
+              },
+              "4,9": {
+                "accuracy": 0.7916666666666666,
+                "correct": 19,
+                "rows": 24
+              }
+            },
+            "correct": 111,
+            "errors_by_candidate_set": {
+              "1,4": 3,
+              "2,5": 6,
+              "3,6": 6,
+              "4,1": 6,
+              "5,2": 6,
+              "6,3": 6
+            },
+            "errors_by_context": {
+              "1,6": 6,
+              "1,8": 6,
+              "2,7": 5,
+              "2,9": 5,
+              "3,8": 6,
+              "4,9": 5
+            },
+            "paired": {
+              "both_correct": 15,
+              "groups": 48,
+              "predicted_flips": 15,
+              "target_flips": 48
+            },
+            "rows": 144,
+            "target_prediction_confusion": {
+              "target_0_pred_0": 33,
+              "target_0_pred_1": 15,
+              "target_1_pred_0": 18,
+              "target_1_pred_1": 30,
+              "target_8_pred_8": 48
+            }
+          }
+        },
+        "VALIDATION_SOURCE": {
+          "FAMILIAR": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 32,
+              "rows": 32
+            },
+            "accuracy": 1.0,
+            "by_candidate_set": {
+              "0,1": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "1,0": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "2,3": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "3,2": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "4,5": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "5,4": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "6,7": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "7,6": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              }
+            },
+            "by_context": {
+              "0,5": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "1,7": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "2,8": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              },
+              "3,9": {
+                "accuracy": 1.0,
+                "correct": 24,
+                "rows": 24
+              }
+            },
+            "correct": 96,
+            "errors_by_candidate_set": {},
+            "errors_by_context": {},
+            "paired": {
+              "both_correct": 32,
+              "groups": 32,
+              "predicted_flips": 32,
+              "target_flips": 32
+            },
+            "rows": 96,
+            "target_prediction_confusion": {
+              "target_0_pred_0": 32,
+              "target_1_pred_1": 32,
+              "target_8_pred_8": 32
+            }
+          },
+          "RECOMBINED": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 32,
+              "rows": 32
+            },
+            "accuracy": 0.78125,
+            "by_candidate_set": {
+              "0,3": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "1,4": {
+                "accuracy": 0.9166666666666666,
+                "correct": 11,
+                "rows": 12
+              },
+              "2,5": {
+                "accuracy": 0.6666666666666666,
+                "correct": 8,
+                "rows": 12
+              },
+              "3,0": {
+                "accuracy": 1.0,
+                "correct": 12,
+                "rows": 12
+              },
+              "3,6": {
+                "accuracy": 0.6666666666666666,
+                "correct": 8,
+                "rows": 12
+              },
+              "4,1": {
+                "accuracy": 0.6666666666666666,
+                "correct": 8,
+                "rows": 12
+              },
+              "5,2": {
+                "accuracy": 0.6666666666666666,
+                "correct": 8,
+                "rows": 12
+              },
+              "6,3": {
+                "accuracy": 0.6666666666666666,
+                "correct": 8,
+                "rows": 12
+              }
+            },
+            "by_context": {
+              "0,5": {
+                "accuracy": 0.7916666666666666,
+                "correct": 19,
+                "rows": 24
+              },
+              "1,7": {
+                "accuracy": 0.7916666666666666,
+                "correct": 19,
+                "rows": 24
+              },
+              "2,8": {
+                "accuracy": 0.75,
+                "correct": 18,
+                "rows": 24
+              },
+              "3,9": {
+                "accuracy": 0.7916666666666666,
+                "correct": 19,
+                "rows": 24
+              }
+            },
+            "correct": 75,
+            "errors_by_candidate_set": {
+              "1,4": 1,
+              "2,5": 4,
+              "3,6": 4,
+              "4,1": 4,
+              "5,2": 4,
+              "6,3": 4
+            },
+            "errors_by_context": {
+              "0,5": 5,
+              "1,7": 5,
+              "2,8": 6,
+              "3,9": 5
+            },
+            "paired": {
+              "both_correct": 11,
+              "groups": 32,
+              "predicted_flips": 11,
+              "target_flips": 32
+            },
+            "rows": 96,
+            "target_prediction_confusion": {
+              "target_0_pred_0": 24,
+              "target_0_pred_1": 8,
+              "target_1_pred_0": 13,
+              "target_1_pred_1": 19,
+              "target_8_pred_8": 32
+            }
+          }
+        }
+      },
+      "overall": {
+        "FAMILIAR": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 80,
+            "rows": 80
+          },
+          "accuracy": 1.0,
+          "by_candidate_set": {
+            "0,1": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "1,0": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "2,3": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "3,2": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "4,5": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "5,4": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "6,7": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "7,6": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            }
+          },
+          "by_context": {
+            "0,5": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "1,6": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "1,7": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "1,8": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "2,7": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "2,8": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "2,9": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "3,8": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "3,9": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            },
+            "4,9": {
+              "accuracy": 1.0,
+              "correct": 24,
+              "rows": 24
+            }
+          },
+          "correct": 240,
+          "errors_by_candidate_set": {},
+          "errors_by_context": {},
+          "paired": {
+            "both_correct": 80,
+            "groups": 80,
+            "predicted_flips": 80,
+            "target_flips": 80
+          },
+          "rows": 240,
+          "target_prediction_confusion": {
+            "target_0_pred_0": 80,
+            "target_1_pred_1": 80,
+            "target_8_pred_8": 80
+          }
+        },
+        "RECOMBINED": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 80,
+            "rows": 80
+          },
+          "accuracy": 0.775,
+          "by_candidate_set": {
+            "0,3": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "1,4": {
+              "accuracy": 0.8666666666666667,
+              "correct": 26,
+              "rows": 30
+            },
+            "2,5": {
+              "accuracy": 0.6666666666666666,
+              "correct": 20,
+              "rows": 30
+            },
+            "3,0": {
+              "accuracy": 1.0,
+              "correct": 30,
+              "rows": 30
+            },
+            "3,6": {
+              "accuracy": 0.6666666666666666,
+              "correct": 20,
+              "rows": 30
+            },
+            "4,1": {
+              "accuracy": 0.6666666666666666,
+              "correct": 20,
+              "rows": 30
+            },
+            "5,2": {
+              "accuracy": 0.6666666666666666,
+              "correct": 20,
+              "rows": 30
+            },
+            "6,3": {
+              "accuracy": 0.6666666666666666,
+              "correct": 20,
+              "rows": 30
+            }
+          },
+          "by_context": {
+            "0,5": {
+              "accuracy": 0.7916666666666666,
+              "correct": 19,
+              "rows": 24
+            },
+            "1,6": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "rows": 24
+            },
+            "1,7": {
+              "accuracy": 0.7916666666666666,
+              "correct": 19,
+              "rows": 24
+            },
+            "1,8": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "rows": 24
+            },
+            "2,7": {
+              "accuracy": 0.7916666666666666,
+              "correct": 19,
+              "rows": 24
+            },
+            "2,8": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "rows": 24
+            },
+            "2,9": {
+              "accuracy": 0.7916666666666666,
+              "correct": 19,
+              "rows": 24
+            },
+            "3,8": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "rows": 24
+            },
+            "3,9": {
+              "accuracy": 0.7916666666666666,
+              "correct": 19,
+              "rows": 24
+            },
+            "4,9": {
+              "accuracy": 0.7916666666666666,
+              "correct": 19,
+              "rows": 24
+            }
+          },
+          "correct": 186,
+          "errors_by_candidate_set": {
+            "1,4": 4,
+            "2,5": 10,
+            "3,6": 10,
+            "4,1": 10,
+            "5,2": 10,
+            "6,3": 10
+          },
+          "errors_by_context": {
+            "0,5": 5,
+            "1,6": 6,
+            "1,7": 5,
+            "1,8": 6,
+            "2,7": 5,
+            "2,8": 6,
+            "2,9": 5,
+            "3,8": 6,
+            "3,9": 5,
+            "4,9": 5
+          },
+          "paired": {
+            "both_correct": 26,
+            "groups": 80,
+            "predicted_flips": 26,
+            "target_flips": 80
+          },
+          "rows": 240,
+          "target_prediction_confusion": {
+            "target_0_pred_0": 57,
+            "target_0_pred_1": 23,
+            "target_1_pred_0": 31,
+            "target_1_pred_1": 49,
+            "target_8_pred_8": 80
+          }
+        }
+      }
+    }
+  },
+  "novelty_audit": "docs/CRUCIBLE_TWO_CANDIDATE_MATCHED_CONTEXT_PROBE_NOVELTY_AUDIT_20261027.json",
+  "protocol": "docs/CRUCIBLE_TWO_CANDIDATE_MATCHED_CONTEXT_PROBE_PROTOCOL_20261027.md",
+  "regime_deltas": {
+    "1337": {
+      "by_context_source": {
+        "TRAIN_SOURCE": {
+          "paired_both_correct_recombined_minus_familiar": -23,
+          "predicted_flips_recombined_minus_familiar": -23,
+          "row_accuracy_recombined_minus_familiar": -0.1597222222222222
+        },
+        "VALIDATION_SOURCE": {
+          "paired_both_correct_recombined_minus_familiar": -16,
+          "predicted_flips_recombined_minus_familiar": -16,
+          "row_accuracy_recombined_minus_familiar": -0.16666666666666663
+        }
+      },
+      "overall": {
+        "paired_both_correct_recombined_minus_familiar": -39,
+        "predicted_flips_recombined_minus_familiar": -39,
+        "row_accuracy_recombined_minus_familiar": -0.16249999999999998
+      }
+    },
+    "42": {
+      "by_context_source": {
+        "TRAIN_SOURCE": {
+          "paired_both_correct_recombined_minus_familiar": -33,
+          "predicted_flips_recombined_minus_familiar": -33,
+          "row_accuracy_recombined_minus_familiar": -0.22916666666666663
+        },
+        "VALIDATION_SOURCE": {
+          "paired_both_correct_recombined_minus_familiar": -21,
+          "predicted_flips_recombined_minus_familiar": -21,
+          "row_accuracy_recombined_minus_familiar": -0.21875
+        }
+      },
+      "overall": {
+        "paired_both_correct_recombined_minus_familiar": -54,
+        "predicted_flips_recombined_minus_familiar": -54,
+        "row_accuracy_recombined_minus_familiar": -0.22499999999999998
+      }
+    }
+  },
+  "regimes": [
+    "FAMILIAR",
+    "RECOMBINED"
+  ],
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "source_train": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/data/canonical/train.jsonl",
+  "source_validation": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/data/canonical/validation.jsonl",
+  "status": "completed",
+  "training_performed": false
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "crucible_mechanism_coverage_v1",
   "updated": "2026-10-27",
-  "indexed_final_reports": 29,
+  "indexed_final_reports": 31,
   "categories": [
     {
       "mechanism": "operation-recognition",
@@ -49,8 +49,8 @@
       "mechanism": "candidate-count-and-shared-scoring",
       "established": [],
       "failed": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer"],
-      "inconclusive": ["authority-component-ablation", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1"],
-      "unresolved": ["Training-competent candidate matching across cardinalities", "Candidate-independent scoring under interior-slot coverage"]
+      "inconclusive": ["authority-component-ablation", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1", "two-candidate-transfer-forensics-v1"],
+      "unresolved": ["Training-competent candidate matching across cardinalities", "Candidate-independent scoring under interior-slot coverage", "Whether familiar candidate-set performance reflects exact-pair memorization or transferable identifier matching"]
     },
     {
       "mechanism": "training-dynamics",
@@ -83,8 +83,8 @@
     },
     {
       "name": "cardinality-lineage",
-      "records": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1"],
-      "interpretation": "The first run failed paired four-candidate transfer. The explicit-ID follow-up failed training competence, so it cannot adjudicate shared scoring versus fixed-slot transfer. The isolated two-candidate gate establishes training competence for the cyclic schedule but leaves a validation transfer gap and does not test variable cardinality."
+      "records": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1", "two-candidate-transfer-forensics-v1", "two-candidate-matched-context-probe-v1"],
+      "interpretation": "The first run failed paired four-candidate transfer. The explicit-ID follow-up failed training competence, so it cannot adjudicate shared scoring versus fixed-slot transfer. The isolated two-candidate gate establishes training competence for the cyclic schedule but leaves a validation transfer gap. The 2x2 audit weakens a padding-only explanation, and the matched-context probe shows a familiar-versus-recombined candidate-set contrast on the same source context strata; neither establishes variable-cardinality transfer or a mechanism."
     }
   ]
 }

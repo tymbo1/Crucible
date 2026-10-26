@@ -1,0 +1,1199 @@
+{
+  "archived_reproduction": {
+    "1337": {
+      "T_COMPACT": {
+        "archive": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_CYCLIC_SEED1337/PREDICTIONS.csv",
+        "mismatches": 0,
+        "rows": 144
+      },
+      "V_PADDED": {
+        "archive": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_CYCLIC_SEED1337/VALIDATION_PREDICTIONS.csv",
+        "mismatches": 0,
+        "rows": 96
+      }
+    },
+    "42": {
+      "T_COMPACT": {
+        "archive": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_CYCLIC_SEED42/PREDICTIONS.csv",
+        "mismatches": 0,
+        "rows": 144
+      },
+      "V_PADDED": {
+        "archive": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_CYCLIC_SEED42/VALIDATION_PREDICTIONS.csv",
+        "mismatches": 0,
+        "rows": 96
+      }
+    }
+  },
+  "checkpoint_hashes": {
+    "DENSE_CYCLIC_SEED1337": "a01f8043f45fc4e5584435cbfedc91ec4300433149c8e608b4a93114be833bec",
+    "DENSE_CYCLIC_SEED42": "b45ce80c3bcea290bb89f0f807297340ea36935b16b41099a5a8dcfca8ea71c3"
+  },
+  "checkpoints_modified": false,
+  "conditions": [
+    "T_COMPACT",
+    "T_PADDED",
+    "V_COMPACT",
+    "V_PADDED"
+  ],
+  "data_audit": "experiments/crucible_two_candidate_transfer_forensics_20261027_v1/DATA_AUDIT.json",
+  "experiment": "crucible_two_candidate_transfer_forensics_20261027_v1",
+  "factorial_deltas": {
+    "1337": {
+      "compact_pair_regime_delta_recombined_minus_familiar": {
+        "paired_both_correct": -32.0,
+        "row_accuracy": -0.16666666666666663
+      },
+      "familiar_pair_layout_delta_padded_minus_compact": {
+        "paired_both_correct": 0.0,
+        "row_accuracy": 0.0
+      },
+      "padded_pair_regime_delta_recombined_minus_familiar": {
+        "paired_both_correct": -31.0,
+        "row_accuracy": -0.15625
+      },
+      "recombined_pair_layout_delta_padded_minus_compact": {
+        "paired_both_correct": 1.0,
+        "row_accuracy": 0.01041666666666663
+      }
+    },
+    "42": {
+      "compact_pair_regime_delta_recombined_minus_familiar": {
+        "paired_both_correct": -37.0,
+        "row_accuracy": -0.21875
+      },
+      "familiar_pair_layout_delta_padded_minus_compact": {
+        "paired_both_correct": 0.0,
+        "row_accuracy": 0.0
+      },
+      "padded_pair_regime_delta_recombined_minus_familiar": {
+        "paired_both_correct": -39.0,
+        "row_accuracy": -0.27083333333333337
+      },
+      "recombined_pair_layout_delta_padded_minus_compact": {
+        "paired_both_correct": -2.0,
+        "row_accuracy": -0.05208333333333337
+      }
+    }
+  },
+  "gate_summary": "experiments/crucible_two_candidate_competence_gate_20261027_v1/SUMMARY.json",
+  "metrics": {
+    "1337": {
+      "T_COMPACT": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "by_authority": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "9": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          }
+        },
+        "by_candidate_set": {
+          "0,1": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "1,0": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "2,3": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "3,2": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "4,5": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "5,4": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "6,7": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "7,6": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          }
+        },
+        "by_target": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "8": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          }
+        },
+        "correct": 144,
+        "errors_by_authority": {},
+        "errors_by_candidate_set": {},
+        "paired": {
+          "both_correct": 48,
+          "groups": 48,
+          "predicted_flips": 48,
+          "target_flips": 48
+        },
+        "predicted_slot_counts": {
+          "0": 48,
+          "1": 48,
+          "8": 48
+        },
+        "rows": 144,
+        "target_prediction_confusion": {
+          "target_0_pred_0": 48,
+          "target_1_pred_1": 48,
+          "target_8_pred_8": 48
+        }
+      },
+      "T_PADDED": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "by_authority": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "9": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          }
+        },
+        "by_candidate_set": {
+          "0,1": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "1,0": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "2,3": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "3,2": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "4,5": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "5,4": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "6,7": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "7,6": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          }
+        },
+        "by_target": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "8": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          }
+        },
+        "correct": 144,
+        "errors_by_authority": {},
+        "errors_by_candidate_set": {},
+        "paired": {
+          "both_correct": 48,
+          "groups": 48,
+          "predicted_flips": 48,
+          "target_flips": 48
+        },
+        "predicted_slot_counts": {
+          "0": 48,
+          "1": 48,
+          "8": 48
+        },
+        "rows": 144,
+        "target_prediction_confusion": {
+          "target_0_pred_0": 48,
+          "target_1_pred_1": 48,
+          "target_8_pred_8": 48
+        }
+      },
+      "V_COMPACT": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.8333333333333334,
+        "by_authority": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "2": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "rows": 8
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "rows": 16
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "6": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "rows": 8
+          },
+          "9": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          }
+        },
+        "by_candidate_set": {
+          "0,3": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "1,4": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "2,5": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "3,0": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "3,6": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "4,1": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "5,2": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "6,3": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          }
+        },
+        "by_target": {
+          "0": {
+            "accuracy": 0.75,
+            "correct": 24,
+            "rows": 32
+          },
+          "1": {
+            "accuracy": 0.75,
+            "correct": 24,
+            "rows": 32
+          },
+          "8": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          }
+        },
+        "correct": 80,
+        "errors_by_authority": {
+          "2": 8,
+          "6": 8
+        },
+        "errors_by_candidate_set": {
+          "2,5": 4,
+          "3,6": 4,
+          "5,2": 4,
+          "6,3": 4
+        },
+        "paired": {
+          "both_correct": 16,
+          "groups": 32,
+          "predicted_flips": 16,
+          "target_flips": 32
+        },
+        "predicted_slot_counts": {
+          "0": 32,
+          "1": 32,
+          "8": 32
+        },
+        "rows": 96,
+        "target_prediction_confusion": {
+          "target_0_pred_0": 24,
+          "target_0_pred_1": 8,
+          "target_1_pred_0": 8,
+          "target_1_pred_1": 24,
+          "target_8_pred_8": 32
+        }
+      },
+      "V_PADDED": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.84375,
+        "by_authority": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "2": {
+            "accuracy": 0.125,
+            "correct": 1,
+            "rows": 8
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "rows": 16
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "6": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "rows": 8
+          },
+          "9": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          }
+        },
+        "by_candidate_set": {
+          "0,3": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "1,4": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "2,5": {
+            "accuracy": 0.75,
+            "correct": 9,
+            "rows": 12
+          },
+          "3,0": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "3,6": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "4,1": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "5,2": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "6,3": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          }
+        },
+        "by_target": {
+          "0": {
+            "accuracy": 0.78125,
+            "correct": 25,
+            "rows": 32
+          },
+          "1": {
+            "accuracy": 0.75,
+            "correct": 24,
+            "rows": 32
+          },
+          "8": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          }
+        },
+        "correct": 81,
+        "errors_by_authority": {
+          "2": 7,
+          "6": 8
+        },
+        "errors_by_candidate_set": {
+          "2,5": 3,
+          "3,6": 4,
+          "5,2": 4,
+          "6,3": 4
+        },
+        "paired": {
+          "both_correct": 17,
+          "groups": 32,
+          "predicted_flips": 18,
+          "target_flips": 32
+        },
+        "predicted_slot_counts": {
+          "0": 32,
+          "1": 31,
+          "8": 33
+        },
+        "rows": 96,
+        "target_prediction_confusion": {
+          "target_0_pred_0": 25,
+          "target_0_pred_1": 7,
+          "target_1_pred_0": 7,
+          "target_1_pred_1": 24,
+          "target_1_pred_8": 1,
+          "target_8_pred_8": 32
+        }
+      }
+    },
+    "42": {
+      "T_COMPACT": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "by_authority": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "9": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          }
+        },
+        "by_candidate_set": {
+          "0,1": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "1,0": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "2,3": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "3,2": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "4,5": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "5,4": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "6,7": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "7,6": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          }
+        },
+        "by_target": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "8": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          }
+        },
+        "correct": 144,
+        "errors_by_authority": {},
+        "errors_by_candidate_set": {},
+        "paired": {
+          "both_correct": 48,
+          "groups": 48,
+          "predicted_flips": 48,
+          "target_flips": 48
+        },
+        "predicted_slot_counts": {
+          "0": 48,
+          "1": 48,
+          "8": 48
+        },
+        "rows": 144,
+        "target_prediction_confusion": {
+          "target_0_pred_0": 48,
+          "target_1_pred_1": 48,
+          "target_8_pred_8": 48
+        }
+      },
+      "T_PADDED": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "by_authority": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "9": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          }
+        },
+        "by_candidate_set": {
+          "0,1": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "1,0": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "2,3": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "3,2": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "4,5": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "5,4": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "6,7": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          },
+          "7,6": {
+            "accuracy": 1.0,
+            "correct": 18,
+            "rows": 18
+          }
+        },
+        "by_target": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "8": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          }
+        },
+        "correct": 144,
+        "errors_by_authority": {},
+        "errors_by_candidate_set": {},
+        "paired": {
+          "both_correct": 48,
+          "groups": 48,
+          "predicted_flips": 48,
+          "target_flips": 48
+        },
+        "predicted_slot_counts": {
+          "0": 48,
+          "1": 48,
+          "8": 48
+        },
+        "rows": 144,
+        "target_prediction_confusion": {
+          "target_0_pred_0": 48,
+          "target_1_pred_1": 48,
+          "target_8_pred_8": 48
+        }
+      },
+      "V_COMPACT": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.78125,
+        "by_authority": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "1": {
+            "accuracy": 0.5,
+            "correct": 4,
+            "rows": 8
+          },
+          "2": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "rows": 8
+          },
+          "3": {
+            "accuracy": 0.5,
+            "correct": 8,
+            "rows": 16
+          },
+          "4": {
+            "accuracy": 0.875,
+            "correct": 7,
+            "rows": 8
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "9": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          }
+        },
+        "by_candidate_set": {
+          "0,3": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "1,4": {
+            "accuracy": 0.9166666666666666,
+            "correct": 11,
+            "rows": 12
+          },
+          "2,5": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "3,0": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "3,6": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "4,1": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "5,2": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "6,3": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          }
+        },
+        "by_target": {
+          "0": {
+            "accuracy": 0.75,
+            "correct": 24,
+            "rows": 32
+          },
+          "1": {
+            "accuracy": 0.59375,
+            "correct": 19,
+            "rows": 32
+          },
+          "8": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          }
+        },
+        "correct": 75,
+        "errors_by_authority": {
+          "1": 4,
+          "2": 8,
+          "3": 8,
+          "4": 1
+        },
+        "errors_by_candidate_set": {
+          "1,4": 1,
+          "2,5": 4,
+          "3,6": 4,
+          "4,1": 4,
+          "5,2": 4,
+          "6,3": 4
+        },
+        "paired": {
+          "both_correct": 11,
+          "groups": 32,
+          "predicted_flips": 11,
+          "target_flips": 32
+        },
+        "predicted_slot_counts": {
+          "0": 37,
+          "1": 27,
+          "8": 32
+        },
+        "rows": 96,
+        "target_prediction_confusion": {
+          "target_0_pred_0": 24,
+          "target_0_pred_1": 8,
+          "target_1_pred_0": 13,
+          "target_1_pred_1": 19,
+          "target_8_pred_8": 32
+        }
+      },
+      "V_PADDED": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.7291666666666666,
+        "by_authority": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "1": {
+            "accuracy": 0.25,
+            "correct": 2,
+            "rows": 8
+          },
+          "2": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "rows": 8
+          },
+          "3": {
+            "accuracy": 0.5,
+            "correct": 8,
+            "rows": 16
+          },
+          "4": {
+            "accuracy": 0.625,
+            "correct": 5,
+            "rows": 8
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "6": {
+            "accuracy": 0.875,
+            "correct": 7,
+            "rows": 8
+          },
+          "9": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          }
+        },
+        "by_candidate_set": {
+          "0,3": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "1,4": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "2,5": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "3,0": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "3,6": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "4,1": {
+            "accuracy": 0.5833333333333334,
+            "correct": 7,
+            "rows": 12
+          },
+          "5,2": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          },
+          "6,3": {
+            "accuracy": 0.5833333333333334,
+            "correct": 7,
+            "rows": 12
+          }
+        },
+        "by_target": {
+          "0": {
+            "accuracy": 0.5,
+            "correct": 16,
+            "rows": 32
+          },
+          "1": {
+            "accuracy": 0.6875,
+            "correct": 22,
+            "rows": 32
+          },
+          "8": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          }
+        },
+        "correct": 70,
+        "errors_by_authority": {
+          "1": 6,
+          "2": 8,
+          "3": 8,
+          "4": 3,
+          "6": 1
+        },
+        "errors_by_candidate_set": {
+          "1,4": 4,
+          "2,5": 4,
+          "3,6": 4,
+          "4,1": 5,
+          "5,2": 4,
+          "6,3": 5
+        },
+        "paired": {
+          "both_correct": 9,
+          "groups": 32,
+          "predicted_flips": 12,
+          "target_flips": 32
+        },
+        "predicted_slot_counts": {
+          "0": 26,
+          "1": 38,
+          "8": 32
+        },
+        "rows": 96,
+        "target_prediction_confusion": {
+          "target_0_pred_0": 16,
+          "target_0_pred_1": 16,
+          "target_1_pred_0": 10,
+          "target_1_pred_1": 22,
+          "target_8_pred_8": 32
+        }
+      }
+    }
+  },
+  "novelty_audit": "docs/CRUCIBLE_TWO_CANDIDATE_TRANSFER_FORENSICS_NOVELTY_AUDIT_20261027.json",
+  "protocol": "docs/CRUCIBLE_TWO_CANDIDATE_TRANSFER_FORENSICS_PROTOCOL_20261027.md",
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "source_train": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/data/canonical/train.jsonl",
+  "source_validation": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/data/canonical/validation.jsonl",
+  "status": "completed",
+  "training_performed": false
+}

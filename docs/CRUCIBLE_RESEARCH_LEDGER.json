@@ -576,6 +576,55 @@
         "experiments/crucible_two_candidate_competence_gate_20261027_v1/FINALIZATION.json"
       ],
       "novelty_terms": ["two-candidate competence", "balanced slots", "isolated matching", "schedule sensitivity"]
+    },
+    {
+      "id": "two-candidate-transfer-forensics-v1",
+      "status": "INCONCLUSIVE",
+      "title": "Two-candidate transfer forensics: candidate regime by serialization",
+      "hypothesis": "The accepted two-candidate validation gap is primarily caused by input-layout shift, candidate-pair recombination, or their interaction.",
+      "mechanisms": ["candidate-matching", "candidate-pair-transfer", "serialization", "counterfactual-selection"],
+      "interventions": ["Checkpoint-only 2x2 crossing familiar/recombined candidate sets with compact/padded serialization"],
+      "controls": ["Two accepted cyclic checkpoints", "exact archived prediction reproduction", "oracle verification", "candidate-set and authority breakdown", "no training", "no sealed test"],
+      "result": "Familiar candidate sets remained perfect in both compact and padded serialization for both seeds. Recombined candidate sets remained impaired in compact serialization, close to padded validation performance: seed 42 75/96 and 11/32 paired groups; seed 1337 80/96 and 16/32. The result weakens a padding-only explanation but cannot isolate candidate-set recombination from the original operand-context shift.",
+      "limits": ["Training and validation source populations use different (a,b) contexts", "Conditions use different record populations", "No independent validation claim", "No mechanism or architectural conclusion"],
+      "unresolved": ["Whether the recombination gap persists on matched operand contexts", "Whether the checkpoint learned exact candidate-set associations rather than identifier matching"],
+      "artifacts": [
+        "docs/CRUCIBLE_TWO_CANDIDATE_TRANSFER_FORENSICS_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_TWO_CANDIDATE_TRANSFER_FORENSICS_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_two_candidate_transfer_forensics_20261027.py",
+        "experiments/crucible_two_candidate_transfer_forensics_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_two_candidate_transfer_forensics_20261027_v1/SUMMARY.json",
+        "experiments/crucible_two_candidate_transfer_forensics_20261027_v1/DATA_AUDIT.json",
+        "experiments/crucible_two_candidate_transfer_forensics_20261027_v1/ERROR_BREAKDOWN.json",
+        "experiments/crucible_two_candidate_transfer_forensics_20261027_v1/SCIENTIFIC_INTERPRETATION.md",
+        "experiments/crucible_two_candidate_transfer_forensics_20261027_v1/HASHES.json",
+        "experiments/crucible_two_candidate_transfer_forensics_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["candidate-pair regime", "layout control", "transfer forensics", "matched-context confound"]
+    },
+    {
+      "id": "two-candidate-matched-context-probe-v1",
+      "status": "ESTABLISHED",
+      "title": "Matched-context familiar versus recombined candidate-set probe",
+      "hypothesis": "If familiar candidate sets outperform recombined candidate sets on the same source operand contexts, the transfer gap is not explained solely by the original operand-context shift.",
+      "mechanisms": ["candidate-matching", "candidate-pair-transfer", "context-matched-evaluation", "counterfactual-selection"],
+      "interventions": ["Checkpoint-only evaluation of both candidate regimes on identical training-source and validation-source context strata"],
+      "controls": ["Two accepted cyclic checkpoints", "fixed TRAIN_COMPACT layout", "ten source contexts", "oracle verification", "paired counterfactual groups", "no training", "no sealed test"],
+      "result": "Both seeds were perfect on familiar candidate sets in both context strata: 240/240 rows and 80/80 paired groups overall. Recombined candidate sets were lower in both strata: seed 42 111/144 on training-source contexts and 75/96 on validation-source contexts; seed 1337 121/144 and 80/96. The matched contrast is therefore consistent with a candidate-set-regime effect under these checkpoint-only probes.",
+      "limits": ["Exploratory generated probe, not an independent held-out benchmark", "Familiarity is defined by the original training candidate sets", "Does not prove identifier matching or identify a neural mechanism", "Two checkpoints"],
+      "unresolved": ["Whether broader candidate identities and pair permutations transfer", "Whether explicit candidate-independent supervision improves the recombination gap", "How this relates to variable-cardinality transfer"],
+      "artifacts": [
+        "docs/CRUCIBLE_TWO_CANDIDATE_MATCHED_CONTEXT_PROBE_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_TWO_CANDIDATE_MATCHED_CONTEXT_PROBE_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_two_candidate_matched_context_probe_20261027.py",
+        "experiments/crucible_two_candidate_matched_context_probe_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_two_candidate_matched_context_probe_20261027_v1/SUMMARY.json",
+        "experiments/crucible_two_candidate_matched_context_probe_20261027_v1/DATA_AUDIT.json",
+        "experiments/crucible_two_candidate_matched_context_probe_20261027_v1/SCIENTIFIC_INTERPRETATION.md",
+        "experiments/crucible_two_candidate_matched_context_probe_20261027_v1/HASHES.json",
+        "experiments/crucible_two_candidate_matched_context_probe_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["matched context", "familiar candidate set", "recombined candidate set", "candidate regime"]
     }
   ]
 }

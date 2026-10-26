@@ -1,0 +1,169 @@
+{
+  "checkpoints_modified": false,
+  "conditions": {
+    "TRAIN_SOURCE_FAMILIAR": {
+      "candidate_regime": "FAMILIAR",
+      "candidate_sets": [
+        "0,1",
+        "1,0",
+        "2,3",
+        "3,2",
+        "4,5",
+        "5,4",
+        "6,7",
+        "7,6"
+      ],
+      "context_source": "TRAIN_SOURCE",
+      "contexts": [
+        "1,6",
+        "1,8",
+        "2,7",
+        "2,9",
+        "3,8",
+        "4,9"
+      ],
+      "layouts": {
+        "TRAIN_COMPACT": 144
+      },
+      "oracle_rows_correct": 144,
+      "rows": 144,
+      "target_slot_counts": {
+        "0": 48,
+        "1": 48,
+        "8": 48
+      },
+      "unique_record_ids": 144
+    },
+    "TRAIN_SOURCE_RECOMBINED": {
+      "candidate_regime": "RECOMBINED",
+      "candidate_sets": [
+        "0,3",
+        "1,4",
+        "2,5",
+        "3,0",
+        "3,6",
+        "4,1",
+        "5,2",
+        "6,3"
+      ],
+      "context_source": "TRAIN_SOURCE",
+      "contexts": [
+        "1,6",
+        "1,8",
+        "2,7",
+        "2,9",
+        "3,8",
+        "4,9"
+      ],
+      "layouts": {
+        "TRAIN_COMPACT": 144
+      },
+      "oracle_rows_correct": 144,
+      "rows": 144,
+      "target_slot_counts": {
+        "0": 48,
+        "1": 48,
+        "8": 48
+      },
+      "unique_record_ids": 144
+    },
+    "VALIDATION_SOURCE_FAMILIAR": {
+      "candidate_regime": "FAMILIAR",
+      "candidate_sets": [
+        "0,1",
+        "1,0",
+        "2,3",
+        "3,2",
+        "4,5",
+        "5,4",
+        "6,7",
+        "7,6"
+      ],
+      "context_source": "VALIDATION_SOURCE",
+      "contexts": [
+        "0,5",
+        "1,7",
+        "2,8",
+        "3,9"
+      ],
+      "layouts": {
+        "TRAIN_COMPACT": 96
+      },
+      "oracle_rows_correct": 96,
+      "rows": 96,
+      "target_slot_counts": {
+        "0": 32,
+        "1": 32,
+        "8": 32
+      },
+      "unique_record_ids": 96
+    },
+    "VALIDATION_SOURCE_RECOMBINED": {
+      "candidate_regime": "RECOMBINED",
+      "candidate_sets": [
+        "0,3",
+        "1,4",
+        "2,5",
+        "3,0",
+        "3,6",
+        "4,1",
+        "5,2",
+        "6,3"
+      ],
+      "context_source": "VALIDATION_SOURCE",
+      "contexts": [
+        "0,5",
+        "1,7",
+        "2,8",
+        "3,9"
+      ],
+      "layouts": {
+        "TRAIN_COMPACT": 96
+      },
+      "oracle_rows_correct": 96,
+      "rows": 96,
+      "target_slot_counts": {
+        "0": 32,
+        "1": 32,
+        "8": 32
+      },
+      "unique_record_ids": 96
+    }
+  },
+  "experiment": "crucible_two_candidate_matched_context_probe_20261027_v1",
+  "record_id_overlap_between_source_splits": 0,
+  "sealed_test_accessed": false,
+  "source_train_contexts": [
+    "1,6",
+    "1,8",
+    "2,7",
+    "2,9",
+    "3,8",
+    "4,9"
+  ],
+  "source_train_two_candidate_context_counts": {
+    "1,6": 24,
+    "1,8": 24,
+    "2,7": 24,
+    "2,9": 24,
+    "3,8": 24,
+    "4,9": 24
+  },
+  "source_validation_contexts": [
+    "0,5",
+    "1,7",
+    "2,8",
+    "3,9"
+  ],
+  "source_validation_two_candidate_context_counts": {
+    "0,5": 24,
+    "1,7": 24,
+    "2,8": 24,
+    "3,9": 24
+  },
+  "train_source": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/data/canonical/train.jsonl",
+  "train_source_sha256": "ff17df2eca7c2bbd84e190b9ccc627b22ac4e2fa9c4b21a0ffbc1ad7f8962f81",
+  "training_performed": false,
+  "validation_source": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/data/canonical/validation.jsonl",
+  "validation_source_sha256": "4c2f7bbaf8c16f6801aac061ffdabd5eed0aa276aa871e1921f9ed596eb1d333"
+}

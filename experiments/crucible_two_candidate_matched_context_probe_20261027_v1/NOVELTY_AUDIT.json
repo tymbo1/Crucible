@@ -1,0 +1,24 @@
+{
+  "decision": "PROCEED_CHECKPOINT_ONLY",
+  "experiment": "crucible_two_candidate_matched_context_probe_20261027_v1",
+  "no_training": true,
+  "not_novel": [
+    "The identifier-match task",
+    "The accepted cyclic checkpoints",
+    "The candidate regimes",
+    "The source operand contexts",
+    "The dense SHARED_SCORER architecture",
+    "The counterfactual and abstention metrics"
+  ],
+  "novelty_claim": "No prior Crucible record evaluates both familiar and recombined two-candidate regimes on the same union of training-source and validation-source operand contexts in a fixed compact layout.",
+  "related_records": [
+    "two-candidate-competence-gate-v1",
+    "two-candidate-transfer-forensics-v1",
+    "cardinality-competence-diagnostic-v1",
+    "shared-scorer-compositional-transfer"
+  ],
+  "repository_ledger_checked": true,
+  "schema_version": "crucible_novelty_audit_v1",
+  "sealed_test_accessed": false,
+  "status": "pre_execution"
+}
