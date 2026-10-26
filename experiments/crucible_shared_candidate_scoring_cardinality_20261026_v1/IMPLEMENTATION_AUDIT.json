@@ -1,0 +1,861 @@
+{
+  "audit_type": "read_only_implementation_training_and_gradient_audit",
+  "checkpoints_modified": false,
+  "data": {
+    "canonical": {
+      "cross_split_overlap": {
+        "train__transfer": {
+          "exact_inputs": 0,
+          "record_ids": 0
+        },
+        "train__validation": {
+          "exact_inputs": 0,
+          "record_ids": 0
+        },
+        "validation__transfer": {
+          "exact_inputs": 0,
+          "record_ids": 0
+        }
+      },
+      "implementation_facts": {
+        "authority_coverage": "authorities are first candidate, last candidate, or absent id=9; interior candidates are never positive targets",
+        "backbone_training": "backbone parameters are trainable; the run does not freeze the dense backbone",
+        "candidate_count_mask": "deterministically supplied to both variants; fixed-slot logits are masked for invalid slots",
+        "candidate_span_extraction": "deterministic regex in prepare_records; no learned span extractor",
+        "shared_scorer_candidate_positions": "candidate positions are supplied by the deterministic parser to batchify",
+        "training_order": "deterministic cyclic schedule; no shuffle or random sampler"
+      },
+      "schedule": {
+        "batch_size": 12,
+        "batch_target_profiles": {
+          "((0, 4), (1, 4), (8, 4))": 126,
+          "((0, 4), (2, 4), (8, 4))": 374
+        },
+        "candidate_count_blocks_per_cycle": "12 batches of 2-candidate records followed by 36 batches of 3-candidate records",
+        "presentations_per_record": {
+          "10": 336,
+          "11": 240
+        },
+        "steps": 500,
+        "total_presentations": 6000
+      },
+      "span_checks": {
+        "train": {
+          "candidate_span_failures": 0,
+          "causal_order_failures": 0,
+          "failed_record_ids": []
+        },
+        "transfer": {
+          "candidate_span_failures": 0,
+          "causal_order_failures": 0,
+          "failed_record_ids": []
+        },
+        "validation": {
+          "candidate_span_failures": 0,
+          "causal_order_failures": 0,
+          "failed_record_ids": []
+        }
+      },
+      "splits": {
+        "train": {
+          "authority_ids": {
+            "0": 36,
+            "1": 36,
+            "2": 60,
+            "3": 60,
+            "4": 60,
+            "5": 60,
+            "6": 36,
+            "7": 36,
+            "9": 192
+          },
+          "candidate_counts": {
+            "2": 144,
+            "3": 432
+          },
+          "counterfactual_groups": 192,
+          "input_byte_length_max": 67,
+          "input_byte_length_min": 56,
+          "positive_slots_by_candidate_count": {
+            "2:0": 48,
+            "2:1": 48,
+            "3:0": 144,
+            "3:2": 144
+          },
+          "rows": 576,
+          "target_slots": {
+            "0": 192,
+            "1": 48,
+            "2": 144,
+            "8": 192
+          },
+          "unique_inputs": 576,
+          "unique_record_ids": 576
+        },
+        "transfer": {
+          "authority_ids": {
+            "0": 36,
+            "1": 20,
+            "2": 4,
+            "3": 4,
+            "6": 8,
+            "7": 24,
+            "9": 48
+          },
+          "candidate_counts": {
+            "4": 72,
+            "5": 36,
+            "8": 36
+          },
+          "counterfactual_groups": 48,
+          "input_byte_length_max": 167,
+          "input_byte_length_min": 103,
+          "positive_slots_by_candidate_count": {
+            "4:0": 24,
+            "4:3": 24,
+            "5:0": 12,
+            "5:4": 12,
+            "8:0": 12,
+            "8:7": 12
+          },
+          "rows": 144,
+          "target_slots": {
+            "0": 48,
+            "3": 24,
+            "4": 12,
+            "7": 12,
+            "8": 48
+          },
+          "unique_inputs": 144,
+          "unique_record_ids": 144
+        },
+        "validation": {
+          "authority_ids": {
+            "0": 40,
+            "1": 24,
+            "2": 24,
+            "3": 32,
+            "4": 24,
+            "5": 8,
+            "6": 24,
+            "7": 32,
+            "9": 104
+          },
+          "candidate_counts": {
+            "2": 96,
+            "3": 216
+          },
+          "counterfactual_groups": 104,
+          "input_byte_length_max": 87,
+          "input_byte_length_min": 71,
+          "positive_slots_by_candidate_count": {
+            "2:0": 32,
+            "2:1": 32,
+            "3:0": 72,
+            "3:2": 72
+          },
+          "rows": 312,
+          "target_slots": {
+            "0": 104,
+            "1": 32,
+            "2": 72,
+            "8": 104
+          },
+          "unique_inputs": 312,
+          "unique_record_ids": 312
+        }
+      }
+    },
+    "factorized": {
+      "cross_split_overlap": {
+        "train__transfer": {
+          "exact_inputs": 0,
+          "record_ids": 0
+        },
+        "train__validation": {
+          "exact_inputs": 0,
+          "record_ids": 0
+        },
+        "validation__transfer": {
+          "exact_inputs": 0,
+          "record_ids": 0
+        }
+      },
+      "implementation_facts": {
+        "authority_coverage": "authorities are first candidate, last candidate, or absent id=9; interior candidates are never positive targets",
+        "backbone_training": "backbone parameters are trainable; the run does not freeze the dense backbone",
+        "candidate_count_mask": "deterministically supplied to both variants; fixed-slot logits are masked for invalid slots",
+        "candidate_span_extraction": "deterministic regex in prepare_records; no learned span extractor",
+        "shared_scorer_candidate_positions": "candidate positions are supplied by the deterministic parser to batchify",
+        "training_order": "deterministic cyclic schedule; no shuffle or random sampler"
+      },
+      "schedule": {
+        "batch_size": 12,
+        "batch_target_profiles": {
+          "((0, 4), (1, 4), (8, 4))": 126,
+          "((0, 4), (2, 4), (8, 4))": 374
+        },
+        "candidate_count_blocks_per_cycle": "12 batches of 2-candidate records followed by 36 batches of 3-candidate records",
+        "presentations_per_record": {
+          "10": 336,
+          "11": 240
+        },
+        "steps": 500,
+        "total_presentations": 6000
+      },
+      "span_checks": {
+        "train": {
+          "candidate_span_failures": 0,
+          "causal_order_failures": 0,
+          "failed_record_ids": []
+        },
+        "transfer": {
+          "candidate_span_failures": 0,
+          "causal_order_failures": 0,
+          "failed_record_ids": []
+        },
+        "validation": {
+          "candidate_span_failures": 0,
+          "causal_order_failures": 0,
+          "failed_record_ids": []
+        }
+      },
+      "splits": {
+        "train": {
+          "authority_ids": {
+            "0": 36,
+            "1": 36,
+            "2": 60,
+            "3": 60,
+            "4": 60,
+            "5": 60,
+            "6": 36,
+            "7": 36,
+            "9": 192
+          },
+          "candidate_counts": {
+            "2": 144,
+            "3": 432
+          },
+          "counterfactual_groups": 192,
+          "input_byte_length_max": 79,
+          "input_byte_length_min": 68,
+          "positive_slots_by_candidate_count": {
+            "2:0": 48,
+            "2:1": 48,
+            "3:0": 144,
+            "3:2": 144
+          },
+          "rows": 576,
+          "target_slots": {
+            "0": 192,
+            "1": 48,
+            "2": 144,
+            "8": 192
+          },
+          "unique_inputs": 576,
+          "unique_record_ids": 576
+        },
+        "transfer": {
+          "authority_ids": {
+            "0": 36,
+            "1": 20,
+            "2": 4,
+            "3": 4,
+            "6": 8,
+            "7": 24,
+            "9": 48
+          },
+          "candidate_counts": {
+            "4": 72,
+            "5": 36,
+            "8": 36
+          },
+          "counterfactual_groups": 48,
+          "input_byte_length_max": 179,
+          "input_byte_length_min": 115,
+          "positive_slots_by_candidate_count": {
+            "4:0": 24,
+            "4:3": 24,
+            "5:0": 12,
+            "5:4": 12,
+            "8:0": 12,
+            "8:7": 12
+          },
+          "rows": 144,
+          "target_slots": {
+            "0": 48,
+            "3": 24,
+            "4": 12,
+            "7": 12,
+            "8": 48
+          },
+          "unique_inputs": 144,
+          "unique_record_ids": 144
+        },
+        "validation": {
+          "authority_ids": {
+            "0": 40,
+            "1": 24,
+            "2": 24,
+            "3": 32,
+            "4": 24,
+            "5": 8,
+            "6": 24,
+            "7": 32,
+            "9": 104
+          },
+          "candidate_counts": {
+            "2": 96,
+            "3": 216
+          },
+          "counterfactual_groups": 104,
+          "input_byte_length_max": 99,
+          "input_byte_length_min": 83,
+          "positive_slots_by_candidate_count": {
+            "2:0": 32,
+            "2:1": 32,
+            "3:0": 72,
+            "3:2": 72
+          },
+          "rows": 312,
+          "target_slots": {
+            "0": 104,
+            "1": 32,
+            "2": 72,
+            "8": 104
+          },
+          "unique_inputs": 312,
+          "unique_record_ids": 312
+        }
+      }
+    }
+  },
+  "experiment": "crucible_shared_candidate_scoring_cardinality_20261026_v1",
+  "gradient_flow": {
+    "SHARED_SCORER|canonical|seed1337": {
+      "backbone_parameter_count": 55,
+      "backbone_parameters_with_gradient": 54,
+      "backward_only": true,
+      "batch_rows": 12,
+      "decision_readout_gradients": [
+        {
+          "gradient_norm": 0.0937083289027214,
+          "has_gradient": true,
+          "name": "query.weight",
+          "nonzero_gradient_elements": 65536
+        },
+        {
+          "gradient_norm": 0.0059349918738007545,
+          "has_gradient": true,
+          "name": "query.bias",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 0.045670632272958755,
+          "has_gradient": true,
+          "name": "key.weight",
+          "nonzero_gradient_elements": 65536
+        },
+        {
+          "gradient_norm": 1.46389947985881e-05,
+          "has_gradient": true,
+          "name": "key.bias",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 0.0005872925976291299,
+          "has_gradient": true,
+          "name": "abstain.weight",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 2.360516373300925e-05,
+          "has_gradient": true,
+          "name": "abstain.bias",
+          "nonzero_gradient_elements": 1
+        }
+      ],
+      "loss": 0.23352377116680145,
+      "readout_parameter_count": 18,
+      "readout_parameters_with_gradient": 6,
+      "unused_parameter_names": [
+        "backbone.lm_head.weight",
+        "a_head.weight",
+        "a_head.bias",
+        "b_head.weight",
+        "b_head.bias",
+        "op_head.weight",
+        "op_head.bias",
+        "a_pointer.weight",
+        "a_pointer.bias",
+        "b_pointer.weight",
+        "b_pointer.bias",
+        "op_pointer.weight",
+        "op_pointer.bias"
+      ]
+    },
+    "SHARED_SCORER|canonical|seed42": {
+      "backbone_parameter_count": 55,
+      "backbone_parameters_with_gradient": 54,
+      "backward_only": true,
+      "batch_rows": 12,
+      "decision_readout_gradients": [
+        {
+          "gradient_norm": 0.14755748212337494,
+          "has_gradient": true,
+          "name": "query.weight",
+          "nonzero_gradient_elements": 65536
+        },
+        {
+          "gradient_norm": 0.009326888248324394,
+          "has_gradient": true,
+          "name": "query.bias",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 0.05049549415707588,
+          "has_gradient": true,
+          "name": "key.weight",
+          "nonzero_gradient_elements": 65536
+        },
+        {
+          "gradient_norm": 2.628641959745437e-05,
+          "has_gradient": true,
+          "name": "key.bias",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 0.0013592380564659834,
+          "has_gradient": true,
+          "name": "abstain.weight",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 7.170471508288756e-05,
+          "has_gradient": true,
+          "name": "abstain.bias",
+          "nonzero_gradient_elements": 1
+        }
+      ],
+      "loss": 0.46600303053855896,
+      "readout_parameter_count": 18,
+      "readout_parameters_with_gradient": 6,
+      "unused_parameter_names": [
+        "backbone.lm_head.weight",
+        "a_head.weight",
+        "a_head.bias",
+        "b_head.weight",
+        "b_head.bias",
+        "op_head.weight",
+        "op_head.bias",
+        "a_pointer.weight",
+        "a_pointer.bias",
+        "b_pointer.weight",
+        "b_pointer.bias",
+        "op_pointer.weight",
+        "op_pointer.bias"
+      ]
+    },
+    "SHARED_SCORER|factorized|seed1337": {
+      "backbone_parameter_count": 55,
+      "backbone_parameters_with_gradient": 54,
+      "backward_only": true,
+      "batch_rows": 12,
+      "decision_readout_gradients": [
+        {
+          "gradient_norm": 0.14037416875362396,
+          "has_gradient": true,
+          "name": "query.weight",
+          "nonzero_gradient_elements": 65536
+        },
+        {
+          "gradient_norm": 0.008832600899040699,
+          "has_gradient": true,
+          "name": "query.bias",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 0.06909600645303726,
+          "has_gradient": true,
+          "name": "key.weight",
+          "nonzero_gradient_elements": 65536
+        },
+        {
+          "gradient_norm": 1.1828322385554202e-05,
+          "has_gradient": true,
+          "name": "key.bias",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 0.0001685223396634683,
+          "has_gradient": true,
+          "name": "abstain.weight",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 9.013470844365656e-06,
+          "has_gradient": true,
+          "name": "abstain.bias",
+          "nonzero_gradient_elements": 1
+        }
+      ],
+      "loss": 0.46725690364837646,
+      "readout_parameter_count": 18,
+      "readout_parameters_with_gradient": 6,
+      "unused_parameter_names": [
+        "backbone.lm_head.weight",
+        "a_head.weight",
+        "a_head.bias",
+        "b_head.weight",
+        "b_head.bias",
+        "op_head.weight",
+        "op_head.bias",
+        "a_pointer.weight",
+        "a_pointer.bias",
+        "b_pointer.weight",
+        "b_pointer.bias",
+        "op_pointer.weight",
+        "op_pointer.bias"
+      ]
+    },
+    "SHARED_SCORER|factorized|seed42": {
+      "backbone_parameter_count": 55,
+      "backbone_parameters_with_gradient": 54,
+      "backward_only": true,
+      "batch_rows": 12,
+      "decision_readout_gradients": [
+        {
+          "gradient_norm": 0.0632760301232338,
+          "has_gradient": true,
+          "name": "query.weight",
+          "nonzero_gradient_elements": 65536
+        },
+        {
+          "gradient_norm": 0.003996654413640499,
+          "has_gradient": true,
+          "name": "query.bias",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 0.030917201191186905,
+          "has_gradient": true,
+          "name": "key.weight",
+          "nonzero_gradient_elements": 65536
+        },
+        {
+          "gradient_norm": 8.178339157893788e-06,
+          "has_gradient": true,
+          "name": "key.bias",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 0.0003800390404649079,
+          "has_gradient": true,
+          "name": "abstain.weight",
+          "nonzero_gradient_elements": 256
+        },
+        {
+          "gradient_norm": 5.004651939088944e-06,
+          "has_gradient": true,
+          "name": "abstain.bias",
+          "nonzero_gradient_elements": 1
+        }
+      ],
+      "loss": 0.23243951797485352,
+      "readout_parameter_count": 18,
+      "readout_parameters_with_gradient": 6,
+      "unused_parameter_names": [
+        "backbone.lm_head.weight",
+        "a_head.weight",
+        "a_head.bias",
+        "b_head.weight",
+        "b_head.bias",
+        "op_head.weight",
+        "op_head.bias",
+        "a_pointer.weight",
+        "a_pointer.bias",
+        "b_pointer.weight",
+        "b_pointer.bias",
+        "op_pointer.weight",
+        "op_pointer.bias"
+      ]
+    },
+    "SLOT_HEAD|canonical|seed1337": {
+      "backbone_parameter_count": 55,
+      "backbone_parameters_with_gradient": 54,
+      "backward_only": true,
+      "batch_rows": 12,
+      "decision_readout_gradients": [
+        {
+          "gradient_norm": 0.15262170135974884,
+          "has_gradient": true,
+          "name": "decision.weight",
+          "nonzero_gradient_elements": 768
+        },
+        {
+          "gradient_norm": 0.007809240836650133,
+          "has_gradient": true,
+          "name": "decision.bias",
+          "nonzero_gradient_elements": 3
+        }
+      ],
+      "loss": 0.44761374592781067,
+      "readout_parameter_count": 14,
+      "readout_parameters_with_gradient": 2,
+      "unused_parameter_names": [
+        "backbone.lm_head.weight",
+        "a_head.weight",
+        "a_head.bias",
+        "b_head.weight",
+        "b_head.bias",
+        "op_head.weight",
+        "op_head.bias",
+        "a_pointer.weight",
+        "a_pointer.bias",
+        "b_pointer.weight",
+        "b_pointer.bias",
+        "op_pointer.weight",
+        "op_pointer.bias"
+      ]
+    },
+    "SLOT_HEAD|canonical|seed42": {
+      "backbone_parameter_count": 55,
+      "backbone_parameters_with_gradient": 54,
+      "backward_only": true,
+      "batch_rows": 12,
+      "decision_readout_gradients": [
+        {
+          "gradient_norm": 0.16260990500450134,
+          "has_gradient": true,
+          "name": "decision.weight",
+          "nonzero_gradient_elements": 768
+        },
+        {
+          "gradient_norm": 0.010204466991126537,
+          "has_gradient": true,
+          "name": "decision.bias",
+          "nonzero_gradient_elements": 3
+        }
+      ],
+      "loss": 0.46233102679252625,
+      "readout_parameter_count": 14,
+      "readout_parameters_with_gradient": 2,
+      "unused_parameter_names": [
+        "backbone.lm_head.weight",
+        "a_head.weight",
+        "a_head.bias",
+        "b_head.weight",
+        "b_head.bias",
+        "op_head.weight",
+        "op_head.bias",
+        "a_pointer.weight",
+        "a_pointer.bias",
+        "b_pointer.weight",
+        "b_pointer.bias",
+        "op_pointer.weight",
+        "op_pointer.bias"
+      ]
+    },
+    "SLOT_HEAD|factorized|seed1337": {
+      "backbone_parameter_count": 55,
+      "backbone_parameters_with_gradient": 54,
+      "backward_only": true,
+      "batch_rows": 12,
+      "decision_readout_gradients": [
+        {
+          "gradient_norm": 0.372470498085022,
+          "has_gradient": true,
+          "name": "decision.weight",
+          "nonzero_gradient_elements": 768
+        },
+        {
+          "gradient_norm": 0.023381583392620087,
+          "has_gradient": true,
+          "name": "decision.bias",
+          "nonzero_gradient_elements": 3
+        }
+      ],
+      "loss": 0.46294835209846497,
+      "readout_parameter_count": 14,
+      "readout_parameters_with_gradient": 2,
+      "unused_parameter_names": [
+        "backbone.lm_head.weight",
+        "a_head.weight",
+        "a_head.bias",
+        "b_head.weight",
+        "b_head.bias",
+        "op_head.weight",
+        "op_head.bias",
+        "a_pointer.weight",
+        "a_pointer.bias",
+        "b_pointer.weight",
+        "b_pointer.bias",
+        "op_pointer.weight",
+        "op_pointer.bias"
+      ]
+    },
+    "SLOT_HEAD|factorized|seed42": {
+      "backbone_parameter_count": 55,
+      "backbone_parameters_with_gradient": 54,
+      "backward_only": true,
+      "batch_rows": 12,
+      "decision_readout_gradients": [
+        {
+          "gradient_norm": 0.22849981486797333,
+          "has_gradient": true,
+          "name": "decision.weight",
+          "nonzero_gradient_elements": 768
+        },
+        {
+          "gradient_norm": 0.01436685398221016,
+          "has_gradient": true,
+          "name": "decision.bias",
+          "nonzero_gradient_elements": 3
+        }
+      ],
+      "loss": 0.4624229967594147,
+      "readout_parameter_count": 14,
+      "readout_parameters_with_gradient": 2,
+      "unused_parameter_names": [
+        "backbone.lm_head.weight",
+        "a_head.weight",
+        "a_head.bias",
+        "b_head.weight",
+        "b_head.bias",
+        "op_head.weight",
+        "op_head.bias",
+        "a_pointer.weight",
+        "a_pointer.bias",
+        "b_pointer.weight",
+        "b_pointer.bias",
+        "op_pointer.weight",
+        "op_pointer.bias"
+      ]
+    }
+  },
+  "optimizer_step_performed": false,
+  "sealed_test_accessed": false,
+  "traces": {
+    "SHARED_SCORER|canonical|seed1337": {
+      "batch_sizes": [
+        12
+      ],
+      "grad_norm_max": 19.707782745361328,
+      "grad_norm_mean_last_100": 0.2516784841287881,
+      "grad_norm_min": 0.006509430706501007,
+      "loss_first": 1.3245877027511597,
+      "loss_last": 0.35066986083984375,
+      "loss_mean_last_100": 0.3982938703894615,
+      "loss_min": 0.11650414019823074,
+      "step_max": 500,
+      "step_min": 1,
+      "trace_rows": 500
+    },
+    "SHARED_SCORER|canonical|seed42": {
+      "batch_sizes": [
+        12
+      ],
+      "grad_norm_max": 177.36134338378906,
+      "grad_norm_mean_last_100": 2.631401651040651,
+      "grad_norm_min": 0.004089224152266979,
+      "loss_first": 1.1300572156906128,
+      "loss_last": 0.11666619777679443,
+      "loss_mean_last_100": 0.28617713786661625,
+      "loss_min": 0.11210710555315018,
+      "step_max": 500,
+      "step_min": 1,
+      "trace_rows": 500
+    },
+    "SHARED_SCORER|factorized|seed1337": {
+      "batch_sizes": [
+        12
+      ],
+      "grad_norm_max": 25.037988662719727,
+      "grad_norm_mean_last_100": 0.9572905552014709,
+      "grad_norm_min": 0.024277804419398308,
+      "loss_first": 1.3237067461013794,
+      "loss_last": 0.11961013823747635,
+      "loss_mean_last_100": 0.38523671694099904,
+      "loss_min": 0.105203777551651,
+      "step_max": 500,
+      "step_min": 1,
+      "trace_rows": 500
+    },
+    "SHARED_SCORER|factorized|seed42": {
+      "batch_sizes": [
+        12
+      ],
+      "grad_norm_max": 285.360595703125,
+      "grad_norm_mean_last_100": 3.2256431888230144,
+      "grad_norm_min": 0.004186997190117836,
+      "loss_first": 1.1317826509475708,
+      "loss_last": 0.11244051903486252,
+      "loss_mean_last_100": 0.5446935091912747,
+      "loss_min": 0.10561033338308334,
+      "step_max": 500,
+      "step_min": 1,
+      "trace_rows": 500
+    },
+    "SLOT_HEAD|canonical|seed1337": {
+      "batch_sizes": [
+        12
+      ],
+      "grad_norm_max": 56.09183120727539,
+      "grad_norm_mean_last_100": 0.9826850786991418,
+      "grad_norm_min": 0.006604976020753384,
+      "loss_first": 1.2917792797088623,
+      "loss_last": 0.4250936508178711,
+      "loss_mean_last_100": 0.46947511821985244,
+      "loss_min": 0.4045335352420807,
+      "step_max": 500,
+      "step_min": 1,
+      "trace_rows": 500
+    },
+    "SLOT_HEAD|canonical|seed42": {
+      "batch_sizes": [
+        12
+      ],
+      "grad_norm_max": 30.11347198486328,
+      "grad_norm_mean_last_100": 0.5838503729947843,
+      "grad_norm_min": 0.003730251220986247,
+      "loss_first": 1.1565475463867188,
+      "loss_last": 0.46232739090919495,
+      "loss_mean_last_100": 0.4668280529975891,
+      "loss_min": 0.46172189712524414,
+      "step_max": 500,
+      "step_min": 1,
+      "trace_rows": 500
+    },
+    "SLOT_HEAD|factorized|seed1337": {
+      "batch_sizes": [
+        12
+      ],
+      "grad_norm_max": 22.684627532958984,
+      "grad_norm_mean_last_100": 0.4126414098078385,
+      "grad_norm_min": 0.0038908892311155796,
+      "loss_first": 1.2867329120635986,
+      "loss_last": 0.46220269799232483,
+      "loss_mean_last_100": 0.4646688994765282,
+      "loss_min": 0.4621824026107788,
+      "step_max": 500,
+      "step_min": 1,
+      "trace_rows": 500
+    },
+    "SLOT_HEAD|factorized|seed42": {
+      "batch_sizes": [
+        12
+      ],
+      "grad_norm_max": 148.49465942382812,
+      "grad_norm_mean_last_100": 0.980137964063324,
+      "grad_norm_min": 0.007236603181809187,
+      "loss_first": 1.1523910760879517,
+      "loss_last": 0.4622997045516968,
+      "loss_mean_last_100": 0.4877295675873756,
+      "loss_min": 0.4621233642101288,
+      "step_max": 500,
+      "step_min": 1,
+      "trace_rows": 500
+    }
+  }
+}

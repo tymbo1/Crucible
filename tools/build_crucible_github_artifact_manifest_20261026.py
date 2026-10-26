@@ -16,6 +16,7 @@ LATEST = {
     "experiments/crucible_d2_component_ablation_20261026_v1",
     "experiments/crucible_compositional_authority_transfer_20261026_v1",
     "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1",
+    "experiments/crucible_cardinality_competence_diagnostic_20261026_v1",
 }
 MAX_GITHUB_FILE_BYTES = 100 * 1024 * 1024
 
@@ -75,7 +76,7 @@ def main() -> int:
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "repository": "tymbo1/Crucible",
         "policy": {
-            "curated_commit": "docs, tools, reports, summaries/results, predictions, manifests, audits, hashes and complete metadata for the three latest experiments",
+            "curated_commit": "docs, tools, reports, summaries/results, predictions, manifests, audits, hashes and complete metadata for the latest accepted experiments",
             "excluded": "checkpoints/binaries, raw traces/intermediate files and files over 100 MiB",
             "large_artifact_storage": "Keep excluded files in the local/archive store; use sha256 values below to verify recovery.",
         },

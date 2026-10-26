@@ -28823,19 +28823,67 @@
       "path": "experiments/ssre_npa_v5_telemetry_efficiency_20261018/telemetry_efficiency_benchmark.py",
       "reason": "raw_trace_or_intermediate_artifact",
       "sha256": "ce4bc4a5e4362762dc8f29177a110aeaf74698ca2cec9f9a3b43c3ab8e2be5df"
+    },
+    {
+      "path": "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/D0_DENSE_CYCLIC/checkpoint.pt",
+      "bytes": 88454709,
+      "reason": "checkpoint_or_binary_artifact",
+      "sha256": "f95d4c569ad722145db2a74426bc747ac1e284195c2fb5c325201bb3b5210a1f"
+    },
+    {
+      "path": "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/D0_DENSE_CYCLIC/TRAINING_TRACE.jsonl",
+      "bytes": 64774,
+      "reason": "raw_trace_or_intermediate_artifact",
+      "sha256": "7847b3ff2119e47dd71785f41ae9161fb34b36d2f1cf479c0da295cbd67a627e"
+    },
+    {
+      "path": "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/D1_DENSE_SHUFFLED/checkpoint.pt",
+      "bytes": 88454709,
+      "reason": "checkpoint_or_binary_artifact",
+      "sha256": "cad7d53a9f4536d0622a11c4a8bfb44ca3a8592889fef7cca46a63ae28e8baad"
+    },
+    {
+      "path": "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/D1_DENSE_SHUFFLED/TRAINING_TRACE.jsonl",
+      "bytes": 65672,
+      "reason": "raw_trace_or_intermediate_artifact",
+      "sha256": "27179c25e283e9f7b289c688ab0e70fe1291f3d3cee06fe802f57862ec9768cc"
+    },
+    {
+      "path": "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/D2_STRUCTURED_CYCLIC/checkpoint.pt",
+      "bytes": 18231,
+      "reason": "checkpoint_or_binary_artifact",
+      "sha256": "8e95b87b93f3012b8ff8e1740449fd9a4e42fa001c9baddb91d67bcb4a2cec67"
+    },
+    {
+      "path": "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/D2_STRUCTURED_CYCLIC/TRAINING_TRACE.jsonl",
+      "bytes": 67112,
+      "reason": "raw_trace_or_intermediate_artifact",
+      "sha256": "1f7a5abb2db4b9780c14b5aac1e8d84645cb16b5cd34dbc61a565f58fc145594"
+    },
+    {
+      "path": "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/D3_STRUCTURED_SHUFFLED/checkpoint.pt",
+      "bytes": 18231,
+      "reason": "checkpoint_or_binary_artifact",
+      "sha256": "3cb84163804dc5280deae3ae160895bcfc368f8cef56e33882c108e82ac80b6a"
+    },
+    {
+      "path": "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/D3_STRUCTURED_SHUFFLED/TRAINING_TRACE.jsonl",
+      "bytes": 68027,
+      "reason": "raw_trace_or_intermediate_artifact",
+      "sha256": "399960a6c0965e70d7a94f63ec3ed09eb3db11f1c9f79fccc947b33097478130"
     }
   ],
   "excluded_summary": {
-    "bytes": 118632445734,
-    "files": 4804
+    "bytes": 118809657199,
+    "files": 4812
   },
-  "generated_utc": "2026-10-26T07:11:42.801143+00:00",
+  "generated_utc": "2026-10-26T14:37:43Z",
   "included_summary": {
-    "bytes": 72928347,
-    "files": 892
+    "bytes": 73084289,
+    "files": 908
   },
   "policy": {
-    "curated_commit": "docs, tools, reports, summaries/results, predictions, manifests, audits, hashes and complete metadata for the three latest experiments",
+    "curated_commit": "docs, tools, reports, summaries/results, predictions, manifests, audits, hashes and complete metadata for the latest accepted experiments",
     "excluded": "checkpoints/binaries, raw traces/intermediate files and files over 100 MiB",
     "large_artifact_storage": "Keep excluded files in the local/archive store; use sha256 values below to verify recovery."
   },

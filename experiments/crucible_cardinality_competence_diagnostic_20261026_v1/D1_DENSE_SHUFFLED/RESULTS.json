@@ -1,0 +1,25 @@
+{
+  "batch_size": 12,
+  "cell": "D1_DENSE_SHUFFLED",
+  "checkpoint": "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/D1_DENSE_SHUFFLED/checkpoint.pt",
+  "checkpoint_sha256": "cad7d53a9f4536d0622a11c4a8bfb44ca3a8592889fef7cca46a63ae28e8baad",
+  "parameter_count": 22106906,
+  "representation": "dense",
+  "schedule": "shuffled",
+  "seed": 42,
+  "source_rows": 576,
+  "steps": 500,
+  "train_metrics": {
+    "abstain_accuracy": 1.0,
+    "abstain_correct": 192,
+    "abstain_rows": 192,
+    "paired_correct": 0,
+    "paired_groups": 192,
+    "pointer_accuracy": 0.6666666666666666,
+    "pointer_correct": 384,
+    "pointer_flips": 0,
+    "rows": 576
+  },
+  "training_gate_pass": false,
+  "training_gate_threshold": 0.95
+}

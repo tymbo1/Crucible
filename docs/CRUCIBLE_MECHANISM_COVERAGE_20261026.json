@@ -1,0 +1,90 @@
+{
+  "schema_version": "crucible_mechanism_coverage_v1",
+  "updated": "2026-10-26",
+  "indexed_final_reports": 28,
+  "categories": [
+    {
+      "mechanism": "operation-recognition",
+      "established": ["operation-token-identification"],
+      "failed": [],
+      "inconclusive": ["operation-conditioning-forensics"],
+      "unresolved": ["How a recognized operation controls downstream execution"]
+    },
+    {
+      "mechanism": "operation-conditioned-execution",
+      "established": ["operation-position-matrix-v1", "causally-valid-authority-decision"],
+      "failed": ["operation-marker-interface-v3", "role-selection-competence-v5"],
+      "inconclusive": ["operation-conditioning-forensics"],
+      "unresolved": ["Whether the learned dependency transfers across layouts and operation families"]
+    },
+    {
+      "mechanism": "position-and-adjacency",
+      "established": ["operation-position-matrix-v1", "relevance-adjacency-v1", "relevance-adjacency-v2"],
+      "failed": ["position-generalization", "paired-positional-exposure"],
+      "inconclusive": ["batch-composition-order"],
+      "unresolved": ["Distance sensitivity versus prompt-distribution shift", "How to learn position-independent role representations"]
+    },
+    {
+      "mechanism": "role-binding-and-parser-transfer",
+      "established": [],
+      "failed": ["explicit-role-binding-gate", "explicit-role-supervision-v3", "variable-binding-v1"],
+      "inconclusive": [],
+      "unresolved": ["A role-binding skill that is both learned and transferable"]
+    },
+    {
+      "mechanism": "authority-selection",
+      "established": ["authority-representation-use", "causally-valid-authority-decision"],
+      "failed": ["authority-aware-role-binding-v1", "authority-aware-role-binding-v2", "authority-counterfactual-raw-label-v2"],
+      "inconclusive": ["authority-counterfactual-fixed-width-v1"],
+      "unresolved": ["Authority-to-operation binding after causal access is provided"]
+    },
+    {
+      "mechanism": "arithmetic-diagonal-transfer",
+      "established": ["digitwise-balanced-holdouts"],
+      "failed": ["equality-foundational-v2"],
+      "inconclusive": ["digitwise-diagonal-ablation-v2", "digitwise-role-swapped-control"],
+      "unresolved": ["Equality-specific difficulty versus residual marginal imbalance"]
+    },
+    {
+      "mechanism": "candidate-count-and-shared-scoring",
+      "established": [],
+      "failed": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer"],
+      "inconclusive": ["authority-component-ablation", "cardinality-competence-diagnostic-v1"],
+      "unresolved": ["Training-competent candidate matching across cardinalities", "Candidate-independent scoring under interior-slot coverage"]
+    },
+    {
+      "mechanism": "training-dynamics",
+      "established": [],
+      "failed": ["paired-positional-exposure", "position-generalization"],
+      "inconclusive": ["batch-composition-order", "authority-component-ablation", "cardinality-competence-diagnostic-v1"],
+      "unresolved": ["Whether schedule, representation, or optimization budget is the dominant bottleneck"]
+    }
+  ],
+  "overlap_groups": [
+    {
+      "name": "authority-selection-lineage",
+      "records": ["authority-aware-role-binding-v1", "authority-aware-role-binding-v2", "authority-counterfactual-fixed-width-v1", "authority-counterfactual-raw-label-v2", "authority-representation-use", "causally-valid-authority-decision", "authority-two-candidate-s4", "authority-component-ablation"],
+      "interpretation": "These are sequential controls on the same synthetic authority-selection family. The corrected v2 counterfactual supersedes the fixed-width exploratory result; D1 and S4 establish causally valid decision interfaces, while late candidate-pointer authority remains inaccessible."
+    },
+    {
+      "name": "positional-training-lineage",
+      "records": ["operation-marker-interface-v3", "operation-position-matrix-v1", "relevance-adjacency-v1", "relevance-adjacency-v2", "position-generalization", "paired-positional-exposure", "batch-composition-order"],
+      "interpretation": "These experiments reuse the A0/A1/A2/A3 task family. They should not be pooled as independent tests; later runs refine the distinction between interface shift and training-distribution effects."
+    },
+    {
+      "name": "digitwise-transfer-lineage",
+      "records": ["digitwise-balanced-holdouts", "digitwise-diagonal-ablation-v2", "digitwise-role-swapped-control", "equality-foundational-v2", "variable-binding-v1"],
+      "interpretation": "These are related diagonal-addition controls with shared task vocabulary and splits. Their pooled observations are correlated and the ablation controls retain explicit marginal-frequency limitations."
+    },
+    {
+      "name": "role-binding-lineage",
+      "records": ["explicit-role-binding-gate", "explicit-role-supervision-v3", "authority-aware-role-binding-v1", "authority-aware-role-binding-v2", "role-selection-competence-v5"],
+      "interpretation": "The sequence moves from learned parsing to pointer supervision and authority cues. Positive pointer performance on familiar layouts does not establish transferable authority resolution."
+    },
+    {
+      "name": "cardinality-lineage",
+      "records": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer"],
+      "interpretation": "The first run failed paired four-candidate transfer. The explicit-ID follow-up failed training competence, so it cannot adjudicate shared scoring versus fixed-slot transfer."
+    }
+  ]
+}

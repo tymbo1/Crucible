@@ -77,9 +77,480 @@
         "docs/CRUCIBLE_SHARED_CANDIDATE_SCORING_CARDINALITY_PROTOCOL_20261026.md",
         "tools/run_crucible_shared_candidate_scoring_cardinality_20261026.py",
         "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/REPORT_FINAL.md",
-        "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/SUMMARY.json"
+        "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/SUMMARY.json",
+        "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/IMPLEMENTATION_AUDIT.json",
+        "tools/audit_crucible_shared_candidate_scoring_cardinality_20261026.py"
       ],
       "novelty_terms": ["candidate ID", "2/3 candidates", "4/5/8 candidates", "oracle representation", "permutation consistency"]
+    },
+    {
+      "id": "authority-aware-role-binding-v1",
+      "status": "FAILED",
+      "title": "Authority-aware role binding with explicit training distractors v1",
+      "hypothesis": "Explicit authority-pointer supervision will transfer operation authority selection to unseen competing-cue layouts.",
+      "mechanisms": ["role-binding", "authority-selection", "distractor-discrimination", "pointer-supervision"],
+      "interventions": ["A1 authority tuple", "A2 authority pointer", "A3 balanced authority pointer"],
+      "controls": ["Frozen v3 parser", "oracle binding", "canonical/factorized interfaces", "four seeds/interfaces", "unseen authority layouts"],
+      "result": "A3 learned all operand and operation pointers on training rows and reached 32/32 on authority-near, authority-early and authority-middle pooled layouts, but achieved 4/32 on reversed authority and 4/32 on conflicting cues. The oracle achieved 32/32 on every layout.",
+      "limits": ["Synthetic authority cues", "The run was followed by a corrected v2 rerun", "Does not establish general authority reasoning"],
+      "unresolved": ["Whether failure is authority binding, layout shift or training coverage", "Whether the corrected rerun changes the conclusion"],
+      "artifacts": [
+        "experiments/crucible_authority_aware_role_binding_20251025_v1/REPORT_FINAL.md",
+        "experiments/crucible_authority_aware_role_binding_20251025_v1/SUMMARY.json",
+        "experiments/crucible_authority_aware_role_binding_20251025_v1/FINALIZATION.json",
+        "docs/CRUCIBLE_AUTHORITY_AWARE_ROLE_BINDING_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["authority pointer", "competing cues", "training distractors", "role binding"]
+    },
+    {
+      "id": "authority-aware-role-binding-v2",
+      "status": "FAILED",
+      "title": "Corrected authority-aware role binding rerun",
+      "hypothesis": "Balanced explicit authority-pointer supervision will achieve transferable authority selection on unseen conflicting-operation examples.",
+      "mechanisms": ["authority-selection", "role-binding", "distractor-discrimination", "pointer-supervision"],
+      "interventions": ["A2 authority pointer", "A3 balanced authority pointer"],
+      "controls": ["v3 reproduction", "oracle binding", "canonical/factorized interfaces", "four seeds/interfaces", "balanced authority sides"],
+      "result": "A3 passed the training pointer gate in all four arms (240/240 pointer tuples per run), but the primary unseen conflicting-cue criterion was 2/32 paired groups (6.25%). Operand pointers were 80/80 while authority pointers were 40/80 on those rows; the oracle was 32/32 on every layout.",
+      "limits": ["Synthetic authority cues", "The nearest-decoy condition fixes authority to EARLIER", "Does not establish a general authority concept"],
+      "unresolved": ["Whether authority is ignored, position-dependent or not causally bound", "How late authority interacts with causal information flow"],
+      "artifacts": [
+        "experiments/crucible_authority_aware_role_binding_20251025_v2/REPORT_FINAL.md",
+        "experiments/crucible_authority_aware_role_binding_20251025_v2/SUMMARY.json",
+        "experiments/crucible_authority_aware_role_binding_20251025_v2/FINALIZATION.json",
+        "docs/CRUCIBLE_AUTHORITY_AWARE_ROLE_BINDING_PROTOCOL_20251025_v2.md"
+      ],
+      "novelty_terms": ["corrected rerun", "authority pointer", "conflicting operation", "operand pointer"]
+    },
+    {
+      "id": "authority-counterfactual-fixed-width-v1",
+      "status": "INCONCLUSIVE",
+      "title": "Fixed-width authority counterfactual diagnostic",
+      "hypothesis": "Changing only the authority designation will reverse the learned operation pointer.",
+      "mechanisms": ["counterfactual-evaluation", "authority-sensitivity", "pointer-use"],
+      "interventions": ["Read-only fixed-width authority swap on A3 checkpoints"],
+      "controls": ["Position-invariant pair construction", "source v2 finalization", "same-input patch controls", "no retraining"],
+      "result": "The A3 pointer changed on 0/160 counterfactual pairs in every listed layout. The export contained 326 invalid-format rows because LATER padding introduced a surface form absent from v2 training; the position-safe raw-label v2 result is the accepted diagnostic.",
+      "limits": ["Known fixed-width padding confound", "Exploratory output is not pooled with v2", "No causal mechanism follows from pointer invariance alone"],
+      "unresolved": ["Whether the clean counterfactual result differs from the exploratory fixed-width result"],
+      "artifacts": [
+        "experiments/crucible_authority_counterfactual_20261026_v1/REPORT_FINAL.md",
+        "experiments/crucible_authority_counterfactual_20261026_v1/ANALYSIS.json",
+        "experiments/crucible_authority_counterfactual_20261026_v1/FINALIZATION.json",
+        "docs/CRUCIBLE_AUTHORITY_COUNTERFACTUAL_PROTOCOL_20261026.md"
+      ],
+      "novelty_terms": ["fixed-width", "authority swap", "counterfactual", "padding confound"]
+    },
+    {
+      "id": "authority-counterfactual-raw-label-v2",
+      "status": "FAILED",
+      "title": "Position-safe raw-label authority counterfactual",
+      "hypothesis": "The A3 parser will change its selected operation when EARLIER/LATER authority is reversed in a position-safe unseen layout.",
+      "mechanisms": ["counterfactual-evaluation", "authority-sensitivity", "operation-selection"],
+      "interventions": ["Read-only raw-label authority reversal"],
+      "controls": ["800 invariant pairs", "same candidates and operation positions", "A3 checkpoint reproduction", "unequal-output denominator"],
+      "result": "Correct pointer flips were 0/160 and correct unequal-output flips were 0/128. The pointer was unchanged for every counterfactual pair; selected-operation accuracy was 116/160 for EARLIER and 44/160 for LATER, reflecting a static preference rather than authority sensitivity.",
+      "limits": ["Synthetic authority cue", "Read-only evaluation of A3", "Does not establish real-world instruction hierarchy"],
+      "unresolved": ["Whether the authority cue is absent, inaccessible to the pointer, or represented but unused"],
+      "artifacts": [
+        "experiments/crucible_authority_counterfactual_20261026_v2/REPORT_FINAL.md",
+        "experiments/crucible_authority_counterfactual_20261026_v2/ANALYSIS.json",
+        "experiments/crucible_authority_counterfactual_20261026_v2/FINALIZATION.json",
+        "docs/CRUCIBLE_AUTHORITY_COUNTERFACTUAL_PROTOCOL_20261026_v2.md"
+      ],
+      "novelty_terms": ["raw label", "position-safe", "authority flip", "static preference"]
+    },
+    {
+      "id": "authority-representation-use",
+      "status": "ESTABLISHED",
+      "title": "Late authority representation versus use diagnostic",
+      "hypothesis": "The late authority cue may be represented while remaining unavailable to earlier operation-pointer states.",
+      "mechanisms": ["causal-information-flow", "authority-representation", "activation-patching", "pointer-use"],
+      "interventions": ["Frozen hidden-state probes", "opposite-authority activation patches", "causal-access audit"],
+      "controls": ["A3 reproduction", "disjoint probe rows", "self-patch numerical controls", "four A3 checkpoints"],
+      "result": "Authority-token probes reached 100% across tested domains, while operation-position probes were only 40/80 in the unseen reversed layout. Changing authority produced 0/80 pointer changes and 0 hidden/logit change at operation positions in each model, consistent with causal inaccessibility of later information at earlier states.",
+      "limits": ["Probe decodability is not causal use", "Patching is intervention-bounded", "Native attention probabilities were unavailable"],
+      "unresolved": ["Whether a causally valid later decision state can use the authority cue", "How representation and use differ after access is restored"],
+      "artifacts": [
+        "experiments/crucible_authority_representation_use_20261026_v1/REPORT_FINAL.md",
+        "experiments/crucible_authority_representation_use_20261026_v1/AUTHORITY_PROBE_RESULTS.json",
+        "experiments/crucible_authority_representation_use_20261026_v1/CAUSAL_ACCESS.json",
+        "docs/CRUCIBLE_AUTHORITY_REPRESENTATION_USE_PROTOCOL_20261026.md"
+      ],
+      "novelty_terms": ["authority representation", "causal access", "operation position", "activation patch"]
+    },
+    {
+      "id": "batch-composition-order",
+      "status": "INCONCLUSIVE",
+      "title": "Batch composition and update-ordering control",
+      "hypothesis": "Batch composition or update ordering is a primary cause of conditional-execution training failure.",
+      "mechanisms": ["optimization", "batch-composition", "update-ordering", "gradient-diagnostics"],
+      "interventions": ["Diverse/same-pair batch composition crossed with shuffled/grouped ordering"],
+      "controls": ["16 arms", "500 updates", "6,000 presentations per arm", "schedule and input audits", "two interfaces and two seeds"],
+      "result": "Diverse grouped training improved mean fit over diverse shuffled training, while same-pair grouped training was worse than same-pair shuffled training. The best held-out paired results were only 16/32, and gradient cosine was descriptive rather than causal evidence of interference.",
+      "limits": ["Training fit remained incomplete", "Gradient cosine does not prove interference", "No architecture or representation mechanism was isolated"],
+      "unresolved": ["Whether batching, ordering, exposure or representation causes the interaction", "Whether any schedule improves unseen-layout transfer"],
+      "artifacts": [
+        "experiments/crucible_batch_composition_order_20251025_v1/REPORT_FINAL.md",
+        "experiments/crucible_batch_composition_order_20251025_v1/SUMMARY.json",
+        "experiments/crucible_batch_composition_order_20251025_v1/SCHEDULE_AUDIT.json",
+        "docs/CRUCIBLE_BATCH_COMPOSITION_ORDER_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["batch composition", "update ordering", "gradient cosine", "same-pair batch"]
+    },
+    {
+      "id": "causally-valid-authority-decision",
+      "status": "ESTABLISHED",
+      "title": "Causally valid authority decision placement",
+      "hypothesis": "A decision made after the authority cue, or with authority placed before candidate pointers, can learn authority-conditioned selection.",
+      "mechanisms": ["causal-information-flow", "authority-selection", "decision-readout"],
+      "interventions": ["D0 late candidate pointer", "D1 early candidate pointer", "D2 late final decision"],
+      "controls": ["Four interface/seed arms", "counterfactual operation flips", "row-level pointer and output metrics", "format audit"],
+      "result": "D1 reached 80/80 paired training, 80/80 paired validation and 20/20 validation operation flips. D0 and D2 failed training competence; D2 therefore remains an unresolved readout-learning failure rather than evidence against post-context access.",
+      "limits": ["D1 moves the authority cue", "D2 was not training-competent", "Synthetic two-operation task"],
+      "unresolved": ["Which final-readout design and training objective make D2 learn", "Whether this transfers beyond two candidates"],
+      "artifacts": [
+        "experiments/crucible_causally_valid_authority_decision_20261026_v1/REPORT_FINAL.md",
+        "experiments/crucible_causally_valid_authority_decision_20261026_v1/SUMMARY.json",
+        "experiments/crucible_causally_valid_authority_decision_20261026_v1/DATA_AUDIT.json",
+        "docs/CRUCIBLE_CAUSALLY_VALID_AUTHORITY_DECISION_PROTOCOL_20261026.md"
+      ],
+      "novelty_terms": ["causal access", "D1", "D2", "late authority", "final decision"]
+    },
+    {
+      "id": "digitwise-balanced-holdouts",
+      "status": "ESTABLISHED",
+      "title": "Repeated balanced single-digit addition holdouts",
+      "hypothesis": "The original four failing operand pairs are persistent pair-specific weaknesses rather than artifacts of one split.",
+      "mechanisms": ["arithmetic-generalization", "diagonal-transfer", "split-robustness", "operand-coverage"],
+      "interventions": ["16-arm rotated balanced holdouts"],
+      "controls": ["55 valid ordered pairs", "operand/sum/diagonal coverage audits", "two interfaces and two seeds", "95% fit gate"],
+      "result": "Held-out equal operands were 0/32 while held-out non-diagonal pairs were 133/208; trained diagonal observations were 47/48 correct. The original four failures moved with the partition, while the held-out diagonal failure persisted under these splits.",
+      "limits": ["Pooled rows are correlated", "Small structured domain", "Coverage is not perfectly balanced"],
+      "unresolved": ["Whether diagonal failure is equality-specific or coverage/distribution-driven", "Whether the effect survives matched ablation"],
+      "artifacts": [
+        "experiments/crucible_digitwise_balanced_holdouts_20251025/REPORT_FINAL.md",
+        "experiments/crucible_digitwise_balanced_holdouts_20251025/ANALYSIS_FINAL.json",
+        "experiments/crucible_digitwise_balanced_holdouts_20251025/FINAL_HASHES.json",
+        "docs/CRUCIBLE_DIGITWISE_BALANCED_HOLDOUT_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["balanced holdout", "diagonal transfer", "equal operands", "partition rotation"]
+    },
+    {
+      "id": "digitwise-diagonal-ablation-v2",
+      "status": "INCONCLUSIVE",
+      "title": "Matched diagonal ablation",
+      "hypothesis": "Held-out equal-operand pairs are harder than matched unequal pairs, independent of the original split.",
+      "mechanisms": ["diagonal-transfer", "operand-equality", "coverage-control"],
+      "interventions": ["Diagonal, mixed and matched-unequal special holdouts"],
+      "controls": ["12 fit-competent arms", "same special sums", "same first-operand frequencies", "mixed condition"],
+      "result": "Special holdout accuracy was 0/8 for diagonal, 7/8 for matched unequal and 3/8 for mixed. The protocol records an unavoidable second-operand-frequency mismatch, so the behavioral contrast is informative but not perfectly matched.",
+      "limits": ["Second-operand frequencies are not fully matched", "Correlated repeated predictions", "No mechanism evidence"],
+      "unresolved": ["Whether equality itself or remaining frequency imbalance causes the contrast"],
+      "artifacts": [
+        "experiments/crucible_digitwise_diagonal_ablation_20251025_v2/REPORT_FINAL.md",
+        "experiments/crucible_digitwise_diagonal_ablation_20251025_v2/ANALYSIS_FINAL.json",
+        "experiments/crucible_digitwise_diagonal_ablation_20251025_v2/PREFLIGHT.json",
+        "docs/CRUCIBLE_DIGITWISE_DIAGONAL_ABLATION_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["diagonal ablation", "matched unequal", "special holdout", "equality"]
+    },
+    {
+      "id": "digitwise-role-swapped-control",
+      "status": "INCONCLUSIVE",
+      "title": "Role-swapped unequal diagonal control",
+      "hypothesis": "The diagonal transfer failure persists against unequal controls with complementary operand-role frequencies.",
+      "mechanisms": ["diagonal-transfer", "operand-role-frequency", "equality-control"],
+      "interventions": ["Diagonal versus role-swapped unequal special holdout"],
+      "controls": ["8 fit-competent arms", "same special sums", "same second-operand frequencies", "same evaluator"],
+      "result": "Special holdout accuracy was 0/8 for diagonal and 8/8 for role-swapped unequal pairs. The first-operand frequency difference is explicit in the report.",
+      "limits": ["Not a perfect simultaneous marginal match", "Small correlated special set", "No internal mechanism evidence"],
+      "unresolved": ["Whether first-operand imbalance contributes to the diagonal contrast"],
+      "artifacts": [
+        "experiments/crucible_digitwise_role_swapped_control_20251025/REPORT_FINAL.md",
+        "experiments/crucible_digitwise_role_swapped_control_20251025/ANALYSIS_FINAL.json",
+        "experiments/crucible_digitwise_role_swapped_control_20251025/PREFLIGHT.json",
+        "docs/CRUCIBLE_DIGITWISE_ROLE_SWAPPED_CONTROL_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["role-swapped", "diagonal control", "operand-role frequency"]
+    },
+    {
+      "id": "equality-foundational-v2",
+      "status": "FAILED",
+      "title": "Equality foundational transfer",
+      "hypothesis": "Equality pretraining or an explicit equality feature will restore held-out diagonal addition transfer.",
+      "mechanisms": ["foundational-learning", "equality", "transfer", "arithmetic-generalization"],
+      "interventions": ["A1 equality pretraining", "A2 explicit equality feature"],
+      "controls": ["A0 original", "same diagonal addition split", "12 arms", "500 addition updates", "addition fit gate"],
+      "result": "The diagonal result remained 0/8 for A0, A1 and A2. Equality pretraining reached its own task but one A1 addition arm failed the addition fit gate; the remaining A1 arms did not improve over A0.",
+      "limits": ["Short pretraining and binary feature only", "One A1 arm underfit addition", "Does not show equality is irrelevant"],
+      "unresolved": ["Whether variable binding or relation-conditioned execution is the missing transfer mechanism"],
+      "artifacts": [
+        "experiments/crucible_equality_foundational_20251025_v2/REPORT_FINAL.md",
+        "experiments/crucible_equality_foundational_20251025_v2/ANALYSIS_FINAL.json",
+        "experiments/crucible_equality_foundational_20251025_v2/PREFLIGHT.json",
+        "docs/CRUCIBLE_EQUALITY_FOUNDATIONAL_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["equality pretraining", "explicit equality", "foundational transfer", "diagonal addition"]
+    },
+    {
+      "id": "explicit-role-binding-gate",
+      "status": "FAILED",
+      "title": "Explicit role-binding parser/executor decomposition",
+      "hypothesis": "A learned parser can construct a role-bound representation that supports the existing executor on unseen layouts.",
+      "mechanisms": ["role-binding", "parser-generalization", "structured-intermediate-state", "executor-control"],
+      "interventions": ["Learned parser with frozen A3 executor", "learned parser with oracle executor"],
+      "controls": ["Oracle parser/executor", "raw end-to-end control", "canonical/factorized interfaces", "read-only existing checkpoints"],
+      "result": "The oracle parser plus executor achieved 29/32 paired correctness across layouts, while the learned parser achieved 8/32 with either neural or oracle execution; parser training tuple accuracy was 99.58--100% but validation was 10--35%.",
+      "limits": ["Oracle controls are diagnostic scaffolding", "Parser and executor interface is synthetic", "Does not identify whether position, optimization or representation causes parser failure"],
+      "unresolved": ["Which role representation or supervision permits transfer", "Whether the learned executor contributes additional error"],
+      "artifacts": [
+        "experiments/crucible_explicit_role_binding_gate_20251025_v1/REPORT_FINAL.md",
+        "experiments/crucible_explicit_role_binding_gate_20251025_v1/SUMMARY.json",
+        "experiments/crucible_explicit_role_binding_gate_20251025_v1/FINALIZATION.json",
+        "docs/CRUCIBLE_EXPLICIT_ROLE_BINDING_GATE_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["role binding", "parser", "oracle executor", "structured representation"]
+    },
+    {
+      "id": "explicit-role-supervision-v3",
+      "status": "FAILED",
+      "title": "Explicit role-pointer supervision",
+      "hypothesis": "Supervising operand and operation pointers will produce transferable role binding and authority selection.",
+      "mechanisms": ["role-supervision", "pointer-learning", "authority-selection", "layout-generalization"],
+      "interventions": ["E1 classifier supervision", "E2 pointer supervision"],
+      "controls": ["Tuple-only baseline", "oracle binding", "raw end-to-end control", "four interface/seed arms", "unseen layouts"],
+      "result": "E2 reached 32/32 on fixed-near and early, 32/32 on middle, 27/32 between operands and 30/32 early-context. It fell to 15/32 on digit distractors and 1/32 on competing operation; E3 was 32/32 throughout.",
+      "limits": ["Synthetic role pointers", "Positive role-pointer results do not establish authority reasoning", "Competing-operation layout remains an out-of-distribution failure"],
+      "unresolved": ["Whether explicit authority supervision can be learned in a causally valid decision interface"],
+      "artifacts": [
+        "experiments/crucible_explicit_role_supervision_20251025_v3/REPORT_FINAL.md",
+        "experiments/crucible_explicit_role_supervision_20251025_v3/SUMMARY.json",
+        "experiments/crucible_explicit_role_supervision_20251025_v3/ANALYSIS.json",
+        "experiments/crucible_explicit_role_supervision_20251025_v3/FINALIZATION.json",
+        "docs/CRUCIBLE_EXPLICIT_ROLE_SUPERVISION_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["explicit role supervision", "pointer learning", "digit distractor", "competing operation"]
+    },
+    {
+      "id": "operation-conditioning-forensics",
+      "status": "INCONCLUSIVE",
+      "title": "Operation-conditioning mechanism forensics",
+      "hypothesis": "The joint role-selection failure is caused by missing operation representation, conditional routing, gradient interference, binding, or an operation-blind shortcut.",
+      "mechanisms": ["operation-conditioning", "representation-use", "activation-patching", "gradient-diagnostics"],
+      "interventions": ["Held-out probes", "opposite/same/random activation patches", "endpoint gradient comparisons"],
+      "controls": ["S3 reproduction", "token-identifier control", "disjoint probes", "matched unequal pairs", "checkpoint hashes"],
+      "result": "Operation identity was 100% decodable at its source; opposite-operation patches changed 0/384 predictions, same-operation patches 145/384 and random patches 187/384. Endpoint gradient cosine was positive at 0.726--0.997. The report ranks conditional routing/propagation and an operation-blind shortcut above simple absence of representation, but does not identify a unique mechanism.",
+      "limits": ["Probe decodability is not causal use", "Endpoint gradients do not rule out transient interference", "Native attention matrices were unavailable"],
+      "unresolved": ["Where operation information stops influencing answer computation", "Whether position or encoding is the primary interface cause"],
+      "artifacts": [
+        "experiments/crucible_operation_conditioning_forensics_20251025_v1/REPORT_FINAL.md",
+        "experiments/crucible_operation_conditioning_forensics_20251025_v1/SUMMARY.json",
+        "experiments/crucible_operation_conditioning_forensics_20251025_v1/HYPOTHESIS_RANKING.json",
+        "experiments/crucible_operation_conditioning_forensics_20251025_v1/FINALIZATION.json",
+        "docs/CRUCIBLE_OPERATION_CONDITIONING_FORENSICS_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["operation conditioning", "activation patch", "gradient cosine", "operation-blind shortcut"]
+    },
+    {
+      "id": "operation-marker-interface-v3",
+      "status": "FAILED",
+      "title": "Single-token operation-marker intervention",
+      "hypothesis": "Replacing multi-byte operation words with length-preserving one-byte markers will restore joint conditional execution.",
+      "mechanisms": ["operation-encoding", "conditional-execution", "interface-design"],
+      "interventions": ["A1 one-byte operation markers"],
+      "controls": ["Frozen A0 S3 baseline", "same prompt length", "same operand/answer positions", "two interfaces and two seeds"],
+      "result": "A1 validation remained 50--60%, every A1 competence gate failed, and paired correctness was 0/8 in all four arms. The marker change alone did not restore conditional execution.",
+      "limits": ["Neutral padding remains a lexical cue", "This is an encoding intervention, not a complete tokenizer ablation", "Position matrix was a later experiment"],
+      "unresolved": ["Whether operation position, rather than byte encoding, drives the failure"],
+      "artifacts": [
+        "experiments/crucible_operation_marker_interface_20251025_v3/REPORT_FINAL.md",
+        "experiments/crucible_operation_marker_interface_20251025_v3/SUMMARY.json",
+        "experiments/crucible_operation_marker_interface_20251025_v3/RESULTS.json",
+        "experiments/crucible_operation_marker_interface_20251025_v3/FINALIZATION.json",
+        "docs/CRUCIBLE_OPERATION_MARKER_INTERFACE_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["single-token marker", "encoding intervention", "joint selection"]
+    },
+    {
+      "id": "operation-position-matrix-v1",
+      "status": "ESTABLISHED",
+      "title": "Operation-position and marker factorial matrix",
+      "hypothesis": "Moving the operation field to a fixed answer-boundary position will restore instruction-conditioned execution, with encoding and position separable in a small matrix.",
+      "mechanisms": ["position-sensitivity", "operation-conditioning", "interface-design"],
+      "interventions": ["A0/A1 original position", "A2 word fixed position", "A3 marker fixed position"],
+      "controls": ["Eight interface/seed arms", "operation-only swaps", "answer-position probes", "source-control reproduction"],
+      "result": "A0/A1 had 0/32 pooled held-out paired groups; A2/A3 had 57/64. A2/A3 trained paired correctness was 128/128 in all arms, while A0/A1 was 15/128 and 0/128. Operation-only swaps changed 30/32 A2 and 29/32 A3 outputs, establishing condition-specific interface sensitivity.",
+      "limits": ["Position, absolute tokens and distance changed together", "Does not identify a unique attention mechanism", "Two-operation synthetic task"],
+      "unresolved": ["Whether position variation can be learned robustly", "Whether the effect transfers to variable candidates or new operations"],
+      "artifacts": [
+        "experiments/crucible_operation_position_matrix_20251025_v1/REPORT_FINAL.md",
+        "experiments/crucible_operation_position_matrix_20251025_v1/SUMMARY.json",
+        "experiments/crucible_operation_position_matrix_20251025_v1/OUTPUT_SENSITIVITY.json",
+        "experiments/crucible_operation_position_matrix_20251025_v1/FINALIZATION.json",
+        "docs/CRUCIBLE_OPERATION_POSITION_MATRIX_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["operation position", "answer boundary", "marker fixed", "paired conditional accuracy"]
+    },
+    {
+      "id": "operation-token-identification",
+      "status": "ESTABLISHED",
+      "title": "Operation-token recognition control",
+      "hypothesis": "The frozen dense model can identify SELECT_FIRST versus SELECT_SECOND as an explicit operation class.",
+      "mechanisms": ["operation-recognition", "classification-control"],
+      "interventions": ["Operation identifier classification task"],
+      "controls": ["Canonical/factorized interfaces", "two seeds", "80/80 training and 20/20 validation per arm", "no sealed test"],
+      "result": "All four arms passed: 80/80 training and 20/20 validation for both interfaces and seeds. This establishes identifier recognition, not operation-conditioned execution.",
+      "limits": ["Classification target is not operand execution", "Does not test conditional routing"],
+      "unresolved": ["How recognized operation information can control a downstream decision"],
+      "artifacts": [
+        "experiments/crucible_operation_token_identification_20251025_v1/REPORT_FINAL.md",
+        "experiments/crucible_operation_token_identification_20251025_v1/ANALYSIS_FINAL.json",
+        "experiments/crucible_operation_token_identification_20251025_v1/FINALIZATION.json",
+        "docs/CRUCIBLE_OPERATION_TOKEN_IDENTIFICATION_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["operation recognition", "identifier control", "Track A"]
+    },
+    {
+      "id": "paired-positional-exposure",
+      "status": "FAILED",
+      "title": "Paired positional exposure and consistency objective",
+      "hypothesis": "Grouping equivalent positional variants, with or without a consistency loss, will improve position-generalized conditional execution.",
+      "mechanisms": ["training-exposure", "consistency-regularization", "position-generalization", "optimization"],
+      "interventions": ["A1 grouped exposure", "A2 grouped exposure plus consistency"],
+      "controls": ["A0 shuffled exposure", "compute-matched 12-arm comparison", "expanded training records", "two interfaces and two seeds"],
+      "result": "A0 achieved 96.88--100% training paired performance and 53.12--59.38% held-out paired rates. A1/A2 fit only 47.50--57.92% and had 0--3.12% held-out paired performance. The proposed grouping and consistency intervention did not help under this protocol.",
+      "limits": ["Training dynamics and exposure are confounded by grouping", "Attention summaries are descriptive", "Does not show consistency objectives are impossible"],
+      "unresolved": ["Whether batch composition, update ordering or representation causes the collapse"],
+      "artifacts": [
+        "experiments/crucible_paired_positional_exposure_20251025_v1/REPORT_FINAL.md",
+        "experiments/crucible_paired_positional_exposure_20251025_v1/SUMMARY.json",
+        "experiments/crucible_paired_positional_exposure_20251025_v1/FINALIZATION.json",
+        "docs/CRUCIBLE_PAIRED_POSITIONAL_EXPOSURE_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["paired exposure", "consistency loss", "grouped training", "positional diversity"]
+    },
+    {
+      "id": "position-generalization",
+      "status": "FAILED",
+      "title": "Position-generalization training gate",
+      "hypothesis": "Training across fixed-near, early and middle instruction positions will produce position-robust conditional execution.",
+      "mechanisms": ["position-generalization", "training-distribution", "conditional-execution"],
+      "interventions": ["Position-varied training"],
+      "controls": ["Fixed-position control", "matched compute", "six evaluated layouts", "eight arms", "actual training paired metric"],
+      "result": "The fixed control reached 100% paired training and 100% paired accuracy on adjacent layouts, while the position-varied intervention had 27--32/32 training paired competence and 0/32 paired performance on every reported held-out layout, including familiar layouts; one intervention arm failed the fit gate.",
+      "limits": ["500-update budget", "Position-varied arm did not establish a stable learned skill", "Optimization, capacity and curriculum remain confounded"],
+      "unresolved": ["Whether a competent position-varied model can generalize", "Whether explicit role binding is required"],
+      "artifacts": [
+        "experiments/crucible_position_generalization_gate_20251025_v1/REPORT_FINAL.md",
+        "experiments/crucible_position_generalization_gate_20251025_v1/SUMMARY.json",
+        "experiments/crucible_position_generalization_gate_20251025_v1/ACTUAL_TRAINING_METRICS.json",
+        "experiments/crucible_position_generalization_gate_20251025_v1/FINALIZATION.json",
+        "docs/CRUCIBLE_POSITION_GENERALIZATION_GATE_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["position variation", "position robustness", "familiar layouts", "training competence"]
+    },
+    {
+      "id": "relevance-adjacency-v1",
+      "status": "ESTABLISHED",
+      "title": "Frozen relevance and adjacency sensitivity v1",
+      "hypothesis": "A model trained with an answer-adjacent instruction will lose conditional execution when the instruction is moved or surrounded by unfamiliar context.",
+      "mechanisms": ["adjacency", "prompt-distribution-shift", "relevance-use", "attention-diagnostics"],
+      "interventions": ["Frozen A3 prompt variants", "attention instrumentation"],
+      "controls": ["A0/A1/A2/A3 checkpoint comparison", "native-logit fidelity", "no retraining", "paired conditional metric"],
+      "result": "Frozen A3 paired accuracy was 90.62% adjacent, 50% near with padding and 0% early with padding. The explicit authority cue variant was also 0%; the tested competing variant stayed 90.62%. Instrumentation reproduced native logits within 1.43e-05.",
+      "limits": ["Frozen evaluation measures distribution shift, not relearning", "Attention mass is not proof of a causal circuit", "Distance and unfamiliar prompt distribution co-vary"],
+      "unresolved": ["Pure distance effect versus distribution shift", "Whether trained position variation can overcome the sensitivity"],
+      "artifacts": [
+        "experiments/crucible_relevance_adjacency_gate_20251025_v1/REPORT_FINAL.md",
+        "experiments/crucible_relevance_adjacency_gate_20251025_v1/SUMMARY.json",
+        "experiments/crucible_relevance_adjacency_gate_20251025_v1/ATTENTION_SUMMARIES.json",
+        "experiments/crucible_relevance_adjacency_gate_20251025_v1/FINALIZATION.json",
+        "docs/CRUCIBLE_RELEVANCE_ADJACENCY_GATE_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["adjacency", "frozen checkpoint", "prompt shift", "relevance use"]
+    },
+    {
+      "id": "relevance-adjacency-v2",
+      "status": "ESTABLISHED",
+      "title": "Frozen relevance and adjacency sensitivity v2",
+      "hypothesis": "The adjacency sensitivity result survives corrected native-SDPA instrumentation.",
+      "mechanisms": ["adjacency", "prompt-distribution-shift", "relevance-use", "instrumentation-fidelity"],
+      "interventions": ["Corrected native-SDPA output plus shadow Q/K summaries"],
+      "controls": ["A0/A1/A2/A3 reproduction", "zero instrumentation logit difference", "frozen checkpoints", "no sealed test"],
+      "result": "The corrected run reproduced 96.25% adjacent, 61.25% near-padded and 43.75% early-padded mean validation accuracy, with paired rates 90.62%, 50% and 0%; the explicit-authority variant was 41.25% with 0% paired rate. Native-output fidelity was 0.00e+00.",
+      "limits": ["Still a frozen distribution-shift evaluation", "Shadow Q/K summaries are not native attention probabilities", "No unique causal mechanism"],
+      "unresolved": ["Whether a trained position-invariant representation can remove the effect"],
+      "artifacts": [
+        "experiments/crucible_relevance_adjacency_gate_20251025_v2/REPORT_FINAL.md",
+        "experiments/crucible_relevance_adjacency_gate_20251025_v2/SUMMARY.json",
+        "experiments/crucible_relevance_adjacency_gate_20251025_v2/ATTENTION_SUMMARIES.json",
+        "experiments/crucible_relevance_adjacency_gate_20251025_v2/FINALIZATION.json",
+        "docs/CRUCIBLE_RELEVANCE_ADJACENCY_GATE_PROTOCOL_20251025_V2.md"
+      ],
+      "novelty_terms": ["corrected instrumentation", "native SDPA", "adjacency", "prompt shift"]
+    },
+    {
+      "id": "role-selection-competence-v5",
+      "status": "FAILED",
+      "title": "Primitive role-selection competence gate",
+      "hypothesis": "The model can learn SELECT_FIRST and SELECT_SECOND independently and then execute both when conditioned on an operation identifier.",
+      "mechanisms": ["primitive-competence", "operation-conditioning", "role-selection", "conditional-execution"],
+      "interventions": ["S1 SELECT_FIRST", "S2 SELECT_SECOND", "S3 joint operation-conditioned selection"],
+      "controls": ["Fixed-operation validation", "unequal/equal pairs", "two interfaces", "two seeds", "stop rule before transfer"],
+      "result": "S1 passed all four arms; S2 passed three of four; S3 failed all four, with 48--62/80 training and 10--12/20 validation. S3 produced the same output for both instructions in all 32 pair groups, despite all outputs being valid operands; transfer was not run.",
+      "limits": ["No downstream transfer because competence gate failed", "Behavior does not identify internal mechanism"],
+      "unresolved": ["Operation-token use versus procedure selection", "Whether a causally accessible decision interface changes competence"],
+      "artifacts": [
+        "experiments/crucible_role_selection_competence_20251025_v5/REPORT_FINAL.md",
+        "experiments/crucible_role_selection_competence_20251025_v5/ANALYSIS_FINAL.json",
+        "experiments/crucible_role_selection_competence_20251025_v5/SUMMARY.json",
+        "experiments/crucible_role_selection_competence_20251025_v5/PREFLIGHT.json",
+        "docs/CRUCIBLE_ROLE_SELECTION_COMPETENCE_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["primitive role selection", "S1", "S2", "S3", "operation-conditioned execution"]
+    },
+    {
+      "id": "variable-binding-v1",
+      "status": "FAILED",
+      "title": "Variable-binding pretraining for addition transfer",
+      "hypothesis": "Pretraining role binding, supplying explicit roles, or conditioning binding on operation will improve unseen addition transfer.",
+      "mechanisms": ["variable-binding", "role-pretraining", "arithmetic-transfer", "foundational-learning"],
+      "interventions": ["B1 role-binding pretraining", "B2 explicit role feature", "B3 operation-conditioned binding"],
+      "controls": ["B0 original", "16 arms", "frozen diagonal addition split", "500 addition updates", "addition fit gate", "optimizer reset"],
+      "result": "All 16 addition arms reached the addition fit gate, but all eight B1/B3 pretraining arms failed their own role-binding gate at 50% validation. Addition validation remained 46.7--60%, with diagonal 0/2 for every arm; no role-transfer conclusion was permitted.",
+      "limits": ["Foundational skill was not learned adequately", "Explicit role input is a diagnostic intervention, not discovered binding", "No downstream transfer claim"],
+      "unresolved": ["Whether a successfully learned role-selection primitive transfers", "Whether operation conditioning is the bottleneck"],
+      "artifacts": [
+        "experiments/crucible_variable_binding_20251025_v1/REPORT_FINAL.md",
+        "experiments/crucible_variable_binding_20251025_v1/ANALYSIS_FINAL.json",
+        "experiments/crucible_variable_binding_20251025_v1/SUMMARY.json",
+        "experiments/crucible_variable_binding_20251025_v1/PREFLIGHT.json",
+        "docs/CRUCIBLE_VARIABLE_BINDING_PROTOCOL_20251025.md"
+      ],
+      "novelty_terms": ["variable binding", "role pretraining", "addition transfer", "foundational skill"]
+    },
+    {
+      "id": "cardinality-competence-diagnostic-v1",
+      "status": "INCONCLUSIVE",
+      "title": "Cardinality training-competence representation-by-schedule diagnostic",
+      "hypothesis": "The explicit-ID cardinality training failure is primarily due either to the dense representation or to the deterministic cyclic schedule.",
+      "mechanisms": ["candidate-matching", "training-competence", "representation", "schedule", "optimization"],
+      "interventions": ["Dense cyclic versus dense shuffled", "Structured-feature cyclic versus structured-feature shuffled"],
+      "controls": ["Frozen canonical 576-row source split", "one seed", "same 500-step budget", "same training gate", "source hash", "novelty audit", "no transfer evaluation"],
+      "result": "All four cells failed the 95% gate: D0 dense/cyclic 497/576, D1 dense/shuffled 384/576, D2 structured/cyclic 390/576 and D3 structured/shuffled 432/576. Dense cyclic reproduced the prior result. Shuffling changed competence within each representation, but structured features did not restore the gate.",
+      "limits": ["One interface and seed", "Structured model has 3,586 versus 22,106,906 parameters", "Interior candidate slots never receive positive targets", "No validation or cardinality transfer was run"],
+      "unresolved": ["Whether a balanced two-candidate competence task can be learned", "How much of the schedule effect is optimization versus representation", "Whether a competent matcher transfers across candidate counts"],
+      "artifacts": [
+        "docs/CRUCIBLE_CARDINALITY_COMPETENCE_DIAGNOSTIC_PROTOCOL_20261026.md",
+        "docs/CRUCIBLE_CARDINALITY_COMPETENCE_NOVELTY_AUDIT_20261026.json",
+        "tools/run_crucible_cardinality_competence_diagnostic_20261026.py",
+        "tools/analyze_crucible_cardinality_competence_diagnostic_20261026.py",
+        "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/REPORT_FINAL.md",
+        "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/SUMMARY.json",
+        "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/ERROR_BREAKDOWN.json",
+        "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["competence diagnostic", "representation by schedule", "dense cyclic", "structured shuffled", "slot coverage"]
     }
   ]
 }

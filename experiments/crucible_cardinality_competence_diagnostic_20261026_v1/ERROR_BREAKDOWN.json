@@ -1,0 +1,274 @@
+{
+  "cells": {
+    "D0_DENSE_CYCLIC": {
+      "by_candidate_count": {
+        "2": {
+          "accuracy": 0.7847222222222222,
+          "correct": 113,
+          "rows": 144
+        },
+        "3": {
+          "accuracy": 0.8888888888888888,
+          "correct": 384,
+          "rows": 432
+        }
+      },
+      "by_target_slot": {
+        "0": {
+          "accuracy": 0.7447916666666666,
+          "correct": 143,
+          "rows": 192
+        },
+        "1": {
+          "accuracy": 0.375,
+          "correct": 18,
+          "rows": 48
+        },
+        "2": {
+          "accuracy": 1.0,
+          "correct": 144,
+          "rows": 144
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 192,
+          "rows": 192
+        }
+      },
+      "paired": {
+        "correct_both": 113,
+        "groups": 192,
+        "pointer_flips": 113
+      },
+      "present_vs_absent": {
+        "absent": {
+          "8": {
+            "accuracy": 1.0,
+            "correct": 192,
+            "rows": 192
+          }
+        },
+        "present": {
+          "0": {
+            "accuracy": 0.7447916666666666,
+            "correct": 143,
+            "rows": 192
+          },
+          "1": {
+            "accuracy": 0.375,
+            "correct": 18,
+            "rows": 48
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 144,
+            "rows": 144
+          }
+        }
+      }
+    },
+    "D1_DENSE_SHUFFLED": {
+      "by_candidate_count": {
+        "2": {
+          "accuracy": 0.6666666666666666,
+          "correct": 96,
+          "rows": 144
+        },
+        "3": {
+          "accuracy": 0.6666666666666666,
+          "correct": 288,
+          "rows": 432
+        }
+      },
+      "by_target_slot": {
+        "0": {
+          "accuracy": 0.40625,
+          "correct": 78,
+          "rows": 192
+        },
+        "1": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "2": {
+          "accuracy": 0.4583333333333333,
+          "correct": 66,
+          "rows": 144
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 192,
+          "rows": 192
+        }
+      },
+      "paired": {
+        "correct_both": 0,
+        "groups": 192,
+        "pointer_flips": 0
+      },
+      "present_vs_absent": {
+        "absent": {
+          "8": {
+            "accuracy": 1.0,
+            "correct": 192,
+            "rows": 192
+          }
+        },
+        "present": {
+          "0": {
+            "accuracy": 0.40625,
+            "correct": 78,
+            "rows": 192
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "2": {
+            "accuracy": 0.4583333333333333,
+            "correct": 66,
+            "rows": 144
+          }
+        }
+      }
+    },
+    "D2_STRUCTURED_CYCLIC": {
+      "by_candidate_count": {
+        "2": {
+          "accuracy": 0.6666666666666666,
+          "correct": 96,
+          "rows": 144
+        },
+        "3": {
+          "accuracy": 0.6805555555555556,
+          "correct": 294,
+          "rows": 432
+        }
+      },
+      "by_target_slot": {
+        "0": {
+          "accuracy": 0.28125,
+          "correct": 54,
+          "rows": 192
+        },
+        "1": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "rows": 48
+        },
+        "2": {
+          "accuracy": 1.0,
+          "correct": 144,
+          "rows": 144
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 192,
+          "rows": 192
+        }
+      },
+      "paired": {
+        "correct_both": 6,
+        "groups": 192,
+        "pointer_flips": 6
+      },
+      "present_vs_absent": {
+        "absent": {
+          "8": {
+            "accuracy": 1.0,
+            "correct": 192,
+            "rows": 192
+          }
+        },
+        "present": {
+          "0": {
+            "accuracy": 0.28125,
+            "correct": 54,
+            "rows": 192
+          },
+          "1": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "rows": 48
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 144,
+            "rows": 144
+          }
+        }
+      }
+    },
+    "D3_STRUCTURED_SHUFFLED": {
+      "by_candidate_count": {
+        "2": {
+          "accuracy": 0.6666666666666666,
+          "correct": 96,
+          "rows": 144
+        },
+        "3": {
+          "accuracy": 0.7777777777777778,
+          "correct": 336,
+          "rows": 432
+        }
+      },
+      "by_target_slot": {
+        "0": {
+          "accuracy": 0.5625,
+          "correct": 108,
+          "rows": 192
+        },
+        "1": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "rows": 48
+        },
+        "2": {
+          "accuracy": 0.9166666666666666,
+          "correct": 132,
+          "rows": 144
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 192,
+          "rows": 192
+        }
+      },
+      "paired": {
+        "correct_both": 48,
+        "groups": 192,
+        "pointer_flips": 48
+      },
+      "present_vs_absent": {
+        "absent": {
+          "8": {
+            "accuracy": 1.0,
+            "correct": 192,
+            "rows": 192
+          }
+        },
+        "present": {
+          "0": {
+            "accuracy": 0.5625,
+            "correct": 108,
+            "rows": 192
+          },
+          "1": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "rows": 48
+          },
+          "2": {
+            "accuracy": 0.9166666666666666,
+            "correct": 132,
+            "rows": 144
+          }
+        }
+      }
+    }
+  },
+  "experiment": "crucible_cardinality_competence_diagnostic_20261026_v1",
+  "read_only": true
+}

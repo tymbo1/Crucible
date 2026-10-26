@@ -28,7 +28,42 @@ reports that still need ledger entries.
 | `shared-scorer-compositional-transfer` | FAILED | The tested dynamic scorer did not transfer reliably from three to four candidates. |
 | `explicit-id-cardinality-transfer` | FAILED | The oracle passed, but none of eight learned arms passed training competence; learned cardinality transfer is therefore unresolved. |
 
-The initial ledger seed covers the four highest-value experiments from this
-research turn. The coverage audit currently finds 23 older experiment reports
-awaiting structured extraction; they are deliberately not assigned statuses by
-guesswork.
+The ledger now covers all 28 final experiment reports in the repository. The
+23 older reports were extracted from their accepted final reports and linked
+artifacts on 2026-10-26; no outcomes were inferred from filenames or
+conversation summaries. See
+[CRUCIBLE_RESEARCH_CONSOLIDATION_DECISION_20261026.md](CRUCIBLE_RESEARCH_CONSOLIDATION_DECISION_20261026.md)
+for the evidence consolidation, overlap groups and cardinality training audit.
+
+## Complete indexed inventory
+
+| ID | Status | Primary report |
+|---|---|---|
+| `authority-two-candidate-s4` | ESTABLISHED | `crucible_d2_readout_competence_ladder_20261026_v1` |
+| `authority-component-ablation` | INCONCLUSIVE | `crucible_d2_component_ablation_20261026_v1` |
+| `shared-scorer-compositional-transfer` | FAILED | `crucible_compositional_authority_transfer_20261026_v1` |
+| `explicit-id-cardinality-transfer` | FAILED | `crucible_shared_candidate_scoring_cardinality_20261026_v1` |
+| `authority-aware-role-binding-v1` | FAILED | `crucible_authority_aware_role_binding_20251025_v1` |
+| `authority-aware-role-binding-v2` | FAILED | `crucible_authority_aware_role_binding_20251025_v2` |
+| `authority-counterfactual-fixed-width-v1` | INCONCLUSIVE | `crucible_authority_counterfactual_20261026_v1` |
+| `authority-counterfactual-raw-label-v2` | FAILED | `crucible_authority_counterfactual_20261026_v2` |
+| `authority-representation-use` | ESTABLISHED | `crucible_authority_representation_use_20261026_v1` |
+| `batch-composition-order` | INCONCLUSIVE | `crucible_batch_composition_order_20251025_v1` |
+| `causally-valid-authority-decision` | ESTABLISHED | `crucible_causally_valid_authority_decision_20261026_v1` |
+| `digitwise-balanced-holdouts` | ESTABLISHED | `crucible_digitwise_balanced_holdouts_20251025` |
+| `digitwise-diagonal-ablation-v2` | INCONCLUSIVE | `crucible_digitwise_diagonal_ablation_20251025_v2` |
+| `digitwise-role-swapped-control` | INCONCLUSIVE | `crucible_digitwise_role_swapped_control_20251025` |
+| `equality-foundational-v2` | FAILED | `crucible_equality_foundational_20251025_v2` |
+| `explicit-role-binding-gate` | FAILED | `crucible_explicit_role_binding_gate_20251025_v1` |
+| `explicit-role-supervision-v3` | FAILED | `crucible_explicit_role_supervision_20251025_v3` |
+| `operation-conditioning-forensics` | INCONCLUSIVE | `crucible_operation_conditioning_forensics_20251025_v1` |
+| `operation-marker-interface-v3` | FAILED | `crucible_operation_marker_interface_20251025_v3` |
+| `operation-position-matrix-v1` | ESTABLISHED | `crucible_operation_position_matrix_20251025_v1` |
+| `operation-token-identification` | ESTABLISHED | `crucible_operation_token_identification_20251025_v1` |
+| `paired-positional-exposure` | FAILED | `crucible_paired_positional_exposure_20251025_v1` |
+| `position-generalization` | FAILED | `crucible_position_generalization_gate_20251025_v1` |
+| `relevance-adjacency-v1` | ESTABLISHED | `crucible_relevance_adjacency_gate_20251025_v1` |
+| `relevance-adjacency-v2` | ESTABLISHED | `crucible_relevance_adjacency_gate_20251025_v2` |
+| `role-selection-competence-v5` | FAILED | `crucible_role_selection_competence_20251025_v5` |
+| `variable-binding-v1` | FAILED | `crucible_variable_binding_20251025_v1` |
+| `cardinality-competence-diagnostic-v1` | INCONCLUSIVE | `crucible_cardinality_competence_diagnostic_20261026_v1` |
