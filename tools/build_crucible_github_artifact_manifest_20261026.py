@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 EXPERIMENTS = ROOT / "experiments"
 OUTPUT = ROOT / "docs" / "CRUCIBLE_GITHUB_ARTIFACT_MANIFEST_20261026.json"
+LEDGER = ROOT / "docs" / "CRUCIBLE_RESEARCH_LEDGER.json"
 LATEST = {
     "experiments/crucible_d2_component_ablation_20261026_v1",
     "experiments/crucible_compositional_authority_transfer_20261026_v1",
@@ -19,6 +20,15 @@ LATEST = {
     "experiments/crucible_cardinality_competence_diagnostic_20261026_v1",
 }
 MAX_GITHUB_FILE_BYTES = 100 * 1024 * 1024
+
+
+def ledger_artifacts() -> set[str]:
+    payload = json.loads(LEDGER.read_text(encoding="utf-8"))
+    return {
+        artifact
+        for record in payload.get("records", [])
+        for artifact in record.get("artifacts", [])
+    }
 
 
 def sha256(path: Path) -> str:
@@ -29,8 +39,10 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def curated(path: Path) -> bool:
+def curated(path: Path, linked_artifacts: set[str]) -> bool:
     relative = path.relative_to(ROOT).as_posix()
+    if relative in linked_artifacts:
+        return True
     if relative.startswith("docs/") or relative.startswith("tools/"):
         return True
     if not relative.startswith("experiments/"):
@@ -56,10 +68,11 @@ def curated(path: Path) -> bool:
 def main() -> int:
     included = []
     excluded = []
+    linked_artifacts = ledger_artifacts()
     for path in sorted(p for p in EXPERIMENTS.rglob("*") if p.is_file()):
         relative = path.relative_to(ROOT).as_posix()
         entry = {"path": relative, "bytes": path.stat().st_size}
-        if curated(path):
+        if curated(path, linked_artifacts):
             included.append(entry)
         else:
             if path.suffix in {".pt", ".pth", ".safetensors", ".bin", ".tar", ".gz"}:

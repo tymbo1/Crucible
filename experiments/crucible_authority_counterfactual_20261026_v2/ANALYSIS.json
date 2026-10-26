@@ -1,0 +1,1683 @@
+{
+  "aggregates": {
+    "pairs_by_arm": {
+      "A0_FROZEN_V3_POINTER": {
+        "UNSEEN_REVERSED_AUTHORITY": {
+          "correct_output_flips_unequal": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128
+          },
+          "correct_pointer_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "correct_selected_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "first_cue_selected_both": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "output_changes": {
+            "accuracy": 0.00625,
+            "correct": 1,
+            "total": 160
+          },
+          "pairs": 160,
+          "pointer_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "selected_operation_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "unequal_pairs": 128
+        }
+      },
+      "A1_AUTHORITY_TUPLE_NO_POINTER": {
+        "UNSEEN_REVERSED_AUTHORITY": {
+          "correct_output_flips_unequal": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128
+          },
+          "correct_pointer_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "correct_selected_flips": {
+            "accuracy": 0.03125,
+            "correct": 5,
+            "total": 160
+          },
+          "first_cue_selected_both": {
+            "accuracy": 0.03125,
+            "correct": 5,
+            "total": 160
+          },
+          "output_changes": {
+            "accuracy": 0.1125,
+            "correct": 18,
+            "total": 160
+          },
+          "pairs": 160,
+          "pointer_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "selected_operation_flips": {
+            "accuracy": 0.05625,
+            "correct": 9,
+            "total": 160
+          },
+          "unequal_pairs": 128
+        }
+      },
+      "A2_AUTHORITY_POINTER": {
+        "UNSEEN_REVERSED_AUTHORITY": {
+          "correct_output_flips_unequal": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128
+          },
+          "correct_pointer_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "correct_selected_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "first_cue_selected_both": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "output_changes": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "pairs": 160,
+          "pointer_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "selected_operation_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "unequal_pairs": 128
+        }
+      },
+      "A3_AUTHORITY_POINTER_BALANCED": {
+        "UNSEEN_REVERSED_AUTHORITY": {
+          "correct_output_flips_unequal": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128
+          },
+          "correct_pointer_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "correct_selected_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "first_cue_selected_both": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "output_changes": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "pairs": 160,
+          "pointer_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "selected_operation_flips": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 160
+          },
+          "unequal_pairs": 128
+        }
+      },
+      "E3_ORACLE_BINDING": {
+        "UNSEEN_REVERSED_AUTHORITY": {
+          "correct_output_flips_unequal": {
+            "accuracy": 1.0,
+            "correct": 128,
+            "total": 128
+          },
+          "correct_pointer_flips": {
+            "accuracy": 1.0,
+            "correct": 160,
+            "total": 160
+          },
+          "correct_selected_flips": {
+            "accuracy": 1.0,
+            "correct": 160,
+            "total": 160
+          },
+          "first_cue_selected_both": {
+            "accuracy": 1.0,
+            "correct": 160,
+            "total": 160
+          },
+          "output_changes": {
+            "accuracy": 0.8,
+            "correct": 128,
+            "total": 160
+          },
+          "pairs": 160,
+          "pointer_flips": {
+            "accuracy": 1.0,
+            "correct": 160,
+            "total": 160
+          },
+          "selected_operation_flips": {
+            "accuracy": 1.0,
+            "correct": 160,
+            "total": 160
+          },
+          "unequal_pairs": 128
+        }
+      }
+    },
+    "pairs_by_arm_interface_seed": {
+      "A0_FROZEN_V3_POINTER/canonical/1337": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.025,
+          "correct": 1,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A0_FROZEN_V3_POINTER/canonical/42": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A0_FROZEN_V3_POINTER/factorized/1337": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A0_FROZEN_V3_POINTER/factorized/42": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A1_AUTHORITY_TUPLE_NO_POINTER/canonical/1337": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.05,
+          "correct": 2,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.05,
+          "correct": 2,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.1,
+          "correct": 4,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.1,
+          "correct": 4,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A1_AUTHORITY_TUPLE_NO_POINTER/canonical/42": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.05,
+          "correct": 2,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A1_AUTHORITY_TUPLE_NO_POINTER/factorized/1337": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.025,
+          "correct": 1,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.025,
+          "correct": 1,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.125,
+          "correct": 5,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.05,
+          "correct": 2,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A1_AUTHORITY_TUPLE_NO_POINTER/factorized/42": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.05,
+          "correct": 2,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.05,
+          "correct": 2,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.175,
+          "correct": 7,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.075,
+          "correct": 3,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A2_AUTHORITY_POINTER/canonical/1337": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A2_AUTHORITY_POINTER/canonical/42": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A2_AUTHORITY_POINTER/factorized/1337": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A2_AUTHORITY_POINTER/factorized/42": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A3_AUTHORITY_POINTER_BALANCED/canonical/1337": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A3_AUTHORITY_POINTER_BALANCED/canonical/42": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A3_AUTHORITY_POINTER_BALANCED/factorized/1337": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "A3_AUTHORITY_POINTER_BALANCED/factorized/42": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "E3_ORACLE_BINDING/canonical/1337": {
+        "correct_output_flips_unequal": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.8,
+          "correct": 32,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "E3_ORACLE_BINDING/canonical/42": {
+        "correct_output_flips_unequal": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.8,
+          "correct": 32,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "E3_ORACLE_BINDING/factorized/1337": {
+        "correct_output_flips_unequal": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.8,
+          "correct": 32,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      },
+      "E3_ORACLE_BINDING/factorized/42": {
+        "correct_output_flips_unequal": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "total": 32
+        },
+        "correct_pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "correct_selected_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "first_cue_selected_both": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "output_changes": {
+          "accuracy": 0.8,
+          "correct": 32,
+          "total": 40
+        },
+        "pairs": 40,
+        "pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "selected_operation_flips": {
+          "accuracy": 1.0,
+          "correct": 40,
+          "total": 40
+        },
+        "unequal_pairs": 32
+      }
+    },
+    "pairs_by_arm_order": {
+      "A0_FROZEN_V3_POINTER/FS": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 64
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "output_changes": {
+          "accuracy": 0.0125,
+          "correct": 1,
+          "total": 80
+        },
+        "pairs": 80,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "unequal_pairs": 64
+      },
+      "A0_FROZEN_V3_POINTER/SF": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 64
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "pairs": 80,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "unequal_pairs": 64
+      },
+      "A1_AUTHORITY_TUPLE_NO_POINTER/FS": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 64
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0375,
+          "correct": 3,
+          "total": 80
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0375,
+          "correct": 3,
+          "total": 80
+        },
+        "output_changes": {
+          "accuracy": 0.1,
+          "correct": 8,
+          "total": 80
+        },
+        "pairs": 80,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.05,
+          "correct": 4,
+          "total": 80
+        },
+        "unequal_pairs": 64
+      },
+      "A1_AUTHORITY_TUPLE_NO_POINTER/SF": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 64
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.025,
+          "correct": 2,
+          "total": 80
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.025,
+          "correct": 2,
+          "total": 80
+        },
+        "output_changes": {
+          "accuracy": 0.125,
+          "correct": 10,
+          "total": 80
+        },
+        "pairs": 80,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0625,
+          "correct": 5,
+          "total": 80
+        },
+        "unequal_pairs": 64
+      },
+      "A2_AUTHORITY_POINTER/FS": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 64
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "pairs": 80,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "unequal_pairs": 64
+      },
+      "A2_AUTHORITY_POINTER/SF": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 64
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "pairs": 80,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "unequal_pairs": 64
+      },
+      "A3_AUTHORITY_POINTER_BALANCED/FS": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 64
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "pairs": 80,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "unequal_pairs": 64
+      },
+      "A3_AUTHORITY_POINTER_BALANCED/SF": {
+        "correct_output_flips_unequal": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 64
+        },
+        "correct_pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "correct_selected_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "first_cue_selected_both": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "output_changes": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "pairs": 80,
+        "pointer_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "selected_operation_flips": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 80
+        },
+        "unequal_pairs": 64
+      },
+      "E3_ORACLE_BINDING/FS": {
+        "correct_output_flips_unequal": {
+          "accuracy": 1.0,
+          "correct": 64,
+          "total": 64
+        },
+        "correct_pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 80,
+          "total": 80
+        },
+        "correct_selected_flips": {
+          "accuracy": 1.0,
+          "correct": 80,
+          "total": 80
+        },
+        "first_cue_selected_both": {
+          "accuracy": 1.0,
+          "correct": 80,
+          "total": 80
+        },
+        "output_changes": {
+          "accuracy": 0.8,
+          "correct": 64,
+          "total": 80
+        },
+        "pairs": 80,
+        "pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 80,
+          "total": 80
+        },
+        "selected_operation_flips": {
+          "accuracy": 1.0,
+          "correct": 80,
+          "total": 80
+        },
+        "unequal_pairs": 64
+      },
+      "E3_ORACLE_BINDING/SF": {
+        "correct_output_flips_unequal": {
+          "accuracy": 1.0,
+          "correct": 64,
+          "total": 64
+        },
+        "correct_pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 80,
+          "total": 80
+        },
+        "correct_selected_flips": {
+          "accuracy": 1.0,
+          "correct": 80,
+          "total": 80
+        },
+        "first_cue_selected_both": {
+          "accuracy": 1.0,
+          "correct": 80,
+          "total": 80
+        },
+        "output_changes": {
+          "accuracy": 0.8,
+          "correct": 64,
+          "total": 80
+        },
+        "pairs": 80,
+        "pointer_flips": {
+          "accuracy": 1.0,
+          "correct": 80,
+          "total": 80
+        },
+        "selected_operation_flips": {
+          "accuracy": 1.0,
+          "correct": 80,
+          "total": 80
+        },
+        "unequal_pairs": 64
+      }
+    },
+    "rows_by_arm": {
+      "A0_FROZEN_V3_POINTER": {
+        "UNSEEN_REVERSED_AUTHORITY": {
+          "output_correct": {
+            "accuracy": 0.1375,
+            "correct": 44,
+            "total": 320
+          },
+          "pointer_operation_correct": {
+            "accuracy": 0.5,
+            "correct": 160,
+            "total": 320
+          },
+          "rows": 320,
+          "selected_cue_index": {
+            "0": 148,
+            "1": 172
+          },
+          "selected_operation": {
+            "SELECT_FIRST": 228,
+            "SELECT_SECOND": 92
+          },
+          "selected_operation_correct": {
+            "accuracy": 0.5,
+            "correct": 160,
+            "total": 320
+          }
+        }
+      },
+      "A1_AUTHORITY_TUPLE_NO_POINTER": {
+        "UNSEEN_REVERSED_AUTHORITY": {
+          "output_correct": {
+            "accuracy": 0.184375,
+            "correct": 59,
+            "total": 320
+          },
+          "pointer_operation_correct": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 320
+          },
+          "rows": 320,
+          "selected_cue_index": {
+            "0": 161,
+            "1": 159
+          },
+          "selected_operation": {
+            "SELECT_FIRST": 159,
+            "SELECT_SECOND": 161
+          },
+          "selected_operation_correct": {
+            "accuracy": 0.503125,
+            "correct": 161,
+            "total": 320
+          }
+        }
+      },
+      "A2_AUTHORITY_POINTER": {
+        "UNSEEN_REVERSED_AUTHORITY": {
+          "output_correct": {
+            "accuracy": 0.553125,
+            "correct": 177,
+            "total": 320
+          },
+          "pointer_operation_correct": {
+            "accuracy": 0.5,
+            "correct": 160,
+            "total": 320
+          },
+          "rows": 320,
+          "selected_cue_index": {
+            "0": 120,
+            "1": 200
+          },
+          "selected_operation": {
+            "SELECT_FIRST": 200,
+            "SELECT_SECOND": 120
+          },
+          "selected_operation_correct": {
+            "accuracy": 0.5,
+            "correct": 160,
+            "total": 320
+          }
+        }
+      },
+      "A3_AUTHORITY_POINTER_BALANCED": {
+        "UNSEEN_REVERSED_AUTHORITY": {
+          "output_correct": {
+            "accuracy": 0.590625,
+            "correct": 189,
+            "total": 320
+          },
+          "pointer_operation_correct": {
+            "accuracy": 0.5,
+            "correct": 160,
+            "total": 320
+          },
+          "rows": 320,
+          "selected_cue_index": {
+            "0": 232,
+            "1": 88
+          },
+          "selected_operation": {
+            "SELECT_FIRST": 168,
+            "SELECT_SECOND": 152
+          },
+          "selected_operation_correct": {
+            "accuracy": 0.5,
+            "correct": 160,
+            "total": 320
+          }
+        }
+      },
+      "E3_ORACLE_BINDING": {
+        "UNSEEN_REVERSED_AUTHORITY": {
+          "output_correct": {
+            "accuracy": 1.0,
+            "correct": 320,
+            "total": 320
+          },
+          "pointer_operation_correct": {
+            "accuracy": 1.0,
+            "correct": 320,
+            "total": 320
+          },
+          "rows": 320,
+          "selected_cue_index": {
+            "0": 160,
+            "1": 160
+          },
+          "selected_operation": {
+            "SELECT_FIRST": 160,
+            "SELECT_SECOND": 160
+          },
+          "selected_operation_correct": {
+            "accuracy": 1.0,
+            "correct": 320,
+            "total": 320
+          }
+        }
+      }
+    }
+  },
+  "arms": [
+    "A0_FROZEN_V3_POINTER",
+    "A1_AUTHORITY_TUPLE_NO_POINTER",
+    "A2_AUTHORITY_POINTER",
+    "A3_AUTHORITY_POINTER_BALANCED",
+    "E3_ORACLE_BINDING"
+  ],
+  "authority_label_mode": "raw_unpadded",
+  "authority_sides": [
+    "EARLIER",
+    "LATER"
+  ],
+  "experiment": "crucible_authority_counterfactual_20261026_v2",
+  "integrity": {
+    "architecture_changed": false,
+    "invalid_format_rows": 105,
+    "pair_rows": 800,
+    "position_invariant_pairs": 800,
+    "prediction_rows": 1600,
+    "retrained": false,
+    "sealed_test_accessed": false,
+    "source_split_audit": {
+      "canonical": {
+        "authority_sides": {
+          "EARLIER": 40,
+          "LATER": 40
+        },
+        "base_id_overlap": 0,
+        "base_train_rows": 80,
+        "base_validation_rows": 20,
+        "counterfactual_pairs": 40,
+        "counterfactual_rows": 80,
+        "operation_orders": {
+          "FS": 40,
+          "SF": 40
+        },
+        "position_invariant_pairs": 40
+      },
+      "factorized": {
+        "authority_sides": {
+          "EARLIER": 40,
+          "LATER": 40
+        },
+        "base_id_overlap": 0,
+        "base_train_rows": 80,
+        "base_validation_rows": 20,
+        "counterfactual_pairs": 40,
+        "counterfactual_rows": 80,
+        "operation_orders": {
+          "FS": 40,
+          "SF": 40
+        },
+        "position_invariant_pairs": 40
+      }
+    },
+    "source_v2_finalization_verified": true,
+    "source_v2_sealed_test_accessed": false,
+    "target_operation_flips": 800,
+    "unique_pair_keys": 800,
+    "unique_prediction_keys": 1600,
+    "valid_executor_mismatches": 0
+  },
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "layout": "UNSEEN_REVERSED_AUTHORITY",
+  "operation_orders": [
+    "FS",
+    "SF"
+  ],
+  "protocol": "docs/CRUCIBLE_AUTHORITY_COUNTERFACTUAL_PROTOCOL_20261026_v2.md",
+  "seeds": [
+    42,
+    1337
+  ],
+  "a3_counterfactual_breakdown": {
+    "rows_by_authority_side": {
+      "EARLIER": {
+        "rows": 160,
+        "selected_operation_correct": 116,
+        "selected_operation_counts": {
+          "SELECT_FIRST": 84,
+          "SELECT_SECOND": 76
+        }
+      },
+      "LATER": {
+        "rows": 160,
+        "selected_operation_correct": 44,
+        "selected_operation_counts": {
+          "SELECT_FIRST": 84,
+          "SELECT_SECOND": 76
+        }
+      }
+    },
+    "rows_by_operation_order": {
+      "FS": {
+        "rows": 160,
+        "selected_operation_counts": {
+          "SELECT_FIRST": 120,
+          "SELECT_SECOND": 40
+        }
+      },
+      "SF": {
+        "rows": 160,
+        "selected_operation_counts": {
+          "SELECT_FIRST": 48,
+          "SELECT_SECOND": 112
+        }
+      }
+    },
+    "pairs_by_operation_order": {
+      "FS": {
+        "pairs": 80,
+        "selected_operation_pair_counts": {
+          "SELECT_FIRST->SELECT_FIRST": 60,
+          "SELECT_SECOND->SELECT_SECOND": 20
+        },
+        "pointer_operation_pair_counts": {
+          "SELECT_FIRST->SELECT_FIRST": 60,
+          "SELECT_SECOND->SELECT_SECOND": 20
+        }
+      },
+      "SF": {
+        "pairs": 80,
+        "selected_operation_pair_counts": {
+          "SELECT_FIRST->SELECT_FIRST": 24,
+          "SELECT_SECOND->SELECT_SECOND": 56
+        },
+        "pointer_operation_pair_counts": {
+          "SELECT_FIRST->SELECT_FIRST": 24,
+          "SELECT_SECOND->SELECT_SECOND": 56
+        }
+      }
+    }
+  },
+  "source_checkpoints": {
+    "A0_FROZEN_V3_POINTER|canonical|seed1337": "experiments/crucible_explicit_role_supervision_20251025_v3/parser_outputs/canonical/seed1337/checkpoint.pt",
+    "A0_FROZEN_V3_POINTER|canonical|seed42": "experiments/crucible_explicit_role_supervision_20251025_v3/parser_outputs/canonical/seed42/checkpoint.pt",
+    "A0_FROZEN_V3_POINTER|factorized|seed1337": "experiments/crucible_explicit_role_supervision_20251025_v3/parser_outputs/factorized/seed1337/checkpoint.pt",
+    "A0_FROZEN_V3_POINTER|factorized|seed42": "experiments/crucible_explicit_role_supervision_20251025_v3/parser_outputs/factorized/seed42/checkpoint.pt",
+    "A1_AUTHORITY_TUPLE_NO_POINTER|canonical|seed1337": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A1_AUTHORITY_TUPLE_NO_POINTER/canonical/seed1337/checkpoint.pt",
+    "A1_AUTHORITY_TUPLE_NO_POINTER|canonical|seed42": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A1_AUTHORITY_TUPLE_NO_POINTER/canonical/seed42/checkpoint.pt",
+    "A1_AUTHORITY_TUPLE_NO_POINTER|factorized|seed1337": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A1_AUTHORITY_TUPLE_NO_POINTER/factorized/seed1337/checkpoint.pt",
+    "A1_AUTHORITY_TUPLE_NO_POINTER|factorized|seed42": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A1_AUTHORITY_TUPLE_NO_POINTER/factorized/seed42/checkpoint.pt",
+    "A2_AUTHORITY_POINTER|canonical|seed1337": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A2_AUTHORITY_POINTER/canonical/seed1337/checkpoint.pt",
+    "A2_AUTHORITY_POINTER|canonical|seed42": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A2_AUTHORITY_POINTER/canonical/seed42/checkpoint.pt",
+    "A2_AUTHORITY_POINTER|factorized|seed1337": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A2_AUTHORITY_POINTER/factorized/seed1337/checkpoint.pt",
+    "A2_AUTHORITY_POINTER|factorized|seed42": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A2_AUTHORITY_POINTER/factorized/seed42/checkpoint.pt",
+    "A3_AUTHORITY_POINTER_BALANCED|canonical|seed1337": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A3_AUTHORITY_POINTER_BALANCED/canonical/seed1337/checkpoint.pt",
+    "A3_AUTHORITY_POINTER_BALANCED|canonical|seed42": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A3_AUTHORITY_POINTER_BALANCED/canonical/seed42/checkpoint.pt",
+    "A3_AUTHORITY_POINTER_BALANCED|factorized|seed1337": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A3_AUTHORITY_POINTER_BALANCED/factorized/seed1337/checkpoint.pt",
+    "A3_AUTHORITY_POINTER_BALANCED|factorized|seed42": "experiments/crucible_authority_aware_role_binding_20251025_v2/trained_arms/A3_AUTHORITY_POINTER_BALANCED/factorized/seed42/checkpoint.pt"
+  },
+  "source_experiment": "experiments/crucible_authority_aware_role_binding_20251025_v2",
+  "status": "completed"
+}

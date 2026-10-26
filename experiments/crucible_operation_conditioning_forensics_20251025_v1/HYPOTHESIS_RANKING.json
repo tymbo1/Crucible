@@ -1,0 +1,56 @@
+{
+  "experiment": "crucible_operation_conditioning_forensics_20251025_v1",
+  "ranking": [
+    {
+      "hypothesis": "H2_conditional_routing_or_propagation",
+      "status": "most_supported",
+      "claim": "Operation identity is present locally but is not reliably propagated into the answer-position computation.",
+      "evidence": [
+        "Operation-last hidden states were 100% validation-decodable by both ridge and nearest-centroid probes in all four S3 arms; this is a low bar because the source position contains distinct byte tokens for the two operation strings.",
+        "Answer-position ridge validation accuracy was 50-60% in three arms at the final layer; one factorized seed reached 100%, so this is not universal.",
+        "Changing the operation identifier changed no output argmax across 32 matched unequal validation pairs."
+      ],
+      "limitation": "A probe and an argmax comparison do not establish the complete internal routing mechanism."
+    },
+    {
+      "hypothesis": "H5_operation_blind_output_shortcut",
+      "status": "behaviorally_supported",
+      "claim": "The trained S3 models use an operation-insensitive operand-selection shortcut in the tested regime.",
+      "evidence": [
+        "The original S3 posthoc diagnostic found identical predictions for both operations within all 32 validation pair groups.",
+        "Matched opposite-operation activation patches changed 0 of 384 predictions across the four arms, while same-operation and random controls changed predictions."
+      ],
+      "limitation": "This supports a behavioral shortcut, not a unique neural implementation."
+    },
+    {
+      "hypothesis": "H4_role_binding_or_conditional_execution",
+      "status": "unresolved",
+      "claim": "The model may fail to bind the recognized operation to the appropriate operand-selection procedure.",
+      "evidence": [
+        "Fixed-operation S1/S2 competence and operation-token identification both passed, while joint conditional execution failed.",
+        "Matched operation-token patches did not transfer the donor behavior at the tested layers and locations."
+      ],
+      "limitation": "The current intervention does not distinguish binding failure from loss of a usable signal or output shortcut."
+    },
+    {
+      "hypothesis": "H3_optimization_interference",
+      "status": "not_supported_by_endpoint_gradient_check",
+      "claim": "Opposing operation-specific gradients are not evident at the final checkpoint.",
+      "evidence": [
+        "Cross-operation gradient cosine ranged from 0.726 to 0.997 on unequal training examples, remaining positive in all four arms."
+      ],
+      "limitation": "Endpoint gradients do not rule out transient interference during training."
+    },
+    {
+      "hypothesis": "H1_operation_not_represented",
+      "status": "rejected_as_sole_explanation",
+      "claim": "The model simply lacks an operation representation.",
+      "evidence": [
+        "The separate operation-token classifier achieved 100% on all 320 training and 80 validation examples.",
+        "Operation identity was perfectly decodable from the operation-token hidden state in every S3 arm, although that source-position result is partly lexical and does not show that the answer computation uses the signal."
+      ],
+      "limitation": "Operation representation at the source token is not equivalent to usable representation at the answer position."
+    }
+  ],
+  "overall_conclusion": "The strongest current explanation is a failure to route or bind an operation signal into conditional output computation, accompanied by an operation-blind behavioral shortcut. The internal mechanism remains unresolved."
+}

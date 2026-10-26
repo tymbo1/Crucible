@@ -595,12 +595,6 @@
       "sha256": "1f71e8b53cce6a02bb4cc953735b2da925969b4e047c22849272c5ae144d77db"
     },
     {
-      "bytes": 288372,
-      "path": "experiments/crucible_authority_counterfactual_20261026_v1/ANALYSIS.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "9c419226422d8c30cb333909fade7c52c5ba7ba24fe8cf03f86d0bd73f0fb878"
-    },
-    {
       "bytes": 1665317,
       "path": "experiments/crucible_authority_counterfactual_20261026_v1/COUNTERFACTUAL_PAIRS.csv",
       "reason": "raw_trace_or_intermediate_artifact",
@@ -617,12 +611,6 @@
       "path": "experiments/crucible_authority_counterfactual_20261026_v1/SCIENTIFIC_INTERPRETATION.md",
       "reason": "raw_trace_or_intermediate_artifact",
       "sha256": "49b3e2292a1ca10d5fd0a68a9475efe4ad5239a8be095c7170cd988711da831a"
-    },
-    {
-      "bytes": 43656,
-      "path": "experiments/crucible_authority_counterfactual_20261026_v2/ANALYSIS.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "82057fa500ed8fab229128f6477dfd5f4a58013f34ebbc7f7828e5426710beba"
     },
     {
       "bytes": 243688,
@@ -665,18 +653,6 @@
       "path": "experiments/crucible_authority_representation_use_20261026_v1/AUTHORITY_PROBE_PREDICTIONS.csv",
       "reason": "raw_trace_or_intermediate_artifact",
       "sha256": "3ccac913a0226ec6319041ebc1415f827a6d0d3a7ebd64b93cb8fd36db9bdff3"
-    },
-    {
-      "bytes": 298090,
-      "path": "experiments/crucible_authority_representation_use_20261026_v1/AUTHORITY_PROBE_RESULTS.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "2b5f58ce3600bf2b48696b536e9243dddcda05116df369ed670f43acc635e5ab"
-    },
-    {
-      "bytes": 161979,
-      "path": "experiments/crucible_authority_representation_use_20261026_v1/CAUSAL_ACCESS.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "cfec127bf29bc21cc2b14ac4bee160d8c8c372290b6f133f65efa5401e7877e7"
     },
     {
       "bytes": 170391,
@@ -14737,12 +14713,6 @@
       "sha256": "eaabd1d17ab66469713f6957f4ac2e9b8aec74891d7be6e5cc2109d526fed46a"
     },
     {
-      "bytes": 960128,
-      "path": "experiments/crucible_digitwise_balanced_holdouts_20251025/ANALYSIS_FINAL.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "6a0d4bbb55394cd42f530481c598ac640478b41ca47808cbe6ce4c2a48be2ea1"
-    },
-    {
       "bytes": 7547,
       "path": "experiments/crucible_digitwise_balanced_holdouts_20251025/PAIR_SUMMARY.json",
       "reason": "raw_trace_or_intermediate_artifact",
@@ -16099,12 +16069,6 @@
       "sha256": "6b7f92d7e57b0b5950b2faa91776d5b9343e22248eb8c4be4e99733175792305"
     },
     {
-      "bytes": 399920,
-      "path": "experiments/crucible_digitwise_diagonal_ablation_20251025_v2/ANALYSIS_FINAL.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "1475ba3525022b80bc613ba9f2e4aeee05664dfb98f8a90ea99e6355235d6576"
-    },
-    {
       "bytes": 1417,
       "path": "experiments/crucible_digitwise_diagonal_ablation_20251025_v2/CONDITIONS.json",
       "reason": "raw_trace_or_intermediate_artifact",
@@ -16121,12 +16085,6 @@
       "path": "experiments/crucible_digitwise_diagonal_ablation_20251025_v2/PAIR_SUMMARY.json",
       "reason": "raw_trace_or_intermediate_artifact",
       "sha256": "5cad663281ee4ea3563e953c0f41946f13f976efcc101d359a2e23762f2f7bd7"
-    },
-    {
-      "bytes": 9312,
-      "path": "experiments/crucible_digitwise_diagonal_ablation_20251025_v2/PREFLIGHT.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "1bd66b075bd6a9b4758321e26650c0ce20b8b062a83dfb60b6bd1988bd52fa49"
     },
     {
       "bytes": 2291,
@@ -17137,12 +17095,6 @@
       "sha256": "72f3aa87da373403dac0ef934e0ce0e56046c7c3a8cfe1b17c5c55a4de0ef4f2"
     },
     {
-      "bytes": 268572,
-      "path": "experiments/crucible_digitwise_role_swapped_control_20251025/ANALYSIS_FINAL.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "ed577df276ba75901e05c47db9c31e731fa450ffdb116a4abc9e8912c3fc99a2"
-    },
-    {
       "bytes": 955,
       "path": "experiments/crucible_digitwise_role_swapped_control_20251025/CONDITIONS.json",
       "reason": "raw_trace_or_intermediate_artifact",
@@ -17159,12 +17111,6 @@
       "path": "experiments/crucible_digitwise_role_swapped_control_20251025/PAIR_SUMMARY.json",
       "reason": "raw_trace_or_intermediate_artifact",
       "sha256": "ca34a1d1c71ca0c23c6098080c96167742fc83fa32d04e812537d78ff75c520d"
-    },
-    {
-      "bytes": 6579,
-      "path": "experiments/crucible_digitwise_role_swapped_control_20251025/PREFLIGHT.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "8eca82164fa900dc10bc105dfc8a2e36fdbbb0c3f3ca426d1bd551ddcb6fc958"
     },
     {
       "bytes": 2004,
@@ -17953,22 +17899,10 @@
       "sha256": "ec50257bdebc66c9fed0762acaa41fd78dda255feb7725fbde07012a5d70d347"
     },
     {
-      "bytes": 405613,
-      "path": "experiments/crucible_equality_foundational_20251025_v2/ANALYSIS_FINAL.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "5613833cff5790c379cca7bb254d416be72e5972b644613f27f187568b14663e"
-    },
-    {
       "bytes": 370,
       "path": "experiments/crucible_equality_foundational_20251025_v2/INITIAL_ANCHORS.json",
       "reason": "raw_trace_or_intermediate_artifact",
       "sha256": "e99646723e19c57f8b5835edeb369d1554d6dc301b14038f3155155db7005a28"
-    },
-    {
-      "bytes": 10951,
-      "path": "experiments/crucible_equality_foundational_20251025_v2/PREFLIGHT.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "e6d1792b1319ce8349fe3803fd2adadc8b2317b066bf37ced1c8887a2f3ed622"
     },
     {
       "bytes": 117,
@@ -19519,12 +19453,6 @@
       "sha256": "7d32c4676b8b55eeb645480570950505d21b4ba8f9f910fae19931ba0bb7adcb"
     },
     {
-      "bytes": 6884,
-      "path": "experiments/crucible_explicit_role_supervision_20251025_v3/ANALYSIS.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "26ac52da63ce5bfbe2d433c7a25d912a212434c7f8b3b4333bfcf141ac7289a1"
-    },
-    {
       "bytes": 557715,
       "path": "experiments/crucible_explicit_role_supervision_20251025_v3/PARSER_PREDICTIONS.csv",
       "reason": "raw_trace_or_intermediate_artifact",
@@ -20377,12 +20305,6 @@
       "sha256": "a4b7e9a99dc0dd5f4bdb0b4db6247f652b2bb1f876ed7eaf538ee23ffaaaf9d9"
     },
     {
-      "bytes": 3688,
-      "path": "experiments/crucible_operation_conditioning_forensics_20251025_v1/HYPOTHESIS_RANKING.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "2556ef6a36f71ac90908d627f89df7652787bf3ee865ac958c80be1a47607bf7"
-    },
-    {
       "bytes": 22825,
       "path": "experiments/crucible_operation_conditioning_forensics_20251025_v1/OPERATION_PROBES.json",
       "reason": "raw_trace_or_intermediate_artifact",
@@ -20971,12 +20893,6 @@
       "sha256": "5ee462f3d431076def36c31de200aa44bfde319b406ed7f55ea13f443a16e3e2"
     },
     {
-      "bytes": 429056,
-      "path": "experiments/crucible_operation_position_matrix_20251025_v1/OUTPUT_SENSITIVITY.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "a1be856812fa268ab17ffd15061710d6a5c818eb6048195c8758e8d8129271ce"
-    },
-    {
       "bytes": 9670,
       "path": "experiments/crucible_operation_position_matrix_20251025_v1/PAIRED_CONDITIONAL.json",
       "reason": "raw_trace_or_intermediate_artifact",
@@ -21317,12 +21233,6 @@
       "path": "experiments/crucible_operation_position_matrix_20251025_v1/hidden_states/A3_MARKER_FIXED_factorized_seed42.pt",
       "reason": "checkpoint_or_binary_artifact",
       "sha256": "2199c5efa1ff5af8a80495f34731864e69c1ddadc7c5adf435393be91e302e45"
-    },
-    {
-      "bytes": 3250,
-      "path": "experiments/crucible_operation_token_identification_20251025_v1/ANALYSIS_FINAL.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "d4e77f642b538debc713ffd3f9fa296a34b1904d30de15ad220893dc3be666d5"
     },
     {
       "bytes": 375,
@@ -21863,12 +21773,6 @@
       "path": "experiments/crucible_paired_positional_exposure_20251025_v1/data/A2_GROUPED_CONSISTENCY/factorized/seed42/validation.jsonl",
       "reason": "raw_trace_or_intermediate_artifact",
       "sha256": "ae84aafa6b3cd009fdab23213c9702a7855748ddb3af766b9223a6fd711d06bb"
-    },
-    {
-      "bytes": 6066,
-      "path": "experiments/crucible_position_generalization_gate_20251025_v1/ACTUAL_TRAINING_METRICS.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "dae5914d4c8b34b6562acb450ad0e6a60a702998888e6576d27ccd7bbde03e94"
     },
     {
       "bytes": 137907,
@@ -24277,12 +24181,6 @@
       "sha256": "038976151dd75b28c9d981e423fc59a520b1e6a039f166ddb40e3eb6dc03bdf5"
     },
     {
-      "bytes": 109680,
-      "path": "experiments/crucible_relevance_adjacency_gate_20251025_v1/ATTENTION_SUMMARIES.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "006212b4ff57b5eb0369febed2ceabb15d86bd3206328d8ad89534f688d4ee85"
-    },
-    {
       "bytes": 10120539,
       "path": "experiments/crucible_relevance_adjacency_gate_20251025_v1/ATTENTION_TRACES.jsonl",
       "reason": "raw_trace_or_intermediate_artifact",
@@ -24503,12 +24401,6 @@
       "path": "experiments/crucible_relevance_adjacency_gate_20251025_v1/variants/A3_MARKER_FIXED_factorized_seed42_E_EXPLICIT_AUTHORITY.json",
       "reason": "raw_trace_or_intermediate_artifact",
       "sha256": "32d683caea1ce1b0cbe8bc65b7da3db06ffe1c8682d86acada5a1c83afe83ecf"
-    },
-    {
-      "bytes": 109632,
-      "path": "experiments/crucible_relevance_adjacency_gate_20251025_v2/ATTENTION_SUMMARIES.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "bef448cc4b1d4dd805750b9d6cd38ac15cee6ff237daa204cdd4f42b816ec3cd"
     },
     {
       "bytes": 10120325,
@@ -24943,12 +24835,6 @@
       "sha256": "ec50257bdebc66c9fed0762acaa41fd78dda255feb7725fbde07012a5d70d347"
     },
     {
-      "bytes": 87355,
-      "path": "experiments/crucible_role_selection_competence_20251025_v5/ANALYSIS_FINAL.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "eebaf380646f94af4844d55e10fa20a32da9a042c1c6dbafd24e7019010060ad"
-    },
-    {
       "bytes": 69,
       "path": "experiments/crucible_role_selection_competence_20251025_v5/CONDITIONAL_TRANSFER_NOT_RUN.txt",
       "reason": "raw_trace_or_intermediate_artifact",
@@ -24977,12 +24863,6 @@
       "path": "experiments/crucible_role_selection_competence_20251025_v5/POSTHOC_DIAGNOSTIC.md",
       "reason": "raw_trace_or_intermediate_artifact",
       "sha256": "8da46f84ab32c23dfab998d92b70413883d7c8b847a8d7829a4090b97ac3ff9e"
-    },
-    {
-      "bytes": 3292,
-      "path": "experiments/crucible_role_selection_competence_20251025_v5/PREFLIGHT.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "3d68e767b7f75232474c8ce40cdffb6bd4d8a99637d40d5682d1b93b1e64c4ae"
     },
     {
       "bytes": 48002,
@@ -27571,12 +27451,6 @@
       "sha256": "92ea2ff4330500a385a5769843e534f86046e43ae80251f87a23327f4b6976f0"
     },
     {
-      "bytes": 62281,
-      "path": "experiments/crucible_variable_binding_20251025_v1/ANALYSIS_FINAL.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "7df3b3eb3da01306f2bbe632a17af7dbe93d43da5fab170828e198dd920a1a78"
-    },
-    {
       "bytes": 365,
       "path": "experiments/crucible_variable_binding_20251025_v1/INITIAL_ANCHORS.json",
       "reason": "raw_trace_or_intermediate_artifact",
@@ -27587,12 +27461,6 @@
       "path": "experiments/crucible_variable_binding_20251025_v1/PAIR_SUMMARY.json",
       "reason": "raw_trace_or_intermediate_artifact",
       "sha256": "0ba95af4b010750faf4fd94fab61d55139846b4ce1fec057ec2b16f5dea126fc"
-    },
-    {
-      "bytes": 2926,
-      "path": "experiments/crucible_variable_binding_20251025_v1/PREFLIGHT.json",
-      "reason": "raw_trace_or_intermediate_artifact",
-      "sha256": "b12b047bdbb4b9d586e50fdc441cccd79c9c675a3b21e2b50f9f87a3657edc3e"
     },
     {
       "bytes": 314137,
@@ -28874,13 +28742,13 @@
     }
   ],
   "excluded_summary": {
-    "bytes": 118809657199,
-    "files": 4812
+    "bytes": 118805979917,
+    "files": 4790
   },
-  "generated_utc": "2026-10-26T14:37:43Z",
+  "generated_utc": "2026-10-26T15:07:30Z",
   "included_summary": {
-    "bytes": 73084289,
-    "files": 908
+    "bytes": 76761571,
+    "files": 930
   },
   "policy": {
     "curated_commit": "docs, tools, reports, summaries/results, predictions, manifests, audits, hashes and complete metadata for the latest accepted experiments",

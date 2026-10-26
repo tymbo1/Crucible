@@ -1,0 +1,510 @@
+{
+  "architecture_changed": false,
+  "balance_diagnostics": {
+    "special_first_operand_counts": {
+      "diagonal": {
+        "2": 1,
+        "3": 1
+      },
+      "unequal_role_swapped": {
+        "1": 1,
+        "4": 1
+      }
+    },
+    "special_second_operand_counts": {
+      "diagonal": {
+        "2": 1,
+        "3": 1
+      },
+      "unequal_role_swapped": {
+        "2": 1,
+        "3": 1
+      }
+    },
+    "special_sum_values": {
+      "diagonal": [
+        4,
+        6
+      ],
+      "unequal_role_swapped": [
+        4,
+        6
+      ]
+    },
+    "unavoidable_first_operand_difference": true
+  },
+  "common_background": [
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      8,
+      1
+    ]
+  ],
+  "condition_audits": {
+    "diagonal": {
+      "condition": "diagonal",
+      "errors": [],
+      "pass": true,
+      "train_count": 40,
+      "validation_by_absolute_difference": {
+        "0": 2,
+        "1": 2,
+        "2": 1,
+        "3": 2,
+        "4": 4,
+        "7": 3,
+        "9": 1
+      },
+      "validation_by_first": {
+        "0": 2,
+        "1": 3,
+        "2": 2,
+        "3": 2,
+        "4": 1,
+        "5": 2,
+        "6": 1,
+        "7": 1,
+        "8": 1
+      },
+      "validation_by_second": {
+        "0": 3,
+        "1": 3,
+        "2": 2,
+        "3": 2,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "9": 1
+      },
+      "validation_by_sum": {
+        "1": 1,
+        "3": 1,
+        "4": 2,
+        "5": 1,
+        "6": 3,
+        "7": 2,
+        "8": 2,
+        "9": 3
+      },
+      "validation_count": 15,
+      "validation_diagonal_pairs": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "validation_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "validation_special_pairs": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    "unequal_role_swapped": {
+      "condition": "unequal_role_swapped",
+      "errors": [],
+      "pass": true,
+      "train_count": 40,
+      "validation_by_absolute_difference": {
+        "1": 2,
+        "2": 3,
+        "3": 2,
+        "4": 4,
+        "7": 3,
+        "9": 1
+      },
+      "validation_by_first": {
+        "0": 2,
+        "1": 4,
+        "2": 1,
+        "3": 1,
+        "4": 2,
+        "5": 2,
+        "6": 1,
+        "7": 1,
+        "8": 1
+      },
+      "validation_by_second": {
+        "0": 3,
+        "1": 3,
+        "2": 2,
+        "3": 2,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "9": 1
+      },
+      "validation_by_sum": {
+        "1": 1,
+        "3": 1,
+        "4": 2,
+        "5": 1,
+        "6": 3,
+        "7": 2,
+        "8": 2,
+        "9": 3
+      },
+      "validation_count": 15,
+      "validation_diagonal_pairs": [],
+      "validation_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "validation_special_pairs": [
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          2
+        ]
+      ]
+    }
+  },
+  "conditions": {
+    "diagonal": [
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        8,
+        1
+      ]
+    ],
+    "unequal_role_swapped": [
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        8,
+        1
+      ]
+    ]
+  },
+  "errors": [],
+  "experiment": "crucible_digitwise_role_swapped_control_20251025",
+  "interface_errors": {
+    "diagonal:canonical": [],
+    "diagonal:factorized": [],
+    "unequal_role_swapped:canonical": [],
+    "unequal_role_swapped:factorized": []
+  },
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "pass": true,
+  "sealed_test_accessed": false,
+  "seeds": [
+    2025,
+    2026
+  ],
+  "special_pairs": {
+    "diagonal": [
+      [
+        3,
+        3
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "unequal_role_swapped": [
+      [
+        1,
+        3
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  "status": "frozen_before_training",
+  "steps": 500
+}

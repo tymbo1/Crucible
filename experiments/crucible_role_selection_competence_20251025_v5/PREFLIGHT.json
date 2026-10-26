@@ -1,0 +1,342 @@
+{
+  "all_competence_gates_pass": false,
+  "architecture_changed": false,
+  "conditional_transfer_run": false,
+  "conditions": [
+    "S1_SELECT_FIRST",
+    "S2_SELECT_SECOND",
+    "S3_JOINT_OPERATION_CONDITIONED"
+  ],
+  "curve_steps": [
+    1,
+    10,
+    25,
+    50,
+    100,
+    200,
+    300,
+    400,
+    500
+  ],
+  "equal_validation_pairs": [
+    [
+      0,
+      0
+    ],
+    [
+      5,
+      5
+    ]
+  ],
+  "errors": [],
+  "experiment": "crucible_role_selection_competence_20251025",
+  "initial_anchor_sha256": {
+    "1337": "d1182508562aa080c68d6076ccec99d35a75f705f919fbde9dc5634a6f101e89",
+    "42": "95a9c84d3ced501ff08e683bd25c9227bb126ad41c61634732e124e7f647f1f1"
+  },
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "pass": true,
+  "reversed_validation_pairs": {
+    "(0,9)": true,
+    "(1,8)": true,
+    "(2,7)": true,
+    "(3,6)": true,
+    "(6,3)": true,
+    "(7,2)": true,
+    "(8,1)": true,
+    "(9,0)": true
+  },
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "status": "completed",
+  "steps": 500,
+  "train_pair_count": 40,
+  "train_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      6,
+      5
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      9,
+      9
+    ]
+  ],
+  "training_performed": true,
+  "transfer_pairs": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      8,
+      4
+    ]
+  ],
+  "unequal_validation_pairs": [
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      8,
+      1
+    ],
+    [
+      9,
+      0
+    ]
+  ],
+  "validation_pair_count": 10,
+  "validation_pairs": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      8,
+      1
+    ],
+    [
+      9,
+      0
+    ]
+  ]
+}

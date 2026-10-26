@@ -1,0 +1,136 @@
+{
+  "experiment": "crucible_explicit_role_supervision_20251025_v3",
+  "status": "completed",
+  "scope": {
+    "interfaces": ["canonical", "factorized"],
+    "seeds": [42, 1337],
+    "conditions": [
+      "E0_TUPLE_ONLY_BASELINE",
+      "E1_ROLE_SUPERVISED_CLASSIFIER",
+      "E2_ROLE_SUPERVISED_POINTER",
+      "E3_ORACLE_BINDING",
+      "E4_RAW_END_TO_END"
+    ],
+    "validation_rows_per_layout": 80,
+    "unequal_pair_groups_per_layout": 32,
+    "sealed_test_accessed": false
+  },
+  "parser_training": {
+    "arms": 4,
+    "classifier_tuple_correct": 960,
+    "pointer_tuple_correct": 960,
+    "rows": 960,
+    "classifier_tuple_accuracy": 1.0,
+    "pointer_tuple_accuracy": 1.0,
+    "a_position_accuracy": 1.0,
+    "b_position_accuracy": 1.0,
+    "operation_position_accuracy": 1.0
+  },
+  "validation_paired_output": {
+    "denominator_per_layout": 32,
+    "pooled_over_layouts": {
+      "E0_TUPLE_ONLY_BASELINE": {"correct": 42, "total": 224, "accuracy": 0.1875},
+      "E1_ROLE_SUPERVISED_CLASSIFIER": {"correct": 89, "total": 224, "accuracy": 0.3973214286},
+      "E2_ROLE_SUPERVISED_POINTER": {"correct": 169, "total": 224, "accuracy": 0.7544642857},
+      "E3_ORACLE_BINDING": {"correct": 224, "total": 224, "accuracy": 1.0},
+      "E4_RAW_END_TO_END": {"correct": 22, "total": 224, "accuracy": 0.0982142857}
+    },
+    "by_layout": {
+      "FIXED_NEAR_PADDED": {
+        "E0_TUPLE_ONLY_BASELINE": [8, 32],
+        "E1_ROLE_SUPERVISED_CLASSIFIER": [15, 32],
+        "E2_ROLE_SUPERVISED_POINTER": [32, 32],
+        "E3_ORACLE_BINDING": [32, 32],
+        "E4_RAW_END_TO_END": [7, 32]
+      },
+      "EARLY_PADDED": {
+        "E0_TUPLE_ONLY_BASELINE": [8, 32],
+        "E1_ROLE_SUPERVISED_CLASSIFIER": [16, 32],
+        "E2_ROLE_SUPERVISED_POINTER": [32, 32],
+        "E3_ORACLE_BINDING": [32, 32],
+        "E4_RAW_END_TO_END": [1, 32]
+      },
+      "MIDDLE_POSITION": {
+        "E0_TUPLE_ONLY_BASELINE": [8, 32],
+        "E1_ROLE_SUPERVISED_CLASSIFIER": [17, 32],
+        "E2_ROLE_SUPERVISED_POINTER": [32, 32],
+        "E3_ORACLE_BINDING": [32, 32],
+        "E4_RAW_END_TO_END": [6, 32]
+      },
+      "UNSEEN_BETWEEN_OPERANDS": {
+        "E0_TUPLE_ONLY_BASELINE": [5, 32],
+        "E1_ROLE_SUPERVISED_CLASSIFIER": [12, 32],
+        "E2_ROLE_SUPERVISED_POINTER": [27, 32],
+        "E3_ORACLE_BINDING": [32, 32],
+        "E4_RAW_END_TO_END": [0, 32]
+      },
+      "UNSEEN_EARLY_CONTEXT_FIRST": {
+        "E0_TUPLE_ONLY_BASELINE": [8, 32],
+        "E1_ROLE_SUPERVISED_CLASSIFIER": [15, 32],
+        "E2_ROLE_SUPERVISED_POINTER": [30, 32],
+        "E3_ORACLE_BINDING": [32, 32],
+        "E4_RAW_END_TO_END": [1, 32]
+      },
+      "UNSEEN_DIGIT_DISTRACTOR": {
+        "E0_TUPLE_ONLY_BASELINE": [3, 32],
+        "E1_ROLE_SUPERVISED_CLASSIFIER": [5, 32],
+        "E2_ROLE_SUPERVISED_POINTER": [15, 32],
+        "E3_ORACLE_BINDING": [32, 32],
+        "E4_RAW_END_TO_END": [0, 32]
+      },
+      "UNSEEN_COMPETING_OPERATION": {
+        "E0_TUPLE_ONLY_BASELINE": [2, 32],
+        "E1_ROLE_SUPERVISED_CLASSIFIER": [9, 32],
+        "E2_ROLE_SUPERVISED_POINTER": [1, 32],
+        "E3_ORACLE_BINDING": [32, 32],
+        "E4_RAW_END_TO_END": [7, 32]
+      }
+    }
+  },
+  "e2_pointer_validation": {
+    "denominator": 80,
+    "by_layout": {
+      "FIXED_NEAR_PADDED": {"a_position": [80, 80], "b_position": [80, 80], "operation_position": [80, 80], "tuple": [80, 80]},
+      "EARLY_PADDED": {"a_position": [80, 80], "b_position": [80, 80], "operation_position": [80, 80], "tuple": [80, 80]},
+      "MIDDLE_POSITION": {"a_position": [80, 80], "b_position": [80, 80], "operation_position": [80, 80], "tuple": [80, 80]},
+      "UNSEEN_BETWEEN_OPERANDS": {"a_position": [80, 80], "b_position": [73, 80], "operation_position": [80, 80], "tuple": [73, 80]},
+      "UNSEEN_EARLY_CONTEXT_FIRST": {"a_position": [77, 80], "b_position": [80, 80], "operation_position": [80, 80], "tuple": [77, 80]},
+      "UNSEEN_DIGIT_DISTRACTOR": {"a_position": [39, 80], "b_position": [74, 80], "operation_position": [80, 80], "tuple": [44, 80]},
+      "UNSEEN_COMPETING_OPERATION": {"a_position": [80, 80], "b_position": [80, 80], "operation_position": [41, 80], "tuple": [41, 80]}
+    }
+  },
+  "validation_output_audit": {
+    "E0_TUPLE_ONLY_BASELINE": {"output_token_correct": [316, 560], "full_sequence_correct": [316, 560], "eos_correct": [560, 560], "format_errors": [0, 560]},
+    "E1_ROLE_SUPERVISED_CLASSIFIER": {"output_token_correct": [389, 560], "full_sequence_correct": [389, 560], "eos_correct": [560, 560], "format_errors": [0, 560]},
+    "E2_ROLE_SUPERVISED_POINTER": {"output_token_correct": [495, 560], "full_sequence_correct": [495, 560], "eos_correct": [560, 560], "format_errors": [20, 560]},
+    "E3_ORACLE_BINDING": {"output_token_correct": [560, 560], "full_sequence_correct": [560, 560], "eos_correct": [560, 560], "format_errors": [0, 560]},
+    "E4_RAW_END_TO_END": {"output_token_correct": [324, 560], "full_sequence_correct": [324, 560], "eos_correct": [560, 560], "format_errors": [0, 560]}
+  },
+  "integrity_checks": {
+    "prediction_rows": 14000,
+    "parser_prediction_rows": 2800,
+    "evaluations": 280,
+    "parser_join_mismatches": 0,
+    "deterministic_executor_mismatches": 0,
+    "train_validation_record_id_overlap": 0,
+    "checkpoint_hash_mismatches": 0,
+    "sealed_test_accessed": false,
+    "architecture_changed": false,
+    "executor_retrained": false
+  },
+  "interpretation": {
+    "supported": [
+      "Explicit position supervision enables perfect paired validation on the three trained layouts under the pointer-decoding condition.",
+      "The pointer condition transfers strongly to the two prior unseen layouts, but not to the two newly introduced adversarial layouts.",
+      "The distractor failure is concentrated in locating operand A; the competing-operation failure is concentrated in locating the authoritative operation.",
+      "The oracle executor remains perfect, so the task and deterministic execution path are sufficient when binding is supplied.",
+      "The raw end-to-end control remains weak, so the result is not attributable to a general improvement in the frozen dense model."
+    ],
+    "not_established": [
+      "Position-independent or distraction-robust role binding.",
+      "A particular internal mechanism such as attention failure, embedding collision or gradient interference.",
+      "General procedural reasoning beyond this synthetic selection task."
+    ],
+    "next_controlled_experiment": "Train a matched layout-augmented role-supervision control that includes irrelevant-digit and competing-operation examples, while holding architecture, optimizer, total updates and token exposure fixed; hold out new distractor identities, operation positions and decoy arrangements. Keep the current v3 pointer-supervised model and oracle binding as controls, and score pointer components separately from paired execution."
+  }
+}

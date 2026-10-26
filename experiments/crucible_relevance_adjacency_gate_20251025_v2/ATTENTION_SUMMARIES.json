@@ -1,0 +1,3102 @@
+{
+  "native": {
+    "A0_WORD_ORIGINAL_canonical_seed1337": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4103615794581593,
+          "operand_b_mass": 0.4230892648521502,
+          "operation_mass": 0.028214591929969047,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.13833456709413666,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.41043809843766893,
+          "operand_b_mass": 0.38137299832341254,
+          "operation_mass": 0.01447079476656965,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.19371812314787387,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.32843770765302904,
+          "operand_b_mass": 0.3281606269392796,
+          "operation_mass": 0.040717933283303864,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.3026837352081202,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.3705309334234698,
+          "operand_b_mass": 0.3555105842406192,
+          "operation_mass": 0.010476879221369018,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.2634816101661272,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.2944119171484999,
+          "operand_b_mass": 0.29430803775030656,
+          "operation_mass": 0.1611200245763314,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.2501600390583917,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.47251900510746053,
+          "operand_b_mass": 0.4280407365935389,
+          "operation_mass": 0.0021797992618758145,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.09726044837589143,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.35567580778151753,
+          "operand_b_mass": 0.3645223081111908,
+          "operation_mass": 0.03266136129386723,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.24714053869247438,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4360730735585093,
+          "operand_b_mass": 0.4137315599713475,
+          "operation_mass": 0.0068683483467566475,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.1433270007968531,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A0_WORD_ORIGINAL_canonical_seed42": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.44820452776013725,
+          "operand_b_mass": 0.4404856298450618,
+          "operation_mass": 0.040646696840648436,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.07066314326045826,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.43422462480888074,
+          "operand_b_mass": 0.43937516720007075,
+          "operation_mass": 0.007055154455408799,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.11934506862617444,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.25435832259827296,
+          "operand_b_mass": 0.17251240550540387,
+          "operation_mass": 0.11678451397456228,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.4563447620719671,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.05049145161174238,
+          "operand_b_mass": 0.0737088399939239,
+          "operation_mass": 0.21515290383249522,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.660646815598011,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.40811134997529736,
+          "operand_b_mass": 0.49251892018294824,
+          "operation_mass": 0.039112996765655696,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.060256739463632414,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.46462286781489814,
+          "operand_b_mass": 0.46891065432924234,
+          "operation_mass": 0.009495256881250783,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.05697123119647642,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.2947282256442122,
+          "operand_b_mass": 0.24223221885622478,
+          "operation_mass": 0.10458610076457261,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.3584534604102373,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.0454256440512836,
+          "operand_b_mass": 0.06769749885424972,
+          "operation_mass": 0.21504135131835939,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.6718354970216751,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A0_WORD_ORIGINAL_factorized_seed1337": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4285190104041249,
+          "operand_b_mass": 0.4289792654207304,
+          "operation_mass": 0.043775709572483376,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.09872601277698294,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.36941588471145226,
+          "operand_b_mass": 0.35064968463075274,
+          "operation_mass": 0.02459859437729047,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.2553358528357695,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.30884825279354117,
+          "operand_b_mass": 0.23600804693705868,
+          "operation_mass": 0.041383369028335434,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.4137603310868144,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.2200011925655417,
+          "operand_b_mass": 0.16438907834599376,
+          "operation_mass": 0.04809535503736697,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.5675143778556958,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4208659891039133,
+          "operand_b_mass": 0.38606608510017393,
+          "operation_mass": 0.0461442396957807,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.14692368297642133,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.48196708706673236,
+          "operand_b_mass": 0.37172371335327625,
+          "operation_mass": 0.011638417932622996,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.1346707972052263,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.41537533244118097,
+          "operand_b_mass": 0.2362948339432478,
+          "operation_mass": 0.023439275845885277,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.32489054910838605,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.26381689207628367,
+          "operand_b_mass": 0.17782801305875182,
+          "operation_mass": 0.04289321000687778,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.5154618926346302,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A0_WORD_ORIGINAL_factorized_seed42": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4465245121532462,
+          "operand_b_mass": 0.4228083914527815,
+          "operation_mass": 0.046635760940792984,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.08403135326188985,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4122285583719612,
+          "operand_b_mass": 0.4310533983523208,
+          "operation_mass": 0.04934675496503678,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.10737128602809194,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.312121473204526,
+          "operand_b_mass": 0.3333542960334256,
+          "operation_mass": 0.1387908177643255,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.21573342397157588,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4198948583085439,
+          "operand_b_mass": 0.010053815982337256,
+          "operation_mass": 0.47889081486064244,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.09116052181925624,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3793291505309753,
+          "operand_b_mass": 0.4276435759384185,
+          "operation_mass": 0.07309660470637028,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.11993068660522113,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4545677310670726,
+          "operand_b_mass": 0.48562684112694116,
+          "operation_mass": 0.023799651189592996,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.036005802151601075,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3225295378865439,
+          "operand_b_mass": 0.38708600511367874,
+          "operation_mass": 0.1362646446978033,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.1541198368795449,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4230637885630131,
+          "operand_b_mass": 0.008676964751794003,
+          "operation_mass": 0.47845214905682953,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.08980710115283727,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A1_MARKER_ORIGINAL_canonical_seed1337": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4451346832665581,
+          "operand_b_mass": 0.4633624473928015,
+          "operation_mass": 0.016443091717947837,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.07505977379002396,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.412511723706919,
+          "operand_b_mass": 0.4264035669728116,
+          "operation_mass": 0.005835481316102944,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.155249223834874,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.266768818750279,
+          "operand_b_mass": 0.2829205326692318,
+          "operation_mass": 0.012279850998311304,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.43803078760392966,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.17747567378391976,
+          "operand_b_mass": 0.19018050611775833,
+          "operation_mass": 0.03202226991998032,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.6003215426579118,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.41197301351776333,
+          "operand_b_mass": 0.3870457665274444,
+          "operation_mass": 0.017485717138632118,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.18349549804102025,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.448145268984922,
+          "operand_b_mass": 0.4793069229733419,
+          "operation_mass": 0.0032337473304323793,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.06931407384690828,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.3241794862318784,
+          "operand_b_mass": 0.3347446771338582,
+          "operation_mass": 0.008168801967985927,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.33290703892707824,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.21273313655983656,
+          "operand_b_mass": 0.23378444160334766,
+          "operation_mass": 0.025340610276907684,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.5281418189406395,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A1_MARKER_ORIGINAL_canonical_seed42": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4425417140639703,
+          "operand_b_mass": 0.46550309611413543,
+          "operation_mass": 0.001693520432590217,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.0902616666546316,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.42011786489638325,
+          "operand_b_mass": 0.4261852841635118,
+          "operation_mass": 0.00404335136512359,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.14965351077032346,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.3591955514071742,
+          "operand_b_mass": 0.2425153131247498,
+          "operation_mass": 0.01834213244219427,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.37994700506096707,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.08585877544246615,
+          "operand_b_mass": 0.1334408128168434,
+          "operation_mass": 0.06873935922048986,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.7119610488414765,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.3970560902991565,
+          "operand_b_mass": 0.5099718684872642,
+          "operation_mass": 0.0018816745573758454,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.09109038001333829,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.48715975880622864,
+          "operand_b_mass": 0.49860885916277764,
+          "operation_mass": 0.0007364581639521361,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.013494921734672972,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.3887386731570587,
+          "operand_b_mass": 0.3115860863497801,
+          "operation_mass": 0.011686648888280615,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.2879885889822617,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.08834548220038414,
+          "operand_b_mass": 0.1567862570285797,
+          "operation_mass": 0.06542504169046878,
+          "operation_to_answer_distance": 38.0,
+          "other_mass": 0.6894432038068772,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A1_MARKER_ORIGINAL_factorized_seed1337": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3948038059374085,
+          "operand_b_mass": 0.4150021408968314,
+          "operation_mass": 0.0037119670647399517,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.1864821011485674,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3338912811966111,
+          "operand_b_mass": 0.33038140577982633,
+          "operation_mass": 0.023115471832154167,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.3126118511340345,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.28788225923199207,
+          "operand_b_mass": 0.22206052890542197,
+          "operation_mass": 0.024851981795654864,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.4652052294870373,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.18094630299674463,
+          "operand_b_mass": 0.13627810687139572,
+          "operation_mass": 0.02835771925165318,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.6544178714393638,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.374537708889693,
+          "operand_b_mass": 0.35187765769660473,
+          "operation_mass": 0.006841687286578235,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.26674294081785777,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4588415223063521,
+          "operand_b_mass": 0.4208912311582026,
+          "operation_mass": 0.007785129594373075,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.11248214198521964,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3521323325112462,
+          "operand_b_mass": 0.1740790879819542,
+          "operation_mass": 0.01981010765885003,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.45397846391424534,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.16000196344684808,
+          "operand_b_mass": 0.12261601211503148,
+          "operation_mass": 0.03616602309048176,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.6812159940600395,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A1_MARKER_ORIGINAL_factorized_seed42": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4390589384564548,
+          "operand_b_mass": 0.4103618105979094,
+          "operation_mass": 0.006002383887451318,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.14457686937663441,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3851680603690649,
+          "operand_b_mass": 0.42920774312841364,
+          "operation_mass": 0.005216489989973206,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.1804077123749877,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3227282651787391,
+          "operand_b_mass": 0.31748338215693367,
+          "operation_mass": 0.019676181237446144,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.34011217802762983,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.2776822785846889,
+          "operand_b_mass": 0.2345367270987481,
+          "operation_mass": 0.027391660821740514,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.4603893319144845,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.37519463235512374,
+          "operand_b_mass": 0.364732254476985,
+          "operation_mass": 0.010620405203280826,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.2494527108472539,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.45270181645128105,
+          "operand_b_mass": 0.45726899836663504,
+          "operation_mass": 0.0027248850084731656,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.0873043315794348,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4014947554562241,
+          "operand_b_mass": 0.348483174899593,
+          "operation_mass": 0.011842241534031928,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.2381798293441534,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.32717739790678024,
+          "operand_b_mass": 0.326365421526134,
+          "operation_mass": 0.016634560166858138,
+          "operation_to_answer_distance": 50.0,
+          "other_mass": 0.32982262000441553,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A2_WORD_FIXED_canonical_seed1337": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.40840710399788804,
+          "operand_b_mass": 0.4103951238692389,
+          "operation_mass": 0.046265077147745616,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.13493270238141122,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.33755320499330993,
+          "operand_b_mass": 0.377928445051657,
+          "operation_mass": 0.04169222079217434,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.24282612707465887,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.48808500331088,
+          "operand_b_mass": 0.4963333963907644,
+          "operation_mass": 0.0015603912963342737,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.014021210135615548,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4010314502997062,
+          "operand_b_mass": 0.37029283963056514,
+          "operation_mass": 0.046155613154951425,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.18252009262068897,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.3777734969742596,
+          "operand_b_mass": 0.37207455120515076,
+          "operation_mass": 0.0639701856765896,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.18618175331503153,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.31987039317027666,
+          "operand_b_mass": 0.39872179564554244,
+          "operation_mass": 0.04135560961440206,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.24005219228565694,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.48682526229240464,
+          "operand_b_mass": 0.500647148754797,
+          "operation_mass": 0.0011467491240182426,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.011380843857477885,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.3969957362860441,
+          "operand_b_mass": 0.33639180911704897,
+          "operation_mass": 0.053466708085034044,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.21314573055133224,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A2_WORD_FIXED_canonical_seed42": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.2571244026068598,
+          "operand_b_mass": 0.38338048229925337,
+          "operation_mass": 0.07278282907791436,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.2867122762836516,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.5038522739763721,
+          "operand_b_mass": 0.48762402423999446,
+          "operation_mass": 0.0018301563992281444,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.006693553466902813,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.1856990408152342,
+          "operand_b_mass": 0.2018801263300702,
+          "operation_mass": 0.15958545422181486,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.452835376560688,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.07063540490344167,
+          "operand_b_mass": 0.09616589718498289,
+          "operation_mass": 0.18294744715094566,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.6502512492239475,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.2563472768291831,
+          "operand_b_mass": 0.3432284455746412,
+          "operation_mass": 0.08089007912203669,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.319534183293581,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.5024479799438268,
+          "operand_b_mass": 0.4915443853475153,
+          "operation_mass": 0.0012834381828724871,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.004724185782833956,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.21023315265774728,
+          "operand_b_mass": 0.23223181813955307,
+          "operation_mass": 0.14563341746106745,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.4119016001001,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.06729133077897131,
+          "operand_b_mass": 0.08052190351299941,
+          "operation_mass": 0.18265384510159494,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.6695329159498214,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A2_WORD_FIXED_factorized_seed1337": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4391922686074395,
+          "operand_b_mass": 0.3814102865811947,
+          "operation_mass": 0.039296078960978774,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.14010135971038834,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.27126110561948735,
+          "operand_b_mass": 0.26430599936284127,
+          "operation_mass": 0.06850376228685491,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.39592913603410124,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.46855630181817104,
+          "operand_b_mass": 0.5135668933275156,
+          "operation_mass": 0.0015690184518916794,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.01630779016231827,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3685705913667334,
+          "operand_b_mass": 0.28941044345447153,
+          "operation_mass": 0.06831544245942496,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.27370352209545673,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4166598637006246,
+          "operand_b_mass": 0.3593737488379702,
+          "operation_mass": 0.04850450775120407,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.17546186977997422,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.32630766315269283,
+          "operand_b_mass": 0.3328442419413477,
+          "operation_mass": 0.049632762174587695,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.2912153360433877,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.46881402318758775,
+          "operand_b_mass": 0.5152057573432103,
+          "operation_mass": 0.0014621377100411336,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.014518065270385705,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.34439234228339044,
+          "operand_b_mass": 0.2826979526493233,
+          "operation_mass": 0.07824940080754458,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.2946603061631322,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A2_WORD_FIXED_factorized_seed42": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.33379619507468306,
+          "operand_b_mass": 0.34104210062942003,
+          "operation_mass": 0.1569862799238763,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.16817542401258834,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.21296717971449652,
+          "operand_b_mass": 0.2498418736458916,
+          "operation_mass": 0.10413407223240938,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.4330568817444146,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4788748664293962,
+          "operand_b_mass": 0.4720715658631889,
+          "operation_mass": 0.002497381852072067,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.046556200732811706,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4059723866637796,
+          "operand_b_mass": 0.4539044374600053,
+          "operation_mass": 0.030302156359539367,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.1098210138399736,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3223624981939793,
+          "operand_b_mass": 0.3436360535211861,
+          "operation_mass": 0.1607788058463484,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.17322264201939105,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.2246476652493584,
+          "operand_b_mass": 0.2609729360905476,
+          "operation_mass": 0.1016906957142055,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.41268870793282986,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.48777561798342506,
+          "operand_b_mass": 0.4730268168947077,
+          "operation_mass": 0.0018376131245531723,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.03735997109906748,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3902104414999485,
+          "operand_b_mass": 0.4428740832954645,
+          "operation_mass": 0.03369406327256001,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.13322142765391617,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_canonical_seed1337": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.39230583256285173,
+          "operand_b_mass": 0.3480464389358531,
+          "operation_mass": 0.011822144795826262,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.2478255854173767,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4308967792787485,
+          "operand_b_mass": 0.4731448841552265,
+          "operation_mass": 0.0038216629602175088,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.09213669635983024,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4962672330175337,
+          "operand_b_mass": 0.49342086927208584,
+          "operation_mass": 0.001090027352074685,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.00922187477517582,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4290214601554908,
+          "operand_b_mass": 0.4369538552709855,
+          "operation_mass": 0.01294454493036028,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.12108013806864619,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.34346555834636094,
+          "operand_b_mass": 0.2945056128781289,
+          "operation_mass": 0.01651926778140478,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.34550957195460796,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4394309147261083,
+          "operand_b_mass": 0.5197734199231491,
+          "operation_mass": 0.0018145446745620574,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.0389811385422945,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4912070353930176,
+          "operand_b_mass": 0.49828932677628474,
+          "operation_mass": 0.0010379211435974866,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.009465704397007358,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.432831222563982,
+          "operand_b_mass": 0.44350545117631557,
+          "operation_mass": 0.011617185751674697,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.11204612581059337,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_canonical_seed42": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.44632612761834023,
+          "operand_b_mass": 0.4745777110985273,
+          "operation_mass": 0.003996865022739371,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.07509932350694726,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4919728911590937,
+          "operand_b_mass": 0.5011732313549147,
+          "operation_mass": 0.00027423179023458035,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.006579649882132799,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4535548999803723,
+          "operand_b_mass": 0.42231477000514134,
+          "operation_mass": 0.009388792060053674,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.11474153875606134,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.492719608132029,
+          "operand_b_mass": 0.4862365209235577,
+          "operation_mass": 0.0015881991151218244,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.019455671617470215,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4199133276939392,
+          "operand_b_mass": 0.42424852307885885,
+          "operation_mass": 0.0069871036454060235,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.14885107217123733,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4954192310629878,
+          "operand_b_mass": 0.49897943272662815,
+          "operation_mass": 0.0002536040729637534,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.005347749694919912,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4777383381035179,
+          "operand_b_mass": 0.41290041546017164,
+          "operation_mass": 0.007334882221039151,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.10202636668691412,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4939575069118291,
+          "operand_b_mass": 0.4865991484373808,
+          "operation_mass": 0.0014025600561581087,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.0180407895706594,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed1337": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3000820737579488,
+          "operand_b_mass": 0.3479926238564076,
+          "operation_mass": 0.039639495697338135,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.3122858074493706,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.24365389113972924,
+          "operand_b_mass": 0.31003960482776166,
+          "operation_mass": 0.027727777377003805,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.4185787288006395,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4794739287386619,
+          "operand_b_mass": 0.5003245014611821,
+          "operation_mass": 0.0004371431154879701,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.019764438043966947,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.269659046526067,
+          "operand_b_mass": 0.3463023287476972,
+          "operation_mass": 0.030449497627705567,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.35358912949450316,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.24585345461964608,
+          "operand_b_mass": 0.3069099296582863,
+          "operation_mass": 0.04665391561575234,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.40058270618319514,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.2321071940827096,
+          "operand_b_mass": 0.34759779619053005,
+          "operation_mass": 0.025279700057581067,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.39501531459391115,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.46431491122348234,
+          "operand_b_mass": 0.4949967557913624,
+          "operation_mass": 0.0009893054148051306,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.03969906171987532,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.256974686216563,
+          "operand_b_mass": 0.296413666382432,
+          "operation_mass": 0.03381663860636763,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.412794993724674,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed42": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.46145686521772405,
+          "operand_b_mass": 0.49187458550253493,
+          "operation_mass": 0.0022068934670882003,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.04446165432348152,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4882237241588882,
+          "operand_b_mass": 0.49345458185489405,
+          "operation_mass": 0.000975563232350396,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.017346125416224822,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.07722904840484261,
+          "operand_b_mass": 0.0959436928271316,
+          "operation_mass": 0.0862624802161008,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.7405647747218609,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.051500993059016766,
+          "operand_b_mass": 0.056194274069275706,
+          "operation_mass": 0.10447235167957843,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.7878323823213578,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4378824004970056,
+          "operand_b_mass": 0.4929457914263594,
+          "operation_mass": 0.0028723818426861667,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.06629943135058056,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4922138487920165,
+          "operand_b_mass": 0.4956212165649049,
+          "operation_mass": 0.0006955370557989226,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.011469406995456666,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.0655976798851043,
+          "operand_b_mass": 0.08492202023044229,
+          "operation_mass": 0.09489218667149543,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.754588109254837,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.056469818111509085,
+          "operand_b_mass": 0.06367825446650385,
+          "operation_mass": 0.09715373031795024,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.7826982229948044,
+          "pointer_mass": 0.0
+        }
+      }
+    }
+  },
+  "variants": {
+    "A3_MARKER_FIXED_canonical_seed1337__A_ADJACENT": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.39230583256285173,
+          "operand_b_mass": 0.3480464389358531,
+          "operation_mass": 0.011822144795826262,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.2478255854173767,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4308967792787485,
+          "operand_b_mass": 0.4731448841552265,
+          "operation_mass": 0.0038216629602175088,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.09213669635983024,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4962672330175337,
+          "operand_b_mass": 0.49342086927208584,
+          "operation_mass": 0.001090027352074685,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.00922187477517582,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4290214601554908,
+          "operand_b_mass": 0.4369538552709855,
+          "operation_mass": 0.01294454493036028,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.12108013806864619,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.34346555834636094,
+          "operand_b_mass": 0.2945056128781289,
+          "operation_mass": 0.01651926778140478,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.34550957195460796,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4394309147261083,
+          "operand_b_mass": 0.5197734199231491,
+          "operation_mass": 0.0018145446745620574,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.0389811385422945,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4912070353930176,
+          "operand_b_mass": 0.49828932677628474,
+          "operation_mass": 0.0010379211435974866,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.009465704397007358,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.432831222563982,
+          "operand_b_mass": 0.44350545117631557,
+          "operation_mass": 0.011617185751674697,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.11204612581059337,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_canonical_seed1337__B_EARLY_PADDED": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.22474169635606814,
+          "operand_b_mass": 0.15818545704023562,
+          "operation_mass": 0.002131986544668507,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.6149408686906099,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.2504802812858543,
+          "operand_b_mass": 0.1773483374126954,
+          "operation_mass": 0.0067182690552726855,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.5654531190171838,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.8018425792455673,
+          "operand_b_mass": 0.00018721497763181106,
+          "operation_mass": 0.011723765308852307,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.18624645816162227,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.86373730301857,
+          "operand_b_mass": 0.0015643704688045545,
+          "operation_mass": 0.015475798925035634,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.1192225263803266,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.1490952213993296,
+          "operand_b_mass": 0.10845804928103461,
+          "operation_mass": 0.0027393068157834932,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.7397074341773987,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.2607218807563186,
+          "operand_b_mass": 0.18110593636520206,
+          "operation_mass": 0.006511386460624635,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.5516607999801636,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.808173143863678,
+          "operand_b_mass": 0.00010999280261785316,
+          "operation_mass": 0.011224954482167959,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.18049190640449525,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.8985111981630325,
+          "operand_b_mass": 0.0013002237805267215,
+          "operation_mass": 0.01135536537040025,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.088833203073591,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_canonical_seed1337__C_NEAR_PADDED": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.24194049390935107,
+          "operand_b_mass": 0.21160083093873255,
+          "operation_mass": 0.0011508461009299253,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.5453078510239721,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.2936198800452985,
+          "operand_b_mass": 0.33020602689412043,
+          "operation_mass": 0.0019153827382979217,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.37425870201550426,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.48455262661136655,
+          "operand_b_mass": 0.4713572641150677,
+          "operation_mass": 0.0008398890609896626,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.04325022083939985,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.41025193496607243,
+          "operand_b_mass": 0.3917496295820456,
+          "operation_mass": 0.00640443409765794,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.19159399478230627,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.17200425230839755,
+          "operand_b_mass": 0.14910207840730436,
+          "operation_mass": 0.0014488439148408361,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.6774448782205582,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.30205910445656625,
+          "operand_b_mass": 0.34038007226772604,
+          "operation_mass": 0.0016781463291408727,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.3558826886117458,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.4853932855316089,
+          "operand_b_mass": 0.47878090938320383,
+          "operation_mass": 0.0006544568414028618,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.035171343060210344,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.4231290580239147,
+          "operand_b_mass": 0.4152511316118762,
+          "operation_mass": 0.00540167068320443,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.1562181399203837,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_canonical_seed1337__D_COMPETING": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.011961951777948343,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.3780971286498243,
+          "operand_b_mass": 0.3351177234959323,
+          "operation_mass": 0.009395065667945346,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.2654281365896168,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.00517179106174126,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.4263346477349046,
+          "operand_b_mass": 0.465548085422688,
+          "operation_mass": 0.0031763544020975585,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.09976914083545126,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.001029003826670305,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.4938025984018168,
+          "operand_b_mass": 0.489031902429997,
+          "operation_mass": 0.001005258634495476,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.015131233171996428,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.020201413196627983,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.40124568455503323,
+          "operand_b_mass": 0.4098025105078705,
+          "operation_mass": 0.010247961983259302,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.15850242169108242,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.016837582079460844,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.32336899610236286,
+          "operand_b_mass": 0.27745561618357895,
+          "operation_mass": 0.013063866354059428,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.36927397083491087,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.002685735957493307,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.43563386240275576,
+          "operand_b_mass": 0.5107718589249999,
+          "operation_mass": 0.0016109353382489644,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.0492976323585026,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.000963810518351238,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.48933623285920474,
+          "operand_b_mass": 0.4935265596664976,
+          "operation_mass": 0.0009649649509810843,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.015208434828673489,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.017867165798088537,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.4093121442012489,
+          "operand_b_mass": 0.4207114739809185,
+          "operation_mass": 0.009138139509013854,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.14297107332386078,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_canonical_seed1337__E_EXPLICIT_AUTHORITY": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.20812697590663448,
+          "operand_b_mass": 0.14017127356746642,
+          "operation_mass": 0.0016555039435161233,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.6047414068132639,
+          "pointer_mass": 0.04530481009205687
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.11314899345579761,
+          "operand_b_mass": 0.1046374619807466,
+          "operation_mass": 0.0030587136585381812,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.73535837829113,
+          "pointer_mass": 0.04379645535955205
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.0029846429395547604,
+          "operand_b_mass": 0.027432088895875496,
+          "operation_mass": 0.0012877013112301938,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.04836500403471291,
+          "pointer_mass": 0.919930561631918
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.007201777899899753,
+          "operand_b_mass": 0.004029285989963683,
+          "operation_mass": 0.00010367428271820244,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.0038564472502912394,
+          "pointer_mass": 0.9848088301718235
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.13925187150598503,
+          "operand_b_mass": 0.09723117167595774,
+          "operation_mass": 0.0019969687797129153,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.7090471446514129,
+          "pointer_mass": 0.05247281175106764
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.11975771778379567,
+          "operand_b_mass": 0.11421517913695425,
+          "operation_mass": 0.0030611996189691126,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.719704057276249,
+          "pointer_mass": 0.04326183227822185
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.0038878606632351876,
+          "operand_b_mass": 0.026918748230673372,
+          "operation_mass": 0.0012215714203193783,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.04909310061484575,
+          "pointer_mass": 0.9188787460327148
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.009340244252234698,
+          "operand_b_mass": 0.005114922404754907,
+          "operation_mass": 0.00011454124869487714,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.004145023250021041,
+          "pointer_mass": 0.9812853068113327
+        }
+      }
+    },
+    "A3_MARKER_FIXED_canonical_seed42__A_ADJACENT": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.44632612761834023,
+          "operand_b_mass": 0.4745777110985273,
+          "operation_mass": 0.003996865022739371,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.07509932350694726,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4919728911590937,
+          "operand_b_mass": 0.5011732313549147,
+          "operation_mass": 0.00027423179023458035,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.006579649882132799,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4535548999803723,
+          "operand_b_mass": 0.42231477000514134,
+          "operation_mass": 0.009388792060053674,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.11474153875606134,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.492719608132029,
+          "operand_b_mass": 0.4862365209235577,
+          "operation_mass": 0.0015881991151218244,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.019455671617470215,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4199133276939392,
+          "operand_b_mass": 0.42424852307885885,
+          "operation_mass": 0.0069871036454060235,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.14885107217123733,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4954192310629878,
+          "operand_b_mass": 0.49897943272662815,
+          "operation_mass": 0.0002536040729637534,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.005347749694919912,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4777383381035179,
+          "operand_b_mass": 0.41290041546017164,
+          "operation_mass": 0.007334882221039151,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.10202636668691412,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 82.5,
+          "operand_a_mass": 0.4939575069118291,
+          "operand_b_mass": 0.4865991484373808,
+          "operation_mass": 0.0014025600561581087,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.0180407895706594,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_canonical_seed42__B_EARLY_PADDED": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.5266630126163363,
+          "operand_b_mass": 0.15069775669589944,
+          "operation_mass": 0.008826834778074045,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.31381238530157135,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.9225468158721923,
+          "operand_b_mass": 0.00026435120761476584,
+          "operation_mass": 0.00634585410625732,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.0708429936596076,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.9046849727630615,
+          "operand_b_mass": 0.00017513575026774087,
+          "operation_mass": 0.01205939991618834,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.08308048504186445,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.9199163593351841,
+          "operand_b_mass": 0.0013661288457115007,
+          "operation_mass": 0.002150801455354667,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.0765667162835598,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.39998087119311093,
+          "operand_b_mass": 0.12255730216857046,
+          "operation_mass": 0.015427329530939459,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.46203448306769135,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.9319866687059403,
+          "operand_b_mass": 0.0005653309515992078,
+          "operation_mass": 0.005630502467829502,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.06181748612434603,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.912030678987503,
+          "operand_b_mass": 4.6159958931557556e-05,
+          "operation_mass": 0.011284218512264488,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.07663894612051081,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.9074015319347382,
+          "operand_b_mass": 0.0027356676542694912,
+          "operation_mass": 0.0025403767154784872,
+          "operation_to_answer_distance": 58.0,
+          "other_mass": 0.08732244335114955,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_canonical_seed42__C_NEAR_PADDED": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.4012926796782267,
+          "operand_b_mass": 0.42024829879569553,
+          "operation_mass": 0.0025108560371563727,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.175948167363822,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.47532188775148826,
+          "operand_b_mass": 0.48382589395823744,
+          "operation_mass": 0.00021723006283309588,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.04063498906034511,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.44250872313568834,
+          "operand_b_mass": 0.4030792526561527,
+          "operation_mass": 0.006458754422601487,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.1479532743789605,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.4550020813388983,
+          "operand_b_mass": 0.45747475204698274,
+          "operation_mass": 0.0009004015929349407,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.08662277022376656,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.35956200771033764,
+          "operand_b_mass": 0.36130074425600467,
+          "operation_mass": 0.004605797684780555,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.2745314582018182,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.4819260385702364,
+          "operand_b_mass": 0.48597563268558586,
+          "operation_mass": 0.00022434521642935578,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.03187397936126217,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.4639917343854904,
+          "operand_b_mass": 0.3905012381830602,
+          "operation_mass": 0.005338884834054624,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.14016815202776342,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 102.5,
+          "operand_a_mass": 0.45308628738857804,
+          "operand_b_mass": 0.4601969693903811,
+          "operation_mass": 0.0008621648870757781,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.08585456432774663,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_canonical_seed42__D_COMPETING": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.005366344102171183,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.4357921721508319,
+          "operand_b_mass": 0.4627619189660891,
+          "operation_mass": 0.003283574933180944,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.09279599790097563,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0006645211777026816,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.4874732139069238,
+          "operand_b_mass": 0.49663362994779164,
+          "operation_mass": 0.00023803625238656424,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.014990614799899049,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.019635014133018557,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.4404078061968903,
+          "operand_b_mass": 0.40540324201210753,
+          "operation_mass": 0.006830589877336024,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.12772334781766403,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0016230024897595286,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.4894465141551336,
+          "operand_b_mass": 0.483504228349193,
+          "operation_mass": 0.0014022165069036419,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.024024026925326326,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.00987959647545722,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.40248411064967515,
+          "operand_b_mass": 0.4066472453996539,
+          "operation_mass": 0.005786033802178281,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.17520301289041526,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0006140499581761105,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.4912429490243085,
+          "operand_b_mass": 0.4949540654721204,
+          "operation_mass": 0.00022758756210805586,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.01296134304284351,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.018665684189181776,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.4627978271339089,
+          "operand_b_mass": 0.39592984619521304,
+          "operation_mass": 0.005480352089580265,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.11712629153626039,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0015294007469492498,
+          "input_tokens": 113.0,
+          "operand_a_mass": 0.4905435087857768,
+          "operand_b_mass": 0.4838433492928743,
+          "operation_mass": 0.001273009751457721,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.022810746286995708,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_canonical_seed42__E_EXPLICIT_AUTHORITY": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.3486437110695988,
+          "operand_b_mass": 0.28498654065479057,
+          "operation_mass": 0.00782095551776365,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.2810623954515904,
+          "pointer_mass": 0.07748642258229665
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.11012219414114952,
+          "operand_b_mass": 0.1644508464029059,
+          "operation_mass": 0.03136008321016561,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.27957457369193434,
+          "pointer_mass": 0.41449230071157217
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.08787750186165795,
+          "operand_b_mass": 0.020066313457209616,
+          "operation_mass": 0.018494187394389884,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.14308700966648757,
+          "pointer_mass": 0.7304749965667725
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.0018344597961913677,
+          "operand_b_mass": 0.041147648601327094,
+          "operation_mass": 7.111762395197729e-05,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.00707602127440623,
+          "pointer_mass": 0.9498707748949528
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.25401016548275945,
+          "operand_b_mass": 0.2305720097385347,
+          "operation_mass": 0.013065261379233561,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.3784157380461693,
+          "pointer_mass": 0.12393683614209294
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.1684806446544826,
+          "operand_b_mass": 0.15828516166657208,
+          "operation_mass": 0.02962654132861644,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.26084960587322714,
+          "pointer_mass": 0.3827580623328686
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.09539404450915753,
+          "operand_b_mass": 0.023745116242207587,
+          "operation_mass": 0.01787000335752964,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.13701031915843487,
+          "pointer_mass": 0.7259805053472519
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 134.5,
+          "operand_a_mass": 0.003781226796490955,
+          "operand_b_mass": 0.059279527980834246,
+          "operation_mass": 8.382929499930469e-05,
+          "operation_to_answer_distance": 71.0,
+          "other_mass": 0.008614796347683296,
+          "pointer_mass": 0.9282406508922577
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed1337__A_ADJACENT": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.3000820737579488,
+          "operand_b_mass": 0.3479926238564076,
+          "operation_mass": 0.039639495697338135,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.3122858074493706,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.24365389113972924,
+          "operand_b_mass": 0.31003960482776166,
+          "operation_mass": 0.027727777377003805,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.4185787288006395,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4794739287386619,
+          "operand_b_mass": 0.5003245014611821,
+          "operation_mass": 0.0004371431154879701,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.019764438043966947,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.269659046526067,
+          "operand_b_mass": 0.3463023287476972,
+          "operation_mass": 0.030449497627705567,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.35358912949450316,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.24585345461964608,
+          "operand_b_mass": 0.3069099296582863,
+          "operation_mass": 0.04665391561575234,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.40058270618319514,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.2321071940827096,
+          "operand_b_mass": 0.34759779619053005,
+          "operation_mass": 0.025279700057581067,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.39501531459391115,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.46431491122348234,
+          "operand_b_mass": 0.4949967557913624,
+          "operation_mass": 0.0009893054148051306,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.03969906171987532,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.256974686216563,
+          "operand_b_mass": 0.296413666382432,
+          "operation_mass": 0.03381663860636763,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.412794993724674,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed1337__B_EARLY_PADDED": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.09454276322576334,
+          "operand_b_mass": 0.14924602589162533,
+          "operation_mass": 0.011425247811712325,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.744785987585783,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.0069222248675941955,
+          "operand_b_mass": 0.28391385208815334,
+          "operation_mass": 0.021155152784194796,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.6880087625235319,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.0737109187830356,
+          "operand_b_mass": 0.01846285038336646,
+          "operation_mass": 3.949110794110311e-06,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.9078222930431366,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.01449874554091366,
+          "operand_b_mass": 0.04131109114969149,
+          "operation_mass": 0.0017545143906318116,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.9424356482923031,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.042355398822110146,
+          "operand_b_mass": 0.07253670220961794,
+          "operation_mass": 0.011705825151875616,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.8734020978212357,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.004528099865274271,
+          "operand_b_mass": 0.32165211662650106,
+          "operation_mass": 0.01981572061777115,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.6540040627121926,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.06979203482042066,
+          "operand_b_mass": 0.021147315029520542,
+          "operation_mass": 4.33145037277427e-06,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.9090563297271729,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.01775200283154845,
+          "operand_b_mass": 0.05266624032519758,
+          "operation_mass": 0.0018155486672185362,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.9277662307024002,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed1337__C_NEAR_PADDED": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.2245322267670417,
+          "operand_b_mass": 0.24430730922613292,
+          "operation_mass": 0.018118955969111995,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.5130415061488748,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.007350950886393548,
+          "operand_b_mass": 0.1586108056177295,
+          "operation_mass": 0.003963026054771035,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.8300752244889736,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.0009274116379032193,
+          "operand_b_mass": 0.007312690656640086,
+          "operation_mass": 4.700674124169524e-07,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.9917594492435455,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.028345195282599888,
+          "operand_b_mass": 0.10986479764105753,
+          "operation_mass": 0.0019951091475377326,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.8597949095070362,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.12427888624370098,
+          "operand_b_mass": 0.1460677691968158,
+          "operation_mass": 0.0195731395855546,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.7100801974534988,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.008217331603373169,
+          "operand_b_mass": 0.18446861180459564,
+          "operation_mass": 0.0032888481953705197,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.8040252268314362,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.0007860741900458379,
+          "operand_b_mass": 0.0090835452032195,
+          "operation_mass": 4.616799959222817e-07,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.9901299148797988,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.03180681478697807,
+          "operand_b_mass": 0.12782522565685212,
+          "operation_mass": 0.001519198420282919,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.8388487547636032,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed1337__D_COMPETING": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.026891989586874842,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.28541457594401437,
+          "operand_b_mass": 0.3343920624363818,
+          "operation_mass": 0.030347362998872994,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.3229540138505399,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.05393395673600025,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.16268482353516447,
+          "operand_b_mass": 0.2653747087053489,
+          "operation_mass": 0.014424014172982424,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.503582492377609,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.00034569997290816444,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.48592090229867607,
+          "operand_b_mass": 0.4972574725457889,
+          "operation_mass": 0.00031349253931125534,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.01616244223259855,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.026207262802199694,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.27931357237976046,
+          "operand_b_mass": 0.334858444146812,
+          "operation_mass": 0.020782252902063193,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.33883847170509396,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0324946851702407,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.22663979725912214,
+          "operand_b_mass": 0.28569249565480276,
+          "operation_mass": 0.03583234413526952,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.419340668618679,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.050460020918399094,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.1545449438617652,
+          "operand_b_mass": 0.30223911001812664,
+          "operation_mass": 0.013200192910153419,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.4795557163655758,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0007312204668949107,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.479960662528174,
+          "operand_b_mass": 0.49067898899083956,
+          "operation_mass": 0.0006179153376251634,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.028011223183420954,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.029456124821444975,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.27709344318136575,
+          "operand_b_mass": 0.286459381878376,
+          "operation_mass": 0.02255830398062244,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.38443274777382613,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed1337__E_EXPLICIT_AUTHORITY": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.18396577097009867,
+          "operand_b_mass": 0.15267455390148826,
+          "operation_mass": 0.008362659375416115,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.5970969840884208,
+          "pointer_mass": 0.05790005400776863
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.004311548902114737,
+          "operand_b_mass": 0.6157847482711076,
+          "operation_mass": 0.02000420289696194,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.21836343300528824,
+          "pointer_mass": 0.14153606973122806
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.001607417961054125,
+          "operand_b_mass": 0.561265696270857,
+          "operation_mass": 0.00010899343835433229,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.4261315788142383,
+          "pointer_mass": 0.010886326918262057
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.045139278221176936,
+          "operand_b_mass": 0.2129000038607046,
+          "operation_mass": 0.015428071255155374,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.5919353891164064,
+          "pointer_mass": 0.13459726148284973
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.11286821847315878,
+          "operand_b_mass": 0.08616114106116583,
+          "operation_mass": 0.008666788297705352,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.7304345443844795,
+          "pointer_mass": 0.061869326420128344
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.0061566698695969535,
+          "operand_b_mass": 0.6586593955755233,
+          "operation_mass": 0.017620236543007196,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.1923376675695181,
+          "pointer_mass": 0.1252260372042656
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.003815859480528161,
+          "operand_b_mass": 0.580922755599022,
+          "operation_mass": 0.00041609019107227143,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.3918761532753706,
+          "pointer_mass": 0.022969166829716413
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.04911346337758005,
+          "operand_b_mass": 0.2192914318293333,
+          "operation_mass": 0.01749187329551205,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.5640584722161293,
+          "pointer_mass": 0.1500447578728199
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed42__A_ADJACENT": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.46145686521772405,
+          "operand_b_mass": 0.49187458550253493,
+          "operation_mass": 0.0022068934670882003,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.04446165432348152,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4882237241588882,
+          "operand_b_mass": 0.49345458185489405,
+          "operation_mass": 0.000975563232350396,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.017346125416224822,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.07722904840484261,
+          "operand_b_mass": 0.0959436928271316,
+          "operation_mass": 0.0862624802161008,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.7405647747218609,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.051500993059016766,
+          "operand_b_mass": 0.056194274069275706,
+          "operation_mass": 0.10447235167957843,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.7878323823213578,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4378824004970056,
+          "operand_b_mass": 0.4929457914263594,
+          "operation_mass": 0.0028723818426861667,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.06629943135058056,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.4922138487920165,
+          "operand_b_mass": 0.4956212165649049,
+          "operation_mass": 0.0006955370557989226,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.011469406995456666,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.0655976798851043,
+          "operand_b_mass": 0.08492202023044229,
+          "operation_mass": 0.09489218667149543,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.754588109254837,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 94.5,
+          "operand_a_mass": 0.056469818111509085,
+          "operand_b_mass": 0.06367825446650385,
+          "operation_mass": 0.09715373031795024,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.7826982229948044,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed42__B_EARLY_PADDED": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.386619339830213,
+          "operand_b_mass": 0.32621017275005215,
+          "operation_mass": 0.0009971564802228271,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.2861733450416068,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.0016349173176422483,
+          "operand_b_mass": 0.2957902904599905,
+          "operation_mass": 0.0020515027295914478,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.7005232881754637,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.032471232628449795,
+          "operand_b_mass": 0.03221458070911467,
+          "operation_mass": 0.0742396398447454,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.8610745400190354,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.020451715472154318,
+          "operand_b_mass": 0.01581600266508758,
+          "operation_mass": 0.08962893011048437,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.8741033531725406,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.34037140832224394,
+          "operand_b_mass": 0.23866605480088765,
+          "operation_mass": 0.0020361388094670475,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.4189264348708093,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.0020560289231070783,
+          "operand_b_mass": 0.34084364883601664,
+          "operation_mass": 0.0018592292326502502,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.6552410870790482,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.027079527918249368,
+          "operand_b_mass": 0.038971932325512174,
+          "operation_mass": 0.07523266598582268,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.8587158739566803,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.021868880605325103,
+          "operand_b_mass": 0.01767362989485264,
+          "operation_mass": 0.08815087117254734,
+          "operation_to_answer_distance": 70.0,
+          "other_mass": 0.872306615114212,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed42__C_NEAR_PADDED": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.36757883991174367,
+          "operand_b_mass": 0.38979577478296507,
+          "operation_mass": 0.0002063574872376961,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.24241904538175732,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.04144691663823323,
+          "operand_b_mass": 0.2679040795313995,
+          "operation_mass": 0.00016034962089293004,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.6904886662960052,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.04428158670198172,
+          "operand_b_mass": 0.06604570962954312,
+          "operation_mass": 0.0657298274571076,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.823942881077528,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.026979242102243006,
+          "operand_b_mass": 0.03763047209940851,
+          "operation_mass": 0.08741378257982432,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.847976504266262,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.3218462990230478,
+          "operand_b_mass": 0.33377742909992775,
+          "operation_mass": 0.00030388107775536355,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.3440724214873626,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.051304928527679296,
+          "operand_b_mass": 0.2784765097676427,
+          "operation_mass": 0.00012883274534942758,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.6700897343456745,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.03632957288064063,
+          "operand_b_mass": 0.06283057369291782,
+          "operation_mass": 0.07011414617300034,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.830725684762001,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 114.5,
+          "operand_a_mass": 0.027041123434901237,
+          "operand_b_mass": 0.04123221216723323,
+          "operation_mass": 0.08366320915520191,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.8480634540319443,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed42__D_COMPETING": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.012839837300824542,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.4548798114148894,
+          "operand_b_mass": 0.4834970078038168,
+          "operation_mass": 0.0015554719827168384,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.047227879310378286,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.002844602000186569,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.4690302386006806,
+          "operand_b_mass": 0.4769160956471751,
+          "operation_mass": 0.0008131164603582874,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.05039595469716005,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.058691948442719875,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.06424201906193047,
+          "operand_b_mass": 0.07790963131701574,
+          "operation_mass": 0.06318596838973463,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.7359704278409481,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.07451458368450403,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.04022365943528712,
+          "operand_b_mass": 0.04361666674958542,
+          "operation_mass": 0.07698455997742712,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.7646605208516121,
+          "pointer_mass": 0.0
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.015489124629675643,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.43071096481785387,
+          "operand_b_mass": 0.48114551861708604,
+          "operation_mass": 0.0021615427394358734,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.07049286331343865,
+          "pointer_mass": 0.0
+        },
+        "layer_1": {
+          "decoy_mass": 0.0020508954366960097,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.47842235619900747,
+          "operand_b_mass": 0.48179315134184436,
+          "operation_mass": 0.0006039549785782583,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.037129631359130146,
+          "pointer_mass": 0.0
+        },
+        "layer_2": {
+          "decoy_mass": 0.06407476244494319,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.05389519720338285,
+          "operand_b_mass": 0.06898230318911373,
+          "operation_mass": 0.06978705879300832,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.743260657787323,
+          "pointer_mass": 0.0
+        },
+        "layer_3": {
+          "decoy_mass": 0.07307238578796386,
+          "input_tokens": 125.0,
+          "operand_a_mass": 0.043805966665968296,
+          "operand_b_mass": 0.04922049050219357,
+          "operation_mass": 0.07132441736757755,
+          "operation_to_answer_distance": 9.0,
+          "other_mass": 0.7625767260789871,
+          "pointer_mass": 0.0
+        }
+      }
+    },
+    "A3_MARKER_FIXED_factorized_seed42__E_EXPLICIT_AUTHORITY": {
+      "train": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.3397502367349716,
+          "operand_b_mass": 0.33150231964965543,
+          "operation_mass": 0.0005303568308516304,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.32286902791820465,
+          "pointer_mass": 0.0053480676181152376
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.012920388378552162,
+          "operand_b_mass": 0.7770938664674759,
+          "operation_mass": 0.001422638399526477,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.13297391226515173,
+          "pointer_mass": 0.0755891889682971
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.06116213134955615,
+          "operand_b_mass": 0.06275262293638662,
+          "operation_mass": 0.035495848179562015,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.616287126019597,
+          "pointer_mass": 0.2243022789247334
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.02479891972616315,
+          "operand_b_mass": 0.05337598484475166,
+          "operation_mass": 0.04753025026293471,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.655772790312767,
+          "pointer_mass": 0.2185220517218113
+        }
+      },
+      "validation": {
+        "layer_0": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.2946394255123323,
+          "operand_b_mass": 0.23078460139777235,
+          "operation_mass": 0.0012050638123412226,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.46356404102407395,
+          "pointer_mass": 0.009806883005876444
+        },
+        "layer_1": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.011047378767398187,
+          "operand_b_mass": 0.7968901798129082,
+          "operation_mass": 0.0011552891213796102,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.12045273091644049,
+          "pointer_mass": 0.07045442676171661
+        },
+        "layer_2": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.04555728565901518,
+          "operand_b_mass": 0.06194479675032198,
+          "operation_mass": 0.039922413509339096,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.6298690885305405,
+          "pointer_mass": 0.22270639687776567
+        },
+        "layer_3": {
+          "decoy_mass": 0.0,
+          "input_tokens": 146.5,
+          "operand_a_mass": 0.024117260379716753,
+          "operand_b_mass": 0.054243112169206145,
+          "operation_mass": 0.04543816018849611,
+          "operation_to_answer_distance": 83.0,
+          "other_mass": 0.6540508151054383,
+          "pointer_mass": 0.22215066105127335
+        }
+      }
+    }
+  }
+}

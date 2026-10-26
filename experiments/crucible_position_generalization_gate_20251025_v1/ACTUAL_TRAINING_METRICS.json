@@ -1,0 +1,242 @@
+{
+  "FIXED_POSITION_CONTROL_canonical_seed1337": {
+    "attention_max_abs_logit_diff": 0.0,
+    "by_split": {
+      "train": {
+        "accuracy": 1.0,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 32,
+          "both_correct_rate": 1.0,
+          "pair_groups": 32,
+          "predictions_switched": 32,
+          "split": "train"
+        },
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 1.0,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 8,
+          "both_correct_rate": 1.0,
+          "pair_groups": 8,
+          "predictions_switched": 8,
+          "split": "validation"
+        },
+        "rows": 20
+      }
+    },
+    "instrumentation_pass": true
+  },
+  "FIXED_POSITION_CONTROL_canonical_seed42": {
+    "attention_max_abs_logit_diff": 0.0,
+    "by_split": {
+      "train": {
+        "accuracy": 1.0,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 32,
+          "both_correct_rate": 1.0,
+          "pair_groups": 32,
+          "predictions_switched": 32,
+          "split": "train"
+        },
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 1.0,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 8,
+          "both_correct_rate": 1.0,
+          "pair_groups": 8,
+          "predictions_switched": 8,
+          "split": "validation"
+        },
+        "rows": 20
+      }
+    },
+    "instrumentation_pass": true
+  },
+  "FIXED_POSITION_CONTROL_factorized_seed1337": {
+    "attention_max_abs_logit_diff": 0.0,
+    "by_split": {
+      "train": {
+        "accuracy": 1.0,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 32,
+          "both_correct_rate": 1.0,
+          "pair_groups": 32,
+          "predictions_switched": 32,
+          "split": "train"
+        },
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 1.0,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 8,
+          "both_correct_rate": 1.0,
+          "pair_groups": 8,
+          "predictions_switched": 8,
+          "split": "validation"
+        },
+        "rows": 20
+      }
+    },
+    "instrumentation_pass": true
+  },
+  "FIXED_POSITION_CONTROL_factorized_seed42": {
+    "attention_max_abs_logit_diff": 0.0,
+    "by_split": {
+      "train": {
+        "accuracy": 1.0,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 32,
+          "both_correct_rate": 1.0,
+          "pair_groups": 32,
+          "predictions_switched": 32,
+          "split": "train"
+        },
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 1.0,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 8,
+          "both_correct_rate": 1.0,
+          "pair_groups": 8,
+          "predictions_switched": 8,
+          "split": "validation"
+        },
+        "rows": 20
+      }
+    },
+    "instrumentation_pass": true
+  },
+  "POSITION_VARIED_INTERVENTION_canonical_seed1337": {
+    "attention_max_abs_logit_diff": 0.0,
+    "by_split": {
+      "train": {
+        "accuracy": 0.975,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 30,
+          "both_correct_rate": 0.9375,
+          "pair_groups": 32,
+          "predictions_switched": 30,
+          "split": "train"
+        },
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.55,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 0,
+          "both_correct_rate": 0.0,
+          "pair_groups": 8,
+          "predictions_switched": 2,
+          "split": "validation"
+        },
+        "rows": 20
+      }
+    },
+    "instrumentation_pass": true
+  },
+  "POSITION_VARIED_INTERVENTION_canonical_seed42": {
+    "attention_max_abs_logit_diff": 0.0,
+    "by_split": {
+      "train": {
+        "accuracy": 0.95,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 28,
+          "both_correct_rate": 0.875,
+          "pair_groups": 32,
+          "predictions_switched": 29,
+          "split": "train"
+        },
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.65,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 1,
+          "both_correct_rate": 0.125,
+          "pair_groups": 8,
+          "predictions_switched": 2,
+          "split": "validation"
+        },
+        "rows": 20
+      }
+    },
+    "instrumentation_pass": true
+  },
+  "POSITION_VARIED_INTERVENTION_factorized_seed1337": {
+    "attention_max_abs_logit_diff": 0.0,
+    "by_split": {
+      "train": {
+        "accuracy": 0.9375,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 27,
+          "both_correct_rate": 0.84375,
+          "pair_groups": 32,
+          "predictions_switched": 28,
+          "split": "train"
+        },
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.5,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 0,
+          "both_correct_rate": 0.0,
+          "pair_groups": 8,
+          "predictions_switched": 1,
+          "split": "validation"
+        },
+        "rows": 20
+      }
+    },
+    "instrumentation_pass": true
+  },
+  "POSITION_VARIED_INTERVENTION_factorized_seed42": {
+    "attention_max_abs_logit_diff": 0.0,
+    "by_split": {
+      "train": {
+        "accuracy": 1.0,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 32,
+          "both_correct_rate": 1.0,
+          "pair_groups": 32,
+          "predictions_switched": 32,
+          "split": "train"
+        },
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.6,
+        "format_errors": 0,
+        "paired_unequal": {
+          "both_correct": 0,
+          "both_correct_rate": 0.0,
+          "pair_groups": 8,
+          "predictions_switched": 1,
+          "split": "validation"
+        },
+        "rows": 20
+      }
+    },
+    "instrumentation_pass": true
+  }
+}
