@@ -1,6 +1,6 @@
 {
   "schema_version": "crucible_research_ledger_v1",
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "status_values": [
     "ESTABLISHED",
     "FAILED",
@@ -675,6 +675,31 @@
         "experiments/crucible_two_candidate_pair_coverage_20261027_v1/FINALIZATION.json"
       ],
       "novelty_terms": ["rotated holdout", "pair coverage", "seed-by-panel interaction", "two-candidate transfer"]
+    },
+    {
+      "id": "two-candidate-pair-crossover-v1",
+      "status": "ESTABLISHED",
+      "title": "Two-candidate training-partner crossover",
+      "hypothesis": "For a fixed held-out candidate-pair panel, transfer performance changes with the training-partner panel, distinguishing coverage-graph dependence from a persistent single-pair weakness.",
+      "mechanisms": ["candidate-matching", "pair-coverage", "coverage-graph-dependence", "training-competence", "seed-variation", "counterfactual-selection"],
+      "interventions": ["Complete ordered train-panel/held-out-panel crossover", "16 new dense SHARED_SCORER cyclic arms combined with 8 immutable prior arms"],
+      "controls": ["Three training partners per held-out panel", "two seeds", "144 balanced training rows", "96 balanced validation rows", "95% training gate", "matched compact contexts", "deterministic oracle", "no sealed test", "prior checkpoint hash verification"],
+      "result": "All 16 new and all 24 combined arms passed training competence. Combined validation was 2,031/2,304 rows (88.15%), 495/768 paired groups (64.45%) and 768/768 abstention rows (100%). For held-out M0, M2 training produced 0/64 paired groups across both seeds, while M1 and M3 training each produced 47/64. No unordered pair was zero across its six crossover evaluations. The data support training-partner/coverage-graph dependence under this task and retain seed sensitivity, without establishing a neural mechanism.",
+      "limits": ["Four perfect matchings cover 16 of 28 possible unordered pairs", "Two seeds", "Validation contexts are a subset of the training context pool", "Four prior cells are reused by reference rather than retrained", "Only the tested two-candidate task and compact interface", "No variable-cardinality or neural-mechanism claim"],
+      "unresolved": ["Whether richer coverage over all 28 pairs improves transfer", "Which internal or optimization mechanism produces the panel interaction", "Whether the result persists with more seeds and independent context pools", "Whether coverage effects transfer beyond two candidates"],
+      "artifacts": [
+        "docs/CRUCIBLE_TWO_CANDIDATE_PAIR_CROSSOVER_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_TWO_CANDIDATE_PAIR_CROSSOVER_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_two_candidate_pair_crossover_20261027.py",
+        "experiments/crucible_two_candidate_pair_crossover_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_two_candidate_pair_crossover_20261027_v1/SUMMARY.json",
+        "experiments/crucible_two_candidate_pair_crossover_20261027_v1/ERROR_BREAKDOWN.json",
+        "experiments/crucible_two_candidate_pair_crossover_20261027_v1/SCIENTIFIC_INTERPRETATION.md",
+        "experiments/crucible_two_candidate_pair_crossover_20261027_v1/POST_RUN_REVIEW.md",
+        "experiments/crucible_two_candidate_pair_crossover_20261027_v1/HASHES.json",
+        "experiments/crucible_two_candidate_pair_crossover_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["panel crossover", "training partner", "coverage graph", "complete two-candidate crossover"]
     }
   ]
 }

@@ -1,0 +1,7466 @@
+{
+  "T_M0_V_M1_SEED1337": {
+    "cell": "T_M0_V_M1_SEED1337",
+    "partition": "M0->M1",
+    "seed": 1337,
+    "source": "prior",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M0",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 80,
+          "paired_correct": 16,
+          "paired_groups": 32,
+          "predicted_flips": 16,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 80,
+        "paired_correct": 16,
+        "paired_groups": 32,
+        "predicted_flips": 16,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M1"
+  },
+  "T_M0_V_M1_SEED42": {
+    "cell": "T_M0_V_M1_SEED42",
+    "partition": "M0->M1",
+    "seed": 42,
+    "source": "prior",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M0",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 80,
+          "paired_correct": 16,
+          "paired_groups": 32,
+          "predicted_flips": 16,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 80,
+        "paired_correct": 16,
+        "paired_groups": 32,
+        "predicted_flips": 16,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M1"
+  },
+  "T_M0_V_M2_SEED1337": {
+    "cell": "T_M0_V_M2_SEED1337",
+    "partition": "M0->M2",
+    "seed": 1337,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M0",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9583333333333334,
+          "correct": 23,
+          "paired_correct": 7,
+          "paired_groups": 8,
+          "predicted_flips": 7,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.9895833333333334,
+          "correct": 95,
+          "paired_correct": 31,
+          "paired_groups": 32,
+          "predicted_flips": 31,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9583333333333334,
+          "correct": 23,
+          "paired_correct": 7,
+          "paired_groups": 8,
+          "predicted_flips": 7,
+          "rows": 24
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.9895833333333334,
+        "correct": 95,
+        "paired_correct": 31,
+        "paired_groups": 32,
+        "predicted_flips": 31,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M2"
+  },
+  "T_M0_V_M2_SEED42": {
+    "cell": "T_M0_V_M2_SEED42",
+    "partition": "M0->M2",
+    "seed": 42,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M0",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 80,
+          "paired_correct": 16,
+          "paired_groups": 32,
+          "predicted_flips": 16,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 80,
+        "paired_correct": 16,
+        "paired_groups": 32,
+        "predicted_flips": 16,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M2"
+  },
+  "T_M0_V_M3_SEED1337": {
+    "cell": "T_M0_V_M3_SEED1337",
+    "partition": "M0->M3",
+    "seed": 1337,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M0",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9583333333333334,
+          "correct": 23,
+          "paired_correct": 7,
+          "paired_groups": 8,
+          "predicted_flips": 7,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.9895833333333334,
+          "correct": 95,
+          "paired_correct": 31,
+          "paired_groups": 32,
+          "predicted_flips": 31,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9583333333333334,
+          "correct": 23,
+          "paired_correct": 7,
+          "paired_groups": 8,
+          "predicted_flips": 7,
+          "rows": 24
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.9895833333333334,
+        "correct": 95,
+        "paired_correct": 31,
+        "paired_groups": 32,
+        "predicted_flips": 31,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M3"
+  },
+  "T_M0_V_M3_SEED42": {
+    "cell": "T_M0_V_M3_SEED42",
+    "partition": "M0->M3",
+    "seed": 42,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M0",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 80,
+          "paired_correct": 16,
+          "paired_groups": 32,
+          "predicted_flips": 16,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 80,
+        "paired_correct": 16,
+        "paired_groups": 32,
+        "predicted_flips": 16,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M3"
+  },
+  "T_M1_V_M0_SEED1337": {
+    "cell": "T_M1_V_M0_SEED1337",
+    "partition": "M1->M0",
+    "seed": 1337,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M1",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.7916666666666666,
+          "correct": 19,
+          "paired_correct": 3,
+          "paired_groups": 8,
+          "predicted_flips": 3,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.8229166666666666,
+          "correct": 79,
+          "paired_correct": 15,
+          "paired_groups": 32,
+          "predicted_flips": 15,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9583333333333334,
+          "correct": 23,
+          "paired_correct": 7,
+          "paired_groups": 8,
+          "predicted_flips": 7,
+          "rows": 24
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.8229166666666666,
+        "correct": 79,
+        "paired_correct": 15,
+        "paired_groups": 32,
+        "predicted_flips": 15,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M0"
+  },
+  "T_M1_V_M0_SEED42": {
+    "cell": "T_M1_V_M0_SEED42",
+    "partition": "M1->M0",
+    "seed": 42,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M1",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 1.0,
+          "correct": 96,
+          "paired_correct": 32,
+          "paired_groups": 32,
+          "predicted_flips": 32,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 1.0,
+        "correct": 96,
+        "paired_correct": 32,
+        "paired_groups": 32,
+        "predicted_flips": 32,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M0"
+  },
+  "T_M1_V_M2_SEED1337": {
+    "cell": "T_M1_V_M2_SEED1337",
+    "partition": "M1->M2",
+    "seed": 1337,
+    "source": "prior",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M1",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 1.0,
+          "correct": 96,
+          "paired_correct": 32,
+          "paired_groups": 32,
+          "predicted_flips": 32,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 1.0,
+        "correct": 96,
+        "paired_correct": 32,
+        "paired_groups": 32,
+        "predicted_flips": 32,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M2"
+  },
+  "T_M1_V_M2_SEED42": {
+    "cell": "T_M1_V_M2_SEED42",
+    "partition": "M1->M2",
+    "seed": 42,
+    "source": "prior",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M1",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.7083333333333334,
+          "correct": 17,
+          "paired_correct": 1,
+          "paired_groups": 8,
+          "predicted_flips": 1,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.6770833333333334,
+          "correct": 65,
+          "paired_correct": 1,
+          "paired_groups": 32,
+          "predicted_flips": 1,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.7083333333333334,
+          "correct": 17,
+          "paired_correct": 1,
+          "paired_groups": 8,
+          "predicted_flips": 1,
+          "rows": 24
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.6770833333333334,
+        "correct": 65,
+        "paired_correct": 1,
+        "paired_groups": 32,
+        "predicted_flips": 1,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M2"
+  },
+  "T_M1_V_M3_SEED1337": {
+    "cell": "T_M1_V_M3_SEED1337",
+    "partition": "M1->M3",
+    "seed": 1337,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M1",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 1.0,
+          "correct": 96,
+          "paired_correct": 32,
+          "paired_groups": 32,
+          "predicted_flips": 32,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 1.0,
+        "correct": 96,
+        "paired_correct": 32,
+        "paired_groups": 32,
+        "predicted_flips": 32,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M3"
+  },
+  "T_M1_V_M3_SEED42": {
+    "cell": "T_M1_V_M3_SEED42",
+    "partition": "M1->M3",
+    "seed": 42,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M1",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 1.0,
+          "correct": 96,
+          "paired_correct": 32,
+          "paired_groups": 32,
+          "predicted_flips": 32,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 1.0,
+        "correct": 96,
+        "paired_correct": 32,
+        "paired_groups": 32,
+        "predicted_flips": 32,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M3"
+  },
+  "T_M2_V_M0_SEED1337": {
+    "cell": "T_M2_V_M0_SEED1337",
+    "partition": "M2->M0",
+    "seed": 1337,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M2",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 64,
+          "paired_correct": 0,
+          "paired_groups": 32,
+          "predicted_flips": 0,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.6666666666666666,
+        "correct": 64,
+        "paired_correct": 0,
+        "paired_groups": 32,
+        "predicted_flips": 0,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M0"
+  },
+  "T_M2_V_M0_SEED42": {
+    "cell": "T_M2_V_M0_SEED42",
+    "partition": "M2->M0",
+    "seed": 42,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M2",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 64,
+          "paired_correct": 0,
+          "paired_groups": 32,
+          "predicted_flips": 0,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.6666666666666666,
+        "correct": 64,
+        "paired_correct": 0,
+        "paired_groups": 32,
+        "predicted_flips": 0,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M0"
+  },
+  "T_M2_V_M1_SEED1337": {
+    "cell": "T_M2_V_M1_SEED1337",
+    "partition": "M2->M1",
+    "seed": 1337,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M2",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 1.0,
+          "correct": 96,
+          "paired_correct": 32,
+          "paired_groups": 32,
+          "predicted_flips": 32,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 1.0,
+        "correct": 96,
+        "paired_correct": 32,
+        "paired_groups": 32,
+        "predicted_flips": 32,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M1"
+  },
+  "T_M2_V_M1_SEED42": {
+    "cell": "T_M2_V_M1_SEED42",
+    "partition": "M2->M1",
+    "seed": 42,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M2",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 1.0,
+          "correct": 96,
+          "paired_correct": 32,
+          "paired_groups": 32,
+          "predicted_flips": 32,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 1.0,
+        "correct": 96,
+        "paired_correct": 32,
+        "paired_groups": 32,
+        "predicted_flips": 32,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M1"
+  },
+  "T_M2_V_M3_SEED1337": {
+    "cell": "T_M2_V_M3_SEED1337",
+    "partition": "M2->M3",
+    "seed": 1337,
+    "source": "prior",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M2",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 64,
+          "paired_correct": 0,
+          "paired_groups": 32,
+          "predicted_flips": 0,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.6666666666666666,
+        "correct": 64,
+        "paired_correct": 0,
+        "paired_groups": 32,
+        "predicted_flips": 0,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M3"
+  },
+  "T_M2_V_M3_SEED42": {
+    "cell": "T_M2_V_M3_SEED42",
+    "partition": "M2->M3",
+    "seed": 42,
+    "source": "prior",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M2",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 1.0,
+          "correct": 96,
+          "paired_correct": 32,
+          "paired_groups": 32,
+          "predicted_flips": 32,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 1.0,
+        "correct": 96,
+        "paired_correct": 32,
+        "paired_groups": 32,
+        "predicted_flips": 32,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M3"
+  },
+  "T_M3_V_M0_SEED1337": {
+    "cell": "T_M3_V_M0_SEED1337",
+    "partition": "M3->M0",
+    "seed": 1337,
+    "source": "prior",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M3",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9166666666666666,
+          "correct": 22,
+          "paired_correct": 6,
+          "paired_groups": 8,
+          "predicted_flips": 6,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9166666666666666,
+          "correct": 22,
+          "paired_correct": 6,
+          "paired_groups": 8,
+          "predicted_flips": 6,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9166666666666666,
+          "correct": 22,
+          "paired_correct": 6,
+          "paired_groups": 8,
+          "predicted_flips": 6,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9166666666666666,
+          "correct": 22,
+          "paired_correct": 6,
+          "paired_groups": 8,
+          "predicted_flips": 6,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.9166666666666666,
+          "correct": 88,
+          "paired_correct": 24,
+          "paired_groups": 32,
+          "predicted_flips": 24,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.9166666666666666,
+        "correct": 88,
+        "paired_correct": 24,
+        "paired_groups": 32,
+        "predicted_flips": 24,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M0"
+  },
+  "T_M3_V_M0_SEED42": {
+    "cell": "T_M3_V_M0_SEED42",
+    "partition": "M3->M0",
+    "seed": 42,
+    "source": "prior",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M3",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9166666666666666,
+          "correct": 22,
+          "paired_correct": 6,
+          "paired_groups": 8,
+          "predicted_flips": 6,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9166666666666666,
+          "correct": 22,
+          "paired_correct": 6,
+          "paired_groups": 8,
+          "predicted_flips": 6,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.875,
+          "correct": 21,
+          "paired_correct": 5,
+          "paired_groups": 8,
+          "predicted_flips": 5,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9166666666666666,
+          "correct": 22,
+          "paired_correct": 6,
+          "paired_groups": 8,
+          "predicted_flips": 6,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M0": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.90625,
+          "correct": 87,
+          "paired_correct": 23,
+          "paired_groups": 32,
+          "predicted_flips": 23,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "4,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "6,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.9583333333333334,
+          "correct": 23,
+          "paired_correct": 7,
+          "paired_groups": 8,
+          "predicted_flips": 7,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.90625,
+        "correct": 87,
+        "paired_correct": 23,
+        "paired_groups": 32,
+        "predicted_flips": 23,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M0"
+  },
+  "T_M3_V_M1_SEED1337": {
+    "cell": "T_M3_V_M1_SEED1337",
+    "partition": "M3->M1",
+    "seed": 1337,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M3",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 80,
+          "paired_correct": 16,
+          "paired_groups": 32,
+          "predicted_flips": 16,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 80,
+        "paired_correct": 16,
+        "paired_groups": 32,
+        "predicted_flips": 16,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M1"
+  },
+  "T_M3_V_M1_SEED42": {
+    "cell": "T_M3_V_M1_SEED42",
+    "partition": "M3->M1",
+    "seed": 42,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M3",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.875,
+          "correct": 21,
+          "paired_correct": 5,
+          "paired_groups": 8,
+          "predicted_flips": 5,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.875,
+          "correct": 21,
+          "paired_correct": 5,
+          "paired_groups": 8,
+          "predicted_flips": 5,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M1": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.8541666666666666,
+          "correct": 82,
+          "paired_correct": 18,
+          "paired_groups": 32,
+          "predicted_flips": 18,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "4,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "5,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.75,
+          "correct": 18,
+          "paired_correct": 2,
+          "paired_groups": 8,
+          "predicted_flips": 2,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.8541666666666666,
+        "correct": 82,
+        "paired_correct": 18,
+        "paired_groups": 32,
+        "predicted_flips": 18,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M1"
+  },
+  "T_M3_V_M2_SEED1337": {
+    "cell": "T_M3_V_M2_SEED1337",
+    "partition": "M3->M2",
+    "seed": 1337,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M3",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 1.0,
+          "correct": 96,
+          "paired_correct": 32,
+          "paired_groups": 32,
+          "predicted_flips": 32,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 1.0,
+        "correct": 96,
+        "paired_correct": 32,
+        "paired_groups": 32,
+        "predicted_flips": 32,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M2"
+  },
+  "T_M3_V_M2_SEED42": {
+    "cell": "T_M3_V_M2_SEED42",
+    "partition": "M3->M2",
+    "seed": 42,
+    "source": "new",
+    "train": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "2,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "by_unordered_pair": {
+        "0,4": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "1,5": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "2,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        },
+        "3,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "rows": 12
+          },
+          "accuracy": 1.0,
+          "correct": 36,
+          "paired_correct": 12,
+          "paired_groups": 12,
+          "predicted_flips": 12,
+          "rows": 36
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 1.0,
+        "correct": 144,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "predicted_flips": 48,
+        "rows": 144
+      }
+    },
+    "train_panel": "M3",
+    "training_gate_pass": true,
+    "validation": {
+      "by_context": {
+        "1,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "2,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "3,8": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        },
+        "4,9": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 20,
+          "paired_correct": 4,
+          "paired_groups": 8,
+          "predicted_flips": 4,
+          "rows": 24
+        }
+      },
+      "by_panel": {
+        "M2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 80,
+          "paired_correct": 16,
+          "paired_groups": 32,
+          "predicted_flips": 16,
+          "rows": 96
+        }
+      },
+      "by_unordered_pair": {
+        "0,3": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "1,2": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        },
+        "4,7": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 1.0,
+          "correct": 24,
+          "paired_correct": 8,
+          "paired_groups": 8,
+          "predicted_flips": 8,
+          "rows": 24
+        },
+        "5,6": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "rows": 8
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 16,
+          "paired_correct": 0,
+          "paired_groups": 8,
+          "predicted_flips": 0,
+          "rows": 24
+        }
+      },
+      "overall": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 80,
+        "paired_correct": 16,
+        "paired_groups": 32,
+        "predicted_flips": 16,
+        "rows": 96
+      }
+    },
+    "validation_panel": "M2"
+  }
+}
