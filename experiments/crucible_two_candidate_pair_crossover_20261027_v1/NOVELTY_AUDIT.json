@@ -1,0 +1,28 @@
+{
+  "combined_arms": 24,
+  "decision": "PROCEED_AFTER_PREFLIGHT",
+  "experiment": "crucible_two_candidate_pair_crossover_20261027_v1",
+  "new_arms": 16,
+  "new_training": true,
+  "not_novel": [
+    "The dense SHARED_SCORER architecture",
+    "The cyclic schedule",
+    "The 500-update competence gate",
+    "Identifier-match labels and abstention class",
+    "Two-candidate paired metrics",
+    "The four panels and four prior cyclic cells"
+  ],
+  "novelty_claim": "No prior Crucible run evaluates every ordered train-panel/held-out-panel combination for the four disjoint candidate-pair matchings while preserving the dense cyclic path, compact serialization, balanced target classes and matched source-context controls.",
+  "related_records": [
+    "two-candidate-competence-gate-v1",
+    "two-candidate-transfer-forensics-v1",
+    "two-candidate-matched-context-probe-v1",
+    "two-candidate-identifier-forensics-v1",
+    "two-candidate-pair-coverage-v1",
+    "cardinality-competence-diagnostic-v1"
+  ],
+  "repository_ledger_checked": true,
+  "schema_version": "crucible_novelty_audit_v1",
+  "sealed_test_accessed": false,
+  "status": "pre_execution"
+}
