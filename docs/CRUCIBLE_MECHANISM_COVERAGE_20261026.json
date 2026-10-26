@@ -1,7 +1,7 @@
 {
   "schema_version": "crucible_mechanism_coverage_v1",
   "updated": "2026-10-27",
-  "indexed_final_reports": 32,
+  "indexed_final_reports": 33,
   "categories": [
     {
       "mechanism": "operation-recognition",
@@ -49,8 +49,8 @@
       "mechanism": "candidate-count-and-shared-scoring",
       "established": [],
       "failed": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer"],
-      "inconclusive": ["authority-component-ablation", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1", "two-candidate-transfer-forensics-v1", "two-candidate-identifier-forensics-v1"],
-      "unresolved": ["Training-competent candidate matching across cardinalities", "Candidate-independent scoring under interior-slot coverage", "Whether familiar candidate-set performance reflects exact-pair memorization or transferable identifier matching"]
+      "inconclusive": ["authority-component-ablation", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1", "two-candidate-transfer-forensics-v1", "two-candidate-identifier-forensics-v1", "two-candidate-pair-coverage-v1"],
+      "unresolved": ["Training-competent candidate matching across cardinalities", "Candidate-independent scoring under interior-slot coverage", "Whether familiar candidate-set performance reflects exact-pair memorization or transferable identifier matching", "Whether held-out pair errors persist across repeated independent holdouts"]
     },
     {
       "mechanism": "training-dynamics",
@@ -83,8 +83,8 @@
     },
     {
       "name": "cardinality-lineage",
-      "records": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1", "two-candidate-transfer-forensics-v1", "two-candidate-matched-context-probe-v1", "two-candidate-identifier-forensics-v1"],
-      "interpretation": "The first run failed paired four-candidate transfer. The explicit-ID follow-up failed training competence, so it cannot adjudicate shared scoring versus fixed-slot transfer. The isolated two-candidate gate establishes training competence for the cyclic schedule but leaves a validation transfer gap. The 2x2 audit weakens a padding-only explanation, the matched-context probe shows a familiar-versus-recombined candidate-set contrast on the same source context strata, and identifier forensics localizes errors to a few unordered families without proving memorization or a mechanism. None establishes variable-cardinality transfer."
+      "records": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1", "two-candidate-transfer-forensics-v1", "two-candidate-matched-context-probe-v1", "two-candidate-identifier-forensics-v1", "two-candidate-pair-coverage-v1"],
+      "interpretation": "The first run failed paired four-candidate transfer. The explicit-ID follow-up failed training competence, so it cannot adjudicate shared scoring versus fixed-slot transfer. The isolated two-candidate gate establishes training competence for the cyclic schedule but leaves a validation transfer gap. The 2x2 audit weakens a padding-only explanation, the matched-context probe shows a familiar-versus-recombined candidate-set contrast on the same source context strata, and identifier forensics localizes errors to a few unordered families without proving memorization or a mechanism. The rotated pair-coverage run shows all arms can fit training but held-out paired transfer remains incomplete and seed-by-panel dependent; because each pair was held out only once, it does not distinguish coverage from persistent pair-specific effects. None establishes variable-cardinality transfer."
     }
   ]
 }

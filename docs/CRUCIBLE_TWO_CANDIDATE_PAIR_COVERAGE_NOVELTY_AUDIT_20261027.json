@@ -1,0 +1,24 @@
+{
+  "schema_version": "crucible_novelty_audit_v1",
+  "experiment": "crucible_two_candidate_pair_coverage_20261027_v1",
+  "status": "pre_execution",
+  "repository_ledger_checked": true,
+  "related_records": [
+    "two-candidate-competence-gate-v1",
+    "two-candidate-transfer-forensics-v1",
+    "two-candidate-matched-context-probe-v1",
+    "two-candidate-identifier-forensics-v1",
+    "cardinality-competence-diagnostic-v1"
+  ],
+  "novelty_claim": "No prior Crucible training experiment rotates disjoint unordered candidate-pair panels while holding the dense cyclic training path, compact serialization, balanced target classes and source-context pool fixed.",
+  "not_novel": [
+    "The dense SHARED_SCORER architecture",
+    "The cyclic schedule",
+    "The 500-update competence gate",
+    "Identifier-match labels and abstention class",
+    "Two-candidate paired metrics"
+  ],
+  "new_training": true,
+  "sealed_test_accessed": false,
+  "decision": "PROCEED_AFTER_PREFLIGHT"
+}

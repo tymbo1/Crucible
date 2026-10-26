@@ -650,6 +650,31 @@
         "experiments/crucible_two_candidate_identifier_forensics_20261027_v1/FINALIZATION.json"
       ],
       "novelty_terms": ["identifier forensics", "unordered pair", "reversal consistency", "predicted identity"]
+    },
+    {
+      "id": "two-candidate-pair-coverage-v1",
+      "status": "INCONCLUSIVE",
+      "title": "Rotated two-candidate unordered-pair coverage",
+      "hypothesis": "Rotating disjoint unordered candidate-pair holdouts will distinguish held-out pair coverage from a persistent identifier-family weakness after training competence is established.",
+      "mechanisms": ["candidate-matching", "candidate-pair-transfer", "pair-coverage", "training-competence", "seed-variation", "counterfactual-selection"],
+      "interventions": ["Four disjoint perfect-matching pair panels", "Dense SHARED_SCORER cyclic training with 500 updates"],
+      "controls": ["Two seeds", "144 balanced training rows", "96 balanced validation rows", "95% training gate", "matched compact contexts", "deterministic oracle", "no sealed test"],
+      "result": "All 8/8 arms reached 144/144 training accuracy. Pooled validation was 656/768 rows (85.42%), 144/256 paired groups (56.25%) and 256/256 abstention rows (100%). The four held-out panels produced 47/64, 32/64, 33/64 and 32/64 paired groups respectively, with a strong partition-by-seed interaction: P1 was 1/32 versus 32/32 and P2 was 32/32 versus 0/32. The result establishes a held-out pair-transfer gap with seed sensitivity, but not a persistent identifier-family mechanism.",
+      "limits": ["Each of the 16 tested unordered pairs was held out only once", "Two independently trained seeds", "Validation contexts are a subset of the training context pool", "Only the tested two-candidate task and compact interface", "No neural-mechanism claim"],
+      "unresolved": ["Whether the same unordered pairs remain weak across repeated independent holdouts", "Whether the seed-by-panel interaction is optimization or representation driven", "Whether trained-pair fit transfers to independent contexts after exposure", "Whether a competent matcher transfers across candidate counts"],
+      "artifacts": [
+        "docs/CRUCIBLE_TWO_CANDIDATE_PAIR_COVERAGE_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_TWO_CANDIDATE_PAIR_COVERAGE_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_two_candidate_pair_coverage_20261027.py",
+        "experiments/crucible_two_candidate_pair_coverage_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_two_candidate_pair_coverage_20261027_v1/SUMMARY.json",
+        "experiments/crucible_two_candidate_pair_coverage_20261027_v1/ERROR_BREAKDOWN.json",
+        "experiments/crucible_two_candidate_pair_coverage_20261027_v1/SCIENTIFIC_INTERPRETATION.md",
+        "experiments/crucible_two_candidate_pair_coverage_20261027_v1/POST_RUN_REVIEW.md",
+        "experiments/crucible_two_candidate_pair_coverage_20261027_v1/HASHES.json",
+        "experiments/crucible_two_candidate_pair_coverage_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["rotated holdout", "pair coverage", "seed-by-panel interaction", "two-candidate transfer"]
     }
   ]
 }
