@@ -551,6 +551,31 @@
         "experiments/crucible_cardinality_competence_diagnostic_20261026_v1/FINALIZATION.json"
       ],
       "novelty_terms": ["competence diagnostic", "representation by schedule", "dense cyclic", "structured shuffled", "slot coverage"]
+    },
+    {
+      "id": "two-candidate-competence-gate-v1",
+      "status": "INCONCLUSIVE",
+      "title": "Isolated two-candidate matching competence gate",
+      "hypothesis": "Removing mixed-cardinality rows and balancing slot-0, slot-1 and abstention classes will let the dense matcher learn both candidate slots reliably before cardinality transfer is revisited.",
+      "mechanisms": ["candidate-matching", "training-competence", "slot-selection", "schedule"],
+      "interventions": ["Dense cyclic schedule", "dense deterministic shuffled schedule"],
+      "controls": ["Immutable canonical source rows", "144 balanced train rows", "96 balanced validation rows", "two seeds", "95% training gate", "no mixed cardinality", "no sealed test"],
+      "result": "Both cyclic arms reached 144/144 training accuracy and learned slot 0, slot 1 and abstention perfectly. Shuffled arms reached 132/144 and 120/144 and failed the training gate. The passing cyclic arms reached 70/96 and 81/96 validation accuracy, with perfect abstention but only 9/32 and 17/32 paired validation groups.",
+      "limits": ["Only two candidates", "Two seeds", "Validation uses the existing split", "No variable-cardinality transfer", "Schedule mechanism is unresolved"],
+      "unresolved": ["Whether more training or a different schedule closes the two-candidate validation gap", "Which optimization mechanism produces cyclic-versus-shuffled sensitivity", "Whether a competent two-candidate matcher transfers to three or more candidates"],
+      "artifacts": [
+        "docs/CRUCIBLE_TWO_CANDIDATE_COMPETENCE_GATE_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_TWO_CANDIDATE_COMPETENCE_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_two_candidate_competence_gate_20261027.py",
+        "experiments/crucible_two_candidate_competence_gate_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_two_candidate_competence_gate_20261027_v1/SUMMARY.json",
+        "experiments/crucible_two_candidate_competence_gate_20261027_v1/DATA_AUDIT.json",
+        "experiments/crucible_two_candidate_competence_gate_20261027_v1/ERROR_BREAKDOWN.json",
+        "experiments/crucible_two_candidate_competence_gate_20261027_v1/SCIENTIFIC_INTERPRETATION.md",
+        "experiments/crucible_two_candidate_competence_gate_20261027_v1/HASHES.json",
+        "experiments/crucible_two_candidate_competence_gate_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["two-candidate competence", "balanced slots", "isolated matching", "schedule sensitivity"]
     }
   ]
 }

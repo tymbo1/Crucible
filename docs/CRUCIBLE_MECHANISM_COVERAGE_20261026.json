@@ -1,7 +1,7 @@
 {
   "schema_version": "crucible_mechanism_coverage_v1",
-  "updated": "2026-10-26",
-  "indexed_final_reports": 28,
+  "updated": "2026-10-27",
+  "indexed_final_reports": 29,
   "categories": [
     {
       "mechanism": "operation-recognition",
@@ -49,14 +49,14 @@
       "mechanism": "candidate-count-and-shared-scoring",
       "established": [],
       "failed": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer"],
-      "inconclusive": ["authority-component-ablation", "cardinality-competence-diagnostic-v1"],
+      "inconclusive": ["authority-component-ablation", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1"],
       "unresolved": ["Training-competent candidate matching across cardinalities", "Candidate-independent scoring under interior-slot coverage"]
     },
     {
       "mechanism": "training-dynamics",
       "established": [],
       "failed": ["paired-positional-exposure", "position-generalization"],
-      "inconclusive": ["batch-composition-order", "authority-component-ablation", "cardinality-competence-diagnostic-v1"],
+      "inconclusive": ["batch-composition-order", "authority-component-ablation", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1"],
       "unresolved": ["Whether schedule, representation, or optimization budget is the dominant bottleneck"]
     }
   ],
@@ -83,8 +83,8 @@
     },
     {
       "name": "cardinality-lineage",
-      "records": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer"],
-      "interpretation": "The first run failed paired four-candidate transfer. The explicit-ID follow-up failed training competence, so it cannot adjudicate shared scoring versus fixed-slot transfer."
+      "records": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1"],
+      "interpretation": "The first run failed paired four-candidate transfer. The explicit-ID follow-up failed training competence, so it cannot adjudicate shared scoring versus fixed-slot transfer. The isolated two-candidate gate establishes training competence for the cyclic schedule but leaves a validation transfer gap and does not test variable cardinality."
     }
   ]
 }

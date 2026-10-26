@@ -1,0 +1,44 @@
+{
+  "batch_size": 12,
+  "cell": "DENSE_SHUFFLED_SEED1337",
+  "checkpoint": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_SHUFFLED_SEED1337/checkpoint.pt",
+  "checkpoint_sha256": "d57886e499f333e97da00fce9ff1512b36218f3ab6b16acd9b2e15beb69a127a",
+  "parameter_count": 22106906,
+  "representation": "dense",
+  "schedule": "shuffled",
+  "seed": 1337,
+  "source_rows": 144,
+  "steps": 500,
+  "train_metrics": {
+    "abstain_accuracy": 1.0,
+    "abstain_correct": 48,
+    "abstain_rows": 48,
+    "paired_correct": 24,
+    "paired_groups": 48,
+    "pointer_accuracy": 0.8333333333333334,
+    "pointer_correct": 120,
+    "pointer_flips": 24,
+    "rows": 144
+  },
+  "train_slot_metrics": {
+    "0": {
+      "accuracy": 0.75,
+      "correct": 36,
+      "rows": 48
+    },
+    "1": {
+      "accuracy": 0.75,
+      "correct": 36,
+      "rows": 48
+    },
+    "8": {
+      "accuracy": 1.0,
+      "correct": 48,
+      "rows": 48
+    }
+  },
+  "training_gate_pass": false,
+  "training_gate_threshold": 0.95,
+  "validation_evaluated": false,
+  "validation_metrics": null
+}

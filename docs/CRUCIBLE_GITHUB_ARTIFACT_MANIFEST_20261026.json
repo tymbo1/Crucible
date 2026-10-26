@@ -28739,16 +28739,64 @@
       "bytes": 68027,
       "reason": "raw_trace_or_intermediate_artifact",
       "sha256": "399960a6c0965e70d7a94f63ec3ed09eb3db11f1c9f79fccc947b33097478130"
+    },
+    {
+      "path": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_CYCLIC_SEED1337/checkpoint.pt",
+      "bytes": 88454709,
+      "reason": "checkpoint_or_binary_artifact",
+      "sha256": "a01f8043f45fc4e5584435cbfedc91ec4300433149c8e608b4a93114be833bec"
+    },
+    {
+      "path": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_CYCLIC_SEED1337/TRAINING_TRACE.jsonl",
+      "bytes": 68391,
+      "reason": "raw_trace_or_intermediate_artifact",
+      "sha256": "a036d8bdd88c6c791dcf308cb14060b83b004ace602eefe45b547d3cb22be32b"
+    },
+    {
+      "path": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_CYCLIC_SEED42/checkpoint.pt",
+      "bytes": 88454709,
+      "reason": "checkpoint_or_binary_artifact",
+      "sha256": "b45ce80c3bcea290bb89f0f807297340ea36935b16b41099a5a8dcfca8ea71c3"
+    },
+    {
+      "path": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_CYCLIC_SEED42/TRAINING_TRACE.jsonl",
+      "bytes": 68000,
+      "reason": "raw_trace_or_intermediate_artifact",
+      "sha256": "2801fcd8228c28f693f1a5b3d9e0653880aca852b0f23d6099ef6dba4655ab44"
+    },
+    {
+      "path": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_SHUFFLED_SEED1337/checkpoint.pt",
+      "bytes": 88454709,
+      "reason": "checkpoint_or_binary_artifact",
+      "sha256": "d57886e499f333e97da00fce9ff1512b36218f3ab6b16acd9b2e15beb69a127a"
+    },
+    {
+      "path": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_SHUFFLED_SEED1337/TRAINING_TRACE.jsonl",
+      "bytes": 69098,
+      "reason": "raw_trace_or_intermediate_artifact",
+      "sha256": "39f38ae140ffb0624c14a3149f5f39b9a8767760d544a589a04b360a31ba9f3f"
+    },
+    {
+      "path": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_SHUFFLED_SEED42/checkpoint.pt",
+      "bytes": 88454709,
+      "reason": "checkpoint_or_binary_artifact",
+      "sha256": "3aca319b78c8324a4b3ab4197d34f2d08cb6b96ae9f540a36bfda926535d98c3"
+    },
+    {
+      "path": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_SHUFFLED_SEED42/TRAINING_TRACE.jsonl",
+      "bytes": 68048,
+      "reason": "raw_trace_or_intermediate_artifact",
+      "sha256": "f70cc2ead868c4dc1c816454abda21e4b027832664ac250799316864739c09a6"
     }
   ],
   "excluded_summary": {
-    "bytes": 118805979917,
-    "files": 4790
+    "bytes": 119160072290,
+    "files": 4798
   },
-  "generated_utc": "2026-10-26T15:07:30Z",
+  "generated_utc": "2026-10-26T15:22:31Z",
   "included_summary": {
-    "bytes": 76761571,
-    "files": 930
+    "bytes": 76830492,
+    "files": 948
   },
   "policy": {
     "curated_commit": "docs, tools, reports, summaries/results, predictions, manifests, audits, hashes and complete metadata for the latest accepted experiments",

@@ -18,6 +18,7 @@ LATEST = {
     "experiments/crucible_compositional_authority_transfer_20261026_v1",
     "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1",
     "experiments/crucible_cardinality_competence_diagnostic_20261026_v1",
+    "experiments/crucible_two_candidate_competence_gate_20261027_v1",
 }
 MAX_GITHUB_FILE_BYTES = 100 * 1024 * 1024
 

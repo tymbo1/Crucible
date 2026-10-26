@@ -28,7 +28,7 @@ reports that still need ledger entries.
 | `shared-scorer-compositional-transfer` | FAILED | The tested dynamic scorer did not transfer reliably from three to four candidates. |
 | `explicit-id-cardinality-transfer` | FAILED | The oracle passed, but none of eight learned arms passed training competence; learned cardinality transfer is therefore unresolved. |
 
-The ledger now covers all 28 final experiment reports in the repository. The
+The ledger now covers all 29 final experiment reports in the repository. The
 23 older reports were extracted from their accepted final reports and linked
 artifacts on 2026-10-26; no outcomes were inferred from filenames or
 conversation summaries. See
@@ -67,3 +67,4 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `role-selection-competence-v5` | FAILED | `crucible_role_selection_competence_20251025_v5` |
 | `variable-binding-v1` | FAILED | `crucible_variable_binding_20251025_v1` |
 | `cardinality-competence-diagnostic-v1` | INCONCLUSIVE | `crucible_cardinality_competence_diagnostic_20261026_v1` |
+| `two-candidate-competence-gate-v1` | INCONCLUSIVE | `crucible_two_candidate_competence_gate_20261027_v1` |

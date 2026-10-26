@@ -1,0 +1,71 @@
+{
+  "batch_size": 12,
+  "cell": "DENSE_CYCLIC_SEED42",
+  "checkpoint": "experiments/crucible_two_candidate_competence_gate_20261027_v1/DENSE_CYCLIC_SEED42/checkpoint.pt",
+  "checkpoint_sha256": "b45ce80c3bcea290bb89f0f807297340ea36935b16b41099a5a8dcfca8ea71c3",
+  "parameter_count": 22106906,
+  "representation": "dense",
+  "schedule": "cyclic",
+  "seed": 42,
+  "source_rows": 144,
+  "steps": 500,
+  "train_metrics": {
+    "abstain_accuracy": 1.0,
+    "abstain_correct": 48,
+    "abstain_rows": 48,
+    "paired_correct": 48,
+    "paired_groups": 48,
+    "pointer_accuracy": 1.0,
+    "pointer_correct": 144,
+    "pointer_flips": 48,
+    "rows": 144
+  },
+  "train_slot_metrics": {
+    "0": {
+      "accuracy": 1.0,
+      "correct": 48,
+      "rows": 48
+    },
+    "1": {
+      "accuracy": 1.0,
+      "correct": 48,
+      "rows": 48
+    },
+    "8": {
+      "accuracy": 1.0,
+      "correct": 48,
+      "rows": 48
+    }
+  },
+  "training_gate_pass": true,
+  "training_gate_threshold": 0.95,
+  "validation_evaluated": true,
+  "validation_metrics": {
+    "abstain_accuracy": 1.0,
+    "abstain_correct": 32,
+    "abstain_rows": 32,
+    "paired_correct": 9,
+    "paired_groups": 32,
+    "pointer_accuracy": 0.7291666666666666,
+    "pointer_correct": 70,
+    "pointer_flips": 12,
+    "rows": 96,
+    "slot_metrics": {
+      "0": {
+        "accuracy": 0.5,
+        "correct": 16,
+        "rows": 32
+      },
+      "1": {
+        "accuracy": 0.6875,
+        "correct": 22,
+        "rows": 32
+      },
+      "8": {
+        "accuracy": 1.0,
+        "correct": 32,
+        "rows": 32
+      }
+    }
+  }
+}

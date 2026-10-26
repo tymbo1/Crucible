@@ -1,0 +1,19 @@
+{
+  "audit_type": "repository_ledger_novelty_audit",
+  "date": "2026-10-27",
+  "exact_isolated_two_candidate_competence_gate_in_ledger": false,
+  "novelty_conclusion": "Related cardinality and two-candidate controls exist, but no prior ledger record isolates the canonical two-candidate rows with balanced slot-0, slot-1 and abstention classes under this competence gate.",
+  "queries": [
+    "cardinality",
+    "slot",
+    "balanced"
+  ],
+  "related_records": [
+    "explicit-id-cardinality-transfer",
+    "shared-scorer-compositional-transfer",
+    "authority-two-candidate-s4",
+    "authority-component-ablation",
+    "cardinality-competence-diagnostic-v1"
+  ],
+  "sealed_test_accessed": false
+}

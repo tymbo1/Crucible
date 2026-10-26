@@ -1,0 +1,39 @@
+{
+  "cross_split_overlap": {
+    "exact_inputs": 0,
+    "record_ids": 0
+  },
+  "experiment": "crucible_two_candidate_competence_gate_20261027_v1",
+  "prior_experiment_modified": false,
+  "sealed_test_accessed": false,
+  "source_full_train_rows": 576,
+  "source_full_validation_rows": 312,
+  "train": {
+    "counterfactual_groups": 48,
+    "oracle_rows_correct": 144,
+    "rows": 144,
+    "target_slot_counts": {
+      "0": 48,
+      "1": 48,
+      "8": 48
+    },
+    "unique_inputs": 144,
+    "unique_record_ids": 144
+  },
+  "train_source": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/data/canonical/train.jsonl",
+  "train_source_sha256": "ff17df2eca7c2bbd84e190b9ccc627b22ac4e2fa9c4b21a0ffbc1ad7f8962f81",
+  "validation": {
+    "counterfactual_groups": 32,
+    "oracle_rows_correct": 96,
+    "rows": 96,
+    "target_slot_counts": {
+      "0": 32,
+      "1": 32,
+      "8": 32
+    },
+    "unique_inputs": 96,
+    "unique_record_ids": 96
+  },
+  "validation_source": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/data/canonical/validation.jsonl",
+  "validation_source_sha256": "4c2f7bbaf8c16f6801aac061ffdabd5eed0aa276aa871e1921f9ed596eb1d333"
+}
