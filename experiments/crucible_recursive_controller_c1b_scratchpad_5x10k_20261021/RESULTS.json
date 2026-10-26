@@ -1,0 +1,2082 @@
+{
+  "aggregate_final": {
+    "no_scratchpad": {
+      "accuracy": 0.7135416666666666,
+      "cost_accuracy_score": 0.691189236111111,
+      "false_corrections": 0.0,
+      "mean_cost": 5.364583333333333,
+      "scratchpad_hit_rate": 0.0,
+      "unresolved": 73.33333333333333
+    },
+    "persistent_scratchpad": {
+      "accuracy": 0.734375,
+      "cost_accuracy_score": 0.7115098741319444,
+      "false_corrections": 0.0,
+      "mean_cost": 5.487630208333333,
+      "scratchpad_hit_rate": 0.0,
+      "unresolved": 68.0
+    }
+  },
+  "elapsed_seconds": 16.368097,
+  "experiment": "crucible_recursive_controller_c1b_scratchpad_5x10k_20261021",
+  "schedule_metadata": {
+    "1337": {
+      "count": 50000,
+      "sha256": "aa0b8bf6b82de144af25f0c40837c267b17e24e1f50a0a93a6d6832779999f41"
+    },
+    "2026": {
+      "count": 50000,
+      "sha256": "1e2285607913999b65d7af5f4a90c261093ac3e49833e77457b151a38a46004d"
+    },
+    "42": {
+      "count": 50000,
+      "sha256": "bcdfe3f6ea1626ed147908c656100fa0261ba8a7d9c80ee8628c712b94cf1437"
+    }
+  },
+  "seeds": [
+    {
+      "arms": {
+        "no_scratchpad": {
+          "final_model_snapshot_sha256": "2d024eaa954bac7d639c1afa72e721f42131023404181aa3e385b6070cef4c48",
+          "final_scratchpad_sha256": null,
+          "final_scratchpad_stats": {},
+          "final_test": {
+            "accuracy": 0.67578125,
+            "action_counts": {
+              "answer": 0,
+              "counterexample": 42,
+              "critique": 42,
+              "evidence_search": 0,
+              "revise": 462,
+              "stop": 256,
+              "verify": 210
+            },
+            "cases": 256,
+            "contradiction_events": 12,
+            "corrections": 80,
+            "cost_accuracy_score": 0.6545979817708333,
+            "evidence_calls": 0,
+            "false_corrections": 0,
+            "initial_accuracy": 0.36328125,
+            "mean_actions": 3.953125,
+            "mean_cost": 5.083984375,
+            "scratchpad_hit_rate": 0.0,
+            "selection_sources": {
+              "model": 256
+            },
+            "total_cost": 1301.5,
+            "unresolved": 83,
+            "verification_calls": 210,
+            "verification_omissions": 46
+          },
+          "final_validation": {
+            "accuracy": 0.78125,
+            "action_counts": {
+              "answer": 0,
+              "counterexample": 55,
+              "critique": 55,
+              "evidence_search": 0,
+              "revise": 199,
+              "stop": 128,
+              "verify": 72
+            },
+            "cases": 128,
+            "contradiction_events": 21,
+            "corrections": 45,
+            "cost_accuracy_score": 0.7635091145833334,
+            "evidence_calls": 0,
+            "false_corrections": 0,
+            "initial_accuracy": 0.4296875,
+            "mean_actions": 3.9765625,
+            "mean_cost": 4.2578125,
+            "scratchpad_hit_rate": 0.0,
+            "selection_sources": {
+              "model": 128
+            },
+            "total_cost": 545.0,
+            "unresolved": 28,
+            "verification_calls": 72,
+            "verification_omissions": 56
+          },
+          "phases": [
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 10000,
+              "global_update_start": 1,
+              "mean_training_reward": 0.6547533331931,
+              "model_snapshot_sha256": "5386d34e55a269eed5e55b2cf8de9af0a735926cfd0fe490b71e8639d355f443",
+              "model_updates_applied": 10000,
+              "phase": 1,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 42,
+              "selection_sources": {
+                "exploration": 2700,
+                "model": 7300
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.78125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 0,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 21,
+                "corrections": 45,
+                "cost_accuracy_score": 0.7632975260416667,
+                "evidence_calls": 0,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.0,
+                "mean_cost": 4.30859375,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 551.5,
+                "unresolved": 28,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 20000,
+              "global_update_start": 10001,
+              "mean_training_reward": 0.681413749835,
+              "model_snapshot_sha256": "a376e3e586fc127cab510393f51b6c0a614f7e1181f800cd11908058ac18f45e",
+              "model_updates_applied": 10000,
+              "phase": 2,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 42,
+              "selection_sources": {
+                "exploration": 2113,
+                "model": 7887
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.78125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 0,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 21,
+                "corrections": 45,
+                "cost_accuracy_score": 0.7632975260416667,
+                "evidence_calls": 0,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.0,
+                "mean_cost": 4.30859375,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 551.5,
+                "unresolved": 28,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 30000,
+              "global_update_start": 20001,
+              "mean_training_reward": 0.6906608331754,
+              "model_snapshot_sha256": "10e8ffe9a60e617fd9d7d8441b3ffa3a5271c8f4fdad3ab43bdd59f89dffaba0",
+              "model_updates_applied": 10000,
+              "phase": 3,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 42,
+              "selection_sources": {
+                "exploration": 1515,
+                "model": 8485
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.78125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 27,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 28,
+                "corrections": 45,
+                "cost_accuracy_score": 0.7615397135416666,
+                "evidence_calls": 27,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.2109375,
+                "mean_cost": 4.73046875,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 605.5,
+                "unresolved": 28,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 40000,
+              "global_update_start": 30001,
+              "mean_training_reward": 0.7106058331239999,
+              "model_snapshot_sha256": "aa29c45ab45c06e3cca7dee9eed2986c0a99a2bee3c518751db32d166fb4d7d9",
+              "model_updates_applied": 10000,
+              "phase": 4,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 42,
+              "selection_sources": {
+                "exploration": 860,
+                "model": 9140
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.78125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 58,
+                  "critique": 58,
+                  "evidence_search": 0,
+                  "revise": 196,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 21,
+                "corrections": 45,
+                "cost_accuracy_score": 0.7634114583333333,
+                "evidence_calls": 0,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 3.9765625,
+                "mean_cost": 4.28125,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 548.0,
+                "unresolved": 28,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 50000,
+              "global_update_start": 40001,
+              "mean_training_reward": 0.7145208331105,
+              "model_snapshot_sha256": "2d024eaa954bac7d639c1afa72e721f42131023404181aa3e385b6070cef4c48",
+              "model_updates_applied": 10000,
+              "phase": 5,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 42,
+              "selection_sources": {
+                "exploration": 513,
+                "model": 9487
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.78125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 55,
+                  "critique": 55,
+                  "evidence_search": 0,
+                  "revise": 199,
+                  "stop": 128,
+                  "verify": 72
+                },
+                "cases": 128,
+                "contradiction_events": 21,
+                "corrections": 45,
+                "cost_accuracy_score": 0.7635091145833334,
+                "evidence_calls": 0,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 3.9765625,
+                "mean_cost": 4.2578125,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 545.0,
+                "unresolved": 28,
+                "verification_calls": 72,
+                "verification_omissions": 56
+              }
+            }
+          ]
+        },
+        "persistent_scratchpad": {
+          "final_model_snapshot_sha256": "af20809fc3347c1b9e7953dca2410575104fc9a16dcd9f39552cf3cdb6881d99",
+          "final_scratchpad_sha256": "d5b9e869e6cd8d27f4718a67435327ec1fdf290c19ac58489998cd5a5d03c03b",
+          "final_scratchpad_stats": {
+            "lookups": 92299,
+            "mature_hits": 1087,
+            "model_updates_due_to_novel_evidence": 49543,
+            "new_associations": 62,
+            "reopened_associations": 53,
+            "skipped_relearning_updates": 457,
+            "training_observations": 50000
+          },
+          "final_test": {
+            "accuracy": 0.765625,
+            "action_counts": {
+              "answer": 3,
+              "counterexample": 42,
+              "critique": 42,
+              "evidence_search": 25,
+              "revise": 424,
+              "stop": 256,
+              "verify": 251
+            },
+            "cases": 256,
+            "contradiction_events": 16,
+            "corrections": 103,
+            "cost_accuracy_score": 0.7415852864583333,
+            "evidence_calls": 25,
+            "false_corrections": 0,
+            "initial_accuracy": 0.36328125,
+            "mean_actions": 4.07421875,
+            "mean_cost": 5.76953125,
+            "scratchpad_hit_rate": 0.0,
+            "selection_sources": {
+              "model": 256
+            },
+            "total_cost": 1477.0,
+            "unresolved": 60,
+            "verification_calls": 251,
+            "verification_omissions": 45
+          },
+          "final_validation": {
+            "accuracy": 0.765625,
+            "action_counts": {
+              "answer": 0,
+              "counterexample": 54,
+              "critique": 54,
+              "evidence_search": 35,
+              "revise": 202,
+              "stop": 128,
+              "verify": 74
+            },
+            "cases": 128,
+            "contradiction_events": 26,
+            "corrections": 43,
+            "cost_accuracy_score": 0.745556640625,
+            "evidence_calls": 35,
+            "false_corrections": 0,
+            "initial_accuracy": 0.4296875,
+            "mean_actions": 4.2734375,
+            "mean_cost": 4.81640625,
+            "scratchpad_hit_rate": 0.0,
+            "selection_sources": {
+              "model": 128
+            },
+            "total_cost": 616.5,
+            "unresolved": 30,
+            "verification_calls": 74,
+            "verification_omissions": 54
+          },
+          "phases": [
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 22,
+              "global_update_end": 10000,
+              "global_update_start": 1,
+              "mean_training_reward": 0.6555574998642,
+              "model_snapshot_sha256": "d520056ef546f85a5e035fd605da17a6b093934381bb5445ff2b29ab732da970",
+              "model_updates_applied": 9893,
+              "phase": 1,
+              "relearning_updates_skipped": 107,
+              "scratchpad_entries": 185,
+              "scratchpad_mature_entries": 3,
+              "scratchpad_stats": {
+                "lookups": 17300,
+                "mature_hits": 291,
+                "model_updates_due_to_novel_evidence": 9893,
+                "new_associations": 30,
+                "reopened_associations": 22,
+                "skipped_relearning_updates": 107,
+                "training_observations": 10000
+              },
+              "seed": 42,
+              "selection_sources": {
+                "exploration": 2700,
+                "model": 7178,
+                "scratchpad": 122
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.78125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 0,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 21,
+                "corrections": 45,
+                "cost_accuracy_score": 0.7632975260416667,
+                "evidence_calls": 0,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.0,
+                "mean_cost": 4.30859375,
+                "scratchpad_hit_rate": 0.0078125,
+                "selection_sources": {
+                  "model": 127,
+                  "scratchpad": 1
+                },
+                "total_cost": 551.5,
+                "unresolved": 28,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 5,
+              "global_update_end": 20000,
+              "global_update_start": 10001,
+              "mean_training_reward": 0.6826187498356999,
+              "model_snapshot_sha256": "1c222803d383a385f76482c2df523382f2cf79d0bcf659dad1af6a3d0ad1567b",
+              "model_updates_applied": 9900,
+              "phase": 2,
+              "relearning_updates_skipped": 100,
+              "scratchpad_entries": 185,
+              "scratchpad_mature_entries": 3,
+              "scratchpad_stats": {
+                "lookups": 35187,
+                "mature_hits": 511,
+                "model_updates_due_to_novel_evidence": 19793,
+                "new_associations": 36,
+                "reopened_associations": 27,
+                "skipped_relearning_updates": 207,
+                "training_observations": 20000
+              },
+              "seed": 42,
+              "selection_sources": {
+                "exploration": 2113,
+                "model": 7788,
+                "scratchpad": 99
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.78125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 15,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 26,
+                "corrections": 45,
+                "cost_accuracy_score": 0.7623209635416667,
+                "evidence_calls": 15,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.1171875,
+                "mean_cost": 4.54296875,
+                "scratchpad_hit_rate": 0.0078125,
+                "selection_sources": {
+                  "model": 127,
+                  "scratchpad": 1
+                },
+                "total_cost": 581.5,
+                "unresolved": 28,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 8,
+              "global_update_end": 30000,
+              "global_update_start": 20001,
+              "mean_training_reward": 0.691484583157,
+              "model_snapshot_sha256": "f7f31e9501fb07a60b570e15e5fd83c0ce424ed33184a5e03744c92646cf5ce0",
+              "model_updates_applied": 9897,
+              "phase": 3,
+              "relearning_updates_skipped": 103,
+              "scratchpad_entries": 185,
+              "scratchpad_mature_entries": 4,
+              "scratchpad_stats": {
+                "lookups": 53672,
+                "mature_hits": 745,
+                "model_updates_due_to_novel_evidence": 29690,
+                "new_associations": 45,
+                "reopened_associations": 35,
+                "skipped_relearning_updates": 310,
+                "training_observations": 30000
+              },
+              "seed": 42,
+              "selection_sources": {
+                "exploration": 1515,
+                "model": 8378,
+                "scratchpad": 107
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.78125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 27,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 28,
+                "corrections": 45,
+                "cost_accuracy_score": 0.7615397135416666,
+                "evidence_calls": 27,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.2109375,
+                "mean_cost": 4.73046875,
+                "scratchpad_hit_rate": 0.0078125,
+                "selection_sources": {
+                  "model": 127,
+                  "scratchpad": 1
+                },
+                "total_cost": 605.5,
+                "unresolved": 28,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 18,
+              "global_update_end": 40000,
+              "global_update_start": 30001,
+              "mean_training_reward": 0.714676666487,
+              "model_snapshot_sha256": "dd7aba7a3c31880b5a084ea17d2dff4f684d434b66e98083f93bb0facb7ef5d2",
+              "model_updates_applied": 9926,
+              "phase": 4,
+              "relearning_updates_skipped": 74,
+              "scratchpad_entries": 185,
+              "scratchpad_mature_entries": 2,
+              "scratchpad_stats": {
+                "lookups": 72812,
+                "mature_hits": 938,
+                "model_updates_due_to_novel_evidence": 39616,
+                "new_associations": 62,
+                "reopened_associations": 53,
+                "skipped_relearning_updates": 384,
+                "training_observations": 40000
+              },
+              "seed": 42,
+              "selection_sources": {
+                "exploration": 860,
+                "model": 9050,
+                "scratchpad": 90
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.78125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 0,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 21,
+                "corrections": 45,
+                "cost_accuracy_score": 0.7632975260416667,
+                "evidence_calls": 0,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.0,
+                "mean_cost": 4.30859375,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 551.5,
+                "unresolved": 28,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 50000,
+              "global_update_start": 40001,
+              "mean_training_reward": 0.7189208331188,
+              "model_snapshot_sha256": "af20809fc3347c1b9e7953dca2410575104fc9a16dcd9f39552cf3cdb6881d99",
+              "model_updates_applied": 9927,
+              "phase": 5,
+              "relearning_updates_skipped": 73,
+              "scratchpad_entries": 185,
+              "scratchpad_mature_entries": 2,
+              "scratchpad_stats": {
+                "lookups": 92299,
+                "mature_hits": 1087,
+                "model_updates_due_to_novel_evidence": 49543,
+                "new_associations": 62,
+                "reopened_associations": 53,
+                "skipped_relearning_updates": 457,
+                "training_observations": 50000
+              },
+              "seed": 42,
+              "selection_sources": {
+                "exploration": 513,
+                "model": 9414,
+                "scratchpad": 73
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.765625,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 54,
+                  "critique": 54,
+                  "evidence_search": 35,
+                  "revise": 202,
+                  "stop": 128,
+                  "verify": 74
+                },
+                "cases": 128,
+                "contradiction_events": 26,
+                "corrections": 43,
+                "cost_accuracy_score": 0.745556640625,
+                "evidence_calls": 35,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.2734375,
+                "mean_cost": 4.81640625,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 616.5,
+                "unresolved": 30,
+                "verification_calls": 74,
+                "verification_omissions": 54
+              }
+            }
+          ]
+        }
+      },
+      "seed": 42
+    },
+    {
+      "arms": {
+        "no_scratchpad": {
+          "final_model_snapshot_sha256": "3675091bb23a26c7c5397c34d60e520151700894fd13f861896844cb876bedfe",
+          "final_scratchpad_sha256": null,
+          "final_scratchpad_stats": {},
+          "final_test": {
+            "accuracy": 0.76953125,
+            "action_counts": {
+              "answer": 0,
+              "counterexample": 49,
+              "critique": 49,
+              "evidence_search": 0,
+              "revise": 449,
+              "stop": 256,
+              "verify": 221
+            },
+            "cases": 256,
+            "contradiction_events": 14,
+            "corrections": 104,
+            "cost_accuracy_score": 0.746484375,
+            "evidence_calls": 0,
+            "false_corrections": 0,
+            "initial_accuracy": 0.36328125,
+            "mean_actions": 4.0,
+            "mean_cost": 5.53125,
+            "scratchpad_hit_rate": 0.0,
+            "selection_sources": {
+              "model": 256
+            },
+            "total_cost": 1416.0,
+            "unresolved": 59,
+            "verification_calls": 221,
+            "verification_omissions": 49
+          },
+          "final_validation": {
+            "accuracy": 0.8125,
+            "action_counts": {
+              "answer": 0,
+              "counterexample": 57,
+              "critique": 57,
+              "evidence_search": 0,
+              "revise": 199,
+              "stop": 128,
+              "verify": 71
+            },
+            "cases": 128,
+            "contradiction_events": 20,
+            "corrections": 49,
+            "cost_accuracy_score": 0.7946126302083333,
+            "evidence_calls": 0,
+            "false_corrections": 0,
+            "initial_accuracy": 0.4296875,
+            "mean_actions": 4.0,
+            "mean_cost": 4.29296875,
+            "scratchpad_hit_rate": 0.0,
+            "selection_sources": {
+              "model": 128
+            },
+            "total_cost": 549.5,
+            "unresolved": 24,
+            "verification_calls": 71,
+            "verification_omissions": 57
+          },
+          "phases": [
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 10000,
+              "global_update_start": 1,
+              "mean_training_reward": 0.6543904165065,
+              "model_snapshot_sha256": "bc2ed53ed1eff0a720934a26c0c2a70ab74e7a07eebcec7f809c684f2de3a410",
+              "model_updates_applied": 10000,
+              "phase": 1,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 1337,
+              "selection_sources": {
+                "exploration": 2735,
+                "model": 7265
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.8125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 0,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 20,
+                "corrections": 49,
+                "cost_accuracy_score": 0.7945475260416667,
+                "evidence_calls": 0,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.0,
+                "mean_cost": 4.30859375,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 551.5,
+                "unresolved": 24,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 20000,
+              "global_update_start": 10001,
+              "mean_training_reward": 0.6839233331231,
+              "model_snapshot_sha256": "66b115e13148073a773dedca6ae14bdeb4d70c28b0bd1f4e14e61e541dc29774",
+              "model_updates_applied": 10000,
+              "phase": 2,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 1337,
+              "selection_sources": {
+                "exploration": 2193,
+                "model": 7807
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.8125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 3,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 20,
+                "corrections": 49,
+                "cost_accuracy_score": 0.7943522135416666,
+                "evidence_calls": 3,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.0234375,
+                "mean_cost": 4.35546875,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 557.5,
+                "unresolved": 24,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 30000,
+              "global_update_start": 20001,
+              "mean_training_reward": 0.6926712498002,
+              "model_snapshot_sha256": "adc23f1a59a980c0575e15e03921e186d01e9448ca4bd98855540f9fdd907267",
+              "model_updates_applied": 10000,
+              "phase": 3,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 1337,
+              "selection_sources": {
+                "exploration": 1468,
+                "model": 8532
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.8125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 3,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 20,
+                "corrections": 49,
+                "cost_accuracy_score": 0.7943522135416666,
+                "evidence_calls": 3,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.0234375,
+                "mean_cost": 4.35546875,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 557.5,
+                "unresolved": 24,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 40000,
+              "global_update_start": 30001,
+              "mean_training_reward": 0.7134470830965,
+              "model_snapshot_sha256": "b7892fef9018e49ed917e1e020406b67024c96cc413a19bda8ca0aa3294dedbc",
+              "model_updates_applied": 10000,
+              "phase": 4,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 1337,
+              "selection_sources": {
+                "exploration": 934,
+                "model": 9066
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.8125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 25,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 23,
+                "corrections": 49,
+                "cost_accuracy_score": 0.792919921875,
+                "evidence_calls": 25,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.1953125,
+                "mean_cost": 4.69921875,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 601.5,
+                "unresolved": 24,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 50000,
+              "global_update_start": 40001,
+              "mean_training_reward": 0.7250566664639,
+              "model_snapshot_sha256": "3675091bb23a26c7c5397c34d60e520151700894fd13f861896844cb876bedfe",
+              "model_updates_applied": 10000,
+              "phase": 5,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 1337,
+              "selection_sources": {
+                "exploration": 532,
+                "model": 9468
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.8125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 57,
+                  "critique": 57,
+                  "evidence_search": 0,
+                  "revise": 199,
+                  "stop": 128,
+                  "verify": 71
+                },
+                "cases": 128,
+                "contradiction_events": 20,
+                "corrections": 49,
+                "cost_accuracy_score": 0.7946126302083333,
+                "evidence_calls": 0,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.0,
+                "mean_cost": 4.29296875,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 549.5,
+                "unresolved": 24,
+                "verification_calls": 71,
+                "verification_omissions": 57
+              }
+            }
+          ]
+        },
+        "persistent_scratchpad": {
+          "final_model_snapshot_sha256": "847fb428d90784565442a79797fa15a05e0c7f105fd196ceff8c30332d7c5ede",
+          "final_scratchpad_sha256": "cc5cef2f1e794b598342e3f2dd257c1a51d8a2f549b3e3e599538798b259666d",
+          "final_scratchpad_stats": {
+            "lookups": 92138,
+            "mature_hits": 3519,
+            "model_updates_due_to_novel_evidence": 48387,
+            "new_associations": 35,
+            "reopened_associations": 2,
+            "skipped_relearning_updates": 1613,
+            "training_observations": 50000
+          },
+          "final_test": {
+            "accuracy": 0.76171875,
+            "action_counts": {
+              "answer": 0,
+              "counterexample": 47,
+              "critique": 47,
+              "evidence_search": 1,
+              "revise": 453,
+              "stop": 256,
+              "verify": 221
+            },
+            "cases": 256,
+            "contradiction_events": 14,
+            "corrections": 102,
+            "cost_accuracy_score": 0.73876953125,
+            "evidence_calls": 1,
+            "false_corrections": 0,
+            "initial_accuracy": 0.36328125,
+            "mean_actions": 4.00390625,
+            "mean_cost": 5.5078125,
+            "scratchpad_hit_rate": 0.0,
+            "selection_sources": {
+              "model": 256
+            },
+            "total_cost": 1410.0,
+            "unresolved": 61,
+            "verification_calls": 221,
+            "verification_omissions": 47
+          },
+          "final_validation": {
+            "accuracy": 0.796875,
+            "action_counts": {
+              "answer": 0,
+              "counterexample": 55,
+              "critique": 55,
+              "evidence_search": 2,
+              "revise": 201,
+              "stop": 128,
+              "verify": 73
+            },
+            "cases": 128,
+            "contradiction_events": 20,
+            "corrections": 47,
+            "cost_accuracy_score": 0.7789225260416667,
+            "evidence_calls": 2,
+            "false_corrections": 0,
+            "initial_accuracy": 0.4296875,
+            "mean_actions": 4.015625,
+            "mean_cost": 4.30859375,
+            "scratchpad_hit_rate": 0.0,
+            "selection_sources": {
+              "model": 128
+            },
+            "total_cost": 551.5,
+            "unresolved": 26,
+            "verification_calls": 73,
+            "verification_omissions": 55
+          },
+          "phases": [
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 2,
+              "global_update_end": 10000,
+              "global_update_start": 1,
+              "mean_training_reward": 0.6544983331583,
+              "model_snapshot_sha256": "3db9237aff248fe4fae4430605d61a02e6d4143b5d53cb42a23bc78a0dcb8e0c",
+              "model_updates_applied": 9560,
+              "phase": 1,
+              "relearning_updates_skipped": 440,
+              "scratchpad_entries": 186,
+              "scratchpad_mature_entries": 13,
+              "scratchpad_stats": {
+                "lookups": 17265,
+                "mature_hits": 1010,
+                "model_updates_due_to_novel_evidence": 9560,
+                "new_associations": 24,
+                "reopened_associations": 2,
+                "skipped_relearning_updates": 440,
+                "training_observations": 10000
+              },
+              "seed": 1337,
+              "selection_sources": {
+                "exploration": 2735,
+                "model": 6839,
+                "scratchpad": 426
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.8125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 0,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 20,
+                "corrections": 49,
+                "cost_accuracy_score": 0.7945475260416667,
+                "evidence_calls": 0,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.0,
+                "mean_cost": 4.30859375,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 551.5,
+                "unresolved": 24,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 20000,
+              "global_update_start": 10001,
+              "mean_training_reward": 0.6834916664694001,
+              "model_snapshot_sha256": "d73a1b9af7b9d9b7220294793746e2bdc0b26a1189d2f76938cfa4061d4e2612",
+              "model_updates_applied": 9458,
+              "phase": 2,
+              "relearning_updates_skipped": 542,
+              "scratchpad_entries": 186,
+              "scratchpad_mature_entries": 11,
+              "scratchpad_stats": {
+                "lookups": 35072,
+                "mature_hits": 2176,
+                "model_updates_due_to_novel_evidence": 19018,
+                "new_associations": 33,
+                "reopened_associations": 2,
+                "skipped_relearning_updates": 982,
+                "training_observations": 20000
+              },
+              "seed": 1337,
+              "selection_sources": {
+                "exploration": 2193,
+                "model": 7284,
+                "scratchpad": 523
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.8125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 11,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 21,
+                "corrections": 49,
+                "cost_accuracy_score": 0.7938313802083333,
+                "evidence_calls": 11,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.0859375,
+                "mean_cost": 4.48046875,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 573.5,
+                "unresolved": 24,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 30000,
+              "global_update_start": 20001,
+              "mean_training_reward": 0.6929412497966,
+              "model_snapshot_sha256": "119fe81ed0633c07a38c27198a972e3f793503e1cb4564cc74e99376bd065c6d",
+              "model_updates_applied": 9628,
+              "phase": 3,
+              "relearning_updates_skipped": 372,
+              "scratchpad_entries": 186,
+              "scratchpad_mature_entries": 8,
+              "scratchpad_stats": {
+                "lookups": 53604,
+                "mature_hits": 2973,
+                "model_updates_due_to_novel_evidence": 28646,
+                "new_associations": 34,
+                "reopened_associations": 2,
+                "skipped_relearning_updates": 1354,
+                "training_observations": 30000
+              },
+              "seed": 1337,
+              "selection_sources": {
+                "exploration": 1468,
+                "model": 8170,
+                "scratchpad": 362
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.8125,
+                "action_counts": {
+                  "answer": 10,
+                  "counterexample": 49,
+                  "critique": 49,
+                  "evidence_search": 3,
+                  "revise": 187,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 13,
+                "corrections": 49,
+                "cost_accuracy_score": 0.795166015625,
+                "evidence_calls": 3,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 3.8671875,
+                "mean_cost": 4.16015625,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 532.5,
+                "unresolved": 24,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 40000,
+              "global_update_start": 30001,
+              "mean_training_reward": 0.7151741664301999,
+              "model_snapshot_sha256": "46c5c59c3e24710c3a1729b35536461a00a383cd21f6eed8c29d71b860c0d34a",
+              "model_updates_applied": 9835,
+              "phase": 4,
+              "relearning_updates_skipped": 165,
+              "scratchpad_entries": 186,
+              "scratchpad_mature_entries": 3,
+              "scratchpad_stats": {
+                "lookups": 72670,
+                "mature_hits": 3323,
+                "model_updates_due_to_novel_evidence": 38481,
+                "new_associations": 35,
+                "reopened_associations": 2,
+                "skipped_relearning_updates": 1519,
+                "training_observations": 40000
+              },
+              "seed": 1337,
+              "selection_sources": {
+                "exploration": 934,
+                "model": 8904,
+                "scratchpad": 162
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.8125,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 59,
+                  "critique": 59,
+                  "evidence_search": 29,
+                  "revise": 197,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 23,
+                "corrections": 49,
+                "cost_accuracy_score": 0.7926595052083333,
+                "evidence_calls": 29,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.2265625,
+                "mean_cost": 4.76171875,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 609.5,
+                "unresolved": 24,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 50000,
+              "global_update_start": 40001,
+              "mean_training_reward": 0.7298145831339999,
+              "model_snapshot_sha256": "847fb428d90784565442a79797fa15a05e0c7f105fd196ceff8c30332d7c5ede",
+              "model_updates_applied": 9906,
+              "phase": 5,
+              "relearning_updates_skipped": 94,
+              "scratchpad_entries": 186,
+              "scratchpad_mature_entries": 2,
+              "scratchpad_stats": {
+                "lookups": 92138,
+                "mature_hits": 3519,
+                "model_updates_due_to_novel_evidence": 48387,
+                "new_associations": 35,
+                "reopened_associations": 2,
+                "skipped_relearning_updates": 1613,
+                "training_observations": 50000
+              },
+              "seed": 1337,
+              "selection_sources": {
+                "exploration": 532,
+                "model": 9375,
+                "scratchpad": 93
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.796875,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 55,
+                  "critique": 55,
+                  "evidence_search": 2,
+                  "revise": 201,
+                  "stop": 128,
+                  "verify": 73
+                },
+                "cases": 128,
+                "contradiction_events": 20,
+                "corrections": 47,
+                "cost_accuracy_score": 0.7789225260416667,
+                "evidence_calls": 2,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.015625,
+                "mean_cost": 4.30859375,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 551.5,
+                "unresolved": 26,
+                "verification_calls": 73,
+                "verification_omissions": 55
+              }
+            }
+          ]
+        }
+      },
+      "seed": 1337
+    },
+    {
+      "arms": {
+        "no_scratchpad": {
+          "final_model_snapshot_sha256": "d18731c12e2ba3551c66ad6918ab8883adc40c53427125547d74aa1ee887c46b",
+          "final_scratchpad_sha256": null,
+          "final_scratchpad_stats": {},
+          "final_test": {
+            "accuracy": 0.6953125,
+            "action_counts": {
+              "answer": 2,
+              "counterexample": 38,
+              "critique": 38,
+              "evidence_search": 34,
+              "revise": 453,
+              "stop": 256,
+              "verify": 215
+            },
+            "cases": 256,
+            "contradiction_events": 14,
+            "corrections": 85,
+            "cost_accuracy_score": 0.6724853515625,
+            "evidence_calls": 34,
+            "false_corrections": 0,
+            "initial_accuracy": 0.36328125,
+            "mean_actions": 4.046875,
+            "mean_cost": 5.478515625,
+            "scratchpad_hit_rate": 0.0,
+            "selection_sources": {
+              "model": 256
+            },
+            "total_cost": 1402.5,
+            "unresolved": 78,
+            "verification_calls": 215,
+            "verification_omissions": 46
+          },
+          "final_validation": {
+            "accuracy": 0.7734375,
+            "action_counts": {
+              "answer": 4,
+              "counterexample": 51,
+              "critique": 51,
+              "evidence_search": 43,
+              "revise": 189,
+              "stop": 128,
+              "verify": 69
+            },
+            "cases": 128,
+            "contradiction_events": 21,
+            "corrections": 44,
+            "cost_accuracy_score": 0.7537109375,
+            "evidence_calls": 43,
+            "false_corrections": 0,
+            "initial_accuracy": 0.4296875,
+            "mean_actions": 4.1796875,
+            "mean_cost": 4.734375,
+            "scratchpad_hit_rate": 0.0,
+            "selection_sources": {
+              "model": 128
+            },
+            "total_cost": 606.0,
+            "unresolved": 29,
+            "verification_calls": 69,
+            "verification_omissions": 59
+          },
+          "phases": [
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 10000,
+              "global_update_start": 1,
+              "mean_training_reward": 0.6792762498831,
+              "model_snapshot_sha256": "be3b08d15cc61b6bc997bb5d7e63a110aac9d06f6efe9077df1aa6033cc5cbbe",
+              "model_updates_applied": 10000,
+              "phase": 1,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 2026,
+              "selection_sources": {
+                "exploration": 2668,
+                "model": 7332
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.75,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 35,
+                  "critique": 35,
+                  "evidence_search": 35,
+                  "revise": 167,
+                  "stop": 128,
+                  "verify": 66
+                },
+                "cases": 128,
+                "contradiction_events": 12,
+                "corrections": 41,
+                "cost_accuracy_score": 0.7329915364583334,
+                "evidence_calls": 35,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 3.640625,
+                "mean_cost": 4.08203125,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 522.5,
+                "unresolved": 32,
+                "verification_calls": 66,
+                "verification_omissions": 62
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 20000,
+              "global_update_start": 10001,
+              "mean_training_reward": 0.6979074998791001,
+              "model_snapshot_sha256": "8c565d144b4e1563ced41e2e0076837652909d42ace2fb4f356deb1716dc65b0",
+              "model_updates_applied": 10000,
+              "phase": 2,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 2026,
+              "selection_sources": {
+                "exploration": 2110,
+                "model": 7890
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.7734375,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 53,
+                  "critique": 53,
+                  "evidence_search": 42,
+                  "revise": 185,
+                  "stop": 128,
+                  "verify": 66
+                },
+                "cases": 128,
+                "contradiction_events": 20,
+                "corrections": 44,
+                "cost_accuracy_score": 0.7539225260416667,
+                "evidence_calls": 42,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.1171875,
+                "mean_cost": 4.68359375,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 599.5,
+                "unresolved": 29,
+                "verification_calls": 66,
+                "verification_omissions": 62
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 30000,
+              "global_update_start": 20001,
+              "mean_training_reward": 0.7130199998937,
+              "model_snapshot_sha256": "395408c3cb6c481f72c77e30abc047d02677aa7f6f4ab8621078484b3a8988a3",
+              "model_updates_applied": 10000,
+              "phase": 3,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 2026,
+              "selection_sources": {
+                "exploration": 1523,
+                "model": 8477
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.734375,
+                "action_counts": {
+                  "answer": 31,
+                  "counterexample": 22,
+                  "critique": 22,
+                  "evidence_search": 13,
+                  "revise": 158,
+                  "stop": 128,
+                  "verify": 68
+                },
+                "cases": 128,
+                "contradiction_events": 5,
+                "corrections": 39,
+                "cost_accuracy_score": 0.7191080729166667,
+                "evidence_calls": 13,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 3.453125,
+                "mean_cost": 3.6640625,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 469.0,
+                "unresolved": 34,
+                "verification_calls": 68,
+                "verification_omissions": 60
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 40000,
+              "global_update_start": 30001,
+              "mean_training_reward": 0.7309749998864999,
+              "model_snapshot_sha256": "fead05440cbd69f900a92460e9835bb7e8024bf0ca7170def64a70637955d3f3",
+              "model_updates_applied": 10000,
+              "phase": 4,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 2026,
+              "selection_sources": {
+                "exploration": 935,
+                "model": 9065
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.734375,
+                "action_counts": {
+                  "answer": 26,
+                  "counterexample": 24,
+                  "critique": 24,
+                  "evidence_search": 10,
+                  "revise": 156,
+                  "stop": 128,
+                  "verify": 66
+                },
+                "cases": 128,
+                "contradiction_events": 6,
+                "corrections": 39,
+                "cost_accuracy_score": 0.7194010416666666,
+                "evidence_calls": 10,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 3.390625,
+                "mean_cost": 3.59375,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 460.0,
+                "unresolved": 34,
+                "verification_calls": 66,
+                "verification_omissions": 62
+              }
+            },
+            {
+              "arm": "no_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 50000,
+              "global_update_start": 40001,
+              "mean_training_reward": 0.7456554165752,
+              "model_snapshot_sha256": "d18731c12e2ba3551c66ad6918ab8883adc40c53427125547d74aa1ee887c46b",
+              "model_updates_applied": 10000,
+              "phase": 5,
+              "relearning_updates_skipped": 0,
+              "scratchpad_entries": 0,
+              "scratchpad_mature_entries": 0,
+              "scratchpad_stats": {},
+              "seed": 2026,
+              "selection_sources": {
+                "exploration": 503,
+                "model": 9497
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.7734375,
+                "action_counts": {
+                  "answer": 4,
+                  "counterexample": 51,
+                  "critique": 51,
+                  "evidence_search": 43,
+                  "revise": 189,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 21,
+                "corrections": 44,
+                "cost_accuracy_score": 0.7537109375,
+                "evidence_calls": 43,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 4.1796875,
+                "mean_cost": 4.734375,
+                "scratchpad_hit_rate": 0.0,
+                "selection_sources": {
+                  "model": 128
+                },
+                "total_cost": 606.0,
+                "unresolved": 29,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            }
+          ]
+        },
+        "persistent_scratchpad": {
+          "final_model_snapshot_sha256": "90e35df88ac20809a9b261ee84597a936dc8572c9009e2ff3f2b32a374e1778a",
+          "final_scratchpad_sha256": "57556195881bf2a481e04750c725492a6c144c31fa1d12811633ecde8836c3aa",
+          "final_scratchpad_stats": {
+            "lookups": 92261,
+            "mature_hits": 7060,
+            "model_updates_due_to_novel_evidence": 46773,
+            "new_associations": 128,
+            "reopened_associations": 80,
+            "skipped_relearning_updates": 3227,
+            "training_observations": 50000
+          },
+          "final_test": {
+            "accuracy": 0.67578125,
+            "action_counts": {
+              "answer": 2,
+              "counterexample": 38,
+              "critique": 38,
+              "evidence_search": 4,
+              "revise": 458,
+              "stop": 256,
+              "verify": 210
+            },
+            "cases": 256,
+            "contradiction_events": 9,
+            "corrections": 80,
+            "cost_accuracy_score": 0.6541748046875,
+            "evidence_calls": 4,
+            "false_corrections": 0,
+            "initial_accuracy": 0.36328125,
+            "mean_actions": 3.9296875,
+            "mean_cost": 5.185546875,
+            "scratchpad_hit_rate": 0.0,
+            "selection_sources": {
+              "model": 256
+            },
+            "total_cost": 1327.5,
+            "unresolved": 83,
+            "verification_calls": 210,
+            "verification_omissions": 46
+          },
+          "final_validation": {
+            "accuracy": 0.7734375,
+            "action_counts": {
+              "answer": 4,
+              "counterexample": 51,
+              "critique": 51,
+              "evidence_search": 8,
+              "revise": 189,
+              "stop": 128,
+              "verify": 69
+            },
+            "cases": 128,
+            "contradiction_events": 17,
+            "corrections": 44,
+            "cost_accuracy_score": 0.7559895833333333,
+            "evidence_calls": 8,
+            "false_corrections": 0,
+            "initial_accuracy": 0.4296875,
+            "mean_actions": 3.90625,
+            "mean_cost": 4.1875,
+            "scratchpad_hit_rate": 0.0078125,
+            "selection_sources": {
+              "model": 127,
+              "scratchpad": 1
+            },
+            "total_cost": 536.0,
+            "unresolved": 29,
+            "verification_calls": 69,
+            "verification_omissions": 59
+          },
+          "phases": [
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 21,
+              "global_update_end": 10000,
+              "global_update_start": 1,
+              "mean_training_reward": 0.6789479165414,
+              "model_snapshot_sha256": "55aa3025d0c117f6c3e85f0f2e9a54df031006628c550796363f9f9ac70ccd73",
+              "model_updates_applied": 9380,
+              "phase": 1,
+              "relearning_updates_skipped": 620,
+              "scratchpad_entries": 181,
+              "scratchpad_mature_entries": 23,
+              "scratchpad_stats": {
+                "lookups": 17332,
+                "mature_hits": 1426,
+                "model_updates_due_to_novel_evidence": 9380,
+                "new_associations": 53,
+                "reopened_associations": 21,
+                "skipped_relearning_updates": 620,
+                "training_observations": 10000
+              },
+              "seed": 2026,
+              "selection_sources": {
+                "exploration": 2668,
+                "model": 6719,
+                "scratchpad": 613
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.734375,
+                "action_counts": {
+                  "answer": 24,
+                  "counterexample": 14,
+                  "critique": 14,
+                  "evidence_search": 7,
+                  "revise": 146,
+                  "stop": 128,
+                  "verify": 66
+                },
+                "cases": 128,
+                "contradiction_events": 0,
+                "corrections": 39,
+                "cost_accuracy_score": 0.72080078125,
+                "evidence_calls": 7,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 3.1171875,
+                "mean_cost": 3.2578125,
+                "scratchpad_hit_rate": 0.015625,
+                "selection_sources": {
+                  "model": 126,
+                  "scratchpad": 2
+                },
+                "total_cost": 417.0,
+                "unresolved": 34,
+                "verification_calls": 66,
+                "verification_omissions": 62
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 22,
+              "global_update_end": 20000,
+              "global_update_start": 10001,
+              "mean_training_reward": 0.6988520831965,
+              "model_snapshot_sha256": "9d61f38592536528ab8575988c67f43c2b49280a412953be0a9923608f9b2448",
+              "model_updates_applied": 9036,
+              "phase": 2,
+              "relearning_updates_skipped": 964,
+              "scratchpad_entries": 181,
+              "scratchpad_mature_entries": 23,
+              "scratchpad_stats": {
+                "lookups": 35222,
+                "mature_hits": 3581,
+                "model_updates_due_to_novel_evidence": 18416,
+                "new_associations": 89,
+                "reopened_associations": 43,
+                "skipped_relearning_updates": 1584,
+                "training_observations": 20000
+              },
+              "seed": 2026,
+              "selection_sources": {
+                "exploration": 2110,
+                "model": 6944,
+                "scratchpad": 946
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.7734375,
+                "action_counts": {
+                  "answer": 0,
+                  "counterexample": 50,
+                  "critique": 50,
+                  "evidence_search": 17,
+                  "revise": 182,
+                  "stop": 128,
+                  "verify": 66
+                },
+                "cases": 128,
+                "contradiction_events": 17,
+                "corrections": 44,
+                "cost_accuracy_score": 0.7558919270833333,
+                "evidence_calls": 17,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 3.8515625,
+                "mean_cost": 4.2109375,
+                "scratchpad_hit_rate": 0.03125,
+                "selection_sources": {
+                  "model": 124,
+                  "scratchpad": 4
+                },
+                "total_cost": 539.0,
+                "unresolved": 29,
+                "verification_calls": 66,
+                "verification_omissions": 62
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 12,
+              "global_update_end": 30000,
+              "global_update_start": 20001,
+              "mean_training_reward": 0.7130237498436,
+              "model_snapshot_sha256": "93c66cacb782e167d43da3f21f81b03ba9e9cd43b3e5ccadd0c949658863387e",
+              "model_updates_applied": 9302,
+              "phase": 3,
+              "relearning_updates_skipped": 698,
+              "scratchpad_entries": 181,
+              "scratchpad_mature_entries": 17,
+              "scratchpad_stats": {
+                "lookups": 53699,
+                "mature_hits": 5071,
+                "model_updates_due_to_novel_evidence": 27718,
+                "new_associations": 103,
+                "reopened_associations": 55,
+                "skipped_relearning_updates": 2282,
+                "training_observations": 30000
+              },
+              "seed": 2026,
+              "selection_sources": {
+                "exploration": 1523,
+                "model": 7786,
+                "scratchpad": 691
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.75,
+                "action_counts": {
+                  "answer": 10,
+                  "counterexample": 31,
+                  "critique": 31,
+                  "evidence_search": 21,
+                  "revise": 163,
+                  "stop": 128,
+                  "verify": 66
+                },
+                "cases": 128,
+                "contradiction_events": 5,
+                "corrections": 41,
+                "cost_accuracy_score": 0.734033203125,
+                "evidence_calls": 21,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 3.515625,
+                "mean_cost": 3.83203125,
+                "scratchpad_hit_rate": 0.015625,
+                "selection_sources": {
+                  "model": 126,
+                  "scratchpad": 2
+                },
+                "total_cost": 490.5,
+                "unresolved": 32,
+                "verification_calls": 66,
+                "verification_omissions": 62
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 25,
+              "global_update_end": 40000,
+              "global_update_start": 30001,
+              "mean_training_reward": 0.7306170831475,
+              "model_snapshot_sha256": "df4d8f71fa0a0202dd7632d85c92ca26d364fb847a0190739d3673ebed62c2c9",
+              "model_updates_applied": 9494,
+              "phase": 4,
+              "relearning_updates_skipped": 506,
+              "scratchpad_entries": 181,
+              "scratchpad_mature_entries": 13,
+              "scratchpad_stats": {
+                "lookups": 72764,
+                "mature_hits": 6167,
+                "model_updates_due_to_novel_evidence": 37212,
+                "new_associations": 128,
+                "reopened_associations": 80,
+                "skipped_relearning_updates": 2788,
+                "training_observations": 40000
+              },
+              "seed": 2026,
+              "selection_sources": {
+                "exploration": 935,
+                "model": 8546,
+                "scratchpad": 519
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.734375,
+                "action_counts": {
+                  "answer": 13,
+                  "counterexample": 28,
+                  "critique": 28,
+                  "evidence_search": 4,
+                  "revise": 160,
+                  "stop": 128,
+                  "verify": 66
+                },
+                "cases": 128,
+                "contradiction_events": 8,
+                "corrections": 39,
+                "cost_accuracy_score": 0.7197591145833333,
+                "evidence_calls": 4,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 3.3359375,
+                "mean_cost": 3.5078125,
+                "scratchpad_hit_rate": 0.0078125,
+                "selection_sources": {
+                  "model": 127,
+                  "scratchpad": 1
+                },
+                "total_cost": 449.0,
+                "unresolved": 34,
+                "verification_calls": 66,
+                "verification_omissions": 62
+              }
+            },
+            {
+              "arm": "persistent_scratchpad",
+              "associations_reopened": 0,
+              "global_update_end": 50000,
+              "global_update_start": 40001,
+              "mean_training_reward": 0.7432454164533,
+              "model_snapshot_sha256": "90e35df88ac20809a9b261ee84597a936dc8572c9009e2ff3f2b32a374e1778a",
+              "model_updates_applied": 9561,
+              "phase": 5,
+              "relearning_updates_skipped": 439,
+              "scratchpad_entries": 181,
+              "scratchpad_mature_entries": 12,
+              "scratchpad_stats": {
+                "lookups": 92261,
+                "mature_hits": 7060,
+                "model_updates_due_to_novel_evidence": 46773,
+                "new_associations": 128,
+                "reopened_associations": 80,
+                "skipped_relearning_updates": 3227,
+                "training_observations": 50000
+              },
+              "seed": 2026,
+              "selection_sources": {
+                "exploration": 503,
+                "model": 9061,
+                "scratchpad": 436
+              },
+              "updates": 10000,
+              "validation": {
+                "accuracy": 0.7734375,
+                "action_counts": {
+                  "answer": 4,
+                  "counterexample": 51,
+                  "critique": 51,
+                  "evidence_search": 8,
+                  "revise": 189,
+                  "stop": 128,
+                  "verify": 69
+                },
+                "cases": 128,
+                "contradiction_events": 17,
+                "corrections": 44,
+                "cost_accuracy_score": 0.7559895833333333,
+                "evidence_calls": 8,
+                "false_corrections": 0,
+                "initial_accuracy": 0.4296875,
+                "mean_actions": 3.90625,
+                "mean_cost": 4.1875,
+                "scratchpad_hit_rate": 0.0078125,
+                "selection_sources": {
+                  "model": 127,
+                  "scratchpad": 1
+                },
+                "total_cost": 536.0,
+                "unresolved": 29,
+                "verification_calls": 69,
+                "verification_omissions": 59
+              }
+            }
+          ]
+        }
+      },
+      "seed": 2026
+    }
+  ],
+  "status": "completed"
+}

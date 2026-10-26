@@ -1,0 +1,42 @@
+{
+  "canonical": {
+    "authority_side_counts": {
+      "EARLIER": 120,
+      "LATER": 120
+    },
+    "authority_training_rows": 240,
+    "base_id_overlap": 0,
+    "base_train_rows": 80,
+    "base_validation_rows": 20,
+    "layout_counts": {
+      "AUTHORITY_EARLY": 80,
+      "AUTHORITY_MIDDLE": 80,
+      "AUTHORITY_NEAR": 80
+    },
+    "max_serialized_input_bytes_plus_bos": 172,
+    "operation_counts": {
+      "SELECT_FIRST": 120,
+      "SELECT_SECOND": 120
+    }
+  },
+  "factorized": {
+    "authority_side_counts": {
+      "EARLIER": 120,
+      "LATER": 120
+    },
+    "authority_training_rows": 240,
+    "base_id_overlap": 0,
+    "base_train_rows": 80,
+    "base_validation_rows": 20,
+    "layout_counts": {
+      "AUTHORITY_EARLY": 80,
+      "AUTHORITY_MIDDLE": 80,
+      "AUTHORITY_NEAR": 80
+    },
+    "max_serialized_input_bytes_plus_bos": 184,
+    "operation_counts": {
+      "SELECT_FIRST": 120,
+      "SELECT_SECOND": 120
+    }
+  }
+}

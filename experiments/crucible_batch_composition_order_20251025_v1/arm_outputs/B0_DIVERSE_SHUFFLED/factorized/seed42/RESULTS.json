@@ -1,0 +1,26 @@
+{
+  "arm": "B0_DIVERSE_SHUFFLED",
+  "arm_id": "B0_DIVERSE_SHUFFLED_factorized_seed42",
+  "checkpoint": "experiments/crucible_batch_composition_order_20251025_v1/arm_outputs/B0_DIVERSE_SHUFFLED/factorized/seed42/checkpoint.pt",
+  "checkpoint_sha256": "f321aef648b9af40cf11f15a6c93cb4347c43d22bb10745e928f6fac05b9026a",
+  "effective_batch": 12,
+  "elapsed_seconds": 393.69194721098756,
+  "expanded_records": 240,
+  "interface": "factorized",
+  "max_gradient_cosine_previous": 0.998905599117279,
+  "mean_gradient_cosine_previous": 0.08322885691469166,
+  "mean_loss": 0.6651643465049565,
+  "mean_unique_pair_groups_per_batch": 12,
+  "min_gradient_cosine_previous": -0.9028002619743347,
+  "record_presentations": 6000,
+  "schedule_digest": "4bd09e034fd8e4d560d5a9e42cabb9da93c918a09de133fb87c588a6a1a53ed1",
+  "seed": 42,
+  "steps": 500,
+  "train_expanded": {
+    "examples": 240,
+    "mean_target_loss": 0.2767254886527856,
+    "teacher_forced_exact_accuracy": 0.7208333333333333,
+    "teacher_forced_token_accuracy": 0.8604166666666667
+  },
+  "train_expanded_exact": 0.7208333333333333
+}

@@ -1,0 +1,116 @@
+{
+  "error_count": 0,
+  "errors": [],
+  "splits": {
+    "heldout": {
+      "records": 64,
+      "serialized_target_tokens": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "target_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "unique_inputs": 60,
+      "unique_record_ids": 64
+    },
+    "test": {
+      "records": 64,
+      "serialized_target_tokens": [
+        51,
+        53,
+        54,
+        55,
+        57,
+        59,
+        60
+      ],
+      "target_values": [
+        0,
+        2,
+        3,
+        4,
+        6,
+        8,
+        9
+      ],
+      "unique_inputs": 55,
+      "unique_record_ids": 64
+    },
+    "train": {
+      "records": 128,
+      "serialized_target_tokens": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "target_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "unique_inputs": 110,
+      "unique_record_ids": 128
+    },
+    "validation": {
+      "records": 64,
+      "serialized_target_tokens": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "target_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "unique_inputs": 56,
+      "unique_record_ids": 64
+    }
+  }
+}

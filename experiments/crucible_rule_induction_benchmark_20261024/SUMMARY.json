@@ -1,0 +1,145 @@
+{
+  "audit": {
+    "all_checks_pass": true,
+    "duplicate_or_query_pair_errors": [],
+    "family_counts": {
+      "test": {
+        "absdiff_shift": 1,
+        "affine2": 15,
+        "max_shift": 1,
+        "threshold_select": 14
+      },
+      "train": {
+        "absdiff_shift": 7,
+        "affine2": 105,
+        "max_shift": 7,
+        "threshold_select": 102
+      },
+      "validation": {
+        "absdiff_shift": 2,
+        "affine2": 30,
+        "max_shift": 2,
+        "threshold_select": 28
+      }
+    },
+    "identifiability": {
+      "test": {
+        "1": {
+          "exact_rule_unique": 0,
+          "exact_rule_unique_rate": 0.0,
+          "mean_consistent_rule_count": 37.25806451612903,
+          "query_identifiable": 0,
+          "query_identifiable_rate": 0.0,
+          "tasks": 31
+        },
+        "2": {
+          "exact_rule_unique": 5,
+          "exact_rule_unique_rate": 0.16129032258064516,
+          "mean_consistent_rule_count": 12.741935483870968,
+          "query_identifiable": 7,
+          "query_identifiable_rate": 0.22580645161290322,
+          "tasks": 31
+        },
+        "4": {
+          "exact_rule_unique": 18,
+          "exact_rule_unique_rate": 0.5806451612903226,
+          "mean_consistent_rule_count": 5.935483870967742,
+          "query_identifiable": 25,
+          "query_identifiable_rate": 0.8064516129032258,
+          "tasks": 31
+        },
+        "8": {
+          "exact_rule_unique": 22,
+          "exact_rule_unique_rate": 0.7096774193548387,
+          "mean_consistent_rule_count": 2.129032258064516,
+          "query_identifiable": 31,
+          "query_identifiable_rate": 1.0,
+          "tasks": 31
+        }
+      },
+      "train": {
+        "1": {
+          "exact_rule_unique": 0,
+          "exact_rule_unique_rate": 0.0,
+          "mean_consistent_rule_count": 37.66968325791855,
+          "query_identifiable": 0,
+          "query_identifiable_rate": 0.0,
+          "tasks": 221
+        },
+        "2": {
+          "exact_rule_unique": 11,
+          "exact_rule_unique_rate": 0.049773755656108594,
+          "mean_consistent_rule_count": 10.131221719457013,
+          "query_identifiable": 28,
+          "query_identifiable_rate": 0.12669683257918551,
+          "tasks": 221
+        },
+        "4": {
+          "exact_rule_unique": 109,
+          "exact_rule_unique_rate": 0.49321266968325794,
+          "mean_consistent_rule_count": 4.1855203619909505,
+          "query_identifiable": 182,
+          "query_identifiable_rate": 0.8235294117647058,
+          "tasks": 221
+        },
+        "8": {
+          "exact_rule_unique": 147,
+          "exact_rule_unique_rate": 0.665158371040724,
+          "mean_consistent_rule_count": 2.2171945701357467,
+          "query_identifiable": 207,
+          "query_identifiable_rate": 0.9366515837104072,
+          "tasks": 221
+        }
+      },
+      "validation": {
+        "1": {
+          "exact_rule_unique": 0,
+          "exact_rule_unique_rate": 0.0,
+          "mean_consistent_rule_count": 41.38709677419355,
+          "query_identifiable": 0,
+          "query_identifiable_rate": 0.0,
+          "tasks": 62
+        },
+        "2": {
+          "exact_rule_unique": 4,
+          "exact_rule_unique_rate": 0.06451612903225806,
+          "mean_consistent_rule_count": 11.758064516129032,
+          "query_identifiable": 6,
+          "query_identifiable_rate": 0.0967741935483871,
+          "tasks": 62
+        },
+        "4": {
+          "exact_rule_unique": 34,
+          "exact_rule_unique_rate": 0.5483870967741935,
+          "mean_consistent_rule_count": 5.596774193548387,
+          "query_identifiable": 47,
+          "query_identifiable_rate": 0.7580645161290323,
+          "tasks": 62
+        },
+        "8": {
+          "exact_rule_unique": 39,
+          "exact_rule_unique_rate": 0.6290322580645161,
+          "mean_consistent_rule_count": 2.225806451612903,
+          "query_identifiable": 58,
+          "query_identifiable_rate": 0.9354838709677419,
+          "tasks": 62
+        }
+      }
+    },
+    "oracle_errors": [],
+    "rule_instance_overlaps": {
+      "train_test": [],
+      "train_validation": [],
+      "validation_test": []
+    },
+    "tasks": 314
+  },
+  "experiment": "crucible_rule_induction_benchmark_20261024",
+  "model_training_performed": false,
+  "split_counts": {
+    "test": 31,
+    "train": 221,
+    "validation": 62
+  },
+  "status": "completed"
+}

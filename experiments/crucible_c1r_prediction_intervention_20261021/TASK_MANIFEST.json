@@ -1,0 +1,87 @@
+{
+  "experiment": "crucible_c1r_prediction_intervention_20261021",
+  "hidden_labels_used_by_policy": false,
+  "oracle_checks": 36000,
+  "oracle_failures": 0,
+  "seeds": {
+    "1337": {
+      "conditions": {
+        "correlated_misinformation": 1193,
+        "inconclusive_test": 1193,
+        "intervention_only": 1204,
+        "misleading_intervention": 1194,
+        "misleading_prediction": 1190,
+        "prediction_only": 1226,
+        "role_break": 1188,
+        "source_conflict": 1205,
+        "truthful_consensus": 1187,
+        "unavailable_tests": 1220
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "64ad03bc433ac46086ada12a6216037da568f010d54f6fc171b2dab794dc2c94",
+      "templates": {
+        "asymmetric": 2964,
+        "balanced": 2979,
+        "deep": 3052,
+        "wide": 3005
+      }
+    },
+    "2026": {
+      "conditions": {
+        "correlated_misinformation": 1192,
+        "inconclusive_test": 1237,
+        "intervention_only": 1228,
+        "misleading_intervention": 1187,
+        "misleading_prediction": 1203,
+        "prediction_only": 1184,
+        "role_break": 1214,
+        "source_conflict": 1199,
+        "truthful_consensus": 1127,
+        "unavailable_tests": 1229
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "8c1be695508c87b2ffe302063d13dd8f5cfa965c14d780e1ee9be0796348f5d3",
+      "templates": {
+        "asymmetric": 3040,
+        "balanced": 3000,
+        "deep": 2944,
+        "wide": 3016
+      }
+    },
+    "42": {
+      "conditions": {
+        "correlated_misinformation": 1224,
+        "inconclusive_test": 1200,
+        "intervention_only": 1218,
+        "misleading_intervention": 1178,
+        "misleading_prediction": 1163,
+        "prediction_only": 1209,
+        "role_break": 1242,
+        "source_conflict": 1156,
+        "truthful_consensus": 1204,
+        "unavailable_tests": 1206
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "e0f6de2db94b0da0d88298d4892ce9954967c6d05d0484718929d8b697baa01b",
+      "templates": {
+        "asymmetric": 2994,
+        "balanced": 2987,
+        "deep": 2960,
+        "wide": 3059
+      }
+    }
+  },
+  "task_count_total": 36000
+}

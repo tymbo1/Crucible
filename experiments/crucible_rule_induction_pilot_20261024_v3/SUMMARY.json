@@ -1,0 +1,47 @@
+{
+  "experiment": "crucible_rule_induction_pilot_20261024",
+  "results": [
+    {
+      "arm": "query_only",
+      "elapsed_seconds": 291.1064320480218,
+      "seed": 42
+    },
+    {
+      "arm": "mixed",
+      "elapsed_seconds": 566.6861486390117,
+      "seed": 42
+    },
+    {
+      "arm": "query_only",
+      "elapsed_seconds": 278.6857082169736,
+      "seed": 1337
+    },
+    {
+      "arm": "mixed",
+      "elapsed_seconds": 559.6954553200048,
+      "seed": 1337
+    }
+  ],
+  "status": "completed",
+  "test_evaluated": false,
+  "validation": {
+    "aggregate_metrics": {
+      "mixed_valid_1_raw_accuracy": 0.14285714285714285,
+      "mixed_valid_8_identifiable_accuracy": 0.058333333333333334,
+      "mixed_valid_8_raw_accuracy": 0.07142857142857142,
+      "mixed_valid_8_shuffled_raw_accuracy": 0.07936507936507936,
+      "query_only_valid_8_identifiable_accuracy": 0.11666666666666667
+    },
+    "all_validation_gates_pass": false,
+    "gates": {
+      "demonstration_advantage": false,
+      "evidence_dependence": false,
+      "evidence_response": false
+    },
+    "thresholds": {
+      "baseline_gain": 0.05,
+      "evidence_gain": 0.05,
+      "shuffle_drop": 0.05
+    }
+  }
+}

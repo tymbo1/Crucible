@@ -1,0 +1,39 @@
+{
+  "checkpoint": "experiments/crucible_d2_readout_competence_ladder_20261026_v1/trained_arms/S2_DIRECT_TARGET/factorized/seed42/readout.pt",
+  "checkpoint_sha256": "8f4acd229645b99bd7f8e3a534725de5693ba53b980964ed7cdd808fc7c479af",
+  "interface": "factorized",
+  "seed": 42,
+  "source": "frozen_d1_readout",
+  "stage": "S2_DIRECT_TARGET",
+  "steps": 500,
+  "train_metrics": {
+    "format_errors": 0,
+    "operation_correct": 160,
+    "output_correct": 160,
+    "paired": {
+      "correct_two_way": 80,
+      "correct_two_way_accuracy": 1.0,
+      "flip_accuracy": 1.0,
+      "pairs": 80,
+      "pointer_flips": 80
+    },
+    "pointer_accuracy": 1.0,
+    "pointer_correct": 160,
+    "rows": 160
+  },
+  "validation_metrics": {
+    "format_errors": 0,
+    "operation_correct": 40,
+    "output_correct": 40,
+    "paired": {
+      "correct_two_way": 20,
+      "correct_two_way_accuracy": 1.0,
+      "flip_accuracy": 1.0,
+      "pairs": 20,
+      "pointer_flips": 20
+    },
+    "pointer_accuracy": 1.0,
+    "pointer_correct": 40,
+    "rows": 40
+  }
+}

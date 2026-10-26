@@ -1,0 +1,32 @@
+{
+  "arm": "POSITION_VARIED_INTERVENTION",
+  "arm_id": "POSITION_VARIED_INTERVENTION_factorized_seed42",
+  "checkpoint": "experiments/crucible_position_generalization_gate_20251025_v1/arm_outputs/POSITION_VARIED_INTERVENTION/factorized/seed42/checkpoint.pt",
+  "checkpoint_sha256": "c45a363b6f4ed4d75c2342d88ccbb323484edd166a51dee6f902da8b63a319af",
+  "elapsed_seconds": 130.24262287898455,
+  "fit_pass": true,
+  "initial_dense_state_digest": "8ef53f7ba86230a50c4103cefb0320f7e8cf5161dfc913711d6275a1a7b98c4a",
+  "interface": "factorized",
+  "seed": 42,
+  "steps": 500,
+  "train": {
+    "examples": 80,
+    "mean_target_loss": 0.008479594359232578,
+    "teacher_forced_exact_accuracy": 1.0,
+    "teacher_forced_token_accuracy": 1.0
+  },
+  "train_exact": 1.0,
+  "training_template_counts": {
+    "EARLY_PADDED": 27,
+    "FIXED_NEAR_PADDED": 27,
+    "MIDDLE_POSITION": 26
+  },
+  "validation": {
+    "examples": 20,
+    "mean_target_loss": 1.179364764690399,
+    "teacher_forced_exact_accuracy": 0.6,
+    "teacher_forced_token_accuracy": 0.8
+  },
+  "validation_exact": 0.6,
+  "validation_pass": false
+}

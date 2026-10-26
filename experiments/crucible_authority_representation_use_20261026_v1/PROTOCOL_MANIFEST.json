@@ -1,0 +1,38 @@
+{
+  "architecture_changed": false,
+  "experiment": "crucible_authority_representation_use_20261026_v1",
+  "familiar_layouts": [
+    "AUTHORITY_NEAR",
+    "AUTHORITY_EARLY",
+    "AUTHORITY_MIDDLE"
+  ],
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "numerical_tolerance": 2e-06,
+  "patch_sites": [
+    "embedding",
+    "layer_0",
+    "layer_1",
+    "layer_2",
+    "layer_3",
+    "final_norm"
+  ],
+  "probe_locations": [
+    "authority",
+    "op_first",
+    "op_second",
+    "output_end",
+    "mean_valid"
+  ],
+  "protocol": "docs/CRUCIBLE_AUTHORITY_REPRESENTATION_USE_PROTOCOL_20261026.md",
+  "retrained": false,
+  "ridge_lambda": 0.01,
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "unseen_layout": "UNSEEN_REVERSED_AUTHORITY"
+}

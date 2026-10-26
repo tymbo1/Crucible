@@ -1,0 +1,26 @@
+{
+  "arm": "A0_SHUFFLED_EXPOSURE",
+  "arm_id": "A0_SHUFFLED_EXPOSURE_factorized_seed1337",
+  "checkpoint": "experiments/crucible_paired_positional_exposure_20251025_v1/arm_outputs/A0_SHUFFLED_EXPOSURE/factorized/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "0212ad6e2acc786f8d43979c22f353668eb77be3228d39c745b1cd9b0ec09e13",
+  "consistency_weight": 0.1,
+  "effective_batch": 12,
+  "elapsed_seconds": 365.1763966039871,
+  "expanded_records": 240,
+  "groups": 40,
+  "interface": "factorized",
+  "seed": 1337,
+  "steps": 500,
+  "train_expanded": {
+    "examples": 240,
+    "mean_target_loss": 0.004054248186488015,
+    "teacher_forced_exact_accuracy": 1.0,
+    "teacher_forced_token_accuracy": 1.0
+  },
+  "train_expanded_exact": 1.0,
+  "training_layout_counts": {
+    "EARLY_PADDED": 80,
+    "FIXED_NEAR_PADDED": 80,
+    "MIDDLE_POSITION": 80
+  }
+}

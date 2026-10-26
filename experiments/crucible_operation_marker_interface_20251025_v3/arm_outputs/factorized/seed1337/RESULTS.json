@@ -1,0 +1,1041 @@
+{
+  "arm_id": "A1_SINGLE_TOKEN_MARKER_factorized_seed1337",
+  "by_operation": {
+    "SELECT_FIRST": {
+      "accuracy": 0.5,
+      "correct": 5,
+      "eos_correct": 10,
+      "examples": 10,
+      "format_errors": 0,
+      "full_sequence_accuracy": 0.5,
+      "full_sequence_correct": 5
+    },
+    "SELECT_SECOND": {
+      "accuracy": 0.5,
+      "correct": 5,
+      "eos_correct": 10,
+      "examples": 10,
+      "format_errors": 0,
+      "full_sequence_accuracy": 0.5,
+      "full_sequence_correct": 5
+    }
+  },
+  "by_pair_kind": {
+    "equal": {
+      "accuracy": 0.5,
+      "correct": 2,
+      "eos_correct": 4,
+      "examples": 4,
+      "format_errors": 0,
+      "full_sequence_accuracy": 0.5,
+      "full_sequence_correct": 2
+    },
+    "unequal": {
+      "accuracy": 0.5,
+      "correct": 8,
+      "eos_correct": 16,
+      "examples": 16,
+      "format_errors": 0,
+      "full_sequence_accuracy": 0.5,
+      "full_sequence_correct": 8
+    }
+  },
+  "checkpoint": "experiments/crucible_operation_marker_interface_20251025_v3/arm_outputs/factorized/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "a414975ffe44cd2e1763c88ba6c8e00fc24f4f678b71737db8a51d4ee5dc1cd0",
+  "condition": "A1_SINGLE_TOKEN_MARKER",
+  "elapsed_seconds": 112.30699426599313,
+  "fit_pass": false,
+  "gate_pass": false,
+  "initial_dense_state_digest": "07371cd137e45b74164e9c79c0ce95176259cbdb742778d21004b3f45b309714",
+  "interface": "factorized",
+  "output_token_train_accuracy": 0.6,
+  "output_token_validation_accuracy": 0.5,
+  "paired": {
+    "train": {
+      "all": {
+        "both_operations_correct": 8,
+        "both_operations_correct_rate": 0.2,
+        "correct_and_switched": 0,
+        "correct_and_switched_rate": 0.0,
+        "pair_groups": 40,
+        "pairs": [
+          {
+            "first_correct": false,
+            "first_prediction": "1",
+            "pair": [
+              0,
+              1
+            ],
+            "second_correct": true,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "2",
+            "pair": [
+              0,
+              2
+            ],
+            "second_correct": true,
+            "second_prediction": "2"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "1",
+            "pair": [
+              1,
+              0
+            ],
+            "second_correct": false,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "1",
+            "pair": [
+              1,
+              1
+            ],
+            "second_correct": true,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "1",
+            "pair": [
+              1,
+              2
+            ],
+            "second_correct": false,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "3",
+            "pair": [
+              1,
+              3
+            ],
+            "second_correct": true,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "2",
+            "pair": [
+              2,
+              0
+            ],
+            "second_correct": false,
+            "second_prediction": "2"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "1",
+            "pair": [
+              2,
+              1
+            ],
+            "second_correct": true,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "2",
+            "pair": [
+              2,
+              2
+            ],
+            "second_correct": true,
+            "second_prediction": "2"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "3",
+            "pair": [
+              2,
+              3
+            ],
+            "second_correct": true,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "4",
+            "pair": [
+              2,
+              4
+            ],
+            "second_correct": true,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "3",
+            "pair": [
+              3,
+              1
+            ],
+            "second_correct": false,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "3",
+            "pair": [
+              3,
+              2
+            ],
+            "second_correct": false,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "3",
+            "pair": [
+              3,
+              3
+            ],
+            "second_correct": true,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "4",
+            "pair": [
+              3,
+              4
+            ],
+            "second_correct": true,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "3",
+            "pair": [
+              3,
+              5
+            ],
+            "second_correct": false,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "4",
+            "pair": [
+              4,
+              2
+            ],
+            "second_correct": false,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "4",
+            "pair": [
+              4,
+              3
+            ],
+            "second_correct": false,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "4",
+            "pair": [
+              4,
+              4
+            ],
+            "second_correct": true,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "5",
+            "pair": [
+              4,
+              5
+            ],
+            "second_correct": true,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "6",
+            "pair": [
+              4,
+              6
+            ],
+            "second_correct": true,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "4",
+            "pair": [
+              4,
+              7
+            ],
+            "second_correct": false,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "5",
+            "pair": [
+              5,
+              3
+            ],
+            "second_correct": false,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "5",
+            "pair": [
+              5,
+              4
+            ],
+            "second_correct": false,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "5",
+            "pair": [
+              5,
+              6
+            ],
+            "second_correct": false,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "5",
+            "pair": [
+              5,
+              7
+            ],
+            "second_correct": false,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "6",
+            "pair": [
+              6,
+              4
+            ],
+            "second_correct": false,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "6",
+            "pair": [
+              6,
+              5
+            ],
+            "second_correct": false,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "6",
+            "pair": [
+              6,
+              6
+            ],
+            "second_correct": true,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "6",
+            "pair": [
+              6,
+              7
+            ],
+            "second_correct": false,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "4",
+            "pair": [
+              7,
+              4
+            ],
+            "second_correct": true,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "5",
+            "pair": [
+              7,
+              5
+            ],
+            "second_correct": true,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "6",
+            "pair": [
+              7,
+              6
+            ],
+            "second_correct": true,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "7",
+            "pair": [
+              7,
+              7
+            ],
+            "second_correct": true,
+            "second_prediction": "7"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "8",
+            "pair": [
+              7,
+              8
+            ],
+            "second_correct": true,
+            "second_prediction": "8"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "7",
+            "pair": [
+              8,
+              7
+            ],
+            "second_correct": true,
+            "second_prediction": "7"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "8",
+            "pair": [
+              8,
+              8
+            ],
+            "second_correct": true,
+            "second_prediction": "8"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "9",
+            "pair": [
+              8,
+              9
+            ],
+            "second_correct": true,
+            "second_prediction": "9"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "9",
+            "pair": [
+              9,
+              8
+            ],
+            "second_correct": false,
+            "second_prediction": "9"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "9",
+            "pair": [
+              9,
+              9
+            ],
+            "second_correct": true,
+            "second_prediction": "9"
+          }
+        ],
+        "prediction_switch_rate": 0.0,
+        "predictions_switched": 0
+      },
+      "unequal": {
+        "both_operations_correct": 0,
+        "both_operations_correct_rate": 0.0,
+        "correct_and_switched": 0,
+        "correct_and_switched_rate": 0.0,
+        "pair_groups": 32,
+        "pairs": [
+          {
+            "first_correct": false,
+            "first_prediction": "1",
+            "pair": [
+              0,
+              1
+            ],
+            "second_correct": true,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "2",
+            "pair": [
+              0,
+              2
+            ],
+            "second_correct": true,
+            "second_prediction": "2"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "1",
+            "pair": [
+              1,
+              0
+            ],
+            "second_correct": false,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "1",
+            "pair": [
+              1,
+              2
+            ],
+            "second_correct": false,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "3",
+            "pair": [
+              1,
+              3
+            ],
+            "second_correct": true,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "2",
+            "pair": [
+              2,
+              0
+            ],
+            "second_correct": false,
+            "second_prediction": "2"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "1",
+            "pair": [
+              2,
+              1
+            ],
+            "second_correct": true,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "3",
+            "pair": [
+              2,
+              3
+            ],
+            "second_correct": true,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "4",
+            "pair": [
+              2,
+              4
+            ],
+            "second_correct": true,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "3",
+            "pair": [
+              3,
+              1
+            ],
+            "second_correct": false,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "3",
+            "pair": [
+              3,
+              2
+            ],
+            "second_correct": false,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "4",
+            "pair": [
+              3,
+              4
+            ],
+            "second_correct": true,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "3",
+            "pair": [
+              3,
+              5
+            ],
+            "second_correct": false,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "4",
+            "pair": [
+              4,
+              2
+            ],
+            "second_correct": false,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "4",
+            "pair": [
+              4,
+              3
+            ],
+            "second_correct": false,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "5",
+            "pair": [
+              4,
+              5
+            ],
+            "second_correct": true,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "6",
+            "pair": [
+              4,
+              6
+            ],
+            "second_correct": true,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "4",
+            "pair": [
+              4,
+              7
+            ],
+            "second_correct": false,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "5",
+            "pair": [
+              5,
+              3
+            ],
+            "second_correct": false,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "5",
+            "pair": [
+              5,
+              4
+            ],
+            "second_correct": false,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "5",
+            "pair": [
+              5,
+              6
+            ],
+            "second_correct": false,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "5",
+            "pair": [
+              5,
+              7
+            ],
+            "second_correct": false,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "6",
+            "pair": [
+              6,
+              4
+            ],
+            "second_correct": false,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "6",
+            "pair": [
+              6,
+              5
+            ],
+            "second_correct": false,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "6",
+            "pair": [
+              6,
+              7
+            ],
+            "second_correct": false,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "4",
+            "pair": [
+              7,
+              4
+            ],
+            "second_correct": true,
+            "second_prediction": "4"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "5",
+            "pair": [
+              7,
+              5
+            ],
+            "second_correct": true,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "6",
+            "pair": [
+              7,
+              6
+            ],
+            "second_correct": true,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "8",
+            "pair": [
+              7,
+              8
+            ],
+            "second_correct": true,
+            "second_prediction": "8"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "7",
+            "pair": [
+              8,
+              7
+            ],
+            "second_correct": true,
+            "second_prediction": "7"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "9",
+            "pair": [
+              8,
+              9
+            ],
+            "second_correct": true,
+            "second_prediction": "9"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "9",
+            "pair": [
+              9,
+              8
+            ],
+            "second_correct": false,
+            "second_prediction": "9"
+          }
+        ],
+        "prediction_switch_rate": 0.0,
+        "predictions_switched": 0
+      }
+    },
+    "validation": {
+      "all": {
+        "both_operations_correct": 1,
+        "both_operations_correct_rate": 0.1,
+        "correct_and_switched": 0,
+        "correct_and_switched_rate": 0.0,
+        "pair_groups": 10,
+        "pairs": [
+          {
+            "first_correct": false,
+            "first_prediction": "6",
+            "pair": [
+              0,
+              0
+            ],
+            "second_correct": false,
+            "second_prediction": "6"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "9",
+            "pair": [
+              0,
+              9
+            ],
+            "second_correct": true,
+            "second_prediction": "9"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "1",
+            "pair": [
+              1,
+              8
+            ],
+            "second_correct": false,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "7",
+            "pair": [
+              2,
+              7
+            ],
+            "second_correct": true,
+            "second_prediction": "7"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "3",
+            "pair": [
+              3,
+              6
+            ],
+            "second_correct": false,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "5",
+            "pair": [
+              5,
+              5
+            ],
+            "second_correct": true,
+            "second_prediction": "5"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "3",
+            "pair": [
+              6,
+              3
+            ],
+            "second_correct": true,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "7",
+            "pair": [
+              7,
+              2
+            ],
+            "second_correct": false,
+            "second_prediction": "7"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "1",
+            "pair": [
+              8,
+              1
+            ],
+            "second_correct": true,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "9",
+            "pair": [
+              9,
+              0
+            ],
+            "second_correct": false,
+            "second_prediction": "9"
+          }
+        ],
+        "prediction_switch_rate": 0.0,
+        "predictions_switched": 0
+      },
+      "unequal": {
+        "both_operations_correct": 0,
+        "both_operations_correct_rate": 0.0,
+        "correct_and_switched": 0,
+        "correct_and_switched_rate": 0.0,
+        "pair_groups": 8,
+        "pairs": [
+          {
+            "first_correct": false,
+            "first_prediction": "9",
+            "pair": [
+              0,
+              9
+            ],
+            "second_correct": true,
+            "second_prediction": "9"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "1",
+            "pair": [
+              1,
+              8
+            ],
+            "second_correct": false,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "7",
+            "pair": [
+              2,
+              7
+            ],
+            "second_correct": true,
+            "second_prediction": "7"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "3",
+            "pair": [
+              3,
+              6
+            ],
+            "second_correct": false,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "3",
+            "pair": [
+              6,
+              3
+            ],
+            "second_correct": true,
+            "second_prediction": "3"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "7",
+            "pair": [
+              7,
+              2
+            ],
+            "second_correct": false,
+            "second_prediction": "7"
+          },
+          {
+            "first_correct": false,
+            "first_prediction": "1",
+            "pair": [
+              8,
+              1
+            ],
+            "second_correct": true,
+            "second_prediction": "1"
+          },
+          {
+            "first_correct": true,
+            "first_prediction": "9",
+            "pair": [
+              9,
+              0
+            ],
+            "second_correct": false,
+            "second_prediction": "9"
+          }
+        ],
+        "prediction_switch_rate": 0.0,
+        "predictions_switched": 0
+      }
+    }
+  },
+  "prediction_train_metrics": {
+    "accuracy": 0.6,
+    "correct": 48,
+    "eos_correct": 80,
+    "examples": 80,
+    "format_errors": 0,
+    "full_sequence_accuracy": 0.6,
+    "full_sequence_correct": 48
+  },
+  "prediction_validation_metrics": {
+    "accuracy": 0.5,
+    "correct": 10,
+    "eos_correct": 20,
+    "examples": 20,
+    "format_errors": 0,
+    "full_sequence_accuracy": 0.5,
+    "full_sequence_correct": 10
+  },
+  "seed": 1337,
+  "steps": 500,
+  "train": {
+    "examples": 80,
+    "mean_target_loss": 0.348409216850996,
+    "teacher_forced_exact_accuracy": 0.6,
+    "teacher_forced_token_accuracy": 0.8
+  },
+  "train_accuracy": 0.6,
+  "train_exact": 0.6,
+  "unequal_validation_accuracy": 0.5,
+  "validation": {
+    "examples": 20,
+    "mean_target_loss": 1.0584140300750733,
+    "teacher_forced_exact_accuracy": 0.5,
+    "teacher_forced_token_accuracy": 0.75
+  },
+  "validation_accuracy": 0.5,
+  "validation_exact": 0.5,
+  "validation_pass": false
+}

@@ -1,0 +1,1201 @@
+{
+  "arm": "tiny",
+  "elapsed_seconds": 701.2063196609961,
+  "evaluation_examples": {
+    "probe": 8,
+    "train": 8
+  },
+  "final_generalization_exact": null,
+  "final_interpolation_exact": null,
+  "final_probe_exact": 0.0,
+  "final_train_exact": 1.0,
+  "interpolation_pass": null,
+  "interpolation_threshold": null,
+  "parameter_count": 21968640,
+  "records": [
+    {
+      "metrics": {
+        "probe": {
+          "by_group": {
+            "add": {
+              "examples": 8,
+              "free_end_to_end_accuracy": 0.0,
+              "free_final_accuracy": 0.0,
+              "teacher_forced_final_accuracy": 0.0,
+              "teacher_forced_sequence_exact": null
+            }
+          },
+          "overall": {
+            "examples": 8,
+            "free_end_to_end_accuracy": 0.0,
+            "free_final_accuracy": 0.0,
+            "teacher_forced_final_accuracy": 0.0,
+            "teacher_forced_sequence_exact": null
+          },
+          "rows": [
+            {
+              "expected_final": 5,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "ac358267e83d29b4fe73",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 5,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "fc8d9bdd10dfa52ba160",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 6,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "1ef69785f4f4e7a668f1",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 7,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "0ba99afa03f93095e0c6",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 7,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "fc562cc59c538d9d40c4",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 8,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "e382f7b0597e70773f1a",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 9,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "d644392f52943642266e",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 0,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "8e48abaa6b1240a18dbf",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            }
+          ],
+          "sequence": {
+            "examples": 8,
+            "mean_target_loss": 5.875591278076172,
+            "teacher_forced_exact_accuracy": 0.0,
+            "teacher_forced_token_accuracy": 0.0
+          }
+        },
+        "train": {
+          "by_group": {
+            "add": {
+              "examples": 6,
+              "free_end_to_end_accuracy": 0.0,
+              "free_final_accuracy": 0.0,
+              "teacher_forced_final_accuracy": 0.0,
+              "teacher_forced_sequence_exact": null
+            },
+            "mul": {
+              "examples": 1,
+              "free_end_to_end_accuracy": 0.0,
+              "free_final_accuracy": 0.0,
+              "teacher_forced_final_accuracy": 0.0,
+              "teacher_forced_sequence_exact": null
+            },
+            "sub": {
+              "examples": 1,
+              "free_end_to_end_accuracy": 0.0,
+              "free_final_accuracy": 0.0,
+              "teacher_forced_final_accuracy": 0.0,
+              "teacher_forced_sequence_exact": null
+            }
+          },
+          "overall": {
+            "examples": 8,
+            "free_end_to_end_accuracy": 0.0,
+            "free_final_accuracy": 0.0,
+            "teacher_forced_final_accuracy": 0.0,
+            "teacher_forced_sequence_exact": null
+          },
+          "rows": [
+            {
+              "expected_final": 1,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "10e5571ab6cbc494ccbd",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 2,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "83fdc729b409cde86b1d",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 3,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "b7d0295630d4dd130d15",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 4,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "bd479eb2938066286126",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 2,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "483a56c111adcd829c31",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 3,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "2ad332b56181ea1bcdbd",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 0,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "mul",
+              "record_id": "ccef8f8d2591c7abdbfe",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 8,
+              "free_end_to_end_correct": false,
+              "free_final": "token:216",
+              "free_final_correct": false,
+              "group": "sub",
+              "record_id": "ff818cef5528df8ee380",
+              "teacher_forced_final": "token:216",
+              "teacher_forced_final_correct": false
+            }
+          ],
+          "sequence": {
+            "examples": 8,
+            "mean_target_loss": 5.550007581710815,
+            "teacher_forced_exact_accuracy": 0.0,
+            "teacher_forced_token_accuracy": 0.0
+          }
+        }
+      },
+      "step": 0,
+      "train_step": null
+    },
+    {
+      "metrics": {
+        "probe": {
+          "by_group": {
+            "add": {
+              "examples": 8,
+              "free_end_to_end_accuracy": 0.0,
+              "free_final_accuracy": 0.0,
+              "teacher_forced_final_accuracy": 0.0,
+              "teacher_forced_sequence_exact": null
+            }
+          },
+          "overall": {
+            "examples": 8,
+            "free_end_to_end_accuracy": 0.0,
+            "free_final_accuracy": 0.0,
+            "teacher_forced_final_accuracy": 0.0,
+            "teacher_forced_sequence_exact": null
+          },
+          "rows": [
+            {
+              "expected_final": 5,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "ac358267e83d29b4fe73",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 5,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "fc8d9bdd10dfa52ba160",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 6,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "1ef69785f4f4e7a668f1",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 7,
+              "free_end_to_end_correct": false,
+              "free_final": "4",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "0ba99afa03f93095e0c6",
+              "teacher_forced_final": "4",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 7,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "fc562cc59c538d9d40c4",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 8,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "e382f7b0597e70773f1a",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 9,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "d644392f52943642266e",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 0,
+              "free_end_to_end_correct": false,
+              "free_final": "4",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "8e48abaa6b1240a18dbf",
+              "teacher_forced_final": "4",
+              "teacher_forced_final_correct": false
+            }
+          ],
+          "sequence": {
+            "examples": 8,
+            "mean_target_loss": 9.05537748336792,
+            "teacher_forced_exact_accuracy": 0.0,
+            "teacher_forced_token_accuracy": 0.5
+          }
+        },
+        "train": {
+          "by_group": {
+            "add": {
+              "examples": 6,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            },
+            "mul": {
+              "examples": 1,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            },
+            "sub": {
+              "examples": 1,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            }
+          },
+          "overall": {
+            "examples": 8,
+            "free_end_to_end_accuracy": 1.0,
+            "free_final_accuracy": 1.0,
+            "teacher_forced_final_accuracy": 1.0,
+            "teacher_forced_sequence_exact": null
+          },
+          "rows": [
+            {
+              "expected_final": 1,
+              "free_end_to_end_correct": true,
+              "free_final": "1",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "10e5571ab6cbc494ccbd",
+              "teacher_forced_final": "1",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 2,
+              "free_end_to_end_correct": true,
+              "free_final": "2",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "83fdc729b409cde86b1d",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 3,
+              "free_end_to_end_correct": true,
+              "free_final": "3",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "b7d0295630d4dd130d15",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 4,
+              "free_end_to_end_correct": true,
+              "free_final": "4",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "bd479eb2938066286126",
+              "teacher_forced_final": "4",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 2,
+              "free_end_to_end_correct": true,
+              "free_final": "2",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "483a56c111adcd829c31",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 3,
+              "free_end_to_end_correct": true,
+              "free_final": "3",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "2ad332b56181ea1bcdbd",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 0,
+              "free_end_to_end_correct": true,
+              "free_final": "0",
+              "free_final_correct": true,
+              "group": "mul",
+              "record_id": "ccef8f8d2591c7abdbfe",
+              "teacher_forced_final": "0",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 8,
+              "free_end_to_end_correct": true,
+              "free_final": "8",
+              "free_final_correct": true,
+              "group": "sub",
+              "record_id": "ff818cef5528df8ee380",
+              "teacher_forced_final": "8",
+              "teacher_forced_final_correct": true
+            }
+          ],
+          "sequence": {
+            "examples": 8,
+            "mean_target_loss": 8.866181246958149e-07,
+            "teacher_forced_exact_accuracy": 1.0,
+            "teacher_forced_token_accuracy": 1.0
+          }
+        }
+      },
+      "step": 500,
+      "train_step": {
+        "grad_norm": 1.0701695828174707e-05,
+        "loss": 1.0728821280281409e-06,
+        "task_tokens": 8,
+        "task_tokens_correct": 8
+      }
+    },
+    {
+      "metrics": {
+        "probe": {
+          "by_group": {
+            "add": {
+              "examples": 8,
+              "free_end_to_end_accuracy": 0.0,
+              "free_final_accuracy": 0.0,
+              "teacher_forced_final_accuracy": 0.0,
+              "teacher_forced_sequence_exact": null
+            }
+          },
+          "overall": {
+            "examples": 8,
+            "free_end_to_end_accuracy": 0.0,
+            "free_final_accuracy": 0.0,
+            "teacher_forced_final_accuracy": 0.0,
+            "teacher_forced_sequence_exact": null
+          },
+          "rows": [
+            {
+              "expected_final": 5,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "ac358267e83d29b4fe73",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 5,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "fc8d9bdd10dfa52ba160",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 6,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "1ef69785f4f4e7a668f1",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 7,
+              "free_end_to_end_correct": false,
+              "free_final": "4",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "0ba99afa03f93095e0c6",
+              "teacher_forced_final": "4",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 7,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "fc562cc59c538d9d40c4",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 8,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "e382f7b0597e70773f1a",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 9,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "d644392f52943642266e",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 0,
+              "free_end_to_end_correct": false,
+              "free_final": "4",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "8e48abaa6b1240a18dbf",
+              "teacher_forced_final": "4",
+              "teacher_forced_final_correct": false
+            }
+          ],
+          "sequence": {
+            "examples": 8,
+            "mean_target_loss": 9.609853744506836,
+            "teacher_forced_exact_accuracy": 0.0,
+            "teacher_forced_token_accuracy": 0.5
+          }
+        },
+        "train": {
+          "by_group": {
+            "add": {
+              "examples": 6,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            },
+            "mul": {
+              "examples": 1,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            },
+            "sub": {
+              "examples": 1,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            }
+          },
+          "overall": {
+            "examples": 8,
+            "free_end_to_end_accuracy": 1.0,
+            "free_final_accuracy": 1.0,
+            "teacher_forced_final_accuracy": 1.0,
+            "teacher_forced_sequence_exact": null
+          },
+          "rows": [
+            {
+              "expected_final": 1,
+              "free_end_to_end_correct": true,
+              "free_final": "1",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "10e5571ab6cbc494ccbd",
+              "teacher_forced_final": "1",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 2,
+              "free_end_to_end_correct": true,
+              "free_final": "2",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "83fdc729b409cde86b1d",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 3,
+              "free_end_to_end_correct": true,
+              "free_final": "3",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "b7d0295630d4dd130d15",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 4,
+              "free_end_to_end_correct": true,
+              "free_final": "4",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "bd479eb2938066286126",
+              "teacher_forced_final": "4",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 2,
+              "free_end_to_end_correct": true,
+              "free_final": "2",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "483a56c111adcd829c31",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 3,
+              "free_end_to_end_correct": true,
+              "free_final": "3",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "2ad332b56181ea1bcdbd",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 0,
+              "free_end_to_end_correct": true,
+              "free_final": "0",
+              "free_final_correct": true,
+              "group": "mul",
+              "record_id": "ccef8f8d2591c7abdbfe",
+              "teacher_forced_final": "0",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 8,
+              "free_end_to_end_correct": true,
+              "free_final": "8",
+              "free_final_correct": true,
+              "group": "sub",
+              "record_id": "ff818cef5528df8ee380",
+              "teacher_forced_final": "8",
+              "teacher_forced_final_correct": true
+            }
+          ],
+          "sequence": {
+            "examples": 8,
+            "mean_target_loss": 7.450580152834618e-09,
+            "teacher_forced_exact_accuracy": 1.0,
+            "teacher_forced_token_accuracy": 1.0
+          }
+        }
+      },
+      "step": 1000,
+      "train_step": {
+        "grad_norm": 9.778997309695114e-07,
+        "loss": 4.470348002882929e-08,
+        "task_tokens": 8,
+        "task_tokens_correct": 8
+      }
+    },
+    {
+      "metrics": {
+        "probe": {
+          "by_group": {
+            "add": {
+              "examples": 8,
+              "free_end_to_end_accuracy": 0.0,
+              "free_final_accuracy": 0.0,
+              "teacher_forced_final_accuracy": 0.0,
+              "teacher_forced_sequence_exact": null
+            }
+          },
+          "overall": {
+            "examples": 8,
+            "free_end_to_end_accuracy": 0.0,
+            "free_final_accuracy": 0.0,
+            "teacher_forced_final_accuracy": 0.0,
+            "teacher_forced_sequence_exact": null
+          },
+          "rows": [
+            {
+              "expected_final": 5,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "ac358267e83d29b4fe73",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 5,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "fc8d9bdd10dfa52ba160",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 6,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "1ef69785f4f4e7a668f1",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 7,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "0ba99afa03f93095e0c6",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 7,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "fc562cc59c538d9d40c4",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 8,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "e382f7b0597e70773f1a",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 9,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "d644392f52943642266e",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 0,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "8e48abaa6b1240a18dbf",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            }
+          ],
+          "sequence": {
+            "examples": 8,
+            "mean_target_loss": 9.410959243774414,
+            "teacher_forced_exact_accuracy": 0.0,
+            "teacher_forced_token_accuracy": 0.5
+          }
+        },
+        "train": {
+          "by_group": {
+            "add": {
+              "examples": 6,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            },
+            "mul": {
+              "examples": 1,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            },
+            "sub": {
+              "examples": 1,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            }
+          },
+          "overall": {
+            "examples": 8,
+            "free_end_to_end_accuracy": 1.0,
+            "free_final_accuracy": 1.0,
+            "teacher_forced_final_accuracy": 1.0,
+            "teacher_forced_sequence_exact": null
+          },
+          "rows": [
+            {
+              "expected_final": 1,
+              "free_end_to_end_correct": true,
+              "free_final": "1",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "10e5571ab6cbc494ccbd",
+              "teacher_forced_final": "1",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 2,
+              "free_end_to_end_correct": true,
+              "free_final": "2",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "83fdc729b409cde86b1d",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 3,
+              "free_end_to_end_correct": true,
+              "free_final": "3",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "b7d0295630d4dd130d15",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 4,
+              "free_end_to_end_correct": true,
+              "free_final": "4",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "bd479eb2938066286126",
+              "teacher_forced_final": "4",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 2,
+              "free_end_to_end_correct": true,
+              "free_final": "2",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "483a56c111adcd829c31",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 3,
+              "free_end_to_end_correct": true,
+              "free_final": "3",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "2ad332b56181ea1bcdbd",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 0,
+              "free_end_to_end_correct": true,
+              "free_final": "0",
+              "free_final_correct": true,
+              "group": "mul",
+              "record_id": "ccef8f8d2591c7abdbfe",
+              "teacher_forced_final": "0",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 8,
+              "free_end_to_end_correct": true,
+              "free_final": "8",
+              "free_final_correct": true,
+              "group": "sub",
+              "record_id": "ff818cef5528df8ee380",
+              "teacher_forced_final": "8",
+              "teacher_forced_final_correct": true
+            }
+          ],
+          "sequence": {
+            "examples": 8,
+            "mean_target_loss": 7.450580152834618e-09,
+            "teacher_forced_exact_accuracy": 1.0,
+            "teacher_forced_token_accuracy": 1.0
+          }
+        }
+      },
+      "step": 1500,
+      "train_step": {
+        "grad_norm": 5.849518629474915e-07,
+        "loss": 1.4901160305669237e-08,
+        "task_tokens": 8,
+        "task_tokens_correct": 8
+      }
+    },
+    {
+      "metrics": {
+        "probe": {
+          "by_group": {
+            "add": {
+              "examples": 8,
+              "free_end_to_end_accuracy": 0.0,
+              "free_final_accuracy": 0.0,
+              "teacher_forced_final_accuracy": 0.0,
+              "teacher_forced_sequence_exact": null
+            }
+          },
+          "overall": {
+            "examples": 8,
+            "free_end_to_end_accuracy": 0.0,
+            "free_final_accuracy": 0.0,
+            "teacher_forced_final_accuracy": 0.0,
+            "teacher_forced_sequence_exact": null
+          },
+          "rows": [
+            {
+              "expected_final": 5,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "ac358267e83d29b4fe73",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 5,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "fc8d9bdd10dfa52ba160",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 6,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "1ef69785f4f4e7a668f1",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 7,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "0ba99afa03f93095e0c6",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 7,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "fc562cc59c538d9d40c4",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 8,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "e382f7b0597e70773f1a",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 9,
+              "free_end_to_end_correct": false,
+              "free_final": "3",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "d644392f52943642266e",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": false
+            },
+            {
+              "expected_final": 0,
+              "free_end_to_end_correct": false,
+              "free_final": "2",
+              "free_final_correct": false,
+              "group": "add",
+              "record_id": "8e48abaa6b1240a18dbf",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": false
+            }
+          ],
+          "sequence": {
+            "examples": 8,
+            "mean_target_loss": 9.459316730499268,
+            "teacher_forced_exact_accuracy": 0.0,
+            "teacher_forced_token_accuracy": 0.5
+          }
+        },
+        "train": {
+          "by_group": {
+            "add": {
+              "examples": 6,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            },
+            "mul": {
+              "examples": 1,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            },
+            "sub": {
+              "examples": 1,
+              "free_end_to_end_accuracy": 1.0,
+              "free_final_accuracy": 1.0,
+              "teacher_forced_final_accuracy": 1.0,
+              "teacher_forced_sequence_exact": null
+            }
+          },
+          "overall": {
+            "examples": 8,
+            "free_end_to_end_accuracy": 1.0,
+            "free_final_accuracy": 1.0,
+            "teacher_forced_final_accuracy": 1.0,
+            "teacher_forced_sequence_exact": null
+          },
+          "rows": [
+            {
+              "expected_final": 1,
+              "free_end_to_end_correct": true,
+              "free_final": "1",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "10e5571ab6cbc494ccbd",
+              "teacher_forced_final": "1",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 2,
+              "free_end_to_end_correct": true,
+              "free_final": "2",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "83fdc729b409cde86b1d",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 3,
+              "free_end_to_end_correct": true,
+              "free_final": "3",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "b7d0295630d4dd130d15",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 4,
+              "free_end_to_end_correct": true,
+              "free_final": "4",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "bd479eb2938066286126",
+              "teacher_forced_final": "4",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 2,
+              "free_end_to_end_correct": true,
+              "free_final": "2",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "483a56c111adcd829c31",
+              "teacher_forced_final": "2",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 3,
+              "free_end_to_end_correct": true,
+              "free_final": "3",
+              "free_final_correct": true,
+              "group": "add",
+              "record_id": "2ad332b56181ea1bcdbd",
+              "teacher_forced_final": "3",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 0,
+              "free_end_to_end_correct": true,
+              "free_final": "0",
+              "free_final_correct": true,
+              "group": "mul",
+              "record_id": "ccef8f8d2591c7abdbfe",
+              "teacher_forced_final": "0",
+              "teacher_forced_final_correct": true
+            },
+            {
+              "expected_final": 8,
+              "free_end_to_end_correct": true,
+              "free_final": "8",
+              "free_final_correct": true,
+              "group": "sub",
+              "record_id": "ff818cef5528df8ee380",
+              "teacher_forced_final": "8",
+              "teacher_forced_final_correct": true
+            }
+          ],
+          "sequence": {
+            "examples": 8,
+            "mean_target_loss": 0.0,
+            "teacher_forced_exact_accuracy": 1.0,
+            "teacher_forced_token_accuracy": 1.0
+          }
+        }
+      },
+      "step": 2000,
+      "train_step": {
+        "grad_norm": 3.750130588286993e-07,
+        "loss": 0.0,
+        "task_tokens": 8,
+        "task_tokens_correct": 8
+      }
+    }
+  ],
+  "seed": 42,
+  "steps": 2000,
+  "tiny_overfit_pass": true,
+  "training_examples": 8
+}

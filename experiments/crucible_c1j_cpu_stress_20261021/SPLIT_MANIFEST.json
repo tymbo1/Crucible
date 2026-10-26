@@ -1,0 +1,68 @@
+{
+  "conditions": [
+    "applicable",
+    "adaptation",
+    "invalidated",
+    "contradictory",
+    "misleading_similarity",
+    "noisy_evidence",
+    "provenance_corrupt",
+    "unresolvable"
+  ],
+  "experiment": "crucible_c1j_cpu_stress_20261021",
+  "family_one_hot_features": false,
+  "feature_names": [
+    "same_family",
+    "variant_match",
+    "surface_match",
+    "structural_match",
+    "environment_match",
+    "probe_available",
+    "verifier_available",
+    "probe_agrees",
+    "evidence_quality",
+    "provenance_valid",
+    "contradiction_flag",
+    "retrieval_rank_normalized",
+    "log10_distractors_normalized",
+    "memory_size_normalized"
+  ],
+  "memory_sizes": [
+    10,
+    100,
+    1000,
+    10000
+  ],
+  "test": {
+    "count": 10000,
+    "families": [
+      "interval",
+      "multiset",
+      "tree",
+      "matrix"
+    ],
+    "task_digest": "22567b8b942dad47ff436fd21b137a1ef55201738edb9860bf34c96d094bc9e8"
+  },
+  "test_labels_not_used_as_features": true,
+  "test_labels_not_used_for_selection": true,
+  "train": {
+    "count": 20000,
+    "families": [
+      "vector",
+      "grid",
+      "graph",
+      "set"
+    ],
+    "task_digest": "707b9415e632b4cfaa438b8e78a4f01cedeb948220125b50c8b86c0a735cc595"
+  },
+  "validation": {
+    "count": 5000,
+    "families": [
+      "vector",
+      "grid",
+      "graph",
+      "set"
+    ],
+    "task_digest": "cfa9e705cc6af5052d360b5234b47ed2fa6d65d2348b567b94eb4c5d5a48404c"
+  }
+}

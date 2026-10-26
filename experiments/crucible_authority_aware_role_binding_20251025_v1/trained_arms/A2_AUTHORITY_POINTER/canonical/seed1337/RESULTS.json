@@ -1,0 +1,23 @@
+{
+  "arm": "A2_AUTHORITY_POINTER",
+  "checkpoint": "experiments/crucible_authority_aware_role_binding_20251025_v1/trained_arms/A2_AUTHORITY_POINTER/canonical/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "8ddb983b34108d3f1d8cf1f7ce12879f7810206199a30fd06972e87494f57e9a",
+  "interface": "canonical",
+  "pointer_loss_active": true,
+  "schedule_digest": "9e9903420ae57f7139f3ca4be980fbc2d6f90c2f3e4437634f4b54b4eec4258f",
+  "seed": 1337,
+  "steps": 500,
+  "train_metrics": {
+    "a_position_accuracy": 1.0,
+    "a_position_correct": 240,
+    "b_position_accuracy": 1.0,
+    "b_position_correct": 240,
+    "classifier_tuple_accuracy": 0.9541666666666667,
+    "classifier_tuple_correct": 229,
+    "op_position_accuracy": 0.5833333333333334,
+    "op_position_correct": 140,
+    "pointer_tuple_accuracy": 0.5833333333333334,
+    "pointer_tuple_correct": 140,
+    "rows": 240
+  }
+}

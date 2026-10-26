@@ -1,0 +1,26 @@
+{
+  "arm": "B2_SAME_PAIR_SHUFFLED",
+  "arm_id": "B2_SAME_PAIR_SHUFFLED_canonical_seed1337",
+  "checkpoint": "experiments/crucible_batch_composition_order_20251025_v1/arm_outputs/B2_SAME_PAIR_SHUFFLED/canonical/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "d29cc55ae737d7237a3ab84c5286406a6472a3dbb347077f49a6527a90c742f4",
+  "effective_batch": 12,
+  "elapsed_seconds": 357.30754210904706,
+  "expanded_records": 240,
+  "interface": "canonical",
+  "max_gradient_cosine_previous": 0.9999213218688965,
+  "mean_gradient_cosine_previous": 0.07080065811717583,
+  "mean_loss": 0.8899757748246193,
+  "mean_unique_pair_groups_per_batch": 2,
+  "min_gradient_cosine_previous": -0.8661575317382812,
+  "record_presentations": 6000,
+  "schedule_digest": "6238150a75232dc0a0ce2bf58c6e799a222125a1ceb0b1f1b9e81e4b8c74c82f",
+  "seed": 1337,
+  "steps": 500,
+  "train_expanded": {
+    "examples": 240,
+    "mean_target_loss": 0.45829199040308594,
+    "teacher_forced_exact_accuracy": 0.5708333333333333,
+    "teacher_forced_token_accuracy": 0.7854166666666667
+  },
+  "train_expanded_exact": 0.5708333333333333
+}

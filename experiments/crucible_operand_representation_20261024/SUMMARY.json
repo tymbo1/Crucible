@@ -1,0 +1,50 @@
+{
+  "experiment": "crucible_operand_representation_20261024",
+  "preflight_pass": true,
+  "results": [
+    {
+      "arm": "canonical_numeric",
+      "elapsed_seconds": 175.3109129279619,
+      "seed": 42,
+      "train_accuracy": 1.0,
+      "validation_accuracy": 1.0
+    },
+    {
+      "arm": "canonical_numeric",
+      "elapsed_seconds": 178.24285467003938,
+      "seed": 1337,
+      "train_accuracy": 1.0,
+      "validation_accuracy": 1.0
+    },
+    {
+      "arm": "factorized",
+      "elapsed_seconds": 216.46684394200565,
+      "seed": 42,
+      "train_accuracy": 1.0,
+      "validation_accuracy": 1.0
+    },
+    {
+      "arm": "factorized",
+      "elapsed_seconds": 214.00320232700324,
+      "seed": 1337,
+      "train_accuracy": 1.0,
+      "validation_accuracy": 1.0
+    },
+    {
+      "arm": "opaque_association",
+      "elapsed_seconds": 185.8944135879865,
+      "seed": 42,
+      "train_accuracy": 0.9625,
+      "validation_accuracy": 0.05
+    },
+    {
+      "arm": "opaque_association",
+      "elapsed_seconds": 188.74844678601949,
+      "seed": 1337,
+      "train_accuracy": 0.9875,
+      "validation_accuracy": 0.2
+    }
+  ],
+  "status": "completed",
+  "test_evaluated": false
+}

@@ -1,0 +1,40 @@
+{
+  "cell": "C2_SLOT_FULL_MULTITASK",
+  "checkpoint": "experiments/crucible_d2_component_ablation_20261026_v1/trained_arms/C2_SLOT_FULL_MULTITASK/canonical/seed42/checkpoint.pt",
+  "checkpoint_sha256": "329e495b9f8f39072b956f48ded27a6cb188d293c7abb4ce0f7f4664a530afb4",
+  "interface": "canonical",
+  "readout": "slot",
+  "seed": 42,
+  "source": "new_crossed_training",
+  "steps": 500,
+  "train_metrics": {
+    "format_errors": 0,
+    "operation_correct": 160,
+    "output_correct": 160,
+    "paired": {
+      "correct_two_way": 80,
+      "correct_two_way_accuracy": 1.0,
+      "flip_accuracy": 1.0,
+      "pairs": 80,
+      "pointer_flips": 80
+    },
+    "pointer_accuracy": 1.0,
+    "pointer_correct": 160,
+    "rows": 160
+  },
+  "validation_metrics": {
+    "format_errors": 0,
+    "operation_correct": 40,
+    "output_correct": 40,
+    "paired": {
+      "correct_two_way": 20,
+      "correct_two_way_accuracy": 1.0,
+      "flip_accuracy": 1.0,
+      "pairs": 20,
+      "pointer_flips": 20
+    },
+    "pointer_accuracy": 1.0,
+    "pointer_correct": 40,
+    "rows": 40
+  }
+}

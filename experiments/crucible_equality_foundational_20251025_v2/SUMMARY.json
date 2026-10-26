@@ -1,0 +1,408 @@
+{
+  "addition_steps": 500,
+  "architecture_changed": false,
+  "arms": [
+    {
+      "arm": "A0_original",
+      "arm_id": "A0_original_canonical_seed2025",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A0_original/canonical/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "a1a6dc6a4a4340e874fe13c2718a30c3edb65200636cddfd29f30062b9031ee6",
+      "condition": "A0_original",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": null,
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "A0_original",
+      "arm_id": "A0_original_canonical_seed2026",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A0_original/canonical/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "cc7bfe6ddd76c3b1a7e5360742a4a58f68f680dfa5809dab00a0eab5130dc6e9",
+      "condition": "A0_original",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": null,
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "A0_original",
+      "arm_id": "A0_original_factorized_seed2025",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A0_original/factorized/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "9ed138b06a6dd7e3d6000b5749c30198467207df453a95ca72df4668992fb585",
+      "condition": "A0_original",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": null,
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "A0_original",
+      "arm_id": "A0_original_factorized_seed2026",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A0_original/factorized/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "3916b3bb460d20eb4fdf5d34ef21fbf5e2340999176c7643a4ed7784bc60138d",
+      "condition": "A0_original",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": null,
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 0.975,
+        "full_sequence_correct": 39,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.975,
+        "output_token_correct": 39
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.4666666666666667,
+        "full_sequence_correct": 7,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.4666666666666667,
+        "output_token_correct": 7
+      }
+    },
+    {
+      "arm": "A1_equality_pretrained",
+      "arm_id": "A1_equality_pretrained_canonical_seed2025",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A1_equality_pretrained/canonical/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "25e1c4161bee7f5544cf489564ad97cf9707b4bcb811378783136b7c82206ef3",
+      "condition": "A1_equality_pretrained",
+      "fit_pass": false,
+      "interface": "canonical",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A1_equality_pretrained/canonical/seed2025/pretraining/checkpoint.pt",
+        "checkpoint_sha256": "fcad6b0d973da3f016c47dbc65430476b3628c7110ca5b30e3e2269cc1ddea86",
+        "steps": 500,
+        "train_exact": 0.9,
+        "validation_exact": 0.9
+      },
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 0.75,
+        "full_sequence_correct": 30,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.75,
+        "output_token_correct": 30
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.06666666666666667,
+        "full_sequence_correct": 1,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.06666666666666667,
+        "output_token_correct": 1
+      }
+    },
+    {
+      "arm": "A1_equality_pretrained",
+      "arm_id": "A1_equality_pretrained_canonical_seed2026",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A1_equality_pretrained/canonical/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "8bfaa83b495d34efeb69e1154dee7d330e88a716613a716a30b751ac8c9dc008",
+      "condition": "A1_equality_pretrained",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A1_equality_pretrained/canonical/seed2026/pretraining/checkpoint.pt",
+        "checkpoint_sha256": "07f33489f8d02b7a1e90d02335ec82dfbea96ca5b0b55e335d1226f1bf22cf69",
+        "steps": 500,
+        "train_exact": 0.9,
+        "validation_exact": 0.9
+      },
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.4,
+        "full_sequence_correct": 6,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.4,
+        "output_token_correct": 6
+      }
+    },
+    {
+      "arm": "A1_equality_pretrained",
+      "arm_id": "A1_equality_pretrained_factorized_seed2025",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A1_equality_pretrained/factorized/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "afe4409ffe9cbef84a49eec8a8c7fe6d8ef83932f31e9a57cf9df8f1e30d694c",
+      "condition": "A1_equality_pretrained",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A1_equality_pretrained/factorized/seed2025/pretraining/checkpoint.pt",
+        "checkpoint_sha256": "f664b657c719232cb21335ec50474f96f404eee0f4a7a28c25e68900946a1623",
+        "steps": 500,
+        "train_exact": 0.9,
+        "validation_exact": 0.9
+      },
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.5333333333333333,
+        "full_sequence_correct": 8,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.5333333333333333,
+        "output_token_correct": 8
+      }
+    },
+    {
+      "arm": "A1_equality_pretrained",
+      "arm_id": "A1_equality_pretrained_factorized_seed2026",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A1_equality_pretrained/factorized/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "88341596503dde9193aaa1c84cec8b953a8554fc3a5d11b813618b84e361d8f6",
+      "condition": "A1_equality_pretrained",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A1_equality_pretrained/factorized/seed2026/pretraining/checkpoint.pt",
+        "checkpoint_sha256": "c0d7e83a556a38065da4e40b6d484c7169b00b397e44aa77123553b73b1fb548",
+        "steps": 500,
+        "train_exact": 0.9,
+        "validation_exact": 0.9
+      },
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.4,
+        "full_sequence_correct": 6,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.4,
+        "output_token_correct": 6
+      }
+    },
+    {
+      "arm": "A2_explicit_equality",
+      "arm_id": "A2_explicit_equality_canonical_seed2025",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A2_explicit_equality/canonical/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "c93470913b4d79d3685d6f9247fab00a1625fa635453f94409ef3d29f8ceb85d",
+      "condition": "A2_explicit_equality",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": null,
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.5333333333333333,
+        "full_sequence_correct": 8,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.5333333333333333,
+        "output_token_correct": 8
+      }
+    },
+    {
+      "arm": "A2_explicit_equality",
+      "arm_id": "A2_explicit_equality_canonical_seed2026",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A2_explicit_equality/canonical/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "afd23b589f8e24ced4255754d00baf93371b188011742028a5ab0efe59cf5ef1",
+      "condition": "A2_explicit_equality",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": null,
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.4666666666666667,
+        "full_sequence_correct": 7,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.4666666666666667,
+        "output_token_correct": 7
+      }
+    },
+    {
+      "arm": "A2_explicit_equality",
+      "arm_id": "A2_explicit_equality_factorized_seed2025",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A2_explicit_equality/factorized/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "00110d34e7ebf261501c9ef29d675a8f6bd3fb7c60c65466660371e868bb0fd6",
+      "condition": "A2_explicit_equality",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": null,
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "A2_explicit_equality",
+      "arm_id": "A2_explicit_equality_factorized_seed2026",
+      "checkpoint": "experiments/crucible_equality_foundational_20251025_v2/arm_outputs/A2_explicit_equality/factorized/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "bd2d146aa26053e5faa3c9f81b095b858481d790998d241eb40b0578eba6c782",
+      "condition": "A2_explicit_equality",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": null,
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    }
+  ],
+  "experiment": "crucible_equality_foundational_20251025",
+  "prediction_rows": 660,
+  "pretraining_steps": 500,
+  "sealed_test_accessed": false,
+  "status": "completed",
+  "training_performed": true
+}

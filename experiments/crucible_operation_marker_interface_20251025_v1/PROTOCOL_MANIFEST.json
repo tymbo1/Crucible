@@ -1,0 +1,21 @@
+{
+  "a0_source": "experiments/crucible_role_selection_competence_20251025_v5",
+  "architecture_changed": false,
+  "condition": "A1_SINGLE_TOKEN_MARKER",
+  "experiment": "crucible_operation_marker_interface_20251025_v1",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "marker_encoding": {
+    "SELECT_FIRST": "F___________",
+    "SELECT_SECOND": "S____________"
+  },
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "status": "frozen_before_training",
+  "steps": 500
+}

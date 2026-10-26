@@ -1,0 +1,38 @@
+{
+  "aggregate_validation_accuracy": 0.16666666666666666,
+  "experiment": "crucible_supplied_rule_execution_20261024",
+  "results": [
+    {
+      "arm": "tiny",
+      "elapsed_seconds": 342.27737828699173,
+      "final_train_accuracy": 1.0,
+      "final_validation_accuracy": 0.07936507936507936,
+      "seed": 42
+    },
+    {
+      "arm": "full",
+      "elapsed_seconds": 355.3346832440002,
+      "final_train_accuracy": 0.9128440366972477,
+      "final_validation_accuracy": 0.15873015873015872,
+      "seed": 42
+    },
+    {
+      "arm": "tiny",
+      "elapsed_seconds": 343.8747872640379,
+      "final_train_accuracy": 1.0,
+      "final_validation_accuracy": 0.07936507936507936,
+      "seed": 1337
+    },
+    {
+      "arm": "full",
+      "elapsed_seconds": 354.09755145502277,
+      "final_train_accuracy": 0.926605504587156,
+      "final_validation_accuracy": 0.1746031746031746,
+      "seed": 1337
+    }
+  ],
+  "status": "completed",
+  "test_evaluated": false,
+  "validation_pass": false,
+  "validation_threshold": 0.9
+}

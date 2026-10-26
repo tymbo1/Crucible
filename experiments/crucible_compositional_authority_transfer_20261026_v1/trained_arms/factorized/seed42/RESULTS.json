@@ -1,0 +1,61 @@
+{
+  "checkpoint": "experiments/crucible_compositional_authority_transfer_20261026_v1/trained_arms/factorized/seed42/checkpoint.pt",
+  "checkpoint_sha256": "0485561464e5fe536232c92ca665fd50a33b17babe814d58b4c6dd32bffff721",
+  "interface": "factorized",
+  "metrics": {
+    "train": {
+      "abstain_accuracy": 1.0,
+      "abstain_correct": 288,
+      "abstain_rows": 288,
+      "output_accuracy": 1.0,
+      "output_correct": 960,
+      "paired": {
+        "correct_two_way": 192,
+        "correct_two_way_accuracy": 1.0,
+        "flip_accuracy": 1.0,
+        "pairs": 192,
+        "pointer_flips": 192
+      },
+      "pointer_accuracy": 1.0,
+      "pointer_correct": 960,
+      "rows": 960
+    },
+    "transfer_4": {
+      "abstain_accuracy": 1.0,
+      "abstain_correct": 6,
+      "abstain_rows": 6,
+      "output_accuracy": 0.6333333333333333,
+      "output_correct": 19,
+      "paired": {
+        "correct_two_way": 0,
+        "correct_two_way_accuracy": 0.0,
+        "flip_accuracy": 1.0,
+        "pairs": 6,
+        "pointer_flips": 6
+      },
+      "pointer_accuracy": 0.6,
+      "pointer_correct": 18,
+      "rows": 30
+    },
+    "validation_3": {
+      "abstain_accuracy": 1.0,
+      "abstain_correct": 216,
+      "abstain_rows": 216,
+      "output_accuracy": 0.75,
+      "output_correct": 540,
+      "paired": {
+        "correct_two_way": 0,
+        "correct_two_way_accuracy": 0.0,
+        "flip_accuracy": 0.0,
+        "pairs": 144,
+        "pointer_flips": 0
+      },
+      "pointer_accuracy": 0.725,
+      "pointer_correct": 522,
+      "rows": 720
+    }
+  },
+  "seed": 42,
+  "source": "new_dynamic_pointer",
+  "steps": 500
+}

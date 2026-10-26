@@ -1,0 +1,81 @@
+{
+  "experiment": "crucible_c1q_evidence_corroboration_20261021",
+  "hidden_labels_used_by_policy": false,
+  "oracle_checks": 36000,
+  "oracle_failures": 0,
+  "seeds": {
+    "1337": {
+      "conditions": {
+        "correlated_misinformation": 1539,
+        "correlated_truth": 1525,
+        "independent_contradiction": 1480,
+        "no_trustworthy_evidence": 1459,
+        "role_break": 1471,
+        "single_misleading": 1559,
+        "truthful_agreement": 1462,
+        "unavailable_sources": 1505
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "01e3c35c407f9dce30f0121f43cb1a246bb8ff6727f29019de5fa3faf3eceb13",
+      "templates": {
+        "asymmetric": 3003,
+        "balanced": 2923,
+        "deep": 3030,
+        "wide": 3044
+      }
+    },
+    "2026": {
+      "conditions": {
+        "correlated_misinformation": 1540,
+        "correlated_truth": 1505,
+        "independent_contradiction": 1468,
+        "no_trustworthy_evidence": 1500,
+        "role_break": 1550,
+        "single_misleading": 1488,
+        "truthful_agreement": 1497,
+        "unavailable_sources": 1452
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "66ff325e4e0a7b55ec880dfee9d2ed8afd910e21275811bde9ab696d6ad59f65",
+      "templates": {
+        "asymmetric": 3026,
+        "balanced": 2978,
+        "deep": 2914,
+        "wide": 3082
+      }
+    },
+    "42": {
+      "conditions": {
+        "correlated_misinformation": 1437,
+        "correlated_truth": 1492,
+        "independent_contradiction": 1503,
+        "no_trustworthy_evidence": 1503,
+        "role_break": 1527,
+        "single_misleading": 1536,
+        "truthful_agreement": 1508,
+        "unavailable_sources": 1494
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "d8dee9ed395b5a0002d2da0bdae74b3d88d75a12430cea10ac29bf7afe966b86",
+      "templates": {
+        "asymmetric": 2987,
+        "balanced": 2964,
+        "deep": 2973,
+        "wide": 3076
+      }
+    }
+  },
+  "task_count_total": 36000
+}

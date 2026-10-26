@@ -1,0 +1,20 @@
+{
+  "architecture_changed": true,
+  "dense_backbone_changed": false,
+  "experiment": "crucible_shared_candidate_scoring_cardinality_20261026_v1",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "protocol": "docs/CRUCIBLE_SHARED_CANDIDATE_SCORING_CARDINALITY_PROTOCOL_20261026.md",
+  "readout_changed": true,
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "variants": [
+    "SLOT_HEAD",
+    "SHARED_SCORER"
+  ]
+}

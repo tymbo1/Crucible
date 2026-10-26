@@ -1,0 +1,62 @@
+{
+  "architecture_changed": false,
+  "arms": [
+    "A0_FROZEN_V3_POINTER",
+    "A1_AUTHORITY_TUPLE_NO_POINTER",
+    "A2_AUTHORITY_POINTER",
+    "A3_AUTHORITY_POINTER_BALANCED",
+    "E3_ORACLE_BINDING"
+  ],
+  "baseline_reproduction": {
+    "checkpoint_hashes": true,
+    "paired_validation": {
+      "EARLY_PADDED": [
+        32,
+        32
+      ],
+      "FIXED_NEAR_PADDED": [
+        32,
+        32
+      ],
+      "MIDDLE_POSITION": [
+        32,
+        32
+      ],
+      "UNSEEN_BETWEEN_OPERANDS": [
+        27,
+        32
+      ],
+      "UNSEEN_COMPETING_OPERATION": [
+        1,
+        32
+      ],
+      "UNSEEN_DIGIT_DISTRACTOR": [
+        15,
+        32
+      ],
+      "UNSEEN_EARLY_CONTEXT_FIRST": [
+        30,
+        32
+      ]
+    },
+    "passed": true,
+    "sealed_test_accessed": false,
+    "source_finalization": "experiments/crucible_explicit_role_supervision_20251025_v3/FINALIZATION.json"
+  },
+  "corrected_training_distractors": true,
+  "effective_batch": 12,
+  "executor_retrained": false,
+  "experiment": "crucible_authority_aware_role_binding_20251025_v2",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "pointer_loss_weight": 1.0,
+  "protocol": "docs/CRUCIBLE_AUTHORITY_AWARE_ROLE_BINDING_PROTOCOL_20251025_v2.md",
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "steps": 500
+}

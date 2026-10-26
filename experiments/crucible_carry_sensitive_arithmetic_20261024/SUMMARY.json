@@ -1,0 +1,56 @@
+{
+  "experiment": "crucible_carry_sensitive_arithmetic_20261024",
+  "preflight_pass": true,
+  "results": [
+    {
+      "arm": "canonical_numeric",
+      "elapsed_seconds": 202.14987247699173,
+      "seed": 42,
+      "train_exact": 0.24479166666666666,
+      "validation_by_regime": {
+        "cascading_carry": 0.041666666666666664,
+        "no_carry": 0.0,
+        "ones_carry": 0.041666666666666664
+      },
+      "validation_exact": 0.027777777777777776
+    },
+    {
+      "arm": "canonical_numeric",
+      "elapsed_seconds": 199.70501211000374,
+      "seed": 1337,
+      "train_exact": 0.2708333333333333,
+      "validation_by_regime": {
+        "cascading_carry": 0.041666666666666664,
+        "no_carry": 0.08333333333333333,
+        "ones_carry": 0.125
+      },
+      "validation_exact": 0.08333333333333333
+    },
+    {
+      "arm": "factorized_digits",
+      "elapsed_seconds": 255.02542694099247,
+      "seed": 42,
+      "train_exact": 0.3177083333333333,
+      "validation_by_regime": {
+        "cascading_carry": 0.16666666666666666,
+        "no_carry": 0.08333333333333333,
+        "ones_carry": 0.16666666666666666
+      },
+      "validation_exact": 0.1388888888888889
+    },
+    {
+      "arm": "factorized_digits",
+      "elapsed_seconds": 254.50764209701447,
+      "seed": 1337,
+      "train_exact": 0.16666666666666666,
+      "validation_by_regime": {
+        "cascading_carry": 0.0,
+        "no_carry": 0.041666666666666664,
+        "ones_carry": 0.041666666666666664
+      },
+      "validation_exact": 0.027777777777777776
+    }
+  ],
+  "status": "completed",
+  "test_evaluated": false
+}

@@ -1,0 +1,78 @@
+{
+  "arm_id": "S1_SELECT_FIRST_factorized_seed42",
+  "checkpoint": "experiments/crucible_role_selection_competence_20251025_v5/arm_outputs/S1_SELECT_FIRST/factorized/seed42/checkpoint.pt",
+  "checkpoint_sha256": "df81140031ccda343559b6fcc7c15719c0a1c67a47fbb7bf680a5402162b8aaa",
+  "condition": "S1_SELECT_FIRST",
+  "elapsed_seconds": 106.23706830397714,
+  "fit_pass": true,
+  "gate_pass": true,
+  "interface": "factorized",
+  "seed": 42,
+  "stage": "role_selection_competence",
+  "steps": 500,
+  "train": {
+    "aggregate": {
+      "examples": 40,
+      "mean_target_loss": 3.498778164612304e-06,
+      "teacher_forced_exact_accuracy": 1.0,
+      "teacher_forced_token_accuracy": 1.0
+    },
+    "by_operation": {
+      "SELECT_FIRST": {
+        "examples": 40,
+        "mean_target_loss": 3.498778164612304e-06,
+        "teacher_forced_exact_accuracy": 1.0,
+        "teacher_forced_token_accuracy": 1.0
+      }
+    },
+    "by_pair_kind": {
+      "equal": {
+        "examples": 8,
+        "mean_target_loss": 3.7848778902116464e-06,
+        "teacher_forced_exact_accuracy": 1.0,
+        "teacher_forced_token_accuracy": 1.0
+      },
+      "unequal": {
+        "examples": 32,
+        "mean_target_loss": 3.4272532332124683e-06,
+        "teacher_forced_exact_accuracy": 1.0,
+        "teacher_forced_token_accuracy": 1.0
+      }
+    }
+  },
+  "train_exact": 1.0,
+  "unequal_validation_pass": true,
+  "validation": {
+    "aggregate": {
+      "examples": 10,
+      "mean_target_loss": 4.76834557048278e-06,
+      "teacher_forced_exact_accuracy": 1.0,
+      "teacher_forced_token_accuracy": 1.0
+    },
+    "by_operation": {
+      "SELECT_FIRST": {
+        "examples": 10,
+        "mean_target_loss": 4.76834557048278e-06,
+        "teacher_forced_exact_accuracy": 1.0,
+        "teacher_forced_token_accuracy": 1.0
+      }
+    },
+    "by_pair_kind": {
+      "equal": {
+        "examples": 2,
+        "mean_target_loss": 5.096168479212793e-06,
+        "teacher_forced_exact_accuracy": 1.0,
+        "teacher_forced_token_accuracy": 1.0
+      },
+      "unequal": {
+        "examples": 8,
+        "mean_target_loss": 4.686389729613438e-06,
+        "teacher_forced_exact_accuracy": 1.0,
+        "teacher_forced_token_accuracy": 1.0
+      }
+    }
+  },
+  "validation_exact": 1.0,
+  "validation_pass": true,
+  "validation_unequal_exact": 1.0
+}

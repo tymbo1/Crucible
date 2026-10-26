@@ -1,0 +1,78 @@
+{
+  "arm_id": "S2_SELECT_SECOND_factorized_seed1337",
+  "checkpoint": "experiments/crucible_role_selection_competence_20251025_v5/arm_outputs/S2_SELECT_SECOND/factorized/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "060b02df9598765edd43b5bbccd220438fa4aace2abb59e73f47398d40356392",
+  "condition": "S2_SELECT_SECOND",
+  "elapsed_seconds": 122.19197096000426,
+  "fit_pass": true,
+  "gate_pass": false,
+  "interface": "factorized",
+  "seed": 1337,
+  "stage": "role_selection_competence",
+  "steps": 500,
+  "train": {
+    "aggregate": {
+      "examples": 40,
+      "mean_target_loss": 4.534393633548462e-06,
+      "teacher_forced_exact_accuracy": 1.0,
+      "teacher_forced_token_accuracy": 1.0
+    },
+    "by_operation": {
+      "SELECT_SECOND": {
+        "examples": 40,
+        "mean_target_loss": 4.534393633548462e-06,
+        "teacher_forced_exact_accuracy": 1.0,
+        "teacher_forced_token_accuracy": 1.0
+      }
+    },
+    "by_pair_kind": {
+      "equal": {
+        "examples": 8,
+        "mean_target_loss": 5.245168267720146e-06,
+        "teacher_forced_exact_accuracy": 1.0,
+        "teacher_forced_token_accuracy": 1.0
+      },
+      "unequal": {
+        "examples": 32,
+        "mean_target_loss": 4.35669997500554e-06,
+        "teacher_forced_exact_accuracy": 1.0,
+        "teacher_forced_token_accuracy": 1.0
+      }
+    }
+  },
+  "train_exact": 1.0,
+  "unequal_validation_pass": false,
+  "validation": {
+    "aggregate": {
+      "examples": 10,
+      "mean_target_loss": 0.28643391724363026,
+      "teacher_forced_exact_accuracy": 0.9,
+      "teacher_forced_token_accuracy": 0.95
+    },
+    "by_operation": {
+      "SELECT_SECOND": {
+        "examples": 10,
+        "mean_target_loss": 0.28643391724363026,
+        "teacher_forced_exact_accuracy": 0.9,
+        "teacher_forced_token_accuracy": 0.95
+      }
+    },
+    "by_pair_kind": {
+      "equal": {
+        "examples": 2,
+        "mean_target_loss": 6.347843736875802e-06,
+        "teacher_forced_exact_accuracy": 1.0,
+        "teacher_forced_token_accuracy": 1.0
+      },
+      "unequal": {
+        "examples": 8,
+        "mean_target_loss": 0.35804080215166323,
+        "teacher_forced_exact_accuracy": 0.875,
+        "teacher_forced_token_accuracy": 0.9375
+      }
+    }
+  },
+  "validation_exact": 0.9,
+  "validation_pass": true,
+  "validation_unequal_exact": 0.875
+}

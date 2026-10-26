@@ -1,0 +1,55 @@
+{
+  "artifact_audit": {
+    "c1j": {
+      "hash_failures": 0,
+      "index": "experiments/crucible_c1j_cpu_stress_20261021/HASHES.json",
+      "index_sha256": "e3418d9a219126f2904a0661499b6f31791337605d9d9869590f6fb60deb978a",
+      "indexed_files": 8
+    },
+    "c1k": {
+      "hash_failures": 0,
+      "index": "experiments/crucible_c1k_constrained_procedure_20261021/HASHES.json",
+      "index_sha256": "8db25eeea0599450b857734dec7f83b0c1b7388a423afedde2266a460843a6de",
+      "indexed_files": 8
+    },
+    "c1k_repeat": {
+      "hash_failures": 0,
+      "index": "experiments/crucible_c1k_repeat_constrained_procedure_20261021/HASHES.json",
+      "index_sha256": "613372c41f7b3d09acf539eacfdd4b1d6f9e8a68a25dda9d0e0e97237d8273fb",
+      "indexed_files": 8
+    },
+    "c1l": {
+      "hash_failures": 0,
+      "index": "experiments/crucible_c1l_certificate_amortization_20261021/HASHES.json",
+      "index_sha256": "7cfa9a09b7986311ff528e11f9335eb9fa50a80a335821e51211b6f5215ee76a",
+      "indexed_files": 9
+    }
+  },
+  "input_audit": {
+    "conditions": [
+      "applicable",
+      "adaptation",
+      "invalidated",
+      "contradictory",
+      "misleading_similarity",
+      "noisy_evidence",
+      "provenance_corrupt",
+      "unresolvable"
+    ],
+    "count": 10000,
+    "families": [
+      "interval",
+      "multiset",
+      "tree",
+      "matrix"
+    ],
+    "manifest_digest": "22567b8b942dad47ff436fd21b137a1ef55201738edb9860bf34c96d094bc9e8",
+    "memory_sizes": [
+      10,
+      100,
+      1000,
+      10000
+    ],
+    "task_digest": "22567b8b942dad47ff436fd21b137a1ef55201738edb9860bf34c96d094bc9e8"
+  }
+}

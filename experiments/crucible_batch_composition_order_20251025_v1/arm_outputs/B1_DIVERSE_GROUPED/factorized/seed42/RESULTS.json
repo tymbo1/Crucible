@@ -1,0 +1,26 @@
+{
+  "arm": "B1_DIVERSE_GROUPED",
+  "arm_id": "B1_DIVERSE_GROUPED_factorized_seed42",
+  "checkpoint": "experiments/crucible_batch_composition_order_20251025_v1/arm_outputs/B1_DIVERSE_GROUPED/factorized/seed42/checkpoint.pt",
+  "checkpoint_sha256": "2aa99e5e40c52fa4af23bb610e25299acd7ec160310bd53b3ed729e3e8e9b390",
+  "effective_batch": 12,
+  "elapsed_seconds": 383.97174550103955,
+  "expanded_records": 240,
+  "interface": "factorized",
+  "max_gradient_cosine_previous": 0.7251332998275757,
+  "mean_gradient_cosine_previous": -0.17605674650472494,
+  "mean_loss": 0.5739727770015597,
+  "mean_unique_pair_groups_per_batch": 12,
+  "min_gradient_cosine_previous": -0.8035553693771362,
+  "record_presentations": 6000,
+  "schedule_digest": "b1c833fb903cf0df74d8fd7bed23cf2e156df40f5a83c6fbde1e55e5c0399c8c",
+  "seed": 42,
+  "steps": 500,
+  "train_expanded": {
+    "examples": 240,
+    "mean_target_loss": 0.2573665353760589,
+    "teacher_forced_exact_accuracy": 0.75,
+    "teacher_forced_token_accuracy": 0.875
+  },
+  "train_expanded_exact": 0.75
+}

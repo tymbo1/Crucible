@@ -1,0 +1,521 @@
+{
+  "abstain_slot": 8,
+  "architecture_changed": true,
+  "checkpoint_hashes": {
+    "SHARED_SCORER|canonical|seed1337": {
+      "path": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SHARED_SCORER/canonical/seed1337/checkpoint.pt",
+      "sha256": "369d2ad83ad86f5d97b2f6576e74a572273f1f049707a0a7231cde6bd6b46df9"
+    },
+    "SHARED_SCORER|canonical|seed42": {
+      "path": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SHARED_SCORER/canonical/seed42/checkpoint.pt",
+      "sha256": "5f65c7acd6e618a604e45f71775defc688a95bbddd3079b4891559348369af45"
+    },
+    "SHARED_SCORER|factorized|seed1337": {
+      "path": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SHARED_SCORER/factorized/seed1337/checkpoint.pt",
+      "sha256": "5d7730b263c7c81de827440e2660fbc3564286fd9d18ae54eebfa20a11a23110"
+    },
+    "SHARED_SCORER|factorized|seed42": {
+      "path": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SHARED_SCORER/factorized/seed42/checkpoint.pt",
+      "sha256": "e927516ae289802622ada99ecfe8da166fcfb5e704cbd988fc92fb63c54dc29d"
+    },
+    "SLOT_HEAD|canonical|seed1337": {
+      "path": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SLOT_HEAD/canonical/seed1337/checkpoint.pt",
+      "sha256": "db241a15896839c8ddc6d87033ddbd47fafb240271cce424698d259d4811359c"
+    },
+    "SLOT_HEAD|canonical|seed42": {
+      "path": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SLOT_HEAD/canonical/seed42/checkpoint.pt",
+      "sha256": "f99e5cb8e42e3638744d7723525c148b4c95976d3093cbd53dabb5c92a2d6fd7"
+    },
+    "SLOT_HEAD|factorized|seed1337": {
+      "path": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SLOT_HEAD/factorized/seed1337/checkpoint.pt",
+      "sha256": "2b43e02f6ef93d284887d341da23a6044d8d682d7a534ac005f794440812f181"
+    },
+    "SLOT_HEAD|factorized|seed42": {
+      "path": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SLOT_HEAD/factorized/seed42/checkpoint.pt",
+      "sha256": "4a0d64a6426b50edff1c9e125059c5b0f3b991ad9f21afe89af88b20296d4ec6"
+    }
+  },
+  "data_audit": {
+    "canonical": {
+      "train": 576,
+      "transfer": 144,
+      "validation": 312
+    },
+    "factorized": {
+      "train": 576,
+      "transfer": 144,
+      "validation": 312
+    }
+  },
+  "dense_backbone_changed": false,
+  "effective_batch": 12,
+  "experiment": "crucible_shared_candidate_scoring_cardinality_20261026_v1",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "max_candidates": 8,
+  "protocol": "docs/CRUCIBLE_SHARED_CANDIDATE_SCORING_CARDINALITY_PROTOCOL_20261026.md",
+  "readout_changed": true,
+  "results": [
+    {
+      "checkpoint": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SLOT_HEAD/canonical/seed42/checkpoint.pt",
+      "checkpoint_sha256": "f99e5cb8e42e3638744d7723525c148b4c95976d3093cbd53dabb5c92a2d6fd7",
+      "interface": "canonical",
+      "metrics": {
+        "train": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 192,
+          "abstain_rows": 192,
+          "paired": {
+            "correct_two_way": 0,
+            "correct_two_way_accuracy": 0.0,
+            "flip_accuracy": 0.0,
+            "pairs": 192,
+            "pointer_flips": 0
+          },
+          "pointer_accuracy": 0.6666666666666666,
+          "pointer_correct": 384,
+          "rows": 576
+        },
+        "transfer": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 48,
+          "abstain_rows": 48,
+          "paired": {
+            "correct_two_way": 0,
+            "correct_two_way_accuracy": 0.0,
+            "flip_accuracy": 0.4791666666666667,
+            "pairs": 48,
+            "pointer_flips": 23
+          },
+          "pointer_accuracy": 0.5069444444444444,
+          "pointer_correct": 73,
+          "rows": 144
+        },
+        "validation": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 104,
+          "abstain_rows": 104,
+          "paired": {
+            "correct_two_way": 11,
+            "correct_two_way_accuracy": 0.10576923076923077,
+            "flip_accuracy": 0.3076923076923077,
+            "pairs": 104,
+            "pointer_flips": 32
+          },
+          "pointer_accuracy": 0.6474358974358975,
+          "pointer_correct": 202,
+          "rows": 312
+        }
+      },
+      "seed": 42,
+      "source": "new_cardinality_training",
+      "steps": 500,
+      "variant": "SLOT_HEAD"
+    },
+    {
+      "checkpoint": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SLOT_HEAD/canonical/seed1337/checkpoint.pt",
+      "checkpoint_sha256": "db241a15896839c8ddc6d87033ddbd47fafb240271cce424698d259d4811359c",
+      "interface": "canonical",
+      "metrics": {
+        "train": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 192,
+          "abstain_rows": 192,
+          "paired": {
+            "correct_two_way": 4,
+            "correct_two_way_accuracy": 0.020833333333333332,
+            "flip_accuracy": 0.020833333333333332,
+            "pairs": 192,
+            "pointer_flips": 4
+          },
+          "pointer_accuracy": 0.6736111111111112,
+          "pointer_correct": 388,
+          "rows": 576
+        },
+        "transfer": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 48,
+          "abstain_rows": 48,
+          "paired": {
+            "correct_two_way": 0,
+            "correct_two_way_accuracy": 0.0,
+            "flip_accuracy": 0.20833333333333334,
+            "pairs": 48,
+            "pointer_flips": 10
+          },
+          "pointer_accuracy": 0.5972222222222222,
+          "pointer_correct": 86,
+          "rows": 144
+        },
+        "validation": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 104,
+          "abstain_rows": 104,
+          "paired": {
+            "correct_two_way": 1,
+            "correct_two_way_accuracy": 0.009615384615384616,
+            "flip_accuracy": 0.19230769230769232,
+            "pairs": 104,
+            "pointer_flips": 20
+          },
+          "pointer_accuracy": 0.6378205128205128,
+          "pointer_correct": 199,
+          "rows": 312
+        }
+      },
+      "seed": 1337,
+      "source": "new_cardinality_training",
+      "steps": 500,
+      "variant": "SLOT_HEAD"
+    },
+    {
+      "checkpoint": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SHARED_SCORER/canonical/seed42/checkpoint.pt",
+      "checkpoint_sha256": "5f65c7acd6e618a604e45f71775defc688a95bbddd3079b4891559348369af45",
+      "interface": "canonical",
+      "metrics": {
+        "train": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 192,
+          "abstain_rows": 192,
+          "paired": {
+            "correct_two_way": 113,
+            "correct_two_way_accuracy": 0.5885416666666666,
+            "flip_accuracy": 0.5885416666666666,
+            "pairs": 192,
+            "pointer_flips": 113
+          },
+          "pointer_accuracy": 0.8628472222222222,
+          "pointer_correct": 497,
+          "rows": 576
+        },
+        "transfer": {
+          "abstain_accuracy": 0.8958333333333334,
+          "abstain_correct": 43,
+          "abstain_rows": 48,
+          "paired": {
+            "correct_two_way": 0,
+            "correct_two_way_accuracy": 0.0,
+            "flip_accuracy": 0.16666666666666666,
+            "pairs": 48,
+            "pointer_flips": 8
+          },
+          "pointer_accuracy": 0.3194444444444444,
+          "pointer_correct": 46,
+          "rows": 144
+        },
+        "validation": {
+          "abstain_accuracy": 0.8557692307692307,
+          "abstain_correct": 89,
+          "abstain_rows": 104,
+          "paired": {
+            "correct_two_way": 21,
+            "correct_two_way_accuracy": 0.20192307692307693,
+            "flip_accuracy": 0.3076923076923077,
+            "pairs": 104,
+            "pointer_flips": 32
+          },
+          "pointer_accuracy": 0.6314102564102564,
+          "pointer_correct": 197,
+          "rows": 312
+        }
+      },
+      "seed": 42,
+      "source": "new_cardinality_training",
+      "steps": 500,
+      "variant": "SHARED_SCORER"
+    },
+    {
+      "checkpoint": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SHARED_SCORER/canonical/seed1337/checkpoint.pt",
+      "checkpoint_sha256": "369d2ad83ad86f5d97b2f6576e74a572273f1f049707a0a7231cde6bd6b46df9",
+      "interface": "canonical",
+      "metrics": {
+        "train": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 192,
+          "abstain_rows": 192,
+          "paired": {
+            "correct_two_way": 60,
+            "correct_two_way_accuracy": 0.3125,
+            "flip_accuracy": 0.3125,
+            "pairs": 192,
+            "pointer_flips": 60
+          },
+          "pointer_accuracy": 0.7708333333333334,
+          "pointer_correct": 444,
+          "rows": 576
+        },
+        "transfer": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 48,
+          "abstain_rows": 48,
+          "paired": {
+            "correct_two_way": 0,
+            "correct_two_way_accuracy": 0.0,
+            "flip_accuracy": 0.14583333333333334,
+            "pairs": 48,
+            "pointer_flips": 7
+          },
+          "pointer_accuracy": 0.4513888888888889,
+          "pointer_correct": 65,
+          "rows": 144
+        },
+        "validation": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 104,
+          "abstain_rows": 104,
+          "paired": {
+            "correct_two_way": 17,
+            "correct_two_way_accuracy": 0.16346153846153846,
+            "flip_accuracy": 0.6153846153846154,
+            "pairs": 104,
+            "pointer_flips": 64
+          },
+          "pointer_accuracy": 0.592948717948718,
+          "pointer_correct": 185,
+          "rows": 312
+        }
+      },
+      "seed": 1337,
+      "source": "new_cardinality_training",
+      "steps": 500,
+      "variant": "SHARED_SCORER"
+    },
+    {
+      "checkpoint": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SLOT_HEAD/factorized/seed42/checkpoint.pt",
+      "checkpoint_sha256": "4a0d64a6426b50edff1c9e125059c5b0f3b991ad9f21afe89af88b20296d4ec6",
+      "interface": "factorized",
+      "metrics": {
+        "train": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 192,
+          "abstain_rows": 192,
+          "paired": {
+            "correct_two_way": 0,
+            "correct_two_way_accuracy": 0.0,
+            "flip_accuracy": 0.0,
+            "pairs": 192,
+            "pointer_flips": 0
+          },
+          "pointer_accuracy": 0.6666666666666666,
+          "pointer_correct": 384,
+          "rows": 576
+        },
+        "transfer": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 48,
+          "abstain_rows": 48,
+          "paired": {
+            "correct_two_way": 0,
+            "correct_two_way_accuracy": 0.0,
+            "flip_accuracy": 0.2916666666666667,
+            "pairs": 48,
+            "pointer_flips": 14
+          },
+          "pointer_accuracy": 0.3958333333333333,
+          "pointer_correct": 57,
+          "rows": 144
+        },
+        "validation": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 104,
+          "abstain_rows": 104,
+          "paired": {
+            "correct_two_way": 10,
+            "correct_two_way_accuracy": 0.09615384615384616,
+            "flip_accuracy": 0.3557692307692308,
+            "pairs": 104,
+            "pointer_flips": 37
+          },
+          "pointer_accuracy": 0.6346153846153846,
+          "pointer_correct": 198,
+          "rows": 312
+        }
+      },
+      "seed": 42,
+      "source": "new_cardinality_training",
+      "steps": 500,
+      "variant": "SLOT_HEAD"
+    },
+    {
+      "checkpoint": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SLOT_HEAD/factorized/seed1337/checkpoint.pt",
+      "checkpoint_sha256": "2b43e02f6ef93d284887d341da23a6044d8d682d7a534ac005f794440812f181",
+      "interface": "factorized",
+      "metrics": {
+        "train": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 192,
+          "abstain_rows": 192,
+          "paired": {
+            "correct_two_way": 0,
+            "correct_two_way_accuracy": 0.0,
+            "flip_accuracy": 0.0,
+            "pairs": 192,
+            "pointer_flips": 0
+          },
+          "pointer_accuracy": 0.6666666666666666,
+          "pointer_correct": 384,
+          "rows": 576
+        },
+        "transfer": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 48,
+          "abstain_rows": 48,
+          "paired": {
+            "correct_two_way": 0,
+            "correct_two_way_accuracy": 0.0,
+            "flip_accuracy": 0.10416666666666667,
+            "pairs": 48,
+            "pointer_flips": 5
+          },
+          "pointer_accuracy": 0.4930555555555556,
+          "pointer_correct": 71,
+          "rows": 144
+        },
+        "validation": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 104,
+          "abstain_rows": 104,
+          "paired": {
+            "correct_two_way": 11,
+            "correct_two_way_accuracy": 0.10576923076923077,
+            "flip_accuracy": 0.19230769230769232,
+            "pairs": 104,
+            "pointer_flips": 20
+          },
+          "pointer_accuracy": 0.6730769230769231,
+          "pointer_correct": 210,
+          "rows": 312
+        }
+      },
+      "seed": 1337,
+      "source": "new_cardinality_training",
+      "steps": 500,
+      "variant": "SLOT_HEAD"
+    },
+    {
+      "checkpoint": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SHARED_SCORER/factorized/seed42/checkpoint.pt",
+      "checkpoint_sha256": "e927516ae289802622ada99ecfe8da166fcfb5e704cbd988fc92fb63c54dc29d",
+      "interface": "factorized",
+      "metrics": {
+        "train": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 192,
+          "abstain_rows": 192,
+          "paired": {
+            "correct_two_way": 109,
+            "correct_two_way_accuracy": 0.5677083333333334,
+            "flip_accuracy": 0.6302083333333334,
+            "pairs": 192,
+            "pointer_flips": 121
+          },
+          "pointer_accuracy": 0.8350694444444444,
+          "pointer_correct": 481,
+          "rows": 576
+        },
+        "transfer": {
+          "abstain_accuracy": 0.6666666666666666,
+          "abstain_correct": 32,
+          "abstain_rows": 48,
+          "paired": {
+            "correct_two_way": 1,
+            "correct_two_way_accuracy": 0.020833333333333332,
+            "flip_accuracy": 0.14583333333333334,
+            "pairs": 48,
+            "pointer_flips": 7
+          },
+          "pointer_accuracy": 0.2986111111111111,
+          "pointer_correct": 43,
+          "rows": 144
+        },
+        "validation": {
+          "abstain_accuracy": 0.9903846153846154,
+          "abstain_correct": 103,
+          "abstain_rows": 104,
+          "paired": {
+            "correct_two_way": 20,
+            "correct_two_way_accuracy": 0.19230769230769232,
+            "flip_accuracy": 0.3557692307692308,
+            "pairs": 104,
+            "pointer_flips": 37
+          },
+          "pointer_accuracy": 0.6826923076923077,
+          "pointer_correct": 213,
+          "rows": 312
+        }
+      },
+      "seed": 42,
+      "source": "new_cardinality_training",
+      "steps": 500,
+      "variant": "SHARED_SCORER"
+    },
+    {
+      "checkpoint": "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/trained_arms/SHARED_SCORER/factorized/seed1337/checkpoint.pt",
+      "checkpoint_sha256": "5d7730b263c7c81de827440e2660fbc3564286fd9d18ae54eebfa20a11a23110",
+      "interface": "factorized",
+      "metrics": {
+        "train": {
+          "abstain_accuracy": 1.0,
+          "abstain_correct": 192,
+          "abstain_rows": 192,
+          "paired": {
+            "correct_two_way": 65,
+            "correct_two_way_accuracy": 0.3385416666666667,
+            "flip_accuracy": 0.3385416666666667,
+            "pairs": 192,
+            "pointer_flips": 65
+          },
+          "pointer_accuracy": 0.7795138888888888,
+          "pointer_correct": 449,
+          "rows": 576
+        },
+        "transfer": {
+          "abstain_accuracy": 0.9375,
+          "abstain_correct": 45,
+          "abstain_rows": 48,
+          "paired": {
+            "correct_two_way": 0,
+            "correct_two_way_accuracy": 0.0,
+            "flip_accuracy": 0.5416666666666666,
+            "pairs": 48,
+            "pointer_flips": 26
+          },
+          "pointer_accuracy": 0.3472222222222222,
+          "pointer_correct": 50,
+          "rows": 144
+        },
+        "validation": {
+          "abstain_accuracy": 0.75,
+          "abstain_correct": 78,
+          "abstain_rows": 104,
+          "paired": {
+            "correct_two_way": 5,
+            "correct_two_way_accuracy": 0.04807692307692308,
+            "flip_accuracy": 0.36538461538461536,
+            "pairs": 104,
+            "pointer_flips": 38
+          },
+          "pointer_accuracy": 0.4775641025641026,
+          "pointer_correct": 149,
+          "rows": 312
+        }
+      },
+      "seed": 1337,
+      "source": "new_cardinality_training",
+      "steps": 500,
+      "variant": "SHARED_SCORER"
+    }
+  ],
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "status": "completed",
+  "steps": 500,
+  "variants": [
+    "SLOT_HEAD",
+    "SHARED_SCORER"
+  ]
+}

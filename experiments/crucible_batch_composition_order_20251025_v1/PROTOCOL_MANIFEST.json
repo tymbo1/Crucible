@@ -1,0 +1,37 @@
+{
+  "architecture_changed": false,
+  "arms": [
+    "B0_DIVERSE_SHUFFLED",
+    "B1_DIVERSE_GROUPED",
+    "B2_SAME_PAIR_SHUFFLED",
+    "B3_SAME_PAIR_GROUPED"
+  ],
+  "consistency_loss": false,
+  "effective_batch": 12,
+  "eval_layouts": [
+    "FIXED_NEAR_PADDED",
+    "EARLY_PADDED",
+    "MIDDLE_POSITION",
+    "UNSEEN_BETWEEN_OPERANDS",
+    "UNSEEN_EARLY_CONTEXT_FIRST"
+  ],
+  "experiment": "crucible_batch_composition_order_20251025_v1",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "protocol": "docs/CRUCIBLE_BATCH_COMPOSITION_ORDER_PROTOCOL_20251025.md",
+  "schedule_seed": 20261025,
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "status": "frozen_before_training",
+  "steps": 500,
+  "train_layouts": [
+    "FIXED_NEAR_PADDED",
+    "EARLY_PADDED",
+    "MIDDLE_POSITION"
+  ]
+}

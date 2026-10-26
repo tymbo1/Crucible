@@ -1,0 +1,111 @@
+{
+  "files": {
+    "atomic/heldout": {
+      "path": "manifests/atomic/heldout.jsonl",
+      "records": 64,
+      "sha256": "17ac9339cfd660b0d8cd4f9c2d5af991ac2d4eb20cf0b47c4d1fcf5854a58fd0"
+    },
+    "atomic/test": {
+      "path": "manifests/atomic/test.jsonl",
+      "records": 64,
+      "sha256": "3a1ae469b2a9e2197feb993838fc61760787ccb3283417339d7c1dc3ebf06aa7"
+    },
+    "atomic/train": {
+      "path": "manifests/atomic/train.jsonl",
+      "records": 128,
+      "sha256": "fc1676c55f03030ac8fb1eafe9b97349c4cbb0ddb65d745adb6681f5fa527f0a"
+    },
+    "atomic/validation": {
+      "path": "manifests/atomic/validation.jsonl",
+      "records": 64,
+      "sha256": "59917c78e03769f4cfa178d507f671e8da069c924de9950807f710ae35babd83"
+    },
+    "composition/heldout": {
+      "path": "manifests/composition/heldout.jsonl",
+      "records": 64,
+      "sha256": "a5cc8b58ff57c286fac103ec5b47c9209c2473ffce3944789b1ae67dcbb3f514"
+    },
+    "composition/test": {
+      "path": "manifests/composition/test.jsonl",
+      "records": 64,
+      "sha256": "6c2ba8e8bd61154840dab4b5512488c64748761ab7b1b739ca2de7eb61faa4bb"
+    },
+    "composition/train": {
+      "path": "manifests/composition/train.jsonl",
+      "records": 128,
+      "sha256": "990b1157da4a4efc969d4590b6836eb63fd9115afc08f065e02c290f2f095f14"
+    },
+    "composition/validation": {
+      "path": "manifests/composition/validation.jsonl",
+      "records": 64,
+      "sha256": "2d8737eb84dd60dcfd67d179258401a95c0e65577e848bffaed18440492ab0e1"
+    },
+    "logic/heldout": {
+      "path": "manifests/logic/heldout.jsonl",
+      "records": 64,
+      "sha256": "ca7938ed4b22863ebbf08a24ea0002160357dd6a8c49b46369ee980981f48429"
+    },
+    "logic/test": {
+      "path": "manifests/logic/test.jsonl",
+      "records": 64,
+      "sha256": "6481d5176b91fcc45b1ec279e41b151cacfb135ef847fde6b0fb9dc1a70254d8"
+    },
+    "logic/train": {
+      "path": "manifests/logic/train.jsonl",
+      "records": 128,
+      "sha256": "693f16822cf17cf926302eacdd051f324cd54380a2afa570315300ed1873bfb2"
+    },
+    "logic/validation": {
+      "path": "manifests/logic/validation.jsonl",
+      "records": 64,
+      "sha256": "3b15b58bd542cc7311d42ed9e8962c157767e7e5ee78160dcd50833e8a49b120"
+    },
+    "relational/heldout": {
+      "path": "manifests/relational/heldout.jsonl",
+      "records": 64,
+      "sha256": "d72838750a5e9c364a7fa3a96f2aef82782fd8a6c54fcb4fd8b3c822c220dfe5"
+    },
+    "relational/test": {
+      "path": "manifests/relational/test.jsonl",
+      "records": 64,
+      "sha256": "dc07d7c791975c8bc6f3bf793047d1fb43e215e8d234ba4fa1c97ccaa7e8b531"
+    },
+    "relational/train": {
+      "path": "manifests/relational/train.jsonl",
+      "records": 128,
+      "sha256": "8ae482f44541be36313d8b80aeb00389a92a2a03234bd4588f3b98db5ed2dea0"
+    },
+    "relational/validation": {
+      "path": "manifests/relational/validation.jsonl",
+      "records": 64,
+      "sha256": "9f06a246c2f6f8ca872002ea1ba19c800fcac6b4b3b350ddc9a33b3e62d0a0bf"
+    }
+  },
+  "records_per_stage": {
+    "heldout": 64,
+    "test": 64,
+    "train": 128,
+    "validation": 64
+  },
+  "schema_version": "crucible_cognitive_learnability_ladder_v1",
+  "seed": 42,
+  "splits": [
+    "train",
+    "validation",
+    "heldout",
+    "test"
+  ],
+  "stages": [
+    "atomic",
+    "composition",
+    "relational",
+    "logic"
+  ],
+  "task_roles": {
+    "heldout": "depth/composition/distractor generalization diagnostic",
+    "test": "untouched and not evaluated in this run",
+    "train": "in-distribution learning",
+    "validation": "in-distribution checkpoint gate"
+  },
+  "test_evaluated": false
+}

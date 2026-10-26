@@ -1,0 +1,27 @@
+{
+  "architecture_changed": false,
+  "arms": [
+    "FIXED_POSITION_CONTROL",
+    "POSITION_VARIED_INTERVENTION"
+  ],
+  "eval_layouts": [
+    "A3_EXACT_ADJACENT",
+    "FIXED_NEAR_PADDED",
+    "EARLY_PADDED",
+    "MIDDLE_POSITION",
+    "UNSEEN_BETWEEN_OPERANDS",
+    "UNSEEN_EARLY_CONTEXT_FIRST"
+  ],
+  "experiment": "crucible_position_generalization_gate_20251025_v1",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "status": "frozen_before_training",
+  "steps": 500
+}

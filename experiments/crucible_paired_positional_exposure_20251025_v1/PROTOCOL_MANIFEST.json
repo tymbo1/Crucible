@@ -1,0 +1,34 @@
+{
+  "architecture_changed": false,
+  "arms": [
+    "A0_SHUFFLED_EXPOSURE",
+    "A1_GROUPED_EXPOSURE",
+    "A2_GROUPED_CONSISTENCY"
+  ],
+  "consistency_weight": 0.1,
+  "effective_batch": 12,
+  "eval_layouts": [
+    "FIXED_NEAR_PADDED",
+    "EARLY_PADDED",
+    "MIDDLE_POSITION",
+    "UNSEEN_BETWEEN_OPERANDS",
+    "UNSEEN_EARLY_CONTEXT_FIRST"
+  ],
+  "experiment": "crucible_paired_positional_exposure_20251025_v1",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "status": "frozen_before_training",
+  "steps": 500,
+  "train_layouts": [
+    "FIXED_NEAR_PADDED",
+    "EARLY_PADDED",
+    "MIDDLE_POSITION"
+  ]
+}

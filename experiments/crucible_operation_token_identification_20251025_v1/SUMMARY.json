@@ -1,0 +1,105 @@
+{
+  "architecture_changed": false,
+  "arms": [
+    {
+      "arm_id": "operation_token_canonical_seed42",
+      "checkpoint": "experiments/crucible_operation_token_identification_20251025_v1/arm_outputs/canonical/seed42/checkpoint.pt",
+      "checkpoint_sha256": "a8ddef7cfff482888b3ace563645d80348e1fc3f70ac3b8511a2385ca367cfe3",
+      "fit_pass": true,
+      "gate_pass": true,
+      "interface": "canonical",
+      "seed": 42,
+      "train": {
+        "accuracy": 1.0,
+        "correct": 80,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "observations": 80
+      },
+      "validation": {
+        "accuracy": 1.0,
+        "correct": 20,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "observations": 20
+      },
+      "validation_pass": true
+    },
+    {
+      "arm_id": "operation_token_canonical_seed1337",
+      "checkpoint": "experiments/crucible_operation_token_identification_20251025_v1/arm_outputs/canonical/seed1337/checkpoint.pt",
+      "checkpoint_sha256": "83baacb33047d8eba9e6c4279c9f3b19fc654cd33d104fbd84d42b6af49e7ca9",
+      "fit_pass": true,
+      "gate_pass": true,
+      "interface": "canonical",
+      "seed": 1337,
+      "train": {
+        "accuracy": 1.0,
+        "correct": 80,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "observations": 80
+      },
+      "validation": {
+        "accuracy": 1.0,
+        "correct": 20,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "observations": 20
+      },
+      "validation_pass": true
+    },
+    {
+      "arm_id": "operation_token_factorized_seed42",
+      "checkpoint": "experiments/crucible_operation_token_identification_20251025_v1/arm_outputs/factorized/seed42/checkpoint.pt",
+      "checkpoint_sha256": "ef55486f60bfeb918ce6e264d535374e968fb81586d062dc34f6acc19d2d3cd7",
+      "fit_pass": true,
+      "gate_pass": true,
+      "interface": "factorized",
+      "seed": 42,
+      "train": {
+        "accuracy": 1.0,
+        "correct": 80,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "observations": 80
+      },
+      "validation": {
+        "accuracy": 1.0,
+        "correct": 20,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "observations": 20
+      },
+      "validation_pass": true
+    },
+    {
+      "arm_id": "operation_token_factorized_seed1337",
+      "checkpoint": "experiments/crucible_operation_token_identification_20251025_v1/arm_outputs/factorized/seed1337/checkpoint.pt",
+      "checkpoint_sha256": "190c9aa034951562210298889ce8ddfdcac7b716fff9565b4f1f88cf42aedbf0",
+      "fit_pass": true,
+      "gate_pass": true,
+      "interface": "factorized",
+      "seed": 1337,
+      "train": {
+        "accuracy": 1.0,
+        "correct": 80,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "observations": 80
+      },
+      "validation": {
+        "accuracy": 1.0,
+        "correct": 20,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "observations": 20
+      },
+      "validation_pass": true
+    }
+  ],
+  "experiment": "crucible_operation_token_identification_20251025",
+  "prediction_rows": 400,
+  "sealed_test_accessed": false,
+  "status": "completed"
+}

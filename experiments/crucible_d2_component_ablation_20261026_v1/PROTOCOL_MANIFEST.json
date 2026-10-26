@@ -1,0 +1,24 @@
+{
+  "architecture_changed": false,
+  "cells": [
+    "C1_SLOT_DECISION_ONLY",
+    "C2_SLOT_FULL_MULTITASK",
+    "C3_OPERATION_DECISION_ONLY",
+    "C4_OPERATION_FULL_MULTITASK"
+  ],
+  "experiment": "crucible_d2_component_ablation_20261026_v1",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "protocol": "docs/CRUCIBLE_D2_COMPONENT_ABLATION_PROTOCOL_20261026.md",
+  "reused_diagonal_controls": {
+    "C1": "accepted S4",
+    "C4": "accepted original D2"
+  },
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ]
+}

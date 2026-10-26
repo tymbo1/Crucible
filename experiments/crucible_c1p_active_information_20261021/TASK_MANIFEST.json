@@ -1,0 +1,78 @@
+{
+  "experiment": "crucible_c1p_active_information_20261021",
+  "hidden_labels_used_by_policy": false,
+  "oracle_checks": 36000,
+  "oracle_failures": 0,
+  "seeds": {
+    "1337": {
+      "conditions": {
+        "ambiguous_distractor": 1730,
+        "ambiguous_expensive": 1742,
+        "ambiguous_multi": 1694,
+        "misleading_evidence": 1755,
+        "no_information": 1681,
+        "role_break": 1731,
+        "unavailable_evidence": 1667
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "ed22b9f964b822bdfb9894316872c5232a1dd7205f9a31cbfc8db133f1341bec",
+      "templates": {
+        "asymmetric": 2972,
+        "balanced": 3022,
+        "deep": 3006,
+        "wide": 3000
+      }
+    },
+    "2026": {
+      "conditions": {
+        "ambiguous_distractor": 1674,
+        "ambiguous_expensive": 1666,
+        "ambiguous_multi": 1759,
+        "misleading_evidence": 1780,
+        "no_information": 1686,
+        "role_break": 1699,
+        "unavailable_evidence": 1736
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "cc1d0d952d2425d6d5d192bfb564acc610f3d45ec891e7a9dfe2c1214ed794a8",
+      "templates": {
+        "asymmetric": 2994,
+        "balanced": 2977,
+        "deep": 3049,
+        "wide": 2980
+      }
+    },
+    "42": {
+      "conditions": {
+        "ambiguous_distractor": 1737,
+        "ambiguous_expensive": 1715,
+        "ambiguous_multi": 1698,
+        "misleading_evidence": 1720,
+        "no_information": 1702,
+        "role_break": 1696,
+        "unavailable_evidence": 1732
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "1c75a04043838053b92d7c240b8daee4d03bd1bc2e931b1c0b61aec65d7411fc",
+      "templates": {
+        "asymmetric": 2953,
+        "balanced": 3049,
+        "deep": 2979,
+        "wide": 3019
+      }
+    }
+  },
+  "task_count_total": 36000
+}

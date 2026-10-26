@@ -1,0 +1,719 @@
+{
+  "aggregate": {
+    "active_evidence": {
+      "accuracy": 0.4990277777777778,
+      "conditional_accuracy": 0.7977154568830199,
+      "counterexample_detections": 3,
+      "coverage": 0.6255555555555555,
+      "false_abstentions": 0,
+      "guard_conflicts": 0,
+      "guards_final": {
+        "anchor_marker": 0
+      },
+      "guards_final_by_seed": [
+        {
+          "anchor_marker": 0
+        },
+        {
+          "anchor_marker": 0
+        },
+        {
+          "anchor_marker": 0
+        }
+      ],
+      "harmful_transfer_count": 4555,
+      "harmful_transfer_rate_accepted": 0.20228454311698016,
+      "harmful_transfer_rate_all_tasks": 0.12652777777777777,
+      "invalid_acceptances": 4555,
+      "invalid_transfer_rejection": 0.7474076297712164,
+      "mean_cost": 0.36899861111111115,
+      "probe_attempts": 22523,
+      "probe_passes": 22520,
+      "refinements": 3,
+      "runs": 3,
+      "tasks": 36000,
+      "unresolvable_abstentions": 4424,
+      "unresolvable_tasks": 8979,
+      "valid_transfer_recall": 1.0
+    },
+    "counterexample_refinement": {
+      "accuracy": 0.4990277777777778,
+      "conditional_accuracy": 0.6667287979313398,
+      "counterexample_detections": 3,
+      "coverage": 0.7484444444444445,
+      "false_abstentions": 0,
+      "guard_conflicts": 0,
+      "guards_final": {
+        "anchor_marker": 0
+      },
+      "guards_final_by_seed": [
+        {
+          "anchor_marker": 0
+        },
+        {
+          "anchor_marker": 0
+        },
+        {
+          "anchor_marker": 0
+        }
+      ],
+      "harmful_transfer_count": 8979,
+      "harmful_transfer_rate_accepted": 0.3332712020686602,
+      "harmful_transfer_rate_all_tasks": 0.24941666666666665,
+      "invalid_acceptances": 8979,
+      "invalid_transfer_rejection": 0.5021278195779707,
+      "mean_cost": 0.36899861111111115,
+      "probe_attempts": 22523,
+      "probe_passes": 22520,
+      "refinements": 3,
+      "runs": 3,
+      "tasks": 36000,
+      "unresolvable_abstentions": 0,
+      "unresolvable_tasks": 8979,
+      "valid_transfer_recall": 1.0
+    },
+    "frozen_relational": {
+      "accuracy": 0.4990277777777778,
+      "conditional_accuracy": 0.5706688332379984,
+      "counterexample_detections": 0,
+      "coverage": 0.8744444444444444,
+      "false_abstentions": 0,
+      "guard_conflicts": 0,
+      "guards_final": {},
+      "guards_final_by_seed": [
+        {},
+        {},
+        {}
+      ],
+      "harmful_transfer_count": 13515,
+      "harmful_transfer_rate_accepted": 0.4293311667620016,
+      "harmful_transfer_rate_all_tasks": 0.3754166666666667,
+      "invalid_acceptances": 13515,
+      "invalid_transfer_rejection": 0.2506103360502366,
+      "mean_cost": 0.15,
+      "probe_attempts": 0,
+      "probe_passes": 0,
+      "refinements": 0,
+      "runs": 3,
+      "tasks": 36000,
+      "unresolvable_abstentions": 0,
+      "unresolvable_tasks": 8979,
+      "valid_transfer_recall": 1.0
+    }
+  },
+  "by_condition": {
+    "depth_extension": {
+      "active_evidence": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.5,
+        "probe_attempts": 4537,
+        "tasks": 4537,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      },
+      "counterexample_refinement": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.5,
+        "probe_attempts": 4537,
+        "tasks": 4537,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      },
+      "frozen_relational": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4537,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      }
+    },
+    "exact_role": {
+      "active_evidence": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.5,
+        "probe_attempts": 4421,
+        "tasks": 4421,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      },
+      "counterexample_refinement": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.5,
+        "probe_attempts": 4421,
+        "tasks": 4421,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      },
+      "frozen_relational": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4421,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      }
+    },
+    "marker_guard_invalid": {
+      "active_evidence": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 3,
+        "coverage": 0.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 1.0,
+        "mean_cost": 0.1504298941798942,
+        "probe_attempts": 3,
+        "tasks": 4536,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 0.0
+      },
+      "counterexample_refinement": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 3,
+        "coverage": 0.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 1.0,
+        "mean_cost": 0.1504298941798942,
+        "probe_attempts": 3,
+        "tasks": 4536,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 0.0
+      },
+      "frozen_relational": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 4536,
+        "harmful_transfer_rate_all_tasks": 1.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4536,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 0.0
+      }
+    },
+    "marker_guard_valid": {
+      "active_evidence": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.5,
+        "probe_attempts": 4472,
+        "tasks": 4472,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      },
+      "counterexample_refinement": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.5,
+        "probe_attempts": 4472,
+        "tasks": 4472,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      },
+      "frozen_relational": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4472,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      }
+    },
+    "misleading_evidence": {
+      "active_evidence": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 4555,
+        "harmful_transfer_rate_all_tasks": 1.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.5,
+        "probe_attempts": 4555,
+        "tasks": 4555,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 0.0
+      },
+      "counterexample_refinement": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 4555,
+        "harmful_transfer_rate_all_tasks": 1.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.5,
+        "probe_attempts": 4555,
+        "tasks": 4555,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 0.0
+      },
+      "frozen_relational": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 4555,
+        "harmful_transfer_rate_all_tasks": 1.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4555,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 0.0
+      }
+    },
+    "role_break": {
+      "active_evidence": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 0,
+        "coverage": 0.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 1.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4520,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 0.0
+      },
+      "counterexample_refinement": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 0,
+        "coverage": 0.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 1.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4520,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 0.0
+      },
+      "frozen_relational": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 0,
+        "coverage": 0.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 1.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4520,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 0.0
+      }
+    },
+    "role_permutation": {
+      "active_evidence": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.5,
+        "probe_attempts": 4535,
+        "tasks": 4535,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      },
+      "counterexample_refinement": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.5,
+        "probe_attempts": 4535,
+        "tasks": 4535,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      },
+      "frozen_relational": {
+        "accuracy": 1.0,
+        "conditional_accuracy": 1.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4535,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      }
+    },
+    "unobservable_ambiguity": {
+      "active_evidence": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 0,
+        "coverage": 0.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 0,
+        "harmful_transfer_rate_all_tasks": 0.0,
+        "invalid_transfer_rejection": 1.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4424,
+        "unresolvable_abstentions": 4424,
+        "valid_transfer_recall": 0.0
+      },
+      "counterexample_refinement": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 4424,
+        "harmful_transfer_rate_all_tasks": 1.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4424,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 0.0
+      },
+      "frozen_relational": {
+        "accuracy": 0.0,
+        "conditional_accuracy": 0.0,
+        "counterexample_detections": 0,
+        "coverage": 1.0,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 4424,
+        "harmful_transfer_rate_all_tasks": 1.0,
+        "invalid_transfer_rejection": 0.0,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 4424,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 0.0
+      }
+    }
+  },
+  "by_phase": {
+    "discovery": {
+      "active_evidence": {
+        "accuracy": 0.487,
+        "conditional_accuracy": 0.7907270431174455,
+        "counterexample_detections": 3,
+        "coverage": 0.6158888888888889,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 1160,
+        "harmful_transfer_rate_all_tasks": 0.1288888888888889,
+        "invalid_transfer_rejection": 0.7487546025557722,
+        "mean_cost": 0.36577777777777776,
+        "probe_attempts": 5546,
+        "tasks": 9000,
+        "unresolvable_abstentions": 1095,
+        "valid_transfer_recall": 1.0
+      },
+      "counterexample_refinement": {
+        "accuracy": 0.487,
+        "conditional_accuracy": 0.6602892437481169,
+        "counterexample_detections": 3,
+        "coverage": 0.7375555555555555,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 2255,
+        "harmful_transfer_rate_all_tasks": 0.25055555555555553,
+        "invalid_transfer_rejection": 0.5115876110028157,
+        "mean_cost": 0.36577777777777776,
+        "probe_attempts": 5546,
+        "tasks": 9000,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      },
+      "frozen_relational": {
+        "accuracy": 0.487,
+        "conditional_accuracy": 0.5584862385321101,
+        "counterexample_detections": 0,
+        "coverage": 0.872,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 3465,
+        "harmful_transfer_rate_all_tasks": 0.385,
+        "invalid_transfer_rejection": 0.24951267056530213,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 9000,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      }
+    },
+    "heldout": {
+      "active_evidence": {
+        "accuracy": 0.5030370370370371,
+        "conditional_accuracy": 0.8000235612888025,
+        "counterexample_detections": 0,
+        "coverage": 0.6287777777777778,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 3395,
+        "harmful_transfer_rate_all_tasks": 0.12574074074074074,
+        "invalid_transfer_rejection": 0.7469816664182442,
+        "mean_cost": 0.37007222222222225,
+        "probe_attempts": 16977,
+        "tasks": 27000,
+        "unresolvable_abstentions": 3329,
+        "valid_transfer_recall": 1.0
+      },
+      "counterexample_refinement": {
+        "accuracy": 0.5030370370370371,
+        "conditional_accuracy": 0.6688663449226829,
+        "counterexample_detections": 0,
+        "coverage": 0.7520740740740741,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 6724,
+        "harmful_transfer_rate_all_tasks": 0.24903703703703703,
+        "invalid_transfer_rejection": 0.49888209867342376,
+        "mean_cost": 0.37007222222222225,
+        "probe_attempts": 16977,
+        "tasks": 27000,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      },
+      "frozen_relational": {
+        "accuracy": 0.5030370370370371,
+        "conditional_accuracy": 0.5747291807718348,
+        "counterexample_detections": 0,
+        "coverage": 0.8752592592592593,
+        "false_abstentions": 0,
+        "harmful_transfer_count": 10050,
+        "harmful_transfer_rate_all_tasks": 0.37222222222222223,
+        "invalid_transfer_rejection": 0.25100611119391864,
+        "mean_cost": 0.15,
+        "probe_attempts": 0,
+        "tasks": 27000,
+        "unresolvable_abstentions": 0,
+        "valid_transfer_recall": 1.0
+      }
+    }
+  },
+  "config": {
+    "base_cost": 0.15,
+    "conditions": [
+      "exact_role",
+      "depth_extension",
+      "role_permutation",
+      "marker_guard_valid",
+      "marker_guard_invalid",
+      "unobservable_ambiguity",
+      "misleading_evidence",
+      "role_break"
+    ],
+    "counterexample_cost": 0.2,
+    "discovery_fraction": 0.25,
+    "execution": "CPU-only",
+    "neural_training_updates": 0,
+    "policies": [
+      "frozen_relational",
+      "counterexample_refinement",
+      "active_evidence"
+    ],
+    "probe_cost": 0.35,
+    "refinement_cost": 0.1,
+    "task_seeds": [
+      42,
+      1337,
+      2026
+    ],
+    "tasks_per_seed": 12000,
+    "templates": [
+      "balanced",
+      "asymmetric",
+      "deep",
+      "wide"
+    ]
+  },
+  "experiment": "crucible_c1o_invariant_discovery_20261021",
+  "frozen_audit": {
+    "c1m": {
+      "hash_failures": 0,
+      "index": "experiments/crucible_c1m_exact_reuse_adaptation_20261021/HASHES.json",
+      "index_sha256": "cf002946d15b4fb437f946b03c6ec217e3a5e2bb172d2008997554639f4aa7b8",
+      "indexed_files": 7
+    },
+    "c1n": {
+      "hash_failures": 0,
+      "index": "experiments/crucible_c1n_relational_transfer_20261021/HASHES.json",
+      "index_sha256": "a6c9ac1aa1d000403ee6aee02d59b29a1aa8a8299f233774ebcebc8725fbe8ac",
+      "indexed_files": 6
+    }
+  },
+  "gates": {
+    "active_not_trivial_always_abstain": true,
+    "active_reduces_unobservable_harm": true,
+    "hand_coded_not_learned": true,
+    "misleading_evidence_visible": true,
+    "oracle_and_manifest_reproducible": true,
+    "refinement_discoverable_recall_or_tradeoff": true,
+    "refinement_reduces_discoverable_harm": true
+  },
+  "harmful_trace_count": 27049,
+  "harmful_trace_sha256": "dd2ab4397a1c74667b07e7c6a7c07b2cdadcfce36181a6014a0669df1e4fab00",
+  "oracle_checks": {
+    "checks": 36000,
+    "failures": 0
+  },
+  "status": "completed",
+  "task_manifest": {
+    "1337": {
+      "conditions": {
+        "depth_extension": 1508,
+        "exact_role": 1427,
+        "marker_guard_invalid": 1565,
+        "marker_guard_valid": 1494,
+        "misleading_evidence": 1497,
+        "role_break": 1489,
+        "role_permutation": 1514,
+        "unobservable_ambiguity": 1506
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "75a2bd3e5c7dd10b366285112868dc899a7ea60d189b8a6ec5d523ca4542fea5",
+      "templates": {
+        "asymmetric": 2979,
+        "balanced": 3075,
+        "deep": 2936,
+        "wide": 3010
+      }
+    },
+    "2026": {
+      "conditions": {
+        "depth_extension": 1500,
+        "exact_role": 1471,
+        "marker_guard_invalid": 1486,
+        "marker_guard_valid": 1456,
+        "misleading_evidence": 1546,
+        "role_break": 1557,
+        "role_permutation": 1499,
+        "unobservable_ambiguity": 1485
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "20e9f524f397c1369d92e1c411813df765415f1b0472ce80a3fe78d2158d7e91",
+      "templates": {
+        "asymmetric": 2984,
+        "balanced": 3057,
+        "deep": 2956,
+        "wide": 3003
+      }
+    },
+    "42": {
+      "conditions": {
+        "depth_extension": 1529,
+        "exact_role": 1523,
+        "marker_guard_invalid": 1485,
+        "marker_guard_valid": 1522,
+        "misleading_evidence": 1512,
+        "role_break": 1474,
+        "role_permutation": 1522,
+        "unobservable_ambiguity": 1433
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "e5fcd54e4eee0ff05dabf35bbc46c45888fca04894a348b60685756c29c65701",
+      "templates": {
+        "asymmetric": 3005,
+        "balanced": 2981,
+        "deep": 2980,
+        "wide": 3034
+      }
+    }
+  }
+}

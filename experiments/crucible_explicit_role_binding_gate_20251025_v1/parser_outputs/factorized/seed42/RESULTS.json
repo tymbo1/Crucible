@@ -1,0 +1,22 @@
+{
+  "checkpoint": "experiments/crucible_explicit_role_binding_gate_20251025_v1/parser_outputs/factorized/seed42/checkpoint.pt",
+  "checkpoint_sha256": "0421b513c54c19f65bf5ee66afe45328226b09b94744beba4ff7b408f54ed680",
+  "effective_batch": 12,
+  "interface": "factorized",
+  "parser_id": "learned_parser_factorized_seed42",
+  "schedule_digest": "9e9903420ae57f7139f3ca4be980fbc2d6f90c2f3e4437634f4b54b4eec4258f",
+  "seed": 42,
+  "steps": 500,
+  "train_metrics": {
+    "a_accuracy": 1.0,
+    "a_correct": 240,
+    "b_accuracy": 0.9958333333333333,
+    "b_correct": 239,
+    "operation_accuracy": 1.0,
+    "operation_correct": 240,
+    "rows": 240,
+    "tuple_accuracy": 0.9958333333333333,
+    "tuple_correct": 239
+  },
+  "train_records": 240
+}

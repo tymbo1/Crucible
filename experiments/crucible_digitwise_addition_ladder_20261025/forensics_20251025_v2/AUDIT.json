@@ -1,0 +1,2442 @@
+{
+  "analysis": "checkpoint_only_operand_interaction_forensics_v2",
+  "architecture_changed": false,
+  "arms": [
+    {
+      "arm": "direct",
+      "arm_id": "direct_canonical_seed42",
+      "checkpoint": "experiments/crucible_digitwise_addition_ladder_20261025/direct/canonical/seed42/single_digit_no_carry/checkpoint.pt",
+      "checkpoint_bytes": 263698862,
+      "checkpoint_has_model": true,
+      "checkpoint_has_optimizer": true,
+      "checkpoint_hash_matches_original_manifest": true,
+      "checkpoint_sha256": "0e651b22051833841b0bf98ad22970e3234c6be11a277a5a4c36e40221e699d1",
+      "checkpoint_step": 500,
+      "interface": "canonical",
+      "results_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/canonical/seed42/single_digit_no_carry/RESULTS.json",
+      "run_config_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/canonical/seed42/single_digit_no_carry/RUN_CONFIG.json",
+      "seed": 42,
+      "stage": "single_digit_no_carry",
+      "steps": 500
+    },
+    {
+      "arm": "direct",
+      "arm_id": "direct_canonical_seed1337",
+      "checkpoint": "experiments/crucible_digitwise_addition_ladder_20261025/direct/canonical/seed1337/single_digit_no_carry/checkpoint.pt",
+      "checkpoint_bytes": 263698862,
+      "checkpoint_has_model": true,
+      "checkpoint_has_optimizer": true,
+      "checkpoint_hash_matches_original_manifest": true,
+      "checkpoint_sha256": "1619fe4997a6d1780a4ae9c47c6fa7ad0b8938fcec31f4da27fb767c0e374b65",
+      "checkpoint_step": 500,
+      "interface": "canonical",
+      "results_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/canonical/seed1337/single_digit_no_carry/RESULTS.json",
+      "run_config_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/canonical/seed1337/single_digit_no_carry/RUN_CONFIG.json",
+      "seed": 1337,
+      "stage": "single_digit_no_carry",
+      "steps": 500
+    },
+    {
+      "arm": "direct",
+      "arm_id": "direct_factorized_seed42",
+      "checkpoint": "experiments/crucible_digitwise_addition_ladder_20261025/direct/factorized/seed42/single_digit_no_carry/checkpoint.pt",
+      "checkpoint_bytes": 263698862,
+      "checkpoint_has_model": true,
+      "checkpoint_has_optimizer": true,
+      "checkpoint_hash_matches_original_manifest": true,
+      "checkpoint_sha256": "1a9afc9e7d87c3e150f13bc9cde2eb796323cf3fe782991b7413bdbeb549b2ee",
+      "checkpoint_step": 500,
+      "interface": "factorized",
+      "results_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/factorized/seed42/single_digit_no_carry/RESULTS.json",
+      "run_config_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/factorized/seed42/single_digit_no_carry/RUN_CONFIG.json",
+      "seed": 42,
+      "stage": "single_digit_no_carry",
+      "steps": 500
+    },
+    {
+      "arm": "direct",
+      "arm_id": "direct_factorized_seed1337",
+      "checkpoint": "experiments/crucible_digitwise_addition_ladder_20261025/direct/factorized/seed1337/single_digit_no_carry/checkpoint.pt",
+      "checkpoint_bytes": 263698862,
+      "checkpoint_has_model": true,
+      "checkpoint_has_optimizer": true,
+      "checkpoint_hash_matches_original_manifest": true,
+      "checkpoint_sha256": "a35d7a0054d4923119ea32080f630003836fd355226a20f17ea5155bfeff8fdd",
+      "checkpoint_step": 500,
+      "interface": "factorized",
+      "results_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/factorized/seed1337/single_digit_no_carry/RESULTS.json",
+      "run_config_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/factorized/seed1337/single_digit_no_carry/RUN_CONFIG.json",
+      "seed": 1337,
+      "stage": "single_digit_no_carry",
+      "steps": 500
+    },
+    {
+      "arm": "curriculum",
+      "arm_id": "curriculum_canonical_seed42",
+      "checkpoint": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/canonical/seed42/single_digit_no_carry/checkpoint.pt",
+      "checkpoint_bytes": 263698862,
+      "checkpoint_has_model": true,
+      "checkpoint_has_optimizer": true,
+      "checkpoint_hash_matches_original_manifest": true,
+      "checkpoint_sha256": "0e651b22051833841b0bf98ad22970e3234c6be11a277a5a4c36e40221e699d1",
+      "checkpoint_step": 500,
+      "interface": "canonical",
+      "results_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/canonical/seed42/single_digit_no_carry/RESULTS.json",
+      "run_config_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/canonical/seed42/single_digit_no_carry/RUN_CONFIG.json",
+      "seed": 42,
+      "stage": "single_digit_no_carry",
+      "steps": 500
+    },
+    {
+      "arm": "curriculum",
+      "arm_id": "curriculum_canonical_seed1337",
+      "checkpoint": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/canonical/seed1337/single_digit_no_carry/checkpoint.pt",
+      "checkpoint_bytes": 263698862,
+      "checkpoint_has_model": true,
+      "checkpoint_has_optimizer": true,
+      "checkpoint_hash_matches_original_manifest": true,
+      "checkpoint_sha256": "1619fe4997a6d1780a4ae9c47c6fa7ad0b8938fcec31f4da27fb767c0e374b65",
+      "checkpoint_step": 500,
+      "interface": "canonical",
+      "results_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/canonical/seed1337/single_digit_no_carry/RESULTS.json",
+      "run_config_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/canonical/seed1337/single_digit_no_carry/RUN_CONFIG.json",
+      "seed": 1337,
+      "stage": "single_digit_no_carry",
+      "steps": 500
+    },
+    {
+      "arm": "curriculum",
+      "arm_id": "curriculum_factorized_seed42",
+      "checkpoint": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/factorized/seed42/single_digit_no_carry/checkpoint.pt",
+      "checkpoint_bytes": 263698862,
+      "checkpoint_has_model": true,
+      "checkpoint_has_optimizer": true,
+      "checkpoint_hash_matches_original_manifest": true,
+      "checkpoint_sha256": "1a9afc9e7d87c3e150f13bc9cde2eb796323cf3fe782991b7413bdbeb549b2ee",
+      "checkpoint_step": 500,
+      "interface": "factorized",
+      "results_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/factorized/seed42/single_digit_no_carry/RESULTS.json",
+      "run_config_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/factorized/seed42/single_digit_no_carry/RUN_CONFIG.json",
+      "seed": 42,
+      "stage": "single_digit_no_carry",
+      "steps": 500
+    },
+    {
+      "arm": "curriculum",
+      "arm_id": "curriculum_factorized_seed1337",
+      "checkpoint": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/factorized/seed1337/single_digit_no_carry/checkpoint.pt",
+      "checkpoint_bytes": 263698862,
+      "checkpoint_has_model": true,
+      "checkpoint_has_optimizer": true,
+      "checkpoint_hash_matches_original_manifest": true,
+      "checkpoint_sha256": "a35d7a0054d4923119ea32080f630003836fd355226a20f17ea5155bfeff8fdd",
+      "checkpoint_step": 500,
+      "interface": "factorized",
+      "results_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/factorized/seed1337/single_digit_no_carry/RESULTS.json",
+      "run_config_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/factorized/seed1337/single_digit_no_carry/RUN_CONFIG.json",
+      "seed": 1337,
+      "stage": "single_digit_no_carry",
+      "steps": 500
+    }
+  ],
+  "constants_and_evaluator": {
+    "ANSWER_MARKER": "\nAnswer:",
+    "BATCH_SIZE": 4,
+    "BOS_ID": 1,
+    "CLIP_NORM": 1.0,
+    "CONTEXT_LENGTH": 320,
+    "D_MODEL": 256,
+    "EOS_ID": 2,
+    "LATENT_KV": 64,
+    "LATENT_Q": 64,
+    "LR": 0.0003,
+    "N_HEADS": 4,
+    "N_LAYERS": 4,
+    "PE_DIM": 32,
+    "RAW_BYTE_START": 3,
+    "STAGE_STEPS": 500,
+    "TRAIN_THRESHOLD": 0.95,
+    "VALIDATION_THRESHOLD": 0.9,
+    "VOCAB_SIZE": 259,
+    "WEIGHT_DECAY": 0.1,
+    "decode_rule": "RAW_BYTE_START + ASCII digit byte; other token IDs are non-digit format errors",
+    "evaluator": "stage_a.evaluate",
+    "full_sequence_rule": "stage_a.evaluate target mask; Stage-1 target length is exactly one token",
+    "prediction_rule": "argmax(logits[row, prefix_len - 1])",
+    "target_mask_source": "stage_a.batchify"
+  },
+  "decoding_checks": "same stage_a.batchify/forward_model argmax target position for train and validation",
+  "experiment": "crucible_digitwise_addition_ladder_20251025",
+  "label_checks": "passed via split_audit; target=metadata.answer=oracle.value=a+b and one digit per record",
+  "missing_arms": [],
+  "output_sequence_checks": "one semantic digit token plus EOS per record; evaluator full target sequence exact requires both",
+  "pair_universe": {
+    "condition": "a+b<10",
+    "count": 55,
+    "pairs": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        9,
+        0
+      ]
+    ]
+  },
+  "sealed_test_accessed": false,
+  "source_artifacts": {
+    "docs/CRUCIBLE_DIGITWISE_ADDITION_LADDER_PROTOCOL_20261025.md": {
+      "bytes": 2455,
+      "exists": true,
+      "sha256": "6acecee0f5fb532bd229ccfcbb509164125ae5c270a503e3fe2e28f5fd4084f7"
+    },
+    "docs/CRUCIBLE_DIGITWISE_ADDITION_LADDER_RESULTS_20261025.md": {
+      "bytes": 3034,
+      "exists": true,
+      "sha256": "3bf9002d0c9498dc44134bc9229c4df5be69322b1c86ee5422fac7c404b25582"
+    },
+    "experiments/crucible_digitwise_addition_ladder_20261025/HASHES.json": {
+      "bytes": 10663,
+      "exists": true,
+      "sha256": "ac642f4bca0db6559cf94015348444204a6617c569de8290e4850c51f31c4023"
+    },
+    "experiments/crucible_digitwise_addition_ladder_20261025/PREFLIGHT.json": {
+      "bytes": 3586,
+      "exists": true,
+      "sha256": "7fe8cc94f8a77bb915abcf6b35ad2aba0eae92b5bfdd3547dee26c88625c14b0"
+    },
+    "experiments/crucible_digitwise_addition_ladder_20261025/RUN_CONFIG.json": {
+      "bytes": 403,
+      "exists": true,
+      "sha256": "c316f26bbea2e49933e76003fc10bcf58a5b2726791726e89f233fc8a10d9838"
+    },
+    "experiments/crucible_digitwise_addition_ladder_20261025/SUMMARY.json": {
+      "bytes": 3861,
+      "exists": true,
+      "sha256": "68849e02b6613ac740d0906af2e80a7c606881491c4f8950606efdae54445868"
+    },
+    "tools/run_crucible_digitwise_addition_ladder_20261025.py": {
+      "bytes": 18732,
+      "exists": true,
+      "sha256": "9f26641d60e88e0af64f1db7c16641f544e25ee41c9c3484ec960437b8505e25"
+    },
+    "tools/run_crucible_stage_a_instrumentation_20261022.py": {
+      "bytes": 25223,
+      "exists": true,
+      "sha256": "89d56e5953a04906b0e0a682282283679c3f922ed9733313695e83cc397d7fea"
+    }
+  },
+  "split_audit": {
+    "errors": [],
+    "interfaces": {
+      "canonical": {
+        "all_valid_pairs": true,
+        "arm_copy_hashes": {
+          "curriculum_canonical_seed1337": {
+            "train": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/canonical/seed1337/single_digit_no_carry/train.jsonl",
+              "arm_sha256": "2dda86787dd584af634fa58f4d276021da65b8ea55c22d067a8e8d52b930dc72",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/canonical/single_digit_no_carry/train.jsonl",
+              "central_sha256": "2dda86787dd584af634fa58f4d276021da65b8ea55c22d067a8e8d52b930dc72",
+              "pair_set": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  5
+                ],
+                [
+                  0,
+                  6
+                ],
+                [
+                  0,
+                  8
+                ],
+                [
+                  0,
+                  9
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  5
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  3
+                ],
+                [
+                  7,
+                  0
+                ],
+                [
+                  7,
+                  2
+                ],
+                [
+                  8,
+                  0
+                ],
+                [
+                  9,
+                  0
+                ]
+              ],
+              "record_count": 40,
+              "record_errors": []
+            },
+            "validation": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/canonical/seed1337/single_digit_no_carry/validation.jsonl",
+              "arm_sha256": "555d5dcaec5a405064e059f6334df6275fda04b65214b3409645e0fa14adac8f",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/canonical/single_digit_no_carry/validation.jsonl",
+              "central_sha256": "555d5dcaec5a405064e059f6334df6275fda04b65214b3409645e0fa14adac8f",
+              "pair_set": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  7
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  1,
+                  6
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  7
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  7,
+                  1
+                ],
+                [
+                  8,
+                  1
+                ]
+              ],
+              "record_count": 15,
+              "record_errors": []
+            }
+          },
+          "curriculum_canonical_seed42": {
+            "train": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/canonical/seed42/single_digit_no_carry/train.jsonl",
+              "arm_sha256": "2dda86787dd584af634fa58f4d276021da65b8ea55c22d067a8e8d52b930dc72",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/canonical/single_digit_no_carry/train.jsonl",
+              "central_sha256": "2dda86787dd584af634fa58f4d276021da65b8ea55c22d067a8e8d52b930dc72",
+              "pair_set": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  5
+                ],
+                [
+                  0,
+                  6
+                ],
+                [
+                  0,
+                  8
+                ],
+                [
+                  0,
+                  9
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  5
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  3
+                ],
+                [
+                  7,
+                  0
+                ],
+                [
+                  7,
+                  2
+                ],
+                [
+                  8,
+                  0
+                ],
+                [
+                  9,
+                  0
+                ]
+              ],
+              "record_count": 40,
+              "record_errors": []
+            },
+            "validation": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/canonical/seed42/single_digit_no_carry/validation.jsonl",
+              "arm_sha256": "555d5dcaec5a405064e059f6334df6275fda04b65214b3409645e0fa14adac8f",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/canonical/single_digit_no_carry/validation.jsonl",
+              "central_sha256": "555d5dcaec5a405064e059f6334df6275fda04b65214b3409645e0fa14adac8f",
+              "pair_set": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  7
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  1,
+                  6
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  7
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  7,
+                  1
+                ],
+                [
+                  8,
+                  1
+                ]
+              ],
+              "record_count": 15,
+              "record_errors": []
+            }
+          },
+          "direct_canonical_seed1337": {
+            "train": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/canonical/seed1337/single_digit_no_carry/train.jsonl",
+              "arm_sha256": "2dda86787dd584af634fa58f4d276021da65b8ea55c22d067a8e8d52b930dc72",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/canonical/single_digit_no_carry/train.jsonl",
+              "central_sha256": "2dda86787dd584af634fa58f4d276021da65b8ea55c22d067a8e8d52b930dc72",
+              "pair_set": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  5
+                ],
+                [
+                  0,
+                  6
+                ],
+                [
+                  0,
+                  8
+                ],
+                [
+                  0,
+                  9
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  5
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  3
+                ],
+                [
+                  7,
+                  0
+                ],
+                [
+                  7,
+                  2
+                ],
+                [
+                  8,
+                  0
+                ],
+                [
+                  9,
+                  0
+                ]
+              ],
+              "record_count": 40,
+              "record_errors": []
+            },
+            "validation": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/canonical/seed1337/single_digit_no_carry/validation.jsonl",
+              "arm_sha256": "555d5dcaec5a405064e059f6334df6275fda04b65214b3409645e0fa14adac8f",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/canonical/single_digit_no_carry/validation.jsonl",
+              "central_sha256": "555d5dcaec5a405064e059f6334df6275fda04b65214b3409645e0fa14adac8f",
+              "pair_set": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  7
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  1,
+                  6
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  7
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  7,
+                  1
+                ],
+                [
+                  8,
+                  1
+                ]
+              ],
+              "record_count": 15,
+              "record_errors": []
+            }
+          },
+          "direct_canonical_seed42": {
+            "train": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/canonical/seed42/single_digit_no_carry/train.jsonl",
+              "arm_sha256": "2dda86787dd584af634fa58f4d276021da65b8ea55c22d067a8e8d52b930dc72",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/canonical/single_digit_no_carry/train.jsonl",
+              "central_sha256": "2dda86787dd584af634fa58f4d276021da65b8ea55c22d067a8e8d52b930dc72",
+              "pair_set": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  5
+                ],
+                [
+                  0,
+                  6
+                ],
+                [
+                  0,
+                  8
+                ],
+                [
+                  0,
+                  9
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  5
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  3
+                ],
+                [
+                  7,
+                  0
+                ],
+                [
+                  7,
+                  2
+                ],
+                [
+                  8,
+                  0
+                ],
+                [
+                  9,
+                  0
+                ]
+              ],
+              "record_count": 40,
+              "record_errors": []
+            },
+            "validation": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/canonical/seed42/single_digit_no_carry/validation.jsonl",
+              "arm_sha256": "555d5dcaec5a405064e059f6334df6275fda04b65214b3409645e0fa14adac8f",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/canonical/single_digit_no_carry/validation.jsonl",
+              "central_sha256": "555d5dcaec5a405064e059f6334df6275fda04b65214b3409645e0fa14adac8f",
+              "pair_set": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  7
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  1,
+                  6
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  7
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  7,
+                  1
+                ],
+                [
+                  8,
+                  1
+                ]
+              ],
+              "record_count": 15,
+              "record_errors": []
+            }
+          }
+        },
+        "central_counts": {
+          "train": 40,
+          "validation": 15
+        },
+        "central_pair_counts": {
+          "train": 40,
+          "validation": 15
+        },
+        "central_record_errors": [],
+        "central_record_id_counts": {
+          "train": 40,
+          "validation": 15
+        },
+        "pair_overlap": [],
+        "record_id_overlap": []
+      },
+      "factorized": {
+        "all_valid_pairs": true,
+        "arm_copy_hashes": {
+          "curriculum_factorized_seed1337": {
+            "train": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/factorized/seed1337/single_digit_no_carry/train.jsonl",
+              "arm_sha256": "7a4c7993c7ad4e72b4e9403e071675eb572f88152b89316f0cfeeb772c362ab3",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/factorized/single_digit_no_carry/train.jsonl",
+              "central_sha256": "7a4c7993c7ad4e72b4e9403e071675eb572f88152b89316f0cfeeb772c362ab3",
+              "pair_set": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  5
+                ],
+                [
+                  0,
+                  6
+                ],
+                [
+                  0,
+                  8
+                ],
+                [
+                  0,
+                  9
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  5
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  3
+                ],
+                [
+                  7,
+                  0
+                ],
+                [
+                  7,
+                  2
+                ],
+                [
+                  8,
+                  0
+                ],
+                [
+                  9,
+                  0
+                ]
+              ],
+              "record_count": 40,
+              "record_errors": []
+            },
+            "validation": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/factorized/seed1337/single_digit_no_carry/validation.jsonl",
+              "arm_sha256": "d51db27080d80c1cb50e6f421a2ae241c9c264d5a7dd15f4fa86cbc91cc23814",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/factorized/single_digit_no_carry/validation.jsonl",
+              "central_sha256": "d51db27080d80c1cb50e6f421a2ae241c9c264d5a7dd15f4fa86cbc91cc23814",
+              "pair_set": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  7
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  1,
+                  6
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  7
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  7,
+                  1
+                ],
+                [
+                  8,
+                  1
+                ]
+              ],
+              "record_count": 15,
+              "record_errors": []
+            }
+          },
+          "curriculum_factorized_seed42": {
+            "train": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/factorized/seed42/single_digit_no_carry/train.jsonl",
+              "arm_sha256": "7a4c7993c7ad4e72b4e9403e071675eb572f88152b89316f0cfeeb772c362ab3",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/factorized/single_digit_no_carry/train.jsonl",
+              "central_sha256": "7a4c7993c7ad4e72b4e9403e071675eb572f88152b89316f0cfeeb772c362ab3",
+              "pair_set": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  5
+                ],
+                [
+                  0,
+                  6
+                ],
+                [
+                  0,
+                  8
+                ],
+                [
+                  0,
+                  9
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  5
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  3
+                ],
+                [
+                  7,
+                  0
+                ],
+                [
+                  7,
+                  2
+                ],
+                [
+                  8,
+                  0
+                ],
+                [
+                  9,
+                  0
+                ]
+              ],
+              "record_count": 40,
+              "record_errors": []
+            },
+            "validation": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/curriculum/factorized/seed42/single_digit_no_carry/validation.jsonl",
+              "arm_sha256": "d51db27080d80c1cb50e6f421a2ae241c9c264d5a7dd15f4fa86cbc91cc23814",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/factorized/single_digit_no_carry/validation.jsonl",
+              "central_sha256": "d51db27080d80c1cb50e6f421a2ae241c9c264d5a7dd15f4fa86cbc91cc23814",
+              "pair_set": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  7
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  1,
+                  6
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  7
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  7,
+                  1
+                ],
+                [
+                  8,
+                  1
+                ]
+              ],
+              "record_count": 15,
+              "record_errors": []
+            }
+          },
+          "direct_factorized_seed1337": {
+            "train": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/factorized/seed1337/single_digit_no_carry/train.jsonl",
+              "arm_sha256": "7a4c7993c7ad4e72b4e9403e071675eb572f88152b89316f0cfeeb772c362ab3",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/factorized/single_digit_no_carry/train.jsonl",
+              "central_sha256": "7a4c7993c7ad4e72b4e9403e071675eb572f88152b89316f0cfeeb772c362ab3",
+              "pair_set": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  5
+                ],
+                [
+                  0,
+                  6
+                ],
+                [
+                  0,
+                  8
+                ],
+                [
+                  0,
+                  9
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  5
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  3
+                ],
+                [
+                  7,
+                  0
+                ],
+                [
+                  7,
+                  2
+                ],
+                [
+                  8,
+                  0
+                ],
+                [
+                  9,
+                  0
+                ]
+              ],
+              "record_count": 40,
+              "record_errors": []
+            },
+            "validation": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/factorized/seed1337/single_digit_no_carry/validation.jsonl",
+              "arm_sha256": "d51db27080d80c1cb50e6f421a2ae241c9c264d5a7dd15f4fa86cbc91cc23814",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/factorized/single_digit_no_carry/validation.jsonl",
+              "central_sha256": "d51db27080d80c1cb50e6f421a2ae241c9c264d5a7dd15f4fa86cbc91cc23814",
+              "pair_set": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  7
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  1,
+                  6
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  7
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  7,
+                  1
+                ],
+                [
+                  8,
+                  1
+                ]
+              ],
+              "record_count": 15,
+              "record_errors": []
+            }
+          },
+          "direct_factorized_seed42": {
+            "train": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/factorized/seed42/single_digit_no_carry/train.jsonl",
+              "arm_sha256": "7a4c7993c7ad4e72b4e9403e071675eb572f88152b89316f0cfeeb772c362ab3",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/factorized/single_digit_no_carry/train.jsonl",
+              "central_sha256": "7a4c7993c7ad4e72b4e9403e071675eb572f88152b89316f0cfeeb772c362ab3",
+              "pair_set": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  5
+                ],
+                [
+                  0,
+                  6
+                ],
+                [
+                  0,
+                  8
+                ],
+                [
+                  0,
+                  9
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  5
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  3
+                ],
+                [
+                  7,
+                  0
+                ],
+                [
+                  7,
+                  2
+                ],
+                [
+                  8,
+                  0
+                ],
+                [
+                  9,
+                  0
+                ]
+              ],
+              "record_count": 40,
+              "record_errors": []
+            },
+            "validation": {
+              "arm_path": "experiments/crucible_digitwise_addition_ladder_20261025/direct/factorized/seed42/single_digit_no_carry/validation.jsonl",
+              "arm_sha256": "d51db27080d80c1cb50e6f421a2ae241c9c264d5a7dd15f4fa86cbc91cc23814",
+              "byte_identical": true,
+              "central_path": "experiments/crucible_digitwise_addition_ladder_20261025/data/factorized/single_digit_no_carry/validation.jsonl",
+              "central_sha256": "d51db27080d80c1cb50e6f421a2ae241c9c264d5a7dd15f4fa86cbc91cc23814",
+              "pair_set": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  7
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  1,
+                  6
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  7
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  7,
+                  1
+                ],
+                [
+                  8,
+                  1
+                ]
+              ],
+              "record_count": 15,
+              "record_errors": []
+            }
+          }
+        },
+        "central_counts": {
+          "train": 40,
+          "validation": 15
+        },
+        "central_pair_counts": {
+          "train": 40,
+          "validation": 15
+        },
+        "central_record_errors": [],
+        "central_record_id_counts": {
+          "train": 40,
+          "validation": 15
+        },
+        "pair_overlap": [],
+        "record_id_overlap": []
+      }
+    },
+    "pass": true
+  },
+  "splits_regenerated": false,
+  "training_performed": false
+}

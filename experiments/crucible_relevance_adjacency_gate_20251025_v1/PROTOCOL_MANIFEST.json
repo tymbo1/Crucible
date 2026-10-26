@@ -1,0 +1,29 @@
+{
+  "architecture_changed": false,
+  "attention_tolerance": 1e-05,
+  "experiment": "crucible_relevance_adjacency_gate_20251025_v1",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "native_conditions": [
+    "A0_WORD_ORIGINAL",
+    "A1_MARKER_ORIGINAL",
+    "A2_WORD_FIXED",
+    "A3_MARKER_FIXED"
+  ],
+  "retrained": false,
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "status": "frozen_before_evaluation",
+  "variants": [
+    "A_ADJACENT",
+    "B_EARLY_PADDED",
+    "C_NEAR_PADDED",
+    "D_COMPETING",
+    "E_EXPLICIT_AUTHORITY"
+  ]
+}

@@ -1,0 +1,565 @@
+{
+  "addition_prediction_rows": 880,
+  "addition_steps": 500,
+  "architecture_changed": false,
+  "arms": [
+    {
+      "arm": "B0_original",
+      "arm_id": "B0_original_canonical_seed2025",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B0_original/canonical/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "a1a6dc6a4a4340e874fe13c2718a30c3edb65200636cddfd29f30062b9031ee6",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": null,
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B0_original",
+      "arm_id": "B0_original_canonical_seed2026",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B0_original/canonical/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "cc7bfe6ddd76c3b1a7e5360742a4a58f68f680dfa5809dab00a0eab5130dc6e9",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": null,
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B0_original",
+      "arm_id": "B0_original_factorized_seed2025",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B0_original/factorized/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "9ed138b06a6dd7e3d6000b5749c30198467207df453a95ca72df4668992fb585",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": null,
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B0_original",
+      "arm_id": "B0_original_factorized_seed2026",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B0_original/factorized/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "3916b3bb460d20eb4fdf5d34ef21fbf5e2340999176c7643a4ed7784bc60138d",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": null,
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 0.975,
+        "full_sequence_correct": 39,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.975,
+        "output_token_correct": 39
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.4666666666666667,
+        "full_sequence_correct": 7,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.4666666666666667,
+        "output_token_correct": 7
+      }
+    },
+    {
+      "arm": "B1_role_binding_pretrained",
+      "arm_id": "B1_role_binding_pretrained_canonical_seed2025",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B1_role_binding_pretrained/canonical/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "487c29e6d6ff618eb9b754ca99e863f99c0ed48ded280ce611678a76869b43d3",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B1_role_binding_pretrained/canonical/seed2025/role_binding_pretraining/checkpoint.pt",
+        "checkpoint_sha256": "bb653d708eddf0a940a961748e97473d6a98f09b31b03004c1aa40770acff4bd",
+        "elapsed_seconds": 103.17580939596519,
+        "fit_pass": false,
+        "steps": 500,
+        "train_exact": 0.625,
+        "validation_exact": 0.5,
+        "validation_fit_pass": false
+      },
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B1_role_binding_pretrained",
+      "arm_id": "B1_role_binding_pretrained_canonical_seed2026",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B1_role_binding_pretrained/canonical/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "235b50d6858c7723e10b8dc8ad034ba63e07ccad1f32d395b7fac821e80d291a",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B1_role_binding_pretrained/canonical/seed2026/role_binding_pretraining/checkpoint.pt",
+        "checkpoint_sha256": "577614bb99375b394558e4abaec887bc706b4bd2b6804daec95f4a76fc4f33b2",
+        "elapsed_seconds": 102.71282791905105,
+        "fit_pass": false,
+        "steps": 500,
+        "train_exact": 0.625,
+        "validation_exact": 0.5,
+        "validation_fit_pass": false
+      },
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.5333333333333333,
+        "full_sequence_correct": 8,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.5333333333333333,
+        "output_token_correct": 8
+      }
+    },
+    {
+      "arm": "B1_role_binding_pretrained",
+      "arm_id": "B1_role_binding_pretrained_factorized_seed2025",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B1_role_binding_pretrained/factorized/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "693ba86b9148383f8d01ac5d2cafa6dd5c06b0e10678ca97c91598edb9f5e316",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B1_role_binding_pretrained/factorized/seed2025/role_binding_pretraining/checkpoint.pt",
+        "checkpoint_sha256": "6c86656b62a4a91ec6b643465e29a3d13ab9dcf88b803136408f81e7fbd8e0f2",
+        "elapsed_seconds": 115.01448184199398,
+        "fit_pass": false,
+        "steps": 500,
+        "train_exact": 0.6625,
+        "validation_exact": 0.5,
+        "validation_fit_pass": false
+      },
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B1_role_binding_pretrained",
+      "arm_id": "B1_role_binding_pretrained_factorized_seed2026",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B1_role_binding_pretrained/factorized/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "caa9fee5a95dd01a04127834bb830c030c52e83470b8173ec41cc373e67ce61e",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B1_role_binding_pretrained/factorized/seed2026/role_binding_pretraining/checkpoint.pt",
+        "checkpoint_sha256": "cdd2ff529008d127759b6e77a1af47851388e75323483582495991c0721079db",
+        "elapsed_seconds": 113.41108230297687,
+        "fit_pass": false,
+        "steps": 500,
+        "train_exact": 0.625,
+        "validation_exact": 0.5,
+        "validation_fit_pass": false
+      },
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B2_role_explicit",
+      "arm_id": "B2_role_explicit_canonical_seed2025",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B2_role_explicit/canonical/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "55293bf777096292eb263df4d177b69d4585c8a4175855d54081096b5c12c5b6",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": null,
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B2_role_explicit",
+      "arm_id": "B2_role_explicit_canonical_seed2026",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B2_role_explicit/canonical/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "61da4ae02d392ffccaba832c543406442718878713e7142ea7c3fe2231ef1f23",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": null,
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B2_role_explicit",
+      "arm_id": "B2_role_explicit_factorized_seed2025",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B2_role_explicit/factorized/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "67a62c47b7ac9632e0879abb949b35170beb88a9bd747f3dd685130fc619e470",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": null,
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B2_role_explicit",
+      "arm_id": "B2_role_explicit_factorized_seed2026",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B2_role_explicit/factorized/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "ee8d6ad2d30e16d08521849e0e29c8652643d547c8d02e0b62fa4584ca6c0e79",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": null,
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B3_binding_operation_conditioned",
+      "arm_id": "B3_binding_operation_conditioned_canonical_seed2025",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B3_binding_operation_conditioned/canonical/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "2727cb85cb7250967f91beb6ffd4ce965c9bcf2de0eb7608336fcf22912cd9bc",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B3_binding_operation_conditioned/canonical/seed2025/role_binding_pretraining/checkpoint.pt",
+        "checkpoint_sha256": "bb653d708eddf0a940a961748e97473d6a98f09b31b03004c1aa40770acff4bd",
+        "elapsed_seconds": 104.24405367102008,
+        "fit_pass": false,
+        "steps": 500,
+        "train_exact": 0.625,
+        "validation_exact": 0.5,
+        "validation_fit_pass": false
+      },
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B3_binding_operation_conditioned",
+      "arm_id": "B3_binding_operation_conditioned_canonical_seed2026",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B3_binding_operation_conditioned/canonical/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "c05a46bc4b3d509e803dc792245ec3a52318211bea981d47a8363286483bb7e7",
+      "fit_pass": true,
+      "interface": "canonical",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B3_binding_operation_conditioned/canonical/seed2026/role_binding_pretraining/checkpoint.pt",
+        "checkpoint_sha256": "577614bb99375b394558e4abaec887bc706b4bd2b6804daec95f4a76fc4f33b2",
+        "elapsed_seconds": 103.73648165498162,
+        "fit_pass": false,
+        "steps": 500,
+        "train_exact": 0.625,
+        "validation_exact": 0.5,
+        "validation_fit_pass": false
+      },
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    },
+    {
+      "arm": "B3_binding_operation_conditioned",
+      "arm_id": "B3_binding_operation_conditioned_factorized_seed2025",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B3_binding_operation_conditioned/factorized/seed2025/addition/checkpoint.pt",
+      "checkpoint_sha256": "898e15fc3f2117206445684e632432db874b149af31e3693768554348f679433",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B3_binding_operation_conditioned/factorized/seed2025/role_binding_pretraining/checkpoint.pt",
+        "checkpoint_sha256": "6c86656b62a4a91ec6b643465e29a3d13ab9dcf88b803136408f81e7fbd8e0f2",
+        "elapsed_seconds": 114.46344285603845,
+        "fit_pass": false,
+        "steps": 500,
+        "train_exact": 0.6625,
+        "validation_exact": 0.5,
+        "validation_fit_pass": false
+      },
+      "seed": 2025,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.5333333333333333,
+        "full_sequence_correct": 8,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.5333333333333333,
+        "output_token_correct": 8
+      }
+    },
+    {
+      "arm": "B3_binding_operation_conditioned",
+      "arm_id": "B3_binding_operation_conditioned_factorized_seed2026",
+      "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B3_binding_operation_conditioned/factorized/seed2026/addition/checkpoint.pt",
+      "checkpoint_sha256": "c87415c3d29e3740d6f5ef2cf804c9a6474072163c060af0f689490596f88cb5",
+      "fit_pass": true,
+      "interface": "factorized",
+      "pretraining": {
+        "checkpoint": "experiments/crucible_variable_binding_20251025_v1/arm_outputs/B3_binding_operation_conditioned/factorized/seed2026/role_binding_pretraining/checkpoint.pt",
+        "checkpoint_sha256": "cdd2ff529008d127759b6e77a1af47851388e75323483582495991c0721079db",
+        "elapsed_seconds": 112.56486862298334,
+        "fit_pass": false,
+        "steps": 500,
+        "train_exact": 0.625,
+        "validation_exact": 0.5,
+        "validation_fit_pass": false
+      },
+      "seed": 2026,
+      "train": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 40,
+        "full_sequence_accuracy": 1.0,
+        "full_sequence_correct": 40,
+        "observations": 40,
+        "output_format_errors": 0,
+        "output_token_accuracy": 1.0,
+        "output_token_correct": 40
+      },
+      "validation": {
+        "eos_accuracy": 1.0,
+        "eos_correct": 15,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 9,
+        "observations": 15,
+        "output_format_errors": 0,
+        "output_token_accuracy": 0.6,
+        "output_token_correct": 9
+      }
+    }
+  ],
+  "experiment": "crucible_variable_binding_20251025",
+  "role_prediction_rows": 800,
+  "role_steps": 500,
+  "sealed_test_accessed": false,
+  "status": "completed",
+  "training_performed": true
+}

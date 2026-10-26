@@ -1,0 +1,30 @@
+{
+  "canonical_train": {
+    "rows": 240,
+    "sha256": "90f4e2ca2112341b00a94bc2b129ddc37d870d6a69b0af6ed683b2a4dcd8e57c"
+  },
+  "canonical_validation": {
+    "rows": 60,
+    "sha256": "7d32c4676b8b55eeb645480570950505d21b4ba8f9f910fae19931ba0bb7adcb"
+  },
+  "factorized_train": {
+    "rows": 240,
+    "sha256": "08569b324f755327a0cc37fdfd7f8e8effd49b9c2bd687127fdf19695b170c11"
+  },
+  "factorized_validation": {
+    "rows": 60,
+    "sha256": "ae84aafa6b3cd009fdab23213c9702a7855748ddb3af766b9223a6fd711d06bb"
+  },
+  "protocol": {
+    "path": "docs/CRUCIBLE_BATCH_COMPOSITION_ORDER_PROTOCOL_20251025.md",
+    "sha256": "85365b404f453ccd08ffa2c171075718d5ee3e6fbcaf304fd98cf94d1e1714ef"
+  },
+  "reference_summary": {
+    "path": "experiments/crucible_paired_positional_exposure_20251025_v1/SUMMARY.json",
+    "sha256": "bdc00707b9289180fe29d83d8ec519a95bc65fa062ddf3e6469be69725582204"
+  },
+  "source_runner": {
+    "path": "tools/run_crucible_paired_positional_exposure_20251025.py",
+    "sha256": "8809b462eab30b772cb6e00f434d1d852e547aeb12f2f33d596707794592ee60"
+  }
+}

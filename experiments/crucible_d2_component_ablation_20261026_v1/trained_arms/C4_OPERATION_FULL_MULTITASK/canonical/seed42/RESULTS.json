@@ -1,0 +1,39 @@
+{
+  "cell": "C4_OPERATION_FULL_MULTITASK",
+  "interface": "canonical",
+  "readout": "operation",
+  "reused_checkpoint": "experiments/crucible_causally_valid_authority_decision_20261026_v1/trained_arms/D2_LATE_FINAL_DECISION/canonical/seed42/checkpoint.pt",
+  "reused_checkpoint_sha256": "b9fa32e046817e54474d4e5ba6c258dd1a76efd727462c837a2c965916b77e6d",
+  "seed": 42,
+  "source": "reused_accepted_d2",
+  "train_metrics": {
+    "format_errors": 0,
+    "operation_correct": 79,
+    "output_correct": 94,
+    "paired": {
+      "correct_two_way": 1,
+      "correct_two_way_accuracy": 0.0125,
+      "flip_accuracy": 0.0375,
+      "pairs": 80,
+      "pointer_flips": 3
+    },
+    "pointer_accuracy": 0.49375,
+    "pointer_correct": 79,
+    "rows": 160
+  },
+  "validation_metrics": {
+    "format_errors": 0,
+    "operation_correct": 20,
+    "output_correct": 24,
+    "paired": {
+      "correct_two_way": 0,
+      "correct_two_way_accuracy": 0.0,
+      "flip_accuracy": 0.0,
+      "pairs": 20,
+      "pointer_flips": 0
+    },
+    "pointer_accuracy": 0.5,
+    "pointer_correct": 20,
+    "rows": 40
+  }
+}

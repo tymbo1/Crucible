@@ -1,0 +1,90 @@
+{
+  "experiment": "crucible_single_primitive_transfer_ladder_20261024",
+  "preflight_pass": true,
+  "results": [
+    {
+      "elapsed_seconds": 82.73311778000789,
+      "seed": 42,
+      "tier": "single_fixed",
+      "train_accuracy": 1.0,
+      "validation_accuracy": 0.0
+    },
+    {
+      "elapsed_seconds": 84.32197994203307,
+      "seed": 1337,
+      "tier": "single_fixed",
+      "train_accuracy": 1.0,
+      "validation_accuracy": 0.0
+    },
+    {
+      "elapsed_seconds": 94.76188612903934,
+      "seed": 42,
+      "tier": "single_operand",
+      "train_accuracy": 0.10989010989010989,
+      "validation_accuracy": 0.0
+    },
+    {
+      "elapsed_seconds": 94.8068066649721,
+      "seed": 1337,
+      "tier": "single_operand",
+      "train_accuracy": 0.10989010989010989,
+      "validation_accuracy": 0.0
+    },
+    {
+      "elapsed_seconds": 119.22145117400214,
+      "seed": 42,
+      "tier": "single_parameter",
+      "train_accuracy": 0.65,
+      "validation_accuracy": 0.0
+    },
+    {
+      "elapsed_seconds": 121.68060230300762,
+      "seed": 1337,
+      "tier": "single_parameter",
+      "train_accuracy": 0.75,
+      "validation_accuracy": 0.0
+    },
+    {
+      "elapsed_seconds": 117.40364194399444,
+      "seed": 42,
+      "tier": "depth_2",
+      "train_accuracy": 0.6944444444444444,
+      "validation_accuracy": 0.1111111111111111
+    },
+    {
+      "elapsed_seconds": 116.89559114904841,
+      "seed": 1337,
+      "tier": "depth_2",
+      "train_accuracy": 0.6111111111111112,
+      "validation_accuracy": 0.0
+    },
+    {
+      "elapsed_seconds": 154.28040334401885,
+      "seed": 42,
+      "tier": "depth_3",
+      "train_accuracy": 0.10185185185185185,
+      "validation_accuracy": 0.14814814814814814
+    },
+    {
+      "elapsed_seconds": 153.12174234801205,
+      "seed": 1337,
+      "tier": "depth_3",
+      "train_accuracy": 0.12962962962962962,
+      "validation_accuracy": 0.037037037037037035
+    }
+  ],
+  "status": "completed",
+  "symbolic_oracle_accuracy": {
+    "depth_2:train": 1.0,
+    "depth_2:validation": 1.0,
+    "depth_3:train": 1.0,
+    "depth_3:validation": 1.0,
+    "single_fixed:train": 1.0,
+    "single_fixed:validation": 1.0,
+    "single_operand:train": 1.0,
+    "single_operand:validation": 1.0,
+    "single_parameter:train": 1.0,
+    "single_parameter:validation": 1.0
+  },
+  "test_evaluated": false
+}

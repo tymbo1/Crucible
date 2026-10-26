@@ -1,0 +1,4039 @@
+{
+  "controls": {
+    "negative_controls": {
+      "contradictory": {
+        "failed": 24,
+        "promoted": 0,
+        "statuses": {
+          "failed": 24
+        },
+        "tasks": 24
+      },
+      "insufficient": {
+        "promoted": 6,
+        "statuses": {
+          "uncertain": 18,
+          "validated": 6
+        },
+        "tasks": 24,
+        "uncertain": 18
+      }
+    },
+    "no_persistence": {
+      "accuracy": 0.0,
+      "attempted": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "ephemeral_acquisition_success": 24,
+      "queries": 288,
+      "retained_after_reset": false,
+      "task_count": 24
+    },
+    "raw_example_retrieval": {
+      "accuracy": 0.0,
+      "attempted": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "queries": 288,
+      "stored_examples_per_task": 2
+    }
+  },
+  "experiment": "crucible_learning_lifecycle_v0_20251025",
+  "full_lifecycle": {
+    "acquisition_success": 24,
+    "acquisitions": [
+      {
+        "alias": "glyph_42_00",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "MUL_MOD10",
+                "FIRST",
+                "MIN"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "FIRST"
+              ],
+              "probe_ref": "ff0a8d50ec1421f40041",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "FIRST"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_42_00",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "5057f9610047ed648283",
+              "13c584a606079cedc512",
+              "ff0a8d50ec1421f40041"
+            ],
+            "provenance": {
+              "seed": 42,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_42_00"
+            },
+            "revision_history": [],
+            "rule_name": "FIRST",
+            "status": "validated",
+            "verification_refs": [
+              "a352d887983289c8ebec",
+              "b649322cfe7a2164af74",
+              "dd67d5439eb45311e579"
+            ],
+            "version": 1
+          },
+          "rule_name": "FIRST",
+          "status": "validated",
+          "verification_refs": [
+            "a352d887983289c8ebec",
+            "b649322cfe7a2164af74",
+            "dd67d5439eb45311e579"
+          ]
+        },
+        "task_id": "task_42_00"
+      },
+      {
+        "alias": "glyph_42_01",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "SECOND",
+                "MAX"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "SECOND"
+              ],
+              "probe_ref": "0ad5a0481773d1226aa6",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "SECOND"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_42_01",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "8e3ece7bb1af4ff19f36",
+              "26700347068807d67d3d",
+              "0ad5a0481773d1226aa6"
+            ],
+            "provenance": {
+              "seed": 42,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_42_01"
+            },
+            "revision_history": [],
+            "rule_name": "SECOND",
+            "status": "validated",
+            "verification_refs": [
+              "3adcb06894cf91fe5e8e",
+              "5f7c563c69115d94d83c",
+              "2664ce512ac29e844958"
+            ],
+            "version": 1
+          },
+          "rule_name": "SECOND",
+          "status": "validated",
+          "verification_refs": [
+            "3adcb06894cf91fe5e8e",
+            "5f7c563c69115d94d83c",
+            "2664ce512ac29e844958"
+          ]
+        },
+        "task_id": "task_42_01"
+      },
+      {
+        "alias": "glyph_42_02",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "SECOND",
+                "MAX"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "MAX"
+              ],
+              "probe_ref": "210db47c07f84755dcab",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "MAX"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_42_02",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "4fdbd38c8b48c3cc922e",
+              "cab1f742311773e80975",
+              "210db47c07f84755dcab"
+            ],
+            "provenance": {
+              "seed": 42,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_42_02"
+            },
+            "revision_history": [],
+            "rule_name": "MAX",
+            "status": "validated",
+            "verification_refs": [
+              "c8f90923f6bcd328aee6",
+              "303032642042c3135481",
+              "b7db8d3e2a502e2620d1"
+            ],
+            "version": 1
+          },
+          "rule_name": "MAX",
+          "status": "validated",
+          "verification_refs": [
+            "c8f90923f6bcd328aee6",
+            "303032642042c3135481",
+            "b7db8d3e2a502e2620d1"
+          ]
+        },
+        "task_id": "task_42_02"
+      },
+      {
+        "alias": "glyph_42_03",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "FIRST",
+                "MIN"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "MIN"
+              ],
+              "probe_ref": "129a40c818469a12ae43",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "MIN"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_42_03",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "dd3aae2671457a0481dd",
+              "c75e2cfd9b053b64e1fc",
+              "129a40c818469a12ae43"
+            ],
+            "provenance": {
+              "seed": 42,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_42_03"
+            },
+            "revision_history": [],
+            "rule_name": "MIN",
+            "status": "validated",
+            "verification_refs": [
+              "8f58f0f7644c90b23a8b",
+              "cb46a1d5c45e20334a0f",
+              "a2487c46a87352801184"
+            ],
+            "version": 1
+          },
+          "rule_name": "MIN",
+          "status": "validated",
+          "verification_refs": [
+            "8f58f0f7644c90b23a8b",
+            "cb46a1d5c45e20334a0f",
+            "a2487c46a87352801184"
+          ]
+        },
+        "task_id": "task_42_03"
+      },
+      {
+        "alias": "glyph_42_04",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "MUL_MOD10"
+              ],
+              "stage": "demonstrations"
+            }
+          ],
+          "candidates": [
+            "MUL_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 16,
+            "demonstrations": 2,
+            "probes": 0,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_42_04",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "2bd4158582c17940c2aa",
+              "3f3fa83bcf737800fc74"
+            ],
+            "provenance": {
+              "seed": 42,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_42_04"
+            },
+            "revision_history": [],
+            "rule_name": "MUL_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "5bb0cb0597c7ea093172",
+              "449b54868edae545926c",
+              "2afb5a105319ebae7e76"
+            ],
+            "version": 1
+          },
+          "rule_name": "MUL_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "5bb0cb0597c7ea093172",
+            "449b54868edae545926c",
+            "2afb5a105319ebae7e76"
+          ]
+        },
+        "task_id": "task_42_04"
+      },
+      {
+        "alias": "glyph_42_05",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "XOR_MOD10"
+              ],
+              "stage": "demonstrations"
+            }
+          ],
+          "candidates": [
+            "XOR_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 16,
+            "demonstrations": 2,
+            "probes": 0,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_42_05",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "1ad9e8937ec536057bf7",
+              "1bb7b63c3ebea2d7864f"
+            ],
+            "provenance": {
+              "seed": 42,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_42_05"
+            },
+            "revision_history": [],
+            "rule_name": "XOR_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "912545d4548804698922",
+              "3fc4e2a668d4c0e4085f",
+              "36a29a34c5fb7e128f9b"
+            ],
+            "version": 1
+          },
+          "rule_name": "XOR_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "912545d4548804698922",
+            "3fc4e2a668d4c0e4085f",
+            "36a29a34c5fb7e128f9b"
+          ]
+        },
+        "task_id": "task_42_05"
+      },
+      {
+        "alias": "glyph_42_06",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "ADD_MOD10"
+              ],
+              "stage": "demonstrations"
+            }
+          ],
+          "candidates": [
+            "ADD_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 16,
+            "demonstrations": 2,
+            "probes": 0,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_42_06",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "bab01e60a336d7f0db1e",
+              "8fab95e4175dc884c08a"
+            ],
+            "provenance": {
+              "seed": 42,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_42_06"
+            },
+            "revision_history": [],
+            "rule_name": "ADD_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "f04bc4ba55b907054de4",
+              "83cc12bf0d7d6997e201",
+              "e02bf2eab56f5f646c79"
+            ],
+            "version": 1
+          },
+          "rule_name": "ADD_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "f04bc4ba55b907054de4",
+            "83cc12bf0d7d6997e201",
+            "e02bf2eab56f5f646c79"
+          ]
+        },
+        "task_id": "task_42_06"
+      },
+      {
+        "alias": "glyph_42_07",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "SUB_MOD10",
+                "XOR_MOD10"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "SUB_MOD10"
+              ],
+              "probe_ref": "9d65cc50dd000e8e3d23",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "SUB_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_42_07",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "9a01adf84e260cf4d6ab",
+              "ed01f49843a68ba30e9c",
+              "9d65cc50dd000e8e3d23"
+            ],
+            "provenance": {
+              "seed": 42,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_42_07"
+            },
+            "revision_history": [],
+            "rule_name": "SUB_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "1b28f6cd8e3d553a1989",
+              "7b120827a5ba75192d01",
+              "76954082f4958f853729"
+            ],
+            "version": 1
+          },
+          "rule_name": "SUB_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "1b28f6cd8e3d553a1989",
+            "7b120827a5ba75192d01",
+            "76954082f4958f853729"
+          ]
+        },
+        "task_id": "task_42_07"
+      },
+      {
+        "alias": "glyph_1337_00",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "ADD_MOD10",
+                "XOR_MOD10"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "ADD_MOD10"
+              ],
+              "probe_ref": "1c9a89a625668a4c55e4",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "ADD_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_1337_00",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "db2bbc05a2100c7621a7",
+              "437326160d0277ef0e5e",
+              "1c9a89a625668a4c55e4"
+            ],
+            "provenance": {
+              "seed": 1337,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_1337_00"
+            },
+            "revision_history": [],
+            "rule_name": "ADD_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "1748f3f3166c5f70973a",
+              "50cd1b9e601fb1c3b540",
+              "cf221b4165be340add8e"
+            ],
+            "version": 1
+          },
+          "rule_name": "ADD_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "1748f3f3166c5f70973a",
+            "50cd1b9e601fb1c3b540",
+            "cf221b4165be340add8e"
+          ]
+        },
+        "task_id": "task_1337_00"
+      },
+      {
+        "alias": "glyph_1337_01",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "FIRST",
+                "MAX"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "FIRST"
+              ],
+              "probe_ref": "5c25392757dbfbeb9388",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "FIRST"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_1337_01",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "f02207498171946163bf",
+              "ee0dde1ad1369ae1786e",
+              "5c25392757dbfbeb9388"
+            ],
+            "provenance": {
+              "seed": 1337,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_1337_01"
+            },
+            "revision_history": [],
+            "rule_name": "FIRST",
+            "status": "validated",
+            "verification_refs": [
+              "b5245ef92ce072b56a7d",
+              "9949acf8240ace72dcfb",
+              "dd921145c6af7b629472"
+            ],
+            "version": 1
+          },
+          "rule_name": "FIRST",
+          "status": "validated",
+          "verification_refs": [
+            "b5245ef92ce072b56a7d",
+            "9949acf8240ace72dcfb",
+            "dd921145c6af7b629472"
+          ]
+        },
+        "task_id": "task_1337_01"
+      },
+      {
+        "alias": "glyph_1337_02",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "SECOND",
+                "MIN"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "MIN"
+              ],
+              "probe_ref": "c53ac7175f9041633203",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "MIN"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_1337_02",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "a20459a12215f371d056",
+              "cceb71ea6b2b587b0572",
+              "c53ac7175f9041633203"
+            ],
+            "provenance": {
+              "seed": 1337,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_1337_02"
+            },
+            "revision_history": [],
+            "rule_name": "MIN",
+            "status": "validated",
+            "verification_refs": [
+              "3269ac164273e461cb70",
+              "d313531741d96006cf7b",
+              "248396f73b9154540caa"
+            ],
+            "version": 1
+          },
+          "rule_name": "MIN",
+          "status": "validated",
+          "verification_refs": [
+            "3269ac164273e461cb70",
+            "d313531741d96006cf7b",
+            "248396f73b9154540caa"
+          ]
+        },
+        "task_id": "task_1337_02"
+      },
+      {
+        "alias": "glyph_1337_03",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "MUL_MOD10"
+              ],
+              "stage": "demonstrations"
+            }
+          ],
+          "candidates": [
+            "MUL_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 16,
+            "demonstrations": 2,
+            "probes": 0,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_1337_03",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "b9023ad943ccdbde87eb",
+              "f92dd64762d4c1363f3c"
+            ],
+            "provenance": {
+              "seed": 1337,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_1337_03"
+            },
+            "revision_history": [],
+            "rule_name": "MUL_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "b0cee56157a6480cc788",
+              "32205dce763379e2d183",
+              "6da4336cc1725f5dcb82"
+            ],
+            "version": 1
+          },
+          "rule_name": "MUL_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "b0cee56157a6480cc788",
+            "32205dce763379e2d183",
+            "6da4336cc1725f5dcb82"
+          ]
+        },
+        "task_id": "task_1337_03"
+      },
+      {
+        "alias": "glyph_1337_04",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "SUB_MOD10"
+              ],
+              "stage": "demonstrations"
+            }
+          ],
+          "candidates": [
+            "SUB_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 16,
+            "demonstrations": 2,
+            "probes": 0,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_1337_04",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "0a77f77c81d5669d5667",
+              "2534a886297f309ce186"
+            ],
+            "provenance": {
+              "seed": 1337,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_1337_04"
+            },
+            "revision_history": [],
+            "rule_name": "SUB_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "917d3c0f498a5b192078",
+              "c7dc18ef3771a28d41a4",
+              "14718e166693306dd855"
+            ],
+            "version": 1
+          },
+          "rule_name": "SUB_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "917d3c0f498a5b192078",
+            "c7dc18ef3771a28d41a4",
+            "14718e166693306dd855"
+          ]
+        },
+        "task_id": "task_1337_04"
+      },
+      {
+        "alias": "glyph_1337_05",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "SECOND",
+                "MAX"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "MAX"
+              ],
+              "probe_ref": "c2a1929ccae95e21767b",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "MAX"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_1337_05",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "3f0f7e8cbc1f7ea7c91f",
+              "38d2070fca51cd5209c0",
+              "c2a1929ccae95e21767b"
+            ],
+            "provenance": {
+              "seed": 1337,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_1337_05"
+            },
+            "revision_history": [],
+            "rule_name": "MAX",
+            "status": "validated",
+            "verification_refs": [
+              "f758ef76a8025cbc8057",
+              "5a0f6b617d81cc2e593d",
+              "be86cb0f5ed8f19073a8"
+            ],
+            "version": 1
+          },
+          "rule_name": "MAX",
+          "status": "validated",
+          "verification_refs": [
+            "f758ef76a8025cbc8057",
+            "5a0f6b617d81cc2e593d",
+            "be86cb0f5ed8f19073a8"
+          ]
+        },
+        "task_id": "task_1337_05"
+      },
+      {
+        "alias": "glyph_1337_06",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "SECOND",
+                "MAX"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "SECOND"
+              ],
+              "probe_ref": "09cc83b9462c9d7a711c",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "SECOND"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_1337_06",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "2aeeaa32889bc3a3ed94",
+              "747219064d2dcfb1fd4d",
+              "09cc83b9462c9d7a711c"
+            ],
+            "provenance": {
+              "seed": 1337,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_1337_06"
+            },
+            "revision_history": [],
+            "rule_name": "SECOND",
+            "status": "validated",
+            "verification_refs": [
+              "b6c4ee8078d494561cac",
+              "7592e291cc09c7520c56",
+              "aaf8c9ac5944a0befee1"
+            ],
+            "version": 1
+          },
+          "rule_name": "SECOND",
+          "status": "validated",
+          "verification_refs": [
+            "b6c4ee8078d494561cac",
+            "7592e291cc09c7520c56",
+            "aaf8c9ac5944a0befee1"
+          ]
+        },
+        "task_id": "task_1337_06"
+      },
+      {
+        "alias": "glyph_1337_07",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "XOR_MOD10"
+              ],
+              "stage": "demonstrations"
+            }
+          ],
+          "candidates": [
+            "XOR_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 16,
+            "demonstrations": 2,
+            "probes": 0,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_1337_07",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "3e8397ce81f144162294",
+              "a7a54a32a8ab39f7c0b5"
+            ],
+            "provenance": {
+              "seed": 1337,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_1337_07"
+            },
+            "revision_history": [],
+            "rule_name": "XOR_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "0521877624e47ad98411",
+              "7e1242af689403a9e93a",
+              "6b51c067c6eee6a93fd5"
+            ],
+            "version": 1
+          },
+          "rule_name": "XOR_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "0521877624e47ad98411",
+            "7e1242af689403a9e93a",
+            "6b51c067c6eee6a93fd5"
+          ]
+        },
+        "task_id": "task_1337_07"
+      },
+      {
+        "alias": "glyph_2025_00",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "MAX"
+              ],
+              "stage": "demonstrations"
+            }
+          ],
+          "candidates": [
+            "MAX"
+          ],
+          "cost": {
+            "candidate_evaluations": 16,
+            "demonstrations": 2,
+            "probes": 0,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_2025_00",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "fb4026d035117f8b3324",
+              "778925f1df4deafad9a6"
+            ],
+            "provenance": {
+              "seed": 2025,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_2025_00"
+            },
+            "revision_history": [],
+            "rule_name": "MAX",
+            "status": "validated",
+            "verification_refs": [
+              "33a7b008215b259bbbab",
+              "498182792b01159dd9c1",
+              "c35b145f15ae8711bddb"
+            ],
+            "version": 1
+          },
+          "rule_name": "MAX",
+          "status": "validated",
+          "verification_refs": [
+            "33a7b008215b259bbbab",
+            "498182792b01159dd9c1",
+            "c35b145f15ae8711bddb"
+          ]
+        },
+        "task_id": "task_2025_00"
+      },
+      {
+        "alias": "glyph_2025_01",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "MUL_MOD10"
+              ],
+              "stage": "demonstrations"
+            }
+          ],
+          "candidates": [
+            "MUL_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 16,
+            "demonstrations": 2,
+            "probes": 0,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_2025_01",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "329d9d4df445cdfa22e0",
+              "c7b4a1c1b40e300f31f2"
+            ],
+            "provenance": {
+              "seed": 2025,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_2025_01"
+            },
+            "revision_history": [],
+            "rule_name": "MUL_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "ddfa88168798d9c96f61",
+              "ee4e8e46e82e365eb726",
+              "51ff7c5070accd2a2612"
+            ],
+            "version": 1
+          },
+          "rule_name": "MUL_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "ddfa88168798d9c96f61",
+            "ee4e8e46e82e365eb726",
+            "51ff7c5070accd2a2612"
+          ]
+        },
+        "task_id": "task_2025_01"
+      },
+      {
+        "alias": "glyph_2025_02",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "SECOND",
+                "MAX"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "SECOND"
+              ],
+              "probe_ref": "05ea2b23af56d36339d4",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "SECOND"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_2025_02",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "16f8d3a6815926053be5",
+              "e183c00d7b42d4b58c9c",
+              "05ea2b23af56d36339d4"
+            ],
+            "provenance": {
+              "seed": 2025,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_2025_02"
+            },
+            "revision_history": [],
+            "rule_name": "SECOND",
+            "status": "validated",
+            "verification_refs": [
+              "e13a15d28088a5dec89e",
+              "c5f10a24015d79d6643e",
+              "9551abe222a93e625d68"
+            ],
+            "version": 1
+          },
+          "rule_name": "SECOND",
+          "status": "validated",
+          "verification_refs": [
+            "e13a15d28088a5dec89e",
+            "c5f10a24015d79d6643e",
+            "9551abe222a93e625d68"
+          ]
+        },
+        "task_id": "task_2025_02"
+      },
+      {
+        "alias": "glyph_2025_03",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "ADD_MOD10"
+              ],
+              "stage": "demonstrations"
+            }
+          ],
+          "candidates": [
+            "ADD_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 16,
+            "demonstrations": 2,
+            "probes": 0,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_2025_03",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "861e31401f49d9cbca52",
+              "66d7a75ea8e1dc17f30b"
+            ],
+            "provenance": {
+              "seed": 2025,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_2025_03"
+            },
+            "revision_history": [],
+            "rule_name": "ADD_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "c048674033f12c36c3c9",
+              "08826626707740693752",
+              "4f8bab6554f7492aefc8"
+            ],
+            "version": 1
+          },
+          "rule_name": "ADD_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "c048674033f12c36c3c9",
+            "08826626707740693752",
+            "4f8bab6554f7492aefc8"
+          ]
+        },
+        "task_id": "task_2025_03"
+      },
+      {
+        "alias": "glyph_2025_04",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "FIRST",
+                "MIN"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "MIN"
+              ],
+              "probe_ref": "542fc6e77aa599636fb5",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "MIN"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_2025_04",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "77d8e3dad9c713f069d7",
+              "b091db6a79ac7c478460",
+              "542fc6e77aa599636fb5"
+            ],
+            "provenance": {
+              "seed": 2025,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_2025_04"
+            },
+            "revision_history": [],
+            "rule_name": "MIN",
+            "status": "validated",
+            "verification_refs": [
+              "6755ff6b46c7ac944ad3",
+              "e2cbfe6b94017e1fb468",
+              "ac25dcf5f22a166b74af"
+            ],
+            "version": 1
+          },
+          "rule_name": "MIN",
+          "status": "validated",
+          "verification_refs": [
+            "6755ff6b46c7ac944ad3",
+            "e2cbfe6b94017e1fb468",
+            "ac25dcf5f22a166b74af"
+          ]
+        },
+        "task_id": "task_2025_04"
+      },
+      {
+        "alias": "glyph_2025_05",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "FIRST",
+                "MIN"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "FIRST"
+              ],
+              "probe_ref": "9e98b022ea750b6ef546",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "FIRST"
+          ],
+          "cost": {
+            "candidate_evaluations": 24,
+            "demonstrations": 2,
+            "probes": 1,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_2025_05",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "1e61c514d828bd1e06bb",
+              "b7531502a557eaebac6d",
+              "9e98b022ea750b6ef546"
+            ],
+            "provenance": {
+              "seed": 2025,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_2025_05"
+            },
+            "revision_history": [],
+            "rule_name": "FIRST",
+            "status": "validated",
+            "verification_refs": [
+              "9c10d1b65d568d53e77b",
+              "01d001f1ed131b694a1d",
+              "1eb83021eb632090b8ff"
+            ],
+            "version": 1
+          },
+          "rule_name": "FIRST",
+          "status": "validated",
+          "verification_refs": [
+            "9c10d1b65d568d53e77b",
+            "01d001f1ed131b694a1d",
+            "1eb83021eb632090b8ff"
+          ]
+        },
+        "task_id": "task_2025_05"
+      },
+      {
+        "alias": "glyph_2025_06",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "ADD_MOD10",
+                "XOR_MOD10",
+                "MAX"
+              ],
+              "stage": "demonstrations"
+            },
+            {
+              "candidates": [
+                "ADD_MOD10",
+                "XOR_MOD10"
+              ],
+              "probe_ref": "371c8f7a66fec68d57a7",
+              "stage": "probe"
+            },
+            {
+              "candidates": [
+                "XOR_MOD10"
+              ],
+              "probe_ref": "6754df2c6f1375638b52",
+              "stage": "probe"
+            }
+          ],
+          "candidates": [
+            "XOR_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 32,
+            "demonstrations": 2,
+            "probes": 2,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_2025_06",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "2bf5ffed36c8f1bf59d1",
+              "340158090e8931c61070",
+              "371c8f7a66fec68d57a7",
+              "6754df2c6f1375638b52"
+            ],
+            "provenance": {
+              "seed": 2025,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_2025_06"
+            },
+            "revision_history": [],
+            "rule_name": "XOR_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "cbaf886d0edb53164845",
+              "7841544922de9b0d3d7b",
+              "a5c1301c0daabbc677a5"
+            ],
+            "version": 1
+          },
+          "rule_name": "XOR_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "cbaf886d0edb53164845",
+            "7841544922de9b0d3d7b",
+            "a5c1301c0daabbc677a5"
+          ]
+        },
+        "task_id": "task_2025_06"
+      },
+      {
+        "alias": "glyph_2025_07",
+        "result": {
+          "candidate_trace": [
+            {
+              "candidates": [
+                "SUB_MOD10"
+              ],
+              "stage": "demonstrations"
+            }
+          ],
+          "candidates": [
+            "SUB_MOD10"
+          ],
+          "cost": {
+            "candidate_evaluations": 16,
+            "demonstrations": 2,
+            "probes": 0,
+            "verification_checks": 3
+          },
+          "record": {
+            "alias": "glyph_2025_07",
+            "applicability": "digits_0_9_mod10_binary",
+            "confidence": 1.0,
+            "evidence_refs": [
+              "0347238e3c222a922690",
+              "4b052a845ed53f37a064"
+            ],
+            "provenance": {
+              "seed": 2025,
+              "source": "lifecycle_v0_benchmark",
+              "task_id": "task_2025_07"
+            },
+            "revision_history": [],
+            "rule_name": "SUB_MOD10",
+            "status": "validated",
+            "verification_refs": [
+              "20c1bb295fc9e6a27296",
+              "4df98756b047bc694e76",
+              "337660ef8969910b915f"
+            ],
+            "version": 1
+          },
+          "rule_name": "SUB_MOD10",
+          "status": "validated",
+          "verification_refs": [
+            "20c1bb295fc9e6a27296",
+            "4df98756b047bc694e76",
+            "337660ef8969910b915f"
+          ]
+        },
+        "task_id": "task_2025_07"
+      }
+    ],
+    "mean_examples_and_probes": 2.625,
+    "mean_probes": 0.625,
+    "queries_after_reset": {
+      "task_1337_00": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          }
+        ]
+      },
+      "task_1337_01": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          }
+        ]
+      },
+      "task_1337_02": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          }
+        ]
+      },
+      "task_1337_03": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          }
+        ]
+      },
+      "task_1337_04": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          }
+        ]
+      },
+      "task_1337_05": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          }
+        ]
+      },
+      "task_1337_06": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          }
+        ]
+      },
+      "task_1337_07": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          }
+        ]
+      },
+      "task_2025_00": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          }
+        ]
+      },
+      "task_2025_01": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          }
+        ]
+      },
+      "task_2025_02": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          }
+        ]
+      },
+      "task_2025_03": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          }
+        ]
+      },
+      "task_2025_04": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          }
+        ]
+      },
+      "task_2025_05": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          }
+        ]
+      },
+      "task_2025_06": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          }
+        ]
+      },
+      "task_2025_07": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          }
+        ]
+      },
+      "task_42_00": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          }
+        ]
+      },
+      "task_42_01": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          }
+        ]
+      },
+      "task_42_02": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          }
+        ]
+      },
+      "task_42_03": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          }
+        ]
+      },
+      "task_42_04": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          }
+        ]
+      },
+      "task_42_05": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 1,
+            "predicted": 1
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 8,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 3,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          }
+        ]
+      },
+      "task_42_06": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 5,
+            "predicted": 5
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 1,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          }
+        ]
+      },
+      "task_42_07": {
+        "accuracy_all_queries": 1.0,
+        "accuracy_on_attempts": 1.0,
+        "attempted": 12,
+        "correct": 12,
+        "coverage": 1.0,
+        "queries": 12,
+        "rows": [
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 1,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 8,
+            "correct": true,
+            "expected": 9,
+            "predicted": 9
+          },
+          {
+            "a": 2,
+            "attempted": true,
+            "b": 2,
+            "correct": true,
+            "expected": 0,
+            "predicted": 0
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 9,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 0,
+            "correct": true,
+            "expected": 7,
+            "predicted": 7
+          },
+          {
+            "a": 9,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 4,
+            "predicted": 4
+          },
+          {
+            "a": 7,
+            "attempted": true,
+            "b": 5,
+            "correct": true,
+            "expected": 2,
+            "predicted": 2
+          },
+          {
+            "a": 0,
+            "attempted": true,
+            "b": 4,
+            "correct": true,
+            "expected": 6,
+            "predicted": 6
+          },
+          {
+            "a": 5,
+            "attempted": true,
+            "b": 7,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          },
+          {
+            "a": 6,
+            "attempted": true,
+            "b": 3,
+            "correct": true,
+            "expected": 3,
+            "predicted": 3
+          },
+          {
+            "a": 4,
+            "attempted": true,
+            "b": 6,
+            "correct": true,
+            "expected": 8,
+            "predicted": 8
+          }
+        ]
+      }
+    },
+    "retained_accuracy": 1.0,
+    "retained_accuracy_on_attempts": 1.0,
+    "retained_attempts": 288,
+    "retained_correct": 288,
+    "retained_coverage": 1.0,
+    "retained_procedure_count": 24,
+    "retained_queries": 288,
+    "store_path": "/home/timbushnell/Crucible/experiments/crucible_learning_lifecycle_v0_20251025/persistent/full_store.json",
+    "task_count": 24
+  },
+  "hardware": "cpu_only",
+  "hypothesis_space": [
+    "ADD_MOD10",
+    "SUB_MOD10",
+    "MUL_MOD10",
+    "FIRST",
+    "SECOND",
+    "XOR_MOD10",
+    "MAX",
+    "MIN"
+  ],
+  "revision": {
+    "active_after_invalidation": false,
+    "invalidated": true,
+    "relearn_status": "validated",
+    "revision_history_preserved": true,
+    "task_id": "task_42_00",
+    "version_count": 2,
+    "version_statuses": [
+      "invalidated",
+      "validated"
+    ]
+  },
+  "sealed_test_accessed": false,
+  "status": "completed",
+  "unit_tests_required": true
+}

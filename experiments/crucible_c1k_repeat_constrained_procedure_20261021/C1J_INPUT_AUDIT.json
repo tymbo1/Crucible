@@ -1,0 +1,34 @@
+{
+  "artifact_audit": {
+    "hash_failures": 0,
+    "hash_index_sha256": "e3418d9a219126f2904a0661499b6f31791337605d9d9869590f6fb60deb978a",
+    "indexed_files": 8
+  },
+  "input_audit": {
+    "conditions": [
+      "applicable",
+      "adaptation",
+      "invalidated",
+      "contradictory",
+      "misleading_similarity",
+      "noisy_evidence",
+      "provenance_corrupt",
+      "unresolvable"
+    ],
+    "count": 10000,
+    "families": [
+      "interval",
+      "multiset",
+      "tree",
+      "matrix"
+    ],
+    "manifest_digest": "22567b8b942dad47ff436fd21b137a1ef55201738edb9860bf34c96d094bc9e8",
+    "memory_sizes": [
+      10,
+      100,
+      1000,
+      10000
+    ],
+    "task_digest": "22567b8b942dad47ff436fd21b137a1ef55201738edb9860bf34c96d094bc9e8"
+  }
+}

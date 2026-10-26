@@ -1,0 +1,54 @@
+{
+  "checkpoint": "experiments/crucible_d2_readout_competence_ladder_20261026_v1/trained_arms/S3_AUTHORITY_CONDITIONED/factorized/seed42/readout.pt",
+  "checkpoint_sha256": "192036defef6c45c8ef73524ca06a6fe30e62be19824468553dd8d7725d1fafd",
+  "interface": "factorized",
+  "seed": 42,
+  "source": "frozen_d1_readout",
+  "stage": "S3_AUTHORITY_CONDITIONED",
+  "steps": 500,
+  "train_metrics": {
+    "format_errors": 0,
+    "operation_correct": 160,
+    "output_correct": 160,
+    "paired": {
+      "correct_two_way": 80,
+      "correct_two_way_accuracy": 1.0,
+      "flip_accuracy": 1.0,
+      "pairs": 80,
+      "pointer_flips": 80
+    },
+    "pointer_accuracy": 1.0,
+    "pointer_correct": 160,
+    "rows": 160
+  },
+  "unseen_layout_metrics": {
+    "format_errors": 0,
+    "operation_correct": 20,
+    "output_correct": 24,
+    "paired": {
+      "correct_two_way": 0,
+      "correct_two_way_accuracy": 0.0,
+      "flip_accuracy": 0.0,
+      "pairs": 20,
+      "pointer_flips": 0
+    },
+    "pointer_accuracy": 0.5,
+    "pointer_correct": 20,
+    "rows": 40
+  },
+  "validation_metrics": {
+    "format_errors": 0,
+    "operation_correct": 40,
+    "output_correct": 40,
+    "paired": {
+      "correct_two_way": 20,
+      "correct_two_way_accuracy": 1.0,
+      "flip_accuracy": 1.0,
+      "pairs": 20,
+      "pointer_flips": 20
+    },
+    "pointer_accuracy": 1.0,
+    "pointer_correct": 40,
+    "rows": 40
+  }
+}

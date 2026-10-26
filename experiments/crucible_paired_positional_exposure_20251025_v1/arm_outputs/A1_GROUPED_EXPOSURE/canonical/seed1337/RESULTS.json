@@ -1,0 +1,26 @@
+{
+  "arm": "A1_GROUPED_EXPOSURE",
+  "arm_id": "A1_GROUPED_EXPOSURE_canonical_seed1337",
+  "checkpoint": "experiments/crucible_paired_positional_exposure_20251025_v1/arm_outputs/A1_GROUPED_EXPOSURE/canonical/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "1ad1d53ae2955a6a38db568dd2afd33d440df299bb8ca22f2b54a34381b70d15",
+  "consistency_weight": 0.1,
+  "effective_batch": 12,
+  "elapsed_seconds": 324.5794423110201,
+  "expanded_records": 240,
+  "groups": 40,
+  "interface": "canonical",
+  "seed": 1337,
+  "steps": 500,
+  "train_expanded": {
+    "examples": 240,
+    "mean_target_loss": 0.557772466291984,
+    "teacher_forced_exact_accuracy": 0.5166666666666667,
+    "teacher_forced_token_accuracy": 0.7583333333333333
+  },
+  "train_expanded_exact": 0.5166666666666667,
+  "training_layout_counts": {
+    "EARLY_PADDED": 80,
+    "FIXED_NEAR_PADDED": 80,
+    "MIDDLE_POSITION": 80
+  }
+}

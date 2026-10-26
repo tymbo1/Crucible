@@ -1,0 +1,81 @@
+{
+  "experiment": "crucible_c1o_invariant_discovery_20261021",
+  "hidden_labels_used_by_policy": false,
+  "oracle_checks": 36000,
+  "oracle_failures": 0,
+  "seeds": {
+    "1337": {
+      "conditions": {
+        "depth_extension": 1508,
+        "exact_role": 1427,
+        "marker_guard_invalid": 1565,
+        "marker_guard_valid": 1494,
+        "misleading_evidence": 1497,
+        "role_break": 1489,
+        "role_permutation": 1514,
+        "unobservable_ambiguity": 1506
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "75a2bd3e5c7dd10b366285112868dc899a7ea60d189b8a6ec5d523ca4542fea5",
+      "templates": {
+        "asymmetric": 2979,
+        "balanced": 3075,
+        "deep": 2936,
+        "wide": 3010
+      }
+    },
+    "2026": {
+      "conditions": {
+        "depth_extension": 1500,
+        "exact_role": 1471,
+        "marker_guard_invalid": 1486,
+        "marker_guard_valid": 1456,
+        "misleading_evidence": 1546,
+        "role_break": 1557,
+        "role_permutation": 1499,
+        "unobservable_ambiguity": 1485
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "20e9f524f397c1369d92e1c411813df765415f1b0472ce80a3fe78d2158d7e91",
+      "templates": {
+        "asymmetric": 2984,
+        "balanced": 3057,
+        "deep": 2956,
+        "wide": 3003
+      }
+    },
+    "42": {
+      "conditions": {
+        "depth_extension": 1529,
+        "exact_role": 1523,
+        "marker_guard_invalid": 1485,
+        "marker_guard_valid": 1522,
+        "misleading_evidence": 1512,
+        "role_break": 1474,
+        "role_permutation": 1522,
+        "unobservable_ambiguity": 1433
+      },
+      "count": 12000,
+      "phase_counts": {
+        "discovery": 3000,
+        "heldout": 9000
+      },
+      "task_digest": "e5fcd54e4eee0ff05dabf35bbc46c45888fca04894a348b60685756c29c65701",
+      "templates": {
+        "asymmetric": 3005,
+        "balanced": 2981,
+        "deep": 2980,
+        "wide": 3034
+      }
+    }
+  },
+  "task_count_total": 36000
+}

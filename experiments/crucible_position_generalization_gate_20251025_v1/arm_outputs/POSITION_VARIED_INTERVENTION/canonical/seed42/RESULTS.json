@@ -1,0 +1,32 @@
+{
+  "arm": "POSITION_VARIED_INTERVENTION",
+  "arm_id": "POSITION_VARIED_INTERVENTION_canonical_seed42",
+  "checkpoint": "experiments/crucible_position_generalization_gate_20251025_v1/arm_outputs/POSITION_VARIED_INTERVENTION/canonical/seed42/checkpoint.pt",
+  "checkpoint_sha256": "726e59d6e976c655ade302403fa8da21ca613049ad8ca77ce7dc6cdae14589da",
+  "elapsed_seconds": 120.49678825697629,
+  "fit_pass": true,
+  "initial_dense_state_digest": "8ef53f7ba86230a50c4103cefb0320f7e8cf5161dfc913711d6275a1a7b98c4a",
+  "interface": "canonical",
+  "seed": 42,
+  "steps": 500,
+  "train": {
+    "examples": 80,
+    "mean_target_loss": 0.06987919586099452,
+    "teacher_forced_exact_accuracy": 0.95,
+    "teacher_forced_token_accuracy": 0.975
+  },
+  "train_exact": 0.95,
+  "training_template_counts": {
+    "EARLY_PADDED": 27,
+    "FIXED_NEAR_PADDED": 27,
+    "MIDDLE_POSITION": 26
+  },
+  "validation": {
+    "examples": 20,
+    "mean_target_loss": 1.1616533041000365,
+    "teacher_forced_exact_accuracy": 0.65,
+    "teacher_forced_token_accuracy": 0.825
+  },
+  "validation_exact": 0.65,
+  "validation_pass": false
+}

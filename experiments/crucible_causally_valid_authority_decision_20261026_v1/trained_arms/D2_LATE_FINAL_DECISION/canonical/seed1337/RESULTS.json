@@ -1,0 +1,65 @@
+{
+  "checkpoint": "experiments/crucible_causally_valid_authority_decision_20261026_v1/trained_arms/D2_LATE_FINAL_DECISION/canonical/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "ef9d896af0ffd82862514f7e9734480a91ea2b28f596eb9adf681ceb0d59d066",
+  "condition": "D2_LATE_FINAL_DECISION",
+  "interface": "canonical",
+  "schedule_digest": "b83b8475eca2e1dfa9ee7c239fa34c858e7d0ac203a4ed83abfe69816d454a53",
+  "seed": 1337,
+  "steps": 500,
+  "train_metrics": {
+    "paired": {
+      "correct_two_way_operation": 0,
+      "correct_two_way_operation_accuracy": 0.0,
+      "correct_two_way_output": 16,
+      "correct_two_way_output_accuracy": 0.2,
+      "pairs": 80,
+      "pointer_or_decision_flip_rate": 0.0,
+      "pointer_or_decision_flips": 0
+    },
+    "rows": {
+      "a_pointer_correct": 160,
+      "b_pointer_correct": 160,
+      "format_errors": 0,
+      "operation_correct": 80,
+      "output_correct": 96,
+      "paired": {
+        "correct_two_way_operation": 0,
+        "correct_two_way_operation_accuracy": 0.0,
+        "correct_two_way_output": 16,
+        "correct_two_way_output_accuracy": 0.2,
+        "pairs": 80,
+        "pointer_or_decision_flip_rate": 0.0,
+        "pointer_or_decision_flips": 0
+      },
+      "rows": 160
+    }
+  },
+  "validation_metrics": {
+    "paired": {
+      "correct_two_way_operation": 0,
+      "correct_two_way_operation_accuracy": 0.0,
+      "correct_two_way_output": 4,
+      "correct_two_way_output_accuracy": 0.2,
+      "pairs": 20,
+      "pointer_or_decision_flip_rate": 0.0,
+      "pointer_or_decision_flips": 0
+    },
+    "rows": {
+      "a_pointer_correct": 40,
+      "b_pointer_correct": 40,
+      "format_errors": 0,
+      "operation_correct": 20,
+      "output_correct": 24,
+      "paired": {
+        "correct_two_way_operation": 0,
+        "correct_two_way_operation_accuracy": 0.0,
+        "correct_two_way_output": 4,
+        "correct_two_way_output_accuracy": 0.2,
+        "pairs": 20,
+        "pointer_or_decision_flip_rate": 0.0,
+        "pointer_or_decision_flips": 0
+      },
+      "rows": 40
+    }
+  }
+}

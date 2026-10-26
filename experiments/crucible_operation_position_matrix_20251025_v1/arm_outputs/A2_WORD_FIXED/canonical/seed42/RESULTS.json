@@ -1,0 +1,27 @@
+{
+  "arm_id": "A2_WORD_FIXED_canonical_seed42",
+  "checkpoint": "experiments/crucible_operation_position_matrix_20251025_v1/arm_outputs/A2_WORD_FIXED/canonical/seed42/checkpoint.pt",
+  "checkpoint_sha256": "eb7d98dc8af6378b43e19e718c6dbaef3fe5cddc69d8c2f05441cc2bbfc3a195",
+  "condition": "A2_WORD_FIXED",
+  "elapsed_seconds": 101.40342306002276,
+  "fit_pass": true,
+  "initial_dense_state_digest": "8ef53f7ba86230a50c4103cefb0320f7e8cf5161dfc913711d6275a1a7b98c4a",
+  "interface": "canonical",
+  "seed": 42,
+  "steps": 500,
+  "train": {
+    "examples": 80,
+    "mean_target_loss": 4.7435043416044206e-05,
+    "teacher_forced_exact_accuracy": 1.0,
+    "teacher_forced_token_accuracy": 1.0
+  },
+  "train_exact": 1.0,
+  "validation": {
+    "examples": 20,
+    "mean_target_loss": 8.95655459316913e-05,
+    "teacher_forced_exact_accuracy": 1.0,
+    "teacher_forced_token_accuracy": 1.0
+  },
+  "validation_exact": 1.0,
+  "validation_pass": true
+}

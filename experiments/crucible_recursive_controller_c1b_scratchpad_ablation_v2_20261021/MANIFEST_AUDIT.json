@@ -1,0 +1,98 @@
+{
+  "record_counts": {
+    "test": 256,
+    "train": 256,
+    "validation": 128
+  },
+  "source_manifest_root": "experiments/crucible_recursive_controller_c1b_l100000_20261021/manifests",
+  "training_schedule": {
+    "1337": {
+      "count": 50000,
+      "sha256": "aa0b8bf6b82de144af25f0c40837c267b17e24e1f50a0a93a6d6832779999f41"
+    },
+    "2026": {
+      "count": 50000,
+      "sha256": "1e2285607913999b65d7af5f4a90c261093ac3e49833e77457b151a38a46004d"
+    },
+    "42": {
+      "count": 50000,
+      "sha256": "bcdfe3f6ea1626ed147908c656100fa0261ba8a7d9c80ee8628c712b94cf1437"
+    }
+  },
+  "validation": {
+    "arithmetic_compositions": {
+      "test": [
+        [
+          "add",
+          "mul",
+          "sub"
+        ],
+        [
+          "mul",
+          "sub",
+          "add"
+        ]
+      ],
+      "train": [
+        [
+          "add",
+          "sub"
+        ],
+        [
+          "mul",
+          "add"
+        ],
+        [
+          "sub",
+          "mul"
+        ]
+      ],
+      "validation": [
+        [
+          "add",
+          "mul"
+        ],
+        [
+          "sub",
+          "add",
+          "mul"
+        ]
+      ]
+    },
+    "families": [
+      "error_correction",
+      "logic",
+      "math",
+      "relational_binding"
+    ],
+    "input_leakage": [],
+    "logic_rule_depths": {
+      "test": [
+        4
+      ],
+      "train": [
+        2
+      ],
+      "validation": [
+        3
+      ]
+    },
+    "oracle_checks": 640,
+    "records": {
+      "test": 256,
+      "train": 256,
+      "validation": 128
+    },
+    "relational_path_lengths": {
+      "test": [
+        4
+      ],
+      "train": [
+        2
+      ],
+      "validation": [
+        3
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "architecture_changed": false,
+  "conditions": [
+    "C0_ORACLE_PARSER_A3_EXECUTOR",
+    "C1_LEARNED_PARSER_A3_EXECUTOR",
+    "C2_LEARNED_PARSER_ORACLE_EXECUTOR",
+    "C3_RAW_END_TO_END"
+  ],
+  "effective_batch": 12,
+  "experiment": "crucible_explicit_role_binding_gate_20251025_v1",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "new_executor_training": false,
+  "protocol": "docs/CRUCIBLE_EXPLICIT_ROLE_BINDING_GATE_PROTOCOL_20251025.md",
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "steps": 500
+}

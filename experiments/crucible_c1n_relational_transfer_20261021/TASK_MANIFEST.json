@@ -1,0 +1,69 @@
+{
+  "experiment": "crucible_c1n_relational_transfer_20261021",
+  "oracle_checks": 36000,
+  "oracle_failures": 0,
+  "seeds": {
+    "1337": {
+      "conditions": {
+        "depth_extension": 1530,
+        "hidden_invariant_change": 1534,
+        "isomorphic_relabel": 1469,
+        "misleading_probe": 1546,
+        "no_probe": 1469,
+        "role_break": 1516,
+        "role_permutation": 1528,
+        "surface_decoy": 1408
+      },
+      "count": 12000,
+      "task_digest": "d6185c148a8dd56ae69caeb06df9bee7e60484fdbd26e11b65933a40de2465a2",
+      "templates": {
+        "asymmetric": 3015,
+        "balanced": 2904,
+        "deep": 3087,
+        "wide": 2994
+      }
+    },
+    "2026": {
+      "conditions": {
+        "depth_extension": 1508,
+        "hidden_invariant_change": 1535,
+        "isomorphic_relabel": 1437,
+        "misleading_probe": 1476,
+        "no_probe": 1551,
+        "role_break": 1553,
+        "role_permutation": 1464,
+        "surface_decoy": 1476
+      },
+      "count": 12000,
+      "task_digest": "39cf4fef2f4221c79b63e80d7caae80748d3e48f0135c4cfa7567b19722181e9",
+      "templates": {
+        "asymmetric": 2997,
+        "balanced": 2979,
+        "deep": 2956,
+        "wide": 3068
+      }
+    },
+    "42": {
+      "conditions": {
+        "depth_extension": 1461,
+        "hidden_invariant_change": 1491,
+        "isomorphic_relabel": 1535,
+        "misleading_probe": 1530,
+        "no_probe": 1538,
+        "role_break": 1508,
+        "role_permutation": 1411,
+        "surface_decoy": 1526
+      },
+      "count": 12000,
+      "task_digest": "6739d32a1b7a261989099c2a6077ca664c8970cd6140c21907f53502e6bc282c",
+      "templates": {
+        "asymmetric": 3026,
+        "balanced": 3012,
+        "deep": 2914,
+        "wide": 3048
+      }
+    }
+  },
+  "target_labels_used_for_policy": false,
+  "task_count_total": 36000
+}

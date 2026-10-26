@@ -1,0 +1,1619 @@
+{
+  "pair_summary": {
+    "(0,0)": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "partitions": [
+        "balanced_b",
+        "balanced_d"
+      ],
+      "validation_observations": 8
+    },
+    "(0,1)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(0,2)": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "partitions": [
+        "balanced_b"
+      ],
+      "validation_observations": 4
+    },
+    "(0,3)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(0,4)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(0,5)": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "partitions": [
+        "balanced_d"
+      ],
+      "validation_observations": 4
+    },
+    "(0,6)": {
+      "accuracy": 0.75,
+      "correct": 3,
+      "partitions": [
+        "balanced_c"
+      ],
+      "validation_observations": 4
+    },
+    "(0,7)": {
+      "accuracy": 0.5,
+      "correct": 4,
+      "partitions": [
+        "balanced_a",
+        "balanced_b"
+      ],
+      "validation_observations": 8
+    },
+    "(0,8)": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "partitions": [
+        "balanced_c"
+      ],
+      "validation_observations": 4
+    },
+    "(0,9)": {
+      "accuracy": 1.0,
+      "correct": 8,
+      "partitions": [
+        "balanced_a",
+        "balanced_d"
+      ],
+      "validation_observations": 8
+    },
+    "(1,0)": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "partitions": [
+        "balanced_a"
+      ],
+      "validation_observations": 4
+    },
+    "(1,1)": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "partitions": [
+        "balanced_c"
+      ],
+      "validation_observations": 4
+    },
+    "(1,2)": {
+      "accuracy": 0.25,
+      "correct": 2,
+      "partitions": [
+        "balanced_b",
+        "balanced_d"
+      ],
+      "validation_observations": 8
+    },
+    "(1,3)": {
+      "accuracy": 0.75,
+      "correct": 3,
+      "partitions": [
+        "balanced_c"
+      ],
+      "validation_observations": 4
+    },
+    "(1,4)": {
+      "accuracy": 1.0,
+      "correct": 12,
+      "partitions": [
+        "balanced_a",
+        "balanced_b",
+        "balanced_d"
+      ],
+      "validation_observations": 12
+    },
+    "(1,5)": {
+      "accuracy": 0.375,
+      "correct": 3,
+      "partitions": [
+        "balanced_a",
+        "balanced_c"
+      ],
+      "validation_observations": 8
+    },
+    "(1,6)": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "partitions": [
+        "balanced_b"
+      ],
+      "validation_observations": 4
+    },
+    "(1,7)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(1,8)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(2,0)": {
+      "accuracy": 0.75,
+      "correct": 3,
+      "partitions": [
+        "balanced_d"
+      ],
+      "validation_observations": 4
+    },
+    "(2,1)": {
+      "accuracy": 0.5,
+      "correct": 4,
+      "partitions": [
+        "balanced_a",
+        "balanced_b"
+      ],
+      "validation_observations": 8
+    },
+    "(2,2)": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "partitions": [
+        "balanced_a",
+        "balanced_c"
+      ],
+      "validation_observations": 8
+    },
+    "(2,3)": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "partitions": [
+        "balanced_b"
+      ],
+      "validation_observations": 4
+    },
+    "(2,4)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(2,5)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(2,6)": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "partitions": [
+        "balanced_c",
+        "balanced_d"
+      ],
+      "validation_observations": 8
+    },
+    "(2,7)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(3,0)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(3,1)": {
+      "accuracy": 0.75,
+      "correct": 3,
+      "partitions": [
+        "balanced_b"
+      ],
+      "validation_observations": 4
+    },
+    "(3,2)": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "partitions": [
+        "balanced_c"
+      ],
+      "validation_observations": 4
+    },
+    "(3,3)": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "partitions": [
+        "balanced_a",
+        "balanced_d"
+      ],
+      "validation_observations": 8
+    },
+    "(3,4)": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "partitions": [
+        "balanced_c",
+        "balanced_d"
+      ],
+      "validation_observations": 8
+    },
+    "(3,5)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(3,6)": {
+      "accuracy": 0.875,
+      "correct": 7,
+      "partitions": [
+        "balanced_a",
+        "balanced_b"
+      ],
+      "validation_observations": 8
+    },
+    "(4,0)": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "partitions": [
+        "balanced_a"
+      ],
+      "validation_observations": 4
+    },
+    "(4,1)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(4,2)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(4,3)": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "partitions": [
+        "balanced_c",
+        "balanced_d"
+      ],
+      "validation_observations": 8
+    },
+    "(4,4)": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "partitions": [
+        "balanced_b"
+      ],
+      "validation_observations": 4
+    },
+    "(4,5)": {
+      "accuracy": 1.0,
+      "correct": 8,
+      "partitions": [
+        "balanced_b",
+        "balanced_d"
+      ],
+      "validation_observations": 8
+    },
+    "(5,0)": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "partitions": [
+        "balanced_c"
+      ],
+      "validation_observations": 4
+    },
+    "(5,1)": {
+      "accuracy": 0.5,
+      "correct": 4,
+      "partitions": [
+        "balanced_a",
+        "balanced_d"
+      ],
+      "validation_observations": 8
+    },
+    "(5,2)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(5,3)": {
+      "accuracy": 1.0,
+      "correct": 8,
+      "partitions": [
+        "balanced_a",
+        "balanced_b"
+      ],
+      "validation_observations": 8
+    },
+    "(5,4)": {
+      "accuracy": 0.75,
+      "correct": 3,
+      "partitions": [
+        "balanced_c"
+      ],
+      "validation_observations": 4
+    },
+    "(6,0)": {
+      "accuracy": 0.75,
+      "correct": 3,
+      "partitions": [
+        "balanced_b"
+      ],
+      "validation_observations": 4
+    },
+    "(6,1)": {
+      "accuracy": 0.5,
+      "correct": 4,
+      "partitions": [
+        "balanced_b",
+        "balanced_d"
+      ],
+      "validation_observations": 8
+    },
+    "(6,2)": {
+      "accuracy": 0.25,
+      "correct": 3,
+      "partitions": [
+        "balanced_a",
+        "balanced_c",
+        "balanced_d"
+      ],
+      "validation_observations": 12
+    },
+    "(6,3)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(7,0)": {
+      "accuracy": 0.5,
+      "correct": 4,
+      "partitions": [
+        "balanced_a",
+        "balanced_c"
+      ],
+      "validation_observations": 8
+    },
+    "(7,1)": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "partitions": [
+        "balanced_d"
+      ],
+      "validation_observations": 4
+    },
+    "(7,2)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(8,0)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    },
+    "(8,1)": {
+      "accuracy": 1.0,
+      "correct": 8,
+      "partitions": [
+        "balanced_a",
+        "balanced_c"
+      ],
+      "validation_observations": 8
+    },
+    "(9,0)": {
+      "accuracy": null,
+      "correct": 0,
+      "partitions": [],
+      "validation_observations": 0
+    }
+  },
+  "preflight": {
+    "architecture_source": "tools/run_crucible_stage_a_instrumentation_20261022.py",
+    "errors": [],
+    "experiment": "crucible_digitwise_balanced_holdouts_20251025",
+    "interfaces": [
+      "canonical",
+      "factorized"
+    ],
+    "partitions": {
+      "balanced_a": {
+        "errors": [],
+        "interface_errors": {
+          "canonical": [],
+          "factorized": []
+        },
+        "partition": "balanced_a",
+        "pass": true,
+        "train_count": 40,
+        "train_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "validation_by_absolute_difference": {
+          "0": 2,
+          "1": 2,
+          "2": 1,
+          "3": 2,
+          "4": 4,
+          "7": 3,
+          "9": 1
+        },
+        "validation_by_first": {
+          "0": 2,
+          "1": 3,
+          "2": 2,
+          "3": 2,
+          "4": 1,
+          "5": 2,
+          "6": 1,
+          "7": 1,
+          "8": 1
+        },
+        "validation_by_second": {
+          "0": 3,
+          "1": 3,
+          "2": 2,
+          "3": 2,
+          "4": 1,
+          "5": 1,
+          "6": 1,
+          "7": 1,
+          "9": 1
+        },
+        "validation_by_sum": {
+          "1": 1,
+          "3": 1,
+          "4": 2,
+          "5": 1,
+          "6": 3,
+          "7": 2,
+          "8": 2,
+          "9": 3
+        },
+        "validation_count": 15,
+        "validation_diagonal_pairs": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "validation_pairs": [
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            8,
+            1
+          ]
+        ]
+      },
+      "balanced_b": {
+        "errors": [],
+        "interface_errors": {
+          "canonical": [],
+          "factorized": []
+        },
+        "partition": "balanced_b",
+        "pass": true,
+        "train_count": 40,
+        "train_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "validation_by_absolute_difference": {
+          "0": 2,
+          "1": 4,
+          "2": 3,
+          "3": 2,
+          "5": 2,
+          "6": 1,
+          "7": 1
+        },
+        "validation_by_first": {
+          "0": 3,
+          "1": 3,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 1,
+          "6": 2
+        },
+        "validation_by_second": {
+          "0": 2,
+          "1": 3,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 1,
+          "6": 2,
+          "7": 1
+        },
+        "validation_by_sum": {
+          "0": 1,
+          "2": 1,
+          "3": 2,
+          "4": 1,
+          "5": 2,
+          "6": 1,
+          "7": 3,
+          "8": 2,
+          "9": 2
+        },
+        "validation_count": 15,
+        "validation_diagonal_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "validation_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            1
+          ]
+        ]
+      },
+      "balanced_c": {
+        "errors": [],
+        "interface_errors": {
+          "canonical": [],
+          "factorized": []
+        },
+        "partition": "balanced_c",
+        "pass": true,
+        "train_count": 40,
+        "train_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "validation_by_absolute_difference": {
+          "0": 2,
+          "1": 4,
+          "2": 1,
+          "4": 3,
+          "5": 1,
+          "6": 1,
+          "7": 2,
+          "8": 1
+        },
+        "validation_by_first": {
+          "0": 2,
+          "1": 3,
+          "2": 2,
+          "3": 2,
+          "4": 1,
+          "5": 2,
+          "6": 1,
+          "7": 1,
+          "8": 1
+        },
+        "validation_by_second": {
+          "0": 2,
+          "1": 2,
+          "2": 3,
+          "3": 2,
+          "4": 2,
+          "5": 1,
+          "6": 2,
+          "8": 1
+        },
+        "validation_by_sum": {
+          "2": 1,
+          "4": 2,
+          "5": 2,
+          "6": 2,
+          "7": 3,
+          "8": 3,
+          "9": 2
+        },
+        "validation_count": 15,
+        "validation_diagonal_pairs": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "validation_pairs": [
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            8,
+            1
+          ]
+        ]
+      },
+      "balanced_d": {
+        "errors": [],
+        "interface_errors": {
+          "canonical": [],
+          "factorized": []
+        },
+        "partition": "balanced_d",
+        "pass": true,
+        "train_count": 40,
+        "train_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "validation_by_absolute_difference": {
+          "0": 2,
+          "1": 4,
+          "2": 1,
+          "3": 1,
+          "4": 3,
+          "5": 2,
+          "6": 1,
+          "9": 1
+        },
+        "validation_by_first": {
+          "0": 3,
+          "1": 2,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 1,
+          "6": 2,
+          "7": 1
+        },
+        "validation_by_second": {
+          "0": 2,
+          "1": 3,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 2,
+          "6": 1,
+          "9": 1
+        },
+        "validation_by_sum": {
+          "0": 1,
+          "2": 1,
+          "3": 1,
+          "5": 2,
+          "6": 2,
+          "7": 3,
+          "8": 3,
+          "9": 2
+        },
+        "validation_count": 15,
+        "validation_diagonal_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "validation_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            1
+          ]
+        ]
+      }
+    },
+    "pass": true,
+    "problematic_pair_rotation": {
+      "(1,5)": {
+        "balanced_a": true,
+        "balanced_b": false,
+        "balanced_c": true,
+        "balanced_d": false
+      },
+      "(2,2)": {
+        "balanced_a": true,
+        "balanced_b": false,
+        "balanced_c": true,
+        "balanced_d": false
+      },
+      "(3,3)": {
+        "balanced_a": true,
+        "balanced_b": false,
+        "balanced_c": false,
+        "balanced_d": true
+      },
+      "(5,1)": {
+        "balanced_a": true,
+        "balanced_b": false,
+        "balanced_c": false,
+        "balanced_d": true
+      }
+    },
+    "sealed_test_accessed": false,
+    "seeds": [
+      42,
+      1337
+    ],
+    "status": "passed_before_training",
+    "steps": 500,
+    "trainer_source": "tools/run_crucible_digitwise_addition_ladder_20261025.py",
+    "training_performed": false
+  }
+}

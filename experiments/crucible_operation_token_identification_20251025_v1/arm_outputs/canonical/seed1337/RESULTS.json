@@ -1,0 +1,26 @@
+{
+  "arm_id": "operation_token_canonical_seed1337",
+  "checkpoint": "experiments/crucible_operation_token_identification_20251025_v1/arm_outputs/canonical/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "83baacb33047d8eba9e6c4279c9f3b19fc654cd33d104fbd84d42b6af49e7ca9",
+  "elapsed_seconds": 140.22842940798728,
+  "fit_pass": true,
+  "gate_pass": true,
+  "interface": "canonical",
+  "seed": 1337,
+  "steps": 500,
+  "train": {
+    "examples": 80,
+    "mean_target_loss": 8.940696005765858e-08,
+    "teacher_forced_exact_accuracy": 1.0,
+    "teacher_forced_token_accuracy": 1.0
+  },
+  "train_exact": 1.0,
+  "validation": {
+    "examples": 20,
+    "mean_target_loss": 8.940696005765858e-08,
+    "teacher_forced_exact_accuracy": 1.0,
+    "teacher_forced_token_accuracy": 1.0
+  },
+  "validation_exact": 1.0,
+  "validation_pass": true
+}

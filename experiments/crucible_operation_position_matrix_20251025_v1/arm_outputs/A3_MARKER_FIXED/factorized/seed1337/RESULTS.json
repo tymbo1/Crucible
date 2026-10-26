@@ -1,0 +1,27 @@
+{
+  "arm_id": "A3_MARKER_FIXED_factorized_seed1337",
+  "checkpoint": "experiments/crucible_operation_position_matrix_20251025_v1/arm_outputs/A3_MARKER_FIXED/factorized/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "0f3932489224514e4f0ab6bbcad949af8fa3beeaf837bc65c0afe2aad0118867",
+  "condition": "A3_MARKER_FIXED",
+  "elapsed_seconds": 112.91646325401962,
+  "fit_pass": true,
+  "initial_dense_state_digest": "07371cd137e45b74164e9c79c0ce95176259cbdb742778d21004b3f45b309714",
+  "interface": "factorized",
+  "seed": 1337,
+  "steps": 500,
+  "train": {
+    "examples": 80,
+    "mean_target_loss": 0.0004321375912695657,
+    "teacher_forced_exact_accuracy": 1.0,
+    "teacher_forced_token_accuracy": 1.0
+  },
+  "train_exact": 1.0,
+  "validation": {
+    "examples": 20,
+    "mean_target_loss": 0.0005110041296575218,
+    "teacher_forced_exact_accuracy": 1.0,
+    "teacher_forced_token_accuracy": 1.0
+  },
+  "validation_exact": 1.0,
+  "validation_pass": true
+}

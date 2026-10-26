@@ -1,0 +1,37 @@
+{
+  "experiment": "crucible_staged_arithmetic_curriculum_20261024",
+  "preflight_pass": true,
+  "results": [
+    {
+      "arm": "curriculum",
+      "elapsed_seconds": 655.8535816310323,
+      "seed": 42,
+      "steps": 3000
+    },
+    {
+      "arm": "direct",
+      "elapsed_seconds": 653.7568065340165,
+      "seed": 42,
+      "steps": 3000
+    },
+    {
+      "arm": "curriculum",
+      "elapsed_seconds": 637.4035529499524,
+      "seed": 1337,
+      "steps": 3000
+    },
+    {
+      "arm": "direct",
+      "elapsed_seconds": 657.2446704730392,
+      "seed": 1337,
+      "steps": 3000
+    }
+  ],
+  "status": "completed",
+  "successor_reference": {
+    "exists": true,
+    "path": "experiments/crucible_operand_representation_20261024/factorized/seed42/checkpoints/step_1000.pt",
+    "sha256": "823234e6226a18b30897e7383d10a9630046019585103c1845cdcf8170477ef7"
+  },
+  "test_evaluated": false
+}

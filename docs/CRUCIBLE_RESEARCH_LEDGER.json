@@ -1,0 +1,85 @@
+{
+  "schema_version": "crucible_research_ledger_v1",
+  "updated": "2026-10-26",
+  "status_values": [
+    "ESTABLISHED",
+    "FAILED",
+    "INCONCLUSIVE",
+    "UNTESTED"
+  ],
+  "records": [
+    {
+      "id": "authority-two-candidate-s4",
+      "status": "ESTABLISHED",
+      "title": "Causally valid two-candidate authority selection",
+      "hypothesis": "A final decision interface can use a late authority cue to select between two candidate operations when trained end to end.",
+      "mechanisms": ["authority-selection", "causal-information-flow", "final-decision-readout", "counterfactual-evaluation"],
+      "interventions": ["S4 candidate-slot decision-only readout"],
+      "controls": ["D0 late candidate pointer", "D1 early candidate pointer", "S0-S3 readout ladder", "four seeds/interfaces"],
+      "result": "All four S4 arms reached 40/40 validation selection, 20/20 counterfactual flips and 20/20 paired correctness, including the unseen layout.",
+      "limits": ["Two candidates", "Synthetic authority cue", "Does not establish arbitrary instruction hierarchy or autonomous reasoning"],
+      "unresolved": ["Which internal pathway mediates the final decision", "Whether the result transfers to variable candidate counts"],
+      "artifacts": [
+        "experiments/crucible_d2_readout_competence_ladder_20261026_v1/REPORT_FINAL.md",
+        "experiments/crucible_d2_readout_competence_ladder_20261026_v1/SUMMARY.json",
+        "docs/CRUCIBLE_D2_READOUT_COMPETENCE_LADDER_PROTOCOL_20261026.md"
+      ],
+      "novelty_terms": ["S4", "candidate-slot", "two-candidate", "late authority", "final decision"]
+    },
+    {
+      "id": "authority-component-ablation",
+      "status": "INCONCLUSIVE",
+      "title": "D2 component ablation",
+      "hypothesis": "The S4 improvement is attributable to candidate-slot readout and/or decision-only training rather than the original D2 configuration.",
+      "mechanisms": ["readout-design", "decision-only-objective", "multi-task-loss", "training-trajectory"],
+      "interventions": ["2x2 candidate-slot/operation-class by decision-only/multi-task comparison"],
+      "controls": ["Reused accepted S4 C1", "Reused original D2 C4", "new crossed C2 and C3", "canonical/factorized interfaces", "seeds 42 and 1337"],
+      "result": "C1, C2 and C3 all passed; C4 remained below training competence. Operation-class decision-only was sufficient in the two-candidate task, but C4 was historical and not retrained under the crossed-cell trajectory.",
+      "limits": ["C4 is a reused historical checkpoint", "Objective and training trajectory are not causally separated"],
+      "unresolved": ["Whether the original D2 failure is caused by multi-task loss, its interaction with operation-class readout, or schedule/initialization"],
+      "artifacts": [
+        "experiments/crucible_d2_component_ablation_20261026_v1/REPORT_FINAL.md",
+        "experiments/crucible_d2_component_ablation_20261026_v1/SUMMARY.json",
+        "docs/CRUCIBLE_D2_COMPONENT_ABLATION_PROTOCOL_20261026.md"
+      ],
+      "novelty_terms": ["component ablation", "operation-class", "candidate-slot", "multi-task", "decision-only"]
+    },
+    {
+      "id": "shared-scorer-compositional-transfer",
+      "status": "FAILED",
+      "title": "Dynamic shared scoring for compositional authority transfer",
+      "hypothesis": "A shared query/candidate scorer will transfer authority selection from three candidates to four candidates and unseen layouts.",
+      "mechanisms": ["shared-candidate-scoring", "candidate-count-transfer", "relation-based-authority", "abstention"],
+      "interventions": ["Dynamic candidate-pointer readout"],
+      "controls": ["Three-candidate training", "held-out three-candidate layouts", "four-candidate transfer", "MATCH_A/MATCH_D relations", "NONE abstention", "two interfaces", "two seeds"],
+      "result": "The gate achieved 72/120 four-candidate pointer accuracy and 0/24 paired counterfactual correctness. Abstention was 24/24; positional transfer was poor and relation matching was partial.",
+      "limits": ["Synthetic operation-marker task", "New readout rather than the original S4 head", "Does not prove shared scoring impossible"],
+      "unresolved": ["Candidate extraction versus candidate matching", "Whether explicit candidate identifiers improve cardinality transfer"],
+      "artifacts": [
+        "experiments/crucible_compositional_authority_transfer_20261026_v1/REPORT_FINAL.md",
+        "experiments/crucible_compositional_authority_transfer_20261026_v1/SUMMARY.json",
+        "docs/CRUCIBLE_COMPOSITIONAL_AUTHORITY_TRANSFER_PROTOCOL_20261026.md"
+      ],
+      "novelty_terms": ["shared scorer", "dynamic pointer", "four candidates", "variable cardinality", "MATCH_A", "MATCH_D"]
+    },
+    {
+      "id": "explicit-id-cardinality-transfer",
+      "status": "FAILED",
+      "title": "Explicit candidate-ID matching across cardinalities",
+      "hypothesis": "Separating candidate-ID extraction from matching will reveal whether shared scoring can transfer across 2/3 to 4/5/8 candidates.",
+      "mechanisms": ["candidate-extraction", "candidate-matching", "shared-candidate-scoring", "candidate-permutation", "cardinality-transfer"],
+      "interventions": ["Matched fixed-slot head versus shared scorer", "deterministic identifier oracle"],
+      "controls": ["Same backbone family", "same generated records", "same optimizer and update budget", "candidate permutations", "abstention"],
+      "result": "The deterministic oracle passed 2064/2064 rows. None of the eight learned arms passed the 95% training gate: fixed-slot arms reached 384--388/576 and shared-scorer arms 444--497/576. Learned transfer is therefore not interpretable.",
+      "limits": ["No learned arm mastered the training task", "Does not show that shared scoring is impossible"],
+      "unresolved": ["Whether candidate extraction, matching, optimization or task representation caused the learned underfit", "Whether a competent shared scorer can transfer across cardinalities"],
+      "artifacts": [
+        "docs/CRUCIBLE_SHARED_CANDIDATE_SCORING_CARDINALITY_PROTOCOL_20261026.md",
+        "tools/run_crucible_shared_candidate_scoring_cardinality_20261026.py",
+        "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/REPORT_FINAL.md",
+        "experiments/crucible_shared_candidate_scoring_cardinality_20261026_v1/SUMMARY.json"
+      ],
+      "novelty_terms": ["candidate ID", "2/3 candidates", "4/5/8 candidates", "oracle representation", "permutation consistency"]
+    }
+  ]
+}

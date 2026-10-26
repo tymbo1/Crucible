@@ -1,0 +1,30 @@
+{
+  "feature_names": [
+    "family_vector",
+    "family_grid",
+    "family_graph",
+    "family_set",
+    "variant_match",
+    "surface_match",
+    "structural_match",
+    "environment_match",
+    "probe_available",
+    "verifier_available",
+    "probe_agrees",
+    "confidence",
+    "provenance_valid"
+  ],
+  "test": {
+    "count": 1000,
+    "task_digest": "5aafa6a4d878bc4f1333fea2701be8e0da437878630009c83bd3dd4c0fac0378"
+  },
+  "test_labels_not_used_as_features": true,
+  "train": {
+    "count": 6000,
+    "task_digest": "c769d965e43b846d5fc73066eeaf13d9219b29e10a4a23a892edd85c523e903a"
+  },
+  "validation": {
+    "count": 1500,
+    "task_digest": "5f31282e67ee96747831e507885d56fd247fec6810ab6a90c9da5a387b79f38d"
+  }
+}

@@ -1,0 +1,4115 @@
+{
+  "a0": {
+    "canonical_seed1337": {
+      "validation_accuracy": 0.55,
+      "validation_correct": 11,
+      "validation_rows": 20
+    },
+    "canonical_seed42": {
+      "validation_accuracy": 0.6,
+      "validation_correct": 12,
+      "validation_rows": 20
+    },
+    "factorized_seed1337": {
+      "validation_accuracy": 0.5,
+      "validation_correct": 10,
+      "validation_rows": 20
+    },
+    "factorized_seed42": {
+      "validation_accuracy": 0.6,
+      "validation_correct": 12,
+      "validation_rows": 20
+    }
+  },
+  "a1": [
+    {
+      "arm_id": "A1_SINGLE_TOKEN_MARKER_canonical_seed42",
+      "by_operation": {
+        "SELECT_FIRST": {
+          "accuracy": 0.58,
+          "correct": 29,
+          "eos_correct": 50,
+          "examples": 50,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.58,
+          "full_sequence_correct": 29
+        },
+        "SELECT_SECOND": {
+          "accuracy": 0.62,
+          "correct": 31,
+          "eos_correct": 50,
+          "examples": 50,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.62,
+          "full_sequence_correct": 31
+        }
+      },
+      "by_pair_kind": {
+        "equal": {
+          "accuracy": 1.0,
+          "correct": 20,
+          "eos_correct": 20,
+          "examples": 20,
+          "format_errors": 0,
+          "full_sequence_accuracy": 1.0,
+          "full_sequence_correct": 20
+        },
+        "unequal": {
+          "accuracy": 0.5,
+          "correct": 40,
+          "eos_correct": 80,
+          "examples": 80,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.5,
+          "full_sequence_correct": 40
+        }
+      },
+      "checkpoint": "experiments/crucible_operation_marker_interface_20251025_v3/arm_outputs/canonical/seed42/checkpoint.pt",
+      "checkpoint_sha256": "90ac14907837d9009cd11ad7606b3967f1e115a076ad6c4eda42e2986c045ebc",
+      "condition": "A1_SINGLE_TOKEN_MARKER",
+      "elapsed_seconds": 104.56190926901763,
+      "fit_pass": false,
+      "gate_pass": false,
+      "initial_dense_state_digest": "8ef53f7ba86230a50c4103cefb0320f7e8cf5161dfc913711d6275a1a7b98c4a",
+      "interface": "canonical",
+      "output_token_train_accuracy": 0.6,
+      "output_token_validation_accuracy": 0.6,
+      "paired": {
+        "all": {
+          "both_operations_correct": 10,
+          "both_operations_correct_rate": 0.2,
+          "correct_and_switched": 0,
+          "correct_and_switched_rate": 0.0,
+          "pair_groups": 50,
+          "pairs": [
+            {
+              "first_correct": true,
+              "first_prediction": "0",
+              "pair": [
+                0,
+                0
+              ],
+              "second_correct": true,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "0",
+              "pair": [
+                0,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "0",
+              "pair": [
+                0,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                0,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "0",
+              "pair": [
+                1,
+                0
+              ],
+              "second_correct": true,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                1,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                1,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "8",
+              "pair": [
+                1,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "0",
+              "pair": [
+                2,
+                0
+              ],
+              "second_correct": true,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                3,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                3,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                4,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                4,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                5,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                5,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                5,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "7",
+              "pair": [
+                5,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                6,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                6,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                7,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                7,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                7,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "8",
+              "pair": [
+                7,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                8,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            }
+          ],
+          "prediction_switch_rate": 0.0,
+          "predictions_switched": 0
+        },
+        "unequal": {
+          "both_operations_correct": 0,
+          "both_operations_correct_rate": 0.0,
+          "correct_and_switched": 0,
+          "correct_and_switched_rate": 0.0,
+          "pair_groups": 40,
+          "pairs": [
+            {
+              "first_correct": true,
+              "first_prediction": "0",
+              "pair": [
+                0,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "0",
+              "pair": [
+                0,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                0,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "0",
+              "pair": [
+                1,
+                0
+              ],
+              "second_correct": true,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                1,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                1,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "8",
+              "pair": [
+                1,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "0",
+              "pair": [
+                2,
+                0
+              ],
+              "second_correct": true,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                3,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                3,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                4,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                4,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                5,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                5,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                5,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "7",
+              "pair": [
+                5,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                6,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                6,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                7,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                7,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                7,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "8",
+              "pair": [
+                7,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                8,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            }
+          ],
+          "prediction_switch_rate": 0.0,
+          "predictions_switched": 0
+        }
+      },
+      "prediction_train_metrics": {
+        "accuracy": 0.6,
+        "correct": 60,
+        "eos_correct": 100,
+        "examples": 100,
+        "format_errors": 0,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 60
+      },
+      "prediction_validation_metrics": {
+        "accuracy": 0.6,
+        "correct": 12,
+        "eos_correct": 20,
+        "examples": 20,
+        "format_errors": 0,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 12
+      },
+      "seed": 42,
+      "steps": 500,
+      "train": {
+        "examples": 80,
+        "mean_target_loss": 0.3243136748671532,
+        "teacher_forced_exact_accuracy": 0.6,
+        "teacher_forced_token_accuracy": 0.8
+      },
+      "train_accuracy": 0.6,
+      "train_exact": 0.6,
+      "unequal_validation_accuracy": 0.5,
+      "validation": {
+        "examples": 20,
+        "mean_target_loss": 0.737466698884964,
+        "teacher_forced_exact_accuracy": 0.6,
+        "teacher_forced_token_accuracy": 0.8
+      },
+      "validation_accuracy": 0.6,
+      "validation_exact": 0.6,
+      "validation_pass": false
+    },
+    {
+      "arm_id": "A1_SINGLE_TOKEN_MARKER_canonical_seed1337",
+      "by_operation": {
+        "SELECT_FIRST": {
+          "accuracy": 0.6,
+          "correct": 30,
+          "eos_correct": 49,
+          "examples": 50,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.6,
+          "full_sequence_correct": 30
+        },
+        "SELECT_SECOND": {
+          "accuracy": 0.6,
+          "correct": 30,
+          "eos_correct": 49,
+          "examples": 50,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.6,
+          "full_sequence_correct": 30
+        }
+      },
+      "by_pair_kind": {
+        "equal": {
+          "accuracy": 1.0,
+          "correct": 20,
+          "eos_correct": 20,
+          "examples": 20,
+          "format_errors": 0,
+          "full_sequence_accuracy": 1.0,
+          "full_sequence_correct": 20
+        },
+        "unequal": {
+          "accuracy": 0.5,
+          "correct": 40,
+          "eos_correct": 78,
+          "examples": 80,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.5,
+          "full_sequence_correct": 40
+        }
+      },
+      "checkpoint": "experiments/crucible_operation_marker_interface_20251025_v3/arm_outputs/canonical/seed1337/checkpoint.pt",
+      "checkpoint_sha256": "792056525489f3da9f29088e1a67713ba12e93af8408e0e8c1bf01107a9889b1",
+      "condition": "A1_SINGLE_TOKEN_MARKER",
+      "elapsed_seconds": 100.60715138196247,
+      "fit_pass": false,
+      "gate_pass": false,
+      "initial_dense_state_digest": "07371cd137e45b74164e9c79c0ce95176259cbdb742778d21004b3f45b309714",
+      "interface": "canonical",
+      "output_token_train_accuracy": 0.6,
+      "output_token_validation_accuracy": 0.6,
+      "paired": {
+        "all": {
+          "both_operations_correct": 10,
+          "both_operations_correct_rate": 0.2,
+          "correct_and_switched": 0,
+          "correct_and_switched_rate": 0.0,
+          "pair_groups": 50,
+          "pairs": [
+            {
+              "first_correct": true,
+              "first_prediction": "0",
+              "pair": [
+                0,
+                0
+              ],
+              "second_correct": true,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "0",
+              "pair": [
+                0,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "0",
+              "pair": [
+                0,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                0,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "0",
+              "pair": [
+                1,
+                0
+              ],
+              "second_correct": true,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                1,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "0",
+              "pair": [
+                2,
+                0
+              ],
+              "second_correct": true,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                3,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                3,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                3,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                3,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                4,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                4,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                5,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                6,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                6,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                7,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                7,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                7,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                7,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "8",
+              "pair": [
+                7,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                8,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                8,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            }
+          ],
+          "prediction_switch_rate": 0.0,
+          "predictions_switched": 0
+        },
+        "unequal": {
+          "both_operations_correct": 0,
+          "both_operations_correct_rate": 0.0,
+          "correct_and_switched": 0,
+          "correct_and_switched_rate": 0.0,
+          "pair_groups": 40,
+          "pairs": [
+            {
+              "first_correct": true,
+              "first_prediction": "0",
+              "pair": [
+                0,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "0",
+              "pair": [
+                0,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                0,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "0",
+              "pair": [
+                1,
+                0
+              ],
+              "second_correct": true,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                1,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "0",
+              "pair": [
+                2,
+                0
+              ],
+              "second_correct": true,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                3,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                3,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                3,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                3,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                4,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                4,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                5,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                6,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                6,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                7,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                7,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                7,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                7,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "8",
+              "pair": [
+                7,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                8,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                8,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            }
+          ],
+          "prediction_switch_rate": 0.0,
+          "predictions_switched": 0
+        }
+      },
+      "prediction_train_metrics": {
+        "accuracy": 0.6,
+        "correct": 60,
+        "eos_correct": 98,
+        "examples": 100,
+        "format_errors": 0,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 60
+      },
+      "prediction_validation_metrics": {
+        "accuracy": 0.6,
+        "correct": 12,
+        "eos_correct": 18,
+        "examples": 20,
+        "format_errors": 0,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 12
+      },
+      "seed": 1337,
+      "steps": 500,
+      "train": {
+        "examples": 80,
+        "mean_target_loss": 0.32933248579502106,
+        "teacher_forced_exact_accuracy": 0.6,
+        "teacher_forced_token_accuracy": 0.8
+      },
+      "train_accuracy": 0.6,
+      "train_exact": 0.6,
+      "unequal_validation_accuracy": 0.5,
+      "validation": {
+        "examples": 20,
+        "mean_target_loss": 0.7764984548091889,
+        "teacher_forced_exact_accuracy": 0.6,
+        "teacher_forced_token_accuracy": 0.75
+      },
+      "validation_accuracy": 0.6,
+      "validation_exact": 0.6,
+      "validation_pass": false
+    },
+    {
+      "arm_id": "A1_SINGLE_TOKEN_MARKER_factorized_seed42",
+      "by_operation": {
+        "SELECT_FIRST": {
+          "accuracy": 0.62,
+          "correct": 31,
+          "eos_correct": 50,
+          "examples": 50,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.62,
+          "full_sequence_correct": 31
+        },
+        "SELECT_SECOND": {
+          "accuracy": 0.58,
+          "correct": 29,
+          "eos_correct": 50,
+          "examples": 50,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.58,
+          "full_sequence_correct": 29
+        }
+      },
+      "by_pair_kind": {
+        "equal": {
+          "accuracy": 1.0,
+          "correct": 20,
+          "eos_correct": 20,
+          "examples": 20,
+          "format_errors": 0,
+          "full_sequence_accuracy": 1.0,
+          "full_sequence_correct": 20
+        },
+        "unequal": {
+          "accuracy": 0.5,
+          "correct": 40,
+          "eos_correct": 80,
+          "examples": 80,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.5,
+          "full_sequence_correct": 40
+        }
+      },
+      "checkpoint": "experiments/crucible_operation_marker_interface_20251025_v3/arm_outputs/factorized/seed42/checkpoint.pt",
+      "checkpoint_sha256": "d2b62c9aa7f28bb6fb08d0182633844546a848705fdae86c9f2e995aa9414d49",
+      "condition": "A1_SINGLE_TOKEN_MARKER",
+      "elapsed_seconds": 115.36317276197951,
+      "fit_pass": false,
+      "gate_pass": false,
+      "initial_dense_state_digest": "8ef53f7ba86230a50c4103cefb0320f7e8cf5161dfc913711d6275a1a7b98c4a",
+      "interface": "factorized",
+      "output_token_train_accuracy": 0.6,
+      "output_token_validation_accuracy": 0.6,
+      "paired": {
+        "all": {
+          "both_operations_correct": 10,
+          "both_operations_correct_rate": 0.2,
+          "correct_and_switched": 0,
+          "correct_and_switched_rate": 0.0,
+          "pair_groups": 50,
+          "pairs": [
+            {
+              "first_correct": true,
+              "first_prediction": "0",
+              "pair": [
+                0,
+                0
+              ],
+              "second_correct": true,
+              "second_prediction": "0"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                0,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                0,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                0,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                1,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                1,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                2,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                3,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                3,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                3,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                4,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                4,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                4,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                5,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "7",
+              "pair": [
+                6,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                7,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                7,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "8",
+              "pair": [
+                7,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                8,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                8,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            }
+          ],
+          "prediction_switch_rate": 0.0,
+          "predictions_switched": 0
+        },
+        "unequal": {
+          "both_operations_correct": 0,
+          "both_operations_correct_rate": 0.0,
+          "correct_and_switched": 0,
+          "correct_and_switched_rate": 0.0,
+          "pair_groups": 40,
+          "pairs": [
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                0,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                0,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                0,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                1,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                1,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                2,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                3,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                3,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                3,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                4,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                4,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                4,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                5,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "7",
+              "pair": [
+                6,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                7,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                7,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "8",
+              "pair": [
+                7,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                8,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                8,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            }
+          ],
+          "prediction_switch_rate": 0.0,
+          "predictions_switched": 0
+        }
+      },
+      "prediction_train_metrics": {
+        "accuracy": 0.6,
+        "correct": 60,
+        "eos_correct": 100,
+        "examples": 100,
+        "format_errors": 0,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 60
+      },
+      "prediction_validation_metrics": {
+        "accuracy": 0.6,
+        "correct": 12,
+        "eos_correct": 20,
+        "examples": 20,
+        "format_errors": 0,
+        "full_sequence_accuracy": 0.6,
+        "full_sequence_correct": 12
+      },
+      "seed": 42,
+      "steps": 500,
+      "train": {
+        "examples": 80,
+        "mean_target_loss": 0.32526972219347955,
+        "teacher_forced_exact_accuracy": 0.6,
+        "teacher_forced_token_accuracy": 0.8
+      },
+      "train_accuracy": 0.6,
+      "train_exact": 0.6,
+      "unequal_validation_accuracy": 0.5,
+      "validation": {
+        "examples": 20,
+        "mean_target_loss": 0.5136735081672669,
+        "teacher_forced_exact_accuracy": 0.6,
+        "teacher_forced_token_accuracy": 0.8
+      },
+      "validation_accuracy": 0.6,
+      "validation_exact": 0.6,
+      "validation_pass": false
+    },
+    {
+      "arm_id": "A1_SINGLE_TOKEN_MARKER_factorized_seed1337",
+      "by_operation": {
+        "SELECT_FIRST": {
+          "accuracy": 0.6,
+          "correct": 30,
+          "eos_correct": 50,
+          "examples": 50,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.6,
+          "full_sequence_correct": 30
+        },
+        "SELECT_SECOND": {
+          "accuracy": 0.56,
+          "correct": 28,
+          "eos_correct": 50,
+          "examples": 50,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.56,
+          "full_sequence_correct": 28
+        }
+      },
+      "by_pair_kind": {
+        "equal": {
+          "accuracy": 0.9,
+          "correct": 18,
+          "eos_correct": 20,
+          "examples": 20,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.9,
+          "full_sequence_correct": 18
+        },
+        "unequal": {
+          "accuracy": 0.5,
+          "correct": 40,
+          "eos_correct": 80,
+          "examples": 80,
+          "format_errors": 0,
+          "full_sequence_accuracy": 0.5,
+          "full_sequence_correct": 40
+        }
+      },
+      "checkpoint": "experiments/crucible_operation_marker_interface_20251025_v3/arm_outputs/factorized/seed1337/checkpoint.pt",
+      "checkpoint_sha256": "a414975ffe44cd2e1763c88ba6c8e00fc24f4f678b71737db8a51d4ee5dc1cd0",
+      "condition": "A1_SINGLE_TOKEN_MARKER",
+      "elapsed_seconds": 112.30699426599313,
+      "fit_pass": false,
+      "gate_pass": false,
+      "initial_dense_state_digest": "07371cd137e45b74164e9c79c0ce95176259cbdb742778d21004b3f45b309714",
+      "interface": "factorized",
+      "output_token_train_accuracy": 0.58,
+      "output_token_validation_accuracy": 0.5,
+      "paired": {
+        "all": {
+          "both_operations_correct": 9,
+          "both_operations_correct_rate": 0.18,
+          "correct_and_switched": 0,
+          "correct_and_switched_rate": 0.0,
+          "pair_groups": 50,
+          "pairs": [
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                0,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                0,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                0,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                0,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                1,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                2,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                2,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                2,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "7",
+              "pair": [
+                2,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                3,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                4,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                4,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                6,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                7,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                7,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                7,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "8",
+              "pair": [
+                7,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                8,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "7",
+              "pair": [
+                8,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "8",
+              "pair": [
+                8,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                8,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            }
+          ],
+          "prediction_switch_rate": 0.0,
+          "predictions_switched": 0
+        },
+        "unequal": {
+          "both_operations_correct": 0,
+          "both_operations_correct_rate": 0.0,
+          "correct_and_switched": 0,
+          "correct_and_switched_rate": 0.0,
+          "pair_groups": 40,
+          "pairs": [
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                0,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "2",
+              "pair": [
+                0,
+                2
+              ],
+              "second_correct": true,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                0,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                1,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "1",
+              "pair": [
+                1,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "2",
+              "pair": [
+                2,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "2"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                2,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                2,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                2,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "7",
+              "pair": [
+                2,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                1
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                3,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "3",
+              "pair": [
+                3,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                4,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                4,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "4",
+              "pair": [
+                4,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                3
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                6
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "5",
+              "pair": [
+                5,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "3",
+              "pair": [
+                6,
+                3
+              ],
+              "second_correct": true,
+              "second_prediction": "3"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                4
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                5
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "6",
+              "pair": [
+                6,
+                7
+              ],
+              "second_correct": false,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "7",
+              "pair": [
+                7,
+                2
+              ],
+              "second_correct": false,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "4",
+              "pair": [
+                7,
+                4
+              ],
+              "second_correct": true,
+              "second_prediction": "4"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "5",
+              "pair": [
+                7,
+                5
+              ],
+              "second_correct": true,
+              "second_prediction": "5"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "6",
+              "pair": [
+                7,
+                6
+              ],
+              "second_correct": true,
+              "second_prediction": "6"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "8",
+              "pair": [
+                7,
+                8
+              ],
+              "second_correct": true,
+              "second_prediction": "8"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "1",
+              "pair": [
+                8,
+                1
+              ],
+              "second_correct": true,
+              "second_prediction": "1"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "7",
+              "pair": [
+                8,
+                7
+              ],
+              "second_correct": true,
+              "second_prediction": "7"
+            },
+            {
+              "first_correct": false,
+              "first_prediction": "9",
+              "pair": [
+                8,
+                9
+              ],
+              "second_correct": true,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                0
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            },
+            {
+              "first_correct": true,
+              "first_prediction": "9",
+              "pair": [
+                9,
+                8
+              ],
+              "second_correct": false,
+              "second_prediction": "9"
+            }
+          ],
+          "prediction_switch_rate": 0.0,
+          "predictions_switched": 0
+        }
+      },
+      "prediction_train_metrics": {
+        "accuracy": 0.58,
+        "correct": 58,
+        "eos_correct": 100,
+        "examples": 100,
+        "format_errors": 0,
+        "full_sequence_accuracy": 0.58,
+        "full_sequence_correct": 58
+      },
+      "prediction_validation_metrics": {
+        "accuracy": 0.5,
+        "correct": 10,
+        "eos_correct": 20,
+        "examples": 20,
+        "format_errors": 0,
+        "full_sequence_accuracy": 0.5,
+        "full_sequence_correct": 10
+      },
+      "seed": 1337,
+      "steps": 500,
+      "train": {
+        "examples": 80,
+        "mean_target_loss": 0.348409216850996,
+        "teacher_forced_exact_accuracy": 0.6,
+        "teacher_forced_token_accuracy": 0.8
+      },
+      "train_accuracy": 0.58,
+      "train_exact": 0.6,
+      "unequal_validation_accuracy": 0.5,
+      "validation": {
+        "examples": 20,
+        "mean_target_loss": 1.0584140300750733,
+        "teacher_forced_exact_accuracy": 0.5,
+        "teacher_forced_token_accuracy": 0.75
+      },
+      "validation_accuracy": 0.5,
+      "validation_exact": 0.5,
+      "validation_pass": false
+    }
+  ],
+  "comparison": {
+    "by_arm": {
+      "canonical_seed1337": {
+        "a0_correct": 60,
+        "a1_correct": 0,
+        "prediction_changes": 8,
+        "rows": 100
+      },
+      "canonical_seed42": {
+        "a0_correct": 60,
+        "a1_correct": 0,
+        "prediction_changes": 6,
+        "rows": 100
+      },
+      "factorized_seed1337": {
+        "a0_correct": 58,
+        "a1_correct": 0,
+        "prediction_changes": 24,
+        "rows": 100
+      },
+      "factorized_seed42": {
+        "a0_correct": 74,
+        "a1_correct": 0,
+        "prediction_changes": 24,
+        "rows": 100
+      }
+    },
+    "matched_rows": 400
+  }
+}

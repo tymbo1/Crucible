@@ -1,0 +1,25 @@
+{
+  "experiment": "crucible_recursive_controller_c1b_l100000_20261021",
+  "generator": "tools/cognitive_task_suite.py",
+  "generator_variant": "v2",
+  "latent_targets": "stored for evaluator only; never supplied as decision-time features",
+  "new_input_count": 640,
+  "record_counts": {
+    "test": 256,
+    "train": 256,
+    "validation": 128
+  },
+  "records_per_family": {
+    "test": 64,
+    "train": 64,
+    "validation": 32
+  },
+  "sealed_c1_input_sha256_overlap_count": 0,
+  "sealed_c1_record_count": 640,
+  "split_paths": {
+    "test": "manifests/test.jsonl",
+    "train": "manifests/train.jsonl",
+    "validation": "manifests/validation.jsonl"
+  },
+  "task_seed": 20261022
+}

@@ -1,0 +1,32 @@
+{
+  "arm": "FIXED_POSITION_CONTROL",
+  "arm_id": "FIXED_POSITION_CONTROL_factorized_seed1337",
+  "checkpoint": "experiments/crucible_position_generalization_gate_20251025_v1/arm_outputs/FIXED_POSITION_CONTROL/factorized/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "df08ff9d738002658051c39b61b406dc7cdbb462cfc970bdfd30a20fb4105eba",
+  "elapsed_seconds": 130.4556118940236,
+  "fit_pass": true,
+  "initial_dense_state_digest": "07371cd137e45b74164e9c79c0ce95176259cbdb742778d21004b3f45b309714",
+  "interface": "factorized",
+  "seed": 1337,
+  "steps": 500,
+  "train": {
+    "examples": 80,
+    "mean_target_loss": 0.00020911264437017962,
+    "teacher_forced_exact_accuracy": 1.0,
+    "teacher_forced_token_accuracy": 1.0
+  },
+  "train_exact": 1.0,
+  "training_template_counts": {
+    "EARLY_PADDED": 0,
+    "FIXED_NEAR_PADDED": 80,
+    "MIDDLE_POSITION": 0
+  },
+  "validation": {
+    "examples": 20,
+    "mean_target_loss": 0.00034037976001854986,
+    "teacher_forced_exact_accuracy": 1.0,
+    "teacher_forced_token_accuracy": 1.0
+  },
+  "validation_exact": 1.0,
+  "validation_pass": true
+}

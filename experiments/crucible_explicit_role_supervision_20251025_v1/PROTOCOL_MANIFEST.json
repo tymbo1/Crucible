@@ -1,0 +1,25 @@
+{
+  "architecture_changed": false,
+  "conditions": [
+    "E0_TUPLE_ONLY_BASELINE",
+    "E1_ROLE_SUPERVISED_CLASSIFIER",
+    "E2_ROLE_SUPERVISED_POINTER",
+    "E3_ORACLE_BINDING",
+    "E4_RAW_END_TO_END"
+  ],
+  "effective_batch": 12,
+  "executor_retrained": false,
+  "experiment": "crucible_explicit_role_supervision_20251025_v1",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "protocol": "docs/CRUCIBLE_EXPLICIT_ROLE_SUPERVISION_PROTOCOL_20251025.md",
+  "role_loss_weight": 1.0,
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "steps": 500
+}

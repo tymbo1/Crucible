@@ -1,0 +1,31 @@
+{
+  "architecture_changed": false,
+  "experiment": "crucible_operation_conditioning_forensics_20251025",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "new_training": false,
+  "patch_controls": [
+    "matched_opposite",
+    "same_operation_other_pair",
+    "random_noise"
+  ],
+  "patch_layers": [
+    0,
+    2,
+    3
+  ],
+  "patch_locations": [
+    "operation_last",
+    "output_position"
+  ],
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "source_s3_root": "experiments/crucible_role_selection_competence_20251025_v5",
+  "source_token_root": "experiments/crucible_operation_token_identification_20251025_v1",
+  "status": "frozen_before_analysis"
+}

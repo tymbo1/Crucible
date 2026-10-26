@@ -1,0 +1,26 @@
+{
+  "arm": "A2_GROUPED_CONSISTENCY",
+  "arm_id": "A2_GROUPED_CONSISTENCY_canonical_seed1337",
+  "checkpoint": "experiments/crucible_paired_positional_exposure_20251025_v1/arm_outputs/A2_GROUPED_CONSISTENCY/canonical/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "8dbc0c3f4fa2f270292b29550eb7a294d5a05e2c7fe1e40c2f5b75ca714b18d5",
+  "consistency_weight": 0.1,
+  "effective_batch": 12,
+  "elapsed_seconds": 349.1050688349642,
+  "expanded_records": 240,
+  "groups": 40,
+  "interface": "canonical",
+  "seed": 1337,
+  "steps": 500,
+  "train_expanded": {
+    "examples": 240,
+    "mean_target_loss": 0.5261851262301207,
+    "teacher_forced_exact_accuracy": 0.475,
+    "teacher_forced_token_accuracy": 0.7375
+  },
+  "train_expanded_exact": 0.475,
+  "training_layout_counts": {
+    "EARLY_PADDED": 80,
+    "FIXED_NEAR_PADDED": 80,
+    "MIDDLE_POSITION": 80
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "checkpoint": "experiments/crucible_explicit_role_supervision_20251025_v3/parser_outputs/factorized/seed1337/checkpoint.pt",
+  "checkpoint_sha256": "1ebc8833f0b5cff346f893cb4b2f6241ceda74fbc704ce1bed1cc5098c5cc135",
+  "interface": "factorized",
+  "parser_id": "role_supervised_parser_factorized_seed1337",
+  "role_loss_weight": 1.0,
+  "schedule_digest": "9e9903420ae57f7139f3ca4be980fbc2d6f90c2f3e4437634f4b54b4eec4258f",
+  "seed": 1337,
+  "steps": 500,
+  "train_metrics": {
+    "a_position_accuracy": 1.0,
+    "a_position_correct": 240,
+    "b_position_accuracy": 1.0,
+    "b_position_correct": 240,
+    "classifier_tuple_accuracy": 1.0,
+    "classifier_tuple_correct": 240,
+    "op_position_accuracy": 1.0,
+    "op_position_correct": 240,
+    "pointer_tuple_accuracy": 1.0,
+    "pointer_tuple_correct": 240,
+    "rows": 240
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "audit": {
+    "error_count": 0,
+    "errors": [],
+    "splits": {
+      "heldout": {
+        "records": 64,
+        "serialized_target_tokens": [
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "target_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "unique_inputs": 60,
+        "unique_record_ids": 64
+      },
+      "test": {
+        "records": 64,
+        "serialized_target_tokens": [
+          51,
+          53,
+          54,
+          55,
+          57,
+          59,
+          60
+        ],
+        "target_values": [
+          0,
+          2,
+          3,
+          4,
+          6,
+          8,
+          9
+        ],
+        "unique_inputs": 55,
+        "unique_record_ids": 64
+      },
+      "train": {
+        "records": 128,
+        "serialized_target_tokens": [
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "target_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "unique_inputs": 110,
+        "unique_record_ids": 128
+      },
+      "validation": {
+        "records": 64,
+        "serialized_target_tokens": [
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "target_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "unique_inputs": 56,
+        "unique_record_ids": 64
+      }
+    }
+  },
+  "audit_pass": true,
+  "experiment": "crucible_cognitive_composition_diagnostic_20261022",
+  "interpretation": "composition interface and positive-control diagnostic only; no E4 comparison or cognitive-capability claim",
+  "overfit_pass": true,
+  "seed": 1337,
+  "status": "completed",
+  "test_evaluated": false,
+  "tiny_overfit": {
+    "checkpoint_paths": [
+      "checkpoints/step_0000.pt",
+      "checkpoints/step_0500.pt"
+    ],
+    "elapsed_seconds": 126.31422396100243,
+    "examples": 8,
+    "final": {
+      "examples": 8,
+      "mean_target_loss": 5.736943222700575e-07,
+      "teacher_forced_exact_accuracy": 1.0,
+      "teacher_forced_token_accuracy": 1.0
+    },
+    "final_prediction_diagnostics": {
+      "mean_target_logit": 16.881702423095703,
+      "mean_target_probability": 0.9999994039535522,
+      "mean_target_rank": 1.0,
+      "predicted_digit_histogram": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "target_positions": 16
+    },
+    "overfit_pass": true,
+    "records": [
+      {
+        "evaluation": {
+          "examples": 8,
+          "mean_target_loss": 5.952985763549805,
+          "teacher_forced_exact_accuracy": 0.0,
+          "teacher_forced_token_accuracy": 0.0
+        },
+        "prediction_diagnostics": {
+          "mean_target_logit": -0.25102171301841736,
+          "mean_target_probability": 0.0030462979339063168,
+          "mean_target_rank": 162.5625,
+          "predicted_digit_histogram": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 2,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "target_positions": 16
+        },
+        "step": 0,
+        "train_step": null
+      },
+      {
+        "evaluation": {
+          "examples": 8,
+          "mean_target_loss": 3.466456174850464,
+          "teacher_forced_exact_accuracy": 0.375,
+          "teacher_forced_token_accuracy": 0.5
+        },
+        "prediction_diagnostics": {
+          "mean_target_logit": 2.4472734928131104,
+          "mean_target_probability": 0.13872003555297852,
+          "mean_target_rank": 60.8125,
+          "predicted_digit_histogram": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 2,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "target_positions": 16
+        },
+        "step": 1,
+        "train_step": {
+          "grad_norm": 10.731117248535156,
+          "loss": 5.933019161224365,
+          "task_tokens": 8,
+          "task_tokens_correct": 0
+        }
+      },
+      {
+        "evaluation": {
+          "examples": 8,
+          "mean_target_loss": 0.9782252907752991,
+          "teacher_forced_exact_accuracy": 0.375,
+          "teacher_forced_token_accuracy": 0.6875
+        },
+        "prediction_diagnostics": {
+          "mean_target_logit": 6.993741989135742,
+          "mean_target_probability": 0.5781418085098267,
+          "mean_target_rank": 1.6875,
+          "predicted_digit_histogram": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "target_positions": 16
+        },
+        "step": 10,
+        "train_step": {
+          "grad_norm": 3.7588794231414795,
+          "loss": 0.9697448015213013,
+          "task_tokens": 8,
+          "task_tokens_correct": 5
+        }
+      },
+      {
+        "evaluation": {
+          "examples": 8,
+          "mean_target_loss": 0.830949455499649,
+          "teacher_forced_exact_accuracy": 0.375,
+          "teacher_forced_token_accuracy": 0.6875
+        },
+        "prediction_diagnostics": {
+          "mean_target_logit": 7.421273231506348,
+          "mean_target_probability": 0.6045558452606201,
+          "mean_target_rank": 1.6875,
+          "predicted_digit_histogram": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "target_positions": 16
+        },
+        "step": 25,
+        "train_step": {
+          "grad_norm": 3.057412624359131,
+          "loss": 0.8555997014045715,
+          "task_tokens": 8,
+          "task_tokens_correct": 6
+        }
+      },
+      {
+        "evaluation": {
+          "examples": 8,
+          "mean_target_loss": 0.7673118710517883,
+          "teacher_forced_exact_accuracy": 0.375,
+          "teacher_forced_token_accuracy": 0.6875
+        },
+        "prediction_diagnostics": {
+          "mean_target_logit": 7.7888593673706055,
+          "mean_target_probability": 0.6203383803367615,
+          "mean_target_rank": 1.625,
+          "predicted_digit_histogram": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "target_positions": 16
+        },
+        "step": 50,
+        "train_step": {
+          "grad_norm": 3.5230767726898193,
+          "loss": 0.8163648843765259,
+          "task_tokens": 8,
+          "task_tokens_correct": 5
+        }
+      },
+      {
+        "evaluation": {
+          "examples": 8,
+          "mean_target_loss": 0.003054819069802761,
+          "teacher_forced_exact_accuracy": 1.0,
+          "teacher_forced_token_accuracy": 1.0
+        },
+        "prediction_diagnostics": {
+          "mean_target_logit": 10.492693901062012,
+          "mean_target_probability": 0.9969532489776611,
+          "mean_target_rank": 1.0,
+          "predicted_digit_histogram": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "target_positions": 16
+        },
+        "step": 100,
+        "train_step": {
+          "grad_norm": 0.04154382646083832,
+          "loss": 0.003987003583461046,
+          "task_tokens": 8,
+          "task_tokens_correct": 8
+        }
+      },
+      {
+        "evaluation": {
+          "examples": 8,
+          "mean_target_loss": 0.0004212353960610926,
+          "teacher_forced_exact_accuracy": 1.0,
+          "teacher_forced_token_accuracy": 1.0
+        },
+        "prediction_diagnostics": {
+          "mean_target_logit": 12.109533309936523,
+          "mean_target_probability": 0.9995788931846619,
+          "mean_target_rank": 1.0,
+          "predicted_digit_histogram": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "target_positions": 16
+        },
+        "step": 200,
+        "train_step": {
+          "grad_norm": 0.004662518855184317,
+          "loss": 0.00046483788173645735,
+          "task_tokens": 8,
+          "task_tokens_correct": 8
+        }
+      },
+      {
+        "evaluation": {
+          "examples": 8,
+          "mean_target_loss": 5.4356325563276187e-05,
+          "teacher_forced_exact_accuracy": 1.0,
+          "teacher_forced_token_accuracy": 1.0
+        },
+        "prediction_diagnostics": {
+          "mean_target_logit": 13.668447494506836,
+          "mean_target_probability": 0.9999456405639648,
+          "mean_target_rank": 1.0,
+          "predicted_digit_histogram": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "target_positions": 16
+        },
+        "step": 300,
+        "train_step": {
+          "grad_norm": 0.0006300202803686261,
+          "loss": 6.034591933712363e-05,
+          "task_tokens": 8,
+          "task_tokens_correct": 8
+        }
+      },
+      {
+        "evaluation": {
+          "examples": 8,
+          "mean_target_loss": 5.736943222700575e-07,
+          "teacher_forced_exact_accuracy": 1.0,
+          "teacher_forced_token_accuracy": 1.0
+        },
+        "prediction_diagnostics": {
+          "mean_target_logit": 16.881702423095703,
+          "mean_target_probability": 0.9999994039535522,
+          "mean_target_rank": 1.0,
+          "predicted_digit_histogram": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "target_positions": 16
+        },
+        "step": 500,
+        "train_step": {
+          "grad_norm": 7.156920673878631e-06,
+          "loss": 6.258483153942507e-07,
+          "task_tokens": 8,
+          "task_tokens_correct": 8
+        }
+      }
+    ],
+    "seed": 1337,
+    "steps": 500
+  }
+}

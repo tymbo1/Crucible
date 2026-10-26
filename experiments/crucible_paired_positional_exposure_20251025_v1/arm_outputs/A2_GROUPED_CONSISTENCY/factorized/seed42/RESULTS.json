@@ -1,0 +1,26 @@
+{
+  "arm": "A2_GROUPED_CONSISTENCY",
+  "arm_id": "A2_GROUPED_CONSISTENCY_factorized_seed42",
+  "checkpoint": "experiments/crucible_paired_positional_exposure_20251025_v1/arm_outputs/A2_GROUPED_CONSISTENCY/factorized/seed42/checkpoint.pt",
+  "checkpoint_sha256": "8cd83f2ee392145a53b160e99be55bee0dff810ad91a1933f536770a3f71afd6",
+  "consistency_weight": 0.1,
+  "effective_batch": 12,
+  "elapsed_seconds": 366.1734560490004,
+  "expanded_records": 240,
+  "groups": 40,
+  "interface": "factorized",
+  "seed": 42,
+  "steps": 500,
+  "train_expanded": {
+    "examples": 240,
+    "mean_target_loss": 0.5930890273613234,
+    "teacher_forced_exact_accuracy": 0.55,
+    "teacher_forced_token_accuracy": 0.775
+  },
+  "train_expanded_exact": 0.55,
+  "training_layout_counts": {
+    "EARLY_PADDED": 80,
+    "FIXED_NEAR_PADDED": 80,
+    "MIDDLE_POSITION": 80
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "cell": "C1_SLOT_DECISION_ONLY",
+  "interface": "canonical",
+  "readout": "slot",
+  "reused_checkpoint": "experiments/crucible_d2_readout_competence_ladder_20261026_v1/trained_arms/S4_END_TO_END_AUTHORITY/canonical/seed1337/checkpoint.pt",
+  "reused_checkpoint_sha256": "8f4c86f92bbc5988d5fa94c8a2c9f2b63849cbe51c781e9b353c2ccf672349b8",
+  "seed": 1337,
+  "source": "reused_accepted_s4",
+  "train_metrics": {
+    "format_errors": 0,
+    "operation_correct": 160,
+    "output_correct": 160,
+    "paired": {
+      "correct_two_way": 80,
+      "correct_two_way_accuracy": 1.0,
+      "flip_accuracy": 1.0,
+      "pairs": 80,
+      "pointer_flips": 80
+    },
+    "pointer_accuracy": 1.0,
+    "pointer_correct": 160,
+    "rows": 160
+  },
+  "validation_metrics": {
+    "format_errors": 0,
+    "operation_correct": 40,
+    "output_correct": 40,
+    "paired": {
+      "correct_two_way": 20,
+      "correct_two_way_accuracy": 1.0,
+      "flip_accuracy": 1.0,
+      "pairs": 20,
+      "pointer_flips": 20
+    },
+    "pointer_accuracy": 1.0,
+    "pointer_correct": 40,
+    "rows": 40
+  }
+}

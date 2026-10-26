@@ -1,0 +1,2101 @@
+{
+  "arms": 8,
+  "by_arm": {
+    "B1_role_binding_pretrained_canonical_seed2025": {
+      "train": {
+        "accuracy": 0.625,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 24,
+            "rows": 40
+          },
+          "SELECT_SECOND": {
+            "correct": 26,
+            "rows": 40
+          }
+        },
+        "correct": 50,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "predicted_equals_either": 80,
+        "predicted_equals_first": 48,
+        "predicted_equals_second": 52,
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.5,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 5,
+            "rows": 10
+          },
+          "SELECT_SECOND": {
+            "correct": 5,
+            "rows": 10
+          }
+        },
+        "correct": 10,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        "predicted_equals_either": 20,
+        "predicted_equals_first": 10,
+        "predicted_equals_second": 10,
+        "rows": 20
+      }
+    },
+    "B1_role_binding_pretrained_canonical_seed2026": {
+      "train": {
+        "accuracy": 0.625,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 25,
+            "rows": 40
+          },
+          "SELECT_SECOND": {
+            "correct": 25,
+            "rows": 40
+          }
+        },
+        "correct": 50,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "predicted_equals_either": 80,
+        "predicted_equals_first": 50,
+        "predicted_equals_second": 50,
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.5,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 4,
+            "rows": 10
+          },
+          "SELECT_SECOND": {
+            "correct": 6,
+            "rows": 10
+          }
+        },
+        "correct": 10,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        "predicted_equals_either": 20,
+        "predicted_equals_first": 8,
+        "predicted_equals_second": 12,
+        "rows": 20
+      }
+    },
+    "B1_role_binding_pretrained_factorized_seed2025": {
+      "train": {
+        "accuracy": 0.6625,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 28,
+            "rows": 40
+          },
+          "SELECT_SECOND": {
+            "correct": 25,
+            "rows": 40
+          }
+        },
+        "correct": 53,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "predicted_equals_either": 80,
+        "predicted_equals_first": 53,
+        "predicted_equals_second": 47,
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.5,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 7,
+            "rows": 10
+          },
+          "SELECT_SECOND": {
+            "correct": 3,
+            "rows": 10
+          }
+        },
+        "correct": 10,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        "predicted_equals_either": 20,
+        "predicted_equals_first": 14,
+        "predicted_equals_second": 6,
+        "rows": 20
+      }
+    },
+    "B1_role_binding_pretrained_factorized_seed2026": {
+      "train": {
+        "accuracy": 0.625,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 27,
+            "rows": 40
+          },
+          "SELECT_SECOND": {
+            "correct": 23,
+            "rows": 40
+          }
+        },
+        "correct": 50,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "predicted_equals_either": 80,
+        "predicted_equals_first": 54,
+        "predicted_equals_second": 46,
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.5,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 6,
+            "rows": 10
+          },
+          "SELECT_SECOND": {
+            "correct": 4,
+            "rows": 10
+          }
+        },
+        "correct": 10,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        "predicted_equals_either": 20,
+        "predicted_equals_first": 12,
+        "predicted_equals_second": 8,
+        "rows": 20
+      }
+    },
+    "B3_binding_operation_conditioned_canonical_seed2025": {
+      "train": {
+        "accuracy": 0.625,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 24,
+            "rows": 40
+          },
+          "SELECT_SECOND": {
+            "correct": 26,
+            "rows": 40
+          }
+        },
+        "correct": 50,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "predicted_equals_either": 80,
+        "predicted_equals_first": 48,
+        "predicted_equals_second": 52,
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.5,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 5,
+            "rows": 10
+          },
+          "SELECT_SECOND": {
+            "correct": 5,
+            "rows": 10
+          }
+        },
+        "correct": 10,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        "predicted_equals_either": 20,
+        "predicted_equals_first": 10,
+        "predicted_equals_second": 10,
+        "rows": 20
+      }
+    },
+    "B3_binding_operation_conditioned_canonical_seed2026": {
+      "train": {
+        "accuracy": 0.625,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 25,
+            "rows": 40
+          },
+          "SELECT_SECOND": {
+            "correct": 25,
+            "rows": 40
+          }
+        },
+        "correct": 50,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "predicted_equals_either": 80,
+        "predicted_equals_first": 50,
+        "predicted_equals_second": 50,
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.5,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 4,
+            "rows": 10
+          },
+          "SELECT_SECOND": {
+            "correct": 6,
+            "rows": 10
+          }
+        },
+        "correct": 10,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        "predicted_equals_either": 20,
+        "predicted_equals_first": 8,
+        "predicted_equals_second": 12,
+        "rows": 20
+      }
+    },
+    "B3_binding_operation_conditioned_factorized_seed2025": {
+      "train": {
+        "accuracy": 0.6625,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 28,
+            "rows": 40
+          },
+          "SELECT_SECOND": {
+            "correct": 25,
+            "rows": 40
+          }
+        },
+        "correct": 53,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "predicted_equals_either": 80,
+        "predicted_equals_first": 53,
+        "predicted_equals_second": 47,
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.5,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 7,
+            "rows": 10
+          },
+          "SELECT_SECOND": {
+            "correct": 3,
+            "rows": 10
+          }
+        },
+        "correct": 10,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        "predicted_equals_either": 20,
+        "predicted_equals_first": 14,
+        "predicted_equals_second": 6,
+        "rows": 20
+      }
+    },
+    "B3_binding_operation_conditioned_factorized_seed2026": {
+      "train": {
+        "accuracy": 0.625,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 27,
+            "rows": 40
+          },
+          "SELECT_SECOND": {
+            "correct": 23,
+            "rows": 40
+          }
+        },
+        "correct": 50,
+        "eos_correct": 80,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "predicted_equals_either": 80,
+        "predicted_equals_first": 54,
+        "predicted_equals_second": 46,
+        "rows": 80
+      },
+      "validation": {
+        "accuracy": 0.5,
+        "by_operation": {
+          "SELECT_FIRST": {
+            "correct": 6,
+            "rows": 10
+          },
+          "SELECT_SECOND": {
+            "correct": 4,
+            "rows": 10
+          }
+        },
+        "correct": 10,
+        "eos_correct": 20,
+        "format_errors": 0,
+        "pair_coverage": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        "predicted_equals_either": 20,
+        "predicted_equals_first": 12,
+        "predicted_equals_second": 8,
+        "rows": 20
+      }
+    }
+  },
+  "class_balance": {
+    "train": {
+      "SELECT_FIRST": 320,
+      "SELECT_SECOND": 320
+    },
+    "validation": {
+      "SELECT_FIRST": 80,
+      "SELECT_SECOND": 80
+    }
+  },
+  "errors": [],
+  "pass": true,
+  "rows": 800,
+  "source": "experiments/crucible_variable_binding_20251025_v1/ROLE_BINDING_PREDICTIONS.csv",
+  "validation_pairs": [
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      9,
+      5
+    ]
+  ],
+  "validation_reversal_membership": {
+    "(0,9)": {
+      "reverse": [
+        9,
+        0
+      ],
+      "reverse_in_validation": false
+    },
+    "(1,8)": {
+      "reverse": [
+        8,
+        1
+      ],
+      "reverse_in_validation": false
+    },
+    "(2,7)": {
+      "reverse": [
+        7,
+        2
+      ],
+      "reverse_in_validation": false
+    },
+    "(3,6)": {
+      "reverse": [
+        6,
+        3
+      ],
+      "reverse_in_validation": false
+    },
+    "(4,0)": {
+      "reverse": [
+        0,
+        4
+      ],
+      "reverse_in_validation": false
+    },
+    "(5,1)": {
+      "reverse": [
+        1,
+        5
+      ],
+      "reverse_in_validation": false
+    },
+    "(6,2)": {
+      "reverse": [
+        2,
+        6
+      ],
+      "reverse_in_validation": false
+    },
+    "(7,3)": {
+      "reverse": [
+        3,
+        7
+      ],
+      "reverse_in_validation": false
+    },
+    "(8,4)": {
+      "reverse": [
+        4,
+        8
+      ],
+      "reverse_in_validation": false
+    },
+    "(9,5)": {
+      "reverse": [
+        5,
+        9
+      ],
+      "reverse_in_validation": false
+    }
+  }
+}

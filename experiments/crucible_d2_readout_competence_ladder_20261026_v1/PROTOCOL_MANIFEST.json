@@ -1,0 +1,40 @@
+{
+  "architecture_changed": false,
+  "experiment": "crucible_d2_readout_competence_ladder_20261026_v1",
+  "frozen_d1_backbones": {
+    "canonical|seed1337": {
+      "path": "experiments/crucible_causally_valid_authority_decision_20261026_v1/trained_arms/D1_EARLY_CANDIDATE_POINTER/canonical/seed1337/checkpoint.pt",
+      "sha256": "7cfdda92a8899dfb03d359117d93b3e3de7b1c1180e7ccacb1fdf609f79d2e26"
+    },
+    "canonical|seed42": {
+      "path": "experiments/crucible_causally_valid_authority_decision_20261026_v1/trained_arms/D1_EARLY_CANDIDATE_POINTER/canonical/seed42/checkpoint.pt",
+      "sha256": "fa2dd1628e1d2687140a8faa258494f65be1a92528ca13747964acd5fd636cbb"
+    },
+    "factorized|seed1337": {
+      "path": "experiments/crucible_causally_valid_authority_decision_20261026_v1/trained_arms/D1_EARLY_CANDIDATE_POINTER/factorized/seed1337/checkpoint.pt",
+      "sha256": "ee38ca14b5f83e7e4e24ee423aa7594380d6626d49b304aab36ea91443f353d8"
+    },
+    "factorized|seed42": {
+      "path": "experiments/crucible_causally_valid_authority_decision_20261026_v1/trained_arms/D1_EARLY_CANDIDATE_POINTER/factorized/seed42/checkpoint.pt",
+      "sha256": "ae33ec567de91ea10482db07ef0cfbedf1783553796925f9eb1889b54b30c2c1"
+    }
+  },
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "protocol": "docs/CRUCIBLE_D2_READOUT_COMPETENCE_LADDER_PROTOCOL_20261026.md",
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "stages": [
+    "S0_SYNTHETIC_HEAD",
+    "S1_SINGLE_CANDIDATE",
+    "S2_DIRECT_TARGET",
+    "S3_AUTHORITY_CONDITIONED",
+    "S4_END_TO_END_AUTHORITY",
+    "S5_HELD_OUT_TRANSFER"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "architecture_changed": false,
+  "conditions": [
+    "D0_LATE_CANDIDATE_POINTER",
+    "D1_EARLY_CANDIDATE_POINTER",
+    "D2_LATE_FINAL_DECISION"
+  ],
+  "effective_batch": 12,
+  "experiment": "crucible_causally_valid_authority_decision_20261026_v1",
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "protocol": "docs/CRUCIBLE_CAUSALLY_VALID_AUTHORITY_DECISION_PROTOCOL_20261026.md",
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "steps": 500
+}

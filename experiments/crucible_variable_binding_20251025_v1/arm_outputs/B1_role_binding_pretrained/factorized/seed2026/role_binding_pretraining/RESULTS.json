@@ -1,0 +1,56 @@
+{
+  "checkpoint": "/home/timbushnell/Crucible/experiments/crucible_variable_binding_20251025_v1/arm_outputs/B1_role_binding_pretrained/factorized/seed2026/role_binding_pretraining/checkpoint.pt",
+  "elapsed_seconds": 113.41108230297687,
+  "fit_pass": false,
+  "interface": "factorized",
+  "optimizer_reset_from_pretraining": false,
+  "seed": 2026,
+  "stage": "role_binding_pretraining",
+  "steps": 500,
+  "train": {
+    "aggregate": {
+      "examples": 80,
+      "mean_target_loss": 0.29065426513552667,
+      "teacher_forced_exact_accuracy": 0.625,
+      "teacher_forced_token_accuracy": 0.8125
+    },
+    "by_group": {
+      "SELECT_FIRST": {
+        "examples": 40,
+        "mean_target_loss": 0.2898244485259056,
+        "teacher_forced_exact_accuracy": 0.675,
+        "teacher_forced_token_accuracy": 0.8375
+      },
+      "SELECT_SECOND": {
+        "examples": 40,
+        "mean_target_loss": 0.2914840966463089,
+        "teacher_forced_exact_accuracy": 0.575,
+        "teacher_forced_token_accuracy": 0.7875
+      }
+    }
+  },
+  "train_exact": 0.625,
+  "validation": {
+    "aggregate": {
+      "examples": 20,
+      "mean_target_loss": 0.6545851945877075,
+      "teacher_forced_exact_accuracy": 0.5,
+      "teacher_forced_token_accuracy": 0.75
+    },
+    "by_group": {
+      "SELECT_FIRST": {
+        "examples": 10,
+        "mean_target_loss": 0.565074336528778,
+        "teacher_forced_exact_accuracy": 0.6,
+        "teacher_forced_token_accuracy": 0.8
+      },
+      "SELECT_SECOND": {
+        "examples": 10,
+        "mean_target_loss": 0.7440960645675659,
+        "teacher_forced_exact_accuracy": 0.4,
+        "teacher_forced_token_accuracy": 0.7
+      }
+    }
+  },
+  "validation_exact": 0.5
+}

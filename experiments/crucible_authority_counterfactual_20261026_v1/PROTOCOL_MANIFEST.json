@@ -1,0 +1,41 @@
+{
+  "architecture_changed": false,
+  "arms": [
+    "A0_FROZEN_V3_POINTER",
+    "A1_AUTHORITY_TUPLE_NO_POINTER",
+    "A2_AUTHORITY_POINTER",
+    "A3_AUTHORITY_POINTER_BALANCED",
+    "E3_ORACLE_BINDING"
+  ],
+  "authority_sides": [
+    "EARLIER",
+    "LATER"
+  ],
+  "experiment": "crucible_authority_counterfactual_20261026_v1",
+  "fixed_width_authority_labels": true,
+  "interfaces": [
+    "canonical",
+    "factorized"
+  ],
+  "layouts": [
+    "AUTHORITY_NEAR",
+    "AUTHORITY_EARLY",
+    "AUTHORITY_MIDDLE",
+    "UNSEEN_REVERSED_AUTHORITY",
+    "UNSEEN_DIGIT_DISTRACTOR",
+    "UNSEEN_NEAREST_DECOY",
+    "UNSEEN_CONFLICTING_CUES"
+  ],
+  "operation_orders": [
+    "FS",
+    "SF"
+  ],
+  "protocol": "docs/CRUCIBLE_AUTHORITY_COUNTERFACTUAL_PROTOCOL_20261026.md",
+  "retrained": false,
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "source_experiment": "experiments/crucible_authority_aware_role_binding_20251025_v2"
+}
