@@ -1,0 +1,29 @@
+{
+  "decision": "PROCEED_AFTER_PREFLIGHT",
+  "design_boundary": "D4, D8 and D12 are nested coverage conditions. They also differ in degree, connectivity and finite graph distances, so this experiment cannot identify graph topology or path-length causality.",
+  "experiment": "crucible_two_candidate_coverage_density_20261027_v1",
+  "new_arms": 4,
+  "new_training": true,
+  "not_novel": [
+    "The dense SHARED_SCORER architecture",
+    "The cyclic schedule and 500-update budget",
+    "The identifier-match labels and abstention class",
+    "Two-candidate paired correctness and counterfactual metrics",
+    "The M0-to-M2 endpoint, which is reused from the completed crossover"
+  ],
+  "novelty_claim": "No prior Crucible experiment holds a single unseen candidate panel fixed while varying nested training-pair coverage density under the same 144-row budget, cyclic schedule and dense SHARED_SCORER path, with fixed-validation trajectories.",
+  "related_records": [
+    "two-candidate-competence-gate-v1",
+    "two-candidate-transfer-forensics-v1",
+    "two-candidate-matched-context-probe-v1",
+    "two-candidate-identifier-forensics-v1",
+    "two-candidate-pair-coverage-v1",
+    "two-candidate-pair-crossover-v1",
+    "cardinality-competence-diagnostic-v1"
+  ],
+  "repository_ledger_checked": true,
+  "reused_arms": 2,
+  "schema_version": "crucible_novelty_audit_v1",
+  "sealed_test_accessed": false,
+  "status": "pre_execution"
+}

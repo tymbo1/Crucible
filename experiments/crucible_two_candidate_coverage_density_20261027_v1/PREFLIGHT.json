@@ -1,0 +1,269 @@
+{
+  "architecture": "dense SHARED_SCORER",
+  "batch_size": 12,
+  "conditions": {
+    "D12": {
+      "audit": {
+        "contexts": [
+          "1,6",
+          "1,8",
+          "2,7",
+          "2,9",
+          "3,8",
+          "4,9"
+        ],
+        "counterfactual_groups": 48,
+        "rows": 144,
+        "target_slot_counts": {
+          "0": 48,
+          "1": 48,
+          "8": 48
+        },
+        "unique_inputs": 144,
+        "unique_record_ids": 144,
+        "unordered_pairs": [
+          "0,1",
+          "0,2",
+          "0,4",
+          "1,3",
+          "1,5",
+          "2,3",
+          "2,6",
+          "3,7",
+          "4,5",
+          "4,6",
+          "5,7",
+          "6,7"
+        ]
+      },
+      "context_counts": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4
+      },
+      "cross_split_overlap": {
+        "exact_inputs": 0,
+        "record_ids": 0,
+        "unordered_pairs": 0
+      },
+      "graph": {
+        "component_count": 1,
+        "components": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "degree_sequence": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "edge_count": 12,
+        "edges": [
+          "0,1",
+          "2,3",
+          "4,5",
+          "6,7",
+          "0,2",
+          "1,3",
+          "4,6",
+          "5,7",
+          "0,4",
+          "1,5",
+          "2,6",
+          "3,7"
+        ],
+        "held_out_M2_shortest_paths": {
+          "0,3": 2,
+          "1,2": 2,
+          "4,7": 2,
+          "5,6": 2
+        },
+        "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+        "max_finite_pair_distance": 3
+      }
+    },
+    "D8": {
+      "audit": {
+        "contexts": [
+          "1,6",
+          "1,8",
+          "2,7",
+          "2,9",
+          "3,8",
+          "4,9"
+        ],
+        "counterfactual_groups": 48,
+        "rows": 144,
+        "target_slot_counts": {
+          "0": 48,
+          "1": 48,
+          "8": 48
+        },
+        "unique_inputs": 144,
+        "unique_record_ids": 144,
+        "unordered_pairs": [
+          "0,1",
+          "0,2",
+          "1,3",
+          "2,3",
+          "4,5",
+          "4,6",
+          "5,7",
+          "6,7"
+        ]
+      },
+      "context_counts": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4
+      },
+      "cross_split_overlap": {
+        "exact_inputs": 0,
+        "record_ids": 0,
+        "unordered_pairs": 0
+      },
+      "graph": {
+        "component_count": 2,
+        "components": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "degree_sequence": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "edge_count": 8,
+        "edges": [
+          "0,1",
+          "2,3",
+          "4,5",
+          "6,7",
+          "0,2",
+          "1,3",
+          "4,6",
+          "5,7"
+        ],
+        "held_out_M2_shortest_paths": {
+          "0,3": 2,
+          "1,2": 2,
+          "4,7": 2,
+          "5,6": 2
+        },
+        "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+        "max_finite_pair_distance": 2
+      }
+    }
+  },
+  "execute_requested": false,
+  "experiment": "crucible_two_candidate_coverage_density_20261027_v1",
+  "fixed_train_reference": "experiments/crucible_two_candidate_pair_crossover_20261027_v1/data/T_M0_V_M2_train.jsonl",
+  "fixed_train_reference_sha256": "ccb3bfeadda083c736370db0a7c7ea9e8fecad531b81121fef543ea0665db65d",
+  "fixed_validation": "experiments/crucible_two_candidate_pair_crossover_20261027_v1/data/T_M0_V_M2_validation.jsonl",
+  "fixed_validation_audit": {
+    "contexts": [
+      "1,6",
+      "2,7",
+      "3,8",
+      "4,9"
+    ],
+    "counterfactual_groups": 32,
+    "oracle_rows_correct": 96,
+    "rows": 96,
+    "target_slot_counts": {
+      "0": 32,
+      "1": 32,
+      "8": 32
+    },
+    "unique_inputs": 96,
+    "unique_record_ids": 96,
+    "unordered_pairs": [
+      "0,3",
+      "1,2",
+      "4,7",
+      "5,6"
+    ]
+  },
+  "fixed_validation_sha256": "57c599c9b5c0a7efcb800f27765d7698f14f1feb25aec844aaf826606e4a2231",
+  "new_conditions": [
+    "D8",
+    "D12"
+  ],
+  "novelty_audit": "docs/CRUCIBLE_TWO_CANDIDATE_COVERAGE_DENSITY_NOVELTY_AUDIT_20261027.json",
+  "prior_checkpoints_modified": false,
+  "prior_crossover": "experiments/crucible_two_candidate_pair_crossover_20261027_v1",
+  "prior_hash_files": 126,
+  "prior_hash_verification_failures": [],
+  "protocol": "docs/CRUCIBLE_TWO_CANDIDATE_COVERAGE_DENSITY_PROTOCOL_20261027.md",
+  "reference_train_audit": {
+    "contexts": [
+      "1,6",
+      "1,8",
+      "2,7",
+      "2,9",
+      "3,8",
+      "4,9"
+    ],
+    "counterfactual_groups": 48,
+    "oracle_rows_correct": 144,
+    "rows": 144,
+    "target_slot_counts": {
+      "0": 48,
+      "1": 48,
+      "8": 48
+    },
+    "unique_inputs": 144,
+    "unique_record_ids": 144,
+    "unordered_pairs": [
+      "0,1",
+      "2,3",
+      "4,5",
+      "6,7"
+    ]
+  },
+  "reused_condition": "D4",
+  "schedule": "cyclic",
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "status": "preflight_passed",
+  "steps": 500,
+  "training_gate_threshold": 0.95,
+  "training_performed": false
+}
