@@ -1,0 +1,19 @@
+{
+  "checkpoints_modified": false,
+  "data_audit": "experiments/crucible_two_candidate_identifier_forensics_20261027_v1/DATA_AUDIT.json",
+  "error_row_count": 93,
+  "error_rows": "experiments/crucible_two_candidate_identifier_forensics_20261027_v1/ERROR_ROWS.csv",
+  "experiment": "crucible_two_candidate_identifier_forensics_20261027_v1",
+  "input_root": "experiments/crucible_two_candidate_matched_context_probe_20261027_v1",
+  "new_inference": false,
+  "novelty_audit": "docs/CRUCIBLE_TWO_CANDIDATE_IDENTIFIER_FORENSICS_NOVELTY_AUDIT_20261027.json",
+  "pair_analysis": "experiments/crucible_two_candidate_identifier_forensics_20261027_v1/PAIR_ANALYSIS.json",
+  "protocol": "docs/CRUCIBLE_TWO_CANDIDATE_IDENTIFIER_FORENSICS_PROTOCOL_20261027.md",
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "status": "completed",
+  "training_performed": false
+}

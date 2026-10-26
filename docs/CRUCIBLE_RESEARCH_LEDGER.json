@@ -625,6 +625,31 @@
         "experiments/crucible_two_candidate_matched_context_probe_20261027_v1/FINALIZATION.json"
       ],
       "novelty_terms": ["matched context", "familiar candidate set", "recombined candidate set", "candidate regime"]
+    },
+    {
+      "id": "two-candidate-identifier-forensics-v1",
+      "status": "INCONCLUSIVE",
+      "title": "Two-candidate identifier and reversal forensics",
+      "hypothesis": "Existing errors can distinguish exact candidate-pair association, fixed-slot bias, target-slot bias and a more general but imperfect matching rule.",
+      "mechanisms": ["candidate-matching", "candidate-pair-transfer", "identifier-selection", "reversal-consistency"],
+      "interventions": ["Post-hoc ordered-pair, unordered-pair, target-slot, predicted-identity and reversal analysis of committed matrices"],
+      "controls": ["Two committed seeds", "familiar and recombined regimes", "two source-context strata", "abstention breakdown", "no new inference", "no training", "no sealed test"],
+      "result": "Recombined errors were concentrated in unordered pairs rather than spread uniformly: `(2,5)` and `(3,6)` failed persistently in both seeds, `(0,3)` was perfect in both and `(1,4)` was seed-dependent. All recombined abstentions were correct. Reversal usually preserved predicted identity and flipped slot; 23/80 seed-42 and 19/80 seed-1337 reversal groups were both wrong with the same identity. The data support a pair-specific behavioral weakness but do not prove memorization or a mechanism.",
+      "limits": ["Post-hoc analysis", "Only four unseen unordered recombined pairs", "Two checkpoints are not independent model populations", "No causal intervention"],
+      "unresolved": ["Exact pair association versus imperfect identifier matching", "Whether the persistent families reflect identifier geometry or training coverage", "Whether balanced pair-coverage retraining transfers to new pairs"],
+      "artifacts": [
+        "docs/CRUCIBLE_TWO_CANDIDATE_IDENTIFIER_FORENSICS_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_TWO_CANDIDATE_IDENTIFIER_FORENSICS_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_two_candidate_identifier_forensics_20261027.py",
+        "experiments/crucible_two_candidate_identifier_forensics_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_two_candidate_identifier_forensics_20261027_v1/SUMMARY.json",
+        "experiments/crucible_two_candidate_identifier_forensics_20261027_v1/PAIR_ANALYSIS.json",
+        "experiments/crucible_two_candidate_identifier_forensics_20261027_v1/ERROR_ROWS.csv",
+        "experiments/crucible_two_candidate_identifier_forensics_20261027_v1/SCIENTIFIC_INTERPRETATION.md",
+        "experiments/crucible_two_candidate_identifier_forensics_20261027_v1/HASHES.json",
+        "experiments/crucible_two_candidate_identifier_forensics_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["identifier forensics", "unordered pair", "reversal consistency", "predicted identity"]
     }
   ]
 }

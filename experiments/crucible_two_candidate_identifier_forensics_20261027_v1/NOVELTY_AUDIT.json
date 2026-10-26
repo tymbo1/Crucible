@@ -1,0 +1,21 @@
+{
+  "decision": "PROCEED_READ_ONLY_ANALYSIS",
+  "experiment": "crucible_two_candidate_identifier_forensics_20261027_v1",
+  "new_training": false,
+  "not_novel": [
+    "The two-candidate checkpoints",
+    "The matched-context probe predictions",
+    "Candidate-pair and paired-counterfactual metrics",
+    "The identifier-match oracle"
+  ],
+  "novelty_claim": "No prior Crucible report provides the ordered-pair, unordered-pair reversal, predicted-identifier and source-context forensic breakdown for the committed matched-context prediction matrices.",
+  "related_records": [
+    "two-candidate-competence-gate-v1",
+    "two-candidate-transfer-forensics-v1",
+    "two-candidate-matched-context-probe-v1"
+  ],
+  "repository_ledger_checked": true,
+  "schema_version": "crucible_novelty_audit_v1",
+  "sealed_test_accessed": false,
+  "status": "post_hoc_analysis"
+}

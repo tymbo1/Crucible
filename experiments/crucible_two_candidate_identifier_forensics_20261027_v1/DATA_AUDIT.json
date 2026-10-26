@@ -1,0 +1,16 @@
+{
+  "checkpoints_modified": false,
+  "experiment": "crucible_two_candidate_identifier_forensics_20261027_v1",
+  "input_prediction_hashes": {
+    "PREDICTIONS_SEED1337.csv": "cbdf88374fa3ef33ce2c88b7236b1abbf95d719f95276722192b3bd96080409f",
+    "PREDICTIONS_SEED42.csv": "9ef4b0f19ed9211b3740497fac4842e24228da8e8fcd76df8397cdf35214e1e2"
+  },
+  "input_root": "experiments/crucible_two_candidate_matched_context_probe_20261027_v1",
+  "new_inference": false,
+  "rows_per_seed": {
+    "1337": 480,
+    "42": 480
+  },
+  "sealed_test_accessed": false,
+  "training_performed": false
+}

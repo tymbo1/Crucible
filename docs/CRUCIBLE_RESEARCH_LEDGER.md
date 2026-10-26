@@ -29,8 +29,9 @@ reports that still need ledger entries.
 | `explicit-id-cardinality-transfer` | FAILED | The oracle passed, but none of eight learned arms passed training competence; learned cardinality transfer is therefore unresolved. |
 | `two-candidate-transfer-forensics-v1` | INCONCLUSIVE | Padding alone did not explain the gap; the original audit still confounded candidate-set regime with operand context. |
 | `two-candidate-matched-context-probe-v1` | ESTABLISHED | Familiar candidate sets outperformed recombined sets on the same source-context strata for both cyclic checkpoints. |
+| `two-candidate-identifier-forensics-v1` | INCONCLUSIVE | Errors concentrated in specific unordered candidate families and often preserved the same wrong identifier under reversal; mechanism remains unresolved. |
 
-The ledger now covers all 31 final experiment reports in the repository. The
+The ledger now covers all 32 final experiment reports in the repository. The
 23 older reports were extracted from their accepted final reports and linked
 artifacts on 2026-10-26; no outcomes were inferred from filenames or
 conversation summaries. See
@@ -72,3 +73,4 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `two-candidate-competence-gate-v1` | INCONCLUSIVE | `crucible_two_candidate_competence_gate_20261027_v1` |
 | `two-candidate-transfer-forensics-v1` | INCONCLUSIVE | `crucible_two_candidate_transfer_forensics_20261027_v1` |
 | `two-candidate-matched-context-probe-v1` | ESTABLISHED | `crucible_two_candidate_matched_context_probe_20261027_v1` |
+| `two-candidate-identifier-forensics-v1` | INCONCLUSIVE | `crucible_two_candidate_identifier_forensics_20261027_v1` |
