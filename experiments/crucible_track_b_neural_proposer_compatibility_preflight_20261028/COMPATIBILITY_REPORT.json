@@ -1,0 +1,47 @@
+{
+  "aggregate_counters": {
+    "candidate_evaluations": 128,
+    "candidate_outputs": 128,
+    "candidate_source": "neural_generated",
+    "cpu_seconds": 0.10720009399862507,
+    "decoder_tokens": 884,
+    "gpu_seconds": 0.0,
+    "oracle_calls": 141,
+    "peak_memory_bytes": 666480640,
+    "proposer_forward_passes": 82,
+    "unique_canonical_ast_outputs": 128,
+    "verifier_calls": 128,
+    "wall_clock_seconds": 0.10726803686702624
+  },
+  "classification": "compatibility_only_not_scientific_evidence",
+  "deterministic_replay": true,
+  "direct_ast_generation": true,
+  "generated_candidate_source": "neural_generated",
+  "grammar_valid_proposal_count": 128,
+  "lifecycle_interface_smoke": {
+    "external_contradiction_invalidation": true,
+    "fixture_only": true,
+    "initial_verifier_checks": 3,
+    "persistence_reload": true,
+    "post_reset_execution_correct": true,
+    "proposal_not_claimed": true,
+    "schema_validation": true,
+    "store_path": "experiments/crucible_track_b_neural_proposer_compatibility_preflight_20261028/LIFECYCLE_STORE.json",
+    "successor_active": true,
+    "successor_verification": true,
+    "versions": [
+      1,
+      2
+    ]
+  },
+  "note": "Passing this preflight does not establish acquisition, generalisation, lifecycle success for B3, or a neural advantage over B1.",
+  "proposal_count": 128,
+  "scientific_checkpoint_selected": false,
+  "scientific_execution_approved": false,
+  "sealed_test_accessed": false,
+  "status": "pass",
+  "training_only": true,
+  "training_task_count": 32,
+  "updates": 50,
+  "validation_or_test_scored": false
+}

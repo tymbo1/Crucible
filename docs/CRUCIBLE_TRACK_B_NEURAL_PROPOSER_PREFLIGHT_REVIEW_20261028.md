@@ -32,28 +32,47 @@ frozen package at
 | Proposer-input leakage boundary | PASS: no target AST or truth-table hash |
 | Retained unresolvable evaluation denominator | PASS: 4 tasks retained with abstention status |
 | Pair partition audit | PASS: demonstrations, verifier pairs and queries disjoint |
-| Instrumentation plan | PASS as a plan; runtime implementation pending |
-| Neural training, checkpoint selection, sealed-test access | NOT RUN |
+| Direct grammar-constrained B3 implementation | PASS: emits `neural_generated` ASTs; no catalogue input |
+| Runtime instrumentation | PASS: independent counter validator passed |
+| 50-update compatibility preflight | PASS: CPU-only, training-only, deterministic replay |
+| Neural scientific training, checkpoint selection, sealed-test access | NOT RUN |
 
 The independent validator is
 `tools/validate_crucible_track_b_neural_proposer_preflight_20261028.py`.
+The compatibility validator is
+`tools/validate_crucible_track_b_neural_proposer_compatibility_preflight_20261028.py`.
 
-## Remaining execution blockers
+## Compatibility result
 
-The following items must be completed and reviewed before approval:
+The implementation-only preflight is recorded at
+`experiments/crucible_track_b_neural_proposer_compatibility_preflight_20261028/`.
+It ran 50 optimizer updates on 32 training tasks using CPU only. It emitted
+128 direct AST candidates, all independently grammar-valid, with
+`candidate_source=neural_generated`. Same-seed replay matched the state,
+training trace and proposal outputs. The lifecycle smoke fixture also passed
+schema validation, persistence reload, post-reset execution, externally
+triggered invalidation and successor verification.
 
-1. A direct-generation B3 implementation and a separately labelled B3-R, if
-   the reranking diagnostic is retained.
-2. Runtime instrumentation that independently verifies all candidate and
-   device-compute counters.
-3. A leakage audit proving that target ASTs, held-out truth tables and verifier
-   outputs do not enter proposer training or checkpoint selection.
-4. A 50-update compatibility report showing deterministic replay and lifecycle
-   interface compatibility, without selecting scientific checkpoints.
+These are compatibility results only. They do not establish procedural
+acquisition, generalisation, lifecycle success for B3, or an advantage over
+B1.
+
+## Remaining approval boundary
+
+The three registered implementation blockers are complete. Scientific
+execution remains withheld because the compatibility preflight is not the
+registered B0/B1/B2/B3 comparison and did not use validation or test outcomes.
+Before any GPU allocation, the full-arm runner, matched compute accounting and
+final approval decision must be reviewed explicitly.
+
+The compatibility run used training-only verifier fixtures after proposal
+emission. It did not select a scientific checkpoint, read held-out oracle
+outputs or access the sealed test set.
 
 ## Decision
 
-The CPU-only preparation gate is complete and passing. The protocol remains
-`UNTESTED` and is not approved for neural training, GPU allocation or scientific
-execution. The next permitted step is implementation review of direct B3,
-runtime instrumentation and the 50-update compatibility preflight.
+The CPU-only preparation and implementation-compatibility gates are complete
+and passing. The protocol remains `UNTESTED` and is not approved for neural
+training, GPU allocation or scientific execution. The next permitted step is
+final review of the full registered comparison and an explicit approval
+decision.

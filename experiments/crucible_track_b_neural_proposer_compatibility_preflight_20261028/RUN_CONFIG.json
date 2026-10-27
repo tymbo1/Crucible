@@ -1,0 +1,22 @@
+{
+  "candidate_count": 4,
+  "device": "cpu",
+  "direct_candidate_source": "neural_generated",
+  "eval_oracle_loaded": false,
+  "grammar": "digit_expr_mod10_v1",
+  "input_files": [
+    "PROPOSER_INPUTS.jsonl training rows only",
+    "TRAIN_LABELS.jsonl",
+    "TASK_MANIFEST.json training rows only"
+  ],
+  "schema_version": "crucible_track_b_b3_compatibility_preflight_v1",
+  "sealed_test_accessed": false,
+  "seed": 42,
+  "source_hashes": {
+    "proposer_module": "8972f0ba6c750acfd490ca318439b15b1a16235bf079b2ed401ba9f7128cd998",
+    "runner": "6e5cef2c7dec7e86c401b7bc1ede2a08ad3a403580b9ea14b059628434ac413c"
+  },
+  "status": "compatibility_only",
+  "updates": 50,
+  "validation_or_test_scored": false
+}

@@ -1,0 +1,77 @@
+{
+  "events": [
+    {
+      "alias": "compatibility_fixture",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compatibility_fixture",
+      "kind": "invalidation",
+      "reason": "synthetic_contradiction_event"
+    },
+    {
+      "alias": "compatibility_fixture",
+      "kind": "promotion",
+      "version": 2
+    }
+  ],
+  "procedures": {
+    "compatibility_fixture": [
+      {
+        "alias": "compatibility_fixture",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "add_mod10"
+        },
+        "canonical_ast_hash": "7db5df588a67797129378a9c359067021f3d62ac78299acbab9d40561a270dca",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "source": "synthetic_fixture",
+          "verified_checks": 3
+        },
+        "revision_history": [
+          {
+            "reason": "synthetic_contradiction_event"
+          }
+        ],
+        "status": "invalidated",
+        "version": 1
+      },
+      {
+        "alias": "compatibility_fixture",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "sub_mod10"
+        },
+        "canonical_ast_hash": "ead8e009308cb9617afd7e3175ed9ff0696e63d8e27c0241d36abfba62dc77a9",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "source": "synthetic_revision",
+          "verified_checks": 2
+        },
+        "status": "validated",
+        "version": 2
+      }
+    ]
+  },
+  "schema_version": "crucible.procedure.v1"
+}
