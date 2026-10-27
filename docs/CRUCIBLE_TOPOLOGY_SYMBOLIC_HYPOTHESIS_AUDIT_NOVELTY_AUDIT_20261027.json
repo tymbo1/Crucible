@@ -1,0 +1,21 @@
+{
+  "schema_version": "crucible_novelty_audit_v1",
+  "experiment": "crucible_topology_symbolic_hypothesis_audit_20261027_v1",
+  "status": "read_only_audit",
+  "decision": "PROCEED",
+  "repository_ledger_checked": true,
+  "new_training": false,
+  "sealed_test_accessed": false,
+  "novelty_claim": "No indexed Crucible report independently reproduces the proposed structural, diffusion, effective-resistance and modular-oracle calculations and compares their pair-level predictions with all four committed topology-control checkpoints.",
+  "related_records": [
+    "two-candidate-topology-control-v1",
+    "two-candidate-coverage-density-v1",
+    "two-candidate-pair-crossover-v1"
+  ],
+  "not_novel": [
+    "The topology graph manifest and held-out pairs",
+    "The deterministic modular path oracle",
+    "Checkpoint prediction matrices"
+  ],
+  "task_boundary": "Read-only mathematical replication and checkpoint forensics; no new model training and no claim that the neural model implements the simulated linear solver."
+}

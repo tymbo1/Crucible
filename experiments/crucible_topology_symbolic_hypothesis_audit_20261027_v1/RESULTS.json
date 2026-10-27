@@ -1,0 +1,967 @@
+{
+  "checkpoint_bridge_and_pair_controls": {
+    "bridge_summary": {
+      "P12_PRISM_SEED1337": {
+        "bridge_rows": 0,
+        "bridge_total": 0,
+        "non_bridge_rows": 40,
+        "non_bridge_total": 96
+      },
+      "P12_PRISM_SEED42": {
+        "bridge_rows": 0,
+        "bridge_total": 0,
+        "non_bridge_rows": 37,
+        "non_bridge_total": 96
+      },
+      "R12_DIAMETER5_SEED1337": {
+        "bridge_rows": 33,
+        "bridge_total": 84,
+        "non_bridge_rows": 4,
+        "non_bridge_total": 12
+      },
+      "R12_DIAMETER5_SEED42": {
+        "bridge_rows": 35,
+        "bridge_total": 84,
+        "non_bridge_rows": 6,
+        "non_bridge_total": 12
+      }
+    },
+    "pair_contrasts": [
+      {
+        "P12_PRISM_errors": 3,
+        "P12_PRISM_rows": 12,
+        "R12_DIAMETER5_errors": 4,
+        "R12_DIAMETER5_rows": 12,
+        "seed": 42,
+        "unordered_pair": "0,8"
+      },
+      {
+        "P12_PRISM_errors": 8,
+        "P12_PRISM_rows": 12,
+        "R12_DIAMETER5_errors": 6,
+        "R12_DIAMETER5_rows": 12,
+        "seed": 42,
+        "unordered_pair": "0,9"
+      },
+      {
+        "P12_PRISM_errors": 5,
+        "P12_PRISM_rows": 12,
+        "R12_DIAMETER5_errors": 6,
+        "R12_DIAMETER5_rows": 12,
+        "seed": 1337,
+        "unordered_pair": "0,8"
+      },
+      {
+        "P12_PRISM_errors": 7,
+        "P12_PRISM_rows": 12,
+        "R12_DIAMETER5_errors": 4,
+        "R12_DIAMETER5_rows": 12,
+        "seed": 1337,
+        "unordered_pair": "0,9"
+      }
+    ]
+  },
+  "checkpoint_correlations": {
+    "P12_PRISM_SEED1337": {
+      "distance": {
+        "n_pairs": 8,
+        "paired_error_pvalue": 0.7249721048854608,
+        "paired_error_spearman_rho": -0.14886628953921088,
+        "row_error_pvalue": 0.6962144342686856,
+        "row_error_spearman_rho": -0.16498864917139208
+      },
+      "effective_resistance": {
+        "n_pairs": 8,
+        "paired_error_pvalue": 0.8262359774481054,
+        "paired_error_spearman_rho": -0.09321266306715217,
+        "row_error_pvalue": 0.624427457244509,
+        "row_error_spearman_rho": -0.20606439056534132
+      }
+    },
+    "P12_PRISM_SEED42": {
+      "distance": {
+        "n_pairs": 8,
+        "paired_error_pvalue": 0.8315823497593324,
+        "paired_error_spearman_rho": 0.09031262733621835,
+        "row_error_pvalue": 0.6203574523988008,
+        "row_error_spearman_rho": 0.20843427331642833
+      },
+      "effective_resistance": {
+        "n_pairs": 8,
+        "paired_error_pvalue": 0.9402288317997515,
+        "paired_error_spearman_rho": 0.031899590105660444,
+        "row_error_pvalue": 0.7820356660789621,
+        "row_error_spearman_rho": 0.1173197188250741
+      }
+    },
+    "R12_DIAMETER5_SEED1337": {
+      "distance": {
+        "n_pairs": 8,
+        "paired_error_pvalue": 0.19997167049827297,
+        "paired_error_spearman_rho": 0.5067544467491819,
+        "row_error_pvalue": 0.25644443457767657,
+        "row_error_spearman_rho": 0.45573271518765
+      },
+      "effective_resistance": {
+        "n_pairs": 8,
+        "paired_error_pvalue": 0.18662688809957334,
+        "paired_error_spearman_rho": 0.5198752449100363,
+        "row_error_pvalue": 0.23427209838867186,
+        "row_error_spearman_rho": 0.475
+      }
+    },
+    "R12_DIAMETER5_SEED42": {
+      "distance": {
+        "n_pairs": 8,
+        "paired_error_pvalue": 0.17215154940194957,
+        "paired_error_spearman_rho": 0.534686377234948,
+        "row_error_pvalue": 0.2202678842481933,
+        "row_error_spearman_rho": 0.48765241519834646
+      },
+      "effective_resistance": {
+        "n_pairs": 8,
+        "paired_error_pvalue": 0.23759098221516026,
+        "paired_error_spearman_rho": 0.47205879524995553,
+        "row_error_pvalue": 0.3163889011073908,
+        "row_error_spearman_rho": 0.4074384586179558
+      }
+    }
+  },
+  "checkpoint_pair_forensics": [
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED1337",
+      "condition": "P12_PRISM",
+      "distance": 3,
+      "effective_resistance": 0.9777777777777775,
+      "errors": 2,
+      "paired_accuracy": 0.6666666666666666,
+      "paired_correct": 4,
+      "paired_groups": 6,
+      "row_accuracy": 0.8333333333333334,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,10"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED1337",
+      "condition": "P12_PRISM",
+      "distance": 2,
+      "effective_resistance": 0.7833333333333337,
+      "errors": 7,
+      "paired_accuracy": 0.16666666666666666,
+      "paired_correct": 1,
+      "paired_groups": 6,
+      "row_accuracy": 0.4166666666666667,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,11"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED1337",
+      "condition": "P12_PRISM",
+      "distance": 3,
+      "effective_resistance": 1.0277777777777786,
+      "errors": 3,
+      "paired_accuracy": 0.5,
+      "paired_correct": 3,
+      "paired_groups": 6,
+      "row_accuracy": 0.75,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,3"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED1337",
+      "condition": "P12_PRISM",
+      "distance": 2,
+      "effective_resistance": 0.933333333333334,
+      "errors": 4,
+      "paired_accuracy": 0.5,
+      "paired_correct": 3,
+      "paired_groups": 6,
+      "row_accuracy": 0.6666666666666666,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,4"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED1337",
+      "condition": "P12_PRISM",
+      "distance": 2,
+      "effective_resistance": 0.7833333333333337,
+      "errors": 6,
+      "paired_accuracy": 0.3333333333333333,
+      "paired_correct": 2,
+      "paired_groups": 6,
+      "row_accuracy": 0.5,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,7"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED1337",
+      "condition": "P12_PRISM",
+      "distance": 3,
+      "effective_resistance": 0.9777777777777781,
+      "errors": 5,
+      "paired_accuracy": 0.3333333333333333,
+      "paired_correct": 2,
+      "paired_groups": 6,
+      "row_accuracy": 0.5833333333333334,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,8"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED1337",
+      "condition": "P12_PRISM",
+      "distance": 4,
+      "effective_resistance": 1.0500000000000005,
+      "errors": 7,
+      "paired_accuracy": 0.16666666666666666,
+      "paired_correct": 1,
+      "paired_groups": 6,
+      "row_accuracy": 0.4166666666666667,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,9"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED1337",
+      "condition": "P12_PRISM",
+      "distance": 2,
+      "effective_resistance": 0.9333333333333347,
+      "errors": 6,
+      "paired_accuracy": 0.16666666666666666,
+      "paired_correct": 1,
+      "paired_groups": 6,
+      "row_accuracy": 0.5,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "1,3"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED42",
+      "condition": "P12_PRISM",
+      "distance": 3,
+      "effective_resistance": 0.9777777777777775,
+      "errors": 4,
+      "paired_accuracy": 0.5,
+      "paired_correct": 3,
+      "paired_groups": 6,
+      "row_accuracy": 0.6666666666666666,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,10"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED42",
+      "condition": "P12_PRISM",
+      "distance": 2,
+      "effective_resistance": 0.7833333333333337,
+      "errors": 8,
+      "paired_accuracy": 0.0,
+      "paired_correct": 0,
+      "paired_groups": 6,
+      "row_accuracy": 0.3333333333333333,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,11"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED42",
+      "condition": "P12_PRISM",
+      "distance": 3,
+      "effective_resistance": 1.0277777777777786,
+      "errors": 3,
+      "paired_accuracy": 0.5,
+      "paired_correct": 3,
+      "paired_groups": 6,
+      "row_accuracy": 0.75,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,3"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED42",
+      "condition": "P12_PRISM",
+      "distance": 2,
+      "effective_resistance": 0.933333333333334,
+      "errors": 2,
+      "paired_accuracy": 0.6666666666666666,
+      "paired_correct": 4,
+      "paired_groups": 6,
+      "row_accuracy": 0.8333333333333334,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,4"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED42",
+      "condition": "P12_PRISM",
+      "distance": 2,
+      "effective_resistance": 0.7833333333333337,
+      "errors": 3,
+      "paired_accuracy": 0.5,
+      "paired_correct": 3,
+      "paired_groups": 6,
+      "row_accuracy": 0.75,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,7"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED42",
+      "condition": "P12_PRISM",
+      "distance": 3,
+      "effective_resistance": 0.9777777777777781,
+      "errors": 3,
+      "paired_accuracy": 0.5,
+      "paired_correct": 3,
+      "paired_groups": 6,
+      "row_accuracy": 0.75,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,8"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED42",
+      "condition": "P12_PRISM",
+      "distance": 4,
+      "effective_resistance": 1.0500000000000005,
+      "errors": 8,
+      "paired_accuracy": 0.16666666666666666,
+      "paired_correct": 1,
+      "paired_groups": 6,
+      "row_accuracy": 0.3333333333333333,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,9"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "P12_PRISM_SEED42",
+      "condition": "P12_PRISM",
+      "distance": 2,
+      "effective_resistance": 0.9333333333333347,
+      "errors": 6,
+      "paired_accuracy": 0.3333333333333333,
+      "paired_correct": 2,
+      "paired_groups": 6,
+      "row_accuracy": 0.5,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "1,3"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED1337",
+      "condition": "R12_DIAMETER5",
+      "distance": 4,
+      "effective_resistance": 2.641025641025638,
+      "errors": 6,
+      "paired_accuracy": 0.3333333333333333,
+      "paired_correct": 2,
+      "paired_groups": 6,
+      "row_accuracy": 0.5,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,10"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED1337",
+      "condition": "R12_DIAMETER5",
+      "distance": 4,
+      "effective_resistance": 2.641025641025638,
+      "errors": 5,
+      "paired_accuracy": 0.3333333333333333,
+      "paired_correct": 2,
+      "paired_groups": 6,
+      "row_accuracy": 0.5833333333333334,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,11"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED1337",
+      "condition": "R12_DIAMETER5",
+      "distance": 4,
+      "effective_resistance": 2.641025641025638,
+      "errors": 8,
+      "paired_accuracy": 0.16666666666666666,
+      "paired_correct": 1,
+      "paired_groups": 6,
+      "row_accuracy": 0.3333333333333333,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,3"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED1337",
+      "condition": "R12_DIAMETER5",
+      "distance": 3,
+      "effective_resistance": 2.358974358974355,
+      "errors": 2,
+      "paired_accuracy": 0.6666666666666666,
+      "paired_correct": 4,
+      "paired_groups": 6,
+      "row_accuracy": 0.8333333333333334,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,4"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED1337",
+      "condition": "R12_DIAMETER5",
+      "distance": 3,
+      "effective_resistance": 2.358974358974356,
+      "errors": 0,
+      "paired_accuracy": 1.0,
+      "paired_correct": 6,
+      "paired_groups": 6,
+      "row_accuracy": 1.0,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,7"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED1337",
+      "condition": "R12_DIAMETER5",
+      "distance": 2,
+      "effective_resistance": 1.6666666666666656,
+      "errors": 6,
+      "paired_accuracy": 0.3333333333333333,
+      "paired_correct": 2,
+      "paired_groups": 6,
+      "row_accuracy": 0.5,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,8"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "R12_DIAMETER5_SEED1337",
+      "condition": "R12_DIAMETER5",
+      "distance": 2,
+      "effective_resistance": 0.6666666666666671,
+      "errors": 4,
+      "paired_accuracy": 0.5,
+      "paired_correct": 3,
+      "paired_groups": 6,
+      "row_accuracy": 0.6666666666666666,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "0,9"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED1337",
+      "condition": "R12_DIAMETER5",
+      "distance": 5,
+      "effective_resistance": 2.849358974358972,
+      "errors": 6,
+      "paired_accuracy": 0.3333333333333333,
+      "paired_correct": 2,
+      "paired_groups": 6,
+      "row_accuracy": 0.5,
+      "rows": 12,
+      "seed": 1337,
+      "unordered_pair": "1,3"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED42",
+      "condition": "R12_DIAMETER5",
+      "distance": 4,
+      "effective_resistance": 2.641025641025638,
+      "errors": 4,
+      "paired_accuracy": 0.5,
+      "paired_correct": 3,
+      "paired_groups": 6,
+      "row_accuracy": 0.6666666666666666,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,10"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED42",
+      "condition": "R12_DIAMETER5",
+      "distance": 4,
+      "effective_resistance": 2.641025641025638,
+      "errors": 8,
+      "paired_accuracy": 0.0,
+      "paired_correct": 0,
+      "paired_groups": 6,
+      "row_accuracy": 0.3333333333333333,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,11"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED42",
+      "condition": "R12_DIAMETER5",
+      "distance": 4,
+      "effective_resistance": 2.641025641025638,
+      "errors": 6,
+      "paired_accuracy": 0.16666666666666666,
+      "paired_correct": 1,
+      "paired_groups": 6,
+      "row_accuracy": 0.5,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,3"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED42",
+      "condition": "R12_DIAMETER5",
+      "distance": 3,
+      "effective_resistance": 2.358974358974355,
+      "errors": 5,
+      "paired_accuracy": 0.16666666666666666,
+      "paired_correct": 1,
+      "paired_groups": 6,
+      "row_accuracy": 0.5833333333333334,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,4"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED42",
+      "condition": "R12_DIAMETER5",
+      "distance": 3,
+      "effective_resistance": 2.358974358974356,
+      "errors": 1,
+      "paired_accuracy": 0.8333333333333334,
+      "paired_correct": 5,
+      "paired_groups": 6,
+      "row_accuracy": 0.9166666666666666,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,7"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED42",
+      "condition": "R12_DIAMETER5",
+      "distance": 2,
+      "effective_resistance": 1.6666666666666656,
+      "errors": 4,
+      "paired_accuracy": 0.3333333333333333,
+      "paired_correct": 2,
+      "paired_groups": 6,
+      "row_accuracy": 0.6666666666666666,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,8"
+    },
+    {
+      "bridge_crossing": false,
+      "cell": "R12_DIAMETER5_SEED42",
+      "condition": "R12_DIAMETER5",
+      "distance": 2,
+      "effective_resistance": 0.6666666666666671,
+      "errors": 6,
+      "paired_accuracy": 0.3333333333333333,
+      "paired_correct": 2,
+      "paired_groups": 6,
+      "row_accuracy": 0.5,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "0,9"
+    },
+    {
+      "bridge_crossing": true,
+      "cell": "R12_DIAMETER5_SEED42",
+      "condition": "R12_DIAMETER5",
+      "distance": 5,
+      "effective_resistance": 2.849358974358972,
+      "errors": 7,
+      "paired_accuracy": 0.0,
+      "paired_correct": 0,
+      "paired_groups": 6,
+      "row_accuracy": 0.4166666666666667,
+      "rows": 12,
+      "seed": 42,
+      "unordered_pair": "1,3"
+    }
+  ],
+  "claims": {
+    "bridge_as_neural_cause": "NOT ESTABLISHED: seven D5 held-out pairs cross the bridge, but cross-bridge neural error is not consistently higher than the one non-crossing pair.",
+    "distance_as_neural_cause": "NOT ESTABLISHED: checkpoint pair correlations are small or seed-dependent and the eight pairs do not separate distance from resistance.",
+    "graph_bottleneck": "SUPPORTED AS A GRAPH PROPERTY: the diameter-5 graph has bridge (6,8), lower algebraic connectivity and higher effective resistance.",
+    "identifier_or_seed_effects": "EXPLORATORY: pair error rankings show seed variation and some recurring pair differences, but failed training gates prevent a validated transfer claim.",
+    "linear_noise_formula": "SUPPORTED: exact effective-resistance formulae match independent Monte Carlo reconstruction within sampling variation.",
+    "logical_recoverability": "SUPPORTED: independent modular path oracle was 100% for both graphs and all three moduli in 8,000 trials per graph.",
+    "resistance_as_neural_cause": "NOT ESTABLISHED: resistance correlations are descriptive and not significant with eight pairs; the pair-level design is confounded."
+  },
+  "exact_modular_oracle": {
+    "P12_PRISM": {
+      "11": {
+        "accuracy": 1.0,
+        "correct": 8000,
+        "total": 8000
+      },
+      "5": {
+        "accuracy": 1.0,
+        "correct": 8000,
+        "total": 8000
+      },
+      "97": {
+        "accuracy": 1.0,
+        "correct": 8000,
+        "total": 8000
+      }
+    },
+    "R12_DIAMETER5": {
+      "11": {
+        "accuracy": 1.0,
+        "correct": 8000,
+        "total": 8000
+      },
+      "5": {
+        "accuracy": 1.0,
+        "correct": 8000,
+        "total": 8000
+      },
+      "97": {
+        "accuracy": 1.0,
+        "correct": 8000,
+        "total": 8000
+      }
+    }
+  },
+  "experiment": "crucible_topology_symbolic_hypothesis_audit_20261027_v1",
+  "noise_reconstruction": {
+    "P12_PRISM": {
+      "exact_gaussian_global_mse": 0.03733333333333336,
+      "exact_single_edge_global_mse": 0.05185185185185188,
+      "gaussian_global_mse": 0.037410138397484353,
+      "gaussian_path_mse": 0.10521889675192687,
+      "gaussian_sigma": 0.2,
+      "mean_held_out_resistance": 0.9333333333333338,
+      "single_edge_global_mse": 0.051883620370370434,
+      "single_edge_path_mse": 0.14305,
+      "trials": 5000
+    },
+    "R12_DIAMETER5": {
+      "exact_gaussian_global_mse": 0.08911858974358966,
+      "exact_single_edge_global_mse": 0.12377581908831894,
+      "gaussian_global_mse": 0.0906950317351496,
+      "gaussian_path_mse": 0.13565953726643515,
+      "gaussian_sigma": 0.2,
+      "mean_held_out_resistance": 2.227964743589741,
+      "single_edge_global_mse": 0.1209271108131983,
+      "single_edge_path_mse": 0.1849,
+      "trials": 5000
+    }
+  },
+  "random_regular_laboratory": {
+    "by_diameter": {
+      "3": {
+        "graphs": 166,
+        "graphs_with_bridges": 0,
+        "median_algebraic_connectivity": 0.9454620125337292
+      },
+      "4": {
+        "graphs": 300,
+        "graphs_with_bridges": 0,
+        "median_algebraic_connectivity": 0.6398655736015042
+      },
+      "5": {
+        "graphs": 26,
+        "graphs_with_bridges": 4,
+        "median_algebraic_connectivity": 0.33717281138914523
+      },
+      "6": {
+        "graphs": 6,
+        "graphs_with_bridges": 6,
+        "median_algebraic_connectivity": 0.1791538184643947
+      }
+    },
+    "connected": 498,
+    "sampled": 500
+  },
+  "schema_version": "crucible_topology_symbolic_hypothesis_audit_v1",
+  "sealed_test_accessed": false,
+  "source_experiment": "experiments/crucible_two_candidate_topology_control_20261027_v1",
+  "structural_metrics": {
+    "P12_PRISM": {
+      "algebraic_connectivity": 1.0000000000000002,
+      "bridge_count": 0,
+      "bridges": [],
+      "connected": true,
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "diameter": 4,
+      "diffusion_distance_from_uniform": {
+        "1": 0.5471139010922732,
+        "2": 0.19233157294115147,
+        "3": 0.0704535983718627,
+        "4": 0.025904400050914062
+      },
+      "edges": 18,
+      "held_out": {
+        "0,10": {
+          "bridge_crossing": false,
+          "distance": 3,
+          "resistance": 0.9777777777777775,
+          "shortest_path": [
+            0,
+            5,
+            4,
+            10
+          ]
+        },
+        "0,11": {
+          "bridge_crossing": false,
+          "distance": 2,
+          "resistance": 0.7833333333333337,
+          "shortest_path": [
+            0,
+            5,
+            11
+          ]
+        },
+        "0,3": {
+          "bridge_crossing": false,
+          "distance": 3,
+          "resistance": 1.0277777777777786,
+          "shortest_path": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "0,4": {
+          "bridge_crossing": false,
+          "distance": 2,
+          "resistance": 0.933333333333334,
+          "shortest_path": [
+            0,
+            5,
+            4
+          ]
+        },
+        "0,7": {
+          "bridge_crossing": false,
+          "distance": 2,
+          "resistance": 0.7833333333333337,
+          "shortest_path": [
+            0,
+            1,
+            7
+          ]
+        },
+        "0,8": {
+          "bridge_crossing": false,
+          "distance": 3,
+          "resistance": 0.9777777777777781,
+          "shortest_path": [
+            0,
+            1,
+            2,
+            8
+          ]
+        },
+        "0,9": {
+          "bridge_crossing": false,
+          "distance": 4,
+          "resistance": 1.0500000000000005,
+          "shortest_path": [
+            0,
+            1,
+            2,
+            3,
+            9
+          ]
+        },
+        "1,3": {
+          "bridge_crossing": false,
+          "distance": 2,
+          "resistance": 0.9333333333333347,
+          "shortest_path": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      "max_edge_betweenness": 0.13636363636363635,
+      "mean_clustering": 0.0,
+      "mean_effective_resistance_all_pairs": 0.8454545454545457,
+      "mean_shortest_path": 2.1818181818181817,
+      "nodes": 12,
+      "triangle_count": 0
+    },
+    "R12_DIAMETER5": {
+      "algebraic_connectivity": 0.1807874212157204,
+      "bridge_count": 1,
+      "bridges": [
+        [
+          6,
+          8
+        ]
+      ],
+      "connected": true,
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "diameter": 5,
+      "diffusion_distance_from_uniform": {
+        "1": 0.8645388231699059,
+        "2": 0.6973140661930456,
+        "3": 0.5813970560688644,
+        "4": 0.4852223739159224
+      },
+      "edges": 18,
+      "held_out": {
+        "0,10": {
+          "bridge_crossing": true,
+          "distance": 4,
+          "resistance": 2.641025641025638,
+          "shortest_path": [
+            0,
+            6,
+            8,
+            7,
+            10
+          ]
+        },
+        "0,11": {
+          "bridge_crossing": true,
+          "distance": 4,
+          "resistance": 2.641025641025638,
+          "shortest_path": [
+            0,
+            6,
+            8,
+            4,
+            11
+          ]
+        },
+        "0,3": {
+          "bridge_crossing": true,
+          "distance": 4,
+          "resistance": 2.641025641025638,
+          "shortest_path": [
+            0,
+            6,
+            8,
+            4,
+            3
+          ]
+        },
+        "0,4": {
+          "bridge_crossing": true,
+          "distance": 3,
+          "resistance": 2.358974358974355,
+          "shortest_path": [
+            0,
+            6,
+            8,
+            4
+          ]
+        },
+        "0,7": {
+          "bridge_crossing": true,
+          "distance": 3,
+          "resistance": 2.358974358974356,
+          "shortest_path": [
+            0,
+            6,
+            8,
+            7
+          ]
+        },
+        "0,8": {
+          "bridge_crossing": true,
+          "distance": 2,
+          "resistance": 1.6666666666666656,
+          "shortest_path": [
+            0,
+            6,
+            8
+          ]
+        },
+        "0,9": {
+          "bridge_crossing": false,
+          "distance": 2,
+          "resistance": 0.6666666666666671,
+          "shortest_path": [
+            0,
+            1,
+            9
+          ]
+        },
+        "1,3": {
+          "bridge_crossing": true,
+          "distance": 5,
+          "resistance": 2.849358974358972,
+          "shortest_path": [
+            1,
+            0,
+            6,
+            8,
+            4,
+            3
+          ]
+        }
+      },
+      "max_edge_betweenness": 0.5303030303030303,
+      "mean_clustering": 0.16666666666666666,
+      "mean_effective_resistance_all_pairs": 1.58158508158508,
+      "mean_shortest_path": 2.606060606060606,
+      "nodes": 12,
+      "triangle_count": 2
+    }
+  },
+  "training_performed": false
+}

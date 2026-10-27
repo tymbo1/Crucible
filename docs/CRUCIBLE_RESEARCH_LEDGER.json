@@ -751,6 +751,29 @@
         "experiments/crucible_two_candidate_topology_control_20261027_v1/FINALIZATION.json"
       ],
       "novelty_terms": ["matched-degree topology", "edge-offset composition", "path-length transfer", "graph topology control"]
+    },
+    {
+      "id": "topology-symbolic-hypothesis-audit-v1",
+      "status": "ESTABLISHED",
+      "title": "Symbolic topology and effective-resistance audit",
+      "hypothesis": "The proposed graph-structural, diffusion, modular-oracle and effective-resistance mechanisms can be independently reproduced, and their pair-level predictions can be tested against the committed topology checkpoints.",
+      "mechanisms": ["graph-topology", "symbolic-relational-composition", "effective-resistance", "noise-propagation", "checkpoint-forensics"],
+      "interventions": ["Read-only independent graph calculations", "exact modular path oracle", "linear noisy-reconstruction simulation", "pair-level distance/resistance/bridge analysis of four checkpoints"],
+      "controls": ["Exact committed graph manifest", "500 random 3-regular graph laboratory", "moduli 5/11/97", "5,000 noise trials per graph", "all eight held-out pairs", "no training", "no sealed test"],
+      "result": "The structural claims and random-regular control reproduced: the diameter-5 graph has a bridge, lower algebraic connectivity and higher held-out effective resistance, while diameter-5 graphs without bridges also exist. The modular path oracle was 100% for both graphs across all tested moduli. Effective-resistance formulae matched independent global least-squares noise simulations. Baseline neural pair errors did not consistently track shortest-path distance, effective resistance or bridge crossing; pair 0–9 improved under the diameter-5 graph in both seeds, but the eight-pair design cannot separate competing predictors and three original arms failed training competence.",
+      "limits": ["The mathematical results concern the symbolic graph and linear reconstruction model", "No evidence that Crucible implements least squares, diffusion or shortest-path inference", "Eight held-out pairs are insufficient for causal predictor separation", "Neural checkpoint comparison is exploratory because most arms failed the original training gate"],
+      "unresolved": ["Whether graph redundancy affects a training-competent neural model", "Whether modular discrete errors follow effective resistance or path distance", "Whether bridge structure changes neural acquisition or only symbolic noise robustness"],
+      "artifacts": [
+        "docs/CRUCIBLE_TOPOLOGY_SYMBOLIC_HYPOTHESIS_AUDIT_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_TOPOLOGY_SYMBOLIC_HYPOTHESIS_AUDIT_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_topology_symbolic_hypothesis_audit_20261027.py",
+        "experiments/crucible_topology_symbolic_hypothesis_audit_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_topology_symbolic_hypothesis_audit_20261027_v1/RESULTS.json",
+        "experiments/crucible_topology_symbolic_hypothesis_audit_20261027_v1/CHECKPOINT_PAIR_ANALYSIS.csv",
+        "experiments/crucible_topology_symbolic_hypothesis_audit_20261027_v1/HASHES.json",
+        "experiments/crucible_topology_symbolic_hypothesis_audit_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["symbolic topology audit", "effective resistance", "modular path oracle", "neural checkpoint falsification"]
     }
   ]
 }
