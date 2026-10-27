@@ -56,9 +56,9 @@ def main() -> int:
         errors.append("runner validation claims scientific execution")
     if report.get("validation_or_test_loaded") or report.get("sealed_test_accessed"):
         errors.append("runner validation crossed data isolation boundary")
-    if audit.get("status") != "incomplete_for_exact_scientific_execution":
-        errors.append("protocol audit did not preserve unresolved execution fields")
-    if audit.get("scientific_execution_permitted") or config.get("scientific_run_started"):
+    if audit.get("status") != "pass" or audit.get("amendment_status") != "frozen_pending_execution_approval":
+        errors.append("protocol freeze amendment is not passing")
+    if audit.get("scientific_execution_permitted") or audit.get("scientific_execution_approved") or config.get("scientific_run_started"):
         errors.append("validation configuration permits scientific execution")
     if config.get("validation_or_test_loaded") or config.get("sealed_test_accessed") or config.get("training_or_eval_manifest_loaded"):
         errors.append("runner configuration loaded scientific data")

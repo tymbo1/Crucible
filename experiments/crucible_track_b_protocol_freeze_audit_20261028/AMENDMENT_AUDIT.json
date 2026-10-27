@@ -1,0 +1,23 @@
+{
+  "classification": "protocol_freeze_audit_only",
+  "errors": [],
+  "implementation_bindings": {
+    "b2_architecture": true,
+    "b3_architecture": true,
+    "optimizer_rates_present": true,
+    "runner_scientific_guarded": true
+  },
+  "notes": [
+    "The runner's scientific mode remains refusal-guarded until both approval flags are true.",
+    "The amendment is a dated freeze and not a claim about historical preregistration.",
+    "No sealed-test rows were loaded by this audit; only the sealed source path was checked."
+  ],
+  "scientific_execution_approved": false,
+  "source_hashes": {
+    "amendment": "edd0383ccc65c2b5e6562c6b3f75727c171deffac25d7377856ff0b62c83252b",
+    "grammar": "e7788c3338dfeb09ba72c7d9f696d4c68b77970ebdc22c4866d7bd9ed53405c9",
+    "original_protocol": "c46544b0d136039502e1a20b608cc217cdae7ebe54cf5b58d8ff78b5abe65ae3",
+    "runner": "2cbef83816c4e1df676112b73bc8549e19f4f40dbf3a03820efa5b252243bed8"
+  },
+  "status": "pass"
+}

@@ -67,21 +67,31 @@ persistence reload, post-reset execution, externally triggered invalidation,
 successor verification and deterministic replay. The independent runner
 validator passed.
 
-The runner's scientific mode refuses to start while the protocol audit is
-incomplete. It reports these fields as not frozen in the machine-readable
-protocol: B1 candidate/verifier budgets, B2/B3 architecture details, optimizer
-settings, contradiction and interference fixtures, sealed-test source, and
-checkpoint-selection rule. The synthetic runner's defaults are not scientific
-defaults.
+Before the amendment, the runner audit identified these fields as unfrozen in
+the machine-readable protocol: B1 candidate/verifier budgets, B2/B3
+architecture details, optimizer settings, contradiction and interference
+fixtures, sealed-test source, and checkpoint-selection rule. The synthetic
+runner's defaults were not scientific defaults. The dated amendment below now
+resolves them, while the scientific-mode approval guard remains active.
+
+## Protocol-freeze amendment
+
+Those nine fields are now resolved in the dated amendment
+`docs/CRUCIBLE_TRACK_B_NEURAL_PROPOSER_PROTOCOL_FREEZE_AMENDMENT_20261028.json`
+and its explanatory markdown. The independent audit at
+`experiments/crucible_track_b_protocol_freeze_audit_20261028/` passes against
+the original protocol, grammar, runner implementation and approval guards.
+The amendment is explicitly a post-protocol freeze, not a retroactive claim of
+earlier preregistration.
 
 ## Remaining approval boundary
 
-The three registered implementation blockers and the four-arm runner
-validation are complete. Scientific execution remains withheld because the
-protocol is not yet exact enough to reproduce the registered comparison and
-the protocol's `run_approved` flag remains false. The missing fields must be
-frozen without changing the hypotheses, manifest, success criteria or resource
-limits before any GPU allocation.
+The three registered implementation blockers, four-arm runner validation and
+protocol-freeze audit are complete. The protocol is now exact enough for the
+registered comparison, but scientific execution remains withheld because the
+original protocol's `run_approved` flag and the amendment's
+`scientific_execution_approved` flag remain false. A separate execution
+approval is still required.
 
 The compatibility run used training-only verifier fixtures after proposal
 emission. It did not select a scientific checkpoint, read held-out oracle
@@ -89,8 +99,7 @@ outputs or access the sealed test set.
 
 ## Decision
 
-The CPU-only preparation, implementation-compatibility and runner-validation
-gates are complete and passing. The protocol remains `UNTESTED` and is not
-approved for neural training, GPU allocation or scientific execution. The next
-permitted step is to freeze the missing machine-readable protocol fields and
-perform a separate approval review.
+The CPU-only preparation, implementation-compatibility, runner-validation and
+protocol-freeze gates are complete and passing. The protocol remains
+`UNTESTED` and is not approved for neural training, GPU allocation or scientific
+execution. The next permitted step is a separate execution-approval decision.

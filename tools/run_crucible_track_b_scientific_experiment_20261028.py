@@ -39,6 +39,7 @@ from crucible_track_b_neural_proposer import (
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = ROOT / "docs" / "CRUCIBLE_TRACK_B_NEURAL_PROPOSER_PROTOCOL_20261028.json"
+AMENDMENT = ROOT / "docs" / "CRUCIBLE_TRACK_B_NEURAL_PROPOSER_PROTOCOL_FREEZE_AMENDMENT_20261028.json"
 GRAMMAR = ROOT / "experiments" / "crucible_track_b_neural_proposer_preflight_20261028" / "GRAMMAR_SPEC.json"
 OUTPUT = ROOT / "experiments" / "crucible_track_b_scientific_runner_validation_20261028"
 SEED = 42
@@ -82,35 +83,44 @@ def set_seed(seed: int) -> None:
     torch.use_deterministic_algorithms(True)
 
 
-def protocol_audit(protocol: Mapping[str, Any]) -> Dict[str, Any]:
-    """Identify fields needed for exact execution that are not frozen."""
-    missing: List[str] = []
-    if "b1_candidate_budget" not in protocol.get("search_budget", {}):
-        missing.append("search_budget.b1_candidate_budget")
-    if "b1_verifier_call_cap" not in protocol.get("search_budget", {}):
-        missing.append("search_budget.b1_verifier_call_cap")
-    if "b2_architecture" not in protocol:
-        missing.append("b2_architecture")
-    if "b3_architecture" not in protocol:
-        missing.append("b3_architecture")
-    if "optimizer" not in protocol:
-        missing.append("optimizer_and_learning_rate")
-    if "contradiction_fixture" not in protocol:
-        missing.append("contradiction_fixture")
-    if "interference_fixture" not in protocol:
-        missing.append("interference_fixture")
-    if "sealed_test_source" not in protocol:
-        missing.append("sealed_test_source")
-    if "checkpoint_rule" not in protocol:
-        missing.append("checkpoint_selection_rule")
-    exact = not missing
+REQUIRED_AMENDMENT_RESOLUTIONS = (
+    "search_budget.b1_candidate_budget",
+    "search_budget.b1_verifier_call_cap",
+    "b2_architecture",
+    "b3_architecture",
+    "optimizer_and_learning_rate",
+    "contradiction_fixture",
+    "interference_fixture",
+    "sealed_test_source",
+    "checkpoint_selection_rule",
+)
+
+
+def protocol_audit(protocol: Mapping[str, Any], amendment: Optional[Mapping[str, Any]] = None) -> Dict[str, Any]:
+    """Check the original design plus the dated freeze amendment."""
+    if amendment is None:
+        missing = list(REQUIRED_AMENDMENT_RESOLUTIONS)
+        amendment_status = "missing"
+        amendment_approved = False
+    else:
+        resolutions = amendment.get("resolutions", {})
+        missing = [key for key in REQUIRED_AMENDMENT_RESOLUTIONS if key not in resolutions]
+        amendment_status = str(amendment.get("status", "missing"))
+        amendment_approved = bool(amendment.get("scientific_execution_approved"))
+        if amendment.get("preserved_protocol_invariants", {}).get("arms") != protocol.get("arms"):
+            missing.append("preserved_protocol_invariants.arms")
+        if amendment.get("preserved_protocol_invariants", {}).get("seeds") != protocol.get("compute_budget", {}).get("seeds"):
+            missing.append("preserved_protocol_invariants.seeds")
+    exact = not missing and amendment_status == "frozen_pending_execution_approval"
     return {
         "status": "pass" if exact else "incomplete_for_exact_scientific_execution",
         "protocol_status": protocol.get("status"),
         "run_approved": bool(protocol.get("run_approved")),
+        "amendment_status": amendment_status,
+        "scientific_execution_approved": amendment_approved,
         "missing_machine_readable_fields": missing,
-        "scientific_execution_permitted": exact and bool(protocol.get("run_approved")),
-        "note": "Defaults used by the synthetic runner are validation fixtures only and cannot authorize scientific execution.",
+        "scientific_execution_permitted": exact and bool(protocol.get("run_approved")) and amendment_approved,
+        "note": "The dated amendment resolves configuration fields; separate execution approval remains required.",
     }
 
 
@@ -395,9 +405,10 @@ def safe_prepare_output() -> None:
 
 def run_validate() -> int:
     protocol = json.loads(PROTOCOL.read_text(encoding="utf-8"))
+    amendment = json.loads(AMENDMENT.read_text(encoding="utf-8")) if AMENDMENT.exists() else None
     grammar_spec = json.loads(GRAMMAR.read_text(encoding="utf-8"))
     grammar = GrammarConstraint(grammar_spec["max_depth"], grammar_spec["max_nodes"])
-    audit = protocol_audit(protocol)
+    audit = protocol_audit(protocol, amendment)
     safe_prepare_output()
 
     first = run_validation_once(grammar, OUTPUT)
@@ -414,6 +425,8 @@ def run_validate() -> int:
         "sealed_test_accessed": False,
         "scientific_run_started": False,
         "protocol_sha256": sha256(PROTOCOL),
+        "amendment_sha256": sha256(AMENDMENT) if AMENDMENT.exists() else None,
+        "amendment_status": audit["amendment_status"],
         "grammar_sha256": sha256(GRAMMAR),
         "arms": ["B0_V0_DETERMINISTIC_RULE_FILTER", "B1_DETERMINISTIC_AST_SEARCH", "B2_LEARNED_FIXED_FAMILY_PROPOSER", "B3_LEARNED_COMPOSITIONAL_PROPOSER"],
     })
@@ -463,7 +476,8 @@ def main() -> int:
     args = parser.parse_args()
     if args.scientific:
         protocol = json.loads(PROTOCOL.read_text(encoding="utf-8"))
-        audit = protocol_audit(protocol)
+        amendment = json.loads(AMENDMENT.read_text(encoding="utf-8")) if AMENDMENT.exists() else None
+        audit = protocol_audit(protocol, amendment)
         raise SystemExit(json.dumps({"status": "refused", "reason": "scientific execution requires complete machine-readable protocol and explicit run_approved=true", "protocol_audit": audit}, sort_keys=True))
     return run_validate()
 
