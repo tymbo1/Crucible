@@ -1,0 +1,38 @@
+{
+  "full_training_launched": false,
+  "sealed_test_accessed": false,
+  "status": "passed",
+  "training_scope": "50-step throughput only",
+  "variants": [
+    {
+      "elapsed_seconds": 20.757948355007102,
+      "finite": true,
+      "first_loss": 1.6264461278915405,
+      "last_cycle_loss": 0.0,
+      "last_loss": 1.166359305381775,
+      "parameter_count": 22104955,
+      "parameter_delta_from_n0": -1951,
+      "peak_rss_mb_after": 1298.94921875,
+      "peak_rss_mb_before": 715.80078125,
+      "state_digest": "7f114cfddd0633eb7997c5e9e2ccda80541cba26ca88e2e6c43fcdd13787b8b6",
+      "steps": 50,
+      "steps_per_second": 2.4087157995719473,
+      "variant": "N1_SHARED_LATENT"
+    },
+    {
+      "elapsed_seconds": 20.652223837998463,
+      "finite": true,
+      "first_loss": 1.7431018352508545,
+      "last_cycle_loss": 1.6198234558105469,
+      "last_loss": 4.653558254241943,
+      "parameter_count": 22104955,
+      "parameter_delta_from_n0": -1951,
+      "peak_rss_mb_after": 1298.94921875,
+      "peak_rss_mb_before": 1298.94921875,
+      "state_digest": "46966d875de59415cf85735867f995a376f49148771926f15dbba44623583b37",
+      "steps": 50,
+      "steps_per_second": 2.421046664010163,
+      "variant": "N2_SHARED_LATENT_CYCLE"
+    }
+  ]
+}

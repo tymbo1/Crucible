@@ -38,6 +38,14 @@ must be reported; the target is within ±5% of N0 where feasible. If that
 cannot be achieved, the comparison is labelled constructive and not
 parameter-matched.
 
+The fixed implementation constants are: five shared message-passing rounds,
+latent width 1,918, AdamW with learning rate `3e-4`, betas `(0.9, 0.95)`,
+weight decay `0.1`, gradient clipping at `1.0`, and cycle-loss weight `0.1` in
+N2. The structured model has no learned identifier embedding; node identity is
+represented only by within-example source/target marker channels and the
+observed graph connectivity. Its expected parameter count is approximately
+22.105M, compared with the N0 count of 22.107M.
+
 ## N1/N2 architecture contract
 
 The structured models operate on the observed graph edges and their modular

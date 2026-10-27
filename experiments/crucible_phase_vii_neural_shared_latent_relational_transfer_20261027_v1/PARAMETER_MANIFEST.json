@@ -1,0 +1,22 @@
+{
+  "N0_parameter_count": 22106906,
+  "N1_parameter_count": 22104955,
+  "N2_parameter_count": 22104955,
+  "cycle_weight": 0.1,
+  "latent_width": 1918,
+  "message_rounds": 5,
+  "model_seed_offsets": {
+    "N1_SHARED_LATENT": 91000,
+    "N2_SHARED_LATENT_CYCLE": 92000
+  },
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "clip_norm": 1.0,
+    "kind": "AdamW",
+    "lr": 0.0003,
+    "weight_decay": 0.1
+  }
+}
