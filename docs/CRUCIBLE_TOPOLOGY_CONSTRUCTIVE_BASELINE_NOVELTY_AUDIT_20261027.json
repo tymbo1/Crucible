@@ -1,0 +1,22 @@
+{
+  "schema_version": "crucible_novelty_audit_v1",
+  "experiment": "crucible_topology_constructive_baseline_20261027_v1",
+  "status": "read_only_audit",
+  "decision": "PROCEED",
+  "repository_ledger_checked": true,
+  "new_training": false,
+  "sealed_test_accessed": false,
+  "novelty_claim": "No indexed Crucible record was found that independently implements the Phase VI shared latent-potential constructive baseline with the committed topology graphs, three moduli, unseen-pair lookup control, and one-corrupted-edge shortest-path control.",
+  "related_records": [
+    "two-candidate-topology-control-v1",
+    "topology-symbolic-hypothesis-audit-v1",
+    "two-candidate-coverage-density-v1"
+  ],
+  "not_novel": [
+    "The topology graph manifest",
+    "The eight held-out node pairs",
+    "The modular path-composition task family",
+    "The distinction between symbolic oracle performance and neural learning"
+  ],
+  "task_boundary": "Read-only symbolic constructive replication; no model training, checkpoint access, sealed-test access, or claim of emergent neural generalisation."
+}

@@ -774,6 +774,28 @@
         "experiments/crucible_topology_symbolic_hypothesis_audit_20261027_v1/FINALIZATION.json"
       ],
       "novelty_terms": ["symbolic topology audit", "effective resistance", "modular path oracle", "neural checkpoint falsification"]
+    },
+    {
+      "id": "topology-constructive-relational-baseline-v1",
+      "status": "ESTABLISHED",
+      "title": "Constructive shared latent-potential relational baseline",
+      "hypothesis": "A supplied shared latent-potential representation can compose unseen modular node relationships across the committed topology graphs, while a lookup baseline cannot.",
+      "mechanisms": ["shared-latent-representation", "symbolic-relational-composition", "modular-inference", "error-propagation", "graph-topology"],
+      "interventions": ["Explicit node-potential recovery", "Shortest-path modular composition", "One-corrupted-edge control", "Random unseen-pair lookup baseline"],
+      "controls": ["Committed P12_PRISM and R12_DIAMETER5 manifests", "Eight fixed held-out pairs", "Moduli 5/11/97", "1,000 trials per graph/modulus", "Edge-consistency checks", "No training", "No checkpoint access", "No sealed test"],
+      "result": "The supplied latent-potential composition recovered 24,000/24,000 held-out relations for each graph across all three moduli. Random lookup stayed near its expected 1/K accuracy. After one random ±1 edge corruption, shortest-path accuracy was 84.96%, 85.49% and 86.04% for the prism and 80.89%, 82.40% and 82.53% for the diameter-5 graph at K=5, 11 and 97 respectively. Uncorrupted edge consistency passed every trial; corrupted-cycle inconsistency was detected on every prism trial and on the non-bridge fraction of diameter-5 trials.",
+      "limits": ["The composition algorithm and shared representation were supplied explicitly", "All identifiers were observed in the graph", "The corruption control is a symbolic shortest-path diagnostic", "No claim that Crucible implements this algorithm or learns it"],
+      "unresolved": ["Whether a neural model can learn the shared latent representation", "Whether learned transfer extends to entirely unseen identifiers", "Whether global reconciliation or path composition is the relevant neural analogue", "Whether the symbolic topology sensitivity predicts a training-competent neural model"],
+      "artifacts": [
+        "docs/CRUCIBLE_TOPOLOGY_CONSTRUCTIVE_BASELINE_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_TOPOLOGY_CONSTRUCTIVE_BASELINE_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_topology_constructive_baseline_20261027.py",
+        "experiments/crucible_topology_constructive_baseline_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_topology_constructive_baseline_20261027_v1/RESULTS.json",
+        "experiments/crucible_topology_constructive_baseline_20261027_v1/HASHES.json",
+        "experiments/crucible_topology_constructive_baseline_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["shared latent potential", "constructive relational baseline", "unseen-pair composition", "corrupted-edge control"]
     }
   ]
 }

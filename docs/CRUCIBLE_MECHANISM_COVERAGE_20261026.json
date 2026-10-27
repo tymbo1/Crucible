@@ -1,7 +1,7 @@
 {
   "schema_version": "crucible_mechanism_coverage_v1",
   "updated": "2026-10-27",
-  "indexed_final_reports": 36,
+  "indexed_final_reports": 38,
   "categories": [
     {
       "mechanism": "operation-recognition",
@@ -68,10 +68,10 @@
     },
     {
       "mechanism": "relational-composition-and-topology",
-      "established": ["topology-symbolic-hypothesis-audit-v1"],
+      "established": ["topology-symbolic-hypothesis-audit-v1", "topology-constructive-relational-baseline-v1"],
       "failed": [],
       "inconclusive": ["two-candidate-topology-control-v1"],
-      "unresolved": ["Whether matched graph topology changes transfer after both graph conditions pass training competence", "Whether path length affects composition under controlled competence", "Whether the edge-offset task is learnable under the frozen recipe"]
+      "unresolved": ["Whether matched graph topology changes transfer after both graph conditions pass training competence", "Whether path length affects composition under controlled competence", "Whether the edge-offset task is learnable under the frozen recipe", "Whether a neural model can learn the supplied shared latent-potential representation"]
     }
   ],
   "overlap_groups": [
@@ -102,8 +102,8 @@
     },
     {
       "name": "relational-topology-control-lineage",
-      "records": ["two-candidate-topology-control-v1", "topology-symbolic-hypothesis-audit-v1"],
-      "interpretation": "This is a separate edge-offset composition task, not a direct identifier-matching continuation. The graph feasibility and path-consistency controls passed, but only one of four arms reached training competence, so the matched-diameter comparison is not adjudicated. The read-only symbolic audit establishes the graph and linear-noise mathematics while finding no validated neural mechanism."
+      "records": ["two-candidate-topology-control-v1", "topology-symbolic-hypothesis-audit-v1", "topology-constructive-relational-baseline-v1"],
+      "interpretation": "This is a separate edge-offset composition task, not a direct identifier-matching continuation. The graph feasibility and path-consistency controls passed, but the original neural topology comparison was not adjudicated until the duration-extension audit is complete. The read-only symbolic audits establish graph, linear-noise and constructive latent-potential controls while finding no validated neural mechanism."
     }
   ]
 }

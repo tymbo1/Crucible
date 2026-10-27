@@ -1,0 +1,151 @@
+{
+  "claims": {
+    "corruption_robustness": "DESCRIPTIVE SYMBOLIC RESULT: one corrupted edge reduced shortest-path accuracy, with lower accuracy on the bridge-constrained graph in every tested modulus.",
+    "neural_learning": "NOT TESTED: the shared latent representation and composition algorithm were supplied explicitly; no neural model was trained or inspected.",
+    "shared_latent_constructive_sufficiency": "SUPPORTED SYMBOLICALLY: exact path composition from supplied edge offsets recovered every held-out relation in all tested trials.",
+    "unseen_identifiers": "NOT TESTED: every identifier was present in the observed graph; this does not establish generalisation to new identifiers.",
+    "unseen_pair_lookup_baseline": "SUPPORTED: random lookup remained near 1/K, the expected baseline for unseen modular differences."
+  },
+  "experiment": "crucible_topology_constructive_baseline_20261027_v1",
+  "graphs": {
+    "P12_PRISM": {
+      "11": {
+        "corrupted_cycle_consistency_failures": 1000,
+        "corrupted_shortest_path_accuracy": 0.854875,
+        "corrupted_shortest_path_correct": 6839,
+        "corrupted_trial_count": 1000,
+        "exact_path_accuracy": 1.0,
+        "exact_path_correct": 8000,
+        "held_out_pairs": 8,
+        "lookup_accuracy": 0.08825,
+        "lookup_correct": 706,
+        "lookup_expected_accuracy": 0.09090909090909091,
+        "total_predictions": 8000,
+        "trials": 1000,
+        "uncorrupted_consistency_passes": 1000
+      },
+      "5": {
+        "corrupted_cycle_consistency_failures": 1000,
+        "corrupted_shortest_path_accuracy": 0.849625,
+        "corrupted_shortest_path_correct": 6797,
+        "corrupted_trial_count": 1000,
+        "exact_path_accuracy": 1.0,
+        "exact_path_correct": 8000,
+        "held_out_pairs": 8,
+        "lookup_accuracy": 0.200625,
+        "lookup_correct": 1605,
+        "lookup_expected_accuracy": 0.2,
+        "total_predictions": 8000,
+        "trials": 1000,
+        "uncorrupted_consistency_passes": 1000
+      },
+      "97": {
+        "corrupted_cycle_consistency_failures": 1000,
+        "corrupted_shortest_path_accuracy": 0.860375,
+        "corrupted_shortest_path_correct": 6883,
+        "corrupted_trial_count": 1000,
+        "exact_path_accuracy": 1.0,
+        "exact_path_correct": 8000,
+        "held_out_pairs": 8,
+        "lookup_accuracy": 0.0115,
+        "lookup_correct": 92,
+        "lookup_expected_accuracy": 0.010309278350515464,
+        "total_predictions": 8000,
+        "trials": 1000,
+        "uncorrupted_consistency_passes": 1000
+      }
+    },
+    "R12_DIAMETER5": {
+      "11": {
+        "corrupted_cycle_consistency_failures": 954,
+        "corrupted_shortest_path_accuracy": 0.824,
+        "corrupted_shortest_path_correct": 6592,
+        "corrupted_trial_count": 1000,
+        "exact_path_accuracy": 1.0,
+        "exact_path_correct": 8000,
+        "held_out_pairs": 8,
+        "lookup_accuracy": 0.09125,
+        "lookup_correct": 730,
+        "lookup_expected_accuracy": 0.09090909090909091,
+        "total_predictions": 8000,
+        "trials": 1000,
+        "uncorrupted_consistency_passes": 1000
+      },
+      "5": {
+        "corrupted_cycle_consistency_failures": 948,
+        "corrupted_shortest_path_accuracy": 0.808875,
+        "corrupted_shortest_path_correct": 6471,
+        "corrupted_trial_count": 1000,
+        "exact_path_accuracy": 1.0,
+        "exact_path_correct": 8000,
+        "held_out_pairs": 8,
+        "lookup_accuracy": 0.205875,
+        "lookup_correct": 1647,
+        "lookup_expected_accuracy": 0.2,
+        "total_predictions": 8000,
+        "trials": 1000,
+        "uncorrupted_consistency_passes": 1000
+      },
+      "97": {
+        "corrupted_cycle_consistency_failures": 950,
+        "corrupted_shortest_path_accuracy": 0.82525,
+        "corrupted_shortest_path_correct": 6602,
+        "corrupted_trial_count": 1000,
+        "exact_path_accuracy": 1.0,
+        "exact_path_correct": 8000,
+        "held_out_pairs": 8,
+        "lookup_accuracy": 0.00975,
+        "lookup_correct": 78,
+        "lookup_expected_accuracy": 0.010309278350515464,
+        "total_predictions": 8000,
+        "trials": 1000,
+        "uncorrupted_consistency_passes": 1000
+      }
+    }
+  },
+  "held_out_pairs": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      0,
+      11
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "moduli": [
+    5,
+    11,
+    97
+  ],
+  "random_seed": 27027,
+  "schema_version": "crucible_topology_constructive_baseline_v1",
+  "sealed_test_accessed": false,
+  "source_experiment": "experiments/crucible_two_candidate_topology_control_20261027_v1",
+  "training_performed": false,
+  "trials_per_graph_modulus": 1000
+}

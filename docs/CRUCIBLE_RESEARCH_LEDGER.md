@@ -35,8 +35,9 @@ reports that still need ledger entries.
 | `two-candidate-coverage-density-v1` | INCONCLUSIVE | At a fixed 144-row budget, nested D4/D8/D12 coverage did not produce a monotonic transfer improvement; one D8 arm failed training competence, and density was confounded with per-pair repetition, degree and connectivity. |
 | `two-candidate-topology-control-v1` | INCONCLUSIVE | Matched-degree graph controls and the path oracle passed, but only 1/4 arms reached training competence; no diameter-5 arm passed, so the topology comparison is not adjudicated. |
 | `topology-symbolic-hypothesis-audit-v1` | ESTABLISHED | The graph, modular-oracle and effective-resistance mathematics replicate; baseline neural errors do not yet validate those mechanisms inside Crucible. |
+| `topology-constructive-relational-baseline-v1` | ESTABLISHED | A supplied shared latent-potential representation composes all tested unseen pairs exactly on both graphs; this is a symbolic constructive control, not neural discovery. |
 
-The ledger now covers all 37 final experiment reports in the repository. The
+The ledger now covers all 38 final experiment reports in the repository. The
 23 older reports were extracted from their accepted final reports and linked
 artifacts on 2026-10-26; no outcomes were inferred from filenames or
 conversation summaries. See
@@ -84,3 +85,4 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `two-candidate-coverage-density-v1` | INCONCLUSIVE | `crucible_two_candidate_coverage_density_20261027_v1` |
 | `two-candidate-topology-control-v1` | INCONCLUSIVE | `crucible_two_candidate_topology_control_20261027_v1` |
 | `topology-symbolic-hypothesis-audit-v1` | ESTABLISHED | `crucible_topology_symbolic_hypothesis_audit_20261027_v1` |
+| `topology-constructive-relational-baseline-v1` | ESTABLISHED | `crucible_topology_constructive_baseline_20261027_v1` |
