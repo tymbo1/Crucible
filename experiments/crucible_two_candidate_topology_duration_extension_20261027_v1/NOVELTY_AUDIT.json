@@ -1,0 +1,22 @@
+{
+  "decision": "PROCEED_AFTER_PREFLIGHT",
+  "experiment": "crucible_two_candidate_topology_duration_extension_20261027_v1",
+  "new_training": true,
+  "not_novel": [
+    "The topology-control task, data and dense SHARED_SCORER readout",
+    "The two-seed 95% training gate",
+    "The cyclic 500-update schedule through update 500",
+    "The graph/path oracle and candidate-order metrics"
+  ],
+  "novelty_claim": "No indexed Crucible experiment extends the exact matched-degree topology-control arms from 500 to 2,000 updates while verifying first-500 reproducibility and tracking training competence over time.",
+  "related_records": [
+    "two-candidate-topology-control-v1",
+    "two-candidate-coverage-density-v1",
+    "cardinality-competence-diagnostic-v1"
+  ],
+  "repository_ledger_checked": true,
+  "schema_version": "crucible_novelty_audit_v1",
+  "sealed_test_accessed": false,
+  "status": "pre_execution",
+  "task_boundary": "This is a training-duration diagnostic on the frozen topology-control task, not a new topology family or a transfer benchmark."
+}

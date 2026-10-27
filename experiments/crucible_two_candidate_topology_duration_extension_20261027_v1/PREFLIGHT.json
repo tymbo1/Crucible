@@ -1,0 +1,58 @@
+{
+  "audits": {
+    "P12_PRISM": {
+      "source_hashes_verified": true,
+      "train_inputs": 144,
+      "train_rows": 144,
+      "validation_inputs": 96,
+      "validation_rows": 96
+    },
+    "R12_DIAMETER5": {
+      "source_hashes_verified": true,
+      "train_inputs": 144,
+      "train_rows": 144,
+      "validation_inputs": 96,
+      "validation_rows": 96
+    }
+  },
+  "batch_size": 12,
+  "checkpoint_steps": [
+    1,
+    50,
+    100,
+    200,
+    300,
+    400,
+    500,
+    750,
+    1000,
+    1250,
+    1500,
+    1750,
+    2000
+  ],
+  "conditions": [
+    "P12_PRISM",
+    "R12_DIAMETER5"
+  ],
+  "execute_requested": false,
+  "experiment": "crucible_two_candidate_topology_duration_extension_20261027_v1",
+  "novelty_audit": "docs/CRUCIBLE_TWO_CANDIDATE_TOPOLOGY_DURATION_EXTENSION_NOVELTY_AUDIT_20261027.json",
+  "prior_checkpoints_modified": false,
+  "prior_hashes_verified": true,
+  "protocol": "docs/CRUCIBLE_TWO_CANDIDATE_TOPOLOGY_DURATION_EXTENSION_PROTOCOL_20261027.md",
+  "schedule": "cyclic",
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "source_experiment": "experiments/crucible_two_candidate_topology_control_20261027_v1",
+  "source_hash_manifest_hash": "69ceffbfd4f4ce754c314a5fd4dc0795460bc1bff5a950177560fe267a5cfc09",
+  "source_summary_hash": "e86aec2eede94fc0a201c31a658fb177d2d7b18e4d50cbb7c7ba7ba99cf38d2e",
+  "status": "preflight_passed",
+  "symbolic_assistance": false,
+  "total_steps": 2000,
+  "training_gate_threshold": 0.95,
+  "training_performed": false
+}
