@@ -1,0 +1,191 @@
+{
+  "events": [
+    {
+      "alias": "fixed_train_03",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_04",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_12",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_test_04",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_validation_07",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "__common_revision_fixture__",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "__common_revision_fixture__",
+      "kind": "invalidation",
+      "reason": "registered_external_contradiction_fixture"
+    },
+    {
+      "alias": "__common_revision_fixture__",
+      "kind": "promotion",
+      "version": 2
+    }
+  ],
+  "procedures": {
+    "__common_revision_fixture__": [
+      {
+        "alias": "__common_revision_fixture__",
+        "ast": {
+          "name": "a",
+          "op": "var"
+        },
+        "canonical_ast_hash": "e0e02cef5f1b7fa60b8e9fe59e07484e15329ca26b2acef681f2c1641c162935",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B1_DETERMINISTIC_AST_SEARCH",
+          "seed": 42,
+          "source": "registered_external_contradiction_fixture"
+        },
+        "revision_history": [
+          {
+            "reason": "registered_external_contradiction_fixture"
+          }
+        ],
+        "status": "invalidated",
+        "version": 1
+      },
+      {
+        "alias": "__common_revision_fixture__",
+        "ast": {
+          "name": "b",
+          "op": "var"
+        },
+        "canonical_ast_hash": "8426a5c8025bb2bfae39d2cf77ca1973359f8d5513e1ea08a5f8d0945d9869eb",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B1_DETERMINISTIC_AST_SEARCH",
+          "seed": 42,
+          "source": "registered_external_contradiction_fixture_revision"
+        },
+        "status": "validated",
+        "version": 2
+      }
+    ],
+    "compositional_test_04": [
+      {
+        "alias": "compositional_test_04",
+        "ast": {
+          "op": "const",
+          "value": 1
+        },
+        "canonical_ast_hash": "26e022bbd20ff0ecc5b9d2ac93258bbc6020c0a750afac0f1dcf808222e0071c",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B1_DETERMINISTIC_AST_SEARCH",
+          "candidate_index": null,
+          "candidate_source": "deterministic_enum",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_test_04"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_12": [
+      {
+        "alias": "compositional_train_12",
+        "ast": {
+          "op": "const",
+          "value": 0
+        },
+        "canonical_ast_hash": "77dc5eea0685f779e6ed9eb9b4db1616a393dc063b8eb87beac40cccac6a1b4d",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B1_DETERMINISTIC_AST_SEARCH",
+          "candidate_index": null,
+          "candidate_source": "deterministic_enum",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_12"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_validation_07": [
+      {
+        "alias": "compositional_validation_07",
+        "ast": {
+          "name": "b",
+          "op": "var"
+        },
+        "canonical_ast_hash": "8426a5c8025bb2bfae39d2cf77ca1973359f8d5513e1ea08a5f8d0945d9869eb",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B1_DETERMINISTIC_AST_SEARCH",
+          "candidate_index": null,
+          "candidate_source": "deterministic_enum",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_validation_07"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_03": [
+      {
+        "alias": "fixed_train_03",
+        "ast": {
+          "name": "a",
+          "op": "var"
+        },
+        "canonical_ast_hash": "e0e02cef5f1b7fa60b8e9fe59e07484e15329ca26b2acef681f2c1641c162935",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B1_DETERMINISTIC_AST_SEARCH",
+          "candidate_index": null,
+          "candidate_source": "deterministic_enum",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_03"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_04": [
+      {
+        "alias": "fixed_train_04",
+        "ast": {
+          "name": "b",
+          "op": "var"
+        },
+        "canonical_ast_hash": "8426a5c8025bb2bfae39d2cf77ca1973359f8d5513e1ea08a5f8d0945d9869eb",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B1_DETERMINISTIC_AST_SEARCH",
+          "candidate_index": null,
+          "candidate_source": "deterministic_enum",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_04"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ]
+  },
+  "schema_version": "crucible.procedure.v1"
+}

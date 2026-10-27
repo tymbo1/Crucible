@@ -1,0 +1,1594 @@
+{
+  "events": [
+    {
+      "alias": "fixed_train_00",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_02",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_03",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_04",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_05",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_06",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_07",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_00",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_01",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_02",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_03",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_04",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_05",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_06",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_07",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_08",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_09",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_10",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_11",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_12",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_13",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_14",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_15",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_16",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_17",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_18",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_19",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_21",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_22",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_23",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_test_02",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_validation_05",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_validation_11",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "__common_revision_fixture__",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "__common_revision_fixture__",
+      "kind": "invalidation",
+      "reason": "registered_external_contradiction_fixture"
+    },
+    {
+      "alias": "__common_revision_fixture__",
+      "kind": "promotion",
+      "version": 2
+    }
+  ],
+  "procedures": {
+    "__common_revision_fixture__": [
+      {
+        "alias": "__common_revision_fixture__",
+        "ast": {
+          "name": "a",
+          "op": "var"
+        },
+        "canonical_ast_hash": "e0e02cef5f1b7fa60b8e9fe59e07484e15329ca26b2acef681f2c1641c162935",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "seed": 42,
+          "source": "registered_external_contradiction_fixture"
+        },
+        "revision_history": [
+          {
+            "reason": "registered_external_contradiction_fixture"
+          }
+        ],
+        "status": "invalidated",
+        "version": 1
+      },
+      {
+        "alias": "__common_revision_fixture__",
+        "ast": {
+          "name": "b",
+          "op": "var"
+        },
+        "canonical_ast_hash": "8426a5c8025bb2bfae39d2cf77ca1973359f8d5513e1ea08a5f8d0945d9869eb",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "seed": 42,
+          "source": "registered_external_contradiction_fixture_revision"
+        },
+        "status": "validated",
+        "version": 2
+      }
+    ],
+    "compositional_test_02": [
+      {
+        "alias": "compositional_test_02",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "name": "a",
+                      "op": "var"
+                    },
+                    {
+                      "op": "const",
+                      "value": 5
+                    }
+                  ],
+                  "op": "xor_bits_mod10"
+                },
+                {
+                  "op": "const",
+                  "value": 6
+                }
+              ],
+              "op": "mul_mod10"
+            },
+            {
+              "op": "const",
+              "value": 9
+            }
+          ],
+          "op": "mul_mod10"
+        },
+        "canonical_ast_hash": "c58cba39745e19e4ba91feb87388de55bb87dafb02ff4a8e11b5b4576ec9feae",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 2,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_test_02"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_00": [
+      {
+        "alias": "compositional_train_00",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "xor_bits_mod10"
+            },
+            {
+              "args": [
+                {
+                  "name": "b",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 9
+                }
+              ],
+              "op": "add_mod10"
+            }
+          ],
+          "op": "min"
+        },
+        "canonical_ast_hash": "6d201e1ccadb2f7e08856f7a8294e3c4039a7514b90c61fe7e7395656f2bf012",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_00"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_01": [
+      {
+        "alias": "compositional_train_01",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "sub_mod10"
+            },
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "a",
+                  "op": "var"
+                }
+              ],
+              "op": "max"
+            }
+          ],
+          "op": "sub_mod10"
+        },
+        "canonical_ast_hash": "770ede43b72a12ac69ae79253f3b511c0a01d86d3df1caaca6d03afbacd588a2",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_01"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_02": [
+      {
+        "alias": "compositional_train_02",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "max"
+            },
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 9
+                }
+              ],
+              "op": "max"
+            }
+          ],
+          "op": "min"
+        },
+        "canonical_ast_hash": "81dc0ceaad7f2d90534d44df7ad6e7d48a20a9be4740741c83e923d1e18f830a",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_02"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_03": [
+      {
+        "alias": "compositional_train_03",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "max"
+            },
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 4
+                }
+              ],
+              "op": "add_mod10"
+            }
+          ],
+          "op": "mul_mod10"
+        },
+        "canonical_ast_hash": "4251929587a208f2d90536946690b7f5f1dde63a4d4642a0252ed600bcefa85d",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_03"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_04": [
+      {
+        "alias": "compositional_train_04",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "a",
+                  "op": "var"
+                }
+              ],
+              "op": "mul_mod10"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "add_mod10"
+        },
+        "canonical_ast_hash": "4e5b058a4b93d2022f05d4bb0b80fe1c6ad883ac8f3e103b56df5782245ec05f",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_04"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_05": [
+      {
+        "alias": "compositional_train_05",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "min"
+            },
+            {
+              "args": [
+                {
+                  "op": "const",
+                  "value": 6
+                },
+                {
+                  "op": "const",
+                  "value": 7
+                }
+              ],
+              "op": "max"
+            }
+          ],
+          "op": "mul_mod10"
+        },
+        "canonical_ast_hash": "96d9f21d104e300f5f23b3fcf462e02079ef60b26a52c458a3f1acb715ff0562",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_05"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_06": [
+      {
+        "alias": "compositional_train_06",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "add_mod10"
+            },
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "mul_mod10"
+            }
+          ],
+          "op": "xor_bits_mod10"
+        },
+        "canonical_ast_hash": "533d812c0f0bacdfb3a1a8494e1a90b7bcd14926dc9ad9365e0263324313492c",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_06"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_07": [
+      {
+        "alias": "compositional_train_07",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "mul_mod10"
+            },
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 3
+                }
+              ],
+              "op": "max"
+            }
+          ],
+          "op": "xor_bits_mod10"
+        },
+        "canonical_ast_hash": "159b0de005e00222f58db208c4328fc5ba8a5c38cb968e4c8a006a9599bc4b20",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_07"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_08": [
+      {
+        "alias": "compositional_train_08",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "mul_mod10"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "mul_mod10"
+        },
+        "canonical_ast_hash": "f0eb71355b9711b55fe8d9cd858946150cc036ed1924fd77fbf0376e90523848",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_08"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_09": [
+      {
+        "alias": "compositional_train_09",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "xor_bits_mod10"
+            },
+            {
+              "args": [
+                {
+                  "op": "const",
+                  "value": 2
+                },
+                {
+                  "op": "const",
+                  "value": 7
+                }
+              ],
+              "op": "xor_bits_mod10"
+            }
+          ],
+          "op": "max"
+        },
+        "canonical_ast_hash": "6dce8f4b4d360689df5aec5441d114934264f815f9506db7de16604a8d16fdfd",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_09"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_10": [
+      {
+        "alias": "compositional_train_10",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "args": [
+                {
+                  "name": "b",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 5
+                }
+              ],
+              "op": "xor_bits_mod10"
+            }
+          ],
+          "op": "sub_mod10"
+        },
+        "canonical_ast_hash": "dd08e468932dc742e8d56d016437f4248dff238f9df816da7863807749fbdbb0",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_10"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_11": [
+      {
+        "alias": "compositional_train_11",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 7
+                }
+              ],
+              "op": "mul_mod10"
+            },
+            {
+              "args": [
+                {
+                  "name": "b",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 0
+                }
+              ],
+              "op": "add_mod10"
+            }
+          ],
+          "op": "mul_mod10"
+        },
+        "canonical_ast_hash": "3208ad9eb678b747380ab37a4300db165dad286db17e0198e2c55e1a4eaa4b8c",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_11"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_12": [
+      {
+        "alias": "compositional_train_12",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "a",
+                  "op": "var"
+                }
+              ],
+              "op": "sub_mod10"
+            },
+            {
+              "args": [
+                {
+                  "name": "b",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "xor_bits_mod10"
+            }
+          ],
+          "op": "mul_mod10"
+        },
+        "canonical_ast_hash": "7ba2d2f642e4acbfc57d07563e613f6faa5fc79d8cffb7d5e5a832cfb2fecde4",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_12"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_13": [
+      {
+        "alias": "compositional_train_13",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "b",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "max"
+            },
+            {
+              "name": "a",
+              "op": "var"
+            }
+          ],
+          "op": "min"
+        },
+        "canonical_ast_hash": "1e426507f2e2c113b8532882e11ac5370595c29eb231d60d69f5e17093c22cd7",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_13"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_14": [
+      {
+        "alias": "compositional_train_14",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "xor_bits_mod10"
+            },
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 2
+                }
+              ],
+              "op": "min"
+            }
+          ],
+          "op": "min"
+        },
+        "canonical_ast_hash": "c505841b20e14e33f774300613737000d74e400676054ca4de5140dceee49151",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_14"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_15": [
+      {
+        "alias": "compositional_train_15",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "sub_mod10"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "max"
+        },
+        "canonical_ast_hash": "0c06aac3118979433f33a2837a2f5adeea46d479f90071ca1b56ec22391984fe",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_15"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_16": [
+      {
+        "alias": "compositional_train_16",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "mul_mod10"
+            },
+            {
+              "op": "const",
+              "value": 4
+            }
+          ],
+          "op": "xor_bits_mod10"
+        },
+        "canonical_ast_hash": "9e5946962c40b100ae9e77f19bb90cfa621927a78c3f4c4cffb81be7cab5c3f6",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_16"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_17": [
+      {
+        "alias": "compositional_train_17",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "add_mod10"
+            },
+            {
+              "name": "a",
+              "op": "var"
+            }
+          ],
+          "op": "min"
+        },
+        "canonical_ast_hash": "abae9e10da5fc6c72c09003f44a02b9032d45c0c5ce11fc054e77859f8bd3ac6",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_17"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_18": [
+      {
+        "alias": "compositional_train_18",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 2
+                }
+              ],
+              "op": "add_mod10"
+            },
+            {
+              "args": [
+                {
+                  "name": "b",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 5
+                }
+              ],
+              "op": "sub_mod10"
+            }
+          ],
+          "op": "max"
+        },
+        "canonical_ast_hash": "b70e37931a610ba9f5855bc55ef32a76e06a9eb715525bf3626fe5e82638d4d5",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_18"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_19": [
+      {
+        "alias": "compositional_train_19",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "max"
+            },
+            {
+              "name": "a",
+              "op": "var"
+            }
+          ],
+          "op": "sub_mod10"
+        },
+        "canonical_ast_hash": "d6c0caee99f175d03369314d39d76ea0a85ac3534cfd017ed81af580f3c5ecec",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_19"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_21": [
+      {
+        "alias": "compositional_train_21",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "b",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 4
+                }
+              ],
+              "op": "max"
+            },
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "a",
+                  "op": "var"
+                }
+              ],
+              "op": "mul_mod10"
+            }
+          ],
+          "op": "sub_mod10"
+        },
+        "canonical_ast_hash": "8ba525e8aa849b3d863eae94d8e2a5673b18b062df72b5e27696aca1d40bf1d3",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_21"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_22": [
+      {
+        "alias": "compositional_train_22",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "a",
+                  "op": "var"
+                }
+              ],
+              "op": "max"
+            },
+            {
+              "args": [
+                {
+                  "name": "b",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 0
+                }
+              ],
+              "op": "xor_bits_mod10"
+            }
+          ],
+          "op": "xor_bits_mod10"
+        },
+        "canonical_ast_hash": "c0f78a26464c62e831cd00a9df9ca2aae9a89560b244670cd6e0a2be59819840",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_22"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_23": [
+      {
+        "alias": "compositional_train_23",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "a",
+                  "op": "var"
+                }
+              ],
+              "op": "max"
+            },
+            {
+              "args": [
+                {
+                  "name": "b",
+                  "op": "var"
+                },
+                {
+                  "op": "const",
+                  "value": 1
+                }
+              ],
+              "op": "add_mod10"
+            }
+          ],
+          "op": "max"
+        },
+        "canonical_ast_hash": "07e878ebf642a9e1a1bd65a4e4cebcfe5f640d27401b00c40c7f0edec0eb66e8",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_23"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_validation_05": [
+      {
+        "alias": "compositional_validation_05",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "op": "const",
+                      "value": 2
+                    },
+                    {
+                      "op": "const",
+                      "value": 5
+                    }
+                  ],
+                  "op": "max"
+                },
+                {
+                  "op": "const",
+                  "value": 3
+                }
+              ],
+              "op": "add_mod10"
+            },
+            {
+              "op": "const",
+              "value": 4
+            }
+          ],
+          "op": "mul_mod10"
+        },
+        "canonical_ast_hash": "5dc945358f138ce6ec91a40296bf5e4745acfd0bd75902f63a81122debca3521",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 3,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_validation_05"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_validation_11": [
+      {
+        "alias": "compositional_validation_11",
+        "ast": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "add_mod10"
+            },
+            {
+              "args": [
+                {
+                  "name": "a",
+                  "op": "var"
+                },
+                {
+                  "name": "b",
+                  "op": "var"
+                }
+              ],
+              "op": "sub_mod10"
+            }
+          ],
+          "op": "max"
+        },
+        "canonical_ast_hash": "33e8704ec129e8d031949515b0cd6bac61f6f0e1b7d6a51461cb0b8cf911b6b6",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_validation_11"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_00": [
+      {
+        "alias": "fixed_train_00",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "add_mod10"
+        },
+        "canonical_ast_hash": "7db5df588a67797129378a9c359067021f3d62ac78299acbab9d40561a270dca",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_00"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_02": [
+      {
+        "alias": "fixed_train_02",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "mul_mod10"
+        },
+        "canonical_ast_hash": "b7cbc8f8158bd902fb1f6ec87520749e1d3f03762a0fa53792b1fc0db50f0fd6",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_02"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_03": [
+      {
+        "alias": "fixed_train_03",
+        "ast": {
+          "name": "a",
+          "op": "var"
+        },
+        "canonical_ast_hash": "e0e02cef5f1b7fa60b8e9fe59e07484e15329ca26b2acef681f2c1641c162935",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_03"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_04": [
+      {
+        "alias": "fixed_train_04",
+        "ast": {
+          "name": "b",
+          "op": "var"
+        },
+        "canonical_ast_hash": "8426a5c8025bb2bfae39d2cf77ca1973359f8d5513e1ea08a5f8d0945d9869eb",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_04"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_05": [
+      {
+        "alias": "fixed_train_05",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "xor_bits_mod10"
+        },
+        "canonical_ast_hash": "599b82f6f66072551a80d44f0fcbf898c9835d79081b370c6500f1670bfa6701",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_05"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_06": [
+      {
+        "alias": "fixed_train_06",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "max"
+        },
+        "canonical_ast_hash": "e481489a0358a0e594fd7c567bb6cd6b68d865e1baff43574e789cd216b0be34",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_06"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_07": [
+      {
+        "alias": "fixed_train_07",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "min"
+        },
+        "canonical_ast_hash": "406a0b1f24a62c50a3c0c6467c707d0614f4fd815a20af13b286239aae9c5ea6",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "neural_generated",
+          "seed": 42,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_07"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ]
+  },
+  "schema_version": "crucible.procedure.v1"
+}

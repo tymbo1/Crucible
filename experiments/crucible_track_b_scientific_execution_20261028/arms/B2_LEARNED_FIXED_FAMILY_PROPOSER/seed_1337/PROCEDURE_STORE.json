@@ -1,0 +1,498 @@
+{
+  "events": [
+    {
+      "alias": "fixed_train_00",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_01",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_02",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_03",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_04",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_05",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_06",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "fixed_train_07",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_02",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_13",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_train_17",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_test_10",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "compositional_validation_11",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "__common_revision_fixture__",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "__common_revision_fixture__",
+      "kind": "invalidation",
+      "reason": "registered_external_contradiction_fixture"
+    },
+    {
+      "alias": "__common_revision_fixture__",
+      "kind": "promotion",
+      "version": 2
+    }
+  ],
+  "procedures": {
+    "__common_revision_fixture__": [
+      {
+        "alias": "__common_revision_fixture__",
+        "ast": {
+          "name": "a",
+          "op": "var"
+        },
+        "canonical_ast_hash": "e0e02cef5f1b7fa60b8e9fe59e07484e15329ca26b2acef681f2c1641c162935",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "seed": 1337,
+          "source": "registered_external_contradiction_fixture"
+        },
+        "revision_history": [
+          {
+            "reason": "registered_external_contradiction_fixture"
+          }
+        ],
+        "status": "invalidated",
+        "version": 1
+      },
+      {
+        "alias": "__common_revision_fixture__",
+        "ast": {
+          "name": "b",
+          "op": "var"
+        },
+        "canonical_ast_hash": "8426a5c8025bb2bfae39d2cf77ca1973359f8d5513e1ea08a5f8d0945d9869eb",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "seed": 1337,
+          "source": "registered_external_contradiction_fixture_revision"
+        },
+        "status": "validated",
+        "version": 2
+      }
+    ],
+    "compositional_test_10": [
+      {
+        "alias": "compositional_test_10",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "xor_bits_mod10"
+        },
+        "canonical_ast_hash": "599b82f6f66072551a80d44f0fcbf898c9835d79081b370c6500f1670bfa6701",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 5,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_test_10"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_02": [
+      {
+        "alias": "compositional_train_02",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "max"
+        },
+        "canonical_ast_hash": "e481489a0358a0e594fd7c567bb6cd6b68d865e1baff43574e789cd216b0be34",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 6,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_02"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_13": [
+      {
+        "alias": "compositional_train_13",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "min"
+        },
+        "canonical_ast_hash": "406a0b1f24a62c50a3c0c6467c707d0614f4fd815a20af13b286239aae9c5ea6",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 7,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_13"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_train_17": [
+      {
+        "alias": "compositional_train_17",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "add_mod10"
+        },
+        "canonical_ast_hash": "7db5df588a67797129378a9c359067021f3d62ac78299acbab9d40561a270dca",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_train_17"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "compositional_validation_11": [
+      {
+        "alias": "compositional_validation_11",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "xor_bits_mod10"
+        },
+        "canonical_ast_hash": "599b82f6f66072551a80d44f0fcbf898c9835d79081b370c6500f1670bfa6701",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 5,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "compositional_validation_11"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_00": [
+      {
+        "alias": "fixed_train_00",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "add_mod10"
+        },
+        "canonical_ast_hash": "7db5df588a67797129378a9c359067021f3d62ac78299acbab9d40561a270dca",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 0,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_00"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_01": [
+      {
+        "alias": "fixed_train_01",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "sub_mod10"
+        },
+        "canonical_ast_hash": "ead8e009308cb9617afd7e3175ed9ff0696e63d8e27c0241d36abfba62dc77a9",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 1,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_01"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_02": [
+      {
+        "alias": "fixed_train_02",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "mul_mod10"
+        },
+        "canonical_ast_hash": "b7cbc8f8158bd902fb1f6ec87520749e1d3f03762a0fa53792b1fc0db50f0fd6",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 2,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_02"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_03": [
+      {
+        "alias": "fixed_train_03",
+        "ast": {
+          "name": "a",
+          "op": "var"
+        },
+        "canonical_ast_hash": "e0e02cef5f1b7fa60b8e9fe59e07484e15329ca26b2acef681f2c1641c162935",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 3,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_03"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_04": [
+      {
+        "alias": "fixed_train_04",
+        "ast": {
+          "name": "b",
+          "op": "var"
+        },
+        "canonical_ast_hash": "8426a5c8025bb2bfae39d2cf77ca1973359f8d5513e1ea08a5f8d0945d9869eb",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 4,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_04"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_05": [
+      {
+        "alias": "fixed_train_05",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "xor_bits_mod10"
+        },
+        "canonical_ast_hash": "599b82f6f66072551a80d44f0fcbf898c9835d79081b370c6500f1670bfa6701",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 5,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_05"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_06": [
+      {
+        "alias": "fixed_train_06",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "max"
+        },
+        "canonical_ast_hash": "e481489a0358a0e594fd7c567bb6cd6b68d865e1baff43574e789cd216b0be34",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 6,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_06"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ],
+    "fixed_train_07": [
+      {
+        "alias": "fixed_train_07",
+        "ast": {
+          "args": [
+            {
+              "name": "a",
+              "op": "var"
+            },
+            {
+              "name": "b",
+              "op": "var"
+            }
+          ],
+          "op": "min"
+        },
+        "canonical_ast_hash": "406a0b1f24a62c50a3c0c6467c707d0614f4fd815a20af13b286239aae9c5ea6",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "arm": "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+          "candidate_index": 7,
+          "candidate_source": "catalog_ranked",
+          "seed": 1337,
+          "source": "crucible_track_b_scientific_execution_20261028",
+          "task_id": "fixed_train_07"
+        },
+        "status": "validated",
+        "version": 1
+      }
+    ]
+  },
+  "schema_version": "crucible.procedure.v1"
+}

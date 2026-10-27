@@ -1,0 +1,16 @@
+{
+  "b1_measured_inference_compute_seconds": 0.0025707739999960566,
+  "b1_target_function_acquisition_count": 2,
+  "b1_target_function_acquisition_rate": 0.041666666666666664,
+  "b3_measured_inference_compute_seconds": 0.0807754789999997,
+  "b3_minus_b1_rate_difference": -0.041666666666666664,
+  "b3_target_function_acquisition_count": 0,
+  "b3_target_function_acquisition_rate": 0.0,
+  "candidate_budget_matched": true,
+  "comparison": "B3_vs_B1",
+  "evaluation_task_count_per_seed": 24,
+  "functionally_novel_rows_per_arm": 48,
+  "note": "Total compute includes separately reported training compute; candidate counts are not treated as a compute proxy.",
+  "paired_rows_available": 192,
+  "verifier_call_cap_matched": true
+}

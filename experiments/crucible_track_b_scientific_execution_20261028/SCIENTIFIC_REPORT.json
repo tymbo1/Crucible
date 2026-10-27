@@ -1,0 +1,63 @@
+{
+  "artifact_hash_manifest": "experiments/crucible_track_b_scientific_execution_20261028/HASHES.json",
+  "artifacts": {
+    "primary_comparison": "experiments/crucible_track_b_scientific_execution_20261028/PRIMARY_COMPARISON.json",
+    "task_results": "experiments/crucible_track_b_scientific_execution_20261028/TASK_RESULTS.jsonl",
+    "training_summary": "experiments/crucible_track_b_scientific_execution_20261028/TRAINING_SUMMARY.jsonl"
+  },
+  "classification": "falsified_under_tested_conditions",
+  "hypotheses": {
+    "H1_lifecycle_preservation": {
+      "all_arm_revision_and_interference_pass": true,
+      "status": "supported"
+    },
+    "H2_neural_contribution": {
+      "comparison": {
+        "b1_measured_inference_compute_seconds": 0.0025707739999960566,
+        "b1_target_function_acquisition_count": 2,
+        "b1_target_function_acquisition_rate": 0.041666666666666664,
+        "b3_measured_inference_compute_seconds": 0.0807754789999997,
+        "b3_minus_b1_rate_difference": -0.041666666666666664,
+        "b3_target_function_acquisition_count": 0,
+        "b3_target_function_acquisition_rate": 0.0,
+        "candidate_budget_matched": true,
+        "comparison": "B3_vs_B1",
+        "evaluation_task_count_per_seed": 24,
+        "functionally_novel_rows_per_arm": 48,
+        "note": "Total compute includes separately reported training compute; candidate counts are not treated as a compute proxy.",
+        "paired_rows_available": 192,
+        "verifier_call_cap_matched": true
+      },
+      "reason": "With competence and leakage gates passing, B3 achieved 0/48 held-out functional acquisitions versus B1's 2/48 at matched candidate and verifier budgets.",
+      "status": "falsified_under_tested_conditions"
+    },
+    "H3_procedural_novelty": {
+      "denominator": 48,
+      "requires_structural_and_functional_novelty_and_post_reset_execution": true,
+      "status": "falsified_under_tested_conditions",
+      "successful_task_count": 0
+    }
+  },
+  "negative_controls": {
+    "no_persistence_and_raw_example_controls_reported": true,
+    "unresolvable_task_count": 8,
+    "unresolvable_tasks_retained_in_denominator": true
+  },
+  "no_cumulative_learning_library": true,
+  "protocol_integrity": "pass",
+  "resource_limit": {
+    "full_gpu_hours_total_max": 2,
+    "measured_gpu_seconds": 0.0
+  },
+  "scientific_execution_started": true,
+  "sealed_test_access_phase": "after_all_final_checkpoints",
+  "sealed_test_accessed": true,
+  "status": "completed",
+  "training_and_inference_compute_separate": true,
+  "training_competence": {
+    "b3_competence_failure_rule_applies": false,
+    "b3_strict_full_training_fit": true,
+    "b3_target_function_in_candidate_budget_rate": 1.0,
+    "note": "The frozen protocol supplies a competence-failure rule but no numeric threshold; strict full training target coverage is reported as the gate without selecting an alternative checkpoint."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "arm": "B0_V0_DETERMINISTIC_RULE_FILTER",
+  "counters": {
+    "candidate_evaluations": 448.0,
+    "candidate_outputs": 448.0,
+    "cpu_seconds": 0.014776359000001626,
+    "decoder_tokens": 0.0,
+    "gpu_seconds": 0.0,
+    "oracle_calls": 20.0,
+    "proposer_forward_passes": 0.0,
+    "unique_canonical_ast_outputs": 448.0,
+    "verifier_calls": 12.0,
+    "wall_clock_seconds": 0.014785606937948614
+  },
+  "interference": {
+    "checked_aliases": 13,
+    "failures": [],
+    "pass": true
+  },
+  "lifecycle_gate_pass_count": 11,
+  "revision": {
+    "externally_triggered": true,
+    "independent_detection_claim": false,
+    "interference_before_revision_pass": true,
+    "reset_after_revision_interference_pass": true,
+    "status": "pass",
+    "version_1_invalidated": true,
+    "version_1_verified": true,
+    "version_1_verifier_checks": 2,
+    "version_2_persisted": true,
+    "version_2_verified": true,
+    "version_2_verifier_checks": 2
+  },
+  "seed": 1337,
+  "task_count": 56
+}
