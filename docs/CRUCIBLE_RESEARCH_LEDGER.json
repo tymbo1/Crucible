@@ -831,7 +831,7 @@
       "mechanisms": ["shared-latent-representation", "neural-relational-composition", "cycle-consistency", "training-competence", "held-out-transfer"],
       "interventions": ["N1 shared graph latent states", "N2 shared graph latent states plus preregistered cycle loss", "2,000-step cyclic training on both topology families and both seeds"],
       "controls": ["Frozen N0 dense reference", "22.1M parameter comparison", "immutable topology-control records", "95% training gate", "candidate-order and query-direction rows", "data-leakage audit", "checkpoint hashes", "independent post-run metric audit", "no symbolic assistance", "no sealed test"],
-      "result": "All eight implemented N1/N2 arms passed the 95% training gate. Matched paired validation was N0 86/192 (44.8%), N1 59/192 (30.7%) and N2 53/192 (27.6%). No N1 or N2 arm exceeded N0 in its matched cell, so neither the shared-latent improvement criterion nor the cycle-consistency benefit criterion was met.",
+      "result": "All eight implemented N1/N2 arms passed the 95% training gate. Matched paired validation was N0 86/192 (44.8%), N1 59/192 (30.7%) and N2 53/192 (27.6%). No N1 or N2 arm exceeded N0 in its matched cell, so neither the shared-latent improvement criterion nor the cycle-consistency benefit criterion was met. A read-only checkpoint replay verified the committed predictions and found N1/N2 preserved predicted value across every candidate-order counterfactual (48/48 per arm) while often preserving the wrong value; this is descriptive evidence of order-invariant failure, not a unique causal mechanism.",
       "limits": ["N1/N2 receive a structured parsed edge representation while N0 is a raw byte-sequence scorer, so the comparison is not a pure architectural ablation", "Two graph families and two seeds", "Known-identifier held-out pairs only", "Identifier-renaming and entirely unseen-identifier transfer were not executed", "A negative result for these configurations does not prove shared latent representations or cycle consistency impossible in general", "The protocol cost paragraph said four new arms while the implemented matrix contained eight; all eight are reported and audited"],
       "unresolved": ["Whether a different structured representation or query readout can transfer", "Whether cycle consistency can help with a stable loss and an appropriate readout", "Whether a neural model can learn the supplied symbolic latent-potential procedure under a better-matched interface", "Whether transfer extends to identifier renaming or entirely unseen identifiers"],
       "artifacts": [
@@ -847,7 +847,12 @@
         "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/POST_RUN_AUDIT.json",
         "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/ERROR_BREAKDOWN.json",
         "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/HASHES.json",
-        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/FINALIZATION.json"
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/FINALIZATION.json",
+        "tools/run_crucible_phase_vii_checkpoint_diagnostic_20261027.py",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/CHECKPOINT_DIAGNOSTIC.md",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/CHECKPOINT_DIAGNOSTIC.json",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/CHECKPOINT_DIAGNOSTIC_PREDICTIONS.csv",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/CHECKPOINT_DIAGNOSTIC_HASHES.json"
       ],
       "novelty_terms": ["Phase VII", "learned shared latent", "neural relational transfer", "cycle consistency", "competence-gated transfer"]
     }
