@@ -193,12 +193,28 @@ def main() -> int:
         "",
         "The supplied latent-potential representation and shortest-path composition recovered all eight held-out relations exactly for both committed graphs and all tested moduli (5, 11 and 97). The random lookup controls stayed near their expected 1/K accuracy. Injecting one ±1 edge corruption reduced shortest-path accuracy, with the diameter-5 graph lower than the prism for every tested modulus.",
         "",
+        "| Graph | K | Exact composition | Lookup | Corrupted shortest path | Corrupted consistency failures |",
+        "|---|---:|---:|---:|---:|---:|",
+    ]
+    for condition, values in results_by_graph.items():
+        for modulus in MODULI:
+            item = values[str(modulus)]
+            report.append(
+                f"| {condition} | {modulus} | {item['exact_path_correct']}/{item['total_predictions']} ({item['exact_path_accuracy']:.3f}) | "
+                f"{item['lookup_correct']}/{item['total_predictions']} ({item['lookup_accuracy']:.3f}; expected {item['lookup_expected_accuracy']:.3f}) | "
+                f"{item['corrupted_shortest_path_correct']}/{item['total_predictions']} ({item['corrupted_shortest_path_accuracy']:.3f}) | "
+                f"{item['corrupted_cycle_consistency_failures']}/{item['corrupted_trial_count']}"
+            )
+    report.extend([
+        "",
         "## Interpretation boundary",
         "",
         "This establishes a constructive symbolic baseline, not neural discovery. The procedure was explicitly supplied, and all identifiers were present in the graph. It does not test new-identifier generalisation, learned latent representations, or whether Crucible implements path traversal, cycle checks or modular subtraction.",
         "",
+        "The corrupted-consistency check detects errors on cyclic edges. A bridge corruption in the diameter-5 graph can be absorbed by a component offset and is therefore not detected by cycle checks; this is an identifiability limitation of the symbolic graph, not evidence of successful correction.",
+        "",
         "See `RESULTS.json` for exact counts and consistency diagnostics.",
-    ]
+    ])
     (OUTPUT / "REPORT_FINAL.md").write_text("\n".join(report) + "\n", encoding="utf-8")
 
     hash_paths = [
