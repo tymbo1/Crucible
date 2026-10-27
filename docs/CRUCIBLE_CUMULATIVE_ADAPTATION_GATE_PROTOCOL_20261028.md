@@ -85,10 +85,13 @@ target panel. Operator validation does not expose final target labels.
 The manifest must be generated and hashed before implementation tuning or
 scientific execution. It must contain:
 
-- 32 source episodes used for cumulative adaptation;
-- 48 final target episodes, divided into two independently generated
-  functionally novel target families;
-- a 16-episode exact-replay audit panel used only to verify the memory control;
+- 32 source episodes used for cumulative adaptation per seed;
+- 144 final target episodes per seed, divided into two independently generated
+  functionally novel target families of 72 episodes each;
+- a 16-episode exact-replay audit panel per seed used only to verify the memory
+  control;
+- 32 operator-validation episodes per seed, allocated as 16 independent trials
+  for each of at most two promotion-eligible operators;
 - two registered seeds: 42 and 1337;
 - disjoint canonical AST hashes and exhaustive truth-table hashes between
   source and final target procedures;
@@ -98,6 +101,10 @@ scientific execution. It must contain:
 
 If the grammar cannot produce the required disjoint panels, the protocol is
 invalid and must not be adapted after inspection of results.
+
+The primary paired denominator is 288 task-seed units: 144 target tasks for
+each of two seeds. The same task-seed unit is evaluated by every arm; source
+and operator-validation records are not included in the target denominator.
 
 ## Experimental arms
 
@@ -139,6 +146,22 @@ A3 receives no final target labels before each target proposal is fixed. Its
 source adaptation cost is reported separately and cannot be hidden inside the
 target inference budget.
 
+## Exact budget matching
+
+Every arm executes the same fixed accounting schedule for each target task:
+
+- four candidate slots, including explicit null slots when an arm abstains;
+- four operator-library lookup slots;
+- four verifier calls, each over eight fixed independent examples;
+- the same candidate-construction operation-unit cap;
+- the same post-reset execution checks.
+
+A0, A1 and A2 execute no-op or sham work in the slots that A3 uses for real
+operator lookup. The counters are recorded per task and the run is invalid if
+candidate slots, lookup slots, verifier calls or operation units differ across
+arms. Wall-clock and CPU time are reported separately rather than treated as a
+substitute for the matched operation budget.
+
 ## Primary outcome
 
 For each final target episode, lifecycle success requires all of the following:
@@ -167,8 +190,9 @@ and both target families are fixed:
 - A3 also exceeds A2 by at least 10 percentage points;
 - the direction of the effect is replicated for both seeds and both target
   families;
-- the paired 95% confidence interval for the pooled A3-versus-A0 difference
-  excludes zero;
+- the exact two-sided McNemar test on the 288 paired task-seed outcomes is
+  recorded, and the paired 95% confidence interval from the preregistered
+  20,000-sample stratified task bootstrap excludes zero;
 - A3 has zero target truth-table or canonical-AST retrieval hits; and
 - lifecycle verification, persistence, reset execution and revision gates are
   no worse than the registered baseline.
@@ -179,6 +203,11 @@ overlap, extra verifier calls or unbalanced search, the result is invalid for
 the cumulative-learning claim. If only one target family improves, the result
 is supported but inconclusive and does not establish a reusable learning
 strategy.
+
+The 10-point threshold is a minimum scientific effect size, not a claim of
+guaranteed power for every possible outcome distribution. The feasibility
+preflight must report planning power under fixed discordant-pair scenarios
+before execution.
 
 ## Resource and leakage controls
 
@@ -210,6 +239,22 @@ whether verified experience can improve future acquisition while the existing
 verification and execution anchors remain fixed. A later neural implementation
 must be registered separately and cannot inherit a positive result from this
 model-agnostic gate.
+
+## Operator-promotion feasibility
+
+The operator promotion rule is fixed as:
+
+```text
+LCB95(Beta(1 + successes, 1 + failures)) >= 0.80
+```
+
+With the registered Beta(1,1) prior, the minimum evidence is 16/16 successful
+independent validation trials, whose lower 95% bound is approximately 0.80494.
+The first gate therefore allocates 32 validation episodes to two eligible
+operator candidates. A single failure prevents promotion; the threshold and
+allocation cannot be relaxed after results are observed. Additional extracted
+operators are recorded diagnostically but are not promotion-eligible in this
+version.
 
 ## Decision boundary
 

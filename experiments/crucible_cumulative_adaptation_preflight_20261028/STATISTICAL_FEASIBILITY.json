@@ -1,0 +1,38 @@
+{
+  "alpha": 0.05,
+  "confidence_interval": "20000-sample-stratified-task-bootstrap",
+  "criterion_feasible": true,
+  "interpretation": "The 10-point threshold is detectable with high power for moderate-to-large discordant effects, but not guaranteed for every 10-point outcome distribution; planning power is reported rather than claimed.",
+  "minimum_effect": 0.1,
+  "paired_unit": "task_seed",
+  "paired_units": 288,
+  "planning_scenarios": [
+    {
+      "estimated_one_sided_directional_power": 0.8567,
+      "net_effect": 0.1,
+      "p_a3_loss_a0_win": 0.1,
+      "p_a3_win_a0_loss": 0.2,
+      "paired_units": 288,
+      "simulations": 50000
+    },
+    {
+      "estimated_one_sided_directional_power": 0.99976,
+      "net_effect": 0.19999999999999998,
+      "p_a3_loss_a0_win": 0.1,
+      "p_a3_win_a0_loss": 0.3,
+      "paired_units": 288,
+      "simulations": 50000
+    },
+    {
+      "estimated_one_sided_directional_power": 0.99786,
+      "net_effect": 0.19999999999999998,
+      "p_a3_loss_a0_win": 0.15,
+      "p_a3_win_a0_loss": 0.35,
+      "paired_units": 288,
+      "simulations": 50000
+    }
+  ],
+  "primary_test": "exact_two_sided_mcnemar",
+  "target_tasks_per_family_per_seed": 72,
+  "target_tasks_per_seed": 144
+}

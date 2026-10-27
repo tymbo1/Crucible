@@ -1,0 +1,47 @@
+{
+  "allocation_feasible": true,
+  "eligible_success_table": [
+    {
+      "all_success_lower_bound": 0.6637328831200572,
+      "minimum_successes": null,
+      "trials": 8
+    },
+    {
+      "all_success_lower_bound": 0.752947361999529,
+      "minimum_successes": null,
+      "trials": 12
+    },
+    {
+      "all_success_lower_bound": 0.8049356770309067,
+      "minimum_successes": 16,
+      "trials": 16
+    },
+    {
+      "all_success_lower_bound": 0.8628148284692875,
+      "minimum_successes": 24,
+      "trials": 24
+    },
+    {
+      "all_success_lower_bound": 0.8942371899254207,
+      "minimum_successes": 31,
+      "trials": 32
+    },
+    {
+      "all_success_lower_bound": 0.9274807363357226,
+      "minimum_successes": 44,
+      "trials": 48
+    }
+  ],
+  "interpretation": "Promotion requires perfect evidence at the minimum allocation; the threshold is not relaxed by this preflight.",
+  "lower_confidence_level": 0.95,
+  "minimum_all_success_evidence": {
+    "lower_bound": 0.8049356770309067,
+    "successes": 16,
+    "trials": 16
+  },
+  "prior": "Beta(1,1)",
+  "registered_candidates": 2,
+  "registered_total_validation_trials": 32,
+  "registered_trials_per_candidate": 16,
+  "threshold": 0.8
+}

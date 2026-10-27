@@ -151,10 +151,12 @@ manifest. Its four arms are:
 - **A3 verified adaptive operator library** — source procedures are abstracted,
   independently validated and used to guide later proposal/search.
 
-The proposed manifest has 32 source episodes, 48 final target episodes in two
-target families, 16 exact-replay audit episodes and seeds 42/1337. Source and
-target partitions must be disjoint by both canonical AST hash and exhaustive
-100-row truth-table hash. The B3 manifest is not reused.
+The proposed manifest has 32 source episodes per seed, 144 final target
+episodes per seed (72 per target family), 16 exact-replay audit episodes per
+seed, 32 operator-validation episodes per seed and seeds 42/1337. The primary
+paired denominator is 288 task-seed units. Source and target partitions must
+be disjoint by both canonical AST hash and exhaustive 100-row truth-table
+hash. The B3 manifest is not reused.
 
 The primary metric is complete target lifecycle success:
 
@@ -169,10 +171,11 @@ A3 target success − max(A0 target success, A2 target success)
 ```
 
 Support requires at least a 10-point pooled improvement over both A0 and A2,
-replication in both seeds and target families, a paired 95% interval excluding
-zero, zero target retrieval/overlap hits, and preserved lifecycle gates. A1's
-exact-replay audit must pass, but A1 success on novel targets is not counted as
-learning.
+replication in both seeds and target families, an exact two-sided McNemar test
+on the 288 paired task-seed outcomes, and a 20,000-sample stratified task
+bootstrap 95% interval excluding zero. It also requires zero target
+retrieval/overlap hits and preserved lifecycle gates. A1's exact-replay audit
+must pass, but A1 success on novel targets is not counted as learning.
 
 ## Implementation requirements
 
@@ -191,6 +194,13 @@ Before any scientific run, the implementation must provide:
 10. a validator that stops on overlap, budget mismatch, leakage or lifecycle
     failure.
 
+The first gate allows at most two promotion-eligible operators. With the
+registered `Beta(1,1)` prior and `LCB95 >= 0.80`, each requires 16/16
+independent validation successes; the lower bound for 16/16 is approximately
+0.80494. The 32-episode operator-validation allocation is therefore feasible
+but deliberately conservative. A failed validation cannot be hidden by
+reallocating trials after inspection.
+
 No neural component is required for this first mechanism gate. If it passes,
 the next proposal may replace only `Q_t` with a neural policy adapter while
 keeping `O_t`, the verifier and the executor fixed.
@@ -203,7 +213,7 @@ These are planning estimates, not measured results:
 |---|---|
 | Grammar enumeration, truth tables and leakage audit | under 1 CPU-hour; under 100 MB |
 | Four-arm deterministic preflight and replay | under 1 CPU-hour; under 200 MB |
-| Full 4-arm × 2-seed CPU gate | roughly 2–8 CPU-hours, depending on verifier implementation |
+| Full 4-arm × 2-seed CPU gate | roughly 4–16 CPU-hours, depending on verifier implementation and the 288-task target panel |
 | GPU requirement | none for the proposed first gate |
 | Persistent artifacts | expected below 1 GB including traces and hashes |
 

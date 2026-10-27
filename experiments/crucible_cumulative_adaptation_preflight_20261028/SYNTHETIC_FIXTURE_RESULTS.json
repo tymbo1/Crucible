@@ -1,0 +1,99 @@
+{
+  "adaptive_score_exceeds_controls": true,
+  "budgets": {
+    "A0_FROZEN_INDUCTION": {
+      "candidate_construction_units": 16,
+      "candidate_slots": 4,
+      "operator_lookup_slots": 4,
+      "post_reset_checks": 8,
+      "verifier_calls": 4,
+      "verifier_examples_per_call": 8
+    },
+    "A1_EXACT_PROCEDURE_MEMORY": {
+      "candidate_construction_units": 16,
+      "candidate_slots": 4,
+      "operator_lookup_slots": 4,
+      "post_reset_checks": 8,
+      "verifier_calls": 4,
+      "verifier_examples_per_call": 8
+    },
+    "A2_SHAM_OPERATOR_LIBRARY": {
+      "candidate_construction_units": 16,
+      "candidate_slots": 4,
+      "operator_lookup_slots": 4,
+      "post_reset_checks": 8,
+      "verifier_calls": 4,
+      "verifier_examples_per_call": 8
+    },
+    "A3_VERIFIED_ADAPTIVE_LIBRARY": {
+      "candidate_construction_units": 16,
+      "candidate_slots": 4,
+      "operator_lookup_slots": 4,
+      "post_reset_checks": 8,
+      "verifier_calls": 4,
+      "verifier_examples_per_call": 8
+    }
+  },
+  "matched_target_budgets": true,
+  "operator_record": {
+    "applicability": {
+      "domain": "digits_0_9_binary",
+      "max_depth": 3
+    },
+    "canonical_motif": {
+      "args": [
+        {
+          "hole": "left",
+          "type": "digit_mod10"
+        },
+        {
+          "hole": "right",
+          "type": "digit_mod10"
+        }
+      ],
+      "op": "add_mod10"
+    },
+    "operator_id": "fixture_add_binary",
+    "provenance": {
+      "source": "cpu_preflight_synthetic_fixture"
+    },
+    "schema_version": "crucible.operator.v1",
+    "source_refs": [
+      "source_fixture_0"
+    ],
+    "status": "promoted",
+    "successes": 16,
+    "trials": 16,
+    "typed_holes": [
+      "left",
+      "right"
+    ],
+    "validation_refs": [
+      "operator_validation_fixture_00",
+      "operator_validation_fixture_01",
+      "operator_validation_fixture_02",
+      "operator_validation_fixture_03",
+      "operator_validation_fixture_04",
+      "operator_validation_fixture_05",
+      "operator_validation_fixture_06",
+      "operator_validation_fixture_07",
+      "operator_validation_fixture_08",
+      "operator_validation_fixture_09",
+      "operator_validation_fixture_10",
+      "operator_validation_fixture_11",
+      "operator_validation_fixture_12",
+      "operator_validation_fixture_13",
+      "operator_validation_fixture_14",
+      "operator_validation_fixture_15"
+    ]
+  },
+  "policy_scores": {
+    "A0": 0.0,
+    "A2": 0.0,
+    "A3": 0.20123391925772668
+  },
+  "promotion_decision": true,
+  "promotion_lower_bound": 0.8049356770309067,
+  "schema_pass": true,
+  "target_labels_used": false
+}

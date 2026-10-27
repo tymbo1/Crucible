@@ -1,0 +1,49 @@
+{
+  "accounting_rule": "A0/A1/A2 execute no-op or sham work in every A3 operator slot; early acceptance cannot reduce the fixed verifier schedule.",
+  "all_equal": true,
+  "arms": {
+    "A0_FROZEN_INDUCTION": {
+      "candidate_construction_units": 16,
+      "candidate_slots": 4,
+      "operator_lookup_slots": 4,
+      "post_reset_checks": 8,
+      "verifier_calls": 4,
+      "verifier_examples_per_call": 8
+    },
+    "A1_EXACT_PROCEDURE_MEMORY": {
+      "candidate_construction_units": 16,
+      "candidate_slots": 4,
+      "operator_lookup_slots": 4,
+      "post_reset_checks": 8,
+      "verifier_calls": 4,
+      "verifier_examples_per_call": 8
+    },
+    "A2_SHAM_OPERATOR_LIBRARY": {
+      "candidate_construction_units": 16,
+      "candidate_slots": 4,
+      "operator_lookup_slots": 4,
+      "post_reset_checks": 8,
+      "verifier_calls": 4,
+      "verifier_examples_per_call": 8
+    },
+    "A3_VERIFIED_ADAPTIVE_LIBRARY": {
+      "candidate_construction_units": 16,
+      "candidate_slots": 4,
+      "operator_lookup_slots": 4,
+      "post_reset_checks": 8,
+      "verifier_calls": 4,
+      "verifier_examples_per_call": 8
+    }
+  },
+  "per_target_budget": {
+    "candidate_construction_units": 16,
+    "candidate_slots": 4,
+    "operator_lookup_slots": 4,
+    "post_reset_checks": 8,
+    "verifier_calls": 4,
+    "verifier_examples_per_call": 8
+  },
+  "source_operator_validation_trials_per_arm": 32,
+  "target_task_count_per_seed": 144,
+  "target_task_seed_units_total": 288
+}

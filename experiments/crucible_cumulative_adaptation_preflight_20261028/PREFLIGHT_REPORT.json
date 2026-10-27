@@ -1,0 +1,39 @@
+{
+  "experiment": "crucible_cumulative_adaptation_preflight_20261028",
+  "gates": {
+    "budget_matching": true,
+    "deterministic_replay": true,
+    "gpu_not_allocated": true,
+    "grammar_representative_pool": true,
+    "promotion_evidence_feasible": true,
+    "source_validation_target_manifest_counts": true,
+    "statistical_plan_defined": true,
+    "structural_and_functional_leakage": true,
+    "synthetic_operator_update": true,
+    "target_answers_not_accessed": true
+  },
+  "required_protocol_amendments": {
+    "budget_matching": "Four candidate slots, four operator lookups, four verifier calls of eight examples and fixed construction units per target for every arm",
+    "grammar_scope": "Use a deterministic representative pool under the frozen depth-3/node-7 grammar; full structural enumeration is not attempted in this CPU preflight",
+    "operator_promotion": "At most two eligible operators, 16 independent validation trials each, Beta(1,1) LCB95 >= 0.80; 16/16 required",
+    "statistics": "Exact two-sided McNemar on task-seed pairs plus 20,000-sample stratified task bootstrap confidence interval",
+    "target_denominator": "144 target tasks per seed, 72 per family, 288 paired task-seed units total"
+  },
+  "resource_summary": {
+    "cpu_only": true,
+    "gpu_allocated": false,
+    "gpu_seconds": 0.0,
+    "output_bytes_before_hashes": 244139,
+    "preflight_wall_seconds": 11.892218208988197,
+    "scientific_execution_started": false,
+    "sealed_target_answers_accessed": false,
+    "target_evaluations_run": false
+  },
+  "schema_version": "crucible_cumulative_adaptation_preflight_report_v1",
+  "scientific_execution_approved": false,
+  "status": "pass_with_required_protocol_amendments",
+  "unresolved": [
+    "Full structural enumeration of the depth-3/node-7 grammar remains combinatorially large; the proposed manifest uses deterministic representatives with exact truth-table checks.",
+    "The preflight proves the update and accounting interfaces, not target acquisition or cumulative-learning efficacy."
+  ]
+}

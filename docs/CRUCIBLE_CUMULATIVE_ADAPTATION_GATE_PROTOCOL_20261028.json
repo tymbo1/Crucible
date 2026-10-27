@@ -17,9 +17,14 @@
   ],
   "task_manifest_requirements": {
     "source_episodes": 32,
-    "target_episodes": 48,
+    "target_episodes_per_seed": 144,
+    "target_episodes_total": 288,
     "target_families": 2,
-    "exact_replay_audit_episodes": 16,
+    "target_episodes_per_family_per_seed": 72,
+    "exact_replay_audit_episodes_per_seed": 16,
+    "operator_validation_episodes_per_seed": 32,
+    "promotion_eligible_operator_candidates": 2,
+    "validation_trials_per_operator": 16,
     "seeds": [42, 1337],
     "grammar": "digit_expr_mod10_v1",
     "source_target_ast_hash_disjoint": true,
@@ -53,6 +58,33 @@
   ],
   "primary_metric": "target_lifecycle_success_rate",
   "primary_contrast": "A3 - max(A0, A2)",
+  "budget_matching": {
+    "candidate_slots_per_target": 4,
+    "operator_lookup_slots_per_target": 4,
+    "verifier_calls_per_target": 4,
+    "verifier_examples_per_call": 8,
+    "post_reset_checks_matched": true,
+    "operation_unit_cap_matched": true,
+    "cpu_and_wall_time_reported_separately": true
+  },
+  "statistics": {
+    "paired_unit": "task_seed",
+    "paired_units_total": 288,
+    "primary_test": "exact_two_sided_mcnemar",
+    "confidence_interval": "20000-sample-stratified-task-bootstrap",
+    "bootstrap_strata": ["seed", "target_family"],
+    "alpha": 0.05,
+    "minimum_effect": 0.10,
+    "planning_power_must_be_reported": true
+  },
+  "promotion_rule": {
+    "prior": "Beta(1,1)",
+    "lower_confidence_level": 0.95,
+    "lower_bound_threshold": 0.80,
+    "minimum_trials_for_promotion": 16,
+    "minimum_successes_for_promotion": 16,
+    "all_success_lower_bound": 0.8049356770309067
+  },
   "success_criteria": {
     "minimum_pooled_gain_over_A0": 0.10,
     "minimum_pooled_gain_over_A2": 0.10,

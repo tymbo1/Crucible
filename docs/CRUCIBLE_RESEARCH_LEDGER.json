@@ -1109,7 +1109,19 @@
       "artifacts": [
         "docs/CRUCIBLE_CUMULATIVE_LEARNING_RESEARCH_PROPOSAL_20261028.md",
         "docs/CRUCIBLE_CUMULATIVE_ADAPTATION_GATE_PROTOCOL_20261028.md",
-        "docs/CRUCIBLE_CUMULATIVE_ADAPTATION_GATE_PROTOCOL_20261028.json"
+        "docs/CRUCIBLE_CUMULATIVE_ADAPTATION_GATE_PROTOCOL_20261028.json",
+        "tools/run_crucible_cumulative_adaptation_preflight_20261028.py",
+        "tools/validate_crucible_cumulative_adaptation_preflight_20261028.py",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/PREFLIGHT_REPORT.json",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/LEAKAGE_AUDIT.json",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/BUDGET_MATCHING.json",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/PROMOTION_FEASIBILITY.json",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/STATISTICAL_FEASIBILITY.json",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/SYNTHETIC_FIXTURE_RESULTS.json",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/REPLAY_COMPARISON.json",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/GRAMMAR_ENUMERATION.json",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/TARGET_MANIFEST_METADATA.jsonl",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/HASHES.json"
       ],
       "novelty_terms": ["verified experience", "learning operator", "future acquisition", "exact-memory control", "sham-memory control", "cumulative adaptation"]
     },

@@ -1,0 +1,25 @@
+{
+  "commutative_operators": [
+    "add_mod10",
+    "max",
+    "min",
+    "mul_mod10",
+    "xor_bits_mod10"
+  ],
+  "domain_size": 100,
+  "full_enumeration_note": "The frozen depth-3/node-7 grammar is combinatorially large; this preflight uses a deterministic representative pool and exact truth-table checks for every selected record.",
+  "full_exhaustive_ast_enumeration": false,
+  "max_depth": 3,
+  "max_nodes": 7,
+  "operators": [
+    "add_mod10",
+    "sub_mod10",
+    "mul_mod10",
+    "xor_bits_mod10",
+    "min",
+    "max"
+  ],
+  "representative_functional_classes": 692,
+  "representative_sampling_attempts": 10000,
+  "representative_structural_classes": 2730
+}
