@@ -9,6 +9,13 @@
     "B2_LEARNED_FIXED_FAMILY_PROPOSER",
     "B3_LEARNED_COMPOSITIONAL_PROPOSER"
   ],
+  "candidate_generation": {
+    "b3_primary_source": "neural_generated",
+    "catalog_reranking_label": "B3-R",
+    "catalog_reranking_supports_primary_claim": false,
+    "duplicate_canonical_asts_count_once": true,
+    "candidate_budget_is_not_compute_proxy": true
+  },
   "grammar": {
     "language": "digit_expr_mod10_v1",
     "domain": "digits_0_9_binary",
@@ -25,11 +32,33 @@
   "primary_comparison": {
     "learned_arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
     "baseline_arm": "B1_DETERMINISTIC_AST_SEARCH",
+    "matched_bases": [
+      "candidate_and_verifier_budget",
+      "total_measured_compute"
+    ],
     "criteria": [
       "higher_lifecycle_preserving_functional_acquisition",
       "or_equal_acquisition_with_lower_search_or_verifier_cost"
     ]
   },
+  "identifiability_reporting": {
+    "training_excluded_tasks_reported": true,
+    "validation_test_unresolvable_tasks_retained": true,
+    "conditional_acquisition_reported": true,
+    "abstention_precision_and_coverage_reported": true
+  },
+  "compute_metrics": [
+    "candidate_evaluations",
+    "verifier_calls",
+    "oracle_calls",
+    "proposer_forward_passes",
+    "decoder_tokens",
+    "cpu_seconds",
+    "gpu_seconds",
+    "wall_clock_seconds",
+    "peak_memory_bytes",
+    "training_compute_separate_from_inference"
+  ],
   "lifecycle_gates": [
     "proposal_and_uncertainty",
     "independent_verification",
@@ -53,6 +82,12 @@
     "full_gpu_hours_total_max": 2,
     "run_approved": false
   },
+  "approval_review_requirements": [
+    "direct_b3_ast_generation_verified",
+    "training_exclusion_proportion_reported",
+    "unresolvable_test_tasks_retained_and_abstention_scored",
+    "candidate_and_device_compute_counters_verified"
+  ],
   "leakage_controls": [
     "held_out_answers_unavailable_to_proposer",
     "verifier_outputs_after_proposal_only",

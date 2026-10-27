@@ -38,10 +38,22 @@ reset semantics, contradiction fixture and evaluation queries.
 | B0 | Lifecycle v0 deterministic eight-rule filter | Positive lifecycle reference |
 | B1 | Deterministic bounded AST enumeration with consistency/complexity ranking | Non-neural program-search baseline |
 | B2 | Learned proposer scoring the fixed eight-rule catalogue | Milestone 1 neural integration |
-| B3 | Learned proposer scoring candidates from the compositional AST grammar | Milestone 2 neural-assisted proposal |
+| B3 | Grammar-constrained learned AST decoder that emits candidate ASTs directly | Milestone 2 neural-assisted proposal |
 
-B1 and B3 receive the same candidate grammar and candidate budget. B2 is not
-allowed to be interpreted as procedural novelty.
+B1 and B3 receive the same grammar, maximum AST depth/node limits and output
+candidate budget. B2 is not allowed to be interpreted as procedural novelty.
+
+### Candidate-source requirement
+
+B3's primary implementation must generate serialized ASTs directly under the
+grammar. It must not receive an exhaustive candidate list containing the target
+procedure and then merely rerank that list. A catalog-reranking implementation
+may be run only as a separately labelled diagnostic (`B3-R`) and cannot support
+the independent-proposal or procedural-novelty claims.
+
+Every result records `candidate_source` as one of `deterministic_enum`,
+`neural_generated` or `catalog_ranked`. Duplicate canonical ASTs count once
+against the proposal budget.
 
 ## Procedure language
 
@@ -75,9 +87,14 @@ three disjoint task strata:
 For every task, use disjoint sets for demonstrations, independent verification
 and post-reset queries. The initial digit domain has 100 ordered pairs, so the
 manifest must reserve all remaining pairs after demonstrations and verification
-for post-reset scoring where possible. Tasks that are not uniquely verifiable
-under the fixed verifier budget are excluded before model training and counted
-in the manifest audit.
+for post-reset scoring where possible.
+
+Training tasks that are not uniquely verifiable under the fixed verifier budget
+may be excluded before optimization, but the manifest must report their count
+and proportion. Validation and test tasks are not silently discarded. They are
+labelled `identifiable_under_budget` or `unresolvable_under_budget` and remain
+in the all-task denominator. Report both conditional acquisition on identifiable
+tasks and abstention precision/coverage on unresolvable tasks.
 
 The learned proposer is trained only on training-family tasks. Validation and
 test families, AST hashes and truth-table hashes remain unavailable to proposer
@@ -123,11 +140,21 @@ detection is a later boundary.
 - wall-clock and CPU/GPU compute;
 - proposal rank and uncertainty calibration.
 
+Also report, separately for every task and arm:
+
+- candidate evaluations and candidate-output count;
+- verifier calls and oracle calls;
+- proposer forward passes and decoder tokens;
+- CPU seconds, GPU seconds, wall-clock seconds and peak memory;
+- training compute and inference compute separately.
+
 The primary comparison is B3 versus B1 on held-out functionally novel tasks at
-matched candidate, verifier and compute budgets. A neural advantage requires
-either higher lifecycle-preserving functional acquisition or equal acquisition
-with a preregistered reduction in search/verifier cost. Matching B1 does not
-establish a neural advantage.
+matched candidate/verifier budgets and also reports a matched-total-compute
+comparison. Candidate counts are not treated as a proxy for compute. A neural
+advantage requires either higher lifecycle-preserving functional acquisition at
+matched total compute or equal acquisition with lower measured total compute
+without increased oracle/intervention cost. Matching B1 does not establish a
+neural advantage.
 
 ## Scaffolding accounting
 
@@ -156,6 +183,9 @@ privileged labels or evaluator intervention.
 - all seeds, manifests, grammar limits and source hashes are frozen before
   training.
 
+The preflight must reject any implementation that cannot expose these separate
+candidate, verifier and device-compute counters.
+
 ## Compute budget
 
 This protocol does not authorize execution. If approved after preflight:
@@ -183,4 +213,6 @@ This protocol does not authorize execution. If approved after preflight:
 
 The first approval review must confirm the manifest, exact proposer interface,
 candidate budget, AST equivalence audit, leakage audit and compute estimate.
-No neural run is approved by this document alone.
+It must also confirm the direct-generation provenance of B3, the excluded-task
+proportion and the all-task abstention analysis. No neural run is approved by
+this document alone.
