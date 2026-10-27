@@ -11,7 +11,8 @@
     "external_oracle_interfaces": 1,
     "externally_triggered_intervention_points": 1,
     "task_specific_candidate_generation_components": 2,
-    "task_specific_execution_components": 1
+    "task_specific_execution_components": 1,
+    "initial_functional_equivalence_domain_size": 100
   },
   "components": [
     {
@@ -85,6 +86,15 @@
       "task_specific": false,
       "current_status": "present",
       "candidate_replacement": "learned confidence can be evaluated later, but cannot bypass deterministic verification"
+    },
+    {
+      "id": "procedure_semantics_and_equivalence",
+      "role": "Defines primitive meanings, canonical ASTs and structural/functional novelty",
+      "implementation": "Design-only contract in CRUCIBLE_TRACK_B_PROCEDURE_INTERFACE_DESIGN_20261028.md",
+      "category": "engineered_protocol_scaffolding",
+      "task_specific": true,
+      "current_status": "specified_not_implemented",
+      "candidate_replacement": "retain as an independent semantic contract and verifier control"
     }
   ],
   "baseline_measurement_rule": {

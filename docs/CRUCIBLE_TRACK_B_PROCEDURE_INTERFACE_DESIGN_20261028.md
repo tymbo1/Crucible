@@ -67,8 +67,8 @@ The first executable language should be deliberately small and total:
 
 - variables: `a`, `b`;
 - constants: integers `0..9`;
-- primitive operations: `add_mod10`, `sub_mod10`, `mul_mod10`, `xor_mod10`,
-  `min`, `max`;
+- primitive operations: `add_mod10`, `sub_mod10`, `mul_mod10`,
+  `xor_bits_mod10`, `min`, `max`;
 - structural limits: maximum depth and node count fixed in the protocol;
 - no Python, shell, arbitrary function names, memory reads or external calls;
 - deterministic evaluation with explicit domain and output-type checks.
@@ -76,6 +76,45 @@ The first executable language should be deliberately small and total:
 `FIRST` and `SECOND` may be represented by `var(a)` and `var(b)` in the
 canonical language. Named v0 rules can be imported through a compatibility
 adapter, but the persisted canonical form should be the AST.
+
+### Operation semantics
+
+The XOR primitive has one precise meaning:
+
+`xor_bits_mod10(a, b) = (integer_bitwise_xor(a, b)) mod 10`.
+
+Inputs are integers in `0..9`; bitwise XOR is applied before the modulo-10
+reduction. The old v0 name `XOR_MOD10` is accepted only by a compatibility
+adapter that expands to this canonical operation. No implementation may use
+modular addition, logical XOR or a language-dependent coercion for this node.
+
+Every primitive must have a protocol-level definition, reference evaluator and
+test vectors before it can appear in a training or evaluation grammar.
+
+## Canonicalization and functional novelty
+
+Two kinds of novelty are reported separately:
+
+1. **Structural novelty:** the canonical AST hash is absent from all proposer
+   training procedures. Canonicalization removes irrelevant serialization
+   differences, normalizes integer constants and sorts arguments for the
+   explicitly commutative operations `add_mod10`, `mul_mod10`, `min`, `max`
+   and `xor_bits_mod10`. Argument order remains meaningful for subtraction.
+2. **Functional novelty:** the complete truth table over
+   `D = {(a,b) : a,b in 0..9}` differs from the truth table of every training
+   procedure. Since `|D| = 100`, this equivalence test is exhaustive for the
+   initial total language; no sampling approximation is permitted.
+
+Different ASTs that produce the same 100-output truth table are structurally
+different but functionally equivalent. They must not be reported as novel
+behaviour. A Milestone 2 procedural-novelty claim requires both structural and
+functional novelty relative to the proposer training set. A structurally novel
+but functionally equivalent proposal may be retained as a diagnostic result,
+not as a new-procedure success.
+
+The evaluation manifest must record canonical AST hashes and truth-table hashes
+for training, validation and test procedures. Any duplicate functional class
+across those partitions invalidates the functional-novelty claim.
 
 ## Component contract
 
@@ -127,6 +166,8 @@ Before training, a protocol must specify:
 
 - the exact proposer input and output tensors/records;
 - fixed-family Milestone 1 and held-out-expression Milestone 2 splits;
+- exact primitive semantics, canonicalization rules and exhaustive truth-table
+  equivalence checks;
 - matched v0 seeds, verifier, query counts and reset semantics;
 - a leakage audit for demonstrations, verification labels and persistent
   state;

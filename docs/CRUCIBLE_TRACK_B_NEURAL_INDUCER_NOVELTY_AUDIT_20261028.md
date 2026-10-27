@@ -18,6 +18,11 @@ The required proposal/executor contract is defined in
 output is sufficient for Milestone 1 integration but is explicitly
 insufficient for the Milestone 2 procedural-novelty claim.
 
+Milestone 2 must report structural AST novelty separately from functional
+novelty. Functional novelty is tested exhaustively over all 100 ordered pairs
+of digits; equivalent truth tables do not count as new behaviour. The XOR
+primitive is specifically defined as integer bitwise XOR followed by modulo 10.
+
 ## Closest previous work
 
 1. **Lifecycle v0** — closest baseline. It uses a fixed eight-rule family,
@@ -54,6 +59,9 @@ bounded known hypothesis family, not general unfamiliar-procedure acquisition.
 - A fixed-family success must be labelled **neural-assisted bounded proposal**.
   A stronger claim requires held-out procedure families or a candidate grammar
   not exposed as the answer set during training.
+- A Milestone 2 success requires both an unseen canonical AST and an unseen
+  exhaustive truth table; syntactic rearrangement of a known function is not
+  procedural novelty.
 - Failure of the proposer must not be interpreted as failure of the retained
   verifier, persistence, executor or revision components.
 
