@@ -1,0 +1,63 @@
+{
+  "schema_version": "crucible_track_b_neural_proposer_protocol_v1",
+  "date": "2026-10-28",
+  "status": "preregistered_design_only",
+  "run_approved": false,
+  "arms": [
+    "B0_V0_DETERMINISTIC_RULE_FILTER",
+    "B1_DETERMINISTIC_AST_SEARCH",
+    "B2_LEARNED_FIXED_FAMILY_PROPOSER",
+    "B3_LEARNED_COMPOSITIONAL_PROPOSER"
+  ],
+  "grammar": {
+    "language": "digit_expr_mod10_v1",
+    "domain": "digits_0_9_binary",
+    "domain_size": 100,
+    "operators": ["add_mod10", "sub_mod10", "mul_mod10", "xor_bits_mod10", "min", "max"],
+    "xor_semantics": "integer_bitwise_xor_then_mod10",
+    "arbitrary_code": false
+  },
+  "task_strata": [
+    "fixed_family_integration",
+    "structural_novelty",
+    "functional_novelty"
+  ],
+  "primary_comparison": {
+    "learned_arm": "B3_LEARNED_COMPOSITIONAL_PROPOSER",
+    "baseline_arm": "B1_DETERMINISTIC_AST_SEARCH",
+    "criteria": [
+      "higher_lifecycle_preserving_functional_acquisition",
+      "or_equal_acquisition_with_lower_search_or_verifier_cost"
+    ]
+  },
+  "lifecycle_gates": [
+    "proposal_and_uncertainty",
+    "independent_verification",
+    "persistence_and_provenance",
+    "context_reset",
+    "post_reset_execution",
+    "contradiction_invalidation_and_relearning",
+    "negative_controls",
+    "interference"
+  ],
+  "novelty_gates": {
+    "structural": "canonical_ast_hash_absent_from_proposer_training",
+    "functional": "complete_100_row_truth_table_differs_from_all_proposer_training_functions",
+    "milestone_2_requires_both": true
+  },
+  "compute_budget": {
+    "manifest_generation": "cpu_only",
+    "preflight_updates_max": 50,
+    "full_updates_per_seed_max": 2000,
+    "seeds": [42, 1337],
+    "full_gpu_hours_total_max": 2,
+    "run_approved": false
+  },
+  "leakage_controls": [
+    "held_out_answers_unavailable_to_proposer",
+    "verifier_outputs_after_proposal_only",
+    "persistent_state_contains_promoted_procedure_and_provenance_only",
+    "ast_and_truth_table_hash_partition_audit",
+    "raw_example_retrieval_disallowed_as_procedure"
+  ]
+}

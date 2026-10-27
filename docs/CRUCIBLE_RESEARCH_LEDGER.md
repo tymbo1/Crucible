@@ -41,8 +41,10 @@ reports that still need ledger entries.
 | `learning-lifecycle-v0-engineered-baseline` | ESTABLISHED | The bounded symbolic learner acquired and verified 24/24 procedures, retained and executed them correctly after reset on 288/288 queries, rejected insufficient/contradictory evidence, and revised a versioned procedure; contradiction invalidation was externally triggered. |
 | `track-b-c1-engineered-controller-series-v1` | INCONCLUSIVE | C1f–C1r provide heterogeneous engineered evidence on reuse, applicability, active evidence and correction, but do not demonstrate a neural procedure lifecycle. |
 | `digitwise-addition-ladder-forensics-v2-v3` | ESTABLISHED | Read-only checkpoint forensics reproduced the arithmetic metrics and separated digit/EOS/output-format effects; pair-level causes remain unresolved. |
+| `track-b-procedure-interface-design-v1` | UNTESTED | The canonical AST interface, exact XOR semantics and exhaustive structural/functional novelty criteria are specified but untested. |
+| `track-b-neural-proposer-protocol-v1` | UNTESTED | The preregistered learned-proposer versus deterministic AST-search comparison is defined but has not been executed. |
 
-The ledger now contains 43 records and indexes 47 canonical experiment report
+The ledger now contains 45 records and indexes 47 canonical experiment report
 files (`REPORT_FINAL.md` and `REPORT.md`). The 23 older reports were extracted
 from their accepted final reports and linked artifacts on 2026-10-26; no
 outcomes were inferred from filenames or
@@ -97,3 +99,5 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `learning-lifecycle-v0-engineered-baseline` | ESTABLISHED | `crucible_learning_lifecycle_v0_20251025` |
 | `track-b-c1-engineered-controller-series-v1` | INCONCLUSIVE | `crucible_c1f_persistent_reuse_20261021` through `crucible_c1r_prediction_intervention_20261021` |
 | `digitwise-addition-ladder-forensics-v2-v3` | ESTABLISHED | `crucible_digitwise_addition_ladder_20261025/forensics_20251025_v2` and `v3` |
+| `track-b-procedure-interface-design-v1` | UNTESTED | design documents only |
+| `track-b-neural-proposer-protocol-v1` | UNTESTED | design documents only |

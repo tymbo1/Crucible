@@ -878,6 +878,8 @@
         "docs/CRUCIBLE_TRACK_B_SCAFFOLDING_BUDGET_20261028.json",
         "docs/CRUCIBLE_TRACK_B_NEURAL_INDUCER_NOVELTY_AUDIT_20261028.md",
         "docs/CRUCIBLE_TRACK_B_PROCEDURE_INTERFACE_DESIGN_20261028.md",
+        "docs/CRUCIBLE_TRACK_B_NEURAL_PROPOSER_PROTOCOL_20261028.md",
+        "docs/CRUCIBLE_TRACK_B_NEURAL_PROPOSER_PROTOCOL_20261028.json",
         "tools/crucible_learning_lifecycle_v0.py",
         "tools/run_crucible_learning_lifecycle_v0.py",
         "tools/test_learning_lifecycle_v0.py",
@@ -1007,6 +1009,27 @@
         "docs/CRUCIBLE_LEARNING_LIFECYCLE_V0_DESIGN_20251025.md"
       ],
       "novelty_terms": ["procedure interface", "canonical AST", "compositional procedure", "Milestone 1", "Milestone 2", "procedural novelty"]
+    },
+    {
+      "id": "track-b-neural-proposer-protocol-v1",
+      "status": "UNTESTED",
+      "title": "Neural procedure proposer versus deterministic AST search protocol",
+      "hypothesis": "A learned proposer can preserve the complete Lifecycle v0 contract and contribute beyond deterministic AST search on held-out structurally and functionally novel procedures.",
+      "mechanisms": ["neural-procedure-proposal", "deterministic-ast-search", "functional-novelty", "lifecycle-preservation", "scaffolding-reduction"],
+      "interventions": ["B2 learned fixed-family proposer", "B3 learned compositional proposer"],
+      "controls": ["B0 Lifecycle v0 reference", "B1 deterministic AST search", "common verifier", "common persistence/reset/executor", "exhaustive 100-row equivalence", "negative controls", "leakage audit", "fixed compute budget"],
+      "result": "Preregistered design only. No manifest, proposer, AST-search runner or neural training has been executed under this protocol.",
+      "limits": ["Grammar depth/node limits remain to be instantiated in the frozen manifest", "No neural proposer has been implemented", "Contradiction detection remains externally triggered", "A primitive library remains engineered scaffolding", "Two GPU-hours is a cap, not evidence of adequate compute"],
+      "unresolved": ["Whether the learned proposer can beat or compress deterministic search", "Whether held-out functional novelty can be acquired from demonstrations", "Whether lifecycle reliability survives proposal errors", "Whether a larger procedure language is needed after the first gate"],
+      "artifacts": [
+        "docs/CRUCIBLE_TRACK_B_NEURAL_PROPOSER_PROTOCOL_20261028.md",
+        "docs/CRUCIBLE_TRACK_B_NEURAL_PROPOSER_PROTOCOL_20261028.json",
+        "docs/CRUCIBLE_TRACK_B_PROCEDURE_INTERFACE_DESIGN_20261028.md",
+        "docs/CRUCIBLE_TRACK_B_NEURAL_INDUCER_NOVELTY_AUDIT_20261028.md",
+        "docs/CRUCIBLE_TRACK_B_SCAFFOLDING_BUDGET_20261028.json",
+        "docs/CRUCIBLE_TRACK_B_BASELINE_AUDIT_20261028.md"
+      ],
+      "novelty_terms": ["neural proposer", "AST search baseline", "functional novelty", "procedure acquisition", "lifecycle gate"]
     }
   ]
 }
