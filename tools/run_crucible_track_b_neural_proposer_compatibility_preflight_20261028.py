@@ -71,7 +71,10 @@ def load_training_records() -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, A
     inputs = load_jsonl("PROPOSER_INPUTS.jsonl")
     labels = {row["task_id"]: row for row in load_jsonl("TRAIN_LABELS.jsonl")}
     manifest = load_json("TASK_MANIFEST.json")
-    manifest_by_id = {row["task_id"]: row for row in manifest["tasks"]}
+    # Keep the compatibility runner's working manifest explicitly training
+    # only. Held-out task metadata is not needed for this gate and must not
+    # influence implementation changes.
+    manifest_by_id = {row["task_id"]: row for row in manifest["tasks"] if row.get("split") == "train"}
     train_inputs = [row for row in inputs if row.get("split") == "train"]
     if not train_inputs:
         raise RuntimeError("no training-only proposer inputs found")
