@@ -1,0 +1,107 @@
+{
+  "schema_version": "crucible_track_b_scaffolding_budget_v1",
+  "date": "2026-10-28",
+  "status": "baseline_audit",
+  "experiment": "crucible_learning_lifecycle_v0_20251025",
+  "claim_boundary": "Operational accounting of engineered dependencies. It is not a measure of intelligence and does not imply that every engineered component should be removed.",
+  "units": {
+    "hard_coded_rule_family_size": 8,
+    "learned_neural_components": 0,
+    "persistent_state_components": 1,
+    "external_oracle_interfaces": 1,
+    "externally_triggered_intervention_points": 1,
+    "task_specific_candidate_generation_components": 2,
+    "task_specific_execution_components": 1
+  },
+  "components": [
+    {
+      "id": "hypothesis_family",
+      "role": "Enumerates the only procedures that can be acquired",
+      "implementation": "RULE_NAMES and apply_rule in tools/crucible_learning_lifecycle_v0.py",
+      "category": "engineered_task_scaffolding",
+      "task_specific": true,
+      "current_status": "present",
+      "candidate_replacement": "learned proposal over a declared candidate interface; stronger claim requires held-out procedure families"
+    },
+    {
+      "id": "candidate_filter",
+      "role": "Tests every hard-coded procedure against observations",
+      "implementation": "compatible_rules",
+      "category": "engineered_task_scaffolding",
+      "task_specific": true,
+      "current_status": "present",
+      "candidate_replacement": "learned proposer may rank or propose candidates, but verifier remains authoritative"
+    },
+    {
+      "id": "probe_policy",
+      "role": "Chooses an input where surviving candidates disagree",
+      "implementation": "ProceduralLearner._choose_probe",
+      "category": "engineered_task_scaffolding",
+      "task_specific": true,
+      "current_status": "present",
+      "candidate_replacement": "optional later learned evidence-request policy; not part of the first neural boundary"
+    },
+    {
+      "id": "oracle",
+      "role": "Supplies outputs for demonstrations, active probes and independent verification",
+      "implementation": "oracle_for plus the callable passed to ProceduralLearner.learn",
+      "category": "external_verification_anchor",
+      "task_specific": true,
+      "current_status": "present_and_allowed",
+      "candidate_replacement": "retain as an independent verifier in the first neural-assisted lifecycle"
+    },
+    {
+      "id": "executor",
+      "role": "Runs the promoted procedure on unseen inputs",
+      "implementation": "apply_rule selected by PersistentStore.active",
+      "category": "engineered_execution_anchor",
+      "task_specific": true,
+      "current_status": "present_and_allowed",
+      "candidate_replacement": "retain for the first inducer replacement"
+    },
+    {
+      "id": "persistent_store",
+      "role": "Stores versioned procedure metadata, evidence references, provenance and revision history",
+      "implementation": "PersistentStore",
+      "category": "engineered_lifecycle_infrastructure",
+      "task_specific": false,
+      "current_status": "present_and_allowed",
+      "candidate_replacement": "retain until neural retention is a separately approved boundary"
+    },
+    {
+      "id": "contradiction_trigger",
+      "role": "Invalidates the active procedure after contradictory evidence",
+      "implementation": "ProceduralLearner.invalidate called by run_revision",
+      "category": "external_intervention",
+      "task_specific": true,
+      "current_status": "externally_triggered",
+      "candidate_replacement": "future learned contradiction detector; explicitly out of scope for the first neural inducer"
+    },
+    {
+      "id": "hypothesis_uncertainty",
+      "role": "Prevents promotion when multiple candidates remain",
+      "implementation": "status=uncertain when candidate count is not one",
+      "category": "engineered_control",
+      "task_specific": false,
+      "current_status": "present",
+      "candidate_replacement": "learned confidence can be evaluated later, but cannot bypass deterministic verification"
+    }
+  ],
+  "baseline_measurement_rule": {
+    "lifecycle_must_remain_intact": true,
+    "required_gates": [
+      "acquisition_and_independent_verification",
+      "post_reset_execution",
+      "persistence_provenance_integrity",
+      "contradiction_rejection_or_invalidation",
+      "revision_without_destructive_overwrite",
+      "negative_controls"
+    ],
+    "scaffolding_reduction_claim_requires": [
+      "no loss of lifecycle gate reliability",
+      "no untracked increase in oracle access or evaluator intervention",
+      "same task and provenance accounting",
+      "explicit count of replaced and retained engineered components"
+    ]
+  }
+}

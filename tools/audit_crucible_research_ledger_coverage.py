@@ -14,10 +14,21 @@ LEDGER = ROOT / "docs" / "CRUCIBLE_RESEARCH_LEDGER.json"
 def main() -> int:
     ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
     indexed = {artifact for record in ledger.get("records", []) for artifact in record.get("artifacts", [])}
-    reports = sorted(path.relative_to(ROOT).as_posix() for path in (ROOT / "experiments").glob("**/REPORT_FINAL.md"))
+    report_patterns = ("REPORT_FINAL.md", "REPORT.md")
+    reports = sorted({
+        path.relative_to(ROOT).as_posix()
+        for pattern in report_patterns
+        for path in (ROOT / "experiments").glob(f"**/{pattern}")
+    })
     indexed_reports = [path for path in reports if path in indexed]
     unindexed_reports = [path for path in reports if path not in indexed]
-    result = {"total_reports": len(reports), "indexed_reports": len(indexed_reports), "unindexed_reports": len(unindexed_reports), "unindexed": unindexed_reports}
+    result = {
+        "report_patterns": list(report_patterns),
+        "total_reports": len(reports),
+        "indexed_reports": len(indexed_reports),
+        "unindexed_reports": len(unindexed_reports),
+        "unindexed": unindexed_reports,
+    }
     print(json.dumps(result, indent=2))
     return 0
 

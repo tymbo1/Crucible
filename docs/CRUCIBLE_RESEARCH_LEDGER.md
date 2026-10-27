@@ -38,10 +38,14 @@ reports that still need ledger entries.
 | `topology-constructive-relational-baseline-v1` | ESTABLISHED | A supplied shared latent-potential representation composes all tested unseen pairs exactly on both graphs; this is a symbolic constructive control, not neural discovery. |
 | `two-candidate-topology-duration-extension-v1` | ESTABLISHED | All four topology arms passed the training gate after 2,000 updates, with exact 500-step reproduction; this rescues acquisition but does not establish topology causality. |
 | `phase-vii-neural-shared-latent-transfer-v1` | FAILED | All eight shared-latent/cycle arms passed training competence, but none improved matched paired transfer over N0; a read-only replay found N1/N2 preserved predicted values under every candidate-order counterfactual (often the wrong value), so the tested neural inductive bias did not transfer on this benchmark. |
+| `learning-lifecycle-v0-engineered-baseline` | ESTABLISHED | The bounded symbolic learner acquired and verified 24/24 procedures, retained and executed them correctly after reset on 288/288 queries, rejected insufficient/contradictory evidence, and revised a versioned procedure; contradiction invalidation was externally triggered. |
+| `track-b-c1-engineered-controller-series-v1` | INCONCLUSIVE | C1f–C1r provide heterogeneous engineered evidence on reuse, applicability, active evidence and correction, but do not demonstrate a neural procedure lifecycle. |
+| `digitwise-addition-ladder-forensics-v2-v3` | ESTABLISHED | Read-only checkpoint forensics reproduced the arithmetic metrics and separated digit/EOS/output-format effects; pair-level causes remain unresolved. |
 
-The ledger now covers all 40 final experiment reports in the repository. The
-23 older reports were extracted from their accepted final reports and linked
-artifacts on 2026-10-26; no outcomes were inferred from filenames or
+The ledger now contains 43 records and indexes 47 canonical experiment report
+files (`REPORT_FINAL.md` and `REPORT.md`). The 23 older reports were extracted
+from their accepted final reports and linked artifacts on 2026-10-26; no
+outcomes were inferred from filenames or
 conversation summaries. See
 [CRUCIBLE_RESEARCH_CONSOLIDATION_DECISION_20261026.md](CRUCIBLE_RESEARCH_CONSOLIDATION_DECISION_20261026.md)
 for the evidence consolidation, overlap groups and cardinality training audit.
@@ -90,3 +94,6 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `topology-constructive-relational-baseline-v1` | ESTABLISHED | `crucible_topology_constructive_baseline_20261027_v1` |
 | `two-candidate-topology-duration-extension-v1` | ESTABLISHED | `crucible_two_candidate_topology_duration_extension_20261027_v1` |
 | `phase-vii-neural-shared-latent-transfer-v1` | FAILED | `crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1` |
+| `learning-lifecycle-v0-engineered-baseline` | ESTABLISHED | `crucible_learning_lifecycle_v0_20251025` |
+| `track-b-c1-engineered-controller-series-v1` | INCONCLUSIVE | `crucible_c1f_persistent_reuse_20261021` through `crucible_c1r_prediction_intervention_20261021` |
+| `digitwise-addition-ladder-forensics-v2-v3` | ESTABLISHED | `crucible_digitwise_addition_ladder_20261025/forensics_20251025_v2` and `v3` |
