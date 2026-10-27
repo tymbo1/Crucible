@@ -1,0 +1,36 @@
+{
+  "aggregation": [
+    "per_task",
+    "per_split",
+    "per_stratum",
+    "per_seed",
+    "arm_pooled"
+  ],
+  "checkpoint_rule": "preflight cannot select a scientific checkpoint or inspect held-out oracle outputs",
+  "hardware": "record device model, dtype, batch size, process count and software revision",
+  "lifecycle_events": [
+    "proposal",
+    "verification",
+    "promotion",
+    "reset",
+    "execution",
+    "contradiction",
+    "invalidation",
+    "relearning"
+  ],
+  "per_task_counters": [
+    "candidate_source",
+    "candidate_outputs",
+    "unique_canonical_ast_outputs",
+    "candidate_evaluations",
+    "verifier_calls",
+    "oracle_calls",
+    "proposer_forward_passes",
+    "decoder_tokens",
+    "cpu_seconds",
+    "gpu_seconds",
+    "wall_clock_seconds",
+    "peak_memory_bytes"
+  ],
+  "status": "plan_complete_implementation_pending"
+}

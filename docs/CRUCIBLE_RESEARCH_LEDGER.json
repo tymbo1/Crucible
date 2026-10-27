@@ -1019,8 +1019,8 @@
       "mechanisms": ["neural-procedure-proposal", "deterministic-ast-search", "functional-novelty", "lifecycle-preservation", "scaffolding-reduction"],
       "interventions": ["B2 learned fixed-family proposer", "B3 learned compositional proposer"],
       "controls": ["B0 Lifecycle v0 reference", "B1 deterministic AST search", "common verifier", "common persistence/reset/executor", "exhaustive 100-row equivalence", "negative controls", "leakage audit", "fixed compute budget"],
-      "result": "Preregistered design only. No manifest, proposer, AST-search runner or neural training has been executed under this protocol.",
-      "limits": ["Grammar depth/node limits remain to be instantiated in the frozen manifest", "No neural proposer has been implemented", "Contradiction detection remains externally triggered", "A primitive library remains engineered scaffolding", "Two GPU-hours is a cap, not evidence of adequate compute"],
+      "result": "CPU-only preflight package generated and independently validated. The frozen grammar, task splits, novelty partitions, leakage audit and instrumentation plan are complete; no proposer training, checkpoint selection or sealed-test access occurred under this protocol.",
+      "limits": ["No direct-generation B3 proposer has been implemented", "Runtime instrumentation remains pending", "The 50-update compatibility preflight has not run", "Contradiction detection remains externally triggered", "A primitive library remains engineered scaffolding", "Two GPU-hours is a cap, not evidence of adequate compute"],
       "unresolved": ["Whether the learned proposer can beat or compress deterministic search", "Whether held-out functional novelty can be acquired from demonstrations", "Whether lifecycle reliability survives proposal errors", "Whether a larger procedure language is needed after the first gate"],
       "artifacts": [
         "docs/CRUCIBLE_TRACK_B_NEURAL_PROPOSER_PROTOCOL_20261028.md",
@@ -1028,7 +1028,21 @@
         "docs/CRUCIBLE_TRACK_B_PROCEDURE_INTERFACE_DESIGN_20261028.md",
         "docs/CRUCIBLE_TRACK_B_NEURAL_INDUCER_NOVELTY_AUDIT_20261028.md",
         "docs/CRUCIBLE_TRACK_B_SCAFFOLDING_BUDGET_20261028.json",
-        "docs/CRUCIBLE_TRACK_B_BASELINE_AUDIT_20261028.md"
+        "docs/CRUCIBLE_TRACK_B_BASELINE_AUDIT_20261028.md",
+        "docs/CRUCIBLE_TRACK_B_NEURAL_PROPOSER_PREFLIGHT_REVIEW_20261028.md",
+        "tools/prepare_crucible_track_b_neural_proposer_preflight_20261028.py",
+        "tools/validate_crucible_track_b_neural_proposer_preflight_20261028.py",
+        "experiments/crucible_track_b_neural_proposer_preflight_20261028/GRAMMAR_SPEC.json",
+        "experiments/crucible_track_b_neural_proposer_preflight_20261028/TASK_MANIFEST.json",
+        "experiments/crucible_track_b_neural_proposer_preflight_20261028/PROPOSER_INPUTS.jsonl",
+        "experiments/crucible_track_b_neural_proposer_preflight_20261028/TRAIN_LABELS.jsonl",
+        "experiments/crucible_track_b_neural_proposer_preflight_20261028/EVAL_ORACLE.jsonl",
+        "experiments/crucible_track_b_neural_proposer_preflight_20261028/LEAKAGE_AUDIT.json",
+        "experiments/crucible_track_b_neural_proposer_preflight_20261028/INSTRUMENTATION_PLAN.json",
+        "experiments/crucible_track_b_neural_proposer_preflight_20261028/INSTRUMENTATION_PLAN.md",
+        "experiments/crucible_track_b_neural_proposer_preflight_20261028/PREFLIGHT_RESULTS.json",
+        "experiments/crucible_track_b_neural_proposer_preflight_20261028/HASHES.json",
+        "experiments/crucible_track_b_neural_proposer_preflight_20261028/README.md"
       ],
       "novelty_terms": ["neural proposer", "AST search baseline", "functional novelty", "procedure acquisition", "lifecycle gate"]
     }
