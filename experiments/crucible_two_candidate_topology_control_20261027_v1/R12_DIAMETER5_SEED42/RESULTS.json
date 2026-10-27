@@ -1,0 +1,94 @@
+{
+  "batch_size": 12,
+  "cell": "R12_DIAMETER5_SEED42",
+  "checkpoint": "experiments/crucible_two_candidate_topology_control_20261027_v1/R12_DIAMETER5_SEED42/checkpoint.pt",
+  "checkpoint_sha256": "a3bcba889e5c38a2d5aa02b0cce9f18e1633c926e829fdb4029cd1993dce4dcf",
+  "condition": "R12_DIAMETER5",
+  "parameter_count": 22106906,
+  "seed": 42,
+  "source": "new",
+  "steps": 500,
+  "trace_steps": [
+    1,
+    50,
+    100,
+    200,
+    300,
+    400,
+    500
+  ],
+  "train_metrics": {
+    "by_distance": {
+      "1": {
+        "accuracy": 0.9,
+        "correct": 36,
+        "rows": 40
+      },
+      "2": {
+        "accuracy": 0.8055555555555556,
+        "correct": 29,
+        "rows": 36
+      },
+      "3": {
+        "accuracy": 0.875,
+        "correct": 14,
+        "rows": 16
+      },
+      "4": {
+        "accuracy": 0.9583333333333334,
+        "correct": 23,
+        "rows": 24
+      },
+      "5": {
+        "accuracy": 0.75,
+        "correct": 21,
+        "rows": 28
+      }
+    },
+    "candidate_order_flips": 17,
+    "paired_accuracy": 0.75,
+    "paired_correct": 54,
+    "paired_groups": 72,
+    "rows": 144,
+    "slot_accuracy": 0.8541666666666666,
+    "slot_correct": 123,
+    "value_accuracy": 0.8541666666666666,
+    "value_correct": 123
+  },
+  "training_gate_pass": false,
+  "training_gate_threshold": 0.95,
+  "validation_metrics": {
+    "by_distance": {
+      "2": {
+        "accuracy": 0.5833333333333334,
+        "correct": 14,
+        "rows": 24
+      },
+      "3": {
+        "accuracy": 0.75,
+        "correct": 18,
+        "rows": 24
+      },
+      "4": {
+        "accuracy": 0.5,
+        "correct": 18,
+        "rows": 36
+      },
+      "5": {
+        "accuracy": 0.4166666666666667,
+        "correct": 5,
+        "rows": 12
+      }
+    },
+    "candidate_order_flips": 31,
+    "paired_accuracy": 0.2916666666666667,
+    "paired_correct": 14,
+    "paired_groups": 48,
+    "rows": 96,
+    "slot_accuracy": 0.5729166666666666,
+    "slot_correct": 55,
+    "value_accuracy": 0.5729166666666666,
+    "value_correct": 55
+  },
+  "variant": "SHARED_SCORER"
+}

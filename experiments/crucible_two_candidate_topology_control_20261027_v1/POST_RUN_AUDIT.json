@@ -1,0 +1,355 @@
+{
+  "errors": [],
+  "experiment": "crucible_two_candidate_topology_control_20261027_v1",
+  "independent_checks": {
+    "data_checks": {
+      "P12_PRISM": {
+        "train": {
+          "errors": [],
+          "path_oracle_checks": 144,
+          "query_pairs": [
+            "0,1",
+            "0,2",
+            "0,5",
+            "0,6",
+            "1,2",
+            "1,4",
+            "1,5",
+            "1,6",
+            "1,7",
+            "1,8",
+            "1,9",
+            "1,10",
+            "1,11",
+            "2,3",
+            "2,4",
+            "2,5",
+            "2,6",
+            "2,7",
+            "2,8",
+            "2,9",
+            "2,10",
+            "2,11",
+            "3,4",
+            "3,5",
+            "3,6",
+            "3,7",
+            "3,8",
+            "3,9",
+            "3,10",
+            "3,11",
+            "4,5",
+            "4,6",
+            "4,7",
+            "4,8",
+            "4,9",
+            "4,10"
+          ],
+          "rows": 144,
+          "semantic_groups": 72,
+          "unique_inputs": 144,
+          "unique_record_ids": 144
+        },
+        "validation": {
+          "errors": [],
+          "path_oracle_checks": 96,
+          "query_pairs": [
+            "0,3",
+            "0,4",
+            "0,7",
+            "0,8",
+            "0,9",
+            "0,10",
+            "0,11",
+            "1,3"
+          ],
+          "rows": 96,
+          "semantic_groups": 48,
+          "unique_inputs": 96,
+          "unique_record_ids": 96
+        }
+      },
+      "R12_DIAMETER5": {
+        "train": {
+          "errors": [],
+          "path_oracle_checks": 144,
+          "query_pairs": [
+            "0,1",
+            "0,2",
+            "0,5",
+            "0,6",
+            "1,2",
+            "1,4",
+            "1,5",
+            "1,6",
+            "1,7",
+            "1,8",
+            "1,9",
+            "1,10",
+            "1,11",
+            "2,3",
+            "2,4",
+            "2,5",
+            "2,6",
+            "2,7",
+            "2,8",
+            "2,9",
+            "2,10",
+            "2,11",
+            "3,4",
+            "3,5",
+            "3,6",
+            "3,7",
+            "3,8",
+            "3,9",
+            "3,10",
+            "3,11",
+            "4,5",
+            "4,6",
+            "4,7",
+            "4,8",
+            "4,9",
+            "4,10"
+          ],
+          "rows": 144,
+          "semantic_groups": 72,
+          "unique_inputs": 144,
+          "unique_record_ids": 144
+        },
+        "validation": {
+          "errors": [],
+          "path_oracle_checks": 96,
+          "query_pairs": [
+            "0,3",
+            "0,4",
+            "0,7",
+            "0,8",
+            "0,9",
+            "0,10",
+            "0,11",
+            "1,3"
+          ],
+          "rows": 96,
+          "semantic_groups": 48,
+          "unique_inputs": 96,
+          "unique_record_ids": 96
+        }
+      }
+    },
+    "hash_entries_verified": 34,
+    "hash_mismatches": [],
+    "preflight_status": "preflight_passed",
+    "prior_checkpoints_modified": false,
+    "result_checks": {
+      "P12_PRISM_SEED1337": {
+        "trace_steps": [
+          1,
+          50,
+          100,
+          200,
+          300,
+          400,
+          500
+        ],
+        "train": {
+          "observed": {
+            "paired_correct": 63,
+            "paired_groups": 72,
+            "rows": 144,
+            "slot_correct": 135,
+            "value_correct": 135
+          },
+          "reported": {
+            "paired_correct": 63,
+            "paired_groups": 72,
+            "rows": 144,
+            "slot_correct": 135,
+            "value_correct": 135
+          }
+        },
+        "training_gate_pass": false,
+        "validation": {
+          "observed": {
+            "paired_correct": 17,
+            "paired_groups": 48,
+            "rows": 96,
+            "slot_correct": 56,
+            "value_correct": 56
+          },
+          "reported": {
+            "paired_correct": 17,
+            "paired_groups": 48,
+            "rows": 96,
+            "slot_correct": 56,
+            "value_correct": 56
+          }
+        }
+      },
+      "P12_PRISM_SEED42": {
+        "trace_steps": [
+          1,
+          50,
+          100,
+          200,
+          300,
+          400,
+          500
+        ],
+        "train": {
+          "observed": {
+            "paired_correct": 67,
+            "paired_groups": 72,
+            "rows": 144,
+            "slot_correct": 139,
+            "value_correct": 139
+          },
+          "reported": {
+            "paired_correct": 67,
+            "paired_groups": 72,
+            "rows": 144,
+            "slot_correct": 139,
+            "value_correct": 139
+          }
+        },
+        "training_gate_pass": true,
+        "validation": {
+          "observed": {
+            "paired_correct": 19,
+            "paired_groups": 48,
+            "rows": 96,
+            "slot_correct": 59,
+            "value_correct": 59
+          },
+          "reported": {
+            "paired_correct": 19,
+            "paired_groups": 48,
+            "rows": 96,
+            "slot_correct": 59,
+            "value_correct": 59
+          }
+        }
+      },
+      "R12_DIAMETER5_SEED1337": {
+        "trace_steps": [
+          1,
+          50,
+          100,
+          200,
+          300,
+          400,
+          500
+        ],
+        "train": {
+          "observed": {
+            "paired_correct": 54,
+            "paired_groups": 72,
+            "rows": 144,
+            "slot_correct": 125,
+            "value_correct": 125
+          },
+          "reported": {
+            "paired_correct": 54,
+            "paired_groups": 72,
+            "rows": 144,
+            "slot_correct": 125,
+            "value_correct": 125
+          }
+        },
+        "training_gate_pass": false,
+        "validation": {
+          "observed": {
+            "paired_correct": 22,
+            "paired_groups": 48,
+            "rows": 96,
+            "slot_correct": 59,
+            "value_correct": 59
+          },
+          "reported": {
+            "paired_correct": 22,
+            "paired_groups": 48,
+            "rows": 96,
+            "slot_correct": 59,
+            "value_correct": 59
+          }
+        }
+      },
+      "R12_DIAMETER5_SEED42": {
+        "trace_steps": [
+          1,
+          50,
+          100,
+          200,
+          300,
+          400,
+          500
+        ],
+        "train": {
+          "observed": {
+            "paired_correct": 54,
+            "paired_groups": 72,
+            "rows": 144,
+            "slot_correct": 123,
+            "value_correct": 123
+          },
+          "reported": {
+            "paired_correct": 54,
+            "paired_groups": 72,
+            "rows": 144,
+            "slot_correct": 123,
+            "value_correct": 123
+          }
+        },
+        "training_gate_pass": false,
+        "validation": {
+          "observed": {
+            "paired_correct": 14,
+            "paired_groups": 48,
+            "rows": 96,
+            "slot_correct": 55,
+            "value_correct": 55
+          },
+          "reported": {
+            "paired_correct": 14,
+            "paired_groups": 48,
+            "rows": 96,
+            "slot_correct": 55,
+            "value_correct": 55
+          }
+        }
+      }
+    },
+    "sealed_test_accessed": false
+  },
+  "schema_version": "crucible_topology_control_post_run_audit_v1",
+  "status": "PASS",
+  "topology_comparison": {
+    "adjudicated": false,
+    "diameters": {
+      "P12_PRISM": 4,
+      "R12_DIAMETER5": 5
+    },
+    "fixed_held_out_pairs": [
+      "0,10",
+      "0,11",
+      "0,3",
+      "0,4",
+      "0,7",
+      "0,8",
+      "0,9",
+      "1,3"
+    ],
+    "matched_degree_sequence": true,
+    "matched_edge_count": true,
+    "reason": "Both graph conditions require at least one training-competent arm; this was not met."
+  },
+  "training_gate": {
+    "arms": 4,
+    "gated_cells_by_condition": {
+      "P12_PRISM": [
+        "P12_PRISM_SEED42"
+      ]
+    },
+    "passes": 1,
+    "threshold": 0.95
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "crucible_mechanism_coverage_v1",
   "updated": "2026-10-27",
-  "indexed_final_reports": 35,
+  "indexed_final_reports": 36,
   "categories": [
     {
       "mechanism": "operation-recognition",
@@ -65,6 +65,13 @@
       "failed": [],
       "inconclusive": ["two-candidate-pair-coverage-v1", "two-candidate-coverage-density-v1"],
       "unresolved": ["Whether richer coverage over all 28 unordered pairs improves transfer", "Whether density helps when per-pair exposure is matched", "Which internal mechanism produces the training-partner interaction", "Whether topology effects survive matched degree and edge count"]
+    },
+    {
+      "mechanism": "relational-composition-and-topology",
+      "established": [],
+      "failed": [],
+      "inconclusive": ["two-candidate-topology-control-v1"],
+      "unresolved": ["Whether matched graph topology changes transfer after both graph conditions pass training competence", "Whether path length affects composition under controlled competence", "Whether the edge-offset task is learnable under the frozen recipe"]
     }
   ],
   "overlap_groups": [
@@ -92,6 +99,11 @@
       "name": "cardinality-lineage",
       "records": ["shared-scorer-compositional-transfer", "explicit-id-cardinality-transfer", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1", "two-candidate-transfer-forensics-v1", "two-candidate-matched-context-probe-v1", "two-candidate-identifier-forensics-v1", "two-candidate-pair-coverage-v1", "two-candidate-pair-crossover-v1", "two-candidate-coverage-density-v1"],
       "interpretation": "The first run failed paired four-candidate transfer. The explicit-ID follow-up failed training competence, so it cannot adjudicate shared scoring versus fixed-slot transfer. The isolated two-candidate gate establishes training competence for the cyclic schedule but leaves a validation transfer gap. The 2x2 audit weakens a padding-only explanation, the matched-context probe shows a familiar-versus-recombined candidate-set contrast on the same source context strata, and identifier forensics localizes errors to a few unordered families without proving memorization or a mechanism. The rotated pair-coverage run shows all arms can fit training but held-out paired transfer remains incomplete and seed-by-panel dependent. The complete crossover supports training-partner/coverage-graph dependence within the tested two-candidate graph. The nested coverage-density run does not show a monotonic benefit at a fixed row budget and confounds coverage with per-pair repetition, degree and connectivity; variable-cardinality transfer remains unresolved."
+    },
+    {
+      "name": "relational-topology-control-lineage",
+      "records": ["two-candidate-topology-control-v1"],
+      "interpretation": "This is a separate edge-offset composition task, not a direct identifier-matching continuation. The graph feasibility and path-consistency controls passed, but only one of four arms reached training competence, so the matched-diameter comparison is not adjudicated."
     }
   ]
 }

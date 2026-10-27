@@ -724,6 +724,33 @@
         "experiments/crucible_two_candidate_coverage_density_20261027_v1/FINALIZATION.json"
       ],
       "novelty_terms": ["coverage density", "nested training graph", "fixed held-out panel", "fixed-row tradeoff"]
+    },
+    {
+      "id": "two-candidate-topology-control-v1",
+      "status": "INCONCLUSIVE",
+      "title": "Matched-degree relational topology control",
+      "hypothesis": "Holding identifier exposure, degree, edge count, training budget and evaluation identities constant, changing graph topology and shortest-path structure changes transfer on an explicitly path-compositional edge-offset task.",
+      "mechanisms": ["relational-composition", "graph-topology", "path-length-transfer", "training-competence", "candidate-selection"],
+      "interventions": ["P12_PRISM versus R12_DIAMETER5 matched-degree graph families", "modular edge-offset path-composition task", "fixed held-out unordered node pairs and both query directions"],
+      "controls": ["12 nodes", "18 edges", "degree three at every node", "connected graphs", "same held-out pair identities", "path-consistent potential oracle", "two seeds", "500 cyclic updates", "95% training gate", "independent post-run hash and data audit", "no sealed test"],
+      "result": "The graph and oracle controls passed. Only 1/4 arms passed the 95% training gate: P12_PRISM seed 42 reached 139/144 (96.5%), while P12_PRISM seed 1337 reached 135/144, R12_DIAMETER5 seed 42 reached 123/144 and R12_DIAMETER5 seed 1337 reached 125/144. The gated P12 arm achieved 59/96 value-correct validation rows and 19/48 paired groups, but no diameter-5 arm was training-competent. The intended topology comparison is therefore not adjudicated; validation results from failed arms remain descriptive only.",
+      "limits": ["Only one of four arms passed training competence", "Two graph families and two seeds", "New synthetic edge-offset task", "No evidence for or against graph-distance causality", "No neural-mechanism or broad graph-reasoning claim"],
+      "unresolved": ["Whether matched topology changes transfer after both conditions reliably learn", "Whether path length affects composition once training competence is controlled", "Whether the edge-offset task is learnable under the frozen recipe", "Whether any topology effect survives more graph families and seeds"],
+      "artifacts": [
+        "docs/CRUCIBLE_TWO_CANDIDATE_TOPOLOGY_CONTROL_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_TWO_CANDIDATE_TOPOLOGY_CONTROL_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_two_candidate_topology_control_20261027.py",
+        "tools/audit_crucible_two_candidate_topology_control_20261027.py",
+        "experiments/crucible_two_candidate_topology_control_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_two_candidate_topology_control_20261027_v1/SUMMARY.json",
+        "experiments/crucible_two_candidate_topology_control_20261027_v1/ERROR_BREAKDOWN.json",
+        "experiments/crucible_two_candidate_topology_control_20261027_v1/SCIENTIFIC_INTERPRETATION.md",
+        "experiments/crucible_two_candidate_topology_control_20261027_v1/POST_RUN_AUDIT.md",
+        "experiments/crucible_two_candidate_topology_control_20261027_v1/POST_RUN_AUDIT.json",
+        "experiments/crucible_two_candidate_topology_control_20261027_v1/HASHES.json",
+        "experiments/crucible_two_candidate_topology_control_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["matched-degree topology", "edge-offset composition", "path-length transfer", "graph topology control"]
     }
   ]
 }
