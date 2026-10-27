@@ -1019,8 +1019,8 @@
       "mechanisms": ["neural-procedure-proposal", "deterministic-ast-search", "functional-novelty", "lifecycle-preservation", "scaffolding-reduction"],
       "interventions": ["B2 learned fixed-family proposer", "B3 learned compositional proposer"],
       "controls": ["B0 Lifecycle v0 reference", "B1 deterministic AST search", "common verifier", "common persistence/reset/executor", "exhaustive 100-row equivalence", "negative controls", "leakage audit", "fixed compute budget"],
-      "result": "CPU-only preflight package and implementation compatibility gate passed. Direct B3 emitted 128 grammar-valid neural_generated AST candidates over 50 training-only updates; same-seed replay, independent counters and the lifecycle interface smoke passed. No scientific validation/test scoring, checkpoint selection or sealed-test access occurred.",
-      "limits": ["The registered B0/B1/B2/B3 scientific comparison has not run", "The compatibility preflight is not evidence of procedural acquisition or generalisation", "Contradiction detection remains externally triggered", "A primitive library remains engineered scaffolding", "Two GPU-hours is a cap, not evidence of adequate compute"],
+      "result": "CPU-only preflight, implementation compatibility and four-arm runner validation passed. Direct B3 emitted 128 grammar-valid neural_generated AST candidates over 50 training-only updates; B0/B1/B2/B3 interfaces, lifecycle smoke, counter propagation, deterministic replay and isolation guards passed on a synthetic fixture. No scientific validation/test scoring, checkpoint selection or sealed-test access occurred.",
+      "limits": ["The registered B0/B1/B2/B3 scientific comparison has not run", "The protocol lacks frozen machine-readable B1 budgets, B2/B3 architecture and optimizer details, lifecycle fixtures, sealed-test source and checkpoint rule", "The compatibility and runner validations are not evidence of procedural acquisition or generalisation", "Contradiction detection remains externally triggered", "A primitive library remains engineered scaffolding", "Two GPU-hours is a cap, not evidence of adequate compute"],
       "unresolved": ["Whether the learned proposer can beat or compress deterministic search", "Whether held-out functional novelty can be acquired from demonstrations", "Whether lifecycle reliability survives proposal errors", "Whether a larger procedure language is needed after the first gate"],
       "artifacts": [
         "docs/CRUCIBLE_TRACK_B_NEURAL_PROPOSER_PROTOCOL_20261028.md",
@@ -1046,6 +1046,8 @@
         "tools/crucible_track_b_neural_proposer.py",
         "tools/run_crucible_track_b_neural_proposer_compatibility_preflight_20261028.py",
         "tools/validate_crucible_track_b_neural_proposer_compatibility_preflight_20261028.py",
+        "tools/run_crucible_track_b_scientific_experiment_20261028.py",
+        "tools/validate_crucible_track_b_scientific_runner_validation_20261028.py",
         "experiments/crucible_track_b_neural_proposer_compatibility_preflight_20261028/COMPATIBILITY_REPORT.json",
         "experiments/crucible_track_b_neural_proposer_compatibility_preflight_20261028/COUNTERS.jsonl",
         "experiments/crucible_track_b_neural_proposer_compatibility_preflight_20261028/HASHES.json",
@@ -1055,7 +1057,20 @@
         "experiments/crucible_track_b_neural_proposer_compatibility_preflight_20261028/README.md",
         "experiments/crucible_track_b_neural_proposer_compatibility_preflight_20261028/REPLAY_COMPARISON.json",
         "experiments/crucible_track_b_neural_proposer_compatibility_preflight_20261028/RUN_CONFIG.json",
-        "experiments/crucible_track_b_neural_proposer_compatibility_preflight_20261028/TRAINING_TRACE.jsonl"
+        "experiments/crucible_track_b_neural_proposer_compatibility_preflight_20261028/TRAINING_TRACE.jsonl",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/ARM_VALIDATION.jsonl",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/COUNTERS.jsonl",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/HASHES.json",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/LIFECYCLE_VALIDATION.jsonl",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/PROTOCOL_AUDIT.json",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/README.md",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/REPLAY_COMPARISON.json",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/RUNNER_CONFIG.json",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/RUNNER_VALIDATION_REPORT.json",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/B0_V0_DETERMINISTIC_RULE_FILTER.json",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/B1_DETERMINISTIC_AST_SEARCH.json",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/B2_LEARNED_FIXED_FAMILY_PROPOSER.json",
+        "experiments/crucible_track_b_scientific_runner_validation_20261028/B3_LEARNED_COMPOSITIONAL_PROPOSER.json"
       ],
       "novelty_terms": ["neural proposer", "AST search baseline", "functional novelty", "procedure acquisition", "lifecycle gate"]
     }

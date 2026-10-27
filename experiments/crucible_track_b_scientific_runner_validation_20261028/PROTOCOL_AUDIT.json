@@ -1,0 +1,18 @@
+{
+  "missing_machine_readable_fields": [
+    "search_budget.b1_candidate_budget",
+    "search_budget.b1_verifier_call_cap",
+    "b2_architecture",
+    "b3_architecture",
+    "optimizer_and_learning_rate",
+    "contradiction_fixture",
+    "interference_fixture",
+    "sealed_test_source",
+    "checkpoint_selection_rule"
+  ],
+  "note": "Defaults used by the synthetic runner are validation fixtures only and cannot authorize scientific execution.",
+  "protocol_status": "preregistered_design_only",
+  "run_approved": false,
+  "scientific_execution_permitted": false,
+  "status": "incomplete_for_exact_scientific_execution"
+}

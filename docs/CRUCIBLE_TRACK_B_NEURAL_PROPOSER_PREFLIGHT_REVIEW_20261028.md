@@ -57,13 +57,31 @@ These are compatibility results only. They do not establish procedural
 acquisition, generalisation, lifecycle success for B3, or an advantage over
 B1.
 
+## Four-arm runner validation
+
+The validation-first runner is recorded at
+`experiments/crucible_track_b_scientific_runner_validation_20261028/`.
+On a synthetic training-only fixture it exercised B0, B1, B2 and B3, including
+proposal provenance, grammar validation, candidate/verifier counters,
+persistence reload, post-reset execution, externally triggered invalidation,
+successor verification and deterministic replay. The independent runner
+validator passed.
+
+The runner's scientific mode refuses to start while the protocol audit is
+incomplete. It reports these fields as not frozen in the machine-readable
+protocol: B1 candidate/verifier budgets, B2/B3 architecture details, optimizer
+settings, contradiction and interference fixtures, sealed-test source, and
+checkpoint-selection rule. The synthetic runner's defaults are not scientific
+defaults.
+
 ## Remaining approval boundary
 
-The three registered implementation blockers are complete. Scientific
-execution remains withheld because the compatibility preflight is not the
-registered B0/B1/B2/B3 comparison and did not use validation or test outcomes.
-Before any GPU allocation, the full-arm runner, matched compute accounting and
-final approval decision must be reviewed explicitly.
+The three registered implementation blockers and the four-arm runner
+validation are complete. Scientific execution remains withheld because the
+protocol is not yet exact enough to reproduce the registered comparison and
+the protocol's `run_approved` flag remains false. The missing fields must be
+frozen without changing the hypotheses, manifest, success criteria or resource
+limits before any GPU allocation.
 
 The compatibility run used training-only verifier fixtures after proposal
 emission. It did not select a scientific checkpoint, read held-out oracle
@@ -71,8 +89,8 @@ outputs or access the sealed test set.
 
 ## Decision
 
-The CPU-only preparation and implementation-compatibility gates are complete
-and passing. The protocol remains `UNTESTED` and is not approved for neural
-training, GPU allocation or scientific execution. The next permitted step is
-final review of the full registered comparison and an explicit approval
-decision.
+The CPU-only preparation, implementation-compatibility and runner-validation
+gates are complete and passing. The protocol remains `UNTESTED` and is not
+approved for neural training, GPU allocation or scientific execution. The next
+permitted step is to freeze the missing machine-readable protocol fields and
+perform a separate approval review.

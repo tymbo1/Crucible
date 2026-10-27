@@ -1,0 +1,107 @@
+{
+  "events": [
+    {
+      "alias": "B0_V0_DETERMINISTIC_RULE_FILTER",
+      "kind": "promotion",
+      "version": 1
+    },
+    {
+      "alias": "B0_V0_DETERMINISTIC_RULE_FILTER",
+      "kind": "invalidation",
+      "reason": "synthetic_external_event"
+    },
+    {
+      "alias": "B0_V0_DETERMINISTIC_RULE_FILTER",
+      "kind": "promotion",
+      "version": 2
+    },
+    {
+      "alias": "B0_V0_DETERMINISTIC_RULE_FILTER",
+      "kind": "promotion",
+      "version": 3
+    },
+    {
+      "alias": "B0_V0_DETERMINISTIC_RULE_FILTER",
+      "kind": "invalidation",
+      "reason": "synthetic_external_event"
+    },
+    {
+      "alias": "B0_V0_DETERMINISTIC_RULE_FILTER",
+      "kind": "promotion",
+      "version": 4
+    }
+  ],
+  "procedures": {
+    "B0_V0_DETERMINISTIC_RULE_FILTER": [
+      {
+        "alias": "B0_V0_DETERMINISTIC_RULE_FILTER",
+        "ast": {
+          "name": "a",
+          "op": "var"
+        },
+        "canonical_ast_hash": "e0e02cef5f1b7fa60b8e9fe59e07484e15329ca26b2acef681f2c1641c162935",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "candidate_source": "deterministic_enum",
+          "source": "runner_validation"
+        },
+        "revision_history": [
+          {
+            "reason": "synthetic_external_event"
+          }
+        ],
+        "status": "invalidated",
+        "version": 1
+      },
+      {
+        "alias": "B0_V0_DETERMINISTIC_RULE_FILTER",
+        "ast": {
+          "name": "b",
+          "op": "var"
+        },
+        "canonical_ast_hash": "8426a5c8025bb2bfae39d2cf77ca1973359f8d5513e1ea08a5f8d0945d9869eb",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "source": "runner_validation_revision"
+        },
+        "status": "validated",
+        "version": 2
+      },
+      {
+        "alias": "B0_V0_DETERMINISTIC_RULE_FILTER",
+        "ast": {
+          "name": "a",
+          "op": "var"
+        },
+        "canonical_ast_hash": "e0e02cef5f1b7fa60b8e9fe59e07484e15329ca26b2acef681f2c1641c162935",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "candidate_source": "deterministic_enum",
+          "source": "runner_validation"
+        },
+        "revision_history": [
+          {
+            "reason": "synthetic_external_event"
+          }
+        ],
+        "status": "invalidated",
+        "version": 3
+      },
+      {
+        "alias": "B0_V0_DETERMINISTIC_RULE_FILTER",
+        "ast": {
+          "name": "b",
+          "op": "var"
+        },
+        "canonical_ast_hash": "8426a5c8025bb2bfae39d2cf77ca1973359f8d5513e1ea08a5f8d0945d9869eb",
+        "language": "digit_expr_mod10_v1",
+        "provenance": {
+          "source": "runner_validation_revision"
+        },
+        "status": "validated",
+        "version": 4
+      }
+    ]
+  },
+  "schema_version": "crucible.procedure.v1"
+}

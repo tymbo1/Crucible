@@ -1,0 +1,25 @@
+{
+  "classification": "runner_validation_only",
+  "deterministic_replay": true,
+  "direct_b3_exercised": true,
+  "four_arm_interfaces_exercised": true,
+  "lifecycle_gates_passed_on_synthetic_fixture": true,
+  "missing_protocol_fields": [
+    "search_budget.b1_candidate_budget",
+    "search_budget.b1_verifier_call_cap",
+    "b2_architecture",
+    "b3_architecture",
+    "optimizer_and_learning_rate",
+    "contradiction_fixture",
+    "interference_fixture",
+    "sealed_test_source",
+    "checkpoint_selection_rule"
+  ],
+  "note": "A passing runner validation report does not authorize or constitute the registered B0-B3 scientific run.",
+  "protocol_exact_for_science": false,
+  "scientific_execution_approved": false,
+  "scientific_execution_started": false,
+  "sealed_test_accessed": false,
+  "status": "pass",
+  "validation_or_test_loaded": false
+}
