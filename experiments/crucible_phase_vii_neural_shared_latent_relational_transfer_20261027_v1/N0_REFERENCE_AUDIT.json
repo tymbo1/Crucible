@@ -1,0 +1,51 @@
+{
+  "cells": [
+    {
+      "cell": "P12_PRISM_SEED42",
+      "checkpoint_exists": true,
+      "checkpoint_hash_ok": true,
+      "condition": "P12_PRISM",
+      "parameter_count": 22106906,
+      "seed": 42,
+      "training_accuracy": 0.9861111111111112,
+      "training_gate_pass": true,
+      "validation_paired_accuracy": 0.6041666666666666
+    },
+    {
+      "cell": "P12_PRISM_SEED1337",
+      "checkpoint_exists": true,
+      "checkpoint_hash_ok": true,
+      "condition": "P12_PRISM",
+      "parameter_count": 22106906,
+      "seed": 1337,
+      "training_accuracy": 0.9930555555555556,
+      "training_gate_pass": true,
+      "validation_paired_accuracy": 0.4791666666666667
+    },
+    {
+      "cell": "R12_DIAMETER5_SEED42",
+      "checkpoint_exists": true,
+      "checkpoint_hash_ok": true,
+      "condition": "R12_DIAMETER5",
+      "parameter_count": 22106906,
+      "seed": 42,
+      "training_accuracy": 0.9791666666666666,
+      "training_gate_pass": true,
+      "validation_paired_accuracy": 0.375
+    },
+    {
+      "cell": "R12_DIAMETER5_SEED1337",
+      "checkpoint_exists": true,
+      "checkpoint_hash_ok": true,
+      "condition": "R12_DIAMETER5",
+      "parameter_count": 22106906,
+      "seed": 1337,
+      "training_accuracy": 0.9930555555555556,
+      "training_gate_pass": true,
+      "validation_paired_accuracy": 0.3333333333333333
+    }
+  ],
+  "failures": [],
+  "pass": true,
+  "summary_status": "completed"
+}

@@ -1,0 +1,295 @@
+{
+  "cycle_basis": {
+    "P12_PRISM": {
+      "cycle_basis": [
+        [
+          0,
+          1,
+          7,
+          6
+        ],
+        [
+          0,
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          5
+        ],
+        [
+          1,
+          2,
+          8,
+          7
+        ],
+        [
+          2,
+          3,
+          9,
+          8
+        ],
+        [
+          3,
+          4,
+          10,
+          9
+        ],
+        [
+          4,
+          5,
+          11,
+          10
+        ],
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "cycle_basis_sha256": "6cbf7a0ac562410b683161399293b7a6253c639e3a8b641c6ec9d9424c1289e2",
+      "cycle_rank": 7,
+      "edges": 18,
+      "nodes": 12
+    },
+    "R12_DIAMETER5": {
+      "cycle_basis": [
+        [
+          0,
+          1,
+          9,
+          6
+        ],
+        [
+          0,
+          2,
+          9,
+          6
+        ],
+        [
+          1,
+          2,
+          9
+        ],
+        [
+          3,
+          4,
+          11,
+          10
+        ],
+        [
+          3,
+          5,
+          11,
+          10
+        ],
+        [
+          4,
+          8,
+          7,
+          10,
+          11
+        ],
+        [
+          5,
+          7,
+          10,
+          11
+        ]
+      ],
+      "cycle_basis_sha256": "caa0091a96a747a7fb79f5cbfd5479fccbf289443b342cc2b6402afbd1e23437",
+      "cycle_rank": 7,
+      "edges": 18,
+      "nodes": 12
+    }
+  },
+  "data_and_leakage_audit": {
+    "conditions": {
+      "P12_PRISM": {
+        "pair_overlap": 0,
+        "row_checks": 240,
+        "split_id_overlap": 0,
+        "train_ids": 144,
+        "train_pairs": 36,
+        "train_rows": 144,
+        "validation_ids": 96,
+        "validation_pairs": 8,
+        "validation_pairs_expected": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "validation_rows": 96
+      },
+      "R12_DIAMETER5": {
+        "pair_overlap": 0,
+        "row_checks": 240,
+        "split_id_overlap": 0,
+        "train_ids": 144,
+        "train_pairs": 36,
+        "train_rows": 144,
+        "validation_ids": 96,
+        "validation_pairs": 8,
+        "validation_pairs_expected": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "validation_rows": 96
+      }
+    },
+    "failures": [],
+    "pass": true
+  },
+  "expected_cost": {
+    "estimate": "approximately 3.5-5 CPU hours and 0.5-1 GB artifacts; measure with the required 50-step throughput preflight",
+    "new_training_arms": 4,
+    "steps_per_arm": 2000,
+    "total_new_updates": 8000
+  },
+  "experiment": "crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1",
+  "leakage_spec": "docs/CRUCIBLE_PHASE_VII_NEURAL_SHARED_LATENT_LEAKAGE_AUDIT_20261027.json",
+  "n0_reference_audit": {
+    "cells": [
+      {
+        "cell": "P12_PRISM_SEED42",
+        "checkpoint_exists": true,
+        "checkpoint_hash_ok": true,
+        "condition": "P12_PRISM",
+        "parameter_count": 22106906,
+        "seed": 42,
+        "training_accuracy": 0.9861111111111112,
+        "training_gate_pass": true,
+        "validation_paired_accuracy": 0.6041666666666666
+      },
+      {
+        "cell": "P12_PRISM_SEED1337",
+        "checkpoint_exists": true,
+        "checkpoint_hash_ok": true,
+        "condition": "P12_PRISM",
+        "parameter_count": 22106906,
+        "seed": 1337,
+        "training_accuracy": 0.9930555555555556,
+        "training_gate_pass": true,
+        "validation_paired_accuracy": 0.4791666666666667
+      },
+      {
+        "cell": "R12_DIAMETER5_SEED42",
+        "checkpoint_exists": true,
+        "checkpoint_hash_ok": true,
+        "condition": "R12_DIAMETER5",
+        "parameter_count": 22106906,
+        "seed": 42,
+        "training_accuracy": 0.9791666666666666,
+        "training_gate_pass": true,
+        "validation_paired_accuracy": 0.375
+      },
+      {
+        "cell": "R12_DIAMETER5_SEED1337",
+        "checkpoint_exists": true,
+        "checkpoint_hash_ok": true,
+        "condition": "R12_DIAMETER5",
+        "parameter_count": 22106906,
+        "seed": 1337,
+        "training_accuracy": 0.9930555555555556,
+        "training_gate_pass": true,
+        "validation_paired_accuracy": 0.3333333333333333
+      }
+    ],
+    "failures": [],
+    "pass": true,
+    "summary_status": "completed"
+  },
+  "neural_model_implemented": false,
+  "novelty_audit": "docs/CRUCIBLE_PHASE_VII_NEURAL_SHARED_LATENT_NOVELTY_AUDIT_20261027.json",
+  "protocol": "docs/CRUCIBLE_PHASE_VII_NEURAL_SHARED_LATENT_PROTOCOL_20261027.md",
+  "schema_version": "crucible_phase_vii_preflight_v1",
+  "sealed_test_accessed": false,
+  "source_hash_audit": {
+    "entries": 31,
+    "mismatches": [],
+    "pass": true
+  },
+  "status": "preflight_passed_implementation_pending",
+  "structured_input_contract": {
+    "allowed": [
+      "observed edge endpoints",
+      "observed modular edge offsets",
+      "query source and target",
+      "candidate values and order"
+    ],
+    "forbidden": [
+      "metadata.potentials",
+      "metadata.target_value",
+      "metadata.target_slot",
+      "validation labels",
+      "held-out query answers",
+      "symbolic path-oracle outputs",
+      "persistent state derived from any forbidden field"
+    ],
+    "source": "serialized input only"
+  },
+  "training_launched": false
+}
