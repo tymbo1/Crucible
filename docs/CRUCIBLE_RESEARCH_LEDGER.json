@@ -1079,6 +1079,23 @@
         "experiments/crucible_track_b_protocol_freeze_audit_20261028/README.md"
       ],
       "novelty_terms": ["neural proposer", "AST search baseline", "functional novelty", "procedure acquisition", "lifecycle gate"]
+    },
+    {
+      "id": "future-500m-cross-domain-reasoning-curriculum-v1",
+      "status": "UNTESTED",
+      "title": "Future 500M cross-domain reasoning curriculum",
+      "hypothesis": "A verified cross-domain curriculum may improve transfer in procedural learning, but benchmark performance alone will not establish lifelong learning or improvement of the induction strategy.",
+      "mechanisms": ["cross-domain-transfer", "verified-procedural-learning", "curriculum-design", "adaptive-learning-future"],
+      "interventions": ["MATH", "BIG-Bench Hard", "SciBench", "ETHICS", "BIG-Bench"],
+      "controls": ["withheld-task-families", "compositional-splits", "reset-execution", "interference", "abstention", "procedure-memory-control", "frozen-learning-control", "licensing-and-provenance-audit"],
+      "result": "Future curriculum plan recorded for a roughly 500M-parameter Crucible model. No datasets were downloaded, ingested or trained on.",
+      "limits": ["Dataset revisions, licensing and permitted uses are unverified", "Architecture, tokenizer, optimizer, hardware, mixture and budget are unspecified", "These datasets were not designed as lifelong procedural-learning benchmarks", "ETHICS benchmark judgments are not objective moral truth", "No training or transfer result exists"],
+      "unresolved": ["How to convert each resource into verified learning episodes", "How to separate direct retrieval from induction improvement", "How to define cross-domain procedural transfer", "Which procedures can be independently verified in normative and philosophical domains"],
+      "artifacts": [
+        "docs/CRUCIBLE_500M_CROSS_DOMAIN_REASONING_CURRICULUM_PLAN_20261028.md",
+        "docs/CRUCIBLE_500M_CROSS_DOMAIN_REASONING_CURRICULUM_PLAN_20261028.json"
+      ],
+      "novelty_terms": ["500M curriculum", "MATH", "BIG-Bench Hard", "SciBench", "ETHICS", "BIG-Bench", "cross-domain transfer", "verified learning"]
     }
   ]
 }

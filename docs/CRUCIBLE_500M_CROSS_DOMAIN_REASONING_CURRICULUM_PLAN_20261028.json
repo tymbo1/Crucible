@@ -1,0 +1,21 @@
+{
+  "schema_version": "crucible_500m_cross_domain_curriculum_plan_v1",
+  "date_recorded": "2026-10-28",
+  "status": "future_plan_not_approved",
+  "target_model_scale": "approximately_500M_parameters",
+  "training_authorized": false,
+  "dataset_download_authorized": false,
+  "separate_from": ["Track B B0-B3 scientific experiment", "Verified Learning Operator Library"],
+  "datasets": [
+    {"name": "MATH", "domains": ["mathematics"], "role": "multi-step mathematics, algebra, geometry and proof-style reasoning"},
+    {"name": "BIG-Bench Hard", "domains": ["logic", "language", "reasoning"], "role": "deduction, causal reasoning, ambiguity, tracking and symbolic tasks"},
+    {"name": "SciBench", "domains": ["science", "mathematics"], "role": "college-level physics, chemistry and mathematics problem solving"},
+    {"name": "ETHICS", "domains": ["ethics", "normative reasoning"], "role": "justice, deontology, virtue, utilitarian and commonsense morality tasks", "caveat": "benchmark judgments are not objective moral truth"},
+    {"name": "BIG-Bench", "domains": ["language", "philosophy", "conceptual reasoning"], "role": "selected interpretation, philosophical and conceptual reasoning tasks"}
+  ],
+  "curriculum_order": ["formal_reasoning_and_mathematics", "science", "language_and_interpretation", "ethics_and_normative_reasoning", "philosophy_and_conceptual_transfer"],
+  "required_controls": ["withheld_task_families", "compositional_splits", "independent_verification", "reset_execution", "retention", "interference", "abstention", "uncertainty", "provenance", "frozen_learning_control", "procedure_memory_control", "direct_retrieval_vs_induction_improvement"],
+  "pre_ingestion_requirements": ["pin_dataset_revision", "verify_access_and_license", "record_training_and_redistribution_terms", "document_subset_selection", "deduplicate_and_provenance_audit", "define_domain_specific_verification"],
+  "unresolved": ["architecture", "tokenizer", "optimizer", "training_budget", "hardware", "mixture_weights", "episode_construction", "cross_domain_transfer_metric"],
+  "interpretation_boundary": "Dataset benchmark performance alone does not establish lifelong procedural learning; the target is verified experience improving later acquisition of unfamiliar procedures."
+}
