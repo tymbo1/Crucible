@@ -1,0 +1,3302 @@
+{
+  "batch_size": 12,
+  "by_condition": {
+    "D12": {
+      "abstention": {
+        "accuracy": 1.0,
+        "correct": 64,
+        "rows": 64
+      },
+      "arms": 2,
+      "candidate_selection": {
+        "accuracy": 0.5625,
+        "correct": 72,
+        "rows": 128
+      },
+      "paired": {
+        "accuracy": 0.125,
+        "correct": 8,
+        "groups": 64
+      },
+      "seed_rows": [
+        {
+          "paired": 0.0,
+          "seed": 42,
+          "validation": {
+            "abstain_accuracy": 1.0,
+            "abstain_correct": 32,
+            "abstain_rows": 32,
+            "paired_correct": 0,
+            "paired_groups": 32,
+            "pointer_accuracy": 0.6666666666666666,
+            "pointer_correct": 64,
+            "pointer_flips": 0,
+            "rows": 96
+          }
+        },
+        {
+          "paired": 0.25,
+          "seed": 1337,
+          "validation": {
+            "abstain_accuracy": 1.0,
+            "abstain_correct": 32,
+            "abstain_rows": 32,
+            "paired_correct": 8,
+            "paired_groups": 32,
+            "pointer_accuracy": 0.75,
+            "pointer_correct": 72,
+            "pointer_flips": 8,
+            "rows": 96
+          }
+        }
+      ],
+      "training": {
+        "accuracy": 1.0,
+        "correct": 288,
+        "rows": 288
+      },
+      "training_gate_passes": 2,
+      "validation": {
+        "accuracy": 0.7083333333333334,
+        "correct": 136,
+        "rows": 192
+      }
+    },
+    "D4": {
+      "abstention": {
+        "accuracy": 1.0,
+        "correct": 64,
+        "rows": 64
+      },
+      "arms": 2,
+      "candidate_selection": {
+        "accuracy": 0.8671875,
+        "correct": 111,
+        "rows": 128
+      },
+      "paired": {
+        "accuracy": 0.734375,
+        "correct": 47,
+        "groups": 64
+      },
+      "seed_rows": [
+        {
+          "paired": 0.5,
+          "seed": 42,
+          "validation": {
+            "abstain_accuracy": 1.0,
+            "abstain_correct": 32,
+            "abstain_rows": 32,
+            "paired_correct": 16,
+            "paired_groups": 32,
+            "pointer_accuracy": 0.8333333333333334,
+            "pointer_correct": 80,
+            "pointer_flips": 16,
+            "rows": 96
+          }
+        },
+        {
+          "paired": 0.96875,
+          "seed": 1337,
+          "validation": {
+            "abstain_accuracy": 1.0,
+            "abstain_correct": 32,
+            "abstain_rows": 32,
+            "paired_correct": 31,
+            "paired_groups": 32,
+            "pointer_accuracy": 0.9895833333333334,
+            "pointer_correct": 95,
+            "pointer_flips": 31,
+            "rows": 96
+          }
+        }
+      ],
+      "training": {
+        "accuracy": 1.0,
+        "correct": 288,
+        "rows": 288
+      },
+      "training_gate_passes": 2,
+      "validation": {
+        "accuracy": 0.9114583333333334,
+        "correct": 175,
+        "rows": 192
+      }
+    },
+    "D8": {
+      "abstention": {
+        "accuracy": 1.0,
+        "correct": 64,
+        "rows": 64
+      },
+      "arms": 2,
+      "candidate_selection": {
+        "accuracy": 0.625,
+        "correct": 80,
+        "rows": 128
+      },
+      "paired": {
+        "accuracy": 0.25,
+        "correct": 16,
+        "groups": 64
+      },
+      "seed_rows": [
+        {
+          "paired": 0.09375,
+          "seed": 42,
+          "validation": {
+            "abstain_accuracy": 1.0,
+            "abstain_correct": 32,
+            "abstain_rows": 32,
+            "paired_correct": 3,
+            "paired_groups": 32,
+            "pointer_accuracy": 0.6979166666666666,
+            "pointer_correct": 67,
+            "pointer_flips": 3,
+            "rows": 96
+          }
+        },
+        {
+          "paired": 0.40625,
+          "seed": 1337,
+          "validation": {
+            "abstain_accuracy": 1.0,
+            "abstain_correct": 32,
+            "abstain_rows": 32,
+            "paired_correct": 13,
+            "paired_groups": 32,
+            "pointer_accuracy": 0.8020833333333334,
+            "pointer_correct": 77,
+            "pointer_flips": 13,
+            "rows": 96
+          }
+        }
+      ],
+      "training": {
+        "accuracy": 0.8958333333333334,
+        "correct": 258,
+        "rows": 288
+      },
+      "training_gate_passes": 1,
+      "validation": {
+        "accuracy": 0.75,
+        "correct": 144,
+        "rows": 192
+      }
+    }
+  },
+  "conditions": [
+    "D4",
+    "D8",
+    "D12"
+  ],
+  "data_directory": "experiments/crucible_two_candidate_coverage_density_20261027_v1/data",
+  "experiment": "crucible_two_candidate_coverage_density_20261027_v1",
+  "fixed_validation": "experiments/crucible_two_candidate_pair_crossover_20261027_v1/data/T_M0_V_M2_validation.jsonl",
+  "fixed_validation_sha256": "57c599c9b5c0a7efcb800f27765d7698f14f1feb25aec844aaf826606e4a2231",
+  "graph_descriptors": {
+    "D12": {
+      "component_count": 1,
+      "components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edge_count": 12,
+      "edges": [
+        "0,1",
+        "2,3",
+        "4,5",
+        "6,7",
+        "0,2",
+        "1,3",
+        "4,6",
+        "5,7",
+        "0,4",
+        "1,5",
+        "2,6",
+        "3,7"
+      ],
+      "held_out_M2_shortest_paths": {
+        "0,3": 2,
+        "1,2": 2,
+        "4,7": 2,
+        "5,6": 2
+      },
+      "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+      "max_finite_pair_distance": 3
+    },
+    "D4": {
+      "component_count": 4,
+      "components": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "degree_sequence": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 4,
+      "edges": [
+        "0,1",
+        "2,3",
+        "4,5",
+        "6,7"
+      ],
+      "held_out_M2_shortest_paths": {
+        "0,3": null,
+        "1,2": null,
+        "4,7": null,
+        "5,6": null
+      },
+      "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+      "max_finite_pair_distance": 1
+    },
+    "D8": {
+      "component_count": 2,
+      "components": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "degree_sequence": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 8,
+      "edges": [
+        "0,1",
+        "2,3",
+        "4,5",
+        "6,7",
+        "0,2",
+        "1,3",
+        "4,6",
+        "5,7"
+      ],
+      "held_out_M2_shortest_paths": {
+        "0,3": 2,
+        "1,2": 2,
+        "4,7": 2,
+        "5,6": 2
+      },
+      "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+      "max_finite_pair_distance": 2
+    }
+  },
+  "new_arm_count": 4,
+  "new_conditions": [
+    "D8",
+    "D12"
+  ],
+  "novelty_audit": "docs/CRUCIBLE_TWO_CANDIDATE_COVERAGE_DENSITY_NOVELTY_AUDIT_20261027.json",
+  "preflight": "experiments/crucible_two_candidate_coverage_density_20261027_v1/PREFLIGHT.json",
+  "prior_checkpoints_modified": false,
+  "prior_crossover": "experiments/crucible_two_candidate_pair_crossover_20261027_v1",
+  "protocol": "docs/CRUCIBLE_TWO_CANDIDATE_COVERAGE_DENSITY_PROTOCOL_20261027.md",
+  "results": [
+    {
+      "batch_size": 12,
+      "cell": "D4_SEED42",
+      "checkpoint": "experiments/crucible_two_candidate_pair_crossover_20261027_v1/T_M0_V_M2_SEED42/checkpoint.pt",
+      "checkpoint_sha256": "86740f6c88c12dd79aaf18d9fd8e0ed790ba26f1b74a97dac80a3bfba12d60d1",
+      "condition": "D4",
+      "graph": {
+        "component_count": 4,
+        "components": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "degree_sequence": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "edge_count": 4,
+        "edges": [
+          "0,1",
+          "2,3",
+          "4,5",
+          "6,7"
+        ],
+        "held_out_M2_shortest_paths": {
+          "0,3": null,
+          "1,2": null,
+          "4,7": null,
+          "5,6": null
+        },
+        "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+        "max_finite_pair_distance": 1
+      },
+      "parameter_count": 22106906,
+      "representation": "dense",
+      "schedule": "cyclic",
+      "seed": 42,
+      "source": "prior_crossover",
+      "source_cell": "T_M0_V_M2_SEED42",
+      "source_rows": 144,
+      "steps": 500,
+      "train_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "1,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "2,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "M0": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 48,
+              "rows": 48
+            },
+            "accuracy": 1.0,
+            "correct": 144,
+            "paired_correct": 48,
+            "paired_groups": 48,
+            "predicted_flips": 48,
+            "rows": 144
+          }
+        },
+        "by_unordered_pair": {
+          "0,1": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "rows": 12
+            },
+            "accuracy": 1.0,
+            "correct": 36,
+            "paired_correct": 12,
+            "paired_groups": 12,
+            "predicted_flips": 12,
+            "rows": 36
+          },
+          "2,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "rows": 12
+            },
+            "accuracy": 1.0,
+            "correct": 36,
+            "paired_correct": 12,
+            "paired_groups": 12,
+            "predicted_flips": 12,
+            "rows": 36
+          },
+          "4,5": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "rows": 12
+            },
+            "accuracy": 1.0,
+            "correct": 36,
+            "paired_correct": 12,
+            "paired_groups": 12,
+            "predicted_flips": 12,
+            "rows": 36
+          },
+          "6,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "rows": 12
+            },
+            "accuracy": 1.0,
+            "correct": 36,
+            "paired_correct": 12,
+            "paired_groups": 12,
+            "predicted_flips": 12,
+            "rows": 36
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "train_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 48,
+        "abstain_rows": 48,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "pointer_accuracy": 1.0,
+        "pointer_correct": 144,
+        "pointer_flips": 48,
+        "rows": 144
+      },
+      "train_selection_metrics": {
+        "accuracy": 1.0,
+        "correct": 96,
+        "rows": 96
+      },
+      "train_slot_metrics": {
+        "0": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "1": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        }
+      },
+      "training_gate_pass": true,
+      "training_gate_threshold": 0.95,
+      "validation_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 20,
+            "paired_correct": 4,
+            "paired_groups": 8,
+            "predicted_flips": 4,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 20,
+            "paired_correct": 4,
+            "paired_groups": 8,
+            "predicted_flips": 4,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 20,
+            "paired_correct": 4,
+            "paired_groups": 8,
+            "predicted_flips": 4,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 20,
+            "paired_correct": 4,
+            "paired_groups": 8,
+            "predicted_flips": 4,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "M2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 32,
+              "rows": 32
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 80,
+            "paired_correct": 16,
+            "paired_groups": 32,
+            "predicted_flips": 16,
+            "rows": 96
+          }
+        },
+        "by_unordered_pair": {
+          "0,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "1,2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "4,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "5,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 80,
+          "paired_correct": 16,
+          "paired_groups": 32,
+          "predicted_flips": 16,
+          "rows": 96
+        }
+      },
+      "validation_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 32,
+        "abstain_rows": 32,
+        "paired_correct": 16,
+        "paired_groups": 32,
+        "pointer_accuracy": 0.8333333333333334,
+        "pointer_correct": 80,
+        "pointer_flips": 16,
+        "rows": 96
+      },
+      "validation_selection_metrics": {
+        "accuracy": 0.75,
+        "correct": 48,
+        "rows": 64
+      },
+      "validation_slot_metrics": {
+        "0": {
+          "accuracy": 0.75,
+          "correct": 24,
+          "rows": 32
+        },
+        "1": {
+          "accuracy": 0.75,
+          "correct": 24,
+          "rows": 32
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        }
+      },
+      "validation_trace_steps": null
+    },
+    {
+      "batch_size": 12,
+      "cell": "D4_SEED1337",
+      "checkpoint": "experiments/crucible_two_candidate_pair_crossover_20261027_v1/T_M0_V_M2_SEED1337/checkpoint.pt",
+      "checkpoint_sha256": "3078ab903be6db50a95af0166ca81c35f0c0d12aa9f53954a451c42dcf84dcd7",
+      "condition": "D4",
+      "graph": {
+        "component_count": 4,
+        "components": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "degree_sequence": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "edge_count": 4,
+        "edges": [
+          "0,1",
+          "2,3",
+          "4,5",
+          "6,7"
+        ],
+        "held_out_M2_shortest_paths": {
+          "0,3": null,
+          "1,2": null,
+          "4,7": null,
+          "5,6": null
+        },
+        "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+        "max_finite_pair_distance": 1
+      },
+      "parameter_count": 22106906,
+      "representation": "dense",
+      "schedule": "cyclic",
+      "seed": 1337,
+      "source": "prior_crossover",
+      "source_cell": "T_M0_V_M2_SEED1337",
+      "source_rows": 144,
+      "steps": 500,
+      "train_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "1,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "2,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "M0": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 48,
+              "rows": 48
+            },
+            "accuracy": 1.0,
+            "correct": 144,
+            "paired_correct": 48,
+            "paired_groups": 48,
+            "predicted_flips": 48,
+            "rows": 144
+          }
+        },
+        "by_unordered_pair": {
+          "0,1": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "rows": 12
+            },
+            "accuracy": 1.0,
+            "correct": 36,
+            "paired_correct": 12,
+            "paired_groups": 12,
+            "predicted_flips": 12,
+            "rows": 36
+          },
+          "2,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "rows": 12
+            },
+            "accuracy": 1.0,
+            "correct": 36,
+            "paired_correct": 12,
+            "paired_groups": 12,
+            "predicted_flips": 12,
+            "rows": 36
+          },
+          "4,5": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "rows": 12
+            },
+            "accuracy": 1.0,
+            "correct": 36,
+            "paired_correct": 12,
+            "paired_groups": 12,
+            "predicted_flips": 12,
+            "rows": 36
+          },
+          "6,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "rows": 12
+            },
+            "accuracy": 1.0,
+            "correct": 36,
+            "paired_correct": 12,
+            "paired_groups": 12,
+            "predicted_flips": 12,
+            "rows": 36
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "train_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 48,
+        "abstain_rows": 48,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "pointer_accuracy": 1.0,
+        "pointer_correct": 144,
+        "pointer_flips": 48,
+        "rows": 144
+      },
+      "train_selection_metrics": {
+        "accuracy": 1.0,
+        "correct": 96,
+        "rows": 96
+      },
+      "train_slot_metrics": {
+        "0": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "1": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        }
+      },
+      "training_gate_pass": true,
+      "training_gate_threshold": 0.95,
+      "validation_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.9583333333333334,
+            "correct": 23,
+            "paired_correct": 7,
+            "paired_groups": 8,
+            "predicted_flips": 7,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "M2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 32,
+              "rows": 32
+            },
+            "accuracy": 0.9895833333333334,
+            "correct": 95,
+            "paired_correct": 31,
+            "paired_groups": 32,
+            "predicted_flips": 31,
+            "rows": 96
+          }
+        },
+        "by_unordered_pair": {
+          "0,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "1,2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.9583333333333334,
+            "correct": 23,
+            "paired_correct": 7,
+            "paired_groups": 8,
+            "predicted_flips": 7,
+            "rows": 24
+          },
+          "4,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "5,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.9895833333333334,
+          "correct": 95,
+          "paired_correct": 31,
+          "paired_groups": 32,
+          "predicted_flips": 31,
+          "rows": 96
+        }
+      },
+      "validation_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 32,
+        "abstain_rows": 32,
+        "paired_correct": 31,
+        "paired_groups": 32,
+        "pointer_accuracy": 0.9895833333333334,
+        "pointer_correct": 95,
+        "pointer_flips": 31,
+        "rows": 96
+      },
+      "validation_selection_metrics": {
+        "accuracy": 0.984375,
+        "correct": 63,
+        "rows": 64
+      },
+      "validation_slot_metrics": {
+        "0": {
+          "accuracy": 0.96875,
+          "correct": 31,
+          "rows": 32
+        },
+        "1": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        }
+      },
+      "validation_trace_steps": null
+    },
+    {
+      "batch_size": 12,
+      "cell": "D8_SEED42",
+      "checkpoint": "experiments/crucible_two_candidate_coverage_density_20261027_v1/D8_SEED42/checkpoint.pt",
+      "checkpoint_sha256": "762064af0e4d413078104e89c0c12d8f14367e41b0b25e20a3c77460e00c7160",
+      "condition": "D8",
+      "graph": {
+        "component_count": 2,
+        "components": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "degree_sequence": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "edge_count": 8,
+        "edges": [
+          "0,1",
+          "2,3",
+          "4,5",
+          "6,7",
+          "0,2",
+          "1,3",
+          "4,6",
+          "5,7"
+        ],
+        "held_out_M2_shortest_paths": {
+          "0,3": 2,
+          "1,2": 2,
+          "4,7": 2,
+          "5,6": 2
+        },
+        "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+        "max_finite_pair_distance": 2
+      },
+      "parameter_count": 22106906,
+      "representation": "dense",
+      "schedule": "cyclic",
+      "seed": 42,
+      "source": "new",
+      "source_rows": 144,
+      "steps": 500,
+      "train_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 20,
+            "paired_correct": 4,
+            "paired_groups": 8,
+            "predicted_flips": 4,
+            "rows": 24
+          },
+          "1,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 20,
+            "paired_correct": 4,
+            "paired_groups": 8,
+            "predicted_flips": 4,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 20,
+            "paired_correct": 4,
+            "paired_groups": 8,
+            "predicted_flips": 4,
+            "rows": 24
+          },
+          "2,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 20,
+            "paired_correct": 4,
+            "paired_groups": 8,
+            "predicted_flips": 4,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 20,
+            "paired_correct": 4,
+            "paired_groups": 8,
+            "predicted_flips": 4,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 20,
+            "paired_correct": 4,
+            "paired_groups": 8,
+            "predicted_flips": 4,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "D8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 48,
+              "rows": 48
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 120,
+            "paired_correct": 24,
+            "paired_groups": 48,
+            "predicted_flips": 24,
+            "rows": 144
+          }
+        },
+        "by_unordered_pair": {
+          "0,1": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 12,
+            "paired_correct": 0,
+            "paired_groups": 6,
+            "predicted_flips": 0,
+            "rows": 18
+          },
+          "0,2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 12,
+            "paired_correct": 0,
+            "paired_groups": 6,
+            "predicted_flips": 0,
+            "rows": 18
+          },
+          "1,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 12,
+            "paired_correct": 0,
+            "paired_groups": 6,
+            "predicted_flips": 0,
+            "rows": 18
+          },
+          "2,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 12,
+            "paired_correct": 0,
+            "paired_groups": 6,
+            "predicted_flips": 0,
+            "rows": 18
+          },
+          "4,5": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 1.0,
+            "correct": 18,
+            "paired_correct": 6,
+            "paired_groups": 6,
+            "predicted_flips": 6,
+            "rows": 18
+          },
+          "4,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 1.0,
+            "correct": 18,
+            "paired_correct": 6,
+            "paired_groups": 6,
+            "predicted_flips": 6,
+            "rows": 18
+          },
+          "5,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 1.0,
+            "correct": 18,
+            "paired_correct": 6,
+            "paired_groups": 6,
+            "predicted_flips": 6,
+            "rows": 18
+          },
+          "6,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 1.0,
+            "correct": 18,
+            "paired_correct": 6,
+            "paired_groups": 6,
+            "predicted_flips": 6,
+            "rows": 18
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 0.8333333333333334,
+          "correct": 120,
+          "paired_correct": 24,
+          "paired_groups": 48,
+          "predicted_flips": 24,
+          "rows": 144
+        }
+      },
+      "train_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 48,
+        "abstain_rows": 48,
+        "paired_correct": 24,
+        "paired_groups": 48,
+        "pointer_accuracy": 0.8333333333333334,
+        "pointer_correct": 120,
+        "pointer_flips": 24,
+        "rows": 144
+      },
+      "train_selection_metrics": {
+        "accuracy": 0.75,
+        "correct": 72,
+        "rows": 96
+      },
+      "train_slot_metrics": {
+        "0": {
+          "accuracy": 0.75,
+          "correct": 36,
+          "rows": 48
+        },
+        "1": {
+          "accuracy": 0.75,
+          "correct": 36,
+          "rows": 48
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        }
+      },
+      "training_gate_pass": false,
+      "training_gate_threshold": 0.95,
+      "validation_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.7083333333333334,
+            "correct": 17,
+            "paired_correct": 1,
+            "paired_groups": 8,
+            "predicted_flips": 1,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.7083333333333334,
+            "correct": 17,
+            "paired_correct": 1,
+            "paired_groups": 8,
+            "predicted_flips": 1,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.7083333333333334,
+            "correct": 17,
+            "paired_correct": 1,
+            "paired_groups": 8,
+            "predicted_flips": 1,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "M2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 32,
+              "rows": 32
+            },
+            "accuracy": 0.6979166666666666,
+            "correct": 67,
+            "paired_correct": 3,
+            "paired_groups": 32,
+            "predicted_flips": 3,
+            "rows": 96
+          }
+        },
+        "by_unordered_pair": {
+          "0,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.7916666666666666,
+            "correct": 19,
+            "paired_correct": 3,
+            "paired_groups": 8,
+            "predicted_flips": 3,
+            "rows": 24
+          },
+          "1,2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "4,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "5,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.6979166666666666,
+          "correct": 67,
+          "paired_correct": 3,
+          "paired_groups": 32,
+          "predicted_flips": 3,
+          "rows": 96
+        }
+      },
+      "validation_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 32,
+        "abstain_rows": 32,
+        "paired_correct": 3,
+        "paired_groups": 32,
+        "pointer_accuracy": 0.6979166666666666,
+        "pointer_correct": 67,
+        "pointer_flips": 3,
+        "rows": 96
+      },
+      "validation_selection_metrics": {
+        "accuracy": 0.546875,
+        "correct": 35,
+        "rows": 64
+      },
+      "validation_slot_metrics": {
+        "0": {
+          "accuracy": 0.59375,
+          "correct": 19,
+          "rows": 32
+        },
+        "1": {
+          "accuracy": 0.5,
+          "correct": 16,
+          "rows": 32
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        }
+      },
+      "validation_trace_steps": [
+        1,
+        50,
+        100,
+        200,
+        300,
+        400,
+        500
+      ]
+    },
+    {
+      "batch_size": 12,
+      "cell": "D8_SEED1337",
+      "checkpoint": "experiments/crucible_two_candidate_coverage_density_20261027_v1/D8_SEED1337/checkpoint.pt",
+      "checkpoint_sha256": "70498de7025caa1d1ce37d3b113ff0abb790231b50aa9db89d3741dc43beb7fb",
+      "condition": "D8",
+      "graph": {
+        "component_count": 2,
+        "components": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "degree_sequence": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "edge_count": 8,
+        "edges": [
+          "0,1",
+          "2,3",
+          "4,5",
+          "6,7",
+          "0,2",
+          "1,3",
+          "4,6",
+          "5,7"
+        ],
+        "held_out_M2_shortest_paths": {
+          "0,3": 2,
+          "1,2": 2,
+          "4,7": 2,
+          "5,6": 2
+        },
+        "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+        "max_finite_pair_distance": 2
+      },
+      "parameter_count": 22106906,
+      "representation": "dense",
+      "schedule": "cyclic",
+      "seed": 1337,
+      "source": "new",
+      "source_rows": 144,
+      "steps": 500,
+      "train_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "1,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "2,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.9166666666666666,
+            "correct": 22,
+            "paired_correct": 6,
+            "paired_groups": 8,
+            "predicted_flips": 6,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.9166666666666666,
+            "correct": 22,
+            "paired_correct": 6,
+            "paired_groups": 8,
+            "predicted_flips": 6,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.9166666666666666,
+            "correct": 22,
+            "paired_correct": 6,
+            "paired_groups": 8,
+            "predicted_flips": 6,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "D8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 48,
+              "rows": 48
+            },
+            "accuracy": 0.9583333333333334,
+            "correct": 138,
+            "paired_correct": 42,
+            "paired_groups": 48,
+            "predicted_flips": 42,
+            "rows": 144
+          }
+        },
+        "by_unordered_pair": {
+          "0,1": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 1.0,
+            "correct": 18,
+            "paired_correct": 6,
+            "paired_groups": 6,
+            "predicted_flips": 6,
+            "rows": 18
+          },
+          "0,2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 1.0,
+            "correct": 18,
+            "paired_correct": 6,
+            "paired_groups": 6,
+            "predicted_flips": 6,
+            "rows": 18
+          },
+          "1,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 1.0,
+            "correct": 18,
+            "paired_correct": 6,
+            "paired_groups": 6,
+            "predicted_flips": 6,
+            "rows": 18
+          },
+          "2,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 1.0,
+            "correct": 18,
+            "paired_correct": 6,
+            "paired_groups": 6,
+            "predicted_flips": 6,
+            "rows": 18
+          },
+          "4,5": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 1.0,
+            "correct": 18,
+            "paired_correct": 6,
+            "paired_groups": 6,
+            "predicted_flips": 6,
+            "rows": 18
+          },
+          "4,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 1.0,
+            "correct": 18,
+            "paired_correct": 6,
+            "paired_groups": 6,
+            "predicted_flips": 6,
+            "rows": 18
+          },
+          "5,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 1.0,
+            "correct": 18,
+            "paired_correct": 6,
+            "paired_groups": 6,
+            "predicted_flips": 6,
+            "rows": 18
+          },
+          "6,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "rows": 6
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 12,
+            "paired_correct": 0,
+            "paired_groups": 6,
+            "predicted_flips": 0,
+            "rows": 18
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 0.9583333333333334,
+          "correct": 138,
+          "paired_correct": 42,
+          "paired_groups": 48,
+          "predicted_flips": 42,
+          "rows": 144
+        }
+      },
+      "train_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 48,
+        "abstain_rows": 48,
+        "paired_correct": 42,
+        "paired_groups": 48,
+        "pointer_accuracy": 0.9583333333333334,
+        "pointer_correct": 138,
+        "pointer_flips": 42,
+        "rows": 144
+      },
+      "train_selection_metrics": {
+        "accuracy": 0.9375,
+        "correct": 90,
+        "rows": 96
+      },
+      "train_slot_metrics": {
+        "0": {
+          "accuracy": 0.9375,
+          "correct": 45,
+          "rows": 48
+        },
+        "1": {
+          "accuracy": 0.9375,
+          "correct": 45,
+          "rows": 48
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        }
+      },
+      "training_gate_pass": true,
+      "training_gate_threshold": 0.95,
+      "validation_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.7916666666666666,
+            "correct": 19,
+            "paired_correct": 3,
+            "paired_groups": 8,
+            "predicted_flips": 3,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.8333333333333334,
+            "correct": 20,
+            "paired_correct": 4,
+            "paired_groups": 8,
+            "predicted_flips": 4,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.7916666666666666,
+            "correct": 19,
+            "paired_correct": 3,
+            "paired_groups": 8,
+            "predicted_flips": 3,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.7916666666666666,
+            "correct": 19,
+            "paired_correct": 3,
+            "paired_groups": 8,
+            "predicted_flips": 3,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "M2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 32,
+              "rows": 32
+            },
+            "accuracy": 0.8020833333333334,
+            "correct": 77,
+            "paired_correct": 13,
+            "paired_groups": 32,
+            "predicted_flips": 13,
+            "rows": 96
+          }
+        },
+        "by_unordered_pair": {
+          "0,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "1,2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "4,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "5,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.875,
+            "correct": 21,
+            "paired_correct": 5,
+            "paired_groups": 8,
+            "predicted_flips": 5,
+            "rows": 24
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.8020833333333334,
+          "correct": 77,
+          "paired_correct": 13,
+          "paired_groups": 32,
+          "predicted_flips": 13,
+          "rows": 96
+        }
+      },
+      "validation_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 32,
+        "abstain_rows": 32,
+        "paired_correct": 13,
+        "paired_groups": 32,
+        "pointer_accuracy": 0.8020833333333334,
+        "pointer_correct": 77,
+        "pointer_flips": 13,
+        "rows": 96
+      },
+      "validation_selection_metrics": {
+        "accuracy": 0.703125,
+        "correct": 45,
+        "rows": 64
+      },
+      "validation_slot_metrics": {
+        "0": {
+          "accuracy": 0.65625,
+          "correct": 21,
+          "rows": 32
+        },
+        "1": {
+          "accuracy": 0.75,
+          "correct": 24,
+          "rows": 32
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        }
+      },
+      "validation_trace_steps": [
+        1,
+        50,
+        100,
+        200,
+        300,
+        400,
+        500
+      ]
+    },
+    {
+      "batch_size": 12,
+      "cell": "D12_SEED42",
+      "checkpoint": "experiments/crucible_two_candidate_coverage_density_20261027_v1/D12_SEED42/checkpoint.pt",
+      "checkpoint_sha256": "fd25c734d761dd942e48c9546b251dc16462fc54e3676caa5a7eb338ddac0527",
+      "condition": "D12",
+      "graph": {
+        "component_count": 1,
+        "components": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "degree_sequence": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "edge_count": 12,
+        "edges": [
+          "0,1",
+          "2,3",
+          "4,5",
+          "6,7",
+          "0,2",
+          "1,3",
+          "4,6",
+          "5,7",
+          "0,4",
+          "1,5",
+          "2,6",
+          "3,7"
+        ],
+        "held_out_M2_shortest_paths": {
+          "0,3": 2,
+          "1,2": 2,
+          "4,7": 2,
+          "5,6": 2
+        },
+        "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+        "max_finite_pair_distance": 3
+      },
+      "parameter_count": 22106906,
+      "representation": "dense",
+      "schedule": "cyclic",
+      "seed": 42,
+      "source": "new",
+      "source_rows": 144,
+      "steps": 500,
+      "train_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "1,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "2,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "D12": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 48,
+              "rows": 48
+            },
+            "accuracy": 1.0,
+            "correct": 144,
+            "paired_correct": 48,
+            "paired_groups": 48,
+            "predicted_flips": 48,
+            "rows": 144
+          }
+        },
+        "by_unordered_pair": {
+          "0,1": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "0,2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "0,4": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "1,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "1,5": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "2,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "2,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "3,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "4,5": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "4,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "5,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "6,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "train_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 48,
+        "abstain_rows": 48,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "pointer_accuracy": 1.0,
+        "pointer_correct": 144,
+        "pointer_flips": 48,
+        "rows": 144
+      },
+      "train_selection_metrics": {
+        "accuracy": 1.0,
+        "correct": 96,
+        "rows": 96
+      },
+      "train_slot_metrics": {
+        "0": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "1": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        }
+      },
+      "training_gate_pass": true,
+      "training_gate_threshold": 0.95,
+      "validation_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "M2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 32,
+              "rows": 32
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 64,
+            "paired_correct": 0,
+            "paired_groups": 32,
+            "predicted_flips": 0,
+            "rows": 96
+          }
+        },
+        "by_unordered_pair": {
+          "0,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "1,2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "4,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "5,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.6666666666666666,
+          "correct": 64,
+          "paired_correct": 0,
+          "paired_groups": 32,
+          "predicted_flips": 0,
+          "rows": 96
+        }
+      },
+      "validation_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 32,
+        "abstain_rows": 32,
+        "paired_correct": 0,
+        "paired_groups": 32,
+        "pointer_accuracy": 0.6666666666666666,
+        "pointer_correct": 64,
+        "pointer_flips": 0,
+        "rows": 96
+      },
+      "validation_selection_metrics": {
+        "accuracy": 0.5,
+        "correct": 32,
+        "rows": 64
+      },
+      "validation_slot_metrics": {
+        "0": {
+          "accuracy": 0.5,
+          "correct": 16,
+          "rows": 32
+        },
+        "1": {
+          "accuracy": 0.5,
+          "correct": 16,
+          "rows": 32
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        }
+      },
+      "validation_trace_steps": [
+        1,
+        50,
+        100,
+        200,
+        300,
+        400,
+        500
+      ]
+    },
+    {
+      "batch_size": 12,
+      "cell": "D12_SEED1337",
+      "checkpoint": "experiments/crucible_two_candidate_coverage_density_20261027_v1/D12_SEED1337/checkpoint.pt",
+      "checkpoint_sha256": "c3b89bbdd7953c71aae083826a0c611d14fd166c01eac5318eeb35d202cb33ed",
+      "condition": "D12",
+      "graph": {
+        "component_count": 1,
+        "components": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "degree_sequence": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "edge_count": 12,
+        "edges": [
+          "0,1",
+          "2,3",
+          "4,5",
+          "6,7",
+          "0,2",
+          "1,3",
+          "4,6",
+          "5,7",
+          "0,4",
+          "1,5",
+          "2,6",
+          "3,7"
+        ],
+        "held_out_M2_shortest_paths": {
+          "0,3": 2,
+          "1,2": 2,
+          "4,7": 2,
+          "5,6": 2
+        },
+        "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+        "max_finite_pair_distance": 3
+      },
+      "parameter_count": 22106906,
+      "representation": "dense",
+      "schedule": "cyclic",
+      "seed": 1337,
+      "source": "new",
+      "source_rows": 144,
+      "steps": 500,
+      "train_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "1,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "2,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "D12": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 48,
+              "rows": 48
+            },
+            "accuracy": 1.0,
+            "correct": 144,
+            "paired_correct": 48,
+            "paired_groups": 48,
+            "predicted_flips": 48,
+            "rows": 144
+          }
+        },
+        "by_unordered_pair": {
+          "0,1": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "0,2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "0,4": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "1,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "1,5": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "2,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "2,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "3,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "4,5": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "4,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "5,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          },
+          "6,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 4,
+              "rows": 4
+            },
+            "accuracy": 1.0,
+            "correct": 12,
+            "paired_correct": 4,
+            "paired_groups": 4,
+            "predicted_flips": 4,
+            "rows": 12
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 48,
+            "rows": 48
+          },
+          "accuracy": 1.0,
+          "correct": 144,
+          "paired_correct": 48,
+          "paired_groups": 48,
+          "predicted_flips": 48,
+          "rows": 144
+        }
+      },
+      "train_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 48,
+        "abstain_rows": 48,
+        "paired_correct": 48,
+        "paired_groups": 48,
+        "pointer_accuracy": 1.0,
+        "pointer_correct": 144,
+        "pointer_flips": 48,
+        "rows": 144
+      },
+      "train_selection_metrics": {
+        "accuracy": 1.0,
+        "correct": 96,
+        "rows": 96
+      },
+      "train_slot_metrics": {
+        "0": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "1": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        }
+      },
+      "training_gate_pass": true,
+      "training_gate_threshold": 0.95,
+      "validation_breakdown": {
+        "by_context": {
+          "1,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.75,
+            "correct": 18,
+            "paired_correct": 2,
+            "paired_groups": 8,
+            "predicted_flips": 2,
+            "rows": 24
+          },
+          "2,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.75,
+            "correct": 18,
+            "paired_correct": 2,
+            "paired_groups": 8,
+            "predicted_flips": 2,
+            "rows": 24
+          },
+          "3,8": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.75,
+            "correct": 18,
+            "paired_correct": 2,
+            "paired_groups": 8,
+            "predicted_flips": 2,
+            "rows": 24
+          },
+          "4,9": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.75,
+            "correct": 18,
+            "paired_correct": 2,
+            "paired_groups": 8,
+            "predicted_flips": 2,
+            "rows": 24
+          }
+        },
+        "by_panel": {
+          "M2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 32,
+              "rows": 32
+            },
+            "accuracy": 0.75,
+            "correct": 72,
+            "paired_correct": 8,
+            "paired_groups": 32,
+            "predicted_flips": 8,
+            "rows": 96
+          }
+        },
+        "by_unordered_pair": {
+          "0,3": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "1,2": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "4,7": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 0.6666666666666666,
+            "correct": 16,
+            "paired_correct": 0,
+            "paired_groups": 8,
+            "predicted_flips": 0,
+            "rows": 24
+          },
+          "5,6": {
+            "abstention": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "rows": 8
+            },
+            "accuracy": 1.0,
+            "correct": 24,
+            "paired_correct": 8,
+            "paired_groups": 8,
+            "predicted_flips": 8,
+            "rows": 24
+          }
+        },
+        "overall": {
+          "abstention": {
+            "accuracy": 1.0,
+            "correct": 32,
+            "rows": 32
+          },
+          "accuracy": 0.75,
+          "correct": 72,
+          "paired_correct": 8,
+          "paired_groups": 32,
+          "predicted_flips": 8,
+          "rows": 96
+        }
+      },
+      "validation_metrics": {
+        "abstain_accuracy": 1.0,
+        "abstain_correct": 32,
+        "abstain_rows": 32,
+        "paired_correct": 8,
+        "paired_groups": 32,
+        "pointer_accuracy": 0.75,
+        "pointer_correct": 72,
+        "pointer_flips": 8,
+        "rows": 96
+      },
+      "validation_selection_metrics": {
+        "accuracy": 0.625,
+        "correct": 40,
+        "rows": 64
+      },
+      "validation_slot_metrics": {
+        "0": {
+          "accuracy": 0.625,
+          "correct": 20,
+          "rows": 32
+        },
+        "1": {
+          "accuracy": 0.625,
+          "correct": 20,
+          "rows": 32
+        },
+        "8": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        }
+      },
+      "validation_trace_steps": [
+        1,
+        50,
+        100,
+        200,
+        300,
+        400,
+        500
+      ]
+    }
+  ],
+  "reused_arm_count": 2,
+  "reused_condition": "D4",
+  "schedule": "cyclic",
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "status": "completed",
+  "steps": 500,
+  "total_arm_count": 6,
+  "training_gate_passes_combined": 5,
+  "training_gate_passes_new": 3,
+  "training_gate_threshold": 0.95,
+  "training_performed": true
+}

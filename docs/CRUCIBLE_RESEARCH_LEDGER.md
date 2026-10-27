@@ -32,8 +32,9 @@ reports that still need ledger entries.
 | `two-candidate-identifier-forensics-v1` | INCONCLUSIVE | Errors concentrated in specific unordered candidate families and often preserved the same wrong identifier under reversal; mechanism remains unresolved. |
 | `two-candidate-pair-coverage-v1` | INCONCLUSIVE | All arms fit training, but held-out pair transfer remained incomplete and strongly seed-by-panel dependent; repeated holdouts are still needed to separate coverage from pair-specific effects. |
 | `two-candidate-pair-crossover-v1` | ESTABLISHED | The complete crossover supports training-partner/coverage-graph dependence: the same held-out panel can be 0/64 or 47/64 paired depending on the training panel, while no pair fails across all six evaluations. |
+| `two-candidate-coverage-density-v1` | INCONCLUSIVE | At a fixed 144-row budget, nested D4/D8/D12 coverage did not produce a monotonic transfer improvement; one D8 arm failed training competence, and density was confounded with per-pair repetition, degree and connectivity. |
 
-The ledger now covers all 34 final experiment reports in the repository. The
+The ledger now covers all 35 final experiment reports in the repository. The
 23 older reports were extracted from their accepted final reports and linked
 artifacts on 2026-10-26; no outcomes were inferred from filenames or
 conversation summaries. See
@@ -78,3 +79,4 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `two-candidate-identifier-forensics-v1` | INCONCLUSIVE | `crucible_two_candidate_identifier_forensics_20261027_v1` |
 | `two-candidate-pair-coverage-v1` | INCONCLUSIVE | `crucible_two_candidate_pair_coverage_20261027_v1` |
 | `two-candidate-pair-crossover-v1` | ESTABLISHED | `crucible_two_candidate_pair_crossover_20261027_v1` |
+| `two-candidate-coverage-density-v1` | INCONCLUSIVE | `crucible_two_candidate_coverage_density_20261027_v1` |

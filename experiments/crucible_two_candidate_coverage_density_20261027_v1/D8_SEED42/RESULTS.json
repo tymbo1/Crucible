@@ -1,0 +1,491 @@
+{
+  "batch_size": 12,
+  "cell": "D8_SEED42",
+  "checkpoint": "experiments/crucible_two_candidate_coverage_density_20261027_v1/D8_SEED42/checkpoint.pt",
+  "checkpoint_sha256": "762064af0e4d413078104e89c0c12d8f14367e41b0b25e20a3c77460e00c7160",
+  "condition": "D8",
+  "graph": {
+    "component_count": 2,
+    "components": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "degree_sequence": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "edge_count": 8,
+    "edges": [
+      "0,1",
+      "2,3",
+      "4,5",
+      "6,7",
+      "0,2",
+      "1,3",
+      "4,6",
+      "5,7"
+    ],
+    "held_out_M2_shortest_paths": {
+      "0,3": 2,
+      "1,2": 2,
+      "4,7": 2,
+      "5,6": 2
+    },
+    "interpretation": "descriptive only; direct identifier matching does not require transitive graph composition",
+    "max_finite_pair_distance": 2
+  },
+  "parameter_count": 22106906,
+  "representation": "dense",
+  "schedule": "cyclic",
+  "seed": 42,
+  "source": "new",
+  "source_rows": 144,
+  "steps": 500,
+  "train_breakdown": {
+    "by_context": {
+      "1,6": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 20,
+        "paired_correct": 4,
+        "paired_groups": 8,
+        "predicted_flips": 4,
+        "rows": 24
+      },
+      "1,8": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 20,
+        "paired_correct": 4,
+        "paired_groups": 8,
+        "predicted_flips": 4,
+        "rows": 24
+      },
+      "2,7": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 20,
+        "paired_correct": 4,
+        "paired_groups": 8,
+        "predicted_flips": 4,
+        "rows": 24
+      },
+      "2,9": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 20,
+        "paired_correct": 4,
+        "paired_groups": 8,
+        "predicted_flips": 4,
+        "rows": 24
+      },
+      "3,8": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 20,
+        "paired_correct": 4,
+        "paired_groups": 8,
+        "predicted_flips": 4,
+        "rows": 24
+      },
+      "4,9": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 20,
+        "paired_correct": 4,
+        "paired_groups": 8,
+        "predicted_flips": 4,
+        "rows": 24
+      }
+    },
+    "by_panel": {
+      "D8": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 48,
+          "rows": 48
+        },
+        "accuracy": 0.8333333333333334,
+        "correct": 120,
+        "paired_correct": 24,
+        "paired_groups": 48,
+        "predicted_flips": 24,
+        "rows": 144
+      }
+    },
+    "by_unordered_pair": {
+      "0,1": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 6,
+          "rows": 6
+        },
+        "accuracy": 0.6666666666666666,
+        "correct": 12,
+        "paired_correct": 0,
+        "paired_groups": 6,
+        "predicted_flips": 0,
+        "rows": 18
+      },
+      "0,2": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 6,
+          "rows": 6
+        },
+        "accuracy": 0.6666666666666666,
+        "correct": 12,
+        "paired_correct": 0,
+        "paired_groups": 6,
+        "predicted_flips": 0,
+        "rows": 18
+      },
+      "1,3": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 6,
+          "rows": 6
+        },
+        "accuracy": 0.6666666666666666,
+        "correct": 12,
+        "paired_correct": 0,
+        "paired_groups": 6,
+        "predicted_flips": 0,
+        "rows": 18
+      },
+      "2,3": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 6,
+          "rows": 6
+        },
+        "accuracy": 0.6666666666666666,
+        "correct": 12,
+        "paired_correct": 0,
+        "paired_groups": 6,
+        "predicted_flips": 0,
+        "rows": 18
+      },
+      "4,5": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 6,
+          "rows": 6
+        },
+        "accuracy": 1.0,
+        "correct": 18,
+        "paired_correct": 6,
+        "paired_groups": 6,
+        "predicted_flips": 6,
+        "rows": 18
+      },
+      "4,6": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 6,
+          "rows": 6
+        },
+        "accuracy": 1.0,
+        "correct": 18,
+        "paired_correct": 6,
+        "paired_groups": 6,
+        "predicted_flips": 6,
+        "rows": 18
+      },
+      "5,7": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 6,
+          "rows": 6
+        },
+        "accuracy": 1.0,
+        "correct": 18,
+        "paired_correct": 6,
+        "paired_groups": 6,
+        "predicted_flips": 6,
+        "rows": 18
+      },
+      "6,7": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 6,
+          "rows": 6
+        },
+        "accuracy": 1.0,
+        "correct": 18,
+        "paired_correct": 6,
+        "paired_groups": 6,
+        "predicted_flips": 6,
+        "rows": 18
+      }
+    },
+    "overall": {
+      "abstention": {
+        "accuracy": 1.0,
+        "correct": 48,
+        "rows": 48
+      },
+      "accuracy": 0.8333333333333334,
+      "correct": 120,
+      "paired_correct": 24,
+      "paired_groups": 48,
+      "predicted_flips": 24,
+      "rows": 144
+    }
+  },
+  "train_metrics": {
+    "abstain_accuracy": 1.0,
+    "abstain_correct": 48,
+    "abstain_rows": 48,
+    "paired_correct": 24,
+    "paired_groups": 48,
+    "pointer_accuracy": 0.8333333333333334,
+    "pointer_correct": 120,
+    "pointer_flips": 24,
+    "rows": 144
+  },
+  "train_selection_metrics": {
+    "accuracy": 0.75,
+    "correct": 72,
+    "rows": 96
+  },
+  "train_slot_metrics": {
+    "0": {
+      "accuracy": 0.75,
+      "correct": 36,
+      "rows": 48
+    },
+    "1": {
+      "accuracy": 0.75,
+      "correct": 36,
+      "rows": 48
+    },
+    "8": {
+      "accuracy": 1.0,
+      "correct": 48,
+      "rows": 48
+    }
+  },
+  "training_gate_pass": false,
+  "training_gate_threshold": 0.95,
+  "validation_breakdown": {
+    "by_context": {
+      "1,6": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.7083333333333334,
+        "correct": 17,
+        "paired_correct": 1,
+        "paired_groups": 8,
+        "predicted_flips": 1,
+        "rows": 24
+      },
+      "2,7": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.7083333333333334,
+        "correct": 17,
+        "paired_correct": 1,
+        "paired_groups": 8,
+        "predicted_flips": 1,
+        "rows": 24
+      },
+      "3,8": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.7083333333333334,
+        "correct": 17,
+        "paired_correct": 1,
+        "paired_groups": 8,
+        "predicted_flips": 1,
+        "rows": 24
+      },
+      "4,9": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.6666666666666666,
+        "correct": 16,
+        "paired_correct": 0,
+        "paired_groups": 8,
+        "predicted_flips": 0,
+        "rows": 24
+      }
+    },
+    "by_panel": {
+      "M2": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 32,
+          "rows": 32
+        },
+        "accuracy": 0.6979166666666666,
+        "correct": 67,
+        "paired_correct": 3,
+        "paired_groups": 32,
+        "predicted_flips": 3,
+        "rows": 96
+      }
+    },
+    "by_unordered_pair": {
+      "0,3": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.7916666666666666,
+        "correct": 19,
+        "paired_correct": 3,
+        "paired_groups": 8,
+        "predicted_flips": 3,
+        "rows": 24
+      },
+      "1,2": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.6666666666666666,
+        "correct": 16,
+        "paired_correct": 0,
+        "paired_groups": 8,
+        "predicted_flips": 0,
+        "rows": 24
+      },
+      "4,7": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.6666666666666666,
+        "correct": 16,
+        "paired_correct": 0,
+        "paired_groups": 8,
+        "predicted_flips": 0,
+        "rows": 24
+      },
+      "5,6": {
+        "abstention": {
+          "accuracy": 1.0,
+          "correct": 8,
+          "rows": 8
+        },
+        "accuracy": 0.6666666666666666,
+        "correct": 16,
+        "paired_correct": 0,
+        "paired_groups": 8,
+        "predicted_flips": 0,
+        "rows": 24
+      }
+    },
+    "overall": {
+      "abstention": {
+        "accuracy": 1.0,
+        "correct": 32,
+        "rows": 32
+      },
+      "accuracy": 0.6979166666666666,
+      "correct": 67,
+      "paired_correct": 3,
+      "paired_groups": 32,
+      "predicted_flips": 3,
+      "rows": 96
+    }
+  },
+  "validation_metrics": {
+    "abstain_accuracy": 1.0,
+    "abstain_correct": 32,
+    "abstain_rows": 32,
+    "paired_correct": 3,
+    "paired_groups": 32,
+    "pointer_accuracy": 0.6979166666666666,
+    "pointer_correct": 67,
+    "pointer_flips": 3,
+    "rows": 96
+  },
+  "validation_selection_metrics": {
+    "accuracy": 0.546875,
+    "correct": 35,
+    "rows": 64
+  },
+  "validation_slot_metrics": {
+    "0": {
+      "accuracy": 0.59375,
+      "correct": 19,
+      "rows": 32
+    },
+    "1": {
+      "accuracy": 0.5,
+      "correct": 16,
+      "rows": 32
+    },
+    "8": {
+      "accuracy": 1.0,
+      "correct": 32,
+      "rows": 32
+    }
+  },
+  "validation_trace_steps": [
+    1,
+    50,
+    100,
+    200,
+    300,
+    400,
+    500
+  ]
+}

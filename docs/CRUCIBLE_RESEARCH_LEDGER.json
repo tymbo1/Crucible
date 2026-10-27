@@ -700,6 +700,30 @@
         "experiments/crucible_two_candidate_pair_crossover_20261027_v1/FINALIZATION.json"
       ],
       "novelty_terms": ["panel crossover", "training partner", "coverage graph", "complete two-candidate crossover"]
+    },
+    {
+      "id": "two-candidate-coverage-density-v1",
+      "status": "INCONCLUSIVE",
+      "title": "Two-candidate nested coverage-density transfer",
+      "hypothesis": "At a fixed 144-row training budget, increasing the number of distinct training candidate pairs improves transfer to one fixed unseen candidate panel.",
+      "mechanisms": ["candidate-matching", "pair-coverage", "coverage-density", "training-competence", "seed-variation", "counterfactual-selection"],
+      "interventions": ["Nested D4/D8/D12 training graphs", "Fixed M2 validation panel", "Fixed validation trajectory monitoring"],
+      "controls": ["D4 immutable M0->M2 crossover checkpoints", "D8/D12 two seeds", "144 balanced training rows", "96 identical validation rows", "cyclic schedule", "500 updates", "95% training gate", "context and serialization audit", "prior hash verification", "no sealed test"],
+      "result": "The four new D8/D12 arms produced three training-gate passes: D8 seed 42 reached 120/144 and failed, D8 seed 1337 reached 138/144 and passed, and both D12 seeds reached 144/144. The immutable D4 references both passed. Fixed-M2 validation was 80/96 and 95/96 for D4, 67/96 and 77/96 for D8, and 64/96 and 72/96 for D12; abstention was 32/32 in every arm. Among gated arms, paired transfer was D4 47/64, D8 seed 1337 13/32 and D12 8/64. The run does not support a simple monotonic coverage benefit under this fixed-row design, but the D4/D8/D12 conditions also change per-pair repetition, degree and connectivity.",
+      "limits": ["One fixed held-out panel", "Two seeds", "D4 is reused rather than retrained", "Coverage is traded against repetition at fixed row count", "Nested conditions confound density with degree and connectivity", "Direct identifier matching does not test transitive path composition", "No variable-cardinality or neural-mechanism claim"],
+      "unresolved": ["Whether richer coverage helps when per-pair exposure is matched", "Whether all 28 unordered pairs or independent contexts change the result", "Whether topology effects survive matched degree and edge count", "Whether the D8 training-gate failure is schedule or optimization sensitivity"],
+      "artifacts": [
+        "docs/CRUCIBLE_TWO_CANDIDATE_COVERAGE_DENSITY_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_TWO_CANDIDATE_COVERAGE_DENSITY_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_two_candidate_coverage_density_20261027.py",
+        "experiments/crucible_two_candidate_coverage_density_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_two_candidate_coverage_density_20261027_v1/SUMMARY.json",
+        "experiments/crucible_two_candidate_coverage_density_20261027_v1/ERROR_BREAKDOWN.json",
+        "experiments/crucible_two_candidate_coverage_density_20261027_v1/SCIENTIFIC_INTERPRETATION.md",
+        "experiments/crucible_two_candidate_coverage_density_20261027_v1/HASHES.json",
+        "experiments/crucible_two_candidate_coverage_density_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["coverage density", "nested training graph", "fixed held-out panel", "fixed-row tradeoff"]
     }
   ]
 }
