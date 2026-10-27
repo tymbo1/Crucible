@@ -1,0 +1,56 @@
+{
+  "checks": {
+    "all_arms_passed": true,
+    "all_csv_metrics_recomputed": true,
+    "all_hashes_verified_before_audit": true,
+    "all_step500_reproduced": true,
+    "arm_checks": [
+      {
+        "cell": "P12_PRISM_SEED42",
+        "first_recorded_gate_step": 500,
+        "step500_reproduced": true,
+        "trace_rows": 2000,
+        "train_csv_recomputed": true,
+        "training_gate_pass": true,
+        "validation_csv_recomputed": true
+      },
+      {
+        "cell": "P12_PRISM_SEED1337",
+        "first_recorded_gate_step": 750,
+        "step500_reproduced": true,
+        "trace_rows": 2000,
+        "train_csv_recomputed": true,
+        "training_gate_pass": true,
+        "validation_csv_recomputed": true
+      },
+      {
+        "cell": "R12_DIAMETER5_SEED42",
+        "first_recorded_gate_step": 750,
+        "step500_reproduced": true,
+        "trace_rows": 2000,
+        "train_csv_recomputed": true,
+        "training_gate_pass": true,
+        "validation_csv_recomputed": true
+      },
+      {
+        "cell": "R12_DIAMETER5_SEED1337",
+        "first_recorded_gate_step": 750,
+        "step500_reproduced": true,
+        "trace_rows": 2000,
+        "train_csv_recomputed": true,
+        "training_gate_pass": true,
+        "validation_csv_recomputed": true
+      }
+    ],
+    "interpretation_boundary": "Duration extension establishes acquisition rescue/competence under the frozen recipe; it does not itself establish a topology or neural multi-hop mechanism.",
+    "source_hashes_verified": true
+  },
+  "experiment": "crucible_two_candidate_topology_duration_extension_20261027_v1",
+  "failures": [],
+  "schema_version": "crucible_topology_duration_extension_post_run_audit_v1",
+  "sealed_test_accessed": false,
+  "source_checkpoints_modified": false,
+  "status": "completed",
+  "training_performed": true,
+  "verification_pass": true
+}

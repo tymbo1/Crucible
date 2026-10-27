@@ -1,0 +1,24 @@
+{
+  "schema_version": "crucible_novelty_audit_v1",
+  "experiment": "crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1",
+  "status": "pre_execution",
+  "decision": "PROTOCOL_ONLY",
+  "repository_ledger_checked": true,
+  "training_launched": false,
+  "sealed_test_accessed": false,
+  "novelty_claim": "No indexed Crucible experiment trains a shared graph-latent relational model on the committed modular edge-offset records and compares it with the frozen dense scorer with a preregistered cycle-consistency ablation.",
+  "related_records": [
+    "two-candidate-topology-control-v1",
+    "two-candidate-topology-duration-extension-v1",
+    "topology-symbolic-hypothesis-audit-v1",
+    "topology-constructive-relational-baseline-v1",
+    "explicit-id-cardinality-transfer"
+  ],
+  "not_novel": [
+    "The committed graph manifest and held-out pairs",
+    "The modular edge-offset task",
+    "The 95% training competence gate",
+    "The symbolic latent-potential oracle"
+  ],
+  "task_boundary": "Design and leakage audit only; no implementation, neural training or transfer claim is included."
+}

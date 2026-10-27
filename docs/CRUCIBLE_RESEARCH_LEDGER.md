@@ -36,8 +36,9 @@ reports that still need ledger entries.
 | `two-candidate-topology-control-v1` | INCONCLUSIVE | Matched-degree graph controls and the path oracle passed, but only 1/4 arms reached training competence; no diameter-5 arm passed, so the topology comparison is not adjudicated. |
 | `topology-symbolic-hypothesis-audit-v1` | ESTABLISHED | The graph, modular-oracle and effective-resistance mathematics replicate; baseline neural errors do not yet validate those mechanisms inside Crucible. |
 | `topology-constructive-relational-baseline-v1` | ESTABLISHED | A supplied shared latent-potential representation composes all tested unseen pairs exactly on both graphs; this is a symbolic constructive control, not neural discovery. |
+| `two-candidate-topology-duration-extension-v1` | ESTABLISHED | All four topology arms passed the training gate after 2,000 updates, with exact 500-step reproduction; this rescues acquisition but does not establish topology causality. |
 
-The ledger now covers all 38 final experiment reports in the repository. The
+The ledger now covers all 39 final experiment reports in the repository. The
 23 older reports were extracted from their accepted final reports and linked
 artifacts on 2026-10-26; no outcomes were inferred from filenames or
 conversation summaries. See
@@ -86,3 +87,4 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `two-candidate-topology-control-v1` | INCONCLUSIVE | `crucible_two_candidate_topology_control_20261027_v1` |
 | `topology-symbolic-hypothesis-audit-v1` | ESTABLISHED | `crucible_topology_symbolic_hypothesis_audit_20261027_v1` |
 | `topology-constructive-relational-baseline-v1` | ESTABLISHED | `crucible_topology_constructive_baseline_20261027_v1` |
+| `two-candidate-topology-duration-extension-v1` | ESTABLISHED | `crucible_two_candidate_topology_duration_extension_20261027_v1` |

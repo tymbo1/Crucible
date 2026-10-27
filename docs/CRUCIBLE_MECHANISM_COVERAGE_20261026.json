@@ -1,7 +1,7 @@
 {
   "schema_version": "crucible_mechanism_coverage_v1",
   "updated": "2026-10-27",
-  "indexed_final_reports": 38,
+  "indexed_final_reports": 39,
   "categories": [
     {
       "mechanism": "operation-recognition",
@@ -26,7 +26,7 @@
     },
     {
       "mechanism": "role-binding-and-parser-transfer",
-      "established": [],
+      "established": ["two-candidate-topology-duration-extension-v1"],
       "failed": ["explicit-role-binding-gate", "explicit-role-supervision-v3", "variable-binding-v1"],
       "inconclusive": [],
       "unresolved": ["A role-binding skill that is both learned and transferable"]
@@ -54,10 +54,10 @@
     },
     {
       "mechanism": "training-dynamics",
-      "established": [],
+      "established": ["two-candidate-topology-duration-extension-v1"],
       "failed": ["paired-positional-exposure", "position-generalization"],
       "inconclusive": ["batch-composition-order", "authority-component-ablation", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1"],
-      "unresolved": ["Whether schedule, representation, or optimization budget is the dominant bottleneck"]
+      "unresolved": ["Whether schedule, representation, or optimization budget is the dominant bottleneck", "Whether a structured shared latent representation improves transfer after acquisition is controlled"]
     },
     {
       "mechanism": "candidate-pair-coverage",
@@ -70,7 +70,7 @@
       "mechanism": "relational-composition-and-topology",
       "established": ["topology-symbolic-hypothesis-audit-v1", "topology-constructive-relational-baseline-v1"],
       "failed": [],
-      "inconclusive": ["two-candidate-topology-control-v1"],
+      "inconclusive": ["two-candidate-topology-control-v1", "two-candidate-topology-duration-extension-v1"],
       "unresolved": ["Whether matched graph topology changes transfer after both graph conditions pass training competence", "Whether path length affects composition under controlled competence", "Whether the edge-offset task is learnable under the frozen recipe", "Whether a neural model can learn the supplied shared latent-potential representation"]
     }
   ],
@@ -102,8 +102,8 @@
     },
     {
       "name": "relational-topology-control-lineage",
-      "records": ["two-candidate-topology-control-v1", "topology-symbolic-hypothesis-audit-v1", "topology-constructive-relational-baseline-v1"],
-      "interpretation": "This is a separate edge-offset composition task, not a direct identifier-matching continuation. The graph feasibility and path-consistency controls passed, but the original neural topology comparison was not adjudicated until the duration-extension audit is complete. The read-only symbolic audits establish graph, linear-noise and constructive latent-potential controls while finding no validated neural mechanism."
+      "records": ["two-candidate-topology-control-v1", "two-candidate-topology-duration-extension-v1", "topology-symbolic-hypothesis-audit-v1", "topology-constructive-relational-baseline-v1"],
+      "interpretation": "This is a separate edge-offset composition task, not a direct identifier-matching continuation. The original 500-step run had a training-competence bottleneck; the audited duration extension rescues acquisition for all four arms but is not itself a topology-transfer adjudication. The read-only symbolic audits establish graph, linear-noise and constructive latent-potential controls while finding no validated neural mechanism."
     }
   ]
 }

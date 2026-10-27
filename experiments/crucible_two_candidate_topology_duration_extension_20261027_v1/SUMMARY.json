@@ -1,0 +1,782 @@
+{
+  "batch_size": 12,
+  "checkpoint_steps": [
+    1,
+    50,
+    100,
+    200,
+    300,
+    400,
+    500,
+    750,
+    1000,
+    1250,
+    1500,
+    1750,
+    2000
+  ],
+  "conditions": [
+    "P12_PRISM",
+    "R12_DIAMETER5"
+  ],
+  "experiment": "crucible_two_candidate_topology_duration_extension_20261027_v1",
+  "novelty_audit": "docs/CRUCIBLE_TWO_CANDIDATE_TOPOLOGY_DURATION_EXTENSION_NOVELTY_AUDIT_20261027.json",
+  "preflight": "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/PREFLIGHT.json",
+  "prior_checkpoints_modified": false,
+  "protocol": "docs/CRUCIBLE_TWO_CANDIDATE_TOPOLOGY_DURATION_EXTENSION_PROTOCOL_20261027.md",
+  "results": [
+    {
+      "batch_size": 12,
+      "cell": "P12_PRISM_SEED42",
+      "checkpoint": "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/P12_PRISM_SEED42/checkpoint.pt",
+      "checkpoint_sha256": "31ead074f795e3bd5be7edb7a18fc50bb11621f6f39ddc108cefc8ad3afb7493",
+      "condition": "P12_PRISM",
+      "first_recorded_gate_step": 500,
+      "original_500_step": {
+        "batch_size": 12,
+        "cell": "P12_PRISM_SEED42",
+        "checkpoint": "experiments/crucible_two_candidate_topology_control_20261027_v1/P12_PRISM_SEED42/checkpoint.pt",
+        "checkpoint_sha256": "42fb3dd99466b24ad85874f1f5a85267658ef9f88d39759080196b29a8d64001",
+        "condition": "P12_PRISM",
+        "parameter_count": 22106906,
+        "seed": 42,
+        "source": "new",
+        "steps": 500,
+        "trace_steps": [
+          1,
+          50,
+          100,
+          200,
+          300,
+          400,
+          500
+        ],
+        "train_metrics": {
+          "by_distance": {
+            "1": {
+              "accuracy": 0.9772727272727273,
+              "correct": 43,
+              "rows": 44
+            },
+            "2": {
+              "accuracy": 0.9772727272727273,
+              "correct": 43,
+              "rows": 44
+            },
+            "3": {
+              "accuracy": 0.95,
+              "correct": 38,
+              "rows": 40
+            },
+            "4": {
+              "accuracy": 0.9375,
+              "correct": 15,
+              "rows": 16
+            }
+          },
+          "candidate_order_flips": 5,
+          "paired_accuracy": 0.9305555555555556,
+          "paired_correct": 67,
+          "paired_groups": 72,
+          "rows": 144,
+          "slot_accuracy": 0.9652777777777778,
+          "slot_correct": 139,
+          "value_accuracy": 0.9652777777777778,
+          "value_correct": 139
+        },
+        "training_gate_pass": true,
+        "training_gate_threshold": 0.95,
+        "validation_metrics": {
+          "by_distance": {
+            "2": {
+              "accuracy": 0.6041666666666666,
+              "correct": 29,
+              "rows": 48
+            },
+            "3": {
+              "accuracy": 0.7222222222222222,
+              "correct": 26,
+              "rows": 36
+            },
+            "4": {
+              "accuracy": 0.3333333333333333,
+              "correct": 4,
+              "rows": 12
+            }
+          },
+          "candidate_order_flips": 26,
+          "paired_accuracy": 0.3958333333333333,
+          "paired_correct": 19,
+          "paired_groups": 48,
+          "rows": 96,
+          "slot_accuracy": 0.6145833333333334,
+          "slot_correct": 59,
+          "value_accuracy": 0.6145833333333334,
+          "value_correct": 59
+        },
+        "variant": "SHARED_SCORER"
+      },
+      "parameter_count": 22106906,
+      "seed": 42,
+      "source": "new_duration_extension",
+      "total_steps": 2000,
+      "trace_steps": [
+        1,
+        50,
+        100,
+        200,
+        300,
+        400,
+        500,
+        750,
+        1000,
+        1250,
+        1500,
+        1750,
+        2000
+      ],
+      "train_metrics": {
+        "by_distance": {
+          "1": {
+            "accuracy": 0.9545454545454546,
+            "correct": 42,
+            "rows": 44
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 44,
+            "rows": 44
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 40,
+            "rows": 40
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "rows": 16
+          }
+        },
+        "candidate_order_flips": 2,
+        "paired_accuracy": 0.9722222222222222,
+        "paired_correct": 70,
+        "paired_groups": 72,
+        "rows": 144,
+        "slot_accuracy": 0.9861111111111112,
+        "slot_correct": 142,
+        "value_accuracy": 0.9861111111111112,
+        "value_correct": 142
+      },
+      "training_gate_pass": true,
+      "training_gate_threshold": 0.95,
+      "validation_metrics": {
+        "by_distance": {
+          "2": {
+            "accuracy": 0.7291666666666666,
+            "correct": 35,
+            "rows": 48
+          },
+          "3": {
+            "accuracy": 0.8333333333333334,
+            "correct": 30,
+            "rows": 36
+          },
+          "4": {
+            "accuracy": 0.5833333333333334,
+            "correct": 7,
+            "rows": 12
+          }
+        },
+        "candidate_order_flips": 18,
+        "paired_accuracy": 0.6041666666666666,
+        "paired_correct": 29,
+        "paired_groups": 48,
+        "rows": 96,
+        "slot_accuracy": 0.75,
+        "slot_correct": 72,
+        "value_accuracy": 0.75,
+        "value_correct": 72
+      },
+      "variant": "SHARED_SCORER"
+    },
+    {
+      "batch_size": 12,
+      "cell": "P12_PRISM_SEED1337",
+      "checkpoint": "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/P12_PRISM_SEED1337/checkpoint.pt",
+      "checkpoint_sha256": "516678e8ff3a88922918462e2677b1b506d461d7a20996d84a003a7c48c1bf40",
+      "condition": "P12_PRISM",
+      "first_recorded_gate_step": 750,
+      "original_500_step": {
+        "batch_size": 12,
+        "cell": "P12_PRISM_SEED1337",
+        "checkpoint": "experiments/crucible_two_candidate_topology_control_20261027_v1/P12_PRISM_SEED1337/checkpoint.pt",
+        "checkpoint_sha256": "5abfe63f00825a5ff60688d0e83c1aae52043cc39ab01a5666dced9e7e52de07",
+        "condition": "P12_PRISM",
+        "parameter_count": 22106906,
+        "seed": 1337,
+        "source": "new",
+        "steps": 500,
+        "trace_steps": [
+          1,
+          50,
+          100,
+          200,
+          300,
+          400,
+          500
+        ],
+        "train_metrics": {
+          "by_distance": {
+            "1": {
+              "accuracy": 0.9545454545454546,
+              "correct": 42,
+              "rows": 44
+            },
+            "2": {
+              "accuracy": 0.9772727272727273,
+              "correct": 43,
+              "rows": 44
+            },
+            "3": {
+              "accuracy": 0.925,
+              "correct": 37,
+              "rows": 40
+            },
+            "4": {
+              "accuracy": 0.8125,
+              "correct": 13,
+              "rows": 16
+            }
+          },
+          "candidate_order_flips": 9,
+          "paired_accuracy": 0.875,
+          "paired_correct": 63,
+          "paired_groups": 72,
+          "rows": 144,
+          "slot_accuracy": 0.9375,
+          "slot_correct": 135,
+          "value_accuracy": 0.9375,
+          "value_correct": 135
+        },
+        "training_gate_pass": false,
+        "training_gate_threshold": 0.95,
+        "validation_metrics": {
+          "by_distance": {
+            "2": {
+              "accuracy": 0.5208333333333334,
+              "correct": 25,
+              "rows": 48
+            },
+            "3": {
+              "accuracy": 0.7222222222222222,
+              "correct": 26,
+              "rows": 36
+            },
+            "4": {
+              "accuracy": 0.4166666666666667,
+              "correct": 5,
+              "rows": 12
+            }
+          },
+          "candidate_order_flips": 27,
+          "paired_accuracy": 0.3541666666666667,
+          "paired_correct": 17,
+          "paired_groups": 48,
+          "rows": 96,
+          "slot_accuracy": 0.5833333333333334,
+          "slot_correct": 56,
+          "value_accuracy": 0.5833333333333334,
+          "value_correct": 56
+        },
+        "variant": "SHARED_SCORER"
+      },
+      "parameter_count": 22106906,
+      "seed": 1337,
+      "source": "new_duration_extension",
+      "total_steps": 2000,
+      "trace_steps": [
+        1,
+        50,
+        100,
+        200,
+        300,
+        400,
+        500,
+        750,
+        1000,
+        1250,
+        1500,
+        1750,
+        2000
+      ],
+      "train_metrics": {
+        "by_distance": {
+          "1": {
+            "accuracy": 1.0,
+            "correct": 44,
+            "rows": 44
+          },
+          "2": {
+            "accuracy": 0.9772727272727273,
+            "correct": 43,
+            "rows": 44
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 40,
+            "rows": 40
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "rows": 16
+          }
+        },
+        "candidate_order_flips": 1,
+        "paired_accuracy": 0.9861111111111112,
+        "paired_correct": 71,
+        "paired_groups": 72,
+        "rows": 144,
+        "slot_accuracy": 0.9930555555555556,
+        "slot_correct": 143,
+        "value_accuracy": 0.9930555555555556,
+        "value_correct": 143
+      },
+      "training_gate_pass": true,
+      "training_gate_threshold": 0.95,
+      "validation_metrics": {
+        "by_distance": {
+          "2": {
+            "accuracy": 0.625,
+            "correct": 30,
+            "rows": 48
+          },
+          "3": {
+            "accuracy": 0.6666666666666666,
+            "correct": 24,
+            "rows": 36
+          },
+          "4": {
+            "accuracy": 0.4166666666666667,
+            "correct": 5,
+            "rows": 12
+          }
+        },
+        "candidate_order_flips": 21,
+        "paired_accuracy": 0.4791666666666667,
+        "paired_correct": 23,
+        "paired_groups": 48,
+        "rows": 96,
+        "slot_accuracy": 0.6145833333333334,
+        "slot_correct": 59,
+        "value_accuracy": 0.6145833333333334,
+        "value_correct": 59
+      },
+      "variant": "SHARED_SCORER"
+    },
+    {
+      "batch_size": 12,
+      "cell": "R12_DIAMETER5_SEED42",
+      "checkpoint": "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/R12_DIAMETER5_SEED42/checkpoint.pt",
+      "checkpoint_sha256": "94b1a53b856c3fd57b3f33e1638aad3d5bc9d3b42ac948bfcf86bd85038a52f3",
+      "condition": "R12_DIAMETER5",
+      "first_recorded_gate_step": 750,
+      "original_500_step": {
+        "batch_size": 12,
+        "cell": "R12_DIAMETER5_SEED42",
+        "checkpoint": "experiments/crucible_two_candidate_topology_control_20261027_v1/R12_DIAMETER5_SEED42/checkpoint.pt",
+        "checkpoint_sha256": "a3bcba889e5c38a2d5aa02b0cce9f18e1633c926e829fdb4029cd1993dce4dcf",
+        "condition": "R12_DIAMETER5",
+        "parameter_count": 22106906,
+        "seed": 42,
+        "source": "new",
+        "steps": 500,
+        "trace_steps": [
+          1,
+          50,
+          100,
+          200,
+          300,
+          400,
+          500
+        ],
+        "train_metrics": {
+          "by_distance": {
+            "1": {
+              "accuracy": 0.9,
+              "correct": 36,
+              "rows": 40
+            },
+            "2": {
+              "accuracy": 0.8055555555555556,
+              "correct": 29,
+              "rows": 36
+            },
+            "3": {
+              "accuracy": 0.875,
+              "correct": 14,
+              "rows": 16
+            },
+            "4": {
+              "accuracy": 0.9583333333333334,
+              "correct": 23,
+              "rows": 24
+            },
+            "5": {
+              "accuracy": 0.75,
+              "correct": 21,
+              "rows": 28
+            }
+          },
+          "candidate_order_flips": 17,
+          "paired_accuracy": 0.75,
+          "paired_correct": 54,
+          "paired_groups": 72,
+          "rows": 144,
+          "slot_accuracy": 0.8541666666666666,
+          "slot_correct": 123,
+          "value_accuracy": 0.8541666666666666,
+          "value_correct": 123
+        },
+        "training_gate_pass": false,
+        "training_gate_threshold": 0.95,
+        "validation_metrics": {
+          "by_distance": {
+            "2": {
+              "accuracy": 0.5833333333333334,
+              "correct": 14,
+              "rows": 24
+            },
+            "3": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "rows": 24
+            },
+            "4": {
+              "accuracy": 0.5,
+              "correct": 18,
+              "rows": 36
+            },
+            "5": {
+              "accuracy": 0.4166666666666667,
+              "correct": 5,
+              "rows": 12
+            }
+          },
+          "candidate_order_flips": 31,
+          "paired_accuracy": 0.2916666666666667,
+          "paired_correct": 14,
+          "paired_groups": 48,
+          "rows": 96,
+          "slot_accuracy": 0.5729166666666666,
+          "slot_correct": 55,
+          "value_accuracy": 0.5729166666666666,
+          "value_correct": 55
+        },
+        "variant": "SHARED_SCORER"
+      },
+      "parameter_count": 22106906,
+      "seed": 42,
+      "source": "new_duration_extension",
+      "total_steps": 2000,
+      "trace_steps": [
+        1,
+        50,
+        100,
+        200,
+        300,
+        400,
+        500,
+        750,
+        1000,
+        1250,
+        1500,
+        1750,
+        2000
+      ],
+      "train_metrics": {
+        "by_distance": {
+          "1": {
+            "accuracy": 1.0,
+            "correct": 40,
+            "rows": 40
+          },
+          "2": {
+            "accuracy": 0.9722222222222222,
+            "correct": 35,
+            "rows": 36
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "rows": 16
+          },
+          "4": {
+            "accuracy": 0.9583333333333334,
+            "correct": 23,
+            "rows": 24
+          },
+          "5": {
+            "accuracy": 0.9642857142857143,
+            "correct": 27,
+            "rows": 28
+          }
+        },
+        "candidate_order_flips": 3,
+        "paired_accuracy": 0.9583333333333334,
+        "paired_correct": 69,
+        "paired_groups": 72,
+        "rows": 144,
+        "slot_accuracy": 0.9791666666666666,
+        "slot_correct": 141,
+        "value_accuracy": 0.9791666666666666,
+        "value_correct": 141
+      },
+      "training_gate_pass": true,
+      "training_gate_threshold": 0.95,
+      "validation_metrics": {
+        "by_distance": {
+          "2": {
+            "accuracy": 0.5,
+            "correct": 12,
+            "rows": 24
+          },
+          "3": {
+            "accuracy": 0.75,
+            "correct": 18,
+            "rows": 24
+          },
+          "4": {
+            "accuracy": 0.6666666666666666,
+            "correct": 24,
+            "rows": 36
+          },
+          "5": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "rows": 12
+          }
+        },
+        "candidate_order_flips": 28,
+        "paired_accuracy": 0.375,
+        "paired_correct": 18,
+        "paired_groups": 48,
+        "rows": 96,
+        "slot_accuracy": 0.6458333333333334,
+        "slot_correct": 62,
+        "value_accuracy": 0.6458333333333334,
+        "value_correct": 62
+      },
+      "variant": "SHARED_SCORER"
+    },
+    {
+      "batch_size": 12,
+      "cell": "R12_DIAMETER5_SEED1337",
+      "checkpoint": "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/R12_DIAMETER5_SEED1337/checkpoint.pt",
+      "checkpoint_sha256": "69d58e1cb82ff60d7d05c679a382962f8e28ad074ce43684d5f1cdde7d15e21a",
+      "condition": "R12_DIAMETER5",
+      "first_recorded_gate_step": 750,
+      "original_500_step": {
+        "batch_size": 12,
+        "cell": "R12_DIAMETER5_SEED1337",
+        "checkpoint": "experiments/crucible_two_candidate_topology_control_20261027_v1/R12_DIAMETER5_SEED1337/checkpoint.pt",
+        "checkpoint_sha256": "324ecbc45dfdf1e257a03f6f1297645edcb5bb6d52062ae34843569a0dcf3497",
+        "condition": "R12_DIAMETER5",
+        "parameter_count": 22106906,
+        "seed": 1337,
+        "source": "new",
+        "steps": 500,
+        "trace_steps": [
+          1,
+          50,
+          100,
+          200,
+          300,
+          400,
+          500
+        ],
+        "train_metrics": {
+          "by_distance": {
+            "1": {
+              "accuracy": 0.825,
+              "correct": 33,
+              "rows": 40
+            },
+            "2": {
+              "accuracy": 0.8611111111111112,
+              "correct": 31,
+              "rows": 36
+            },
+            "3": {
+              "accuracy": 0.9375,
+              "correct": 15,
+              "rows": 16
+            },
+            "4": {
+              "accuracy": 0.8333333333333334,
+              "correct": 20,
+              "rows": 24
+            },
+            "5": {
+              "accuracy": 0.9285714285714286,
+              "correct": 26,
+              "rows": 28
+            }
+          },
+          "candidate_order_flips": 17,
+          "paired_accuracy": 0.75,
+          "paired_correct": 54,
+          "paired_groups": 72,
+          "rows": 144,
+          "slot_accuracy": 0.8680555555555556,
+          "slot_correct": 125,
+          "value_accuracy": 0.8680555555555556,
+          "value_correct": 125
+        },
+        "training_gate_pass": false,
+        "training_gate_threshold": 0.95,
+        "validation_metrics": {
+          "by_distance": {
+            "2": {
+              "accuracy": 0.5833333333333334,
+              "correct": 14,
+              "rows": 24
+            },
+            "3": {
+              "accuracy": 0.9166666666666666,
+              "correct": 22,
+              "rows": 24
+            },
+            "4": {
+              "accuracy": 0.4722222222222222,
+              "correct": 17,
+              "rows": 36
+            },
+            "5": {
+              "accuracy": 0.5,
+              "correct": 6,
+              "rows": 12
+            }
+          },
+          "candidate_order_flips": 24,
+          "paired_accuracy": 0.4583333333333333,
+          "paired_correct": 22,
+          "paired_groups": 48,
+          "rows": 96,
+          "slot_accuracy": 0.6145833333333334,
+          "slot_correct": 59,
+          "value_accuracy": 0.6145833333333334,
+          "value_correct": 59
+        },
+        "variant": "SHARED_SCORER"
+      },
+      "parameter_count": 22106906,
+      "seed": 1337,
+      "source": "new_duration_extension",
+      "total_steps": 2000,
+      "trace_steps": [
+        1,
+        50,
+        100,
+        200,
+        300,
+        400,
+        500,
+        750,
+        1000,
+        1250,
+        1500,
+        1750,
+        2000
+      ],
+      "train_metrics": {
+        "by_distance": {
+          "1": {
+            "accuracy": 1.0,
+            "correct": 40,
+            "rows": 40
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 36,
+            "rows": 36
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "rows": 16
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 24,
+            "rows": 24
+          },
+          "5": {
+            "accuracy": 0.9642857142857143,
+            "correct": 27,
+            "rows": 28
+          }
+        },
+        "candidate_order_flips": 1,
+        "paired_accuracy": 0.9861111111111112,
+        "paired_correct": 71,
+        "paired_groups": 72,
+        "rows": 144,
+        "slot_accuracy": 0.9930555555555556,
+        "slot_correct": 143,
+        "value_accuracy": 0.9930555555555556,
+        "value_correct": 143
+      },
+      "training_gate_pass": true,
+      "training_gate_threshold": 0.95,
+      "validation_metrics": {
+        "by_distance": {
+          "2": {
+            "accuracy": 0.5,
+            "correct": 12,
+            "rows": 24
+          },
+          "3": {
+            "accuracy": 0.75,
+            "correct": 18,
+            "rows": 24
+          },
+          "4": {
+            "accuracy": 0.4166666666666667,
+            "correct": 15,
+            "rows": 36
+          },
+          "5": {
+            "accuracy": 0.5,
+            "correct": 6,
+            "rows": 12
+          }
+        },
+        "candidate_order_flips": 30,
+        "paired_accuracy": 0.3333333333333333,
+        "paired_correct": 16,
+        "paired_groups": 48,
+        "rows": 96,
+        "slot_accuracy": 0.53125,
+        "slot_correct": 51,
+        "value_accuracy": 0.53125,
+        "value_correct": 51
+      },
+      "variant": "SHARED_SCORER"
+    }
+  ],
+  "schedule": "cyclic",
+  "sealed_test_accessed": false,
+  "seeds": [
+    42,
+    1337
+  ],
+  "source_experiment": "experiments/crucible_two_candidate_topology_control_20261027_v1",
+  "status": "completed",
+  "symbolic_assistance": false,
+  "total_steps": 2000,
+  "training_gate_passes": 4,
+  "training_gate_threshold": 0.95,
+  "training_performed": true
+}

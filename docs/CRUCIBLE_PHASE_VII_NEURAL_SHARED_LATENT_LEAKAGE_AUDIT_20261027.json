@@ -1,0 +1,36 @@
+{
+  "schema_version": "crucible_leakage_audit_v1",
+  "experiment": "crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1",
+  "status": "pre_execution",
+  "training_launched": false,
+  "sealed_test_accessed": false,
+  "forbidden_inputs": [
+    "metadata.potentials",
+    "metadata.target_value",
+    "metadata.target_slot",
+    "validation labels",
+    "held-out query answers",
+    "symbolic path-oracle outputs",
+    "persistent state derived from any forbidden field"
+  ],
+  "allowed_inputs": [
+    "serialized record text for N0",
+    "observed graph edge endpoints",
+    "observed modular edge offsets",
+    "query source and target markers",
+    "candidate values and candidate order",
+    "training split labels for the supervised loss",
+    "observed-edge offsets for the N2 cycle objective"
+  ],
+  "required_checks": [
+    "independent parser reconstruction from serialized input",
+    "split hash and overlap check",
+    "forbidden-field dependency scan",
+    "oracle target verification without passing oracle outputs to the model",
+    "cycle-basis hash and orientation audit",
+    "parameter-count and initialization manifest",
+    "candidate-order and query-direction coverage",
+    "identifier-renaming and new-identifier split separation"
+  ],
+  "decision_boundary": "If any forbidden dependency is detected, discard the run as invalid and do not interpret its transfer metrics."
+}

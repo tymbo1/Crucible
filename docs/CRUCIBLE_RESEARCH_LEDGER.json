@@ -796,6 +796,32 @@
         "experiments/crucible_topology_constructive_baseline_20261027_v1/FINALIZATION.json"
       ],
       "novelty_terms": ["shared latent potential", "constructive relational baseline", "unseen-pair composition", "corrupted-edge control"]
+    },
+    {
+      "id": "two-candidate-topology-duration-extension-v1",
+      "status": "ESTABLISHED",
+      "title": "Topology-control training-duration extension",
+      "hypothesis": "The original topology-control training-gate failures may reflect slower acquisition rather than an inability to learn the observed edge-offset task under the frozen recipe.",
+      "mechanisms": ["training-competence", "training-duration", "optimization", "relational-composition", "graph-topology"],
+      "interventions": ["Exact four-arm retraining from fresh initialization for 2,000 updates", "Intermediate competence checkpoints"],
+      "controls": ["Immutable original data and hashes", "Same 22M SHARED_SCORER architecture", "Same optimizer, batch size, cyclic schedule and seeds", "Exact 500-step reproduction", "95% training gate", "No symbolic assistance", "No sealed test"],
+      "result": "All four arms passed the final 95% training gate after 2,000 updates. P12_PRISM reached 142/144 and 143/144 training rows for seeds 42 and 1337; R12_DIAMETER5 reached 141/144 and 143/144. The first recorded gate was step 500 for P12 seed 42 and step 750 for the other three arms. Final validation was P12 72/96 and 59/96, D5 62/96 and 51/96, with paired correctness 29/48, 23/48, 18/48 and 16/48 respectively. Independent audit reproduced all 500-step baseline metrics and recomputed every final CSV metric.",
+      "limits": ["The extension was designed as an acquisition diagnostic, not a preregistered topology-transfer comparison", "Validation remains modest and seed-sensitive", "It does not establish graph-distance, effective-resistance or neural multi-hop causality", "Only two graph families and two seeds"],
+      "unresolved": ["Whether a competence-matched topology comparison changes transfer", "Whether the graph structure affects learned representations after acquisition is controlled", "Whether a shared latent neural representation improves transfer"],
+      "artifacts": [
+        "docs/CRUCIBLE_TWO_CANDIDATE_TOPOLOGY_DURATION_EXTENSION_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_TWO_CANDIDATE_TOPOLOGY_DURATION_EXTENSION_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_two_candidate_topology_duration_extension_20261027.py",
+        "tools/audit_crucible_two_candidate_topology_duration_extension_20261027.py",
+        "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/SUMMARY.json",
+        "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/SCIENTIFIC_INTERPRETATION.md",
+        "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/POST_RUN_AUDIT.md",
+        "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/POST_RUN_AUDIT.json",
+        "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/HASHES.json",
+        "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["training-duration rescue", "competence-matched topology", "first-500 reproduction", "acquisition versus transfer"]
     }
   ]
 }
