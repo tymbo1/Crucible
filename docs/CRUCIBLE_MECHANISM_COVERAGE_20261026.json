@@ -1,7 +1,7 @@
 {
   "schema_version": "crucible_mechanism_coverage_v1",
   "updated": "2026-10-27",
-  "indexed_final_reports": 39,
+  "indexed_final_reports": 40,
   "categories": [
     {
       "mechanism": "operation-recognition",
@@ -55,9 +55,9 @@
     {
       "mechanism": "training-dynamics",
       "established": ["two-candidate-topology-duration-extension-v1"],
-      "failed": ["paired-positional-exposure", "position-generalization"],
+      "failed": ["paired-positional-exposure", "position-generalization", "phase-vii-neural-shared-latent-transfer-v1"],
       "inconclusive": ["batch-composition-order", "authority-component-ablation", "cardinality-competence-diagnostic-v1", "two-candidate-competence-gate-v1"],
-      "unresolved": ["Whether schedule, representation, or optimization budget is the dominant bottleneck", "Whether a structured shared latent representation improves transfer after acquisition is controlled"]
+      "unresolved": ["Whether schedule, representation, or optimization budget is the dominant bottleneck", "Whether a different structured representation or query readout improves transfer after acquisition is controlled"]
     },
     {
       "mechanism": "candidate-pair-coverage",
@@ -69,9 +69,9 @@
     {
       "mechanism": "relational-composition-and-topology",
       "established": ["topology-symbolic-hypothesis-audit-v1", "topology-constructive-relational-baseline-v1"],
-      "failed": [],
+      "failed": ["phase-vii-neural-shared-latent-transfer-v1"],
       "inconclusive": ["two-candidate-topology-control-v1", "two-candidate-topology-duration-extension-v1"],
-      "unresolved": ["Whether matched graph topology changes transfer after both graph conditions pass training competence", "Whether path length affects composition under controlled competence", "Whether the edge-offset task is learnable under the frozen recipe", "Whether a neural model can learn the supplied shared latent-potential representation"]
+      "unresolved": ["Whether matched graph topology changes transfer after both graph conditions pass training competence", "Whether path length affects composition under controlled competence", "Whether a different neural representation can learn the supplied shared latent-potential procedure"]
     }
   ],
   "overlap_groups": [
@@ -102,8 +102,8 @@
     },
     {
       "name": "relational-topology-control-lineage",
-      "records": ["two-candidate-topology-control-v1", "two-candidate-topology-duration-extension-v1", "topology-symbolic-hypothesis-audit-v1", "topology-constructive-relational-baseline-v1"],
-      "interpretation": "This is a separate edge-offset composition task, not a direct identifier-matching continuation. The original 500-step run had a training-competence bottleneck; the audited duration extension rescues acquisition for all four arms but is not itself a topology-transfer adjudication. The read-only symbolic audits establish graph, linear-noise and constructive latent-potential controls while finding no validated neural mechanism."
+      "records": ["two-candidate-topology-control-v1", "two-candidate-topology-duration-extension-v1", "topology-symbolic-hypothesis-audit-v1", "topology-constructive-relational-baseline-v1", "phase-vii-neural-shared-latent-transfer-v1"],
+      "interpretation": "This is a separate edge-offset composition task, not a direct identifier-matching continuation. The original 500-step run had a training-competence bottleneck; the audited duration extension rescues acquisition for all four arms but is not itself a topology-transfer adjudication. The read-only symbolic audits establish graph, linear-noise and constructive latent-potential controls. Phase VII then trained eight structured neural arms to competence, but none improved paired transfer over the frozen dense reference; the supplied neural inductive bias therefore failed under the tested configuration without establishing a universal impossibility."
     }
   ]
 }

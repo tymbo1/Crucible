@@ -37,8 +37,9 @@ reports that still need ledger entries.
 | `topology-symbolic-hypothesis-audit-v1` | ESTABLISHED | The graph, modular-oracle and effective-resistance mathematics replicate; baseline neural errors do not yet validate those mechanisms inside Crucible. |
 | `topology-constructive-relational-baseline-v1` | ESTABLISHED | A supplied shared latent-potential representation composes all tested unseen pairs exactly on both graphs; this is a symbolic constructive control, not neural discovery. |
 | `two-candidate-topology-duration-extension-v1` | ESTABLISHED | All four topology arms passed the training gate after 2,000 updates, with exact 500-step reproduction; this rescues acquisition but does not establish topology causality. |
+| `phase-vii-neural-shared-latent-transfer-v1` | FAILED | All eight shared-latent/cycle arms passed training competence, but none improved matched paired transfer over N0; the tested neural inductive bias did not transfer on this benchmark. |
 
-The ledger now covers all 39 final experiment reports in the repository. The
+The ledger now covers all 40 final experiment reports in the repository. The
 23 older reports were extracted from their accepted final reports and linked
 artifacts on 2026-10-26; no outcomes were inferred from filenames or
 conversation summaries. See
@@ -88,3 +89,4 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `topology-symbolic-hypothesis-audit-v1` | ESTABLISHED | `crucible_topology_symbolic_hypothesis_audit_20261027_v1` |
 | `topology-constructive-relational-baseline-v1` | ESTABLISHED | `crucible_topology_constructive_baseline_20261027_v1` |
 | `two-candidate-topology-duration-extension-v1` | ESTABLISHED | `crucible_two_candidate_topology_duration_extension_20261027_v1` |
+| `phase-vii-neural-shared-latent-transfer-v1` | FAILED | `crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1` |

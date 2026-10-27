@@ -822,6 +822,34 @@
         "experiments/crucible_two_candidate_topology_duration_extension_20261027_v1/FINALIZATION.json"
       ],
       "novelty_terms": ["training-duration rescue", "competence-matched topology", "first-500 reproduction", "acquisition versus transfer"]
+    },
+    {
+      "id": "phase-vii-neural-shared-latent-transfer-v1",
+      "status": "FAILED",
+      "title": "Learned shared-latent neural relational transfer",
+      "hypothesis": "A parameter-matched neural model with shared relational representations will learn the edge-offset task to competence and transfer better than the frozen dense scorer; an auxiliary cycle-consistency objective will improve that transfer.",
+      "mechanisms": ["shared-latent-representation", "neural-relational-composition", "cycle-consistency", "training-competence", "held-out-transfer"],
+      "interventions": ["N1 shared graph latent states", "N2 shared graph latent states plus preregistered cycle loss", "2,000-step cyclic training on both topology families and both seeds"],
+      "controls": ["Frozen N0 dense reference", "22.1M parameter comparison", "immutable topology-control records", "95% training gate", "candidate-order and query-direction rows", "data-leakage audit", "checkpoint hashes", "independent post-run metric audit", "no symbolic assistance", "no sealed test"],
+      "result": "All eight implemented N1/N2 arms passed the 95% training gate. Matched paired validation was N0 86/192 (44.8%), N1 59/192 (30.7%) and N2 53/192 (27.6%). No N1 or N2 arm exceeded N0 in its matched cell, so neither the shared-latent improvement criterion nor the cycle-consistency benefit criterion was met.",
+      "limits": ["N1/N2 receive a structured parsed edge representation while N0 is a raw byte-sequence scorer, so the comparison is not a pure architectural ablation", "Two graph families and two seeds", "Known-identifier held-out pairs only", "Identifier-renaming and entirely unseen-identifier transfer were not executed", "A negative result for these configurations does not prove shared latent representations or cycle consistency impossible in general", "The protocol cost paragraph said four new arms while the implemented matrix contained eight; all eight are reported and audited"],
+      "unresolved": ["Whether a different structured representation or query readout can transfer", "Whether cycle consistency can help with a stable loss and an appropriate readout", "Whether a neural model can learn the supplied symbolic latent-potential procedure under a better-matched interface", "Whether transfer extends to identifier renaming or entirely unseen identifiers"],
+      "artifacts": [
+        "docs/CRUCIBLE_PHASE_VII_NEURAL_SHARED_LATENT_PROTOCOL_20261027.md",
+        "docs/CRUCIBLE_PHASE_VII_NEURAL_SHARED_LATENT_LEAKAGE_AUDIT_20261027.json",
+        "docs/CRUCIBLE_PHASE_VII_NEURAL_SHARED_LATENT_NOVELTY_AUDIT_20261027.json",
+        "tools/run_crucible_phase_vii_neural_shared_latent_20261027.py",
+        "tools/audit_crucible_phase_vii_neural_shared_latent_20261027.py",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/REPORT_FINAL.md",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/SUMMARY.json",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/SCIENTIFIC_INTERPRETATION.md",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/POST_RUN_AUDIT.md",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/POST_RUN_AUDIT.json",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/ERROR_BREAKDOWN.json",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/HASHES.json",
+        "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/FINALIZATION.json"
+      ],
+      "novelty_terms": ["Phase VII", "learned shared latent", "neural relational transfer", "cycle consistency", "competence-gated transfer"]
     }
   ]
 }

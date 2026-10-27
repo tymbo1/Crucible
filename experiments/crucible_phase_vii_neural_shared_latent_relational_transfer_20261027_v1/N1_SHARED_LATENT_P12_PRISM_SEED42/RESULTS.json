@@ -1,0 +1,90 @@
+{
+  "batch_size": 12,
+  "cell": "N1_SHARED_LATENT_P12_PRISM_SEED42",
+  "checkpoint": "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/N1_SHARED_LATENT_P12_PRISM_SEED42/checkpoint.pt",
+  "checkpoint_sha256": "6f294b92dcb3cf026b66c67a964d1b692b76b04d4457963436a8ac36288141b1",
+  "condition": "P12_PRISM",
+  "cycle_weight": 0.1,
+  "parameter_count": 22104955,
+  "seed": 42,
+  "steps": 2000,
+  "trace_steps": [
+    1,
+    50,
+    100,
+    200,
+    300,
+    400,
+    500,
+    750,
+    1000,
+    1250,
+    1500,
+    1750,
+    2000
+  ],
+  "train_metrics": {
+    "by_distance": {
+      "1": {
+        "accuracy": 1.0,
+        "correct": 44,
+        "rows": 44
+      },
+      "2": {
+        "accuracy": 1.0,
+        "correct": 44,
+        "rows": 44
+      },
+      "3": {
+        "accuracy": 0.9,
+        "correct": 36,
+        "rows": 40
+      },
+      "4": {
+        "accuracy": 1.0,
+        "correct": 16,
+        "rows": 16
+      }
+    },
+    "candidate_order_flips": 0,
+    "paired_accuracy": 0.9722222222222222,
+    "paired_correct": 70,
+    "paired_groups": 72,
+    "rows": 144,
+    "slot_accuracy": 0.9722222222222222,
+    "slot_correct": 140,
+    "value_accuracy": 0.9722222222222222,
+    "value_correct": 140
+  },
+  "training_gate_pass": true,
+  "training_gate_threshold": 0.95,
+  "validation_metrics": {
+    "by_distance": {
+      "2": {
+        "accuracy": 0.4166666666666667,
+        "correct": 20,
+        "rows": 48
+      },
+      "3": {
+        "accuracy": 0.2777777777777778,
+        "correct": 10,
+        "rows": 36
+      },
+      "4": {
+        "accuracy": 0.3333333333333333,
+        "correct": 4,
+        "rows": 12
+      }
+    },
+    "candidate_order_flips": 0,
+    "paired_accuracy": 0.3541666666666667,
+    "paired_correct": 17,
+    "paired_groups": 48,
+    "rows": 96,
+    "slot_accuracy": 0.3541666666666667,
+    "slot_correct": 34,
+    "value_accuracy": 0.3541666666666667,
+    "value_correct": 34
+  },
+  "variant": "N1_SHARED_LATENT"
+}

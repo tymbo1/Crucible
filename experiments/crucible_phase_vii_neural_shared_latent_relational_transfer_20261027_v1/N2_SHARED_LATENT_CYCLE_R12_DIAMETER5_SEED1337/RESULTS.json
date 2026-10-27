@@ -1,0 +1,100 @@
+{
+  "batch_size": 12,
+  "cell": "N2_SHARED_LATENT_CYCLE_R12_DIAMETER5_SEED1337",
+  "checkpoint": "experiments/crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1/N2_SHARED_LATENT_CYCLE_R12_DIAMETER5_SEED1337/checkpoint.pt",
+  "checkpoint_sha256": "1e9d7974dd4d91a9513e1fe590fe5b7320e1f3361ec8f134d57e62fc42f0f27c",
+  "condition": "R12_DIAMETER5",
+  "cycle_weight": 0.1,
+  "parameter_count": 22104955,
+  "seed": 1337,
+  "steps": 2000,
+  "trace_steps": [
+    1,
+    50,
+    100,
+    200,
+    300,
+    400,
+    500,
+    750,
+    1000,
+    1250,
+    1500,
+    1750,
+    2000
+  ],
+  "train_metrics": {
+    "by_distance": {
+      "1": {
+        "accuracy": 1.0,
+        "correct": 40,
+        "rows": 40
+      },
+      "2": {
+        "accuracy": 1.0,
+        "correct": 36,
+        "rows": 36
+      },
+      "3": {
+        "accuracy": 1.0,
+        "correct": 16,
+        "rows": 16
+      },
+      "4": {
+        "accuracy": 1.0,
+        "correct": 24,
+        "rows": 24
+      },
+      "5": {
+        "accuracy": 1.0,
+        "correct": 28,
+        "rows": 28
+      }
+    },
+    "candidate_order_flips": 0,
+    "paired_accuracy": 1.0,
+    "paired_correct": 72,
+    "paired_groups": 72,
+    "rows": 144,
+    "slot_accuracy": 1.0,
+    "slot_correct": 144,
+    "value_accuracy": 1.0,
+    "value_correct": 144
+  },
+  "training_gate_pass": true,
+  "training_gate_threshold": 0.95,
+  "validation_metrics": {
+    "by_distance": {
+      "2": {
+        "accuracy": 0.5833333333333334,
+        "correct": 14,
+        "rows": 24
+      },
+      "3": {
+        "accuracy": 0.16666666666666666,
+        "correct": 4,
+        "rows": 24
+      },
+      "4": {
+        "accuracy": 0.1111111111111111,
+        "correct": 4,
+        "rows": 36
+      },
+      "5": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "rows": 12
+      }
+    },
+    "candidate_order_flips": 0,
+    "paired_accuracy": 0.22916666666666666,
+    "paired_correct": 11,
+    "paired_groups": 48,
+    "rows": 96,
+    "slot_accuracy": 0.22916666666666666,
+    "slot_correct": 22,
+    "value_accuracy": 0.22916666666666666,
+    "value_correct": 22
+  },
+  "variant": "N2_SHARED_LATENT_CYCLE"
+}

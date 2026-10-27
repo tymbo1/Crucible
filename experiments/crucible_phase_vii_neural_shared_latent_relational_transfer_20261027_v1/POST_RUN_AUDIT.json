@@ -1,0 +1,144 @@
+{
+  "checks": {
+    "all_arms_passed": true,
+    "all_models_beat_n0_paired": false,
+    "all_recorded_hashes_verified": true,
+    "all_traces_and_metrics_verified": true,
+    "arm_checks": [
+      {
+        "cell": "N1_SHARED_LATENT_P12_PRISM_SEED42",
+        "checkpoint_hash_verified": true,
+        "trace_rows": 2000,
+        "training_gate_pass": true,
+        "training_metrics_recomputed": true,
+        "validation_metrics_recomputed": true
+      },
+      {
+        "cell": "N1_SHARED_LATENT_P12_PRISM_SEED1337",
+        "checkpoint_hash_verified": true,
+        "trace_rows": 2000,
+        "training_gate_pass": true,
+        "training_metrics_recomputed": true,
+        "validation_metrics_recomputed": true
+      },
+      {
+        "cell": "N1_SHARED_LATENT_R12_DIAMETER5_SEED42",
+        "checkpoint_hash_verified": true,
+        "trace_rows": 2000,
+        "training_gate_pass": true,
+        "training_metrics_recomputed": true,
+        "validation_metrics_recomputed": true
+      },
+      {
+        "cell": "N1_SHARED_LATENT_R12_DIAMETER5_SEED1337",
+        "checkpoint_hash_verified": true,
+        "trace_rows": 2000,
+        "training_gate_pass": true,
+        "training_metrics_recomputed": true,
+        "validation_metrics_recomputed": true
+      },
+      {
+        "cell": "N2_SHARED_LATENT_CYCLE_P12_PRISM_SEED42",
+        "checkpoint_hash_verified": true,
+        "trace_rows": 2000,
+        "training_gate_pass": true,
+        "training_metrics_recomputed": true,
+        "validation_metrics_recomputed": true
+      },
+      {
+        "cell": "N2_SHARED_LATENT_CYCLE_P12_PRISM_SEED1337",
+        "checkpoint_hash_verified": true,
+        "trace_rows": 2000,
+        "training_gate_pass": true,
+        "training_metrics_recomputed": true,
+        "validation_metrics_recomputed": true
+      },
+      {
+        "cell": "N2_SHARED_LATENT_CYCLE_R12_DIAMETER5_SEED42",
+        "checkpoint_hash_verified": true,
+        "trace_rows": 2000,
+        "training_gate_pass": true,
+        "training_metrics_recomputed": true,
+        "validation_metrics_recomputed": true
+      },
+      {
+        "cell": "N2_SHARED_LATENT_CYCLE_R12_DIAMETER5_SEED1337",
+        "checkpoint_hash_verified": true,
+        "trace_rows": 2000,
+        "training_gate_pass": true,
+        "training_metrics_recomputed": true,
+        "validation_metrics_recomputed": true
+      }
+    ],
+    "data_leakage_audit_pass": true,
+    "interpretation_boundary": "All eight structured arms passed acquisition competence, but none improved matched N0 paired transfer. This rejects the preregistered improvement hypotheses under this benchmark; it does not prove shared latent representations or cycle consistency impossible in general.",
+    "matched_n0_comparison": [
+      {
+        "cell": "N1_SHARED_LATENT_P12_PRISM_SEED42",
+        "model_better": false,
+        "model_minus_n0": -0.24999999999999994,
+        "model_paired_accuracy": 0.3541666666666667,
+        "n0_paired_accuracy": 0.6041666666666666
+      },
+      {
+        "cell": "N1_SHARED_LATENT_P12_PRISM_SEED1337",
+        "model_better": false,
+        "model_minus_n0": -0.125,
+        "model_paired_accuracy": 0.3541666666666667,
+        "n0_paired_accuracy": 0.4791666666666667
+      },
+      {
+        "cell": "N1_SHARED_LATENT_R12_DIAMETER5_SEED42",
+        "model_better": false,
+        "model_minus_n0": -0.08333333333333331,
+        "model_paired_accuracy": 0.2916666666666667,
+        "n0_paired_accuracy": 0.375
+      },
+      {
+        "cell": "N1_SHARED_LATENT_R12_DIAMETER5_SEED1337",
+        "model_better": false,
+        "model_minus_n0": -0.10416666666666666,
+        "model_paired_accuracy": 0.22916666666666666,
+        "n0_paired_accuracy": 0.3333333333333333
+      },
+      {
+        "cell": "N2_SHARED_LATENT_CYCLE_P12_PRISM_SEED42",
+        "model_better": false,
+        "model_minus_n0": -0.39583333333333326,
+        "model_paired_accuracy": 0.20833333333333334,
+        "n0_paired_accuracy": 0.6041666666666666
+      },
+      {
+        "cell": "N2_SHARED_LATENT_CYCLE_P12_PRISM_SEED1337",
+        "model_better": false,
+        "model_minus_n0": -0.16666666666666669,
+        "model_paired_accuracy": 0.3125,
+        "n0_paired_accuracy": 0.4791666666666667
+      },
+      {
+        "cell": "N2_SHARED_LATENT_CYCLE_R12_DIAMETER5_SEED42",
+        "model_better": false,
+        "model_minus_n0": -0.020833333333333315,
+        "model_paired_accuracy": 0.3541666666666667,
+        "n0_paired_accuracy": 0.375
+      },
+      {
+        "cell": "N2_SHARED_LATENT_CYCLE_R12_DIAMETER5_SEED1337",
+        "model_better": false,
+        "model_minus_n0": -0.10416666666666666,
+        "model_paired_accuracy": 0.22916666666666666,
+        "n0_paired_accuracy": 0.3333333333333333
+      }
+    ],
+    "n0_reference_matches_duration_extension": true,
+    "source_hashes_verified": true
+  },
+  "experiment": "crucible_phase_vii_neural_shared_latent_relational_transfer_20261027_v1",
+  "failures": [],
+  "prior_checkpoints_modified": false,
+  "schema_version": "crucible_phase_vii_neural_shared_latent_post_run_audit_v1",
+  "sealed_test_accessed": false,
+  "status": "completed",
+  "training_performed": true,
+  "verification_pass": true
+}
