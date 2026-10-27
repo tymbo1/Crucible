@@ -877,6 +877,7 @@
         "docs/CRUCIBLE_TRACK_B_BASELINE_AUDIT_20261028.md",
         "docs/CRUCIBLE_TRACK_B_SCAFFOLDING_BUDGET_20261028.json",
         "docs/CRUCIBLE_TRACK_B_NEURAL_INDUCER_NOVELTY_AUDIT_20261028.md",
+        "docs/CRUCIBLE_TRACK_B_PROCEDURE_INTERFACE_DESIGN_20261028.md",
         "tools/crucible_learning_lifecycle_v0.py",
         "tools/run_crucible_learning_lifecycle_v0.py",
         "tools/test_learning_lifecycle_v0.py",
@@ -986,6 +987,26 @@
         "experiments/crucible_digitwise_addition_ladder_20261025/forensics_20251025_v3/prediction_matrix.csv"
       ],
       "novelty_terms": ["checkpoint forensics", "digitwise addition", "metric reproduction", "output format", "pairwise errors"]
+    },
+    {
+      "id": "track-b-procedure-interface-design-v1",
+      "status": "UNTESTED",
+      "title": "Compositional procedure proposal and execution interface",
+      "hypothesis": "A canonical, allowlisted procedure representation can preserve the Lifecycle v0 verifier and persistence contract while leaving a defined path from bounded rule selection to genuinely novel compositional procedures.",
+      "mechanisms": ["procedure-representation", "compositional-execution", "deterministic-verification", "persistent-ast", "scaffolding-accounting"],
+      "interventions": ["rule-name compatibility boundary", "allowlisted digit expression grammar", "canonical AST and procedure hash"],
+      "controls": ["Lifecycle v0 adapter", "independent verifier", "no arbitrary code execution", "no neural training", "no sealed test"],
+      "result": "Design only. The interface separates Milestone 1 neural-assisted selection over the fixed v0 family from Milestone 2 proposal of withheld compositional procedure structures. No neural model has been trained or evaluated against this interface.",
+      "limits": ["Grammar expressivity and limits are untested", "No proposer, AST interpreter or migration code has been implemented", "A primitive library remains engineered scaffolding", "Held-out procedure-family construction is unresolved"],
+      "unresolved": ["Whether a learned proposer can emit valid canonical ASTs", "Whether deterministic verification is sufficient for compositional proposals", "How to measure scaffolding reduction when primitives remain engineered", "Whether procedural novelty transfers beyond the digit expression domain"],
+      "artifacts": [
+        "docs/CRUCIBLE_TRACK_B_PROCEDURE_INTERFACE_DESIGN_20261028.md",
+        "docs/CRUCIBLE_TRACK_B_NEURAL_INDUCER_NOVELTY_AUDIT_20261028.md",
+        "docs/CRUCIBLE_TRACK_B_SCAFFOLDING_BUDGET_20261028.json",
+        "docs/CRUCIBLE_TRACK_B_BASELINE_AUDIT_20261028.md",
+        "docs/CRUCIBLE_LEARNING_LIFECYCLE_V0_DESIGN_20251025.md"
+      ],
+      "novelty_terms": ["procedure interface", "canonical AST", "compositional procedure", "Milestone 1", "Milestone 2", "procedural novelty"]
     }
   ]
 }

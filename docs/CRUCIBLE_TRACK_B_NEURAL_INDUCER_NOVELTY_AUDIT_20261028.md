@@ -13,6 +13,11 @@ The proposer may emit candidate procedures, confidence and uncertainty. It may
 not certify its own proposal, write an active procedure directly, or bypass
 the independent verifier.
 
+The required proposal/executor contract is defined in
+`CRUCIBLE_TRACK_B_PROCEDURE_INTERFACE_DESIGN_20261028.md`. A rule-name-only
+output is sufficient for Milestone 1 integration but is explicitly
+insufficient for the Milestone 2 procedural-novelty claim.
+
 ## Closest previous work
 
 1. **Lifecycle v0** — closest baseline. It uses a fixed eight-rule family,
@@ -56,4 +61,4 @@ bounded known hypothesis family, not general unfamiliar-procedure acquisition.
 
 No training run, architecture change or GPU allocation is approved by this
 memo. The next permitted action is a protocol and leakage review against the
-registered baseline and scaffolding budget.
+registered baseline, scaffolding budget and procedure-interface design.
