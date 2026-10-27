@@ -1,0 +1,88 @@
+{
+  "schema_version": "crucible_cumulative_adaptation_gate_v1",
+  "date": "2026-10-28",
+  "status": "untested_proposal",
+  "run_approved": false,
+  "objective": "Test whether verified experience improves future acquisition of functionally novel procedures rather than merely enabling exact procedure retrieval.",
+  "hypothesis": {
+    "id": "HLA",
+    "statement": "A verified adaptive operator library will improve acquisition of functionally novel target procedures over a frozen induction policy and matched exact-memory/sham-memory controls.",
+    "null": "Any apparent gain is caused by direct retrieval, source-target overlap, extra verifier calls, a larger candidate budget or untracked search computation."
+  },
+  "closest_prior_experiments": [
+    "learning-lifecycle-v0-engineered-baseline",
+    "track-b-c1-engineered-controller-series-v1",
+    "track-b-neural-proposer-protocol-v1",
+    "c1m-exact-reuse-adaptation"
+  ],
+  "task_manifest_requirements": {
+    "source_episodes": 32,
+    "target_episodes": 48,
+    "target_families": 2,
+    "exact_replay_audit_episodes": 16,
+    "seeds": [42, 1337],
+    "grammar": "digit_expr_mod10_v1",
+    "source_target_ast_hash_disjoint": true,
+    "source_target_truth_table_hash_disjoint": true,
+    "reuse_b3_manifest": false
+  },
+  "arms": [
+    {
+      "id": "A0_FROZEN_INDUCTION",
+      "role": "future-acquisition baseline",
+      "cross_episode_operator_updates": false
+    },
+    {
+      "id": "A1_EXACT_PROCEDURE_MEMORY",
+      "role": "direct-retrieval control",
+      "exact_source_retrieval": true,
+      "target_overlap_required": false
+    },
+    {
+      "id": "A2_SHAM_OPERATOR_LIBRARY",
+      "role": "persistent-state and bandwidth control",
+      "matched_library_size": true,
+      "target_descriptive_overlap": false
+    },
+    {
+      "id": "A3_VERIFIED_ADAPTIVE_LIBRARY",
+      "role": "cumulative policy adaptation",
+      "operator_promotion_requires_independent_validation": true,
+      "target_labels_before_proposal": false
+    }
+  ],
+  "primary_metric": "target_lifecycle_success_rate",
+  "primary_contrast": "A3 - max(A0, A2)",
+  "success_criteria": {
+    "minimum_pooled_gain_over_A0": 0.10,
+    "minimum_pooled_gain_over_A2": 0.10,
+    "replicate_by_seed": true,
+    "replicate_by_target_family": true,
+    "paired_95_percent_interval_excludes_zero": true,
+    "target_retrieval_hits": 0,
+    "lifecycle_gates_preserved": true
+  },
+  "invalidating_conditions": [
+    "source-target AST or truth-table hash collision",
+    "target labels used before proposal fixation",
+    "unmatched verifier or candidate budget",
+    "target retrieval hit counted as adaptation",
+    "post-reset execution or verifier integrity failure",
+    "sealed-data access before final proposal fixation"
+  ],
+  "retained_scaffolding": [
+    "independent verifier",
+    "allowlisted executor",
+    "persistent store",
+    "context reset",
+    "external contradiction trigger",
+    "canonical AST and exhaustive equivalence checker"
+  ],
+  "new_component": "verified operator library plus policy adapter",
+  "execution": {
+    "scientific_execution_approved": false,
+    "gpu_allocation_approved": false,
+    "next_allowed_action": "CPU-only feasibility and leakage preflight"
+  },
+  "interpretation_boundary": "A positive result would establish model-agnostic cumulative policy adaptation under the tested DSL. It would not establish neural learning-to-learn, general intelligence or transfer beyond the tested procedure language."
+}

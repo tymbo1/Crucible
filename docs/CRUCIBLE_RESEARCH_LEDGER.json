@@ -1013,7 +1013,7 @@
     },
     {
       "id": "track-b-neural-proposer-protocol-v1",
-      "status": "UNTESTED",
+      "status": "FAILED",
       "title": "Neural procedure proposer versus deterministic AST search protocol",
       "hypothesis": "A learned proposer can preserve the complete Lifecycle v0 contract and contribute beyond deterministic AST search on held-out structurally and functionally novel procedures.",
       "mechanisms": ["neural-procedure-proposal", "deterministic-ast-search", "functional-novelty", "lifecycle-preservation", "scaffolding-reduction"],
@@ -1094,6 +1094,24 @@
         "experiments/crucible_track_b_scientific_execution_20261028/README.md"
       ],
       "novelty_terms": ["neural proposer", "AST search baseline", "functional novelty", "procedure acquisition", "lifecycle gate"]
+    },
+    {
+      "id": "cumulative-verified-learning-operator-gate-v1",
+      "status": "UNTESTED",
+      "title": "Verified experience improves future procedure acquisition",
+      "hypothesis": "A learner that abstracts independently verified procedures into reusable, non-answer learning operators will acquire more functionally novel procedures than a frozen learner or an exact-memory/sham-memory control at matched evidence and compute budgets.",
+      "mechanisms": ["cumulative-learning", "operator-abstraction", "proposal-policy-adaptation", "memory-vs-learning-separation", "functional-novelty"],
+      "interventions": ["verified operator library", "operator-guided proposal policy", "source-to-target transfer"],
+      "controls": ["frozen induction policy", "exact procedure-memory control", "sham operator-memory control", "target truth-table disjointness", "matched verifier/candidate budgets", "reset and lifecycle gates", "no target-label access"],
+      "result": "Protocol proposal only. No implementation, training or scientific execution has been approved.",
+      "limits": ["The proposal tests a model-agnostic adaptive policy before any neural implementation", "The first gate does not establish neural learning-to-learn", "The digit-expression language remains engineered scaffolding", "Contradiction detection remains externally triggered", "A positive result could establish cumulative policy adaptation without establishing general intelligence"],
+      "unresolved": ["Whether verified source procedures contain reusable operator structure that transfers to functionally novel targets", "Whether an adaptive policy can improve acquisition without direct target retrieval", "Whether any later neural implementation can learn the same adaptation rather than receive it as an engineered rule", "How the mechanism transfers beyond the initial digit-expression domain"],
+      "artifacts": [
+        "docs/CRUCIBLE_CUMULATIVE_LEARNING_RESEARCH_PROPOSAL_20261028.md",
+        "docs/CRUCIBLE_CUMULATIVE_ADAPTATION_GATE_PROTOCOL_20261028.md",
+        "docs/CRUCIBLE_CUMULATIVE_ADAPTATION_GATE_PROTOCOL_20261028.json"
+      ],
+      "novelty_terms": ["verified experience", "learning operator", "future acquisition", "exact-memory control", "sham-memory control", "cumulative adaptation"]
     },
     {
       "id": "future-500m-cross-domain-reasoning-curriculum-v1",
