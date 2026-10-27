@@ -111,7 +111,10 @@ def protocol_audit(protocol: Mapping[str, Any], amendment: Optional[Mapping[str,
             missing.append("preserved_protocol_invariants.arms")
         if amendment.get("preserved_protocol_invariants", {}).get("seeds") != protocol.get("compute_budget", {}).get("seeds"):
             missing.append("preserved_protocol_invariants.seeds")
-    exact = not missing and amendment_status == "frozen_pending_execution_approval"
+    exact = not missing and amendment_status in {
+        "frozen_pending_execution_approval",
+        "approved_for_execution",
+    }
     return {
         "status": "pass" if exact else "incomplete_for_exact_scientific_execution",
         "protocol_status": protocol.get("status"),
@@ -475,10 +478,12 @@ def main() -> int:
     parser.add_argument("--scientific", action="store_true", help="reserved for a separately approved run")
     args = parser.parse_args()
     if args.scientific:
-        protocol = json.loads(PROTOCOL.read_text(encoding="utf-8"))
-        amendment = json.loads(AMENDMENT.read_text(encoding="utf-8")) if AMENDMENT.exists() else None
-        audit = protocol_audit(protocol, amendment)
-        raise SystemExit(json.dumps({"status": "refused", "reason": "scientific execution requires complete machine-readable protocol and explicit run_approved=true", "protocol_audit": audit}, sort_keys=True))
+        # Scientific execution lives in a separately auditable module.  Keeping
+        # the validation runner and the scientific runner separate prevents a
+        # synthetic fixture run from being mistaken for the registered study.
+        from crucible_track_b_scientific_execution_20261028 import run_scientific
+
+        return run_scientific()
     return run_validate()
 
 

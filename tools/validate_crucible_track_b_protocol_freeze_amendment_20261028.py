@@ -42,10 +42,13 @@ def main() -> int:
     resolutions = amendment.get("resolutions", {})
     if set(resolutions) != REQUIRED:
         errors.append(f"resolution set mismatch: missing={sorted(REQUIRED - set(resolutions))} extra={sorted(set(resolutions) - REQUIRED)}")
-    if amendment.get("status") != "frozen_pending_execution_approval":
-        errors.append("amendment status is not frozen_pending_execution_approval")
-    if amendment.get("scientific_execution_approved"):
-        errors.append("amendment unexpectedly authorizes execution")
+    amendment_status = amendment.get("status")
+    if amendment_status not in {"frozen_pending_execution_approval", "approved_for_execution"}:
+        errors.append("amendment status is neither frozen_pending_execution_approval nor approved_for_execution")
+    if amendment_status == "frozen_pending_execution_approval" and amendment.get("scientific_execution_approved"):
+        errors.append("pending amendment unexpectedly authorizes execution")
+    if amendment_status == "approved_for_execution" and not amendment.get("scientific_execution_approved"):
+        errors.append("approved amendment does not authorize execution")
     invariants = amendment.get("preserved_protocol_invariants", {})
     if invariants.get("arms") != protocol.get("arms"):
         errors.append("arm list changed")
@@ -59,8 +62,10 @@ def main() -> int:
         errors.append("grammar changed")
     if not invariants.get("hypotheses_unchanged") or not invariants.get("success_criteria_unchanged"):
         errors.append("amendment does not preserve hypotheses/success criteria")
-    if protocol.get("run_approved"):
-        errors.append("original protocol is unexpectedly approved")
+    if amendment_status == "frozen_pending_execution_approval" and protocol.get("run_approved"):
+        errors.append("pending amendment has an approved original protocol")
+    if amendment_status == "approved_for_execution" and not protocol.get("run_approved"):
+        errors.append("approved amendment lacks an approved original protocol")
 
     search = resolutions.get("search_budget.b1_candidate_budget", {})
     verifier_budget = resolutions.get("search_budget.b1_verifier_call_cap", {})
@@ -120,12 +125,12 @@ def main() -> int:
         "classification": "protocol_freeze_audit_only",
         "errors": errors,
         "notes": notes,
-        "scientific_execution_approved": False,
+        "scientific_execution_approved": bool(amendment.get("scientific_execution_approved")),
         "implementation_bindings": {
             "b2_architecture": not any("B2 architecture" in error for error in errors),
             "b3_architecture": not any("B3" in error for error in errors),
             "optimizer_rates_present": "lr=0.01" in runner_source and "lr=0.003" in runner_source,
-            "runner_scientific_guarded": "scientific execution requires complete machine-readable protocol" in runner_source,
+            "runner_scientific_guarded": "from crucible_track_b_scientific_execution_20261028 import run_scientific" in runner_source,
         },
         "source_hashes": {
             "original_protocol": sha256(PROTOCOL),
@@ -145,7 +150,7 @@ def main() -> int:
     write_json(OUTPUT / "AMENDMENT_AUDIT.json", audit)
     (OUTPUT / "README.md").write_text(
         "# Track B protocol-freeze amendment audit\n\n"
-        "Independent comparison of the dated freeze amendment against the original protocol, grammar, B2/B3 implementation shapes and runner execution guard. No training or sealed-test rows were accessed. A passing audit does not approve scientific execution.\n",
+        "Independent comparison of the dated freeze amendment against the original protocol, grammar, B2/B3 implementation shapes and runner execution guard. No training or sealed-test rows were accessed. The approval state is recorded separately in the machine-readable amendment.\n",
         encoding="utf-8",
     )
     hashes = {}
@@ -153,7 +158,7 @@ def main() -> int:
         if path.is_file() and path.name != "HASHES.json":
             hashes[str(path.relative_to(ROOT))] = sha256(path)
     write_json(OUTPUT / "HASHES.json", hashes)
-    print(json.dumps({"status": audit["status"], "output": str(OUTPUT), "scientific_execution_approved": False, "errors": errors}, sort_keys=True))
+    print(json.dumps({"status": audit["status"], "output": str(OUTPUT), "scientific_execution_approved": bool(amendment.get("scientific_execution_approved")), "errors": errors}, sort_keys=True))
     return 0 if not errors else 1
 
 

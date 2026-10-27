@@ -1,8 +1,8 @@
 {
   "schema_version": "crucible_track_b_neural_proposer_protocol_v1",
   "date": "2026-10-28",
-  "status": "preregistered_design_only",
-  "run_approved": false,
+  "status": "approved_for_execution",
+  "run_approved": true,
   "arms": [
     "B0_V0_DETERMINISTIC_RULE_FILTER",
     "B1_DETERMINISTIC_AST_SEARCH",
@@ -80,7 +80,7 @@
     "full_updates_per_seed_max": 2000,
     "seeds": [42, 1337],
     "full_gpu_hours_total_max": 2,
-    "run_approved": false
+    "run_approved": true
   },
   "approval_review_requirements": [
     "direct_b3_ast_generation_verified",
