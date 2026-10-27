@@ -1,0 +1,25 @@
+{
+  "schema_version": "crucible_novelty_audit_v1",
+  "experiment": "crucible_two_candidate_topology_control_20261027_v1",
+  "status": "pre_execution",
+  "repository_ledger_checked": true,
+  "related_records": [
+    "two-candidate-pair-crossover-v1",
+    "two-candidate-coverage-density-v1",
+    "explicit-role-binding-gate",
+    "shared-scorer-compositional-transfer",
+    "cardinality-competence-diagnostic-v1"
+  ],
+  "novelty_claim": "No prior Crucible experiment trains the frozen dense candidate readout on an explicitly path-compositional edge-offset task while matching graph degree and edge count across topology families and holding fixed relational query pairs out.",
+  "not_novel": [
+    "The dense SHARED_SCORER readout and cyclic 500-update path",
+    "The two-seed competence gate and paired candidate-order metric",
+    "The general research question of relational composition",
+    "Graph and path-length descriptors as exploratory diagnostics"
+  ],
+  "task_boundary": "This is a new relational-composition task, not a continuation of the direct identifier-matching label used by the pair-coverage lineage.",
+  "new_training": true,
+  "new_arms": 4,
+  "sealed_test_accessed": false,
+  "decision": "PROCEED_AFTER_PREFLIGHT"
+}
