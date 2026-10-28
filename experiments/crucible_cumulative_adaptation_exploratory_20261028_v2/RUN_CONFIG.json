@@ -1,0 +1,73 @@
+{
+  "answer_bundle_sha256": "ce107c656542bf3b79afe21778292d0dda65f0a3dc654b481a04fab8560cf485",
+  "classification": "exploratory_post_protocol",
+  "cpu_accelerator": {
+    "name": "ssre_ordered_process_reservoir",
+    "per_arm": {
+      "A0_FROZEN_INDUCTION": {
+        "name": "ssre_ordered_process_reservoir",
+        "reference": {
+          "available": true,
+          "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+          "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+        },
+        "task_count": 288,
+        "wall_seconds": 4.014527780003846,
+        "window": 8,
+        "workers": 4
+      },
+      "A1_EXACT_PROCEDURE_MEMORY": {
+        "name": "ssre_ordered_process_reservoir",
+        "reference": {
+          "available": true,
+          "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+          "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+        },
+        "task_count": 288,
+        "wall_seconds": 4.039049529004842,
+        "window": 8,
+        "workers": 4
+      },
+      "A2_SHAM_OPERATOR_LIBRARY": {
+        "name": "ssre_ordered_process_reservoir",
+        "reference": {
+          "available": true,
+          "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+          "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+        },
+        "task_count": 288,
+        "wall_seconds": 3.9977846700057853,
+        "window": 8,
+        "workers": 4
+      },
+      "A3_VERIFIED_ADAPTIVE_LIBRARY": {
+        "name": "ssre_ordered_process_reservoir",
+        "reference": {
+          "available": true,
+          "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+          "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+        },
+        "task_count": 288,
+        "wall_seconds": 4.169657512014965,
+        "window": 8,
+        "workers": 4
+      }
+    },
+    "reference": {
+      "available": true,
+      "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+      "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+    },
+    "window": 8,
+    "workers": 4
+  },
+  "gpu_allocated": false,
+  "input_bundle_sha256": "31a43e1f7da4d9b2310c8cd81d635e770adc0f531bca394004c71d721a01a75c",
+  "protocol_terminated_by_user": true,
+  "registered_success_criteria_applied": false,
+  "runner_validation_reference": "experiments/crucible_cumulative_adaptation_runner_validation_20261028",
+  "schema_version": "crucible_cumulative_adaptation_exploratory_v1",
+  "scientific_execution_approved": false,
+  "sealed_target_answers_accessed_after_proposals": true,
+  "target_evaluations_run": true
+}

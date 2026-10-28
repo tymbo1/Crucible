@@ -1165,6 +1165,30 @@
         "docs/CRUCIBLE_500M_CROSS_DOMAIN_REASONING_CURRICULUM_PLAN_20261028.json"
       ],
       "novelty_terms": ["500M curriculum", "MATH", "BIG-Bench Hard", "SciBench", "ETHICS", "BIG-Bench", "cross-domain transfer", "verified learning"]
+    },
+    {
+      "id": "cumulative-adaptation-exploratory-post-protocol-v1",
+      "status": "INCONCLUSIVE",
+      "title": "Post-protocol cumulative-adaptation exploratory execution",
+      "hypothesis": "A verified operator library may improve acquisition of functionally novel procedures after source adaptation.",
+      "mechanisms": ["cumulative-learning", "operator-promotion", "proposal-policy-adaptation", "memory-vs-learning-separation"],
+      "interventions": ["A0 frozen induction", "A1 exact procedure memory", "A2 sham operator library", "A3 verified adaptive operator library"],
+      "controls": ["source-target hash disjointness", "matched candidate and verifier budgets", "sealed answer opening after proposal digest", "post-reset execution", "zero-promotion rule", "ordered CPU accelerator replay"],
+      "result": "The registered protocol was terminated before scientific execution. A separately authorised exploratory run reconstructed the deterministic task set and evaluated 288 target task-seed units across four arms. All arms accepted 120/288 proposals and completed 73/288 post-reset lifecycle checks. A3 promoted zero operators and remained unactivated_inconclusive. The result is descriptive post-protocol evidence only.",
+      "limits": ["Not a preregistered scientific result", "Registered success criteria and inference were not applied", "Target query pairs were generated after protocol termination", "No operator was activated, so the result cannot test active adaptive transfer", "The digit-expression DSL and deterministic verifier remain engineered scaffolding", "Contradiction detection remains externally triggered"],
+      "unresolved": ["Whether an activated verified operator policy improves unfamiliar acquisition", "Whether a future target design can activate operators without leakage", "Whether cumulative policy adaptation can later be learned neurally", "Whether the effect transfers beyond the tested DSL"],
+      "artifacts": [
+        "docs/CRUCIBLE_CUMULATIVE_ADAPTATION_PROTOCOL_TERMINATION_20261028.md",
+        "docs/CRUCIBLE_CUMULATIVE_ADAPTATION_PROTOCOL_TERMINATION_20261028.json",
+        "experiments/crucible_cumulative_adaptation_exploratory_20261028_v3/EXPLORATORY_REPORT.json",
+        "experiments/crucible_cumulative_adaptation_exploratory_20261028_v3/ARM_SUMMARIES.json",
+        "experiments/crucible_cumulative_adaptation_exploratory_20261028_v3/TASK_RESULTS.jsonl",
+        "experiments/crucible_cumulative_adaptation_exploratory_20261028_v3/SEALED_TARGET_INPUTS.jsonl",
+        "experiments/crucible_cumulative_adaptation_exploratory_20261028_v3/SEALED_TARGET_ANSWERS.jsonl",
+        "experiments/crucible_cumulative_adaptation_exploratory_20261028_v3/RUN_CONFIG.json",
+        "experiments/crucible_cumulative_adaptation_exploratory_20261028_v3/HASHES.json"
+      ],
+      "novelty_terms": ["post-protocol exploratory run", "zero promotion", "SSRE ordered process reservoir", "unactivated inconclusive", "cumulative adaptation"]
     }
   ]
 }

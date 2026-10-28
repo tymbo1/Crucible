@@ -1,0 +1,127 @@
+{
+  "arms": {
+    "A0_FROZEN_INDUCTION": {
+      "accepted": 120,
+      "accepted_candidate_hashes_overlapping_source": 4,
+      "activation_status": "control",
+      "all_gpu_seconds": 0.0,
+      "by_seed_family": {
+        "seed_1337::composition_depth2": {
+          "lifecycle_successes": 25,
+          "tasks": 72
+        },
+        "seed_1337::composition_depth3": {
+          "lifecycle_successes": 13,
+          "tasks": 72
+        },
+        "seed_42::composition_depth2": {
+          "lifecycle_successes": 23,
+          "tasks": 72
+        },
+        "seed_42::composition_depth3": {
+          "lifecycle_successes": 12,
+          "tasks": 72
+        }
+      },
+      "cpu_seconds": 0.4491690213326365,
+      "lifecycle_success_rate": 0.2534722222222222,
+      "lifecycle_successes": 73,
+      "promoted_operator_count": 0,
+      "target_tasks": 288,
+      "target_truth_table_retrieval_hits_not_counted": 0
+    },
+    "A1_EXACT_PROCEDURE_MEMORY": {
+      "accepted": 120,
+      "accepted_candidate_hashes_overlapping_source": 4,
+      "activation_status": "control",
+      "all_gpu_seconds": 0.0,
+      "by_seed_family": {
+        "seed_1337::composition_depth2": {
+          "lifecycle_successes": 25,
+          "tasks": 72
+        },
+        "seed_1337::composition_depth3": {
+          "lifecycle_successes": 13,
+          "tasks": 72
+        },
+        "seed_42::composition_depth2": {
+          "lifecycle_successes": 23,
+          "tasks": 72
+        },
+        "seed_42::composition_depth3": {
+          "lifecycle_successes": 12,
+          "tasks": 72
+        }
+      },
+      "cpu_seconds": 0.45185821020277217,
+      "lifecycle_success_rate": 0.2534722222222222,
+      "lifecycle_successes": 73,
+      "promoted_operator_count": 0,
+      "target_tasks": 288,
+      "target_truth_table_retrieval_hits_not_counted": 0
+    },
+    "A2_SHAM_OPERATOR_LIBRARY": {
+      "accepted": 120,
+      "accepted_candidate_hashes_overlapping_source": 4,
+      "activation_status": "control",
+      "all_gpu_seconds": 0.0,
+      "by_seed_family": {
+        "seed_1337::composition_depth2": {
+          "lifecycle_successes": 25,
+          "tasks": 72
+        },
+        "seed_1337::composition_depth3": {
+          "lifecycle_successes": 13,
+          "tasks": 72
+        },
+        "seed_42::composition_depth2": {
+          "lifecycle_successes": 23,
+          "tasks": 72
+        },
+        "seed_42::composition_depth3": {
+          "lifecycle_successes": 12,
+          "tasks": 72
+        }
+      },
+      "cpu_seconds": 0.45034177985507995,
+      "lifecycle_success_rate": 0.2534722222222222,
+      "lifecycle_successes": 73,
+      "promoted_operator_count": 0,
+      "target_tasks": 288,
+      "target_truth_table_retrieval_hits_not_counted": 0
+    },
+    "A3_VERIFIED_ADAPTIVE_LIBRARY": {
+      "accepted": 120,
+      "accepted_candidate_hashes_overlapping_source": 4,
+      "activation_status": "unactivated_inconclusive",
+      "all_gpu_seconds": 0.0,
+      "by_seed_family": {
+        "seed_1337::composition_depth2": {
+          "lifecycle_successes": 25,
+          "tasks": 72
+        },
+        "seed_1337::composition_depth3": {
+          "lifecycle_successes": 13,
+          "tasks": 72
+        },
+        "seed_42::composition_depth2": {
+          "lifecycle_successes": 23,
+          "tasks": 72
+        },
+        "seed_42::composition_depth3": {
+          "lifecycle_successes": 12,
+          "tasks": 72
+        }
+      },
+      "cpu_seconds": 0.45204853953327984,
+      "lifecycle_success_rate": 0.2534722222222222,
+      "lifecycle_successes": 73,
+      "promoted_operator_count": 0,
+      "target_tasks": 288,
+      "target_truth_table_retrieval_hits_not_counted": 0
+    }
+  },
+  "interpretation": "Exploratory post-protocol descriptive result; no preregistered significance or cumulative-learning claim is made.",
+  "primary_contrast_a3_minus_max_a0_a2": 0.0,
+  "registered_success_criteria_applied": false
+}

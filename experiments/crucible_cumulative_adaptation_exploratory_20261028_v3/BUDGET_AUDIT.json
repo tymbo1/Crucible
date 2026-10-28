@@ -1,0 +1,45 @@
+{
+  "all_equal": true,
+  "arms": {
+    "A0_FROZEN_INDUCTION": {
+      "candidate_construction_units": 4608,
+      "candidate_slots": 1152,
+      "gpu_seconds": 0.0,
+      "operator_lookup_slots": 1152,
+      "post_reset_checks": 2304,
+      "target_rows": 288,
+      "verifier_calls": 1152,
+      "verifier_examples": 9216
+    },
+    "A1_EXACT_PROCEDURE_MEMORY": {
+      "candidate_construction_units": 4608,
+      "candidate_slots": 1152,
+      "gpu_seconds": 0.0,
+      "operator_lookup_slots": 1152,
+      "post_reset_checks": 2304,
+      "target_rows": 288,
+      "verifier_calls": 1152,
+      "verifier_examples": 9216
+    },
+    "A2_SHAM_OPERATOR_LIBRARY": {
+      "candidate_construction_units": 4608,
+      "candidate_slots": 1152,
+      "gpu_seconds": 0.0,
+      "operator_lookup_slots": 1152,
+      "post_reset_checks": 2304,
+      "target_rows": 288,
+      "verifier_calls": 1152,
+      "verifier_examples": 9216
+    },
+    "A3_VERIFIED_ADAPTIVE_LIBRARY": {
+      "candidate_construction_units": 4608,
+      "candidate_slots": 1152,
+      "gpu_seconds": 0.0,
+      "operator_lookup_slots": 1152,
+      "post_reset_checks": 2304,
+      "target_rows": 288,
+      "verifier_calls": 1152,
+      "verifier_examples": 9216
+    }
+  }
+}

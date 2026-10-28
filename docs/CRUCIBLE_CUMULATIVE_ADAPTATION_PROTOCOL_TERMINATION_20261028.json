@@ -1,0 +1,38 @@
+{
+  "schema_version": "crucible_cumulative_adaptation_protocol_termination_v1",
+  "date": "2026-10-28",
+  "status": "terminated_by_user",
+  "registered_protocol_scientific_execution": false,
+  "registered_protocol_retained": true,
+  "exploratory_replacement": {
+    "classification": "exploratory_post_protocol",
+    "artifact_directory": "experiments/crucible_cumulative_adaptation_exploratory_20261028_v3",
+    "target_task_seed_units": 288,
+    "target_arm_rows": 1152,
+    "gpu_allocated": false,
+    "sealed_answers_opened_after_proposal_digest": true,
+    "registered_success_criteria_applied": false,
+    "input_bundle_sha256": "31a43e1f7da4d9b2310c8cd81d635e770adc0f531bca394004c71d721a01a75c",
+    "answer_bundle_sha256": "ce107c656542bf3b79afe21778292d0dda65f0a3dc654b481a04fab8560cf485",
+    "proposal_digest": "ffb51dda8f81935621aa1c9e35553dd2758c012f055ce767ebd63b14179a9082",
+    "cpu_accelerator": {
+      "name": "ssre_ordered_process_reservoir",
+      "workers": 4,
+      "window": 8,
+      "reference_sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+    },
+    "outcome": {
+      "a0_accepted": 120,
+      "a1_accepted": 120,
+      "a2_accepted": 120,
+      "a3_accepted": 120,
+      "a0_lifecycle_successes": 73,
+      "a1_lifecycle_successes": 73,
+      "a2_lifecycle_successes": 73,
+      "a3_lifecycle_successes": 73,
+      "a3_promoted_operator_count": 0,
+      "a3_activation_status": "unactivated_inconclusive"
+    }
+  },
+  "interpretation": "Descriptive post-protocol evidence only; no cumulative-learning efficacy claim and no refutation of an inactive adaptive mechanism."
+}

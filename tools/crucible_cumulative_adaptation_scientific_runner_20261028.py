@@ -7,7 +7,9 @@ The runner has two intentionally separate paths:
   synthetic, non-scientific tasks.
 * ``scientific`` is a guarded execution path.  It refuses to run unless the
   protocol and amendment carry explicit approval and a sealed target provider
-  is supplied.  This review never invokes that path.
+  is supplied.  A separate explicit post-protocol exploratory opt-in is
+  available to record a terminated-protocol run as exploratory, never as a
+  registered scientific result.
 
 No target answer is needed to propose or independently verify a procedure
 against its observed demonstrations.  Post-reset target scoring belongs to a
@@ -20,12 +22,17 @@ import argparse
 import copy
 import hashlib
 import json
+import multiprocessing as mp
+import os
 import resource
 import tempfile
 import time
+from concurrent.futures import Future, ProcessPoolExecutor
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
+
+import numpy as np
 
 import sys
 
@@ -442,29 +449,215 @@ def make_validation_tasks(validation_rows: Sequence[Mapping[str, Any]]) -> List[
     ]
 
 
-def candidate_pool_for_task(pool: Sequence[Mapping[str, Any]], task: ProcedureTask, library: OperatorLibrary, arm: str) -> List[Dict[str, Any]]:
-    scored: List[Tuple[Tuple[int, int, str], Dict[str, Any]]] = []
-    promoted_signatures = {record.root_signature for record in library.promoted}
-    for row in pool:
-        ast = canonical_ast(row["canonical_ast"])
-        matches = sum(
-            int(evaluate_ast(ast, int(example["a"]), int(example["b"]))) == int(example["output"])
-            for example in task.demonstrations
-        )
-        bonus = 1 if arm == "A3_VERIFIED_ADAPTIVE_LIBRARY" and root_operator(ast) in promoted_signatures else 0
-        score = (matches + bonus, -ast_nodes(ast), str(row["canonical_ast_hash"]))
-        scored.append((score, {"ast": ast, "canonical_ast_hash": ast_hash(ast), "source": "frozen_grammar_pool"}))
-    scored.sort(key=lambda item: item[0], reverse=True)
+def _candidate_pool_from_examples(
+    pool: Sequence[Mapping[str, Any]],
+    demonstrations: Sequence[Mapping[str, int]],
+    promoted_signatures: Sequence[str],
+    arm: str,
+    precomputed_truth_tables: Any,
+) -> List[Dict[str, Any]]:
+    """Rank candidates without changing the historical deterministic order."""
+    input_indices = np.asarray(
+        [int(example["a"]) * 10 + int(example["b"]) for example in demonstrations],
+        dtype=np.int64,
+    )
+    desired = np.asarray(
+        [int(example["output"]) for example in demonstrations],
+        dtype=np.int8,
+    )
+    matches = np.sum(
+        precomputed_truth_tables[:, input_indices] == desired[None, :],
+        axis=1,
+    )
+    promoted = set(promoted_signatures)
+    # The original implementation sorted descending by (matches+bonus,
+    # -nodes, hash).  Keep that exact tie-break order in the accelerated path.
+    ranked_indices = sorted(
+        range(len(pool)),
+        key=lambda index: (
+            int(matches[index])
+            + int(
+                arm == "A3_VERIFIED_ADAPTIVE_LIBRARY"
+                and pool[index].get("_root_signature") in promoted
+            ),
+            -int(
+                pool[index]["_nodes"]
+                if "_nodes" in pool[index]
+                else ast_nodes(pool[index]["canonical_ast"])
+            ),
+            str(pool[index]["canonical_ast_hash"]),
+        ),
+        reverse=True,
+    )
     candidates: List[Dict[str, Any]] = []
     seen: set[str] = set()
-    for _, candidate in scored:
-        if candidate["canonical_ast_hash"] in seen:
+    for index in ranked_indices:
+        row = pool[index]
+        canonical = row["_canonical_ast"] if "_canonical_ast" in row else canonical_ast(row["canonical_ast"])
+        candidate_hash = str(row["canonical_ast_hash"])
+        if candidate_hash in seen:
             continue
-        seen.add(candidate["canonical_ast_hash"])
-        candidates.append(candidate)
+        seen.add(candidate_hash)
+        candidates.append(
+            {
+                "ast": canonical,
+                "canonical_ast_hash": candidate_hash,
+                "source": "frozen_grammar_pool",
+            }
+        )
         if len(candidates) == TARGET_BUDGET["candidate_slots"]:
             break
     return candidates
+
+
+def candidate_pool_for_task(
+    pool: Sequence[Mapping[str, Any]],
+    task: ProcedureTask,
+    library: OperatorLibrary,
+    arm: str,
+    precomputed_truth_tables: Optional[Any] = None,
+) -> List[Dict[str, Any]]:
+    promoted_signatures = {record.root_signature for record in library.promoted}
+    if precomputed_truth_tables is None:
+        table = np.asarray(
+            [
+                [int(evaluate_ast(row["canonical_ast"], a, b)) for a in range(10) for b in range(10)]
+                for row in pool
+            ],
+            dtype=np.int8,
+        )
+    else:
+        table = precomputed_truth_tables
+    return _candidate_pool_from_examples(
+        pool,
+        task.demonstrations,
+        tuple(promoted_signatures),
+        arm,
+        table,
+    )
+
+
+# These globals are intentionally limited to immutable candidate-scoring state.
+# They mirror the existing SSRE/WSE process-worker pattern: each worker owns a
+# warm local view, while the parent performs deterministic ordered commits.
+_CPU_WORKER_POOL: Optional[List[Dict[str, Any]]] = None
+_CPU_WORKER_TRUTH_TABLES: Optional[np.ndarray] = None
+_CPU_WORKER_PROMOTED: Tuple[str, ...] = ()
+_CPU_WORKER_ARM: Optional[str] = None
+
+
+def _init_crucible_cpu_worker(
+    pool: Sequence[Mapping[str, Any]],
+    truth_tables: Any,
+    promoted_signatures: Sequence[str],
+    arm: str,
+) -> None:
+    global _CPU_WORKER_POOL, _CPU_WORKER_TRUTH_TABLES, _CPU_WORKER_PROMOTED, _CPU_WORKER_ARM
+    _CPU_WORKER_POOL = [dict(row) for row in pool]
+    _CPU_WORKER_TRUTH_TABLES = np.asarray(truth_tables, dtype=np.int8)
+    _CPU_WORKER_PROMOTED = tuple(sorted(str(value) for value in promoted_signatures))
+    _CPU_WORKER_ARM = str(arm)
+
+
+def _crucible_cpu_candidate_job(payload: Tuple[str, Sequence[Mapping[str, int]]]) -> Tuple[str, List[Dict[str, Any]]]:
+    if _CPU_WORKER_POOL is None or _CPU_WORKER_TRUTH_TABLES is None or _CPU_WORKER_ARM is None:
+        raise RuntimeError("Crucible CPU worker was not initialized")
+    task_id, demonstrations = payload
+    candidates = _candidate_pool_from_examples(
+        _CPU_WORKER_POOL,
+        demonstrations,
+        _CPU_WORKER_PROMOTED,
+        _CPU_WORKER_ARM,
+        _CPU_WORKER_TRUTH_TABLES,
+    )
+    return str(task_id), candidates
+
+
+class CrucibleCpuReservoir:
+    """Bounded ordered CPU candidate reservoir.
+
+    This is the Crucible adapter for the existing SSRE/WSE CPU accelerator
+    pattern recovered in ``MLBUILD/ssre`` and ``crucible_cross_gpu.../cpu_replay.py``:
+    persistent process workers, bounded pending futures, deterministic work
+    order, and ordered parent-side commits.  It accelerates pure candidate
+    scoring only; lifecycle persistence remains in the parent process.
+    """
+
+    REFERENCE = Path("/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py")
+
+    def __init__(self, workers: Optional[int] = None, window: Optional[int] = None):
+        detected = os.cpu_count() or 1
+        self.workers = max(1, min(int(workers or 4), detected))
+        self.window = max(1, int(window or self.workers * 2))
+
+    def _reference_metadata(self) -> Dict[str, Any]:
+        if self.REFERENCE.is_file():
+            return {
+                "path": str(self.REFERENCE),
+                "sha256": sha256_file(self.REFERENCE),
+                "available": True,
+            }
+        return {"path": str(self.REFERENCE), "sha256": None, "available": False}
+
+    def map_candidates(
+        self,
+        pool: Sequence[Mapping[str, Any]],
+        truth_tables: Any,
+        promoted_signatures: Sequence[str],
+        arm: str,
+        tasks: Sequence[ProcedureTask],
+    ) -> Tuple[List[List[Dict[str, Any]]], Dict[str, Any]]:
+        if not tasks:
+            return [], {
+                "name": "ssre_ordered_process_reservoir",
+                "workers": self.workers,
+                "window": self.window,
+                "task_count": 0,
+                "wall_seconds": 0.0,
+                "reference": self._reference_metadata(),
+            }
+        payloads = [
+            (str(task.task_id), tuple(dict(example) for example in task.demonstrations))
+            for task in tasks
+        ]
+        started = time.perf_counter()
+        results: Dict[int, List[Dict[str, Any]]] = {}
+        pending: Dict[int, Future[Tuple[str, List[Dict[str, Any]]]]] = {}
+        next_submit = 0
+        next_commit = 0
+        context = mp.get_context("fork") if "fork" in mp.get_all_start_methods() else None
+        pool_kwargs: Dict[str, Any] = {
+            "max_workers": min(self.workers, len(payloads)),
+            "initializer": _init_crucible_cpu_worker,
+            "initargs": (list(pool), truth_tables, tuple(promoted_signatures), arm),
+        }
+        if context is not None:
+            pool_kwargs["mp_context"] = context
+        with ProcessPoolExecutor(**pool_kwargs) as executor:
+            while next_commit < len(payloads):
+                while next_submit < len(payloads) and len(pending) < self.window:
+                    pending[next_submit] = executor.submit(
+                        _crucible_cpu_candidate_job,
+                        payloads[next_submit],
+                    )
+                    next_submit += 1
+                task_id, candidates = pending.pop(next_commit).result()
+                expected_id = payloads[next_commit][0]
+                if task_id != expected_id:
+                    raise RunnerIntegrityError(
+                        f"CPU reservoir ordering mismatch: expected {expected_id}, got {task_id}"
+                    )
+                results[next_commit] = candidates
+                next_commit += 1
+        elapsed = time.perf_counter() - started
+        return [results[index] for index in range(len(payloads))], {
+            "name": "ssre_ordered_process_reservoir",
+            "workers": min(self.workers, len(payloads)),
+            "window": self.window,
+            "task_count": len(payloads),
+            "wall_seconds": elapsed,
+            "reference": self._reference_metadata(),
+        }
 
 
 def fixed_budget_counters() -> BudgetCounters:
@@ -481,10 +674,23 @@ def fixed_budget_counters() -> BudgetCounters:
 
 class FourArmRunner:
     def __init__(self, pool: Sequence[Mapping[str, Any]], root: Path, scientific: bool = False):
-        self.pool = list(pool)
+        self.pool = []
+        for row in pool:
+            enriched = dict(row)
+            enriched["_canonical_ast"] = canonical_ast(row["canonical_ast"])
+            enriched["_root_signature"] = root_operator(enriched["_canonical_ast"])
+            enriched["_nodes"] = int(row.get("nodes", ast_nodes(enriched["_canonical_ast"])))
+            self.pool.append(enriched)
         self.root = root
         self.scientific = scientific
         self.verifier = IndependentVerifier()
+        self.pool_truth_tables = np.asarray(
+            [
+                [int(evaluate_ast(row["_canonical_ast"], a, b)) for a in range(10) for b in range(10)]
+                for row in self.pool
+            ],
+            dtype=np.int8,
+        )
 
     def _prepare_arm(self, arm: str, source_tasks: Sequence[Mapping[str, Any]], validation_tasks: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
         if arm == "A2_SHAM_OPERATOR_LIBRARY":
@@ -494,7 +700,14 @@ class FourArmRunner:
         exact_memory = {str(task["task_id"]): canonical_ast(task["target_ast"]) for task in source_tasks} if arm == "A1_EXACT_PROCEDURE_MEMORY" else {}
         return {"library": library, "exact_memory": exact_memory}
 
-    def _target_proposal(self, arm: str, task: ProcedureTask, state: Mapping[str, Any], store: ProcedureStore) -> Dict[str, Any]:
+    def _target_proposal(
+        self,
+        arm: str,
+        task: ProcedureTask,
+        state: Mapping[str, Any],
+        store: ProcedureStore,
+        candidate_override: Optional[List[Dict[str, Any]]] = None,
+    ) -> Dict[str, Any]:
         started = time.perf_counter()
         library: OperatorLibrary = state["library"]
         counters = fixed_budget_counters()
@@ -510,11 +723,13 @@ class FourArmRunner:
                 "canonical_ast_hash": ast_hash(remembered),
                 "source": "exact_procedure_memory",
             }]
-            fallback = candidate_pool_for_task(self.pool, task, library, arm)
+            fallback = candidate_pool_for_task(self.pool, task, library, arm, self.pool_truth_tables)
             candidates.extend(item for item in fallback if item["canonical_ast_hash"] != candidates[0]["canonical_ast_hash"])
             candidates = candidates[:TARGET_BUDGET["candidate_slots"]]
+        elif candidate_override is not None:
+            candidates = list(candidate_override)
         else:
-            candidates = candidate_pool_for_task(self.pool, task, library, arm)
+            candidates = candidate_pool_for_task(self.pool, task, library, arm, self.pool_truth_tables)
         accepted: Optional[Dict[str, Any]] = None
         verification_trace: List[Dict[str, Any]] = []
         padded = list(candidates)
@@ -575,6 +790,9 @@ class FourArmRunner:
         protocol: Mapping[str, Any],
         amendment: Mapping[str, Any],
         output_root: Path,
+        allow_post_protocol: bool = False,
+        cpu_workers: Optional[int] = None,
+        cpu_window: Optional[int] = None,
     ) -> Dict[str, Any]:
         """Execute the registered path only after explicit approval.
 
@@ -583,10 +801,11 @@ class FourArmRunner:
         adaptation, target proposals, proposal finalisation, then one late
         sealed-answer opening for post-reset scoring.
         """
-        if protocol.get("run_approved") is not True or amendment.get("scientific_execution_approved") is not True:
-            raise ScientificExecutionBlocked("protocol or amendment does not authorize scientific execution")
-        if amendment.get("status") != "frozen_pending_execution_approval":
-            raise ScientificExecutionBlocked("protocol-integrity amendment is not in the required frozen state")
+        if not allow_post_protocol:
+            if protocol.get("run_approved") is not True or amendment.get("scientific_execution_approved") is not True:
+                raise ScientificExecutionBlocked("protocol or amendment does not authorize scientific execution")
+            if amendment.get("status") != "frozen_pending_execution_approval":
+                raise ScientificExecutionBlocked("protocol-integrity amendment is not in the required frozen state")
         if not target_input_rows:
             raise RunnerIntegrityError("scientific target input bundle is empty")
         target_tasks: List[ProcedureTask] = []
@@ -605,14 +824,33 @@ class FourArmRunner:
             )
         output_root.mkdir(parents=True, exist_ok=True)
         proposal_results: Dict[str, Dict[str, Any]] = {}
+        cpu_reservoir = CrucibleCpuReservoir(cpu_workers, cpu_window)
+        accelerator_runs: Dict[str, Dict[str, Any]] = {}
         for arm in ARM_IDS:
             state = self._prepare_arm(arm, source_tasks, validation_tasks)
             store = ProcedureStore(output_root / f"{arm}.json")
+            candidate_lists, accelerator_metrics = cpu_reservoir.map_candidates(
+                self.pool,
+                self.pool_truth_tables,
+                tuple(record.root_signature for record in state["library"].promoted),
+                arm,
+                target_tasks,
+            )
+            accelerator_runs[arm] = accelerator_metrics
             proposal_results[arm] = {
                 "arm": arm,
                 "activation_status": state["library"].activation_status,
                 "promoted_operator_count": len(state["library"].promoted),
-                "targets": [self._target_proposal(arm, task, state, store) for task in target_tasks],
+                "targets": [
+                    self._target_proposal(
+                        arm,
+                        task,
+                        state,
+                        store,
+                        candidate_override=candidate_lists[index],
+                    )
+                    for index, task in enumerate(target_tasks)
+                ],
                 "store_path": str(store.path),
                 "store_digest_before_sealed_answers": json_digest(store.state),
             }
@@ -642,6 +880,14 @@ class FourArmRunner:
             "scientific_execution_started": True,
             "target_evaluations_run": True,
             "gpu_allocated": False,
+            "classification": "exploratory_post_protocol" if allow_post_protocol else "registered_scientific",
+            "cpu_accelerator": {
+                "name": "ssre_ordered_process_reservoir",
+                "workers": cpu_reservoir.workers,
+                "window": cpu_reservoir.window,
+                "per_arm": accelerator_runs,
+                "reference": cpu_reservoir._reference_metadata(),
+            },
         }
 
 
@@ -688,7 +934,7 @@ def run_positive_fixture(pool: Sequence[Mapping[str, Any]], fixture_root: Path) 
     # never by a sealed target answer.  Use a one-case pool adapter.
     original = candidate_pool_for_task
     try:
-        def fixture_candidates(_pool: Sequence[Mapping[str, Any]], task: ProcedureTask, library: OperatorLibrary, arm: str) -> List[Dict[str, Any]]:
+        def fixture_candidates(_pool: Sequence[Mapping[str, Any]], task: ProcedureTask, library: OperatorLibrary, arm: str, _truth_tables: Optional[Sequence[Sequence[int]]] = None) -> List[Dict[str, Any]]:
             del library, arm
             return [{"ast": canonical_ast(row["canonical_ast"]), "canonical_ast_hash": ast_hash(row["canonical_ast"]), "source": "synthetic_fixture_pool"} for row in task.candidate_pool]
         globals()["candidate_pool_for_task"] = fixture_candidates
@@ -726,7 +972,7 @@ def synthetic_fixture_suite(pool: Sequence[Mapping[str, Any]]) -> Dict[str, Any]
         negative_runner = FourArmRunner(pool=[], root=root / "negative")
         original = candidate_pool_for_task
         try:
-            globals()["candidate_pool_for_task"] = lambda _pool, task, library, arm: [{"ast": canonical_ast(row["canonical_ast"]), "canonical_ast_hash": ast_hash(row["canonical_ast"]), "source": "synthetic_negative"} for row in task.candidate_pool]
+            globals()["candidate_pool_for_task"] = lambda _pool, task, library, arm, _truth_tables=None: [{"ast": canonical_ast(row["canonical_ast"]), "canonical_ast_hash": ast_hash(row["canonical_ast"]), "source": "synthetic_negative"} for row in task.candidate_pool]
             negative = negative_runner.run_fixture_arm("A3_VERIFIED_ADAPTIVE_LIBRARY", [], [], [negative_task], root / "negative" / "store.json")
         finally:
             globals()["candidate_pool_for_task"] = original
