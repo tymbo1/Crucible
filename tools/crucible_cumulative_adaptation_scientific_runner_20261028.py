@@ -64,6 +64,8 @@ ARM_IDS = (
     "A2_SHAM_OPERATOR_LIBRARY",
     "A3_VERIFIED_ADAPTIVE_LIBRARY",
 )
+NO_GUIDANCE_ARM = "A3_NO_GUIDANCE_SAME_MEMORY"
+OPERATOR_MEMORY_ARMS = frozenset({"A2_SHAM_OPERATOR_LIBRARY", "A3_VERIFIED_ADAPTIVE_LIBRARY", NO_GUIDANCE_ARM})
 TARGET_BUDGET = {
     "candidate_slots": 4,
     "operator_lookup_slots": 4,
@@ -996,10 +998,11 @@ class FourArmRunner:
         )
 
     def _prepare_arm(self, arm: str, source_tasks: Sequence[Mapping[str, Any]], validation_tasks: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
-        if arm == "A2_SHAM_OPERATOR_LIBRARY":
-            library = OperatorLibrary(arm, source_tasks, validation_tasks, sham=True)
+        library_arm = "A3_VERIFIED_ADAPTIVE_LIBRARY" if arm == NO_GUIDANCE_ARM else arm
+        if library_arm == "A2_SHAM_OPERATOR_LIBRARY":
+            library = OperatorLibrary(library_arm, source_tasks, validation_tasks, sham=True)
         else:
-            library = OperatorLibrary(arm, source_tasks, validation_tasks)
+            library = OperatorLibrary(library_arm, source_tasks, validation_tasks)
         exact_memory = {str(task["task_id"]): canonical_ast(task["target_ast"]) for task in source_tasks} if arm == "A1_EXACT_PROCEDURE_MEMORY" else {}
         return {"library": library, "exact_memory": exact_memory}
 
@@ -1016,7 +1019,7 @@ class FourArmRunner:
         counters = fixed_budget_counters()
         lookup_records: List[Optional[Dict[str, Any]]] = []
         for slot in range(TARGET_BUDGET["operator_lookup_slots"]):
-            record = library.lookup(slot) if arm in {"A2_SHAM_OPERATOR_LIBRARY", "A3_VERIFIED_ADAPTIVE_LIBRARY"} else None
+            record = library.lookup(slot) if arm in OPERATOR_MEMORY_ARMS else None
             lookup_records.append(None if record is None else record.as_dict())
         exact_memory = state.get("exact_memory", {})
         if arm == "A1_EXACT_PROCEDURE_MEMORY" and task.task_id in exact_memory:
@@ -1096,6 +1099,7 @@ class FourArmRunner:
         allow_post_protocol: bool = False,
         cpu_workers: Optional[int] = None,
         cpu_window: Optional[int] = None,
+        arms: Sequence[str] = ARM_IDS,
     ) -> Dict[str, Any]:
         """Execute the registered path only after explicit approval.
 
@@ -1129,7 +1133,7 @@ class FourArmRunner:
         proposal_results: Dict[str, Dict[str, Any]] = {}
         cpu_reservoir = CrucibleCpuReservoir(cpu_workers, cpu_window)
         accelerator_runs: Dict[str, Dict[str, Any]] = {}
-        for arm in ARM_IDS:
+        for arm in arms:
             state = self._prepare_arm(arm, source_tasks, validation_tasks)
             store = ProcedureStore(output_root / f"{arm}.json")
             candidate_lists, accelerator_metrics = cpu_reservoir.map_candidates(

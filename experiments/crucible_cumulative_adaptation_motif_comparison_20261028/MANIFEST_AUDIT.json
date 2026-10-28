@@ -1,0 +1,20 @@
+{
+  "applicability_assigned_without_correctness_filter": true,
+  "frozen_pool_excluded_by_structural_or_functional_hash": true,
+  "manifest_seed": 202610282,
+  "promotion_threshold_trials": 16,
+  "schema_version": "crucible_motif_comparison_manifest_v1",
+  "source_records": 32,
+  "source_target_hash_intersections": [],
+  "source_validation_hash_intersections": [],
+  "target_answer_records": 32,
+  "target_answers_written_separately": true,
+  "target_generation": "recombined source-derived binding vocabulary; no post-hoc operator success filter",
+  "target_input_records": 32,
+  "validation_records": 32,
+  "validation_records_per_operator": {
+    "add_mod10": 16,
+    "sub_mod10": 16
+  },
+  "validation_target_hash_intersections": []
+}

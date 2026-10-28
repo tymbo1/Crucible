@@ -1,0 +1,234 @@
+{
+  "expression_vocabulary": [
+    {
+      "args": [
+        {
+          "name": "a",
+          "op": "var"
+        },
+        {
+          "op": "const",
+          "value": 1
+        }
+      ],
+      "op": "max"
+    },
+    {
+      "op": "const",
+      "value": 1
+    },
+    {
+      "op": "const",
+      "value": 3
+    },
+    {
+      "op": "const",
+      "value": 2
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "op": "var"
+        },
+        {
+          "name": "b",
+          "op": "var"
+        }
+      ],
+      "op": "min"
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "op": "var"
+        },
+        {
+          "name": "b",
+          "op": "var"
+        }
+      ],
+      "op": "xor_bits_mod10"
+    },
+    {
+      "args": [
+        {
+          "name": "b",
+          "op": "var"
+        },
+        {
+          "op": "const",
+          "value": 6
+        }
+      ],
+      "op": "xor_bits_mod10"
+    },
+    {
+      "op": "const",
+      "value": 0
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "op": "var"
+        },
+        {
+          "op": "const",
+          "value": 3
+        }
+      ],
+      "op": "add_mod10"
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "op": "var"
+        },
+        {
+          "name": "b",
+          "op": "var"
+        }
+      ],
+      "op": "add_mod10"
+    },
+    {
+      "op": "const",
+      "value": 4
+    },
+    {
+      "args": [
+        {
+          "name": "b",
+          "op": "var"
+        },
+        {
+          "op": "const",
+          "value": 8
+        }
+      ],
+      "op": "min"
+    },
+    {
+      "name": "b",
+      "op": "var"
+    },
+    {
+      "op": "const",
+      "value": 8
+    },
+    {
+      "args": [
+        {
+          "name": "b",
+          "op": "var"
+        },
+        {
+          "op": "const",
+          "value": 2
+        }
+      ],
+      "op": "min"
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "op": "var"
+        },
+        {
+          "op": "const",
+          "value": 5
+        }
+      ],
+      "op": "mul_mod10"
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "op": "var"
+        },
+        {
+          "name": "b",
+          "op": "var"
+        }
+      ],
+      "op": "mul_mod10"
+    },
+    {
+      "op": "const",
+      "value": 9
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "op": "var"
+        },
+        {
+          "op": "const",
+          "value": 7
+        }
+      ],
+      "op": "max"
+    },
+    {
+      "op": "const",
+      "value": 6
+    },
+    {
+      "name": "a",
+      "op": "var"
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "op": "var"
+        },
+        {
+          "name": "b",
+          "op": "var"
+        }
+      ],
+      "op": "max"
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "op": "var"
+        },
+        {
+          "name": "b",
+          "op": "var"
+        }
+      ],
+      "op": "sub_mod10"
+    },
+    {
+      "op": "const",
+      "value": 5
+    },
+    {
+      "args": [
+        {
+          "name": "b",
+          "op": "var"
+        },
+        {
+          "op": "const",
+          "value": 4
+        }
+      ],
+      "op": "sub_mod10"
+    },
+    {
+      "op": "const",
+      "value": 7
+    }
+  ]
+}

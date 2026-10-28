@@ -1,0 +1,161 @@
+{
+  "arms": [
+    "A0_FROZEN_INDUCTION",
+    "A2_SHAM_OPERATOR_LIBRARY",
+    "A3_VERIFIED_ADAPTIVE_LIBRARY",
+    "A3_NO_GUIDANCE_SAME_MEMORY"
+  ],
+  "classification": "exploratory_manifest_changed",
+  "experiment": "crucible_cumulative_adaptation_motif_comparison_20261028",
+  "limitations": [
+    "Exploratory result because the manifest and implementation differ from the terminated registered protocol.",
+    "The typed-hole operator vocabulary is an engineered constructive mechanism, not neural learning.",
+    "Target procedures are novel relative to source, validation and frozen fallback structural/function hashes, but are recombinations of source-derived binding values.",
+    "No claim of general cumulative learning or neural procedure induction is made."
+  ],
+  "manifest": {
+    "applicability_assigned_without_correctness_filter": true,
+    "frozen_pool_excluded_by_structural_or_functional_hash": true,
+    "manifest_seed": 202610282,
+    "promotion_threshold_trials": 16,
+    "schema_version": "crucible_motif_comparison_manifest_v1",
+    "source_records": 32,
+    "source_target_hash_intersections": [],
+    "source_validation_hash_intersections": [],
+    "target_answer_records": 32,
+    "target_answers_written_separately": true,
+    "target_generation": "recombined source-derived binding vocabulary; no post-hoc operator success filter",
+    "target_input_records": 32,
+    "validation_records": 32,
+    "validation_records_per_operator": {
+      "add_mod10": 16,
+      "sub_mod10": 16
+    },
+    "validation_target_hash_intersections": []
+  },
+  "newly_constructed_candidates": "NEWLY_CONSTRUCTED_CANDIDATES.jsonl",
+  "paired_comparison": "PAIRED_COMPARISON.json",
+  "promotion": "OPERATOR_PROMOTION.json",
+  "registered_scientific_result": false,
+  "resource_summary": {
+    "cpu_accelerator": {
+      "name": "ssre_ordered_process_reservoir",
+      "per_arm": {
+        "A0_FROZEN_INDUCTION": {
+          "name": "ssre_ordered_process_reservoir",
+          "reference": {
+            "available": true,
+            "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+            "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+          },
+          "task_count": 32,
+          "wall_seconds": 0.05862322502071038,
+          "window": 4,
+          "workers": 2
+        },
+        "A2_SHAM_OPERATOR_LIBRARY": {
+          "name": "ssre_ordered_process_reservoir",
+          "reference": {
+            "available": true,
+            "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+            "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+          },
+          "task_count": 32,
+          "wall_seconds": 0.05263483599992469,
+          "window": 4,
+          "workers": 2
+        },
+        "A3_NO_GUIDANCE_SAME_MEMORY": {
+          "name": "ssre_ordered_process_reservoir",
+          "reference": {
+            "available": true,
+            "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+            "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+          },
+          "task_count": 32,
+          "wall_seconds": 0.13414307500352152,
+          "window": 4,
+          "workers": 2
+        },
+        "A3_VERIFIED_ADAPTIVE_LIBRARY": {
+          "name": "ssre_ordered_process_reservoir",
+          "reference": {
+            "available": true,
+            "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+            "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+          },
+          "task_count": 32,
+          "wall_seconds": 0.05616514501161873,
+          "window": 4,
+          "workers": 2
+        }
+      },
+      "reference": {
+        "available": true,
+        "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+        "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+      },
+      "window": 4,
+      "workers": 2
+    },
+    "gpu_allocated": false,
+    "gpu_seconds": 0.0,
+    "wall_seconds": 21.279733719973592
+  },
+  "schema_version": "crucible_motif_comparison_exploratory_report_v1",
+  "status": "completed",
+  "summaries": {
+    "A0_FROZEN_INDUCTION": {
+      "activation_status": "control",
+      "cpu_seconds": 0.01704707500175573,
+      "gpu_seconds": 0.0,
+      "post_reset_success_rate": 0.03125,
+      "post_reset_successes": 1,
+      "promoted_operator_count": 0,
+      "proposal_acceptance_rate": 0.125,
+      "proposal_acceptances": 4,
+      "target_acquisition_rate": 0.03125,
+      "target_acquisitions": 1,
+      "target_tasks": 32
+    },
+    "A2_SHAM_OPERATOR_LIBRARY": {
+      "activation_status": "control",
+      "cpu_seconds": 0.030062992009334266,
+      "gpu_seconds": 0.0,
+      "post_reset_success_rate": 0.03125,
+      "post_reset_successes": 1,
+      "promoted_operator_count": 0,
+      "proposal_acceptance_rate": 0.125,
+      "proposal_acceptances": 4,
+      "target_acquisition_rate": 0.03125,
+      "target_acquisitions": 1,
+      "target_tasks": 32
+    },
+    "A3_NO_GUIDANCE_SAME_MEMORY": {
+      "activation_status": "unactivated_inconclusive",
+      "cpu_seconds": 0.09062747700954787,
+      "gpu_seconds": 0.0,
+      "post_reset_success_rate": 0.03125,
+      "post_reset_successes": 1,
+      "promoted_operator_count": 0,
+      "proposal_acceptance_rate": 0.125,
+      "proposal_acceptances": 4,
+      "target_acquisition_rate": 0.03125,
+      "target_acquisitions": 1,
+      "target_tasks": 32
+    },
+    "A3_VERIFIED_ADAPTIVE_LIBRARY": {
+      "activation_status": "unactivated_inconclusive",
+      "cpu_seconds": 0.0384072998422198,
+      "gpu_seconds": 0.0,
+      "post_reset_success_rate": 0.03125,
+      "post_reset_successes": 1,
+      "promoted_operator_count": 0,
+      "proposal_acceptance_rate": 0.125,
+      "proposal_acceptances": 4,
+      "target_acquisition_rate": 0.03125,
+      "target_acquisitions": 1,
+      "target_tasks": 32
+    }
+  }
+}

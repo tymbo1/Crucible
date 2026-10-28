@@ -1,0 +1,2983 @@
+{
+  "ablation_memory_digest": "957faa8a8c28e8cb85355fe220c8038499f0ef8ebea8579f2575d69966db83a3",
+  "ablation_records": [
+    {
+      "binding_vocabulary": {
+        "arg0": [
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 1
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "op": "const",
+            "value": 1
+          },
+          {
+            "op": "const",
+            "value": 3
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 6
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 4
+              }
+            ],
+            "op": "sub_mod10"
+          }
+        ],
+        "arg1": [
+          {
+            "op": "const",
+            "value": 3
+          },
+          {
+            "op": "const",
+            "value": 2
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "op": "const",
+            "value": 0
+          },
+          {
+            "op": "const",
+            "value": 4
+          },
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "op": "const",
+            "value": 8
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 5
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "op": "const",
+            "value": 9
+          },
+          {
+            "op": "const",
+            "value": 6
+          },
+          {
+            "op": "const",
+            "value": 5
+          }
+        ]
+      },
+      "canonical_motif": {
+        "args": [
+          {
+            "id": "arg0",
+            "op": "hole",
+            "type": "expr_mod10"
+          },
+          {
+            "id": "arg1",
+            "op": "hole",
+            "type": "expr_mod10"
+          }
+        ],
+        "op": "add_mod10",
+        "schema_version": "crucible.operator.motif.v1"
+      },
+      "failure_counts": {
+        "applicability_matching": 0,
+        "candidate_construction": 0,
+        "incorrect_output": 7,
+        "verification": 0
+      },
+      "lower_bound_95": 0.0,
+      "operator_id": "a3_verified_adaptive_library_operator_0",
+      "provenance": {
+        "arm": "A3_VERIFIED_ADAPTIVE_LIBRARY",
+        "candidate_construction": "typed-hole motif instantiation",
+        "source_procedures_independently_verified": 32,
+        "target_labels_used": false,
+        "validation_selection_rule": "operator-specific applicable_root_signature or operator_id"
+      },
+      "root_signature": "add_mod10",
+      "schema_version": "crucible.operator.v3",
+      "source_refs": [
+        "source_add_mod10_00",
+        "source_add_mod10_01",
+        "source_add_mod10_02",
+        "source_add_mod10_03",
+        "source_add_mod10_04",
+        "source_add_mod10_05",
+        "source_add_mod10_06",
+        "source_add_mod10_07",
+        "source_add_mod10_08",
+        "source_add_mod10_09",
+        "source_add_mod10_10",
+        "source_add_mod10_11",
+        "source_add_mod10_12",
+        "source_add_mod10_13",
+        "source_add_mod10_14",
+        "source_add_mod10_15"
+      ],
+      "status": "candidate",
+      "successes": 9,
+      "trials": 16,
+      "typed_holes": [
+        {
+          "id": "arg0",
+          "path": [
+            "args",
+            0
+          ],
+          "type": "expr_mod10"
+        },
+        {
+          "id": "arg1",
+          "path": [
+            "args",
+            1
+          ],
+          "type": "expr_mod10"
+        }
+      ],
+      "validation_refs": [
+        "operator_validation_add_mod10_00",
+        "operator_validation_add_mod10_01",
+        "operator_validation_add_mod10_02",
+        "operator_validation_add_mod10_03",
+        "operator_validation_add_mod10_04",
+        "operator_validation_add_mod10_05",
+        "operator_validation_add_mod10_06",
+        "operator_validation_add_mod10_07",
+        "operator_validation_add_mod10_08",
+        "operator_validation_add_mod10_09",
+        "operator_validation_add_mod10_10",
+        "operator_validation_add_mod10_11",
+        "operator_validation_add_mod10_12",
+        "operator_validation_add_mod10_13",
+        "operator_validation_add_mod10_14",
+        "operator_validation_add_mod10_15"
+      ],
+      "validation_trace": [
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "575e36670ce173c1a98451efb87b1e31e1d26c7d791543afc2c4dce4a889029d",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_00",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 3,
+          "demo_match_count": 4,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "296d10520775ac67a2a4d653e5f28d4420d3161890c32d2ec6aca2cc3ca306a7",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_01"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "732c2fcbf13c2c1fdfc5df648a4596497e6a7bed4d9c6e18f74ab3a604b04dd7",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_02",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 1,
+          "demo_match_count": 5,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "654f9c5859152c2b5c42109d69618e34a687b97354bb16aa1c4fe9c7dfc17de8",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_03"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "f47c67cc748da236e496726957e93672e5156477dd3731ecd445d40eac76fbaf",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_04",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 3,
+          "demo_match_count": 5,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "aca5b2b5b11c6b55a150d4e5e5c3401ec1942f808608dae270de50d2760f1b8b",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_05"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "b7173780cef6273299d26ed48bb5f010283c37af202639bd0a53c9c9b29e925c",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_06",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "fc03b7299a7a0ea316814706f04fdf7910b45fead01562f7e3f0def7dcf0f1ee",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_07",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 4,
+          "demo_match_count": 6,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "c4c631c539961e689216c2b50f1e038ca2e611f1d6bef50e359d7582790af952",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_08"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "e020153891a450dded946efd9dd0164aa84655a64828822a9172636d446b94be",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_09",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "d9c5169fd40f8b93b8fe11942117007d9c9ca017b80fffef1926bd9f20b3ff7e",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_10",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "531593cd75c2596359668cddea6e37291cfc10358c2dbc8c4a112699b6a5837c",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_11",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 7,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "cb1338a592739d481edbe26613c54a1cdb3988473b64b397071552f3b846a860",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_12"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 1,
+          "demo_match_count": 4,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "f47c67cc748da236e496726957e93672e5156477dd3731ecd445d40eac76fbaf",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_13"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "61272901f25a73dadc6400cdd1cd568b68282340e53cc24370734f20cb013135",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_14",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 1,
+          "demo_match_count": 5,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "531593cd75c2596359668cddea6e37291cfc10358c2dbc8c4a112699b6a5837c",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_15"
+        }
+      ]
+    },
+    {
+      "binding_vocabulary": {
+        "arg0": [
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 1
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "op": "const",
+            "value": 1
+          },
+          {
+            "op": "const",
+            "value": 3
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 6
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "op": "const",
+            "value": 0
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "op": "const",
+            "value": 4
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 5
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "op": "const",
+            "value": 9
+          }
+        ],
+        "arg1": [
+          {
+            "op": "const",
+            "value": 1
+          },
+          {
+            "op": "const",
+            "value": 2
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 6
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "op": "const",
+            "value": 4
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "op": "const",
+            "value": 8
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 5
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 7
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "op": "const",
+            "value": 6
+          },
+          {
+            "name": "a",
+            "op": "var"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "sub_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 4
+              }
+            ],
+            "op": "sub_mod10"
+          }
+        ]
+      },
+      "canonical_motif": {
+        "args": [
+          {
+            "id": "arg0",
+            "op": "hole",
+            "type": "expr_mod10"
+          },
+          {
+            "id": "arg1",
+            "op": "hole",
+            "type": "expr_mod10"
+          }
+        ],
+        "op": "sub_mod10",
+        "schema_version": "crucible.operator.motif.v1"
+      },
+      "failure_counts": {
+        "applicability_matching": 0,
+        "candidate_construction": 0,
+        "incorrect_output": 5,
+        "verification": 0
+      },
+      "lower_bound_95": 0.0,
+      "operator_id": "a3_verified_adaptive_library_operator_1",
+      "provenance": {
+        "arm": "A3_VERIFIED_ADAPTIVE_LIBRARY",
+        "candidate_construction": "typed-hole motif instantiation",
+        "source_procedures_independently_verified": 32,
+        "target_labels_used": false,
+        "validation_selection_rule": "operator-specific applicable_root_signature or operator_id"
+      },
+      "root_signature": "sub_mod10",
+      "schema_version": "crucible.operator.v3",
+      "source_refs": [
+        "source_sub_mod10_00",
+        "source_sub_mod10_01",
+        "source_sub_mod10_02",
+        "source_sub_mod10_03",
+        "source_sub_mod10_04",
+        "source_sub_mod10_05",
+        "source_sub_mod10_06",
+        "source_sub_mod10_07",
+        "source_sub_mod10_08",
+        "source_sub_mod10_09",
+        "source_sub_mod10_10",
+        "source_sub_mod10_11",
+        "source_sub_mod10_12",
+        "source_sub_mod10_13",
+        "source_sub_mod10_14",
+        "source_sub_mod10_15"
+      ],
+      "status": "candidate",
+      "successes": 11,
+      "trials": 16,
+      "typed_holes": [
+        {
+          "id": "arg0",
+          "path": [
+            "args",
+            0
+          ],
+          "type": "expr_mod10"
+        },
+        {
+          "id": "arg1",
+          "path": [
+            "args",
+            1
+          ],
+          "type": "expr_mod10"
+        }
+      ],
+      "validation_refs": [
+        "operator_validation_sub_mod10_00",
+        "operator_validation_sub_mod10_01",
+        "operator_validation_sub_mod10_02",
+        "operator_validation_sub_mod10_03",
+        "operator_validation_sub_mod10_04",
+        "operator_validation_sub_mod10_05",
+        "operator_validation_sub_mod10_06",
+        "operator_validation_sub_mod10_07",
+        "operator_validation_sub_mod10_08",
+        "operator_validation_sub_mod10_09",
+        "operator_validation_sub_mod10_10",
+        "operator_validation_sub_mod10_11",
+        "operator_validation_sub_mod10_12",
+        "operator_validation_sub_mod10_13",
+        "operator_validation_sub_mod10_14",
+        "operator_validation_sub_mod10_15"
+      ],
+      "validation_trace": [
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "17f137242db28738116c18e779831d36854ffd53c08c93a77b605968b618aec2",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_00",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "78d3d18e2f140d6c76eae03032c9b604f7fbb11fff6ecc94dbff6e02ddce1d96",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_01",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 1,
+          "demo_match_count": 4,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "a9278053bf452c9b2b78928093823d8663756c901438c1ef40fc8a56d543b36e",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_sub_mod10_02"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 2,
+          "demo_match_count": 4,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "ac1ecd176fcbe35a0e4fb1f15cc64676946b8e3f6f0c1763bb2160eb6e33a76b",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_sub_mod10_03"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 1,
+          "demo_match_count": 5,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "8f94d8b141375899ffdb3a69b87698c99c41c019bebdd86416b46ca59f6db983",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_sub_mod10_04"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "755c99ebdc65ad3651c7f50ec995986d2c1c239b86e244b706c35b3190e181a9",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_05",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "9fdeadd366422cd93fa890fd8de072d32ae9598db1322f85cad3dcf28885ac8b",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_06",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "054fbe415869ca9d5b9b9c419fdaf809cfc2754ad8eea91cc79e3507e503d6eb",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_07",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "aa7cfffe37880a2a55df9b649af13f2067257dfc26d5a9c2f8b0747bf12ca332",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_08",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "a25e4c368d689534774aba21253fd410fe6cfe453c98788ba286c72f9dff8c01",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_09",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "73053a74e3fe067b455f52e72907bcf75dbe7be3792175563fb02be6cc026af6",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_10",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "58b75fe990a8ac7440f608430a1262caaab2a072df99a2d77a266ac11735af43",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_11",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 7,
+          "demo_match_count": 6,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "6c3c19ca7448ad3bf1fccb16a4cdcb5b4aa3f9da92b306bba42af670e3ed105a",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_sub_mod10_12"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "457b90106870e5d0ea531c30d8ab1cc534d5e34c7ab8e79ea15d14382b6690a9",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_13",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 4,
+          "demo_match_count": 6,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "3f9ce0ac10c8f35afcd4ef0043f970287408b14f9dfbb8a61bd97d18ecda920e",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_sub_mod10_14"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "4a9174fb287e0d8154724977781589cb10e520f6a346502cfeb6d222c08d608f",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_15",
+          "verification_checks": 4
+        }
+      ]
+    }
+  ],
+  "active_and_ablation_memory_equal": true,
+  "active_memory_digest": "957faa8a8c28e8cb85355fe220c8038499f0ef8ebea8579f2575d69966db83a3",
+  "active_records": [
+    {
+      "binding_vocabulary": {
+        "arg0": [
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 1
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "op": "const",
+            "value": 1
+          },
+          {
+            "op": "const",
+            "value": 3
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 6
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 4
+              }
+            ],
+            "op": "sub_mod10"
+          }
+        ],
+        "arg1": [
+          {
+            "op": "const",
+            "value": 3
+          },
+          {
+            "op": "const",
+            "value": 2
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "op": "const",
+            "value": 0
+          },
+          {
+            "op": "const",
+            "value": 4
+          },
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "op": "const",
+            "value": 8
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 5
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "op": "const",
+            "value": 9
+          },
+          {
+            "op": "const",
+            "value": 6
+          },
+          {
+            "op": "const",
+            "value": 5
+          }
+        ]
+      },
+      "canonical_motif": {
+        "args": [
+          {
+            "id": "arg0",
+            "op": "hole",
+            "type": "expr_mod10"
+          },
+          {
+            "id": "arg1",
+            "op": "hole",
+            "type": "expr_mod10"
+          }
+        ],
+        "op": "add_mod10",
+        "schema_version": "crucible.operator.motif.v1"
+      },
+      "failure_counts": {
+        "applicability_matching": 0,
+        "candidate_construction": 0,
+        "incorrect_output": 7,
+        "verification": 0
+      },
+      "lower_bound_95": 0.0,
+      "operator_id": "a3_verified_adaptive_library_operator_0",
+      "provenance": {
+        "arm": "A3_VERIFIED_ADAPTIVE_LIBRARY",
+        "candidate_construction": "typed-hole motif instantiation",
+        "source_procedures_independently_verified": 32,
+        "target_labels_used": false,
+        "validation_selection_rule": "operator-specific applicable_root_signature or operator_id"
+      },
+      "root_signature": "add_mod10",
+      "schema_version": "crucible.operator.v3",
+      "source_refs": [
+        "source_add_mod10_00",
+        "source_add_mod10_01",
+        "source_add_mod10_02",
+        "source_add_mod10_03",
+        "source_add_mod10_04",
+        "source_add_mod10_05",
+        "source_add_mod10_06",
+        "source_add_mod10_07",
+        "source_add_mod10_08",
+        "source_add_mod10_09",
+        "source_add_mod10_10",
+        "source_add_mod10_11",
+        "source_add_mod10_12",
+        "source_add_mod10_13",
+        "source_add_mod10_14",
+        "source_add_mod10_15"
+      ],
+      "status": "candidate",
+      "successes": 9,
+      "trials": 16,
+      "typed_holes": [
+        {
+          "id": "arg0",
+          "path": [
+            "args",
+            0
+          ],
+          "type": "expr_mod10"
+        },
+        {
+          "id": "arg1",
+          "path": [
+            "args",
+            1
+          ],
+          "type": "expr_mod10"
+        }
+      ],
+      "validation_refs": [
+        "operator_validation_add_mod10_00",
+        "operator_validation_add_mod10_01",
+        "operator_validation_add_mod10_02",
+        "operator_validation_add_mod10_03",
+        "operator_validation_add_mod10_04",
+        "operator_validation_add_mod10_05",
+        "operator_validation_add_mod10_06",
+        "operator_validation_add_mod10_07",
+        "operator_validation_add_mod10_08",
+        "operator_validation_add_mod10_09",
+        "operator_validation_add_mod10_10",
+        "operator_validation_add_mod10_11",
+        "operator_validation_add_mod10_12",
+        "operator_validation_add_mod10_13",
+        "operator_validation_add_mod10_14",
+        "operator_validation_add_mod10_15"
+      ],
+      "validation_trace": [
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "575e36670ce173c1a98451efb87b1e31e1d26c7d791543afc2c4dce4a889029d",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_00",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 3,
+          "demo_match_count": 4,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "296d10520775ac67a2a4d653e5f28d4420d3161890c32d2ec6aca2cc3ca306a7",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_01"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "732c2fcbf13c2c1fdfc5df648a4596497e6a7bed4d9c6e18f74ab3a604b04dd7",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_02",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 1,
+          "demo_match_count": 5,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "654f9c5859152c2b5c42109d69618e34a687b97354bb16aa1c4fe9c7dfc17de8",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_03"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "f47c67cc748da236e496726957e93672e5156477dd3731ecd445d40eac76fbaf",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_04",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 3,
+          "demo_match_count": 5,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "aca5b2b5b11c6b55a150d4e5e5c3401ec1942f808608dae270de50d2760f1b8b",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_05"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "b7173780cef6273299d26ed48bb5f010283c37af202639bd0a53c9c9b29e925c",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_06",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "fc03b7299a7a0ea316814706f04fdf7910b45fead01562f7e3f0def7dcf0f1ee",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_07",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 4,
+          "demo_match_count": 6,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "c4c631c539961e689216c2b50f1e038ca2e611f1d6bef50e359d7582790af952",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_08"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "e020153891a450dded946efd9dd0164aa84655a64828822a9172636d446b94be",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_09",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "d9c5169fd40f8b93b8fe11942117007d9c9ca017b80fffef1926bd9f20b3ff7e",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_10",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "531593cd75c2596359668cddea6e37291cfc10358c2dbc8c4a112699b6a5837c",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_11",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 7,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "cb1338a592739d481edbe26613c54a1cdb3988473b64b397071552f3b846a860",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_12"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 1,
+          "demo_match_count": 4,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "f47c67cc748da236e496726957e93672e5156477dd3731ecd445d40eac76fbaf",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_13"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "61272901f25a73dadc6400cdd1cd568b68282340e53cc24370734f20cb013135",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_add_mod10_14",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 1,
+          "demo_match_count": 5,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "531593cd75c2596359668cddea6e37291cfc10358c2dbc8c4a112699b6a5837c",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_add_mod10_15"
+        }
+      ]
+    },
+    {
+      "binding_vocabulary": {
+        "arg0": [
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 1
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "op": "const",
+            "value": 1
+          },
+          {
+            "op": "const",
+            "value": 3
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 6
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "op": "const",
+            "value": 0
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "op": "const",
+            "value": 4
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 5
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "op": "const",
+            "value": 9
+          }
+        ],
+        "arg1": [
+          {
+            "op": "const",
+            "value": 1
+          },
+          {
+            "op": "const",
+            "value": 2
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 6
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "op": "const",
+            "value": 4
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "op": "const",
+            "value": 8
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 5
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 7
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "op": "const",
+            "value": 6
+          },
+          {
+            "name": "a",
+            "op": "var"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "sub_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 4
+              }
+            ],
+            "op": "sub_mod10"
+          }
+        ]
+      },
+      "canonical_motif": {
+        "args": [
+          {
+            "id": "arg0",
+            "op": "hole",
+            "type": "expr_mod10"
+          },
+          {
+            "id": "arg1",
+            "op": "hole",
+            "type": "expr_mod10"
+          }
+        ],
+        "op": "sub_mod10",
+        "schema_version": "crucible.operator.motif.v1"
+      },
+      "failure_counts": {
+        "applicability_matching": 0,
+        "candidate_construction": 0,
+        "incorrect_output": 5,
+        "verification": 0
+      },
+      "lower_bound_95": 0.0,
+      "operator_id": "a3_verified_adaptive_library_operator_1",
+      "provenance": {
+        "arm": "A3_VERIFIED_ADAPTIVE_LIBRARY",
+        "candidate_construction": "typed-hole motif instantiation",
+        "source_procedures_independently_verified": 32,
+        "target_labels_used": false,
+        "validation_selection_rule": "operator-specific applicable_root_signature or operator_id"
+      },
+      "root_signature": "sub_mod10",
+      "schema_version": "crucible.operator.v3",
+      "source_refs": [
+        "source_sub_mod10_00",
+        "source_sub_mod10_01",
+        "source_sub_mod10_02",
+        "source_sub_mod10_03",
+        "source_sub_mod10_04",
+        "source_sub_mod10_05",
+        "source_sub_mod10_06",
+        "source_sub_mod10_07",
+        "source_sub_mod10_08",
+        "source_sub_mod10_09",
+        "source_sub_mod10_10",
+        "source_sub_mod10_11",
+        "source_sub_mod10_12",
+        "source_sub_mod10_13",
+        "source_sub_mod10_14",
+        "source_sub_mod10_15"
+      ],
+      "status": "candidate",
+      "successes": 11,
+      "trials": 16,
+      "typed_holes": [
+        {
+          "id": "arg0",
+          "path": [
+            "args",
+            0
+          ],
+          "type": "expr_mod10"
+        },
+        {
+          "id": "arg1",
+          "path": [
+            "args",
+            1
+          ],
+          "type": "expr_mod10"
+        }
+      ],
+      "validation_refs": [
+        "operator_validation_sub_mod10_00",
+        "operator_validation_sub_mod10_01",
+        "operator_validation_sub_mod10_02",
+        "operator_validation_sub_mod10_03",
+        "operator_validation_sub_mod10_04",
+        "operator_validation_sub_mod10_05",
+        "operator_validation_sub_mod10_06",
+        "operator_validation_sub_mod10_07",
+        "operator_validation_sub_mod10_08",
+        "operator_validation_sub_mod10_09",
+        "operator_validation_sub_mod10_10",
+        "operator_validation_sub_mod10_11",
+        "operator_validation_sub_mod10_12",
+        "operator_validation_sub_mod10_13",
+        "operator_validation_sub_mod10_14",
+        "operator_validation_sub_mod10_15"
+      ],
+      "validation_trace": [
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "17f137242db28738116c18e779831d36854ffd53c08c93a77b605968b618aec2",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_00",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "78d3d18e2f140d6c76eae03032c9b604f7fbb11fff6ecc94dbff6e02ddce1d96",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_01",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 1,
+          "demo_match_count": 4,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "a9278053bf452c9b2b78928093823d8663756c901438c1ef40fc8a56d543b36e",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_sub_mod10_02"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 2,
+          "demo_match_count": 4,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "ac1ecd176fcbe35a0e4fb1f15cc64676946b8e3f6f0c1763bb2160eb6e33a76b",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_sub_mod10_03"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 1,
+          "demo_match_count": 5,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "8f94d8b141375899ffdb3a69b87698c99c41c019bebdd86416b46ca59f6db983",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_sub_mod10_04"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "755c99ebdc65ad3651c7f50ec995986d2c1c239b86e244b706c35b3190e181a9",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_05",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "9fdeadd366422cd93fa890fd8de072d32ae9598db1322f85cad3dcf28885ac8b",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_06",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "054fbe415869ca9d5b9b9c419fdaf809cfc2754ad8eea91cc79e3507e503d6eb",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_07",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "aa7cfffe37880a2a55df9b649af13f2067257dfc26d5a9c2f8b0747bf12ca332",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_08",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "a25e4c368d689534774aba21253fd410fe6cfe453c98788ba286c72f9dff8c01",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_09",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "73053a74e3fe067b455f52e72907bcf75dbe7be3792175563fb02be6cc026af6",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_10",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "58b75fe990a8ac7440f608430a1262caaab2a072df99a2d77a266ac11735af43",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_11",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 7,
+          "demo_match_count": 6,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "6c3c19ca7448ad3bf1fccb16a4cdcb5b4aa3f9da92b306bba42af670e3ed105a",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_sub_mod10_12"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "457b90106870e5d0ea531c30d8ab1cc534d5e34c7ab8e79ea15d14382b6690a9",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_13",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 4,
+          "demo_match_count": 6,
+          "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+          "failure_stage": "incorrect_output",
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "3f9ce0ac10c8f35afcd4ef0043f970287408b14f9dfbb8a61bd97d18ecda920e",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": false,
+          "task_id": "operator_validation_sub_mod10_14"
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_1",
+          "selected_candidate_hash": "4a9174fb287e0d8154724977781589cb10e520f6a346502cfeb6d222c08d608f",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "operator_validation_sub_mod10_15",
+          "verification_checks": 4
+        }
+      ]
+    }
+  ],
+  "promoted_operator_ids": [],
+  "sham_records": [
+    {
+      "binding_vocabulary": {
+        "arg0": [
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 1
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "op": "const",
+            "value": 1
+          },
+          {
+            "op": "const",
+            "value": 3
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 6
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 4
+              }
+            ],
+            "op": "sub_mod10"
+          }
+        ],
+        "arg1": [
+          {
+            "op": "const",
+            "value": 3
+          },
+          {
+            "op": "const",
+            "value": 2
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "op": "const",
+            "value": 0
+          },
+          {
+            "op": "const",
+            "value": 4
+          },
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "op": "const",
+            "value": 8
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 5
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "op": "const",
+            "value": 9
+          },
+          {
+            "op": "const",
+            "value": 6
+          },
+          {
+            "op": "const",
+            "value": 5
+          }
+        ]
+      },
+      "canonical_motif": {
+        "args": [
+          {
+            "id": "arg0",
+            "op": "hole",
+            "type": "expr_mod10"
+          },
+          {
+            "id": "arg1",
+            "op": "hole",
+            "type": "expr_mod10"
+          }
+        ],
+        "op": "add_mod10",
+        "schema_version": "crucible.operator.motif.v1"
+      },
+      "failure_counts": {},
+      "lower_bound_95": 0.0,
+      "operator_id": "a2_sham_operator_library_operator_0",
+      "provenance": {
+        "arm": "A2_SHAM_OPERATOR_LIBRARY",
+        "candidate_construction": "typed-hole motif instantiation",
+        "source_procedures_independently_verified": 32,
+        "target_labels_used": false,
+        "validation_selection_rule": "operator-specific applicable_root_signature or operator_id"
+      },
+      "root_signature": "add_mod10",
+      "schema_version": "crucible.operator.v3",
+      "source_refs": [
+        "source_add_mod10_00",
+        "source_add_mod10_01",
+        "source_add_mod10_02",
+        "source_add_mod10_03",
+        "source_add_mod10_04",
+        "source_add_mod10_05",
+        "source_add_mod10_06",
+        "source_add_mod10_07",
+        "source_add_mod10_08",
+        "source_add_mod10_09",
+        "source_add_mod10_10",
+        "source_add_mod10_11",
+        "source_add_mod10_12",
+        "source_add_mod10_13",
+        "source_add_mod10_14",
+        "source_add_mod10_15"
+      ],
+      "status": "sham",
+      "successes": 0,
+      "trials": 16,
+      "typed_holes": [
+        {
+          "id": "arg0",
+          "path": [
+            "args",
+            0
+          ],
+          "type": "expr_mod10"
+        },
+        {
+          "id": "arg1",
+          "path": [
+            "args",
+            1
+          ],
+          "type": "expr_mod10"
+        }
+      ],
+      "validation_refs": [
+        "operator_validation_add_mod10_00",
+        "operator_validation_add_mod10_01",
+        "operator_validation_add_mod10_02",
+        "operator_validation_add_mod10_03",
+        "operator_validation_add_mod10_04",
+        "operator_validation_add_mod10_05",
+        "operator_validation_add_mod10_06",
+        "operator_validation_add_mod10_07",
+        "operator_validation_add_mod10_08",
+        "operator_validation_add_mod10_09",
+        "operator_validation_add_mod10_10",
+        "operator_validation_add_mod10_11",
+        "operator_validation_add_mod10_12",
+        "operator_validation_add_mod10_13",
+        "operator_validation_add_mod10_14",
+        "operator_validation_add_mod10_15"
+      ],
+      "validation_trace": []
+    },
+    {
+      "binding_vocabulary": {
+        "arg0": [
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 1
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "op": "const",
+            "value": 1
+          },
+          {
+            "op": "const",
+            "value": 3
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 6
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "op": "const",
+            "value": 0
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "op": "const",
+            "value": 4
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 5
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "op": "const",
+            "value": 9
+          }
+        ],
+        "arg1": [
+          {
+            "op": "const",
+            "value": 1
+          },
+          {
+            "op": "const",
+            "value": 2
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 6
+              }
+            ],
+            "op": "xor_bits_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "add_mod10"
+          },
+          {
+            "op": "const",
+            "value": 4
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "min"
+          },
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "op": "const",
+            "value": 8
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 5
+              }
+            ],
+            "op": "mul_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 7
+              }
+            ],
+            "op": "max"
+          },
+          {
+            "op": "const",
+            "value": 6
+          },
+          {
+            "name": "a",
+            "op": "var"
+          },
+          {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "sub_mod10"
+          },
+          {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 4
+              }
+            ],
+            "op": "sub_mod10"
+          }
+        ]
+      },
+      "canonical_motif": {
+        "args": [
+          {
+            "id": "arg0",
+            "op": "hole",
+            "type": "expr_mod10"
+          },
+          {
+            "id": "arg1",
+            "op": "hole",
+            "type": "expr_mod10"
+          }
+        ],
+        "op": "sub_mod10",
+        "schema_version": "crucible.operator.motif.v1"
+      },
+      "failure_counts": {},
+      "lower_bound_95": 0.0,
+      "operator_id": "a2_sham_operator_library_operator_1",
+      "provenance": {
+        "arm": "A2_SHAM_OPERATOR_LIBRARY",
+        "candidate_construction": "typed-hole motif instantiation",
+        "source_procedures_independently_verified": 32,
+        "target_labels_used": false,
+        "validation_selection_rule": "operator-specific applicable_root_signature or operator_id"
+      },
+      "root_signature": "sub_mod10",
+      "schema_version": "crucible.operator.v3",
+      "source_refs": [
+        "source_sub_mod10_00",
+        "source_sub_mod10_01",
+        "source_sub_mod10_02",
+        "source_sub_mod10_03",
+        "source_sub_mod10_04",
+        "source_sub_mod10_05",
+        "source_sub_mod10_06",
+        "source_sub_mod10_07",
+        "source_sub_mod10_08",
+        "source_sub_mod10_09",
+        "source_sub_mod10_10",
+        "source_sub_mod10_11",
+        "source_sub_mod10_12",
+        "source_sub_mod10_13",
+        "source_sub_mod10_14",
+        "source_sub_mod10_15"
+      ],
+      "status": "sham",
+      "successes": 0,
+      "trials": 16,
+      "typed_holes": [
+        {
+          "id": "arg0",
+          "path": [
+            "args",
+            0
+          ],
+          "type": "expr_mod10"
+        },
+        {
+          "id": "arg1",
+          "path": [
+            "args",
+            1
+          ],
+          "type": "expr_mod10"
+        }
+      ],
+      "validation_refs": [
+        "operator_validation_sub_mod10_00",
+        "operator_validation_sub_mod10_01",
+        "operator_validation_sub_mod10_02",
+        "operator_validation_sub_mod10_03",
+        "operator_validation_sub_mod10_04",
+        "operator_validation_sub_mod10_05",
+        "operator_validation_sub_mod10_06",
+        "operator_validation_sub_mod10_07",
+        "operator_validation_sub_mod10_08",
+        "operator_validation_sub_mod10_09",
+        "operator_validation_sub_mod10_10",
+        "operator_validation_sub_mod10_11",
+        "operator_validation_sub_mod10_12",
+        "operator_validation_sub_mod10_13",
+        "operator_validation_sub_mod10_14",
+        "operator_validation_sub_mod10_15"
+      ],
+      "validation_trace": []
+    }
+  ]
+}

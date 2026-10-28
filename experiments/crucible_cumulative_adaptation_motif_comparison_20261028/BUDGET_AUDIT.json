@@ -1,0 +1,45 @@
+{
+  "arms": {
+    "A0_FROZEN_INDUCTION": {
+      "candidate_construction_units": 512,
+      "candidate_slots": 128,
+      "gpu_seconds": 0.0,
+      "operator_lookup_slots": 128,
+      "post_reset_checks": 256,
+      "target_rows": 32,
+      "verifier_calls": 128,
+      "verifier_examples": 1024
+    },
+    "A2_SHAM_OPERATOR_LIBRARY": {
+      "candidate_construction_units": 512,
+      "candidate_slots": 128,
+      "gpu_seconds": 0.0,
+      "operator_lookup_slots": 128,
+      "post_reset_checks": 256,
+      "target_rows": 32,
+      "verifier_calls": 128,
+      "verifier_examples": 1024
+    },
+    "A3_NO_GUIDANCE_SAME_MEMORY": {
+      "candidate_construction_units": 512,
+      "candidate_slots": 128,
+      "gpu_seconds": 0.0,
+      "operator_lookup_slots": 128,
+      "post_reset_checks": 256,
+      "target_rows": 32,
+      "verifier_calls": 128,
+      "verifier_examples": 1024
+    },
+    "A3_VERIFIED_ADAPTIVE_LIBRARY": {
+      "candidate_construction_units": 512,
+      "candidate_slots": 128,
+      "gpu_seconds": 0.0,
+      "operator_lookup_slots": 128,
+      "post_reset_checks": 256,
+      "target_rows": 32,
+      "verifier_calls": 128,
+      "verifier_examples": 1024
+    }
+  },
+  "matched_candidate_and_verifier_budgets": true
+}

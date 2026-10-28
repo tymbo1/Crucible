@@ -1231,6 +1231,34 @@
         "experiments/crucible_cumulative_adaptation_runner_validation_20261028/RUNNER_READINESS_REPORT.json"
       ],
       "novelty_terms": ["operator v3", "typed-hole execution", "operator-specific validation", "motif candidate construction", "source-to-proposal pathway"]
+    },
+    {
+      "id": "cumulative-adaptation-motif-comparison-exploratory-v1",
+      "status": "INCONCLUSIVE",
+      "title": "Exploratory executable-operator comparison with fresh target manifest",
+      "hypothesis": "Verified typed-hole operator guidance will improve acquisition of unfamiliar target procedures relative to frozen induction and a sham library when the operator activates under an independently allocated 16-task validation panel.",
+      "mechanisms": ["operator-specific-validation", "typed-hole-motif", "proposal-guidance", "memory-guidance-ablation", "sealed-target-evaluation"],
+      "interventions": ["fresh 32-source manifest", "16 applicable validation tasks per eligible root", "A0 frozen", "A2 sham", "A3 adaptive", "A3 no-guidance same-memory ablation", "ordered CPU reservoir"],
+      "controls": ["applicability assigned before correctness evaluation", "source/validation/target structural and functional separation", "frozen-pool exclusion", "matched candidate/verifier budgets", "sealed answers opened after proposal digest", "post-reset execution", "paired task comparison", "no GPU"],
+      "result": "The fresh manifest contained 32 source procedures, 16 independently allocated validation tasks for add_mod10 and 16 for sub_mod10, and 32 target tasks. Validation produced add_mod10 9/16 and sub_mod10 11/16, so neither operator met the unchanged 16/16 promotion threshold. No adaptive motif candidates were constructed. A0, A2, A3 and the A3 no-guidance same-memory ablation each accepted 4/32 proposals from demonstrations, but only 1/32 completed the sealed post-reset acquisition check; all paired task-level contrasts were zero. The ablation shared identical operator memory with A3, but the mechanism was unactivated, so no causal guidance conclusion is supported.",
+      "limits": ["Exploratory result because the manifest and optional arm changed after the terminated protocol", "No operator promotion means adaptive target construction was not exercised in this comparison", "The run does not distinguish insufficient source binding coverage from candidate ambiguity as the cause of validation failures", "The executable motif mechanism remains engineered rather than neurally learned", "The digit-expression DSL and deterministic verifier remain bounded scaffolding", "No 288-task benchmark was rerun"],
+      "unresolved": ["Which validation failures should be addressed by source coverage versus candidate-ranking design", "Whether an activated operator improves target acquisition", "Whether the same-memory no-guidance ablation remains matched after activation", "Whether the mechanism transfers beyond the digit-expression DSL"],
+      "artifacts": [
+        "tools/run_crucible_cumulative_adaptation_motif_comparison_20261028.py",
+        "tools/crucible_cumulative_adaptation_scientific_runner_20261028.py",
+        "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/REPORT.md",
+        "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/EXPLORATORY_REPORT.json",
+        "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/OPERATOR_PROMOTION.json",
+        "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/ARM_SUMMARIES.json",
+        "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/PAIRED_COMPARISON.json",
+        "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/TASK_RESULTS.jsonl",
+        "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/NEWLY_CONSTRUCTED_CANDIDATES.jsonl",
+        "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/MANIFEST_AUDIT.json",
+        "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/BUDGET_AUDIT.json",
+        "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/LEAKAGE_AUDIT.json",
+        "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/HASHES.json"
+      ],
+      "novelty_terms": ["fresh operator-validation manifest", "16-task applicability allocation", "no-guidance same-memory ablation", "unactivated adaptive comparison", "measured target acquisition"]
     }
   ]
 }

@@ -1,0 +1,77 @@
+{
+  "arms": [
+    "A0_FROZEN_INDUCTION",
+    "A2_SHAM_OPERATOR_LIBRARY",
+    "A3_VERIFIED_ADAPTIVE_LIBRARY",
+    "A3_NO_GUIDANCE_SAME_MEMORY"
+  ],
+  "classification": "exploratory_manifest_changed",
+  "cpu_accelerator": {
+    "name": "ssre_ordered_process_reservoir",
+    "per_arm": {
+      "A0_FROZEN_INDUCTION": {
+        "name": "ssre_ordered_process_reservoir",
+        "reference": {
+          "available": true,
+          "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+          "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+        },
+        "task_count": 32,
+        "wall_seconds": 0.05862322502071038,
+        "window": 4,
+        "workers": 2
+      },
+      "A2_SHAM_OPERATOR_LIBRARY": {
+        "name": "ssre_ordered_process_reservoir",
+        "reference": {
+          "available": true,
+          "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+          "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+        },
+        "task_count": 32,
+        "wall_seconds": 0.05263483599992469,
+        "window": 4,
+        "workers": 2
+      },
+      "A3_NO_GUIDANCE_SAME_MEMORY": {
+        "name": "ssre_ordered_process_reservoir",
+        "reference": {
+          "available": true,
+          "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+          "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+        },
+        "task_count": 32,
+        "wall_seconds": 0.13414307500352152,
+        "window": 4,
+        "workers": 2
+      },
+      "A3_VERIFIED_ADAPTIVE_LIBRARY": {
+        "name": "ssre_ordered_process_reservoir",
+        "reference": {
+          "available": true,
+          "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+          "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+        },
+        "task_count": 32,
+        "wall_seconds": 0.05616514501161873,
+        "window": 4,
+        "workers": 2
+      }
+    },
+    "reference": {
+      "available": true,
+      "path": "/home/timbushnell/crucible_cross_gpu_4090_v1_20261020/v3/cpu_replay.py",
+      "sha256": "105c3120d07a4d29e9371713de12829aa913a68e557f0507f3ad93336a25f0f1"
+    },
+    "window": 4,
+    "workers": 2
+  },
+  "gpu_allocated": false,
+  "promotion_threshold": "16/16 with lower_bound_95 >= 0.80",
+  "registered_scientific_result": false,
+  "schema_version": "crucible_motif_comparison_exploratory_v1",
+  "sealed_answer_sha256": "eef26dedd9c324a4ead00a46935db87677f184265469be77045d80e9b34bb43b",
+  "target_input_sha256": "9334f0599308b1926d209e9d8393f295afde97fddb7433d8f90bb161a3ece561",
+  "target_tasks": 32,
+  "validation_tasks_per_operator": 16
+}

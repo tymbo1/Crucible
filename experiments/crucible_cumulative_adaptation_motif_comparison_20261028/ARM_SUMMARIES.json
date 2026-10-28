@@ -1,0 +1,54 @@
+{
+  "A0_FROZEN_INDUCTION": {
+    "activation_status": "control",
+    "cpu_seconds": 0.01704707500175573,
+    "gpu_seconds": 0.0,
+    "post_reset_success_rate": 0.03125,
+    "post_reset_successes": 1,
+    "promoted_operator_count": 0,
+    "proposal_acceptance_rate": 0.125,
+    "proposal_acceptances": 4,
+    "target_acquisition_rate": 0.03125,
+    "target_acquisitions": 1,
+    "target_tasks": 32
+  },
+  "A2_SHAM_OPERATOR_LIBRARY": {
+    "activation_status": "control",
+    "cpu_seconds": 0.030062992009334266,
+    "gpu_seconds": 0.0,
+    "post_reset_success_rate": 0.03125,
+    "post_reset_successes": 1,
+    "promoted_operator_count": 0,
+    "proposal_acceptance_rate": 0.125,
+    "proposal_acceptances": 4,
+    "target_acquisition_rate": 0.03125,
+    "target_acquisitions": 1,
+    "target_tasks": 32
+  },
+  "A3_NO_GUIDANCE_SAME_MEMORY": {
+    "activation_status": "unactivated_inconclusive",
+    "cpu_seconds": 0.09062747700954787,
+    "gpu_seconds": 0.0,
+    "post_reset_success_rate": 0.03125,
+    "post_reset_successes": 1,
+    "promoted_operator_count": 0,
+    "proposal_acceptance_rate": 0.125,
+    "proposal_acceptances": 4,
+    "target_acquisition_rate": 0.03125,
+    "target_acquisitions": 1,
+    "target_tasks": 32
+  },
+  "A3_VERIFIED_ADAPTIVE_LIBRARY": {
+    "activation_status": "unactivated_inconclusive",
+    "cpu_seconds": 0.0384072998422198,
+    "gpu_seconds": 0.0,
+    "post_reset_success_rate": 0.03125,
+    "post_reset_successes": 1,
+    "promoted_operator_count": 0,
+    "proposal_acceptance_rate": 0.125,
+    "proposal_acceptances": 4,
+    "target_acquisition_rate": 0.03125,
+    "target_acquisitions": 1,
+    "target_tasks": 32
+  }
+}
