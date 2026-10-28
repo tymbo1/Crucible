@@ -1,0 +1,40 @@
+{
+  "arms": {
+    "baseline_gpu": {
+      "cpu_optimizer_state_bytes": 0,
+      "gpu_measured": false,
+      "max_peak_rss_bytes": 942116864,
+      "mean_timed_wall_ns": 143346114.5,
+      "mean_tokens_per_second": 44780.82586862272,
+      "runs": 2
+    },
+    "cpu_adamw_offload": {
+      "cpu_optimizer_state_bytes": 6504960,
+      "gpu_measured": false,
+      "max_peak_rss_bytes": 943144960,
+      "mean_timed_wall_ns": 145480272.0,
+      "mean_tokens_per_second": 44128.69643029646,
+      "runs": 2
+    },
+    "ssre_offload_verification": {
+      "cpu_optimizer_state_bytes": 6504960,
+      "gpu_measured": false,
+      "max_peak_rss_bytes": 943144960,
+      "mean_timed_wall_ns": 151078138.5,
+      "mean_tokens_per_second": 42506.11005806122,
+      "runs": 2
+    },
+    "ssre_v1_v3_delivery": {
+      "cpu_optimizer_state_bytes": 0,
+      "gpu_measured": false,
+      "max_peak_rss_bytes": 942116864,
+      "mean_timed_wall_ns": 149309301.0,
+      "mean_tokens_per_second": 42996.33921977413,
+      "runs": 2
+    }
+  },
+  "equivalence": {
+    "baseline_vs_ssre_final_match": true,
+    "baseline_vs_ssre_initial_match": true
+  }
+}

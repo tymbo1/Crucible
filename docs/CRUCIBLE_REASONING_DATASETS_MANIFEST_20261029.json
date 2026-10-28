@@ -1,0 +1,77 @@
+{
+  "schema_version": "crucible-reasoning-dataset-preparation-v1",
+  "prepared_at": "2026-10-29",
+  "storage_root": "/home/timbushnell/crucible_datasets_20261029",
+  "raw_data_committed_to_git": false,
+  "datasets": [
+    {
+      "name": "MATH",
+      "role": "formal mathematics",
+      "source_repository": "https://github.com/hendrycks/math",
+      "source_revision": "985bdc1696e88e8643f081a0ff4719da39f2ae2a",
+      "data_source": "https://huggingface.co/datasets/qwedsacf/competition_math",
+      "data_revision": "e839825f9ec5c6cfa585c654a59610969ec13993",
+      "local_source": "math_source",
+      "local_data": "math_data",
+      "data_bytes": 4855429,
+      "data_files": [
+        {
+          "path": "data/train-00000-of-00001-7320a6f3aba8ebd2.parquet",
+          "sha256": "2325458edc03d786939ee9e1e5795efb9e2480247b6e1ed2c51f41bea7369c6a"
+        }
+      ],
+      "declared_license": "MIT",
+      "notes": "The official source repository points to this data mirror. Verify source-problem redistribution and training rights before commercial use."
+    },
+    {
+      "name": "BIG-Bench Hard",
+      "role": "logic and language reasoning",
+      "source_repository": "https://github.com/suzgunmirac/BIG-Bench-Hard",
+      "source_revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "local_source": "bbh",
+      "data_bytes": 40399912,
+      "declared_license": "MIT",
+      "notes": "The repository contains the 23 BBH task files and associated prompts/results."
+    },
+    {
+      "name": "SciBench",
+      "role": "college-level physics, chemistry and mathematics",
+      "source_repository": "https://github.com/mandyyyyii/scibench",
+      "source_revision": "e14e0ca3d3db0f02928a18d435b9c3d15656a7c5",
+      "local_source": "scibench",
+      "data_bytes": 7129764,
+      "data_files": 20,
+      "declared_license": "MIT",
+      "notes": "The original JSON and solution files are present under dataset/original."
+    },
+    {
+      "name": "ETHICS",
+      "role": "normative and commonsense evaluation",
+      "source_repository": "https://github.com/hendrycks/ethics",
+      "source_revision": "fa022dbc62dc6736c2f3780ced6412cae97efb90",
+      "data_source": "https://people.eecs.berkeley.edu/~hendrycks/ethics.tar",
+      "archive_sha256": "40acbf1ac0da79a2aabef394d58889136b8d38b05be09482006de2453fb06333",
+      "local_source": "ethics_source",
+      "local_data": "ethics",
+      "archive_bytes": 35585024,
+      "declared_license": "MIT",
+      "notes": "The archive was linked by the official source repository and extracted locally."
+    },
+    {
+      "name": "BIG-Bench",
+      "role": "broad language and conceptual reasoning",
+      "source_repository": "https://github.com/google/BIG-bench",
+      "source_revision": "092b196c1f8f14a54bbc62f24759d43bde46dd3b",
+      "local_source": "big_bench",
+      "materialized_subset": "BIGBENCH_LITE_TASK_NAMES bigbench_lite_v1 (24 published task names)",
+      "data_bytes": 277118416,
+      "declared_license": "Apache-2.0",
+      "notes": "Only the published 24-task Lite subset was materialized; this is not the full BIG-Bench task tree."
+    }
+  ],
+  "storage": {
+    "filesystem_free_bytes_at_preparation": 219043332096,
+    "raw_bundle_excluded_from_repository": true,
+    "reason": "Dataset size, provenance and redistribution terms should be managed separately from Crucible source history."
+  }
+}
