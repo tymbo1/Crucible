@@ -76,3 +76,23 @@ python3 experiments/crucible_heterogeneous_training_throughput_20261029/concurre
 The primary comparison is end-to-end wall time for the same verified
 procedural work. The CPU procedure generator is an engineering workload proxy;
 it is not a curriculum or scientific learning result.
+
+To measure the actual Crucible candidate-generation and independent-verifier
+path, use the prepared source/operator-validation manifests:
+
+```bash
+export CRUCIBLE_CONTEXT_ROOT=/path/to/context_128
+python3 experiments/crucible_heterogeneous_training_throughput_20261029/concurrent_procedural_overlap_benchmark.py \
+  --workload actual \
+  --model-size small \
+  --warmup-steps 3 \
+  --timed-steps 20 \
+  --workers 4 \
+  --window 8 \
+  --repetitions 3 \
+  --output-dir experiments/crucible_heterogeneous_training_throughput_20261029/results_overlap_actual_gpu
+```
+
+This actual-workload path uses source and operator-validation AST metadata to
+construct the operator state, but passes only demonstrations and independent
+verification examples to CPU workers. It does not open sealed target answers.

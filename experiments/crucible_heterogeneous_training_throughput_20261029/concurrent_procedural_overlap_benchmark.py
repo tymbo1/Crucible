@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import multiprocessing as mp
 import os
 import sys
 import time
@@ -30,8 +31,11 @@ import torch.nn as nn
 
 
 HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from benchmark import (  # noqa: E402
     Batch,
@@ -55,6 +59,8 @@ SCHEMA_VERSION = "crucible-concurrent-procedural-overlap-v1-20261029"
 OPS = ("add_mod10", "sub_mod10", "mul_mod10", "xor_mod10", "max_mod10", "min_mod10")
 DOMAIN = tuple((a, b) for a in range(10) for b in range(10))
 TaskPayload = Tuple[int, int, int, int, Tuple[int, ...], Tuple[bytes, ...], int]
+WORKLOAD_MODE = "synthetic"
+ACTUAL_RUNNER: Any = None
 
 
 def now_ns() -> int:
@@ -141,6 +147,16 @@ def task_manifest_digest(payloads: Sequence[TaskPayload]) -> str:
     return digest.hexdigest()
 
 
+def actual_task_manifest_digest(payloads: Sequence[Tuple[Any, ...]]) -> str:
+    digest = hashlib.sha256()
+    for task_id, step, microbatch, batch_index, source_task_id, demonstrations, verification_examples in payloads:
+        digest.update(f"{task_id}|{step}|{microbatch}|{batch_index}|".encode("ascii"))
+        digest.update(str(source_task_id).encode("utf-8"))
+        digest.update(json.dumps(demonstrations, sort_keys=True, separators=(",", ":")).encode("utf-8"))
+        digest.update(json.dumps(verification_examples, sort_keys=True, separators=(",", ":")).encode("utf-8"))
+    return digest.hexdigest()
+
+
 def make_task_payloads(
     batches: Sequence[Batch],
     records: Sequence[bytes],
@@ -162,8 +178,100 @@ def make_task_payloads(
     return payloads
 
 
-def generate_and_verify_procedure(payload: TaskPayload) -> Dict[str, Any]:
+def make_actual_task_payloads(
+    batches: Sequence[Batch],
+    procedure_tasks: Sequence[Mapping[str, Any]],
+) -> List[Tuple[Any, ...]]:
+    """Attach real Crucible proposal/verifier tasks to future microbatches."""
+    if not procedure_tasks:
+        raise ValueError("actual workload requires procedure tasks")
+    payloads: List[Tuple[Any, ...]] = []
+    for task_id, batch in enumerate(batches):
+        task = procedure_tasks[task_id % len(procedure_tasks)]
+        payloads.append(
+            (
+                task_id,
+                int(batch.step),
+                int(batch.microbatch_index),
+                task_id,
+                str(task["task_id"]),
+                tuple(dict(example) for example in task.get("demonstrations", [])),
+                tuple(dict(example) for example in task.get("verification_examples", [])),
+            )
+        )
+    return payloads
+
+
+def generate_and_verify_actual(payload: Tuple[Any, ...]) -> Dict[str, Any]:
+    """Run Crucible's actual grammar candidate and independent verifier path."""
+    if ACTUAL_RUNNER is None:
+        raise RuntimeError("actual Crucible workload is not configured")
+    task_id, step, microbatch, batch_index, source_task_id, demonstrations, verification_examples = payload
+    wall_start = now_ns()
+    cpu_start = time.process_time_ns()
+    proposal_task_id, candidates = ACTUAL_RUNNER._crucible_cpu_candidate_job(
+        (str(source_task_id), tuple(demonstrations))
+    )
+    if proposal_task_id != str(source_task_id):
+        raise RuntimeError("Crucible candidate worker returned an unexpected task ID")
+    verifier = ACTUAL_RUNNER.IndependentVerifier()
+    traces: List[Dict[str, Any]] = []
+    accepted: Optional[Mapping[str, Any]] = None
+    verifier_calls = 0
+    verifier_examples = 0
+    for slot, candidate in enumerate(candidates[:4]):
+        ok, checks = verifier.verify(candidate["ast"], demonstrations)
+        verifier_calls += 1
+        verifier_examples += checks
+        traces.append({
+            "slot": slot,
+            "accepted_on_demonstrations": ok,
+            "checks": checks,
+            "canonical_ast_hash": candidate["canonical_ast_hash"],
+            "source": candidate.get("source"),
+        })
+        if ok and accepted is None:
+            accepted = candidate
+    independently_verified = False
+    independent_checks = 0
+    if accepted is not None and verification_examples:
+        independently_verified, independent_checks = verifier.verify(
+            accepted["ast"], verification_examples
+        )
+        verifier_calls += 1
+        verifier_examples += independent_checks
+    stable = {
+        "task_id": str(source_task_id),
+        "candidate_hashes": [str(candidate["canonical_ast_hash"]) for candidate in candidates[:4]],
+        "accepted_hash": None if accepted is None else str(accepted["canonical_ast_hash"]),
+        "independently_verified": independently_verified,
+        "verification_examples": independent_checks,
+    }
+    return {
+        "task_id": int(task_id),
+        "step": int(step),
+        "microbatch_index": int(microbatch),
+        "batch_index": int(batch_index),
+        "source_task_id": str(source_task_id),
+        "candidate_count": len(candidates[:4]),
+        "accepted_slots": [int(trace["slot"]) for trace in traces if trace["accepted_on_demonstrations"]],
+        "verified_procedures": int(independently_verified),
+        "verifier_calls": verifier_calls,
+        "verifier_examples": verifier_examples,
+        "independent_verification_checks": independent_checks,
+        "candidate_hashes": stable["candidate_hashes"],
+        "accepted_hash": stable["accepted_hash"],
+        "result_digest": sha256_bytes(json.dumps(stable, sort_keys=True, separators=(",", ":")).encode("utf-8")),
+        "worker_pid": os.getpid(),
+        "worker_cpu_ns": time.process_time_ns() - cpu_start,
+        "task_wall_ns": now_ns() - wall_start,
+    }
+
+
+def generate_and_verify_procedure(payload: Any) -> Dict[str, Any]:
     """Generate four candidates and independently verify them exhaustively."""
+    if WORKLOAD_MODE == "actual":
+        return generate_and_verify_actual(payload)
     (
         task_id,
         step,
@@ -232,7 +340,10 @@ class SSREProcedurePrefetcher:
         self.payloads = payloads
         self.workers = max(1, int(workers))
         self.window = max(1, int(window))
-        self.pool = ProcessPoolExecutor(max_workers=self.workers)
+        pool_kwargs: Dict[str, Any] = {"max_workers": self.workers}
+        if "fork" in mp.get_all_start_methods():
+            pool_kwargs["mp_context"] = mp.get_context("fork")
+        self.pool = ProcessPoolExecutor(**pool_kwargs)
         self.pending: Dict[int, Tuple[Future[Dict[str, Any]], int]] = {}
         self.next_submit = 0
         self.next_commit = 0
@@ -494,6 +605,12 @@ def run_condition(
 
 def render_report(report: Mapping[str, Any]) -> str:
     rows = []
+    workload_name = str(report["workload_metadata"]["name"])
+    workload_note = (
+        "Crucible's actual frozen-grammar candidate generation and independent verifier path."
+        if "actual" in workload_name
+        else "A deterministic synthetic procedure generator and exhaustive verifier proxy."
+    )
     for result in report["summary"]:
         rows.append(
             "| {condition} | {wall:.3f} | {tokens:.1f} | {procedures:.1f} | {workers} | {util:.1f}% | {queue} | {idle:.3f} |".format(
@@ -516,7 +633,7 @@ def render_report(report: Mapping[str, Any]) -> str:
             "",
             f"Classification: `{report['classification']}`",
             "",
-            "The CPU work is deterministic synthetic procedure generation and exhaustive verification. It is attached to future training microbatches and consumed in order; it does not affect model gradients.",
+            f"The CPU work is {workload_note} It is attached to future training microbatches and consumed in order; it does not affect model gradients.",
             "",
             "## Results",
             "",
@@ -537,7 +654,7 @@ def render_report(report: Mapping[str, Any]) -> str:
             "",
             "## Interpretation boundary",
             "",
-            "This measures useful-work overlap, not neural learning quality. The synthetic procedure generator is a CPU workload proxy for Crucible's future generation/verification work; it is not a curriculum or scientific training result.",
+            "This measures useful-work overlap, not neural learning quality. It is an engineering workload measurement, not a curriculum or scientific training result.",
         ]
     ) + "\n"
 
@@ -547,6 +664,7 @@ def main() -> int:
     parser.add_argument("--context-root", type=Path, default=Path(os.environ.get("CRUCIBLE_CONTEXT_ROOT", "context_128")))
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--model-size", choices=("tiny", "small"), default="small")
+    parser.add_argument("--workload", choices=("synthetic", "actual"), default="synthetic")
     parser.add_argument("--warmup-steps", type=int, default=3)
     parser.add_argument("--timed-steps", type=int, default=20)
     parser.add_argument("--workers", type=int, default=4)
@@ -582,8 +700,60 @@ def main() -> int:
     }
     if not input_equivalence["exact_equivalence"]:
         raise RuntimeError("direct/indexed input mismatch")
-    payloads = make_task_payloads(batches, records, args.verification_rounds)
-    payload_digest = task_manifest_digest(payloads)
+    workload_metadata: Dict[str, Any] = {
+        "name": "synthetic_ast_proxy",
+        "target_answers_accessed": False,
+    }
+    global WORKLOAD_MODE, ACTUAL_RUNNER
+    WORKLOAD_MODE = str(args.workload)
+    if args.workload == "actual":
+        from tools import crucible_cumulative_adaptation_scientific_runner_20261028 as actual_runner
+
+        ACTUAL_RUNNER = actual_runner
+        frozen_pool = actual_runner.load_frozen_pool()
+        preflight_root = ROOT / "experiments" / "crucible_cumulative_adaptation_preflight_20261028"
+        source_rows = actual_runner.load_jsonl(preflight_root / "SOURCE_MANIFEST.jsonl")
+        validation_rows = actual_runner.load_jsonl(preflight_root / "OPERATOR_VALIDATION_MANIFEST.jsonl")
+        source_tasks = actual_runner.make_source_tasks(source_rows)
+        validation_tasks = actual_runner.make_validation_tasks(validation_rows)
+        actual_runner_instance = actual_runner.FourArmRunner(frozen_pool, ROOT / "experiments" / "crucible_cumulative_adaptation_preflight_20261028", scientific=False)
+        actual_state = actual_runner_instance._prepare_arm(
+            "A3_VERIFIED_ADAPTIVE_LIBRARY",
+            source_tasks,
+            validation_tasks,
+        )
+        actual_runner._init_crucible_cpu_worker(
+            actual_runner_instance.pool,
+            actual_runner_instance.pool_truth_tables,
+            tuple(actual_state["library"].promoted),
+            "A3_VERIFIED_ADAPTIVE_LIBRARY",
+        )
+        source_work_tasks: List[Dict[str, Any]] = []
+        source_pairs = [(9, 9), (8, 7), (6, 5), (4, 2)]
+        for task in source_tasks:
+            source_copy = dict(task)
+            source_copy["verification_examples"] = actual_runner.examples_for_ast(task["target_ast"], source_pairs)
+            source_work_tasks.append(source_copy)
+        actual_work_tasks = source_work_tasks + [dict(task) for task in validation_tasks]
+        payloads = make_actual_task_payloads(batches, actual_work_tasks)
+        payload_digest = actual_task_manifest_digest(payloads)
+        workload_metadata = {
+            "name": "crucible_actual_candidate_generation_and_independent_verification",
+            "source_task_count": len(source_tasks),
+            "operator_validation_task_count": len(validation_tasks),
+            "workload_task_pool_count": len(actual_work_tasks),
+            "frozen_pool_count": len(frozen_pool),
+            "operator_activation_status": actual_state["library"].activation_status,
+            "promoted_operator_count": len(actual_state["library"].promoted),
+            "candidate_budget": 4,
+            "target_answers_accessed": False,
+            "sealed_target_answers_accessed": False,
+            "source_and_validation_ast_metadata_used_for_library": True,
+            "worker_input_fields": ["task_id", "demonstrations", "verification_examples"],
+        }
+    else:
+        payloads = make_task_payloads(batches, records, args.verification_rounds)
+        payload_digest = task_manifest_digest(payloads)
     cfg = model_config(args.model_size)
     results = []
     for repetition in range(1, args.repetitions + 1):
@@ -651,6 +821,7 @@ def main() -> int:
         "model": {"family": "Crucible latent-attention + SwiGLU dense", "size": args.model_size, "parameter_count": sum(p.numel() for p in make_model(cfg, device, 42).parameters()), "config": cfg},
         "benchmark_config": {
             "conditions": ["gpu_only", "sequential_cpu", "concurrent_ssre"],
+            "workload": args.workload,
             "warmup_steps": args.warmup_steps,
             "timed_steps": args.timed_steps,
             "workers": args.workers,
@@ -663,7 +834,12 @@ def main() -> int:
         "data_manifest_sha256": config_sha,
         "data_report": {key: {k: v for k, v in value.items() if k != "path"} for key, value in data_report.items()},
         "task_manifest_sha256": payload_digest,
-        "task_definition": "four grammar-constrained candidates; one independently verified over all 100 digit pairs; source records hashed per future training microbatch",
+        "task_definition": (
+            "Crucible candidate generation from the frozen representative grammar pool followed by independent demonstration and verification-example checks"
+            if args.workload == "actual"
+            else "four grammar-constrained candidates; one independently verified over all 100 digit pairs; source records hashed per future training microbatch"
+        ),
+        "workload_metadata": workload_metadata,
         "input_equivalence": input_equivalence,
         "deterministic_cuda": True,
         "results": results,
