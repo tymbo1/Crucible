@@ -41,6 +41,7 @@ from typing import Any, Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torch.utils.checkpoint import checkpoint as activation_checkpoint
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -180,7 +181,10 @@ class DenseCrucibleLM(nn.Module):
         seq_idx = seq_idx.unsqueeze(0).expand(tokens.size(0), -1)
         x = self.token_emb(tokens)
         for layer in self.layers:
-            x = layer(x, seq_idx)
+            if self.cfg.get("activation_checkpointing", False) and self.training:
+                x = activation_checkpoint(layer, x, seq_idx, use_reentrant=False)
+            else:
+                x = layer(x, seq_idx)
         return self.lm_head(self.final_norm(x))
 
 

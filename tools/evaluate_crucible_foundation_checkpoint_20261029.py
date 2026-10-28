@@ -18,8 +18,9 @@ TOOLS = ROOT / "tools"
 sys.path.insert(0, str(THROUGHPUT))
 sys.path.insert(0, str(TOOLS))
 
-from benchmark import make_model, model_config, state_digest  # noqa: E402
+from benchmark import make_model, state_digest  # noqa: E402
 from run_crucible_op_reasoning_foundation_pilot_20261029 import evaluate_policy, load_jsonl  # noqa: E402
+from run_crucible_foundation_training_20261029 import foundation_model_config  # noqa: E402
 
 
 def sha256_file(path: Path) -> str:
@@ -35,7 +36,7 @@ def main() -> int:
     parser.add_argument("--checkpoint", type=Path, required=True)
     parser.add_argument("--test-jsonl", type=Path, default=Path("/home/timbushnell/crucible_reasoning_pilot_20261029/test.jsonl"))
     parser.add_argument("--output-dir", type=Path, required=True)
-    parser.add_argument("--model-size", choices=("tiny", "small"), default="small")
+    parser.add_argument("--model-size", choices=("tiny", "small", "120m"), default="small")
     parser.add_argument("--context", type=int, default=512)
     parser.add_argument("--max-records", type=int, default=304)
     parser.add_argument("--device", choices=("cuda", "cpu"), default="cuda")
@@ -43,7 +44,7 @@ def main() -> int:
     if args.device == "cuda" and not torch.cuda.is_available():
         raise RuntimeError("CUDA unavailable; use host access or --device cpu")
     device = torch.device(args.device)
-    cfg = model_config(args.model_size)
+    cfg = foundation_model_config(args.model_size, activation_checkpointing=False)
     model = make_model(cfg, device, seed=42)
     checkpoint = torch.load(args.checkpoint.resolve(), map_location=device, weights_only=False)
     model.load_state_dict(checkpoint["model"])

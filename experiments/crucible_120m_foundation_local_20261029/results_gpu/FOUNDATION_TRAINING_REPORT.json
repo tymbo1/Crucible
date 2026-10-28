@@ -1,0 +1,201 @@
+{
+  "checkpoints": {
+    "external_root": "<local-checkpoint-root>",
+    "last_step": 5000
+  },
+  "classification": "substantive_local_crucible_foundation_baseline",
+  "data": {
+    "fineweb_manifest_sha256": "7ab923599c85b5510d1f9b8153fbc95a3f9f211fb9be1d0524f5f2969ae92b03",
+    "fineweb_train_sha256": "12984c52f91f54b5f461788e80f49bad3fa25d97b17614feacda690fd8b1f9d4",
+    "fineweb_validation_sha256": "08564ad5d8a7440b37d1087b7c3698b56b28a7807d69819a16202537db6b2c62",
+    "raw_fineweb_committed_to_git": false,
+    "reasoning_train_sha256": "191173b17994c7bc1769e24870007cd3ad54fe1f547cefef50f503ab3e71b26f",
+    "reasoning_validation_sha256": "89789b95c52e227574bc8a10f6fcda3a2326d3ddac4a349c9ddba6ff9c3246af",
+    "test_partition_used_for_training": false
+  },
+  "generation_samples": [
+    {
+      "completion": "a that the bowl.",
+      "prompt": "The goal of science is"
+    },
+    {
+      "completion": "and the bowl. They said the bowl the smooticer or thanker or equal of the rains.",
+      "prompt": "In mathematics, a prime number is"
+    },
+    {
+      "completion": "and geteter than the to play. \"On me day, \"I was made the dooraraturne of the doorame.",
+      "prompt": "A good explanation should"
+    },
+    {
+      "completion": "there mome mom with the tooh car.",
+      "prompt": "Once upon a time"
+    }
+  ],
+  "limitations": [
+    "This is an intermediate model, not the planned 500M model.",
+    "The FineWeb-Edu source is one bounded shard and the reasoning sources are capped pilot subsets.",
+    "The language source is now FineWeb-Edu; TinyStories is not used by this run.",
+    "The exact OP loop is not credited here; it remains a separate external-controller evaluation.",
+    "Cumulative learning, retention and transfer are not measured by this run."
+  ],
+  "model": {
+    "config": {
+      "activation_checkpointing": 1,
+      "d_ff": 3072,
+      "d_model": 768,
+      "latent_dim_kv": 192,
+      "latent_dim_q": 192,
+      "n_heads": 12,
+      "n_layers": 14,
+      "pe_dim": 64,
+      "vocab_size": 259
+    },
+    "family": "Crucible latent-attention + SwiGLU dense",
+    "final_state_sha256": "46c69aedbee1aa1335e98508fc4ed70e17fd18edd5ebb6129a189354d25b5b8a",
+    "parameter_count": 120842496,
+    "size": "120m"
+  },
+  "op_status": "not run in foundation trainer; compare OP only after baseline competence is demonstrated",
+  "schema_version": "crucible-foundation-training-v1-20261029",
+  "scientific_status": "exploratory_not_500m_not_track_b",
+  "training": {
+    "context": 512,
+    "effective_batch_size": 8,
+    "elapsed_seconds": 2065.9432918179955,
+    "grad_accumulation": 4,
+    "micro_batch_size": 2,
+    "peak_rss_bytes": 2046996480,
+    "peak_vram_allocated": 2934324224,
+    "peak_vram_reserved": 3330277376,
+    "reasoning_every": 5,
+    "resumed_from_step": 1000,
+    "seed": 42,
+    "steps_completed": 5000,
+    "tokens_per_second": 4078.459962270009,
+    "training_tokens_recorded": 8425867
+  },
+  "validation": {
+    "checkpoints": [
+      {
+        "finite_gradients": true,
+        "language_loss": 2.0478523541241884,
+        "language_tokens": 65536,
+        "loss": 2.104267954826355,
+        "reasoning_loss": 2.8929546020144894,
+        "reasoning_tokens": 5902,
+        "source": "fineweb_edu",
+        "step": 1001,
+        "training_tokens": 1685469,
+        "valid_tokens": 2048
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.9053056417033076,
+        "language_tokens": 65536,
+        "loss": 1.7099842115452415,
+        "reasoning_loss": 2.5971861751311436,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 1500,
+        "training_tokens": 2526407,
+        "valid_tokens": 304
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.7974963020533323,
+        "language_tokens": 65536,
+        "loss": 1.8338180308540661,
+        "reasoning_loss": 2.6193449437411225,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 2000,
+        "training_tokens": 3368839,
+        "valid_tokens": 96
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.7199890362098813,
+        "language_tokens": 65536,
+        "loss": 0.18230947107076645,
+        "reasoning_loss": 2.7735596320985416,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 2500,
+        "training_tokens": 4210443,
+        "valid_tokens": 24
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.6906097438186407,
+        "language_tokens": 65536,
+        "loss": 0.13533963123336434,
+        "reasoning_loss": 2.8327064422056742,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 3000,
+        "training_tokens": 5052047,
+        "valid_tokens": 24
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.6663760971277952,
+        "language_tokens": 65536,
+        "loss": 1.329678136032897,
+        "reasoning_loss": 2.466628994160246,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 3500,
+        "training_tokens": 5896877,
+        "valid_tokens": 847
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.620810627937317,
+        "language_tokens": 65536,
+        "loss": 1.132026297887544,
+        "reasoning_loss": 2.5519802637930966,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 4000,
+        "training_tokens": 6741673,
+        "valid_tokens": 842
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.5946058789268136,
+        "language_tokens": 65536,
+        "loss": 1.2782542778635926,
+        "reasoning_loss": 2.557594733086128,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 4500,
+        "training_tokens": 7583695,
+        "valid_tokens": 159
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.539786015637219,
+        "language_tokens": 65536,
+        "loss": 1.667990739512862,
+        "reasoning_loss": 2.5079585135245637,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 5000,
+        "training_tokens": 8425867,
+        "valid_tokens": 285
+      }
+    ],
+    "final": {
+      "finite_gradients": true,
+      "language_loss": 1.539786015637219,
+      "language_tokens": 65536,
+      "loss": 1.667990739512862,
+      "reasoning_loss": 2.5079585135245637,
+      "reasoning_tokens": 5902,
+      "source": "reasoning",
+      "step": 5000,
+      "training_tokens": 8425867,
+      "valid_tokens": 285
+    }
+  }
+}

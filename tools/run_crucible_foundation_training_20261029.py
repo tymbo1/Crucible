@@ -38,6 +38,24 @@ RAW_BYTE_START = 3
 SCHEMA = "crucible-foundation-training-v1-20261029"
 
 
+def foundation_model_config(name: str, activation_checkpointing: bool) -> Dict[str, int]:
+    if name == "120m":
+        return {
+            "vocab_size": 259,
+            "n_layers": 14,
+            "d_model": 768,
+            "n_heads": 12,
+            "latent_dim_kv": 192,
+            "latent_dim_q": 192,
+            "pe_dim": 64,
+            "d_ff": 3072,
+            "activation_checkpointing": int(bool(activation_checkpointing)),
+        }
+    cfg = model_config(name)
+    cfg["activation_checkpointing"] = int(bool(activation_checkpointing))
+    return cfg
+
+
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -173,19 +191,25 @@ def evaluate_loss(model: torch.nn.Module, rows: torch.Tensor, samples: Sequence[
     }
 
 
-def train_update(model: torch.nn.Module, optimizer: torch.optim.Optimizer, x_cpu: torch.Tensor, y_cpu: torch.Tensor, device: torch.device) -> Dict[str, Any]:
+def train_update(model: torch.nn.Module, optimizer: torch.optim.Optimizer, batches: Sequence[Tuple[torch.Tensor, torch.Tensor]], device: torch.device) -> Dict[str, Any]:
     optimizer.zero_grad(set_to_none=True)
-    x = x_cpu.to(device, non_blocking=True)
-    y = y_cpu.to(device, non_blocking=True)
-    with torch.autocast("cuda", dtype=torch.float16, enabled=device.type == "cuda"):
-        logits = model(x)
-        ce_sum, valid = loss_sum(logits, y)
-        loss = ce_sum / float(max(1, valid))
-    (loss * LOSS_SCALE).backward()
+    total_loss = 0.0
+    total_valid = 0
+    scale = float(max(1, len(batches)))
+    for x_cpu, y_cpu in batches:
+        x = x_cpu.to(device, non_blocking=True)
+        y = y_cpu.to(device, non_blocking=True)
+        with torch.autocast("cuda", dtype=torch.float16, enabled=device.type == "cuda"):
+            logits = model(x)
+            ce_sum, valid = loss_sum(logits, y)
+            loss = ce_sum / float(max(1, valid))
+        (loss * LOSS_SCALE / scale).backward()
+        total_loss += float(loss.detach().cpu().item()) * valid
+        total_valid += int(valid)
     finite = unscale_grads(model, LOSS_SCALE)
     torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
     optimizer.step()
-    return {"loss": float(loss.detach().cpu().item()), "valid_tokens": int(valid), "finite_gradients": bool(finite)}
+    return {"loss": total_loss / max(1, total_valid), "valid_tokens": total_valid, "finite_gradients": bool(finite)}
 
 
 def save_checkpoint(path: Path, model: torch.nn.Module, optimizer: torch.optim.Optimizer, step: int, seed: int, training_tokens: int) -> None:
@@ -208,10 +232,12 @@ def main() -> int:
     parser.add_argument("--reasoning-root", type=Path, default=Path("/home/timbushnell/crucible_reasoning_pilot_20261029"))
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--checkpoint-root", type=Path, default=Path("/home/timbushnell/crucible_foundation_checkpoints_20261029"))
-    parser.add_argument("--model-size", choices=("tiny", "small"), default="small")
+    parser.add_argument("--model-size", choices=("tiny", "small", "120m"), default="small")
     parser.add_argument("--context", type=int, default=512)
     parser.add_argument("--steps", type=int, default=2500)
     parser.add_argument("--batch-size", type=int, default=8)
+    parser.add_argument("--grad-accumulation", type=int, default=1)
+    parser.add_argument("--activation-checkpointing", action="store_true")
     parser.add_argument("--reasoning-every", type=int, default=5)
     parser.add_argument("--eval-every", type=int, default=250)
     parser.add_argument("--eval-rows", type=int, default=256)
@@ -248,7 +274,7 @@ def main() -> int:
     if not reasoning_train or not reasoning_validation:
         raise RuntimeError("reasoning preparation produced no usable samples")
 
-    cfg = model_config(args.model_size)
+    cfg = foundation_model_config(args.model_size, args.activation_checkpointing)
     model = make_model(cfg, device, args.seed)
     optimizer = torch.optim.AdamW(parameter_groups(model, 0.01), lr=3e-4, betas=(0.9, 0.95), eps=1e-8)
     start_step = 0
@@ -280,15 +306,17 @@ def main() -> int:
     with curve_path.open(mode, encoding="utf-8") as curve:
         for step in range(start_step, args.steps):
             is_reasoning = (step + 1) % max(1, args.reasoning_every) == 0
-            if is_reasoning:
-                indices = [((step // max(1, args.reasoning_every)) * args.batch_size + i) % len(reasoning_train) for i in range(args.batch_size)]
-                x_cpu, y_cpu = reasoning_batch(reasoning_train, indices)
-                source = "reasoning"
-            else:
-                indices = [(step * args.batch_size + i) % language_train.size(0) for i in range(args.batch_size)]
-                x_cpu, y_cpu = batch_from_rows(language_train, indices, context)
-                source = "fineweb_edu"
-            result = train_update(model, optimizer, x_cpu, y_cpu, device)
+            batches = []
+            for micro in range(max(1, args.grad_accumulation)):
+                if is_reasoning:
+                    indices = [((step // max(1, args.reasoning_every)) * args.batch_size * max(1, args.grad_accumulation) + micro * args.batch_size + i) % len(reasoning_train) for i in range(args.batch_size)]
+                    batches.append(reasoning_batch(reasoning_train, indices))
+                    source = "reasoning"
+                else:
+                    indices = [(step * args.batch_size * max(1, args.grad_accumulation) + micro * args.batch_size + i) % language_train.size(0) for i in range(args.batch_size)]
+                    batches.append(batch_from_rows(language_train, indices, context))
+                    source = "fineweb_edu"
+            result = train_update(model, optimizer, batches, device)
             training_tokens += int(result["valid_tokens"])
             record: Dict[str, Any] = {"step": step + 1, "source": source, **result, "training_tokens": training_tokens}
             if (step + 1) % max(1, args.eval_every) == 0 or step == start_step:
@@ -316,7 +344,7 @@ def main() -> int:
         "classification": "substantive_local_crucible_foundation_baseline",
         "scientific_status": "exploratory_not_500m_not_track_b",
         "model": {"family": "Crucible latent-attention + SwiGLU dense", "size": args.model_size, "config": cfg, "parameter_count": sum(parameter.numel() for parameter in model.parameters()), "final_state_sha256": state_digest(model)},
-        "training": {"steps_completed": args.steps, "resumed_from_step": start_step, "batch_size": args.batch_size, "context": context, "reasoning_every": args.reasoning_every, "seed": args.seed, "training_tokens_recorded": training_tokens, "elapsed_seconds": elapsed, "tokens_per_second": training_tokens / max(elapsed, 1e-9), "peak_rss_bytes": int(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss) * 1024, "peak_vram_allocated": int(torch.cuda.max_memory_allocated(device)) if device.type == "cuda" else None, "peak_vram_reserved": int(torch.cuda.max_memory_reserved(device)) if device.type == "cuda" else None},
+        "training": {"steps_completed": args.steps, "resumed_from_step": start_step, "micro_batch_size": args.batch_size, "grad_accumulation": args.grad_accumulation, "effective_batch_size": args.batch_size * args.grad_accumulation, "context": context, "reasoning_every": args.reasoning_every, "seed": args.seed, "training_tokens_recorded": training_tokens, "elapsed_seconds": elapsed, "tokens_per_second": training_tokens / max(elapsed, 1e-9), "peak_rss_bytes": int(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss) * 1024, "peak_vram_allocated": int(torch.cuda.max_memory_allocated(device)) if device.type == "cuda" else None, "peak_vram_reserved": int(torch.cuda.max_memory_reserved(device)) if device.type == "cuda" else None},
         "data": {"fineweb_manifest_sha256": sha256_file(fineweb_root / "MANIFEST.json"), "fineweb_train_sha256": sha256_file(fineweb_root / fineweb_manifest["packed_files"]["train"]["path"]), "fineweb_validation_sha256": sha256_file(fineweb_root / fineweb_manifest["packed_files"]["validation"]["path"]), "reasoning_train_sha256": sha256_file(reasoning_root / "train.jsonl"), "reasoning_validation_sha256": sha256_file(reasoning_root / "validation.jsonl"), "raw_fineweb_committed_to_git": False, "test_partition_used_for_training": False},
         "validation": {"checkpoints": updates, "final": updates[-1] if updates else None},
         "generation_samples": generations,

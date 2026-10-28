@@ -34,6 +34,7 @@ if str(THROUGHPUT) not in sys.path:
     sys.path.insert(0, str(THROUGHPUT))
 
 from benchmark import LOSS_SCALE, loss_sum, make_model, model_config, parameter_groups, state_digest, unscale_grads  # noqa: E402
+from run_crucible_foundation_training_20261029 import foundation_model_config  # noqa: E402
 
 
 PAD_ID = 0
@@ -292,7 +293,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root", type=Path, default=Path("/home/timbushnell/crucible_reasoning_pilot_20261029"))
     parser.add_argument("--output-dir", type=Path, default=EXPERIMENT / "results_gpu")
-    parser.add_argument("--model-size", choices=("tiny", "small"), default="tiny")
+    parser.add_argument("--model-size", choices=("tiny", "small", "120m"), default="tiny")
     parser.add_argument("--context", type=int, default=256)
     parser.add_argument("--steps", type=int, default=128)
     parser.add_argument("--batch-size", type=int, default=8)
@@ -316,7 +317,7 @@ def main() -> int:
     validation_samples = make_samples(validation_rows, args.context)
     if not train_samples or not validation_samples:
         raise RuntimeError("pilot data produced no train/validation samples")
-    cfg = model_config(args.model_size)
+    cfg = foundation_model_config(args.model_size, activation_checkpointing=False)
     model = make_model(cfg, device, args.seed)
     initial_hash = state_digest(model)
     optimizer = torch.optim.AdamW(parameter_groups(model, 0.01), lr=3e-4, betas=(0.9, 0.95), eps=1e-8)

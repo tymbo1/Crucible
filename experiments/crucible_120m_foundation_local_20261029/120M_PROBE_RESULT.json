@@ -1,0 +1,31 @@
+{
+  "schema_version": "crucible-120m-probe-v1-20261029",
+  "classification": "local_gpu_stability_probe",
+  "model": {
+    "parameter_count": 120842496,
+    "n_layers": 14,
+    "d_model": 768,
+    "n_heads": 12,
+    "latent_dim_kv": 192,
+    "latent_dim_q": 192,
+    "pe_dim": 64,
+    "d_ff": 3072,
+    "activation_checkpointing": true
+  },
+  "run": {
+    "optimizer_steps": 10,
+    "micro_batch_size": 2,
+    "gradient_accumulation": 4,
+    "effective_batch_size": 8,
+    "context": 512,
+    "tokens_recorded": 16487,
+    "elapsed_seconds": 9.572027135989629,
+    "tokens_per_second": 1722.4146741092004,
+    "peak_vram_allocated_bytes": 2452295680,
+    "peak_vram_reserved_bytes": 2736783360,
+    "peak_rss_bytes": 2046709760,
+    "all_gradients_finite": true,
+    "checkpoint_written": true
+  },
+  "interpretation_boundary": "The probe establishes fit and stability on the local RTX 3060 Ti; it is not a capability result."
+}
