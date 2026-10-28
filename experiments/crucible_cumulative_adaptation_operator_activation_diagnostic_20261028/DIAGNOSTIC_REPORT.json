@@ -1,0 +1,987 @@
+{
+  "benchmark_repeated": false,
+  "classification": "bounded_cpu_diagnostic",
+  "eligible_operator_selection": {
+    "operators": [
+      "min",
+      "add_mod10"
+    ],
+    "rule": "same as current runner: first two distinct source root signatures"
+  },
+  "experiment": "crucible_cumulative_adaptation_operator_activation_diagnostic_20261028",
+  "implementation_assessment": {
+    "activation_failure": "Both eligible operators fail the shared-prefix 16-trial gate before candidate construction or verification is reached.",
+    "conclusion": "A minimal ordering hook exists, but the intended verified motif-to-candidate path is not implemented and the saved manifest does not allocate operator-specific validation trials.",
+    "record_to_target_policy": "When a record is manually/promoted, candidate_pool_for_task adds a +1 ranking bonus to matching candidate roots; the synthetic demo confirms order change.",
+    "record_to_validation": "Current code counts root-signature equality on one shared validation prefix; it does not construct or independently verify a motif candidate.",
+    "source_to_record": "Current code extracts only root_signature; no canonical motif or typed holes are persisted in OperatorRecord.",
+    "status": "narrow_policy_path_present_activation_unreachable_in_saved_run"
+  },
+  "next_engineering_action": {
+    "action": "Create operator-specific validation allocations and replace root-signature-only records with canonical motifs plus typed-hole instantiation and independent verifier traces.",
+    "do_not": "Do not rerun the 288-task benchmark until these CPU fixtures pass and the validation manifest allocation is frozen.",
+    "priority": 1,
+    "required_tests_before_any_benchmark": [
+      "16/16 activation for a synthetic operator with all later stages traced",
+      "candidate construction rejection and incorrect-output rejection are separately observable",
+      "activated operator changes ordering only through its instantiated motif/policy",
+      "A0/A3 order replay is deterministic"
+    ]
+  },
+  "operators": [
+    {
+      "current_record": {
+        "lower_bound_95": 0.0,
+        "operator_id": "a3_verified_adaptive_library_operator_0",
+        "provenance": {
+          "arm": "A3_VERIFIED_ADAPTIVE_LIBRARY",
+          "target_labels_used": false,
+          "validation_labels_are_source_phase": true
+        },
+        "root_signature": "min",
+        "schema_version": "crucible.operator.v2",
+        "source_refs": [
+          "source_s42_000",
+          "source_s42_002",
+          "source_s42_003",
+          "source_s42_010"
+        ],
+        "status": "candidate",
+        "successes": 3,
+        "trials": 16,
+        "validation_refs": [
+          "operator_validation_s42_000",
+          "operator_validation_s42_001",
+          "operator_validation_s42_002",
+          "operator_validation_s42_003",
+          "operator_validation_s42_004",
+          "operator_validation_s42_005",
+          "operator_validation_s42_006",
+          "operator_validation_s42_007",
+          "operator_validation_s42_008",
+          "operator_validation_s42_009",
+          "operator_validation_s42_010",
+          "operator_validation_s42_011",
+          "operator_validation_s42_012",
+          "operator_validation_s42_013",
+          "operator_validation_s42_014",
+          "operator_validation_s42_015"
+        ]
+      },
+      "extracted_motif": {
+        "args": [
+          {
+            "id": "arg0",
+            "op": "hole",
+            "type": "expr_mod10"
+          },
+          {
+            "id": "arg1",
+            "op": "hole",
+            "type": "expr_mod10"
+          }
+        ],
+        "op": "min"
+      },
+      "hypothetical_order_effect": {
+        "activation_forced_only_for_hypothetical": true,
+        "changed_order_count": 3,
+        "comparisons": [
+          {
+            "activated_order": [
+              "f205bc4f8708760250a6b72864cd6a300ce281e2e8057489a109753aa2a6be31",
+              "65b2929e6871c0252a2d2d221db80bec25073482ccca842cbdcb7076e83d1831",
+              "598e58df549c196d815af4c273ae1a28de5aa9e9198ab6810a63cdae8b7a5db4",
+              "f34d5d3bd7103447f69ba73d8a763b30680009215afa0cae880869e7ab5a2f9b"
+            ],
+            "changed": true,
+            "cold_order": [
+              "f205bc4f8708760250a6b72864cd6a300ce281e2e8057489a109753aa2a6be31",
+              "65b2929e6871c0252a2d2d221db80bec25073482ccca842cbdcb7076e83d1831",
+              "f2368e8dd3c07358cbc2233d931091ef3c4a8d8306906ae411881e4258e4c13a",
+              "d532481e5a42cce9d98c28ca94d117ac02a653ed0a103d2e9f1ed710df78113a"
+            ],
+            "task_id": "target_s1337_composition_depth2_000"
+          },
+          {
+            "activated_order": [
+              "f1c15183d23e748518120610a18d01769477d473dcf45e8beae5d2ade987bc37",
+              "315c87ba0bd0d8c58611b4454f3d5185b983fb46e3f0d1375f6ba36bf7ca8b88",
+              "082aa83bf603747420ef80a0560aa66a409aa7381e9430c82d8413a2e969e914",
+              "07cf9ec8fd8f704350297625a663c9d24d1883413e5b1c1b0a7e03b50242bfff"
+            ],
+            "changed": true,
+            "cold_order": [
+              "f066eac1db12b5fe50f5904e882a31b4afb0c1d8132c94d396c3203b677d19cb",
+              "f1c15183d23e748518120610a18d01769477d473dcf45e8beae5d2ade987bc37",
+              "efb707b64a5bf1b93317c274a486ba4f2dba082959d75ae92c0ec491f31f3fd3",
+              "e488cb7ff7824170ec5d369e4f5e4e3102e84bdaa878dfe695996f188b4c0fbf"
+            ],
+            "task_id": "target_s1337_composition_depth2_001"
+          },
+          {
+            "activated_order": [
+              "074624c2e75341db16430f1fcc619fcd1edc130ef958f63e367e4102cce90d3b",
+              "adb4dbc5ad5cdd7bcf5dd7d3e7acc9ba2e607d0f339aeb28b126a9fcd17ec0fe",
+              "6bd081aa7826eb539645ded60c8fb5d11a9aa35f1f93f910624a6d148efcf623",
+              "076796bd4c1df547cd1dff17728bf87f107a887f6d47dd4246d864a22870a6fd"
+            ],
+            "changed": false,
+            "cold_order": [
+              "074624c2e75341db16430f1fcc619fcd1edc130ef958f63e367e4102cce90d3b",
+              "adb4dbc5ad5cdd7bcf5dd7d3e7acc9ba2e607d0f339aeb28b126a9fcd17ec0fe",
+              "6bd081aa7826eb539645ded60c8fb5d11a9aa35f1f93f910624a6d148efcf623",
+              "076796bd4c1df547cd1dff17728bf87f107a887f6d47dd4246d864a22870a6fd"
+            ],
+            "task_id": "target_s1337_composition_depth2_002"
+          },
+          {
+            "activated_order": [
+              "b8d4f4f96b2f25ee73602e4b0358cc5844017e675b8977a5c17d3833fe668945",
+              "6a08625043cc3404dd4db516d76a2767a5eecc31f60c9b3b9c4148fb562f0fe2",
+              "420bc83eee031471ec382f36abe351aa4523956adc54aa3c3884c7e63457ac3e",
+              "226dba353f60b2ab202b3c63b1a30ea7d24e2fdbfd0d78ad2e885141682c11f9"
+            ],
+            "changed": true,
+            "cold_order": [
+              "b8d4f4f96b2f25ee73602e4b0358cc5844017e675b8977a5c17d3833fe668945",
+              "226dba353f60b2ab202b3c63b1a30ea7d24e2fdbfd0d78ad2e885141682c11f9",
+              "ec27c15a0c8efd96509bada43ed5b7f0a904a2824a9b78c289118d267725f7df",
+              "5392dcb55354445232dd12a9ec5132a4d728c6f9a93e5bd1661c5efa7d94eb7e"
+            ],
+            "task_id": "target_s1337_composition_depth2_003"
+          }
+        ],
+        "operator_signature": "min",
+        "sample_size": 4
+      },
+      "motif_is_diagnostic_metadata_only": true,
+      "operator_id": "a3_verified_adaptive_library_operator_0",
+      "root_signature": "min",
+      "source_procedures": [
+        {
+          "canonical_ast_hash": "894b173d424d7d98f4b6918b5233474612e1224d2848d6569040041fb8804d78",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s42_000"
+        },
+        {
+          "canonical_ast_hash": "20596cdd628390f165500a2ac715c82f0bd352254e7303e719c9973d6e317724",
+          "target_ast": {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 1
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s42_002"
+        },
+        {
+          "canonical_ast_hash": "0a38184611b81fdd830175e42616e7e2bee6002300afa2f6d0b8ba12da9ce7d4",
+          "target_ast": {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s42_003"
+        },
+        {
+          "canonical_ast_hash": "406a0b1f24a62c50a3c0c6467c707d0614f4fd815a20af13b286239aae9c5ea6",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s42_010"
+        },
+        {
+          "canonical_ast_hash": "61484ef05abde6c4d8002f9c896eaf0195a449697d9a171d1eaecd2bef7b0b05",
+          "target_ast": {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 5
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s42_011"
+        },
+        {
+          "canonical_ast_hash": "7498a8c70e697f40993b9a1afbcec52e0c890c205a2b1b61cef03c365a3fd7e6",
+          "target_ast": {
+            "args": [
+              {
+                "op": "const",
+                "value": 3
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s42_014"
+        },
+        {
+          "canonical_ast_hash": "181bb243790a12af76ee36aecfdafd0aa4bb50bf0658209cc331c537d49b8713",
+          "target_ast": {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 4
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s42_028"
+        },
+        {
+          "canonical_ast_hash": "894b173d424d7d98f4b6918b5233474612e1224d2848d6569040041fb8804d78",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s1337_000"
+        },
+        {
+          "canonical_ast_hash": "20596cdd628390f165500a2ac715c82f0bd352254e7303e719c9973d6e317724",
+          "target_ast": {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 1
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s1337_002"
+        },
+        {
+          "canonical_ast_hash": "0a38184611b81fdd830175e42616e7e2bee6002300afa2f6d0b8ba12da9ce7d4",
+          "target_ast": {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s1337_003"
+        },
+        {
+          "canonical_ast_hash": "406a0b1f24a62c50a3c0c6467c707d0614f4fd815a20af13b286239aae9c5ea6",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s1337_010"
+        },
+        {
+          "canonical_ast_hash": "61484ef05abde6c4d8002f9c896eaf0195a449697d9a171d1eaecd2bef7b0b05",
+          "target_ast": {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 5
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s1337_011"
+        },
+        {
+          "canonical_ast_hash": "7498a8c70e697f40993b9a1afbcec52e0c890c205a2b1b61cef03c365a3fd7e6",
+          "target_ast": {
+            "args": [
+              {
+                "op": "const",
+                "value": 3
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s1337_014"
+        },
+        {
+          "canonical_ast_hash": "181bb243790a12af76ee36aecfdafd0aa4bb50bf0658209cc331c537d49b8713",
+          "target_ast": {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 4
+              }
+            ],
+            "op": "min"
+          },
+          "task_id": "source_s1337_028"
+        }
+      ],
+      "typed_holes": [
+        {
+          "id": "arg0",
+          "path": [
+            "args",
+            0
+          ],
+          "type": "expr_mod10"
+        },
+        {
+          "id": "arg1",
+          "path": [
+            "args",
+            1
+          ],
+          "type": "expr_mod10"
+        }
+      ],
+      "validation": {
+        "failure_counts": {
+          "applicability_matching": 13,
+          "candidate_construction": 0,
+          "incorrect_output": 0,
+          "not_reached_after_applicability": 3,
+          "verification": 0
+        },
+        "root_signature_failures": 13,
+        "root_signature_successes": 3,
+        "semantic_operator_validation_executed": false,
+        "trials": 16,
+        "validation_selection_rule": "validation_rows[:16] shared by every eligible operator"
+      },
+      "validation_trace_task_ids": [
+        "operator_validation_s42_000",
+        "operator_validation_s42_001",
+        "operator_validation_s42_002",
+        "operator_validation_s42_003",
+        "operator_validation_s42_004",
+        "operator_validation_s42_005",
+        "operator_validation_s42_006",
+        "operator_validation_s42_007",
+        "operator_validation_s42_008",
+        "operator_validation_s42_009",
+        "operator_validation_s42_010",
+        "operator_validation_s42_011",
+        "operator_validation_s42_012",
+        "operator_validation_s42_013",
+        "operator_validation_s42_014",
+        "operator_validation_s42_015"
+      ]
+    },
+    {
+      "current_record": {
+        "lower_bound_95": 0.0,
+        "operator_id": "a3_verified_adaptive_library_operator_1",
+        "provenance": {
+          "arm": "A3_VERIFIED_ADAPTIVE_LIBRARY",
+          "target_labels_used": false,
+          "validation_labels_are_source_phase": true
+        },
+        "root_signature": "add_mod10",
+        "schema_version": "crucible.operator.v2",
+        "source_refs": [
+          "source_s42_001",
+          "source_s42_006",
+          "source_s42_012",
+          "source_s42_015"
+        ],
+        "status": "candidate",
+        "successes": 2,
+        "trials": 16,
+        "validation_refs": [
+          "operator_validation_s42_000",
+          "operator_validation_s42_001",
+          "operator_validation_s42_002",
+          "operator_validation_s42_003",
+          "operator_validation_s42_004",
+          "operator_validation_s42_005",
+          "operator_validation_s42_006",
+          "operator_validation_s42_007",
+          "operator_validation_s42_008",
+          "operator_validation_s42_009",
+          "operator_validation_s42_010",
+          "operator_validation_s42_011",
+          "operator_validation_s42_012",
+          "operator_validation_s42_013",
+          "operator_validation_s42_014",
+          "operator_validation_s42_015"
+        ]
+      },
+      "extracted_motif": {
+        "args": [
+          {
+            "id": "arg0",
+            "op": "hole",
+            "type": "expr_mod10"
+          },
+          {
+            "id": "arg1",
+            "op": "hole",
+            "type": "expr_mod10"
+          }
+        ],
+        "op": "add_mod10"
+      },
+      "hypothetical_order_effect": {
+        "activation_forced_only_for_hypothetical": true,
+        "changed_order_count": 3,
+        "comparisons": [
+          {
+            "activated_order": [
+              "f205bc4f8708760250a6b72864cd6a300ce281e2e8057489a109753aa2a6be31",
+              "307624756761a4e402549800b5111b9b3b54a3df683883c074a949bc1d471195",
+              "959ca9661bf5e02b45f7bfafe7188b1248e9da5799ac8619a428b369e0de907d",
+              "944c71e8dfc229d99b00d867c53964d971d8330bd63ae061b02c6c804eccbc54"
+            ],
+            "changed": true,
+            "cold_order": [
+              "f205bc4f8708760250a6b72864cd6a300ce281e2e8057489a109753aa2a6be31",
+              "65b2929e6871c0252a2d2d221db80bec25073482ccca842cbdcb7076e83d1831",
+              "f2368e8dd3c07358cbc2233d931091ef3c4a8d8306906ae411881e4258e4c13a",
+              "d532481e5a42cce9d98c28ca94d117ac02a653ed0a103d2e9f1ed710df78113a"
+            ],
+            "task_id": "target_s1337_composition_depth2_000"
+          },
+          {
+            "activated_order": [
+              "bd3a11270f835868285fefe02fdfd5f447c8adf06509856f21190d8ea21b3783",
+              "862202ebd8e67fcabf0502b635d682693354f753319387083514bb3d00812cbb",
+              "81a4b7936c67649d8dccec426f6613fc98cd830082b16e632988b0a719f2fe22",
+              "3d49df868ea64a244cc149c035ad17ca92f197ed5969cd38bd64f7bb05acb3ba"
+            ],
+            "changed": true,
+            "cold_order": [
+              "f066eac1db12b5fe50f5904e882a31b4afb0c1d8132c94d396c3203b677d19cb",
+              "f1c15183d23e748518120610a18d01769477d473dcf45e8beae5d2ade987bc37",
+              "efb707b64a5bf1b93317c274a486ba4f2dba082959d75ae92c0ec491f31f3fd3",
+              "e488cb7ff7824170ec5d369e4f5e4e3102e84bdaa878dfe695996f188b4c0fbf"
+            ],
+            "task_id": "target_s1337_composition_depth2_001"
+          },
+          {
+            "activated_order": [
+              "074624c2e75341db16430f1fcc619fcd1edc130ef958f63e367e4102cce90d3b",
+              "adb4dbc5ad5cdd7bcf5dd7d3e7acc9ba2e607d0f339aeb28b126a9fcd17ec0fe",
+              "6bd081aa7826eb539645ded60c8fb5d11a9aa35f1f93f910624a6d148efcf623",
+              "076796bd4c1df547cd1dff17728bf87f107a887f6d47dd4246d864a22870a6fd"
+            ],
+            "changed": false,
+            "cold_order": [
+              "074624c2e75341db16430f1fcc619fcd1edc130ef958f63e367e4102cce90d3b",
+              "adb4dbc5ad5cdd7bcf5dd7d3e7acc9ba2e607d0f339aeb28b126a9fcd17ec0fe",
+              "6bd081aa7826eb539645ded60c8fb5d11a9aa35f1f93f910624a6d148efcf623",
+              "076796bd4c1df547cd1dff17728bf87f107a887f6d47dd4246d864a22870a6fd"
+            ],
+            "task_id": "target_s1337_composition_depth2_002"
+          },
+          {
+            "activated_order": [
+              "226dba353f60b2ab202b3c63b1a30ea7d24e2fdbfd0d78ad2e885141682c11f9",
+              "ec27c15a0c8efd96509bada43ed5b7f0a904a2824a9b78c289118d267725f7df",
+              "9a024f18abd299fa0740873f4a4c0f75b9fd2b6b93961e35e513a4d486b143a7",
+              "4e61ec26d5463bdfb3ba642dd7a1f8557504cd17dd4d48eb3c409ce0c1c812a6"
+            ],
+            "changed": true,
+            "cold_order": [
+              "b8d4f4f96b2f25ee73602e4b0358cc5844017e675b8977a5c17d3833fe668945",
+              "226dba353f60b2ab202b3c63b1a30ea7d24e2fdbfd0d78ad2e885141682c11f9",
+              "ec27c15a0c8efd96509bada43ed5b7f0a904a2824a9b78c289118d267725f7df",
+              "5392dcb55354445232dd12a9ec5132a4d728c6f9a93e5bd1661c5efa7d94eb7e"
+            ],
+            "task_id": "target_s1337_composition_depth2_003"
+          }
+        ],
+        "operator_signature": "add_mod10",
+        "sample_size": 4
+      },
+      "motif_is_diagnostic_metadata_only": true,
+      "operator_id": "a3_verified_adaptive_library_operator_1",
+      "root_signature": "add_mod10",
+      "source_procedures": [
+        {
+          "canonical_ast_hash": "3c0ad52be25ffd697e4cce117cb5f4dae3bfabc9aa1ac3a885455519c698daa7",
+          "target_ast": {
+            "args": [
+              {
+                "op": "const",
+                "value": 1
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s42_001"
+        },
+        {
+          "canonical_ast_hash": "bece7bcf1083e771f6fd6e7a1e62fc04eeda1c9d02f57687715611b30632880b",
+          "target_ast": {
+            "args": [
+              {
+                "op": "const",
+                "value": 0
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s42_006"
+        },
+        {
+          "canonical_ast_hash": "7ab049108910e7e601aefa0d269b91444f016d94433e200d13e768cd66fb8333",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s42_012"
+        },
+        {
+          "canonical_ast_hash": "563b7f39934a6fecf64d255dc89fab3fe54fdfcbb4b8eeb73b9e8f7a6a6913c0",
+          "target_ast": {
+            "args": [
+              {
+                "op": "const",
+                "value": 2
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s42_015"
+        },
+        {
+          "canonical_ast_hash": "7db5df588a67797129378a9c359067021f3d62ac78299acbab9d40561a270dca",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s42_021"
+        },
+        {
+          "canonical_ast_hash": "ec27c15a0c8efd96509bada43ed5b7f0a904a2824a9b78c289118d267725f7df",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s42_022"
+        },
+        {
+          "canonical_ast_hash": "f39bcfeb5b01a0020ba02fe8d015339447a6f1d01ad001b5e11e6d63cf94967d",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s42_027"
+        },
+        {
+          "canonical_ast_hash": "55c75b5c4d5aaabb0432cbb334ae63b2940cf017bac8532436603d9af3c4c36f",
+          "target_ast": {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 7
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s42_030"
+        },
+        {
+          "canonical_ast_hash": "3c0ad52be25ffd697e4cce117cb5f4dae3bfabc9aa1ac3a885455519c698daa7",
+          "target_ast": {
+            "args": [
+              {
+                "op": "const",
+                "value": 1
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s1337_001"
+        },
+        {
+          "canonical_ast_hash": "bece7bcf1083e771f6fd6e7a1e62fc04eeda1c9d02f57687715611b30632880b",
+          "target_ast": {
+            "args": [
+              {
+                "op": "const",
+                "value": 0
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s1337_006"
+        },
+        {
+          "canonical_ast_hash": "7ab049108910e7e601aefa0d269b91444f016d94433e200d13e768cd66fb8333",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 3
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s1337_012"
+        },
+        {
+          "canonical_ast_hash": "563b7f39934a6fecf64d255dc89fab3fe54fdfcbb4b8eeb73b9e8f7a6a6913c0",
+          "target_ast": {
+            "args": [
+              {
+                "op": "const",
+                "value": 2
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s1337_015"
+        },
+        {
+          "canonical_ast_hash": "7db5df588a67797129378a9c359067021f3d62ac78299acbab9d40561a270dca",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "name": "b",
+                "op": "var"
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s1337_021"
+        },
+        {
+          "canonical_ast_hash": "ec27c15a0c8efd96509bada43ed5b7f0a904a2824a9b78c289118d267725f7df",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 2
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s1337_022"
+        },
+        {
+          "canonical_ast_hash": "f39bcfeb5b01a0020ba02fe8d015339447a6f1d01ad001b5e11e6d63cf94967d",
+          "target_ast": {
+            "args": [
+              {
+                "name": "a",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 8
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s1337_027"
+        },
+        {
+          "canonical_ast_hash": "55c75b5c4d5aaabb0432cbb334ae63b2940cf017bac8532436603d9af3c4c36f",
+          "target_ast": {
+            "args": [
+              {
+                "name": "b",
+                "op": "var"
+              },
+              {
+                "op": "const",
+                "value": 7
+              }
+            ],
+            "op": "add_mod10"
+          },
+          "task_id": "source_s1337_030"
+        }
+      ],
+      "typed_holes": [
+        {
+          "id": "arg0",
+          "path": [
+            "args",
+            0
+          ],
+          "type": "expr_mod10"
+        },
+        {
+          "id": "arg1",
+          "path": [
+            "args",
+            1
+          ],
+          "type": "expr_mod10"
+        }
+      ],
+      "validation": {
+        "failure_counts": {
+          "applicability_matching": 14,
+          "candidate_construction": 0,
+          "incorrect_output": 0,
+          "not_reached_after_applicability": 2,
+          "verification": 0
+        },
+        "root_signature_failures": 14,
+        "root_signature_successes": 2,
+        "semantic_operator_validation_executed": false,
+        "trials": 16,
+        "validation_selection_rule": "validation_rows[:16] shared by every eligible operator"
+      },
+      "validation_trace_task_ids": [
+        "operator_validation_s42_000",
+        "operator_validation_s42_001",
+        "operator_validation_s42_002",
+        "operator_validation_s42_003",
+        "operator_validation_s42_004",
+        "operator_validation_s42_005",
+        "operator_validation_s42_006",
+        "operator_validation_s42_007",
+        "operator_validation_s42_008",
+        "operator_validation_s42_009",
+        "operator_validation_s42_010",
+        "operator_validation_s42_011",
+        "operator_validation_s42_012",
+        "operator_validation_s42_013",
+        "operator_validation_s42_014",
+        "operator_validation_s42_015"
+      ]
+    }
+  ],
+  "saved_target_input_sample": {
+    "path": "/home/timbushnell/Crucible/experiments/crucible_cumulative_adaptation_exploratory_20261028_v3/SEALED_TARGET_INPUTS.jsonl",
+    "rows_loaded": 288,
+    "rows_used_for_order_only": 4,
+    "sha256": "31a43e1f7da4d9b2310c8cd81d635e770adc0f531bca394004c71d721a01a75c"
+  },
+  "schema_version": "crucible_operator_activation_diagnostic_v1",
+  "source_manifest": {
+    "path": "/home/timbushnell/Crucible/experiments/crucible_cumulative_adaptation_preflight_20261028/SOURCE_MANIFEST.jsonl",
+    "rows": 64,
+    "sha256": "df0a3788c4acce848cb15235d2c6535fa75bfbf2e8cfc9b0061c064f9c8a07b8"
+  },
+  "synthetic_activation_demo": {
+    "activated_order": [
+      "b1f46d3c23f8219615b527c1aae05722207ac02815f039595d92cc023774d390",
+      "d3788f2fda0df248d6de362497a3631e5c2f1ab4da630a07fb0814a6c7ca59c2"
+    ],
+    "candidate_pool": [
+      {
+        "canonical_ast_hash": "b1f46d3c23f8219615b527c1aae05722207ac02815f039595d92cc023774d390",
+        "root_signature": "add_mod10"
+      },
+      {
+        "canonical_ast_hash": "d3788f2fda0df248d6de362497a3631e5c2f1ab4da630a07fb0814a6c7ca59c2",
+        "root_signature": "max"
+      }
+    ],
+    "cold_order": [
+      "d3788f2fda0df248d6de362497a3631e5c2f1ab4da630a07fb0814a6c7ca59c2",
+      "b1f46d3c23f8219615b527c1aae05722207ac02815f039595d92cc023774d390"
+    ],
+    "interpretation": "Synthetic root-signature policy hook activated and changed proposal order without target labels.",
+    "operator_record": {
+      "lower_bound_95": 0.8049356770309067,
+      "operator_id": "a3_verified_adaptive_library_operator_0",
+      "provenance": {
+        "arm": "A3_VERIFIED_ADAPTIVE_LIBRARY",
+        "target_labels_used": false,
+        "validation_labels_are_source_phase": true
+      },
+      "root_signature": "add_mod10",
+      "schema_version": "crucible.operator.v2",
+      "source_refs": [
+        "synthetic_source_add"
+      ],
+      "status": "promoted",
+      "successes": 16,
+      "trials": 16,
+      "validation_refs": [
+        "synthetic_validation_00",
+        "synthetic_validation_01",
+        "synthetic_validation_02",
+        "synthetic_validation_03",
+        "synthetic_validation_04",
+        "synthetic_validation_05",
+        "synthetic_validation_06",
+        "synthetic_validation_07",
+        "synthetic_validation_08",
+        "synthetic_validation_09",
+        "synthetic_validation_10",
+        "synthetic_validation_11",
+        "synthetic_validation_12",
+        "synthetic_validation_13",
+        "synthetic_validation_14",
+        "synthetic_validation_15"
+      ]
+    },
+    "order_changed": true,
+    "source_verified": true,
+    "source_verifier_checks": 4,
+    "validation_trials": 16,
+    "validation_verified_count": 16
+  },
+  "target_answers_accessed": false,
+  "target_evaluations_run": false,
+  "validation_manifest": {
+    "path": "/home/timbushnell/Crucible/experiments/crucible_cumulative_adaptation_preflight_20261028/OPERATOR_VALIDATION_MANIFEST.jsonl",
+    "rows": 64,
+    "sha256": "ff8dfd545d60b8888f44a8b25e97167b7d2257d74eed9a80be79736c486ba6e8"
+  }
+}

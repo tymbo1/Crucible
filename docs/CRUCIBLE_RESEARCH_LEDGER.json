@@ -1189,6 +1189,27 @@
         "experiments/crucible_cumulative_adaptation_exploratory_20261028_v3/HASHES.json"
       ],
       "novelty_terms": ["post-protocol exploratory run", "zero promotion", "SSRE ordered process reservoir", "unactivated inconclusive", "cumulative adaptation"]
+    },
+    {
+      "id": "cumulative-adaptation-operator-activation-diagnostic-v1",
+      "status": "ESTABLISHED",
+      "title": "Operator activation and proposal-order diagnostic",
+      "hypothesis": "The cumulative-adaptation implementation contains a reachable path from an activated verified operator to altered target proposal order, and saved traces can identify why activation failed.",
+      "mechanisms": ["operator-promotion", "validation-allocation", "motif-representation", "candidate-ordering", "sealed-diagnostic"],
+      "interventions": ["saved source/validation trace audit", "diagnostic AST motif extraction", "four-input proposal-order comparison", "synthetic 16/16 activation fixture"],
+      "controls": ["A0 frozen policy", "no target-answer access", "no target lifecycle", "fixed current runner validation rule", "deterministic synthetic candidate pool"],
+      "result": "The two eligible source root signatures are min and add_mod10. Under the current shared validation prefix, min matches 3/16 and add_mod10 matches 2/16; all failures are applicability mismatches, and candidate construction/output/verification are not reached. The existing promoted-record ranking hook is functional: a synthetic independently verified add_mod10 operator activates at 16/16 and changes proposal order from max→add_mod10 to add_mod10→max. The intended motif/typed-hole construction path is absent from the baseline record and validation implementation.",
+      "limits": ["The diagnostic does not establish cumulative-learning efficacy", "The synthetic proof tests the existing root-signature ranking hook, not a complete learned motif constructor", "The saved target-input order sample is four rows and is not a target evaluation", "The source and validation manifests remain engineered DSL artifacts"],
+      "unresolved": ["How to allocate and freeze operator-specific validation trials", "How to instantiate typed-hole motifs without target labels", "Whether a repaired operator mechanism improves unfamiliar acquisition", "Whether a neural learner can acquire the repaired mechanism"],
+      "artifacts": [
+        "tools/run_crucible_cumulative_adaptation_operator_activation_diagnostic_20261028.py",
+        "experiments/crucible_cumulative_adaptation_operator_activation_diagnostic_20261028/REPORT.md",
+        "experiments/crucible_cumulative_adaptation_operator_activation_diagnostic_20261028/DIAGNOSTIC_REPORT.json",
+        "experiments/crucible_cumulative_adaptation_operator_activation_diagnostic_20261028/VALIDATION_TRACE.jsonl",
+        "experiments/crucible_cumulative_adaptation_operator_activation_diagnostic_20261028/SYNTHETIC_ACTIVATION.json",
+        "experiments/crucible_cumulative_adaptation_operator_activation_diagnostic_20261028/HASHES.json"
+      ],
+      "novelty_terms": ["operator activation diagnostic", "shared validation prefix", "typed-hole motif", "proposal-order hook", "activation unreachable"]
     }
   ]
 }

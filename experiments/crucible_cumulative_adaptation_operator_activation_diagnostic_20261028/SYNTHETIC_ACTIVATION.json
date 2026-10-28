@@ -1,0 +1,61 @@
+{
+  "activated_order": [
+    "b1f46d3c23f8219615b527c1aae05722207ac02815f039595d92cc023774d390",
+    "d3788f2fda0df248d6de362497a3631e5c2f1ab4da630a07fb0814a6c7ca59c2"
+  ],
+  "candidate_pool": [
+    {
+      "canonical_ast_hash": "b1f46d3c23f8219615b527c1aae05722207ac02815f039595d92cc023774d390",
+      "root_signature": "add_mod10"
+    },
+    {
+      "canonical_ast_hash": "d3788f2fda0df248d6de362497a3631e5c2f1ab4da630a07fb0814a6c7ca59c2",
+      "root_signature": "max"
+    }
+  ],
+  "cold_order": [
+    "d3788f2fda0df248d6de362497a3631e5c2f1ab4da630a07fb0814a6c7ca59c2",
+    "b1f46d3c23f8219615b527c1aae05722207ac02815f039595d92cc023774d390"
+  ],
+  "interpretation": "Synthetic root-signature policy hook activated and changed proposal order without target labels.",
+  "operator_record": {
+    "lower_bound_95": 0.8049356770309067,
+    "operator_id": "a3_verified_adaptive_library_operator_0",
+    "provenance": {
+      "arm": "A3_VERIFIED_ADAPTIVE_LIBRARY",
+      "target_labels_used": false,
+      "validation_labels_are_source_phase": true
+    },
+    "root_signature": "add_mod10",
+    "schema_version": "crucible.operator.v2",
+    "source_refs": [
+      "synthetic_source_add"
+    ],
+    "status": "promoted",
+    "successes": 16,
+    "trials": 16,
+    "validation_refs": [
+      "synthetic_validation_00",
+      "synthetic_validation_01",
+      "synthetic_validation_02",
+      "synthetic_validation_03",
+      "synthetic_validation_04",
+      "synthetic_validation_05",
+      "synthetic_validation_06",
+      "synthetic_validation_07",
+      "synthetic_validation_08",
+      "synthetic_validation_09",
+      "synthetic_validation_10",
+      "synthetic_validation_11",
+      "synthetic_validation_12",
+      "synthetic_validation_13",
+      "synthetic_validation_14",
+      "synthetic_validation_15"
+    ]
+  },
+  "order_changed": true,
+  "source_verified": true,
+  "source_verifier_checks": 4,
+  "validation_trials": 16,
+  "validation_verified_count": 16
+}
