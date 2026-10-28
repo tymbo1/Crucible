@@ -51,3 +51,28 @@ The result measures pipeline behavior, not 500M-model training time. The
 benchmark model is deliberately smaller so the four arms can be compared
 quickly. CPU-only results validate implementation and equivalence paths but
 cannot establish GPU throughput or PCIe overlap.
+
+## Independent CPU/GPU overlap benchmark
+
+`concurrent_procedural_overlap_benchmark.py` compares a GPU-only reference,
+synchronous CPU procedure generation/verification, and a bounded four-process
+SSRE producer running concurrently with GPU training. It uses deterministic
+CUDA algorithms, identical task manifests, ordered commits and sanitized
+reports:
+
+```bash
+export CRUCIBLE_CONTEXT_ROOT=/path/to/context_128
+python3 experiments/crucible_heterogeneous_training_throughput_20261029/concurrent_procedural_overlap_benchmark.py \
+  --model-size small \
+  --warmup-steps 3 \
+  --timed-steps 20 \
+  --workers 4 \
+  --window 8 \
+  --verification-rounds 128 \
+  --repetitions 3 \
+  --output-dir experiments/crucible_heterogeneous_training_throughput_20261029/results_overlap_gpu
+```
+
+The primary comparison is end-to-end wall time for the same verified
+procedural work. The CPU procedure generator is an engineering workload proxy;
+it is not a curriculum or scientific learning result.

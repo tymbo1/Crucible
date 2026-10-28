@@ -1,0 +1,43 @@
+{
+  "schema_version": "crucible-legacy-gpu-diagnostic-v1-20261029",
+  "source_commit": "531c131",
+  "legacy_benchmark": {
+    "ssre_delivery_workers": 4,
+    "ssre_delivery_worker_type": "ThreadPoolExecutor",
+    "verification_workers": 4,
+    "verification_worker_type": "ProcessPoolExecutor",
+    "window": 2,
+    "microbatches_per_step": 8,
+    "warmup_steps": 1,
+    "timed_steps": 2,
+    "repetitions": 2,
+    "timed_verification_tasks_per_combined_arm": 32,
+    "all_verification_tasks_per_combined_arm": 48
+  },
+  "utilization_measurement": {
+    "worker_cpu_utilization_recorded": false,
+    "reason": "The legacy report recorded parent process CPU time and verification elapsed time, but not child worker PIDs or child CPU time."
+  },
+  "implementation_finding": {
+    "status": "confirmed_under_test",
+    "detail": "Each preparation thread submits one verification job and immediately waits on future.result(), so verification is bounded by the preparation threads rather than being an independent streaming pipeline."
+  },
+  "input_equivalence": {
+    "checked_batches": 33,
+    "exact_equivalence": true
+  },
+  "state_mismatch_diagnostic": {
+    "default_cuda_algorithms": {
+      "final_state_match": false,
+      "loss_series_baseline": [5.37358151, 4.99860003, 4.65657752],
+      "loss_series_ssre": [5.37357286, 4.99859404, 4.65657626]
+    },
+    "deterministic_cuda_algorithms": {
+      "final_state_match": true,
+      "loss_series_baseline": [5.37358028, 4.99859943, 4.65657499],
+      "loss_series_ssre": [5.37358028, 4.99859943, 4.65657499]
+    },
+    "classification": "CUDA floating-point kernel nondeterminism explains the legacy exact-hash mismatch under the tested configuration; input ordering and indexed assembly were not the cause."
+  },
+  "next_action": "Use deterministic CUDA settings for state-comparison diagnostics and evaluate SSRE as an independent CPU useful-work pipeline rather than as a duplicate tensor-delivery path."
+}
