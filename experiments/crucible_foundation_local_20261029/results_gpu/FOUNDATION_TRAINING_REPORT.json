@@ -1,0 +1,282 @@
+{
+  "checkpoints": {
+    "external_root": "<local-checkpoint-root>",
+    "last_step": 10000
+  },
+  "classification": "substantive_local_crucible_foundation_baseline",
+  "data": {
+    "fineweb_manifest_sha256": "7ab923599c85b5510d1f9b8153fbc95a3f9f211fb9be1d0524f5f2969ae92b03",
+    "fineweb_train_sha256": "12984c52f91f54b5f461788e80f49bad3fa25d97b17614feacda690fd8b1f9d4",
+    "fineweb_validation_sha256": "08564ad5d8a7440b37d1087b7c3698b56b28a7807d69819a16202537db6b2c62",
+    "raw_fineweb_committed_to_git": false,
+    "reasoning_train_sha256": "191173b17994c7bc1769e24870007cd3ad54fe1f547cefef50f503ab3e71b26f",
+    "reasoning_validation_sha256": "89789b95c52e227574bc8a10f6fcda3a2326d3ddac4a349c9ddba6ff9c3246af",
+    "test_partition_used_for_training": false
+  },
+  "generation_samples": [
+    {
+      "completion": "a big ipputive' on a timentical to b it her mom did not believe her. Tom said, they said the li",
+      "prompt": "The goal of science is"
+    },
+    {
+      "completion": "if number isif number isif number isif number isif number isif the sum of two input numbers only",
+      "prompt": "In mathematics, a prime number is"
+    },
+    {
+      "completion": "to determine the spirit. They pictionary back had a battery inside the secitch tat some made it",
+      "prompt": "A good explanation should"
+    },
+    {
+      "completion": ", in a small home and they kept playing. They raced the shiny stone.",
+      "prompt": "Once upon a time"
+    }
+  ],
+  "limitations": [
+    "This is an intermediate model, not the planned 500M model.",
+    "The FineWeb-Edu source is one bounded shard and the reasoning sources are capped pilot subsets.",
+    "The language source is now FineWeb-Edu; TinyStories is not used by this run.",
+    "The exact OP loop is not credited here; it remains a separate external-controller evaluation.",
+    "Cumulative learning, retention and transfer are not measured by this run."
+  ],
+  "model": {
+    "config": {
+      "d_ff": 1024,
+      "d_model": 256,
+      "latent_dim_kv": 64,
+      "latent_dim_q": 64,
+      "n_heads": 4,
+      "n_layers": 4,
+      "pe_dim": 32,
+      "vocab_size": 259
+    },
+    "family": "Crucible latent-attention + SwiGLU dense",
+    "final_state_sha256": "e92ebff2769ec5556051aeb4c2a78b8f99623e3df87e0fdd0f53ea417f199fad",
+    "parameter_count": 3936000,
+    "size": "small"
+  },
+  "op_status": "not run in foundation trainer; compare OP only after baseline competence is demonstrated",
+  "schema_version": "crucible-foundation-training-v1-20261029",
+  "scientific_status": "exploratory_not_500m_not_track_b",
+  "training": {
+    "batch_size": 8,
+    "context": 512,
+    "elapsed_seconds": 172.67744992501684,
+    "peak_rss_bytes": 1979138048,
+    "peak_vram_allocated": 390917120,
+    "peak_vram_reserved": 432013312,
+    "reasoning_every": 5,
+    "resumed_from_step": 2500,
+    "seed": 42,
+    "steps_completed": 10000,
+    "tokens_per_second": 97586.12376611604,
+    "training_tokens_recorded": 16850923
+  },
+  "validation": {
+    "checkpoints": [
+      {
+        "finite_gradients": true,
+        "language_loss": 1.702751535922289,
+        "language_tokens": 65536,
+        "loss": 1.6205147504806519,
+        "reasoning_loss": 2.631841380003952,
+        "reasoning_tokens": 5902,
+        "source": "fineweb_edu",
+        "step": 2501,
+        "training_tokens": 4212491,
+        "valid_tokens": 2048
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.6850051693618298,
+        "language_tokens": 65536,
+        "loss": 0.15857261419296265,
+        "reasoning_loss": 2.6493235391424856,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 3000,
+        "training_tokens": 5052047,
+        "valid_tokens": 24
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.659139595925808,
+        "language_tokens": 65536,
+        "loss": 1.2868579626083374,
+        "reasoning_loss": 2.4139955133472366,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 3500,
+        "training_tokens": 5896877,
+        "valid_tokens": 847
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.619529590010643,
+        "language_tokens": 65536,
+        "loss": 1.1824980974197388,
+        "reasoning_loss": 2.4409382968625954,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 4000,
+        "training_tokens": 6741673,
+        "valid_tokens": 842
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.6118255853652954,
+        "language_tokens": 65536,
+        "loss": 0.729339599609375,
+        "reasoning_loss": 2.509819817680377,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 4500,
+        "training_tokens": 7583695,
+        "valid_tokens": 159
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.5578135512769222,
+        "language_tokens": 65536,
+        "loss": 0.8333762884140015,
+        "reasoning_loss": 2.649086659417561,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 5000,
+        "training_tokens": 8425867,
+        "valid_tokens": 285
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.5497427433729172,
+        "language_tokens": 65536,
+        "loss": 0.9790104031562805,
+        "reasoning_loss": 2.74538821747488,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 5500,
+        "training_tokens": 9267561,
+        "valid_tokens": 52
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.5552395097911358,
+        "language_tokens": 65536,
+        "loss": 0.9744790196418762,
+        "reasoning_loss": 2.7691797533911067,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 6000,
+        "training_tokens": 10109250,
+        "valid_tokens": 50
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.5435506962239742,
+        "language_tokens": 65536,
+        "loss": 0.06170818209648132,
+        "reasoning_loss": 2.8039428206146146,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 6500,
+        "training_tokens": 10950961,
+        "valid_tokens": 50
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.5416479632258415,
+        "language_tokens": 65536,
+        "loss": 0.058749720454216,
+        "reasoning_loss": 2.8112291268517065,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 7000,
+        "training_tokens": 11792671,
+        "valid_tokens": 51
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.5135495252907276,
+        "language_tokens": 65536,
+        "loss": 0.17285068333148956,
+        "reasoning_loss": 2.892391635700227,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 7500,
+        "training_tokens": 12635657,
+        "valid_tokens": 304
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.498399417847395,
+        "language_tokens": 65536,
+        "loss": 0.018795564770698547,
+        "reasoning_loss": 2.992880134492032,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 8000,
+        "training_tokens": 13478089,
+        "valid_tokens": 96
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.5010360591113567,
+        "language_tokens": 65536,
+        "loss": 0.0070757074281573296,
+        "reasoning_loss": 3.0884098907278092,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 8500,
+        "training_tokens": 14319693,
+        "valid_tokens": 24
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.5179176218807697,
+        "language_tokens": 65536,
+        "loss": 0.0036471884232014418,
+        "reasoning_loss": 3.1296650512628092,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 9000,
+        "training_tokens": 15161297,
+        "valid_tokens": 24
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.4820588156580925,
+        "language_tokens": 65536,
+        "loss": 0.22130821645259857,
+        "reasoning_loss": 3.125702163155949,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 9500,
+        "training_tokens": 16006127,
+        "valid_tokens": 847
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.4621212258934975,
+        "language_tokens": 65536,
+        "loss": 0.19691972434520721,
+        "reasoning_loss": 3.1160299514601166,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 10000,
+        "training_tokens": 16850923,
+        "valid_tokens": 842
+      }
+    ],
+    "final": {
+      "finite_gradients": true,
+      "language_loss": 1.4621212258934975,
+      "language_tokens": 65536,
+      "loss": 0.19691972434520721,
+      "reasoning_loss": 3.1160299514601166,
+      "reasoning_tokens": 5902,
+      "source": "reasoning",
+      "step": 10000,
+      "training_tokens": 16850923,
+      "valid_tokens": 842
+    }
+  }
+}
