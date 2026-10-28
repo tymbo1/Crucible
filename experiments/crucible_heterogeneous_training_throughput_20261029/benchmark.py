@@ -68,8 +68,9 @@ from model_core import MultiHeadLatentAttention, SwiGLU  # noqa: E402
 
 PAD_ID = 0
 RAW_BYTE_START = 3
-SCHEMA_VERSION = "crucible-heterogeneous-training-throughput-v1-20261029"
+SCHEMA_VERSION = "crucible-heterogeneous-training-throughput-v2-20261029"
 LOSS_SCALE = 128.0
+DEFAULT_CONTEXT_ROOT = Path(os.environ.get("CRUCIBLE_CONTEXT_ROOT", "context_128"))
 
 
 def now_ns() -> int:
@@ -82,6 +83,21 @@ def rss_bytes() -> int:
 
 def sha256_file_or_none(path: Path) -> Optional[str]:
     return sha256_file(path) if path.is_file() else None
+
+
+def redact_external_value(value: Any) -> Any:
+    """Remove local paths from artifacts intended for external review."""
+    if isinstance(value, dict):
+        return {key: redact_external_value(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [redact_external_value(item) for item in value]
+    if isinstance(value, str) and (
+        value.startswith("/home/")
+        or value.startswith("/mnt/")
+        or value.startswith("/tmp/")
+    ):
+        return "<local-path-redacted>"
+    return value
 
 
 def state_digest(model: nn.Module) -> str:
@@ -756,7 +772,7 @@ def compare_results(results: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Heterogeneous Crucible throughput benchmark")
-    parser.add_argument("--context-root", type=Path, default=Path("/home/timbushnell/crucible_context_gate_v1_20261018/context_128"))
+    parser.add_argument("--context-root", type=Path, default=DEFAULT_CONTEXT_ROOT)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--device", choices=("auto", "cpu", "cuda"), default="auto")
     parser.add_argument("--model-size", choices=("tiny", "small"), default="tiny")
@@ -768,6 +784,11 @@ def main() -> int:
     parser.add_argument("--learning-rate", type=float, default=3e-4)
     parser.add_argument("--weight-decay", type=float, default=0.01)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--include-machine-metadata",
+        action="store_true",
+        help="Include local paths and host metadata in artifacts; keep disabled for external review.",
+    )
     args = parser.parse_args()
 
     output = args.output_dir.resolve()
@@ -824,22 +845,27 @@ def main() -> int:
 
     environment = {
         "python": sys.version,
-        "platform": platform.platform(),
-        "processor": platform.processor(),
-        "cpu_count": os.cpu_count(),
+        "platform": platform.platform() if args.include_machine_metadata else "redacted",
+        "processor": platform.processor() if args.include_machine_metadata else "redacted",
+        "cpu_count": os.cpu_count() if args.include_machine_metadata else None,
         "torch_version": torch.__version__,
         "torch_cuda_version": torch.version.cuda,
         "cuda_available": torch.cuda.is_available(),
-        "cuda_device": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
+        "cuda_device": (
+            torch.cuda.get_device_name(0)
+            if torch.cuda.is_available() and args.include_machine_metadata
+            else None
+        ),
         "device_selected": device_kind,
         "device_note": device_note,
     }
+    public_data_report = data_report if args.include_machine_metadata else redact_external_value(data_report)
     report = {
         "schema_version": SCHEMA_VERSION,
         "classification": "engineering_benchmark_cpu_validated_gpu_unmeasured" if device_kind == "cpu" else "engineering_benchmark_gpu_measured",
         "scientific_status": "not_a_scientific_training_run",
         "data_manifest_sha256": config_sha,
-        "data_report": data_report,
+        "data_report": public_data_report,
         "input_equivalence": input_report,
         "update_equivalence": update_equivalence,
         "model": {"family": "Crucible latent-attention + SwiGLU dense", "size": args.model_size, "parameter_count": parameter_count, "config": cfg},

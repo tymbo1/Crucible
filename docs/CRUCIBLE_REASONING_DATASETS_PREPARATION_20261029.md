@@ -1,9 +1,9 @@
 # Crucible reasoning-dataset preparation
 
 Prepared 2026-10-29 for the future 500M Crucible curriculum. The raw bundle is
-stored outside the Git repository at:
-
-`/home/timbushnell/crucible_datasets_20261029`
+stored outside the Git repository at a local path recorded only in the private
+preparation copy. External artifacts use the placeholder
+`<local-dataset-bundle>`.
 
 The repository contains provenance and hash metadata, not the raw datasets.
 See [the machine-readable manifest](CRUCIBLE_REASONING_DATASETS_MANIFEST_20261029.json).

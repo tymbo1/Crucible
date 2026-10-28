@@ -1,0 +1,30 @@
+{
+  "schema_version": "crucible-gpu-access-diagnostic-v1-20261029",
+  "status": "blocked",
+  "execution_context": "managed_codex_sandbox",
+  "container_detected": false,
+  "sandbox_detected": true,
+  "device_access_namespace": "restricted",
+  "pci_device_visible": true,
+  "kernel_driver_bound": true,
+  "nvidia_kernel_modules_loaded": true,
+  "nvidia_device_nodes_present": false,
+  "nvidia_smi_communicates": false,
+  "pytorch_cuda_available": false,
+  "pytorch_cuda_build": "13.0",
+  "benchmark_executed_on_gpu": false,
+  "blocker": "The managed Codex sandbox can see PCI and kernel-module state, but /dev/nvidia* device nodes are absent from its restricted device namespace. NVML and PyTorch therefore cannot initialize CUDA here; this does not prove the host driver is broken outside the sandbox.",
+  "actions_taken": [
+    "Read-only nvidia-smi check",
+    "Read-only PyTorch CUDA check",
+    "Read-only PCI and kernel-module checks",
+    "Read-only container-environment check"
+  ],
+  "actions_not_taken": [
+    "No driver installation or reinstallation",
+    "No module reload",
+    "No service restart",
+    "No device-node creation"
+  ],
+  "next_step": "Run the unchanged benchmark in a host session with GPU device access, or provide an approved sandbox GPU-device mapping. No host-level driver repair is justified by this diagnostic alone."
+}

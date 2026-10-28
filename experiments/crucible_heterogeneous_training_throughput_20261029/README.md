@@ -1,8 +1,7 @@
 # Crucible heterogeneous training-throughput benchmark
 
-This is an engineering benchmark for the local Ryzen 7 5700X / RTX 3060 Ti
-system. It is not a scientific Crucible experiment and does not modify frozen
-research artifacts.
+This is an engineering benchmark for a local development system. It is not a
+scientific Crucible experiment and does not modify frozen research artifacts.
 
 The benchmark reuses the frozen context-128 byte corpus and schedule, but
 trains a fresh smaller dense model built from Crucible's latent-attention and
@@ -20,10 +19,15 @@ state.
 
 ## Run
 
-CUDA is optional. With the current environment, the expected CPU validation
-command is:
+CUDA is optional. Set `CRUCIBLE_CONTEXT_ROOT` to the local context-128 corpus
+or pass `--context-root` explicitly. The benchmark redacts local paths and
+host metadata by default; `--include-machine-metadata` is an explicit local
+diagnostic opt-in.
+
+The CPU validation command is:
 
 ```bash
+export CRUCIBLE_CONTEXT_ROOT=/path/to/context_128
 python3 experiments/crucible_heterogeneous_training_throughput_20261029/benchmark.py \
   --device auto \
   --model-size small \
@@ -37,9 +41,9 @@ python3 experiments/crucible_heterogeneous_training_throughput_20261029/benchmar
 
 If CUDA is available, the same command selects CUDA automatically and records
 CUDA-event forward/backward timing, host-to-device bytes, peak VRAM and a GPU
-idle-time proxy. On the current machine `nvidia-smi` cannot communicate with
-the driver, so GPU results must be reported as unmeasured until the driver is
-restored.
+idle-time proxy. GPU availability and the exact blocker are recorded separately
+in the GPU diagnostic artifact; no driver changes are performed by this
+benchmark.
 
 ## Interpretation boundary
 

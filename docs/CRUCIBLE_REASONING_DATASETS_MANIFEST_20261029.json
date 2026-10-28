@@ -1,7 +1,7 @@
 {
   "schema_version": "crucible-reasoning-dataset-preparation-v1",
   "prepared_at": "2026-10-29",
-  "storage_root": "/home/timbushnell/crucible_datasets_20261029",
+  "storage_root": "<local-dataset-bundle>",
   "raw_data_committed_to_git": false,
   "datasets": [
     {
@@ -70,7 +70,7 @@
     }
   ],
   "storage": {
-    "filesystem_free_bytes_at_preparation": 219043332096,
+    "filesystem_free_bytes_at_preparation": null,
     "raw_bundle_excluded_from_repository": true,
     "reason": "Dataset size, provenance and redistribution terms should be managed separately from Crucible source history."
   }
