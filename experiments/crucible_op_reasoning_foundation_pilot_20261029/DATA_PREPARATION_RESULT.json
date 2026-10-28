@@ -1,0 +1,57 @@
+{
+  "schema_version": "crucible-reasoning-foundation-pilot-v1-20261029",
+  "raw_data_committed_to_git": false,
+  "external_data_root": "<local-pilot-data>",
+  "counts": {
+    "train": 384,
+    "validation": 280,
+    "test": 304
+  },
+  "counts_by_domain": {
+    "train": {
+      "bbh": 64,
+      "bigbench_lite": 64,
+      "ethics": 64,
+      "language_foundation_proxy": 64,
+      "math": 64,
+      "scibench": 64
+    },
+    "validation": {
+      "bbh": 64,
+      "bigbench_lite": 64,
+      "language_foundation_proxy": 32,
+      "math": 64,
+      "scibench": 56
+    },
+    "test": {
+      "bbh": 64,
+      "bigbench_lite": 64,
+      "ethics": 64,
+      "math": 64,
+      "scibench": 48
+    }
+  },
+  "derived_file_sha256": {
+    "train.jsonl": "191173b17994c7bc1769e24870007cd3ad54fe1f547cefef50f503ab3e71b26f",
+    "validation.jsonl": "89789b95c52e227574bc8a10f6fcda3a2326d3ddac4a349c9ddba6ff9c3246af",
+    "test.jsonl": "79f503ab68ef21f81de2ca441abf0c0d133e0cced0f180cdea5eb934cb181a83"
+  },
+  "source_records_seen": {
+    "math": 12500,
+    "bbh": 6511,
+    "scibench": 580,
+    "ethics": 21759,
+    "bigbench_lite": 88749
+  },
+  "language_foundation": {
+    "status": "proxy_only",
+    "source": "local TinyStories packed context data",
+    "train_limit": 256,
+    "missing_recommended_sources": [
+      "FineWeb-Edu",
+      "Dolma",
+      "Project Gutenberg Australia"
+    ]
+  },
+  "interpretation_boundary": "This is a small data/pretraining pilot manifest. It does not establish broad reasoning, cumulative learning, or internalized recursive reasoning."
+}

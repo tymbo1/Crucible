@@ -1,0 +1,4283 @@
+{
+  "classification": "exploratory_op_external_scaffold_foundation_pilot",
+  "data": {
+    "language_source_boundary": "local TinyStories context proxy; FineWeb-Edu/Dolma/Gutenberg absent",
+    "manifest_sha256": "42dba2fb5183d5b113cdb4eb3c11603f894bc33672eef51c9c7b0b437e84e865",
+    "sealed_target_answers_accessed": false,
+    "test_sha256": "79f503ab68ef21f81de2ca441abf0c0d133e0cced0f180cdea5eb934cb181a83",
+    "train_sha256": "191173b17994c7bc1769e24870007cd3ad54fe1f547cefef50f503ab3e71b26f",
+    "validation_sha256": "89789b95c52e227574bc8a10f6fcda3a2326d3ddac4a349c9ddba6ff9c3246af"
+  },
+  "learning_curve": [
+    {
+      "finite_gradients": true,
+      "loss": 5.792585849761963,
+      "step": 1,
+      "valid_tokens": 51,
+      "validation_loss": 5.567131557035803,
+      "wall_ns": 498524026
+    },
+    {
+      "finite_gradients": true,
+      "loss": 5.599384307861328,
+      "step": 2,
+      "valid_tokens": 52,
+      "wall_ns": 10575753
+    },
+    {
+      "finite_gradients": true,
+      "loss": 5.301562309265137,
+      "step": 3,
+      "valid_tokens": 50,
+      "wall_ns": 9813293
+    },
+    {
+      "finite_gradients": true,
+      "loss": 5.073905944824219,
+      "step": 4,
+      "valid_tokens": 50,
+      "wall_ns": 9947643
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.842109203338623,
+      "step": 5,
+      "valid_tokens": 50,
+      "wall_ns": 9886374
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.607616901397705,
+      "step": 6,
+      "valid_tokens": 50,
+      "wall_ns": 9823783
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.437270164489746,
+      "step": 7,
+      "valid_tokens": 51,
+      "wall_ns": 9849824
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.206916332244873,
+      "step": 8,
+      "valid_tokens": 51,
+      "wall_ns": 9821773
+    },
+    {
+      "finite_gradients": true,
+      "loss": 5.532575607299805,
+      "step": 9,
+      "valid_tokens": 364,
+      "wall_ns": 9968903
+    },
+    {
+      "finite_gradients": true,
+      "loss": 5.3663835525512695,
+      "step": 10,
+      "valid_tokens": 311,
+      "wall_ns": 9899854
+    },
+    {
+      "finite_gradients": true,
+      "loss": 5.401961803436279,
+      "step": 11,
+      "valid_tokens": 404,
+      "wall_ns": 9938804
+    },
+    {
+      "finite_gradients": true,
+      "loss": 5.3013014793396,
+      "step": 12,
+      "valid_tokens": 304,
+      "wall_ns": 9871063
+    },
+    {
+      "finite_gradients": true,
+      "loss": 5.310569763183594,
+      "step": 13,
+      "valid_tokens": 341,
+      "wall_ns": 9871644
+    },
+    {
+      "finite_gradients": true,
+      "loss": 5.2188591957092285,
+      "step": 14,
+      "valid_tokens": 321,
+      "wall_ns": 9892573
+    },
+    {
+      "finite_gradients": true,
+      "loss": 5.05264139175415,
+      "step": 15,
+      "valid_tokens": 105,
+      "wall_ns": 9916773
+    },
+    {
+      "finite_gradients": true,
+      "loss": 5.0629987716674805,
+      "step": 16,
+      "valid_tokens": 96,
+      "validation_loss": 4.606834799125728,
+      "wall_ns": 9854404
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.4783124923706055,
+      "step": 17,
+      "valid_tokens": 24,
+      "wall_ns": 9745164
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.6263837814331055,
+      "step": 18,
+      "valid_tokens": 24,
+      "wall_ns": 9842794
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.3912763595581055,
+      "step": 19,
+      "valid_tokens": 24,
+      "wall_ns": 9930014
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.258382320404053,
+      "step": 20,
+      "valid_tokens": 24,
+      "wall_ns": 9949563
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.0776166915893555,
+      "step": 21,
+      "valid_tokens": 24,
+      "wall_ns": 9839873
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.9866740703582764,
+      "step": 22,
+      "valid_tokens": 24,
+      "wall_ns": 9843494
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.7855429649353027,
+      "step": 23,
+      "valid_tokens": 24,
+      "wall_ns": 9846733
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.6280722618103027,
+      "step": 24,
+      "valid_tokens": 24,
+      "wall_ns": 9826714
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.993371963500977,
+      "step": 25,
+      "valid_tokens": 568,
+      "wall_ns": 9922573
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.96009635925293,
+      "step": 26,
+      "valid_tokens": 562,
+      "wall_ns": 10018573
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.987002372741699,
+      "step": 27,
+      "valid_tokens": 542,
+      "wall_ns": 9839114
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.9144062995910645,
+      "step": 28,
+      "valid_tokens": 584,
+      "wall_ns": 9950914
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.891916275024414,
+      "step": 29,
+      "valid_tokens": 614,
+      "wall_ns": 9891243
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.754729270935059,
+      "step": 30,
+      "valid_tokens": 582,
+      "wall_ns": 9956244
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.659456729888916,
+      "step": 31,
+      "valid_tokens": 525,
+      "wall_ns": 9898664
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.63279914855957,
+      "step": 32,
+      "valid_tokens": 589,
+      "validation_loss": 3.9766226712114903,
+      "wall_ns": 10143043
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.077204704284668,
+      "step": 33,
+      "valid_tokens": 39,
+      "wall_ns": 9947283
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.159738063812256,
+      "step": 34,
+      "valid_tokens": 94,
+      "wall_ns": 10037963
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.171026229858398,
+      "step": 35,
+      "valid_tokens": 90,
+      "wall_ns": 10122883
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.130505084991455,
+      "step": 36,
+      "valid_tokens": 93,
+      "wall_ns": 10072653
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.562325477600098,
+      "step": 37,
+      "valid_tokens": 120,
+      "wall_ns": 10010223
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.241491317749023,
+      "step": 38,
+      "valid_tokens": 47,
+      "wall_ns": 9974543
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.022879123687744,
+      "step": 39,
+      "valid_tokens": 108,
+      "wall_ns": 9863574
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.180737018585205,
+      "step": 40,
+      "valid_tokens": 161,
+      "wall_ns": 9887283
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.286818981170654,
+      "step": 41,
+      "valid_tokens": 42,
+      "wall_ns": 9397354
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.35344934463501,
+      "step": 42,
+      "valid_tokens": 44,
+      "wall_ns": 9075405
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.2208967208862305,
+      "step": 43,
+      "valid_tokens": 48,
+      "wall_ns": 9053855
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.251516819000244,
+      "step": 44,
+      "valid_tokens": 52,
+      "wall_ns": 9003545
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.286644458770752,
+      "step": 45,
+      "valid_tokens": 47,
+      "wall_ns": 8977386
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.98523211479187,
+      "step": 46,
+      "valid_tokens": 46,
+      "wall_ns": 9003385
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.7720112800598145,
+      "step": 47,
+      "valid_tokens": 38,
+      "wall_ns": 9022635
+    },
+    {
+      "finite_gradients": true,
+      "loss": 4.065102577209473,
+      "step": 48,
+      "valid_tokens": 50,
+      "validation_loss": 3.571154795320306,
+      "wall_ns": 8968845
+    },
+    {
+      "finite_gradients": true,
+      "loss": 2.3834731578826904,
+      "step": 49,
+      "valid_tokens": 51,
+      "wall_ns": 9021785
+    },
+    {
+      "finite_gradients": true,
+      "loss": 2.447242259979248,
+      "step": 50,
+      "valid_tokens": 52,
+      "wall_ns": 9058495
+    },
+    {
+      "finite_gradients": true,
+      "loss": 2.2336645126342773,
+      "step": 51,
+      "valid_tokens": 50,
+      "wall_ns": 9800773
+    },
+    {
+      "finite_gradients": true,
+      "loss": 2.1784422397613525,
+      "step": 52,
+      "valid_tokens": 50,
+      "wall_ns": 9212545
+    },
+    {
+      "finite_gradients": true,
+      "loss": 2.098823308944702,
+      "step": 53,
+      "valid_tokens": 50,
+      "wall_ns": 8941315
+    },
+    {
+      "finite_gradients": true,
+      "loss": 2.007080078125,
+      "step": 54,
+      "valid_tokens": 50,
+      "wall_ns": 9019935
+    },
+    {
+      "finite_gradients": true,
+      "loss": 2.002565860748291,
+      "step": 55,
+      "valid_tokens": 51,
+      "wall_ns": 8963735
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.906360149383545,
+      "step": 56,
+      "valid_tokens": 51,
+      "wall_ns": 8961585
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.7798004150390625,
+      "step": 57,
+      "valid_tokens": 364,
+      "wall_ns": 8991465
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.596611738204956,
+      "step": 58,
+      "valid_tokens": 311,
+      "wall_ns": 9011525
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.7508091926574707,
+      "step": 59,
+      "valid_tokens": 404,
+      "wall_ns": 8951325
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.6811575889587402,
+      "step": 60,
+      "valid_tokens": 304,
+      "wall_ns": 8944095
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.7146012783050537,
+      "step": 61,
+      "valid_tokens": 341,
+      "wall_ns": 8979435
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.6018362045288086,
+      "step": 62,
+      "valid_tokens": 321,
+      "wall_ns": 8960806
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.304490566253662,
+      "step": 63,
+      "valid_tokens": 105,
+      "wall_ns": 8987065
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.429384231567383,
+      "step": 64,
+      "valid_tokens": 96,
+      "validation_loss": 3.2554722261071505,
+      "wall_ns": 8937905
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.6665267944335938,
+      "step": 65,
+      "valid_tokens": 24,
+      "wall_ns": 8951434
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.54962158203125,
+      "step": 66,
+      "valid_tokens": 24,
+      "wall_ns": 8988035
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.5781962871551514,
+      "step": 67,
+      "valid_tokens": 24,
+      "wall_ns": 8985255
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.4428966045379639,
+      "step": 68,
+      "valid_tokens": 24,
+      "wall_ns": 8987795
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.4077962636947632,
+      "step": 69,
+      "valid_tokens": 24,
+      "wall_ns": 8968875
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.3026962280273438,
+      "step": 70,
+      "valid_tokens": 24,
+      "wall_ns": 8915865
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.2556966543197632,
+      "step": 71,
+      "valid_tokens": 24,
+      "wall_ns": 8984065
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.2475814819335938,
+      "step": 72,
+      "valid_tokens": 24,
+      "wall_ns": 8981785
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.576287031173706,
+      "step": 73,
+      "valid_tokens": 568,
+      "wall_ns": 8983405
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.594581365585327,
+      "step": 74,
+      "valid_tokens": 562,
+      "wall_ns": 8951845
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.6230597496032715,
+      "step": 75,
+      "valid_tokens": 542,
+      "wall_ns": 9018545
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.558566093444824,
+      "step": 76,
+      "valid_tokens": 584,
+      "wall_ns": 8954315
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.5123517513275146,
+      "step": 77,
+      "valid_tokens": 614,
+      "wall_ns": 8987535
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.4290049076080322,
+      "step": 78,
+      "valid_tokens": 582,
+      "wall_ns": 8985515
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.3615353107452393,
+      "step": 79,
+      "valid_tokens": 525,
+      "wall_ns": 8993205
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.4048147201538086,
+      "step": 80,
+      "valid_tokens": 589,
+      "validation_loss": 3.0835789816266392,
+      "wall_ns": 8997025
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.199486494064331,
+      "step": 81,
+      "valid_tokens": 39,
+      "wall_ns": 9066524
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.0599942207336426,
+      "step": 82,
+      "valid_tokens": 94,
+      "wall_ns": 8966035
+    },
+    {
+      "finite_gradients": true,
+      "loss": 2.9647035598754883,
+      "step": 83,
+      "valid_tokens": 90,
+      "wall_ns": 9054715
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.052447557449341,
+      "step": 84,
+      "valid_tokens": 93,
+      "wall_ns": 8960685
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.768982172012329,
+      "step": 85,
+      "valid_tokens": 120,
+      "wall_ns": 9090265
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.5096278190612793,
+      "step": 86,
+      "valid_tokens": 47,
+      "wall_ns": 9006745
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.0372557640075684,
+      "step": 87,
+      "valid_tokens": 108,
+      "wall_ns": 8986636
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.1908164024353027,
+      "step": 88,
+      "valid_tokens": 161,
+      "wall_ns": 8973915
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.533938407897949,
+      "step": 89,
+      "valid_tokens": 42,
+      "wall_ns": 8985045
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.6628613471984863,
+      "step": 90,
+      "valid_tokens": 44,
+      "wall_ns": 8982665
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.5102572441101074,
+      "step": 91,
+      "valid_tokens": 48,
+      "wall_ns": 8986265
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.512042760848999,
+      "step": 92,
+      "valid_tokens": 52,
+      "wall_ns": 9017665
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.5520999431610107,
+      "step": 93,
+      "valid_tokens": 47,
+      "wall_ns": 8961375
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.2728915214538574,
+      "step": 94,
+      "valid_tokens": 46,
+      "wall_ns": 9020904
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.1069633960723877,
+      "step": 95,
+      "valid_tokens": 38,
+      "wall_ns": 8923775
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.507330894470215,
+      "step": 96,
+      "valid_tokens": 50,
+      "validation_loss": 3.091318529114735,
+      "wall_ns": 9035865
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.8237736225128174,
+      "step": 97,
+      "valid_tokens": 51,
+      "wall_ns": 8949755
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.8851524591445923,
+      "step": 98,
+      "valid_tokens": 52,
+      "wall_ns": 8987105
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.6930876970291138,
+      "step": 99,
+      "valid_tokens": 50,
+      "wall_ns": 8968955
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.639941930770874,
+      "step": 100,
+      "valid_tokens": 50,
+      "wall_ns": 8990755
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.5605376958847046,
+      "step": 101,
+      "valid_tokens": 50,
+      "wall_ns": 8936025
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.4694726467132568,
+      "step": 102,
+      "valid_tokens": 50,
+      "wall_ns": 9007115
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.4512921571731567,
+      "step": 103,
+      "valid_tokens": 51,
+      "wall_ns": 8992635
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.3579705953598022,
+      "step": 104,
+      "valid_tokens": 51,
+      "wall_ns": 8983165
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.191960573196411,
+      "step": 105,
+      "valid_tokens": 364,
+      "wall_ns": 8965545
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.007505416870117,
+      "step": 106,
+      "valid_tokens": 311,
+      "wall_ns": 9050705
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.1020472049713135,
+      "step": 107,
+      "valid_tokens": 404,
+      "wall_ns": 8956665
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.126603841781616,
+      "step": 108,
+      "valid_tokens": 304,
+      "wall_ns": 9007855
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.165905475616455,
+      "step": 109,
+      "valid_tokens": 341,
+      "wall_ns": 8992625
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.0409128665924072,
+      "step": 110,
+      "valid_tokens": 321,
+      "wall_ns": 8988435
+    },
+    {
+      "finite_gradients": true,
+      "loss": 2.7840685844421387,
+      "step": 111,
+      "valid_tokens": 105,
+      "wall_ns": 8980515
+    },
+    {
+      "finite_gradients": true,
+      "loss": 2.994189739227295,
+      "step": 112,
+      "valid_tokens": 96,
+      "validation_loss": 2.9284069051750494,
+      "wall_ns": 8985745
+    },
+    {
+      "finite_gradients": true,
+      "loss": 1.0354526042938232,
+      "step": 113,
+      "valid_tokens": 24,
+      "wall_ns": 8910915
+    },
+    {
+      "finite_gradients": true,
+      "loss": 0.9536069631576538,
+      "step": 114,
+      "valid_tokens": 24,
+      "wall_ns": 9002795
+    },
+    {
+      "finite_gradients": true,
+      "loss": 0.957007110118866,
+      "step": 115,
+      "valid_tokens": 24,
+      "wall_ns": 9362994
+    },
+    {
+      "finite_gradients": true,
+      "loss": 0.8414548635482788,
+      "step": 116,
+      "valid_tokens": 24,
+      "wall_ns": 10170103
+    },
+    {
+      "finite_gradients": true,
+      "loss": 0.8235155940055847,
+      "step": 117,
+      "valid_tokens": 24,
+      "wall_ns": 10747132
+    },
+    {
+      "finite_gradients": true,
+      "loss": 0.7685343623161316,
+      "step": 118,
+      "valid_tokens": 24,
+      "wall_ns": 9920443
+    },
+    {
+      "finite_gradients": true,
+      "loss": 0.7424914240837097,
+      "step": 119,
+      "valid_tokens": 24,
+      "wall_ns": 9953923
+    },
+    {
+      "finite_gradients": true,
+      "loss": 0.8091787099838257,
+      "step": 120,
+      "valid_tokens": 24,
+      "wall_ns": 9885804
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.1940414905548096,
+      "step": 121,
+      "valid_tokens": 568,
+      "wall_ns": 9955833
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.2598116397857666,
+      "step": 122,
+      "valid_tokens": 562,
+      "wall_ns": 9937423
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.2318687438964844,
+      "step": 123,
+      "valid_tokens": 542,
+      "wall_ns": 9997703
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.1796889305114746,
+      "step": 124,
+      "valid_tokens": 584,
+      "wall_ns": 9978394
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.142730712890625,
+      "step": 125,
+      "valid_tokens": 614,
+      "wall_ns": 9838263
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.080726146697998,
+      "step": 126,
+      "valid_tokens": 582,
+      "wall_ns": 9935044
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.01643967628479,
+      "step": 127,
+      "valid_tokens": 525,
+      "wall_ns": 9972494
+    },
+    {
+      "finite_gradients": true,
+      "loss": 3.1108627319335938,
+      "step": 128,
+      "valid_tokens": 589,
+      "validation_loss": 2.888574655804408,
+      "wall_ns": 9932453
+    }
+  ],
+  "limitations": [
+    "The OP loop is an external controller around a trained Crucible model; it is not a neural recursive architecture.",
+    "The answer comparator is an evaluation-only oracle and exposes only pass/fail to the controller.",
+    "This small pilot does not establish broad reasoning, cumulative learning, retention or transfer.",
+    "The five reasoning datasets are sampled records; the language source is a local TinyStories proxy, not FineWeb-Edu."
+  ],
+  "model": {
+    "config": {
+      "d_ff": 512,
+      "d_model": 128,
+      "latent_dim_kv": 32,
+      "latent_dim_q": 32,
+      "n_heads": 4,
+      "n_layers": 2,
+      "pe_dim": 16,
+      "vocab_size": 259
+    },
+    "family": "Crucible latent-attention + SwiGLU dense",
+    "final_state_sha256": "26176ab20329a82e50dc4685899f3d7ccbdb2de99a23f00d1dd300e88666c1ab",
+    "initial_state_sha256": "9ae1a9316804270c300e386bc04fc51ece8f1c515c6a680131f2a5c5512415da",
+    "parameter_count": 542080,
+    "size": "tiny"
+  },
+  "op": {
+    "controller_source_sha256": "6df88d6b6d16de6ac79d378efcdaf06abe2a3d74152dcc39f2f147026e5183bf",
+    "fix_rule": "first independently verified answer, otherwise final bounded revision",
+    "formula_spec_sha256": "c2ad9a6c96bf98bf5d3f3ae32cba64c1fe449430ed6c7a72c4e0a3485eebb8c6",
+    "internalized_in_weights": false,
+    "objective_terms": {
+      "consistency": "answer verifier pass/fail",
+      "cost": "model token count and pass count",
+      "entropy": "unavailable",
+      "future_competence": "not measured",
+      "information_gain": "unavailable",
+      "self_quality": "unavailable",
+      "utility": "evaluator-only for this pilot"
+    }
+  },
+  "policies": [
+    {
+      "accuracy": 0.0,
+      "by_domain": {
+        "bbh": {
+          "records": 64,
+          "verified_correct": 0
+        }
+      },
+      "mean_model_tokens": 26.546875,
+      "mean_passes": 1.0,
+      "policy": "one_pass",
+      "records": 64,
+      "traces": [
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000002",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000006",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000020",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000044",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000045",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000063",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000069",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000072",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000073",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000077",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000093",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000156",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000163",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000177",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000181",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000183",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000186",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000195",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000205",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000211",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000212",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000224",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000228",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 2,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:boolean_expressions:00000230",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000253",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000274",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000294",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000297",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000301",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000303",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000306",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000330",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000336",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000342",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000348",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000357",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000366",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000371",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000373",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000374",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000387",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000404",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000426",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:causal_judgement:00000431",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000446",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000452",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000473",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000474",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 0,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000481",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000498",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000515",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000540",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000544",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000547",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000557",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000581",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000586",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000588",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000599",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000602",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000606",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000621",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 63,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000625",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 1,
+          "passes": 1,
+          "policy": "one_pass",
+          "record_id": "bbh:date_understanding:00000626",
+          "self_quality_status": "unavailable",
+          "verified": false
+        }
+      ],
+      "verified_correct": 0
+    },
+    {
+      "accuracy": 0.0,
+      "by_domain": {
+        "bbh": {
+          "records": 64,
+          "verified_correct": 0
+        }
+      },
+      "mean_model_tokens": 93.3125,
+      "mean_passes": 2.0,
+      "policy": "fixed_depth_2",
+      "records": 64,
+      "traces": [
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000002",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000006",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000020",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 123,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 127,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000044",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 125,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 128,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000045",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 123,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 127,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000063",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000069",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000072",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000073",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000077",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000093",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000156",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 123,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 127,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000163",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 122,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 125,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000177",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000181",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000183",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 122,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 125,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000186",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 123,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 126,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000195",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000205",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 122,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 125,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000211",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 123,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 127,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000212",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000224",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 121,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 124,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000228",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 127,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 130,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:boolean_expressions:00000230",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000253",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000274",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000294",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 31,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000297",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 31,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000301",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000303",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000306",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000330",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 31,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000336",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000342",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000348",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000357",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 31,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000366",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000371",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000373",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000374",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 31,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000387",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000404",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 31,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000426",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 31,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:causal_judgement:00000431",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000446",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000452",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000473",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 31,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000474",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 31,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000481",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000498",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000515",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000540",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000544",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000547",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000557",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000581",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000586",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000588",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000599",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000602",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000606",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000621",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000625",
+          "self_quality_status": "unavailable",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 30,
+          "domain": "bbh",
+          "ig_status": "unavailable",
+          "model_tokens": 32,
+          "passes": 2,
+          "policy": "fixed_depth_2",
+          "record_id": "bbh:date_understanding:00000626",
+          "self_quality_status": "unavailable",
+          "verified": false
+        }
+      ],
+      "verified_correct": 0
+    },
+    {
+      "accuracy": 0.0,
+      "by_domain": {
+        "bbh": {
+          "records": 64,
+          "verified_correct": 0
+        }
+      },
+      "mean_model_tokens": 188.9375,
+      "mean_passes": 2.0,
+      "policy": "op_external",
+      "records": 64,
+      "traces": [
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 287,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000002",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 287,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000006",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 287,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000020",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 252,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000044",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 284,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000045",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 252,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000063",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 287,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000069",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 286,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000072",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 286,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000073",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 287,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000077",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 288,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000093",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 286,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000156",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 252,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000163",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 281,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000177",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 288,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000181",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 287,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000183",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 281,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000186",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 282,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000195",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 291,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000205",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 281,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000211",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 252,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000212",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 288,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000224",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 279,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000228",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 1,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 290,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:boolean_expressions:00000230",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000253",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000274",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000294",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000297",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000301",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000303",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000306",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000330",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000336",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000342",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000348",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000357",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000366",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000371",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000373",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000374",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000387",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000404",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000426",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:causal_judgement:00000431",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000446",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000452",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000473",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 62,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000474",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 93,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000481",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000498",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000515",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000540",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000544",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000547",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000557",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000581",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000586",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000588",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000599",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000602",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000606",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000621",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 63,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 156,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000625",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        },
+        {
+          "actions": [
+            "answer",
+            "critique",
+            "counterexample",
+            "evidence_search",
+            "revise",
+            "stop"
+          ],
+          "answer_length": 0,
+          "domain": "bbh",
+          "ig_status": "unavailable_without_calibrated_transition",
+          "model_tokens": 94,
+          "passes": 2,
+          "policy": "op_external",
+          "record_id": "bbh:date_understanding:00000626",
+          "self_quality_status": "unavailable_without_historical_outcomes",
+          "verified": false
+        }
+      ],
+      "verified_correct": 0
+    }
+  ],
+  "schema_version": "crucible-op-reasoning-foundation-pilot-v1-20261029",
+  "scientific_status": "not_registered_not_track_b",
+  "training": {
+    "batch_size": 8,
+    "context": 256,
+    "seconds": 2.101645737,
+    "seed": 42,
+    "steps": 128,
+    "train_records": 384,
+    "train_samples": 384,
+    "validation_records": 280,
+    "validation_samples": 280
+  }
+}
