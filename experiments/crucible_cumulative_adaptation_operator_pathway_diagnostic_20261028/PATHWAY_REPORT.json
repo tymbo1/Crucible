@@ -1,0 +1,644 @@
+{
+  "classification": "bounded_cpu_synthetic_mechanism_test",
+  "deterministic_replay": {
+    "first_digest": "b5772cdef29b7e01fe243f9fe5a4ae57f6d08b9cff4aad2e80eda0d0bea879c3",
+    "passed": true,
+    "second_digest": "b5772cdef29b7e01fe243f9fe5a4ae57f6d08b9cff4aad2e80eda0d0bea879c3"
+  },
+  "interpretation": "The executable motif pathway works on synthetic CPU tasks. Promoted source-derived motifs construct a candidate absent from the frozen fallback pool and change future proposal construction; negative stages are separately observable.",
+  "mechanism_path": "source verification -> motif extraction -> typed-hole validation -> promotion -> motif candidate construction -> proposal ordering",
+  "next_action": "Freeze a new operator-specific validation manifest with 16 applicable tasks and independent verification examples per operator before any benchmark rerun.",
+  "result": {
+    "benchmark_repeated": false,
+    "gpu_allocated": false,
+    "negative_case_expectations": {
+      "applicability": "applicability_matching",
+      "construction": "candidate_construction",
+      "incorrect_output": "incorrect_output",
+      "verification": "verification"
+    },
+    "negative_cases": {
+      "applicability": {
+        "failure_reason": "root_signature_mismatch",
+        "failure_stage": "applicability_matching",
+        "success": false
+      },
+      "construction": {
+        "failure_reason": "no_valid_motif_instantiation",
+        "failure_stage": "candidate_construction",
+        "success": false
+      },
+      "incorrect_output": {
+        "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+        "failure_stage": "incorrect_output",
+        "success": false
+      },
+      "verification": {
+        "failure_reason": "independent_verifier_rejected_candidate",
+        "failure_stage": "verification",
+        "success": false
+      }
+    },
+    "operator_record": {
+      "binding_vocabulary": {
+        "arg0": [
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "name": "a",
+            "op": "var"
+          }
+        ],
+        "arg1": [
+          {
+            "op": "const",
+            "value": 1
+          },
+          {
+            "op": "const",
+            "value": 3
+          },
+          {
+            "op": "const",
+            "value": 2
+          }
+        ]
+      },
+      "canonical_motif": {
+        "args": [
+          {
+            "id": "arg0",
+            "op": "hole",
+            "type": "expr_mod10"
+          },
+          {
+            "id": "arg1",
+            "op": "hole",
+            "type": "expr_mod10"
+          }
+        ],
+        "op": "add_mod10",
+        "schema_version": "crucible.operator.motif.v1"
+      },
+      "failure_counts": {
+        "applicability_matching": 0,
+        "candidate_construction": 0,
+        "incorrect_output": 0,
+        "verification": 0
+      },
+      "lower_bound_95": 0.8049356770309067,
+      "operator_id": "a3_verified_adaptive_library_operator_0",
+      "provenance": {
+        "arm": "A3_VERIFIED_ADAPTIVE_LIBRARY",
+        "candidate_construction": "typed-hole motif instantiation",
+        "source_procedures_independently_verified": 3,
+        "target_labels_used": false,
+        "validation_selection_rule": "operator-specific applicable_root_signature or operator_id"
+      },
+      "root_signature": "add_mod10",
+      "schema_version": "crucible.operator.v3",
+      "source_refs": [
+        "synthetic_source_0",
+        "synthetic_source_1",
+        "synthetic_source_2"
+      ],
+      "status": "promoted",
+      "successes": 16,
+      "trials": 16,
+      "typed_holes": [
+        {
+          "id": "arg0",
+          "path": [
+            "args",
+            0
+          ],
+          "type": "expr_mod10"
+        },
+        {
+          "id": "arg1",
+          "path": [
+            "args",
+            1
+          ],
+          "type": "expr_mod10"
+        }
+      ],
+      "validation_refs": [
+        "synthetic_operator_validation_00",
+        "synthetic_operator_validation_01",
+        "synthetic_operator_validation_02",
+        "synthetic_operator_validation_03",
+        "synthetic_operator_validation_04",
+        "synthetic_operator_validation_05",
+        "synthetic_operator_validation_06",
+        "synthetic_operator_validation_07",
+        "synthetic_operator_validation_08",
+        "synthetic_operator_validation_09",
+        "synthetic_operator_validation_10",
+        "synthetic_operator_validation_11",
+        "synthetic_operator_validation_12",
+        "synthetic_operator_validation_13",
+        "synthetic_operator_validation_14",
+        "synthetic_operator_validation_15"
+      ],
+      "validation_trace": [
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_00",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_01",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_02",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_03",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_04",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_05",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_06",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_07",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_08",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_09",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_10",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_11",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_12",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_13",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_14",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_15",
+          "verification_checks": 4
+        }
+      ]
+    },
+    "proposal_path": {
+      "accelerated_constructed_expected_ast": true,
+      "accelerated_first_ast": {
+        "args": [
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "op": "const",
+            "value": 3
+          }
+        ],
+        "op": "add_mod10"
+      },
+      "accelerated_matches_parent": true,
+      "active_candidate_hashes": [
+        "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+        "07466eadc5ca4b6e948232e97d34253bed647229b87374e1fba088b31f673d21",
+        "21a97b3ef9abb6911d0a37d9e10e70544549ad75e15d77b559b5e4bb0b0f086f",
+        "7ab049108910e7e601aefa0d269b91444f016d94433e200d13e768cd66fb8333"
+      ],
+      "active_candidate_sources": [
+        "promoted_operator_motif",
+        "promoted_operator_motif",
+        "promoted_operator_motif",
+        "promoted_operator_motif"
+      ],
+      "active_first_ast": {
+        "args": [
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "op": "const",
+            "value": 3
+          }
+        ],
+        "op": "add_mod10"
+      },
+      "cold_and_active_orders_differ": true,
+      "cold_candidate_hashes": [
+        "e481489a0358a0e594fd7c567bb6cd6b68d865e1baff43574e789cd216b0be34"
+      ],
+      "constructed_expected_ast": true,
+      "expected_constructed_ast": {
+        "args": [
+          {
+            "name": "b",
+            "op": "var"
+          },
+          {
+            "op": "const",
+            "value": 3
+          }
+        ],
+        "op": "add_mod10"
+      },
+      "frozen_pool_only_contains_distractor": true
+    },
+    "source_count": 3,
+    "source_verified_count": 3,
+    "target_answers_accessed": false,
+    "validation": {
+      "all_success": true,
+      "failure_counts": {
+        "applicability_matching": 0,
+        "candidate_construction": 0,
+        "incorrect_output": 0,
+        "verification": 0
+      },
+      "successes": 16,
+      "trace": [
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_00",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_01",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_02",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_03",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_04",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_05",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_06",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_07",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_08",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_09",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_10",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_11",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_12",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_13",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_14",
+          "verification_checks": 4
+        },
+        {
+          "candidate_count": 4,
+          "demo_checks": 8,
+          "demo_match_count": 8,
+          "failure_reason": null,
+          "failure_stage": null,
+          "operator_id": "a3_verified_adaptive_library_operator_0",
+          "selected_candidate_hash": "010adda4e8984f6be61d00152904ce6b82b8f9b5ef9e3a1c461fd8e7dc03e565",
+          "selected_candidate_source": "promoted_operator_motif",
+          "success": true,
+          "task_id": "synthetic_operator_validation_15",
+          "verification_checks": 4
+        }
+      ],
+      "trials": 16
+    }
+  },
+  "schema_version": "crucible_operator_pathway_diagnostic_v1"
+}

@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import copy
 import hashlib
+import itertools
 import json
 import multiprocessing as mp
 import os
@@ -73,6 +74,8 @@ TARGET_BUDGET = {
 }
 PROMOTION_THRESHOLD = 0.80
 PROMOTION_TRIALS = 16
+MOTIF_SCHEMA_VERSION = "crucible.operator.motif.v1"
+HOLE_TYPE = "expr_mod10"
 
 
 class RunnerIntegrityError(RuntimeError):
@@ -199,6 +202,135 @@ def root_operator(ast: Mapping[str, Any]) -> Optional[str]:
     return None if canonical["op"] in {"var", "const"} else str(canonical["op"])
 
 
+def extract_operator_motif(ast: Mapping[str, Any]) -> Tuple[Dict[str, Any], List[Dict[str, Any]]]:
+    """Extract an executable metadata motif with typed expression holes.
+
+    Hole nodes are deliberately not accepted by ``GRAMMAR.validate``.  They
+    are a canonical operator representation that must be instantiated before
+    execution.  Keeping the hole-bearing form separate prevents a partially
+    bound motif from entering the persistent procedure store.
+    """
+    canonical = canonical_ast(ast)
+    if canonical["op"] in {"var", "const"}:
+        raise ValueError("operator motifs require a non-leaf AST")
+    holes = [
+        {
+            "id": f"arg{index}",
+            "type": HOLE_TYPE,
+            "path": ["args", index],
+        }
+        for index, _ in enumerate(canonical.get("args", []))
+    ]
+    motif = {
+        "schema_version": MOTIF_SCHEMA_VERSION,
+        "op": canonical["op"],
+        "args": [
+            {"op": "hole", "id": hole["id"], "type": hole["type"]}
+            for hole in holes
+        ],
+    }
+    return motif, holes
+
+
+def _instantiate_motif_node(node: Mapping[str, Any], bindings: Mapping[str, Mapping[str, Any]]) -> Dict[str, Any]:
+    if node.get("op") == "hole":
+        hole_id = str(node["id"])
+        if hole_id not in bindings:
+            raise ValueError(f"missing binding for typed hole {hole_id}")
+        if str(node.get("type")) != HOLE_TYPE:
+            raise ValueError(f"unsupported typed hole {hole_id}: {node.get('type')}")
+        return canonical_ast(bindings[hole_id])
+    result = {key: value for key, value in node.items() if key != "args"}
+    if "args" in node:
+        result["args"] = [_instantiate_motif_node(child, bindings) for child in node["args"]]
+    return canonical_ast(result)
+
+
+def instantiate_operator_motif(record: "OperatorRecord", bindings: Mapping[str, Mapping[str, Any]]) -> Dict[str, Any]:
+    """Bind all typed holes and return a grammar-validated executable AST."""
+    candidate = _instantiate_motif_node(record.canonical_motif, bindings)
+    return GRAMMAR.validate(candidate)
+
+
+def _unique_ast_values(values: Iterable[Mapping[str, Any]]) -> List[Dict[str, Any]]:
+    unique: Dict[str, Dict[str, Any]] = {}
+    for value in values:
+        canonical = canonical_ast(value)
+        unique.setdefault(ast_hash(canonical), canonical)
+    return [unique[key] for key in sorted(unique)]
+
+
+def build_operator_representation(
+    signature: str,
+    source_tasks: Sequence[Mapping[str, Any]],
+) -> Tuple[Dict[str, Any], List[Dict[str, Any]], Dict[str, List[Dict[str, Any]]], List[str]]:
+    """Build a motif and typed binding vocabulary only from verified sources."""
+    matching = [task for task in source_tasks if root_operator(task["target_ast"]) == signature]
+    if not matching:
+        raise ValueError(f"no source procedures for operator {signature}")
+    motif, holes = extract_operator_motif(matching[0]["target_ast"])
+    arity = len(holes)
+    binding_vocabulary = {
+        hole["id"]: _unique_ast_values(
+            canonical_ast(task["target_ast"]).get("args", [])[index]
+            for task in matching
+            if len(canonical_ast(task["target_ast"]).get("args", [])) == arity
+        )
+        for index, hole in enumerate(holes)
+    }
+    if any(not values for values in binding_vocabulary.values()):
+        raise ValueError(f"empty binding vocabulary for operator {signature}")
+    source_refs = [str(task["task_id"]) for task in matching]
+    return motif, holes, binding_vocabulary, source_refs
+
+
+def _match_count(ast: Mapping[str, Any], demonstrations: Sequence[Mapping[str, int]]) -> int:
+    return sum(
+        int(evaluate_ast(ast, int(example["a"]), int(example["b"]))) == int(example["output"])
+        for example in demonstrations
+    )
+
+
+def construct_operator_candidates(
+    record: "OperatorRecord",
+    demonstrations: Sequence[Mapping[str, int]],
+    limit: int = TARGET_BUDGET["candidate_slots"],
+) -> List[Dict[str, Any]]:
+    """Instantiate a promoted motif from source-derived typed bindings."""
+    hole_ids = [hole["id"] for hole in record.typed_holes]
+    choices = [record.binding_vocabulary.get(hole_id, []) for hole_id in hole_ids]
+    if not choices or any(not values for values in choices):
+        return []
+    candidates: Dict[str, Dict[str, Any]] = {}
+    for combination in itertools.product(*choices):
+        bindings = {hole_id: value for hole_id, value in zip(hole_ids, combination)}
+        try:
+            ast = instantiate_operator_motif(record, bindings)
+        except (TypeError, ValueError):
+            continue
+        candidate_hash = ast_hash(ast)
+        candidates.setdefault(
+            candidate_hash,
+            {
+                "ast": ast,
+                "canonical_ast_hash": candidate_hash,
+                "source": "promoted_operator_motif",
+                "operator_id": record.operator_id,
+                "match_count": _match_count(ast, demonstrations),
+                "binding_hashes": {hole_id: ast_hash(bindings[hole_id]) for hole_id in hole_ids},
+            },
+        )
+    ranked = sorted(
+        candidates.values(),
+        key=lambda candidate: (
+            -int(candidate["match_count"]),
+            int(ast_nodes(candidate["ast"])),
+            str(candidate["canonical_ast_hash"]),
+        ),
+    )
+    return ranked[:limit]
+
+
 def examples_for_ast(ast: Mapping[str, Any], pairs: Sequence[Tuple[int, int]]) -> List[Dict[str, int]]:
     canonical = canonical_ast(ast)
     return [{"a": int(a), "b": int(b), "output": int(evaluate_ast(canonical, a, b))} for a, b in pairs]
@@ -257,18 +389,28 @@ class OperatorRecord:
     lower_bound_95: float
     status: str
     provenance: Dict[str, Any]
+    canonical_motif: Dict[str, Any] = field(default_factory=dict)
+    typed_holes: List[Dict[str, Any]] = field(default_factory=list)
+    binding_vocabulary: Dict[str, List[Dict[str, Any]]] = field(default_factory=dict)
+    validation_trace: List[Dict[str, Any]] = field(default_factory=list)
+    failure_counts: Dict[str, int] = field(default_factory=dict)
 
     def as_dict(self) -> Dict[str, Any]:
         return {
-            "schema_version": "crucible.operator.v2",
+            "schema_version": "crucible.operator.v3",
             "operator_id": self.operator_id,
             "root_signature": self.root_signature,
+            "canonical_motif": copy.deepcopy(self.canonical_motif),
+            "typed_holes": copy.deepcopy(self.typed_holes),
+            "binding_vocabulary": copy.deepcopy(self.binding_vocabulary),
             "source_refs": list(self.source_refs),
             "validation_refs": list(self.validation_refs),
             "successes": self.successes,
             "trials": self.trials,
             "lower_bound_95": self.lower_bound_95,
             "status": self.status,
+            "failure_counts": dict(self.failure_counts),
+            "validation_trace": copy.deepcopy(self.validation_trace),
             "provenance": dict(self.provenance),
         }
 
@@ -338,39 +480,168 @@ class IndependentVerifier:
         return True, checks
 
 
+def validate_operator_record(
+    record: OperatorRecord,
+    task: Mapping[str, Any],
+    verifier: Optional[IndependentVerifier] = None,
+) -> Dict[str, Any]:
+    """Validate one operator on one operator-specific task.
+
+    Applicability metadata selects the trial; it is never used to construct
+    the candidate.  Candidate construction sees only the motif, source-derived
+    bindings and observed demonstrations.  Independent verification uses a
+    separate validation example set.
+    """
+    verifier = verifier or IndependentVerifier()
+    expected_operator = task.get("operator_id")
+    expected_root = task.get("applicable_root_signature")
+    if expected_operator is not None and str(expected_operator) != record.operator_id:
+        return {
+            "task_id": str(task["task_id"]),
+            "operator_id": record.operator_id,
+            "success": False,
+            "failure_stage": "applicability_matching",
+            "failure_reason": "operator_id_mismatch",
+        }
+    if expected_root is None and task.get("target_ast") is not None:
+        # This fallback is for the existing source-phase validation manifest;
+        # future manifests must freeze applicable_root_signature explicitly.
+        expected_root = root_operator(task["target_ast"])
+    if expected_root != record.root_signature:
+        return {
+            "task_id": str(task["task_id"]),
+            "operator_id": record.operator_id,
+            "success": False,
+            "failure_stage": "applicability_matching",
+            "failure_reason": "root_signature_mismatch",
+            "expected_root_signature": expected_root,
+            "operator_root_signature": record.root_signature,
+        }
+    demonstrations = list(task.get("demonstrations", []))
+    candidates = construct_operator_candidates(record, demonstrations)
+    if not candidates:
+        return {
+            "task_id": str(task["task_id"]),
+            "operator_id": record.operator_id,
+            "success": False,
+            "failure_stage": "candidate_construction",
+            "failure_reason": "no_valid_motif_instantiation",
+            "candidate_count": 0,
+        }
+    candidate = candidates[0]
+    demo_ok, demo_checks = verifier.verify(candidate["ast"], demonstrations)
+    trace: Dict[str, Any] = {
+        "task_id": str(task["task_id"]),
+        "operator_id": record.operator_id,
+        "success": False,
+        "candidate_count": len(candidates),
+        "selected_candidate_hash": candidate["canonical_ast_hash"],
+        "selected_candidate_source": candidate["source"],
+        "demo_checks": demo_checks,
+        "demo_match_count": candidate["match_count"],
+    }
+    if not demo_ok:
+        trace.update({
+            "failure_stage": "incorrect_output",
+            "failure_reason": "constructed_candidate_does_not_match_demonstrations",
+        })
+        return trace
+    verification_examples = list(task.get("verification_examples", []))
+    if not verification_examples:
+        trace.update({
+            "failure_stage": "verification",
+            "failure_reason": "independent_verification_examples_missing",
+            "verification_checks": 0,
+        })
+        return trace
+    verification_ok, verification_checks = verifier.verify(candidate["ast"], verification_examples)
+    trace["verification_checks"] = verification_checks
+    if not verification_ok:
+        trace.update({
+            "failure_stage": "verification",
+            "failure_reason": "independent_verifier_rejected_candidate",
+        })
+        return trace
+    trace.update({"success": True, "failure_stage": None, "failure_reason": None})
+    return trace
+
+
 class OperatorLibrary:
     def __init__(self, arm: str, source_tasks: Sequence[Mapping[str, Any]], validation_tasks: Sequence[Mapping[str, Any]], sham: bool = False):
         self.arm = arm
         self.records: List[OperatorRecord] = []
         self.sham = sham
+        self.verifier = IndependentVerifier()
         if arm == "A1_EXACT_PROCEDURE_MEMORY":
             return
-        signatures: List[str] = []
+
+        verified_sources = []
         for task in source_tasks:
+            try:
+                verified, _ = self.verifier.verify(task["target_ast"], task.get("demonstrations", []))
+            except (TypeError, ValueError):
+                verified = False
+            if verified:
+                verified_sources.append(task)
+
+        signatures: List[str] = []
+        for task in verified_sources:
             signature = root_operator(task["target_ast"])
             if signature and signature not in signatures:
                 signatures.append(signature)
         signatures = signatures[:2]
         for index, signature in enumerate(signatures):
-            trials = [task for task in validation_tasks if root_operator(task["target_ast"]) is not None][:PROMOTION_TRIALS]
-            successes = sum(1 for task in trials if root_operator(task["target_ast"]) == signature)
-            lower = lower_bound_95(successes, len(trials))
-            status = "promoted" if not sham and len(trials) == PROMOTION_TRIALS and lower >= PROMOTION_THRESHOLD else "candidate"
-            if sham:
-                status = "sham"
-            self.records.append(
-                OperatorRecord(
-                    operator_id=f"{arm.lower()}_operator_{index}",
-                    root_signature="sham" if sham else signature,
-                    source_refs=[str(task["task_id"]) for task in source_tasks if root_operator(task["target_ast"]) == signature][:4],
-                    validation_refs=[str(task["task_id"]) for task in trials],
-                    successes=successes,
-                    trials=len(trials),
-                    lower_bound_95=lower,
-                    status=status,
-                    provenance={"arm": arm, "target_labels_used": False, "validation_labels_are_source_phase": True},
-                )
+            motif, holes, vocabulary, source_refs = build_operator_representation(signature, verified_sources)
+            operator_id = f"{arm.lower()}_operator_{index}"
+            selected_trials: List[Mapping[str, Any]] = []
+            for task in validation_tasks:
+                task_signature = task.get("applicable_root_signature")
+                # Do not use dict.get(..., root_operator(...)) here: Python
+                # evaluates the default eagerly, which would make an
+                # explicitly allocated validation task depend on a target AST
+                # that is intentionally not part of the proposal phase.
+                if task_signature is None and task.get("target_ast") is not None:
+                    task_signature = root_operator(task["target_ast"])
+                if task.get("operator_id") == operator_id or (
+                    task.get("operator_id") is None and task_signature == signature
+                ):
+                    selected_trials.append(task)
+                if len(selected_trials) == PROMOTION_TRIALS:
+                    break
+            trials = selected_trials
+            record = OperatorRecord(
+                operator_id=operator_id,
+                root_signature=signature,
+                canonical_motif=motif,
+                typed_holes=holes,
+                binding_vocabulary=vocabulary,
+                source_refs=source_refs,
+                validation_refs=[str(task["task_id"]) for task in trials],
+                successes=0,
+                trials=len(trials),
+                lower_bound_95=lower_bound_95(0, len(trials)),
+                status="sham" if sham else "candidate",
+                provenance={
+                    "arm": arm,
+                    "target_labels_used": False,
+                    "source_procedures_independently_verified": len(verified_sources),
+                    "validation_selection_rule": "operator-specific applicable_root_signature or operator_id",
+                    "candidate_construction": "typed-hole motif instantiation",
+                },
             )
+            if not sham:
+                record.validation_trace = [validate_operator_record(record, task, self.verifier) for task in trials]
+                record.successes = sum(int(trace["success"]) for trace in record.validation_trace)
+                record.failure_counts = {
+                    stage: sum(int(trace.get("failure_stage") == stage) for trace in record.validation_trace)
+                    for stage in ("applicability_matching", "candidate_construction", "incorrect_output", "verification")
+                }
+                if len(trials) < PROMOTION_TRIALS:
+                    record.failure_counts["validation_allocation"] = PROMOTION_TRIALS - len(trials)
+                record.lower_bound_95 = lower_bound_95(record.successes, len(trials))
+                if self.arm == "A3_VERIFIED_ADAPTIVE_LIBRARY" and len(trials) == PROMOTION_TRIALS and record.successes == PROMOTION_TRIALS and record.lower_bound_95 >= PROMOTION_THRESHOLD:
+                    record.status = "promoted"
+            self.records.append(record)
 
     @property
     def promoted(self) -> List[OperatorRecord]:
@@ -441,9 +712,20 @@ def make_validation_tasks(validation_rows: Sequence[Mapping[str, Any]]) -> List[
     return [
         {
             "task_id": row["task_id"],
+            "seed": row.get("seed"),
+            "family": row.get("family", "operator_validation"),
             "target_ast": canonical_ast(row["target_ast"]),
             "canonical_ast_hash": row["canonical_ast_hash"],
             "truth_table_hash": row["truth_table_hash"],
+            "applicable_root_signature": row.get(
+                "applicable_root_signature",
+                root_operator(row["target_ast"]),
+            ),
+            "operator_id": row.get("operator_id"),
+            "demonstrations": list(row.get("demonstrations", [])),
+            "verification_examples": list(
+                row.get("verification_examples", row.get("independent_verification_examples", []))
+            ),
         }
         for row in validation_rows
     ]
@@ -452,11 +734,9 @@ def make_validation_tasks(validation_rows: Sequence[Mapping[str, Any]]) -> List[
 def _candidate_pool_from_examples(
     pool: Sequence[Mapping[str, Any]],
     demonstrations: Sequence[Mapping[str, int]],
-    promoted_signatures: Sequence[str],
-    arm: str,
     precomputed_truth_tables: Any,
 ) -> List[Dict[str, Any]]:
-    """Rank candidates without changing the historical deterministic order."""
+    """Rank the frozen grammar pool without adaptive operator shortcuts."""
     input_indices = np.asarray(
         [int(example["a"]) * 10 + int(example["b"]) for example in demonstrations],
         dtype=np.int64,
@@ -469,17 +749,10 @@ def _candidate_pool_from_examples(
         precomputed_truth_tables[:, input_indices] == desired[None, :],
         axis=1,
     )
-    promoted = set(promoted_signatures)
-    # The original implementation sorted descending by (matches+bonus,
-    # -nodes, hash).  Keep that exact tie-break order in the accelerated path.
     ranked_indices = sorted(
         range(len(pool)),
         key=lambda index: (
-            int(matches[index])
-            + int(
-                arm == "A3_VERIFIED_ADAPTIVE_LIBRARY"
-                and pool[index].get("_root_signature") in promoted
-            ),
+            int(matches[index]),
             -int(
                 pool[index]["_nodes"]
                 if "_nodes" in pool[index]
@@ -517,7 +790,6 @@ def candidate_pool_for_task(
     arm: str,
     precomputed_truth_tables: Optional[Any] = None,
 ) -> List[Dict[str, Any]]:
-    promoted_signatures = {record.root_signature for record in library.promoted}
     if precomputed_truth_tables is None:
         table = np.asarray(
             [
@@ -528,13 +800,31 @@ def candidate_pool_for_task(
         )
     else:
         table = precomputed_truth_tables
-    return _candidate_pool_from_examples(
+    frozen_candidates = _candidate_pool_from_examples(
         pool,
         task.demonstrations,
-        tuple(promoted_signatures),
-        arm,
         table,
     )
+    if arm != "A3_VERIFIED_ADAPTIVE_LIBRARY" or not library.promoted:
+        return frozen_candidates
+
+    # Promoted motifs construct real AST candidates.  They are merged before
+    # the frozen grammar fallback and deduplicated by canonical function
+    # syntax; no root-name bonus is used to stand in for construction.
+    operator_candidates: List[Dict[str, Any]] = []
+    for record in library.promoted:
+        operator_candidates.extend(construct_operator_candidates(record, task.demonstrations))
+    merged: List[Dict[str, Any]] = []
+    seen: set[str] = set()
+    for candidate in operator_candidates + frozen_candidates:
+        candidate_hash = str(candidate["canonical_ast_hash"])
+        if candidate_hash in seen:
+            continue
+        seen.add(candidate_hash)
+        merged.append(candidate)
+        if len(merged) == TARGET_BUDGET["candidate_slots"]:
+            break
+    return merged
 
 
 # These globals are intentionally limited to immutable candidate-scoring state.
@@ -542,20 +832,20 @@ def candidate_pool_for_task(
 # warm local view, while the parent performs deterministic ordered commits.
 _CPU_WORKER_POOL: Optional[List[Dict[str, Any]]] = None
 _CPU_WORKER_TRUTH_TABLES: Optional[np.ndarray] = None
-_CPU_WORKER_PROMOTED: Tuple[str, ...] = ()
+_CPU_WORKER_PROMOTED_RECORDS: Tuple[OperatorRecord, ...] = ()
 _CPU_WORKER_ARM: Optional[str] = None
 
 
 def _init_crucible_cpu_worker(
     pool: Sequence[Mapping[str, Any]],
     truth_tables: Any,
-    promoted_signatures: Sequence[str],
+    promoted_records: Sequence[OperatorRecord],
     arm: str,
 ) -> None:
-    global _CPU_WORKER_POOL, _CPU_WORKER_TRUTH_TABLES, _CPU_WORKER_PROMOTED, _CPU_WORKER_ARM
+    global _CPU_WORKER_POOL, _CPU_WORKER_TRUTH_TABLES, _CPU_WORKER_PROMOTED_RECORDS, _CPU_WORKER_ARM
     _CPU_WORKER_POOL = [dict(row) for row in pool]
     _CPU_WORKER_TRUTH_TABLES = np.asarray(truth_tables, dtype=np.int8)
-    _CPU_WORKER_PROMOTED = tuple(sorted(str(value) for value in promoted_signatures))
+    _CPU_WORKER_PROMOTED_RECORDS = tuple(promoted_records)
     _CPU_WORKER_ARM = str(arm)
 
 
@@ -563,14 +853,27 @@ def _crucible_cpu_candidate_job(payload: Tuple[str, Sequence[Mapping[str, int]]]
     if _CPU_WORKER_POOL is None or _CPU_WORKER_TRUTH_TABLES is None or _CPU_WORKER_ARM is None:
         raise RuntimeError("Crucible CPU worker was not initialized")
     task_id, demonstrations = payload
-    candidates = _candidate_pool_from_examples(
+    frozen_candidates = _candidate_pool_from_examples(
         _CPU_WORKER_POOL,
         demonstrations,
-        _CPU_WORKER_PROMOTED,
-        _CPU_WORKER_ARM,
         _CPU_WORKER_TRUTH_TABLES,
     )
-    return str(task_id), candidates
+    if _CPU_WORKER_ARM != "A3_VERIFIED_ADAPTIVE_LIBRARY" or not _CPU_WORKER_PROMOTED_RECORDS:
+        return str(task_id), frozen_candidates
+    operator_candidates: List[Dict[str, Any]] = []
+    for record in _CPU_WORKER_PROMOTED_RECORDS:
+        operator_candidates.extend(construct_operator_candidates(record, demonstrations))
+    merged: List[Dict[str, Any]] = []
+    seen: set[str] = set()
+    for candidate in operator_candidates + frozen_candidates:
+        candidate_hash = str(candidate["canonical_ast_hash"])
+        if candidate_hash in seen:
+            continue
+        seen.add(candidate_hash)
+        merged.append(candidate)
+        if len(merged) == TARGET_BUDGET["candidate_slots"]:
+            break
+    return str(task_id), merged
 
 
 class CrucibleCpuReservoir:
@@ -603,7 +906,7 @@ class CrucibleCpuReservoir:
         self,
         pool: Sequence[Mapping[str, Any]],
         truth_tables: Any,
-        promoted_signatures: Sequence[str],
+        promoted_records: Sequence[OperatorRecord],
         arm: str,
         tasks: Sequence[ProcedureTask],
     ) -> Tuple[List[List[Dict[str, Any]]], Dict[str, Any]]:
@@ -629,7 +932,7 @@ class CrucibleCpuReservoir:
         pool_kwargs: Dict[str, Any] = {
             "max_workers": min(self.workers, len(payloads)),
             "initializer": _init_crucible_cpu_worker,
-            "initargs": (list(pool), truth_tables, tuple(promoted_signatures), arm),
+            "initargs": (list(pool), truth_tables, tuple(promoted_records), arm),
         }
         if context is not None:
             pool_kwargs["mp_context"] = context
@@ -832,7 +1135,7 @@ class FourArmRunner:
             candidate_lists, accelerator_metrics = cpu_reservoir.map_candidates(
                 self.pool,
                 self.pool_truth_tables,
-                tuple(record.root_signature for record in state["library"].promoted),
+                state["library"].promoted,
                 arm,
                 target_tasks,
             )
@@ -903,11 +1206,26 @@ def fixture_cases() -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Pr
         {"task_id": "fixture_source_0", "target_ast": source_ast_a, "demonstrations": examples_for_ast(source_ast_a, [(0, 0), (1, 2), (4, 3), (9, 8), (2, 7), (5, 5), (8, 1), (3, 6)])},
         {"task_id": "fixture_source_1", "target_ast": source_ast_b, "demonstrations": examples_for_ast(source_ast_b, [(0, 0), (1, 2), (4, 3), (9, 8), (2, 7), (5, 5), (8, 1), (3, 6)])},
     ]
+    validation_pairs = [(6, 7), (7, 6), (3, 9), (9, 3), (2, 2), (8, 4), (1, 5), (5, 1)]
     validation_tasks = [
-        {"task_id": f"fixture_validation_{index:02d}", "target_ast": source_ast_a, "canonical_ast_hash": ast_hash(source_ast_a), "truth_table_hash": truth_table_hash(source_ast_a)}
+        {
+            "task_id": f"fixture_validation_{index:02d}",
+            "target_ast": source_ast_a,
+            "canonical_ast_hash": ast_hash(source_ast_a),
+            "truth_table_hash": truth_table_hash(source_ast_a),
+            "demonstrations": examples_for_ast(source_ast_a, [(0, 0), (1, 2), (4, 3), (9, 8), (2, 7), (5, 5), (8, 1), (3, 6)]),
+            "verification_examples": examples_for_ast(source_ast_a, validation_pairs),
+        }
         for index in range(PROMOTION_TRIALS)
     ] + [
-        {"task_id": f"fixture_validation_b_{index:02d}", "target_ast": source_ast_b, "canonical_ast_hash": ast_hash(source_ast_b), "truth_table_hash": truth_table_hash(source_ast_b)}
+        {
+            "task_id": f"fixture_validation_b_{index:02d}",
+            "target_ast": source_ast_b,
+            "canonical_ast_hash": ast_hash(source_ast_b),
+            "truth_table_hash": truth_table_hash(source_ast_b),
+            "demonstrations": examples_for_ast(source_ast_b, [(0, 0), (1, 2), (4, 3), (9, 8), (2, 7), (5, 5), (8, 1), (3, 6)]),
+            "verification_examples": examples_for_ast(source_ast_b, validation_pairs),
+        }
         for index in range(PROMOTION_TRIALS)
     ]
     distractor = fixture_ast("max", {"op": "var", "name": "a"}, {"op": "var", "name": "b"})
@@ -983,6 +1301,8 @@ def synthetic_fixture_suite(pool: Sequence[Mapping[str, Any]]) -> Dict[str, Any]
         zero_validation = [dict(row) for row in fixture_cases()[1]]
         zero_validation[0] = dict(zero_validation[0])
         zero_validation[0]["target_ast"] = {"op": "var", "name": "b"}
+        zero_validation[PROMOTION_TRIALS] = dict(zero_validation[PROMOTION_TRIALS])
+        zero_validation[PROMOTION_TRIALS]["target_ast"] = {"op": "var", "name": "a"}
         zero_runner = FourArmRunner(pool=[], root=root / "zero")
         zero_state = zero_runner._prepare_arm("A3_VERIFIED_ADAPTIVE_LIBRARY", fixture_cases()[0], zero_validation)
         zero_promotion = {

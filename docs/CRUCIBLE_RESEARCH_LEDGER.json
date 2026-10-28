@@ -1210,6 +1210,27 @@
         "experiments/crucible_cumulative_adaptation_operator_activation_diagnostic_20261028/HASHES.json"
       ],
       "novelty_terms": ["operator activation diagnostic", "shared validation prefix", "typed-hole motif", "proposal-order hook", "activation unreachable"]
+    },
+    {
+      "id": "cumulative-adaptation-executable-operator-pathway-v1",
+      "status": "ESTABLISHED",
+      "title": "Executable source-to-operator-to-proposal pathway",
+      "hypothesis": "A verified source procedure can be represented as a canonical typed-hole motif, validated on operator-specific tasks, promoted after independent verification, and used to construct future candidates that differ from the frozen policy.",
+      "mechanisms": ["verified-source-abstraction", "typed-hole-motif", "operator-specific-validation", "motif-candidate-construction", "proposal-policy-adaptation"],
+      "interventions": ["crucible.operator.v3 records", "canonical motif extraction", "source-derived binding vocabulary", "16-task independent validation", "promoted motif candidate insertion"],
+      "controls": ["frozen A0 candidate pool", "applicability mismatch", "empty binding construction failure", "incorrect-output rejection", "independent verification rejection", "deterministic replay", "no target answers"],
+      "result": "On synthetic CPU tasks, three independently verified source procedures produced an add_mod10 motif with two typed expr_mod10 holes. Sixteen operator-specific validation tasks achieved 16/16 successes, the operator was promoted, and its motif constructed add_mod10(b,3), which was absent from the frozen fallback pool and changed future candidate construction. Negative fixtures separately produced applicability_matching, candidate_construction, incorrect_output and verification failures; deterministic replay passed.",
+      "limits": ["Synthetic mechanism test only", "No 288-task benchmark was rerun", "The source-derived binding vocabulary remains a bounded engineered search space", "No neural learner has acquired the motif mechanism", "The existing frozen validation manifest still needs regeneration with explicit operator allocations and independent verification examples"],
+      "unresolved": ["Whether the repaired mechanism improves real unfamiliar acquisition", "How to freeze a balanced operator-specific validation manifest", "Whether motif abstraction transfers beyond the digit-expression DSL", "Whether a neural system can learn this pathway rather than receive it as engineered code"],
+      "artifacts": [
+        "tools/crucible_cumulative_adaptation_scientific_runner_20261028.py",
+        "tools/run_crucible_cumulative_adaptation_operator_pathway_diagnostic_20261028.py",
+        "experiments/crucible_cumulative_adaptation_operator_pathway_diagnostic_20261028/PATHWAY_REPORT.json",
+        "experiments/crucible_cumulative_adaptation_operator_pathway_diagnostic_20261028/HASHES.json",
+        "experiments/crucible_cumulative_adaptation_runner_validation_20261028/FIXTURE_RESULTS.json",
+        "experiments/crucible_cumulative_adaptation_runner_validation_20261028/RUNNER_READINESS_REPORT.json"
+      ],
+      "novelty_terms": ["operator v3", "typed-hole execution", "operator-specific validation", "motif candidate construction", "source-to-proposal pathway"]
     }
   ]
 }
