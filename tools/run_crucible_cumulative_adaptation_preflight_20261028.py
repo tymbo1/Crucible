@@ -187,15 +187,27 @@ def collect_unique(
     return rows, attempts
 
 
-def grammar_preflight(rng: random.Random) -> Dict[str, Any]:
-    structural: Set[str] = set()
-    functional: Set[str] = set()
+def grammar_preflight(rng: random.Random) -> Tuple[Dict[str, Any], List[Dict[str, Any]]]:
+    structural: Dict[str, Dict[str, Any]] = {}
+    functional: Dict[str, Dict[str, Any]] = {}
     attempts = 10_000
-    for _ in range(attempts):
+    for sample_index in range(attempts):
         ast = sample_valid_ast(rng)
-        structural.add(ast_hash(ast))
-        functional.add(truth_table_hash(ast))
-    return {
+        canonical = canonical_ast(ast)
+        structural_hash = ast_hash(canonical)
+        functional_hash = truth_table_hash(canonical)
+        row = {
+            "pool_index": sample_index,
+            "canonical_ast": canonical,
+            "canonical_ast_hash": structural_hash,
+            "truth_table_hash": functional_hash,
+            "depth": ast_depth(canonical),
+            "nodes": ast_nodes(canonical),
+            "functional_representative": functional_hash not in functional,
+        }
+        structural.setdefault(structural_hash, row)
+        functional.setdefault(functional_hash, row)
+    report = {
         "max_depth": GRAMMAR.max_depth,
         "max_nodes": GRAMMAR.max_nodes,
         "operators": list(OPERATORS),
@@ -204,15 +216,24 @@ def grammar_preflight(rng: random.Random) -> Dict[str, Any]:
         "representative_sampling_attempts": attempts,
         "representative_structural_classes": len(structural),
         "representative_functional_classes": len(functional),
+        "representative_pool_seed": MANIFEST_SEED,
+        "representative_pool_sampling": "10,000 deterministic valid-AST draws from the frozen grammar RNG stream; first occurrence retained by canonical structural hash",
+        "representative_pool_rows": len(structural),
+        "duplicate_structural_draws_excluded": attempts - len(structural),
+        "duplicate_functional_draws_excluded_from_functional_representatives": attempts - len(functional),
+        "invalid_or_out_of_scope_draws_in_pool": 0,
+        "representative_pool_is_structural_first_occurrences": True,
         "full_exhaustive_ast_enumeration": False,
-        "full_enumeration_note": "The frozen depth-3/node-7 grammar is combinatorially large; this preflight uses a deterministic representative pool and exact truth-table checks for every selected record.",
+        "full_enumeration_note": "The frozen depth-3/node-7 grammar is combinatorially large; the frozen pool covers only sampled first occurrences. Expressions not sampled, structurally duplicated draws, and functional duplicates excluded from the functional representative subset are outside the evidence scope.",
     }
+    return report, list(structural.values())
 
 
 def make_task_record(task_id: str, split: str, seed: int, family: str, ast: Mapping[str, Any], include_outputs: bool) -> Dict[str, Any]:
     canonical = canonical_ast(ast)
     record: Dict[str, Any] = {
         "task_id": task_id,
+        "task_cluster_id": task_id if split == "target" else None,
         "split": split,
         "seed": seed,
         "family": family,
@@ -293,6 +314,19 @@ def leakage_audit(manifests: Mapping[str, Any]) -> Dict[str, Any]:
     validation_truth = {row["truth_table_hash"] for row in manifests["validation_rows"]}
     target_ast = {row["canonical_ast_hash"] for row in manifests["target_rows"]}
     target_truth = {row["truth_table_hash"] for row in manifests["target_rows"]}
+    target_by_seed = {
+        seed: [row for row in manifests["target_rows"] if row["seed"] == seed]
+        for seed in SEEDS
+    }
+    cross_seed_ast = sorted(
+        {row["canonical_ast_hash"] for row in target_by_seed[SEEDS[0]]}
+        & {row["canonical_ast_hash"] for row in target_by_seed[SEEDS[1]]}
+    )
+    cross_seed_truth = sorted(
+        {row["truth_table_hash"] for row in target_by_seed[SEEDS[0]]}
+        & {row["truth_table_hash"] for row in target_by_seed[SEEDS[1]]}
+    )
+    target_ids = [row["task_id"] for row in manifests["target_rows"]]
     intersections = {
         "source_validation_ast": sorted(source_ast & validation_ast),
         "source_validation_truth": sorted(source_truth & validation_truth),
@@ -308,6 +342,12 @@ def leakage_audit(manifests: Mapping[str, Any]) -> Dict[str, Any]:
         "target_answer_labels_written": False,
         "target_ast_written": False,
         "target_evaluations_run": False,
+        "target_task_ids_unique": len(target_ids) == len(set(target_ids)),
+        "cross_seed_target_ast_intersection": cross_seed_ast,
+        "cross_seed_target_truth_intersection": cross_seed_truth,
+        "same_target_task_across_seeds": bool(cross_seed_ast or cross_seed_truth),
+        "task_cluster_definition": "one unique target task within one registered seed and target family; all four arm outcomes remain together",
+        "target_phase_policy_frozen_after_source": True,
         "intersections": intersections,
         "passed": all(not values for values in intersections.values()),
     }
@@ -390,7 +430,7 @@ def statistics_feasibility() -> Dict[str, Any]:
         "target_tasks_per_seed": TARGET_EPISODES_PER_SEED,
         "target_tasks_per_family_per_seed": TARGET_FAMILY_EPISODES_PER_SEED,
         "primary_test": "exact_two_sided_mcnemar",
-        "confidence_interval": "20000-sample-stratified-task-bootstrap",
+        "confidence_interval": "20000-replicate-stratified-task-cluster-bootstrap",
         "alpha": 0.05,
         "minimum_effect": 0.10,
         "planning_scenarios": scenarios,
@@ -463,13 +503,25 @@ def build_budget_report() -> Dict[str, Any]:
     }
 
 
-def write_artifacts(manifests: Mapping[str, Any], grammar_report: Mapping[str, Any], leakage: Mapping[str, Any], promotion: Mapping[str, Any], statistics: Mapping[str, Any], fixture: Mapping[str, Any], replay: Mapping[str, Any], budget: Mapping[str, Any], elapsed_seconds: float) -> Dict[str, Any]:
+def write_artifacts(manifests: Mapping[str, Any], grammar_report: Mapping[str, Any], grammar_pool: Sequence[Mapping[str, Any]], leakage: Mapping[str, Any], promotion: Mapping[str, Any], statistics: Mapping[str, Any], fixture: Mapping[str, Any], replay: Mapping[str, Any], budget: Mapping[str, Any], elapsed_seconds: float) -> Dict[str, Any]:
     OUTPUT.mkdir(parents=True, exist_ok=True)
     write_json(OUTPUT / "GRAMMAR_ENUMERATION.json", grammar_report)
+    write_jsonl(OUTPUT / "GRAMMAR_REPRESENTATIVE_POOL.jsonl", grammar_pool)
     write_jsonl(OUTPUT / "SOURCE_MANIFEST.jsonl", manifests["source_rows"])
     write_jsonl(OUTPUT / "OPERATOR_VALIDATION_MANIFEST.jsonl", manifests["validation_rows"])
     write_jsonl(OUTPUT / "TARGET_MANIFEST_METADATA.jsonl", manifests["target_rows"])
     write_json(OUTPUT / "LEAKAGE_AUDIT.json", leakage)
+    write_json(OUTPUT / "TARGET_CROSS_SEED_DEPENDENCE.json", {
+        "target_records_by_seed": {
+            str(seed): sum(1 for row in manifests["target_rows"] if row["seed"] == seed)
+            for seed in SEEDS
+        },
+        "task_ids_unique": leakage["target_task_ids_unique"],
+        "same_target_task_across_seeds": leakage["same_target_task_across_seeds"],
+        "canonical_ast_intersection": leakage["cross_seed_target_ast_intersection"],
+        "truth_table_intersection": leakage["cross_seed_target_truth_intersection"],
+        "inference_consequence": "No target task or function is repeated across seeds. Paired inference is clustered at the unique task-seed unit; seed and family remain explicit reporting strata.",
+    })
     write_json(OUTPUT / "PROMOTION_FEASIBILITY.json", promotion)
     write_json(OUTPUT / "STATISTICAL_FEASIBILITY.json", statistics)
     write_json(OUTPUT / "BUDGET_MATCHING.json", budget)
@@ -478,10 +530,12 @@ def write_artifacts(manifests: Mapping[str, Any], grammar_report: Mapping[str, A
 
     required_amendments = {
         "target_denominator": "144 target tasks per seed, 72 per family, 288 paired task-seed units total",
-        "statistics": "Exact two-sided McNemar on task-seed pairs plus 20,000-sample stratified task bootstrap confidence interval",
+        "statistics": "Exact two-sided McNemar on task-seed pairs plus 20,000-replicate stratified task-cluster bootstrap confidence interval",
         "budget_matching": "Four candidate slots, four operator lookups, four verifier calls of eight examples and fixed construction units per target for every arm",
         "operator_promotion": "At most two eligible operators, 16 independent validation trials each, Beta(1,1) LCB95 >= 0.80; 16/16 required",
-        "grammar_scope": "Use a deterministic representative pool under the frozen depth-3/node-7 grammar; full structural enumeration is not attempted in this CPU preflight",
+        "grammar_scope": "Use the frozen deterministic first-occurrence structural pool under the depth-3/node-7 grammar; full structural enumeration is not attempted and unsampled expressions are outside the evidence scope",
+        "statistical_dependence": "Targets are unique across seeds; resample complete task-seed clusters within seed-by-family strata and never resample arm outcomes independently",
+        "zero_promotion": "If no operator reaches 16/16 and Beta(1,1) LCB95 >= 0.80, classify the mechanism as unactivated/inconclusive; do not interpret it as evidence against an active policy",
     }
     write_json(OUTPUT / "REQUIRED_PROTOCOL_AMENDMENTS.json", required_amendments)
     resource_estimates = {
@@ -503,6 +557,9 @@ def write_artifacts(manifests: Mapping[str, Any], grammar_report: Mapping[str, A
         "seeds": list(SEEDS),
         "target_tasks_per_seed": TARGET_EPISODES_PER_SEED,
         "target_task_seed_units": TARGET_EPISODES_PER_SEED * len(SEEDS),
+        "target_task_cluster_definition": leakage["task_cluster_definition"],
+        "target_phase_policy_frozen_after_source": True,
+        "representative_pool": "GRAMMAR_REPRESENTATIVE_POOL.jsonl",
         "scientific_run_approved": False,
         "gpu_allocation_approved": False,
         "sealed_target_answers_accessed": False,
@@ -519,6 +576,9 @@ def write_artifacts(manifests: Mapping[str, Any], grammar_report: Mapping[str, A
             "budget_matching": bool(budget["all_equal"]),
             "promotion_evidence_feasible": bool(promotion["allocation_feasible"]),
             "statistical_plan_defined": statistics["paired_units"] == 288 and statistics["primary_test"] == "exact_two_sided_mcnemar",
+            "cross_seed_target_dependence_audited": not leakage["same_target_task_across_seeds"] and leakage["target_task_ids_unique"],
+            "zero_promotion_rule_documented": True,
+            "representative_pool_frozen": len(grammar_pool) == grammar_report["representative_pool_rows"],
             "synthetic_operator_update": bool(fixture["schema_pass"] and fixture["promotion_decision"] and fixture["adaptive_score_exceeds_controls"]),
             "deterministic_replay": bool(replay["identical"]),
             "target_answers_not_accessed": True,
@@ -527,6 +587,7 @@ def write_artifacts(manifests: Mapping[str, Any], grammar_report: Mapping[str, A
         "unresolved": [
             "Full structural enumeration of the depth-3/node-7 grammar remains combinatorially large; the proposed manifest uses deterministic representatives with exact truth-table checks.",
             "The preflight proves the update and accounting interfaces, not target acquisition or cumulative-learning efficacy.",
+            "The representative pool is sampled rather than an exhaustive enumeration; claims are limited to the frozen pool and the registered DSL.",
         ],
         "required_protocol_amendments": required_amendments,
         "resource_summary": resource_estimates,
@@ -542,8 +603,10 @@ def write_artifacts(manifests: Mapping[str, Any], grammar_report: Mapping[str, A
         "CPU-only feasibility and leakage preflight. No scientific target evaluation, "
         "GPU allocation or execution approval occurred.\n\n"
         "- Report: `PREFLIGHT_REPORT.json`\n"
+        "- Frozen grammar pool: `GRAMMAR_REPRESENTATIVE_POOL.jsonl`\n"
+        "- Dependence audit: `TARGET_CROSS_SEED_DEPENDENCE.json`; target task-seed clusters are the paired inference units.\n"
         "- Target artifacts contain metadata and hashes only; target ASTs and outputs were not written.\n"
-        "- Next step: independent review of the required protocol amendments.\n",
+        "- The separate four-arm runner validation records implementation readiness; it does not authorize scientific execution.\n",
         encoding="utf-8",
     )
     files = sorted(path for path in OUTPUT.rglob("*") if path.is_file() and path.name != "HASHES.json")
@@ -554,7 +617,7 @@ def write_artifacts(manifests: Mapping[str, Any], grammar_report: Mapping[str, A
 def run() -> Dict[str, Any]:
     started = time.perf_counter()
     rng = random.Random(MANIFEST_SEED)
-    grammar_report = grammar_preflight(rng)
+    grammar_report, grammar_pool = grammar_preflight(rng)
     manifests = build_manifests(rng)
     leakage = leakage_audit(manifests)
     promotion = promotion_feasibility()
@@ -563,7 +626,7 @@ def run() -> Dict[str, Any]:
     replay = replay_fixture()
     budget = build_budget_report()
     elapsed = time.perf_counter() - started
-    return write_artifacts(manifests, grammar_report, leakage, promotion, statistics, fixture, replay, budget, elapsed)
+    return write_artifacts(manifests, grammar_report, grammar_pool, leakage, promotion, statistics, fixture, replay, budget, elapsed)
 
 
 def main() -> None:

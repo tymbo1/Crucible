@@ -1,0 +1,72 @@
+{
+  "schema_version": "crucible_cumulative_adaptation_protocol_integrity_amendment_v1",
+  "date": "2026-10-28",
+  "base_protocol": "docs/CRUCIBLE_CUMULATIVE_ADAPTATION_GATE_PROTOCOL_20261028.json",
+  "base_protocol_commit": "b7fe98c",
+  "base_protocol_sha256_before_amendment": "c6a66a91265bd4693982c9066d9d5494b0facd93589c9adee607a50e145330ce",
+  "status": "frozen_pending_execution_approval",
+  "scientific_execution_approved": false,
+  "gpu_allocation_approved": false,
+  "target_evaluations_run": false,
+  "sealed_target_answers_accessed": false,
+  "statistical_dependence": {
+    "target_records_by_seed": {"42": 144, "1337": 144},
+    "unique_target_task_ids": 288,
+    "cross_seed_canonical_ast_intersection": 0,
+    "cross_seed_truth_table_intersection": 0,
+    "same_target_task_across_seeds": false,
+    "paired_unit": "complete task-seed target cluster",
+    "cluster_definition": "one unique target task within one registered seed and target family; all arm outcomes remain together",
+    "target_phase_policy_frozen_after_source": true,
+    "primary_test": "exact_two_sided_mcnemar_on_288_task_seed_clusters",
+    "confidence_interval": "20000-replicate stratified cluster bootstrap",
+    "bootstrap_strata": ["seed", "target_family"],
+    "bootstrap_rule": "resample complete task clusters within each seed-by-family stratum; never resample arm outcomes independently",
+    "secondary_reporting": ["seed", "target_family", "seed_by_target_family"],
+    "interpretation": "No target task is repeated across seeds. The pooled analysis is a paired task-cluster analysis; seeds and families are reporting strata, not four independent replications."
+  },
+  "zero_promotion": {
+    "promotion_rule": "LCB95(Beta(1 + successes, 1 + failures)) >= 0.80",
+    "prior": "Beta(1,1)",
+    "trials_per_operator": 16,
+    "successes_required": 16,
+    "mechanism_status_when_none_promoted": "unactivated_inconclusive",
+    "interpretation": "Do not interpret no promotion as evidence against an active learning policy; the mechanism was not activated.",
+    "threshold_relaxation_after_results": false
+  },
+  "representative_grammar_pool": {
+    "path": "experiments/crucible_cumulative_adaptation_preflight_20261028/GRAMMAR_REPRESENTATIVE_POOL.jsonl",
+    "sha256": "fc359da2184254b3fe49dc90e8fbbbe91146e475bf10e3b389d9ed98723b40e9",
+    "sampling_seed": 20261028,
+    "valid_draws": 10000,
+    "structural_rows": 2730,
+    "functional_representatives": 692,
+    "duplicate_structural_draws_excluded": 7270,
+    "duplicate_functional_draws_excluded": 9308,
+    "invalid_or_out_of_scope_rows_written": 0,
+    "exhaustive_enumeration": false,
+    "scope_limitation": "Claims generalize only to the frozen sampled pool and the registered digit-expression DSL; unsampled expressions and functions are not covered."
+  },
+  "runner": {
+    "implementation": "tools/crucible_cumulative_adaptation_scientific_runner_20261028.py",
+    "validation": "tools/validate_crucible_cumulative_adaptation_runner_20261028.py",
+    "fixture_mode_only_for_this_amendment": true,
+    "arms": ["A0_FROZEN_INDUCTION", "A1_EXACT_PROCEDURE_MEMORY", "A2_SHAM_OPERATOR_LIBRARY", "A3_VERIFIED_ADAPTIVE_LIBRARY"],
+    "matched_budget": {
+      "candidate_slots": 4,
+      "operator_lookup_slots": 4,
+      "verifier_calls": 4,
+      "verifier_examples_per_call": 8,
+      "candidate_construction_units": 16,
+      "post_reset_checks": 8
+    },
+    "sealed_answer_opening": "only after all arm proposals are finalized and only under separate scientific authorization",
+    "required_fixtures": ["positive", "negative", "zero_promotion", "leakage", "budget_mismatch", "replay"]
+  },
+  "readiness_boundary": {
+    "implementation_readiness_is_separate_from_scientific_authorization": true,
+    "scientific_execution_requires_separate_explicit_approval": true,
+    "gpu_allocated": false,
+    "target_evaluations_run": false
+  }
+}

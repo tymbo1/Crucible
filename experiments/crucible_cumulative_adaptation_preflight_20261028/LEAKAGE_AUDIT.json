@@ -1,4 +1,6 @@
 {
+  "cross_seed_target_ast_intersection": [],
+  "cross_seed_target_truth_intersection": [],
   "intersections": {
     "source_target_ast": [],
     "source_target_truth": [],
@@ -9,9 +11,13 @@
   },
   "operator_validation_records": 64,
   "passed": true,
+  "same_target_task_across_seeds": false,
   "source_records": 64,
   "target_answer_labels_written": false,
   "target_ast_written": false,
   "target_evaluations_run": false,
-  "target_metadata_records": 288
+  "target_metadata_records": 288,
+  "target_phase_policy_frozen_after_source": true,
+  "target_task_ids_unique": true,
+  "task_cluster_definition": "one unique target task within one registered seed and target family; all four arm outcomes remain together"
 }

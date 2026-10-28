@@ -1103,7 +1103,7 @@
       "mechanisms": ["cumulative-learning", "operator-abstraction", "proposal-policy-adaptation", "memory-vs-learning-separation", "functional-novelty"],
       "interventions": ["verified operator library", "operator-guided proposal policy", "source-to-target transfer"],
       "controls": ["frozen induction policy", "exact procedure-memory control", "sham operator-memory control", "target truth-table disjointness", "matched verifier/candidate budgets", "reset and lifecycle gates", "no target-label access"],
-      "result": "Protocol proposal only. No implementation, training or scientific execution has been approved.",
+      "result": "The scientific hypothesis remains untested. CPU-only protocol preflight, statistical/dependence amendment and synthetic four-arm runner validation passed; no target evaluation, sealed-answer access, training or scientific execution occurred.",
       "limits": ["The proposal tests a model-agnostic adaptive policy before any neural implementation", "The first gate does not establish neural learning-to-learn", "The digit-expression language remains engineered scaffolding", "Contradiction detection remains externally triggered", "A positive result could establish cumulative policy adaptation without establishing general intelligence"],
       "unresolved": ["Whether verified source procedures contain reusable operator structure that transfers to functionally novel targets", "Whether an adaptive policy can improve acquisition without direct target retrieval", "Whether any later neural implementation can learn the same adaptation rather than receive it as an engineered rule", "How the mechanism transfers beyond the initial digit-expression domain"],
       "artifacts": [
@@ -1124,6 +1124,30 @@
         "experiments/crucible_cumulative_adaptation_preflight_20261028/HASHES.json"
       ],
       "novelty_terms": ["verified experience", "learning operator", "future acquisition", "exact-memory control", "sham-memory control", "cumulative adaptation"]
+    },
+    {
+      "id": "cumulative-adaptation-integrity-preflight-v1",
+      "status": "ESTABLISHED",
+      "title": "Cumulative adaptation protocol integrity and runner validation",
+      "hypothesis": "The cumulative-adaptation gate can be made statistically explicit and executable without opening sealed target answers or starting scientific execution.",
+      "mechanisms": ["task-clustered-inference", "sealed-target-isolation", "budget-matching", "operator-promotion-gating", "deterministic-grammar-pool"],
+      "interventions": ["protocol-integrity amendment", "frozen representative grammar pool", "four-arm synthetic runner"],
+      "controls": ["cross-seed target overlap audit", "zero-promotion fixture", "independent-verification rejection", "leakage rejection", "budget-mismatch rejection", "deterministic replay"],
+      "result": "The metadata audit found 288 unique target task IDs, zero cross-seed canonical-AST intersections and zero cross-seed truth-table intersections. The task-seed cluster analysis rule, zero-promotion interpretation and sampled grammar-pool scope were frozen. The four-arm runner passed positive lifecycle, negative verification, zero-promotion, leakage, budget-mismatch and replay fixtures without target evaluation, sealed-answer access or GPU allocation.",
+      "limits": ["No scientific target evaluation was run", "No cumulative-learning efficacy is established", "The grammar pool is a deterministic sample rather than exhaustive enumeration", "The runner's scientific path remains blocked without separate explicit approval", "The registered DSL and engineered verifier remain scaffolding"],
+      "unresolved": ["Whether the activated operator policy improves genuinely novel target acquisition", "Whether the registered effect replicates across target families and seeds", "Whether the model-agnostic policy can later be learned neurally", "Whether target input and sealed answer bundles satisfy the runner contract at execution time"],
+      "artifacts": [
+        "docs/CRUCIBLE_CUMULATIVE_ADAPTATION_PROTOCOL_INTEGRITY_AMENDMENT_20261028.md",
+        "docs/CRUCIBLE_CUMULATIVE_ADAPTATION_PROTOCOL_INTEGRITY_AMENDMENT_20261028.json",
+        "tools/crucible_cumulative_adaptation_scientific_runner_20261028.py",
+        "tools/validate_crucible_cumulative_adaptation_runner_20261028.py",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/TARGET_CROSS_SEED_DEPENDENCE.json",
+        "experiments/crucible_cumulative_adaptation_preflight_20261028/GRAMMAR_REPRESENTATIVE_POOL.jsonl",
+        "experiments/crucible_cumulative_adaptation_runner_validation_20261028/RUNNER_READINESS_REPORT.json",
+        "experiments/crucible_cumulative_adaptation_runner_validation_20261028/FIXTURE_RESULTS.json",
+        "experiments/crucible_cumulative_adaptation_runner_validation_20261028/HASHES.json"
+      ],
+      "novelty_terms": ["task-clustered inference", "zero promotion", "sealed runner", "representative grammar pool", "runner readiness"]
     },
     {
       "id": "future-500m-cross-domain-reasoning-curriculum-v1",

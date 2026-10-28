@@ -1,7 +1,9 @@
 {
   "budget_matching": "Four candidate slots, four operator lookups, four verifier calls of eight examples and fixed construction units per target for every arm",
-  "grammar_scope": "Use a deterministic representative pool under the frozen depth-3/node-7 grammar; full structural enumeration is not attempted in this CPU preflight",
+  "grammar_scope": "Use the frozen deterministic first-occurrence structural pool under the depth-3/node-7 grammar; full structural enumeration is not attempted and unsampled expressions are outside the evidence scope",
   "operator_promotion": "At most two eligible operators, 16 independent validation trials each, Beta(1,1) LCB95 >= 0.80; 16/16 required",
-  "statistics": "Exact two-sided McNemar on task-seed pairs plus 20,000-sample stratified task bootstrap confidence interval",
-  "target_denominator": "144 target tasks per seed, 72 per family, 288 paired task-seed units total"
+  "statistical_dependence": "Targets are unique across seeds; resample complete task-seed clusters within seed-by-family strata and never resample arm outcomes independently",
+  "statistics": "Exact two-sided McNemar on task-seed pairs plus 20,000-replicate stratified task-cluster bootstrap confidence interval",
+  "target_denominator": "144 target tasks per seed, 72 per family, 288 paired task-seed units total",
+  "zero_promotion": "If no operator reaches 16/16 and Beta(1,1) LCB95 >= 0.80, classify the mechanism as unactivated/inconclusive; do not interpret it as evidence against an active policy"
 }

@@ -71,8 +71,15 @@
     "paired_unit": "task_seed",
     "paired_units_total": 288,
     "primary_test": "exact_two_sided_mcnemar",
-    "confidence_interval": "20000-sample-stratified-task-bootstrap",
+    "confidence_interval": "20000-replicate-stratified-task-cluster-bootstrap",
     "bootstrap_strata": ["seed", "target_family"],
+    "bootstrap_rule": "resample complete task-seed clusters within each seed-by-family stratum; never resample arm outcomes independently",
+    "target_task_ids_unique": true,
+    "cross_seed_target_ast_intersection": 0,
+    "cross_seed_target_truth_table_intersection": 0,
+    "same_target_task_across_seeds": false,
+    "target_phase_policy_frozen_after_source": true,
+    "secondary_reporting": ["seed", "target_family", "seed_by_target_family"],
     "alpha": 0.05,
     "minimum_effect": 0.10,
     "planning_power_must_be_reported": true
@@ -85,6 +92,22 @@
     "minimum_successes_for_promotion": 16,
     "all_success_lower_bound": 0.8049356770309067
   },
+  "zero_promotion_rule": {
+    "mechanism_status": "unactivated_inconclusive",
+    "interpretation": "No promotion is not evidence against an active learning policy because the mechanism was not activated.",
+    "threshold_relaxation_after_results": false
+  },
+  "representative_grammar_pool": {
+    "path": "experiments/crucible_cumulative_adaptation_preflight_20261028/GRAMMAR_REPRESENTATIVE_POOL.jsonl",
+    "sha256": "fc359da2184254b3fe49dc90e8fbbbe91146e475bf10e3b389d9ed98723b40e9",
+    "sampling_seed": 20261028,
+    "valid_draws": 10000,
+    "structural_rows": 2730,
+    "functional_representatives": 692,
+    "exhaustive_enumeration": false,
+    "scope_limitation": "Claims are limited to the frozen sampled pool and registered digit-expression DSL."
+  },
+  "protocol_integrity_amendment": "docs/CRUCIBLE_CUMULATIVE_ADAPTATION_PROTOCOL_INTEGRITY_AMENDMENT_20261028.json",
   "success_criteria": {
     "minimum_pooled_gain_over_A0": 0.10,
     "minimum_pooled_gain_over_A2": 0.10,
@@ -114,7 +137,7 @@
   "execution": {
     "scientific_execution_approved": false,
     "gpu_allocation_approved": false,
-    "next_allowed_action": "CPU-only feasibility and leakage preflight"
+    "next_allowed_action": "synthetic runner validation and separate readiness review"
   },
   "interpretation_boundary": "A positive result would establish model-agnostic cumulative policy adaptation under the tested DSL. It would not establish neural learning-to-learn, general intelligence or transfer beyond the tested procedure language."
 }

@@ -7,8 +7,11 @@
     "xor_bits_mod10"
   ],
   "domain_size": 100,
-  "full_enumeration_note": "The frozen depth-3/node-7 grammar is combinatorially large; this preflight uses a deterministic representative pool and exact truth-table checks for every selected record.",
+  "duplicate_functional_draws_excluded_from_functional_representatives": 9308,
+  "duplicate_structural_draws_excluded": 7270,
+  "full_enumeration_note": "The frozen depth-3/node-7 grammar is combinatorially large; the frozen pool covers only sampled first occurrences. Expressions not sampled, structurally duplicated draws, and functional duplicates excluded from the functional representative subset are outside the evidence scope.",
   "full_exhaustive_ast_enumeration": false,
+  "invalid_or_out_of_scope_draws_in_pool": 0,
   "max_depth": 3,
   "max_nodes": 7,
   "operators": [
@@ -20,6 +23,10 @@
     "max"
   ],
   "representative_functional_classes": 692,
+  "representative_pool_is_structural_first_occurrences": true,
+  "representative_pool_rows": 2730,
+  "representative_pool_sampling": "10,000 deterministic valid-AST draws from the frozen grammar RNG stream; first occurrence retained by canonical structural hash",
+  "representative_pool_seed": 20261028,
   "representative_sampling_attempts": 10000,
   "representative_structural_classes": 2730
 }

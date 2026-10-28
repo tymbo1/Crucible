@@ -1,0 +1,55 @@
+{
+  "classification": "runner_validation_only",
+  "experiment": "crucible_cumulative_adaptation_scientific_runner_20261028",
+  "fixture_results": {
+    "budget_mismatch_case": {
+      "error": "budget mismatch for A2_SHAM_OPERATOR_LIBRARY: expected={'candidate_slots': 4, 'operator_lookup_slots': 4, 'verifier_calls': 4, 'verifier_examples_per_call': 8, 'candidate_construction_units': 16, 'post_reset_checks': 8} actual={'candidate_slots': 4, 'operator_lookup_slots': 4, 'verifier_calls': 3, 'verifier_examples_per_call': 10, 'candidate_construction_units': 16, 'post_reset_checks': 8}",
+      "rejected": true
+    },
+    "gpu_allocated": false,
+    "leakage_case": {
+      "error": "source/validation and target canonical or functional hashes overlap",
+      "rejected": true
+    },
+    "negative": {
+      "independent_verification_rejects": true
+    },
+    "positive": {
+      "adaptive_activation_status": "activated",
+      "four_arms": true,
+      "lifecycle_pass": true,
+      "no_sealed_target_answers": true
+    },
+    "replay": {
+      "deterministic": true,
+      "first_digest": "c8a7e72eb382a3dcf207a13bce888073826a4ebe26f5fe55276348a9e0c45805",
+      "second_digest": "c8a7e72eb382a3dcf207a13bce888073826a4ebe26f5fe55276348a9e0c45805"
+    },
+    "scientific_target_evaluations_run": false,
+    "sealed_target_answers_accessed": false,
+    "zero_promotion": {
+      "activation_status": "unactivated_inconclusive",
+      "promoted_operator_count": 0,
+      "threshold_unchanged": true
+    }
+  },
+  "frozen_grammar_pool": {
+    "path": "experiments/crucible_cumulative_adaptation_preflight_20261028/GRAMMAR_REPRESENTATIVE_POOL.jsonl",
+    "rows": 2730,
+    "sha256": "fc359da2184254b3fe49dc90e8fbbbe91146e475bf10e3b389d9ed98723b40e9"
+  },
+  "gpu_allocated": false,
+  "implementation_readiness": "pass",
+  "interpretation_boundary": "Implementation readiness is established by synthetic fixtures only. No cumulative-learning result or scientific target outcome is claimed.",
+  "protocol_flags_observed": {
+    "amendment_scientific_execution_approved": false,
+    "protocol_run_approved": false
+  },
+  "resource_seconds": 0.07819845800986513,
+  "schema_version": "crucible_cumulative_adaptation_runner_readiness_v1",
+  "scientific_authorization": "not_authorized",
+  "scientific_execution_approved": false,
+  "scientific_execution_started": false,
+  "sealed_target_answers_accessed": false,
+  "target_evaluations_run": false
+}

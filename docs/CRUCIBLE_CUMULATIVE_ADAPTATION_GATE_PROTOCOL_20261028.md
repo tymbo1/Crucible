@@ -106,6 +106,11 @@ The primary paired denominator is 288 task-seed units: 144 target tasks for
 each of two seeds. The same task-seed unit is evaluated by every arm; source
 and operator-validation records are not included in the target denominator.
 
+The target task IDs are unique across seeds, and the frozen metadata audit
+found zero cross-seed canonical-AST or truth-table intersections. The exact
+dependence resolution and runner boundary are recorded in
+`docs/CRUCIBLE_CUMULATIVE_ADAPTATION_PROTOCOL_INTEGRITY_AMENDMENT_20261028.md`.
+
 ## Experimental arms
 
 All arms receive identical source demonstrations, target demonstrations,
@@ -192,7 +197,9 @@ and both target families are fixed:
   families;
 - the exact two-sided McNemar test on the 288 paired task-seed outcomes is
   recorded, and the paired 95% confidence interval from the preregistered
-  20,000-sample stratified task bootstrap excludes zero;
+  20,000-sample stratified task-cluster bootstrap excludes zero. The bootstrap
+  resamples complete task clusters within each seed-by-family stratum and never
+  resamples arm outcomes independently;
 - A3 has zero target truth-table or canonical-AST retrieval hits; and
 - lifecycle verification, persistence, reset execution and revision gates are
   no worse than the registered baseline.
@@ -208,6 +215,12 @@ The 10-point threshold is a minimum scientific effect size, not a claim of
 guaranteed power for every possible outcome distribution. The feasibility
 preflight must report planning power under fixed discordant-pair scenarios
 before execution.
+
+If no eligible operator reaches the fixed 16/16 promotion requirement, A3 must
+be recorded as `unactivated_inconclusive`. That outcome is not evidence against
+an active learning policy, because no operator was activated. The promotion
+threshold and validation allocation cannot be relaxed after outcomes are
+observed.
 
 ## Resource and leakage controls
 
@@ -256,9 +269,28 @@ allocation cannot be relaxed after results are observed. Additional extracted
 operators are recorded diagnostically but are not promotion-eligible in this
 version.
 
+## Frozen representative grammar pool
+
+The runner uses the deterministic first-occurrence structural pool recorded at
+`experiments/crucible_cumulative_adaptation_preflight_20261028/GRAMMAR_REPRESENTATIVE_POOL.jsonl`.
+It contains 2,730 rows from 10,000 valid draws under the frozen depth-3,
+node-7 grammar, with 692 functional representatives. This is not exhaustive;
+unsampled expressions and functions are outside the evidence scope. Its exact
+sampling method, exclusions and hash are frozen in the protocol-integrity
+amendment.
+
+## Runner construction boundary
+
+The complete four-arm runner may be constructed and validated using synthetic
+fixtures before execution approval. It must enforce sealed-target isolation,
+matched budgets, independent verification, persistence/reset checks, replay and
+resource accounting. A readiness report must distinguish implementation
+readiness from scientific authorization. No target evaluation or sealed-answer
+access is permitted during runner construction.
+
 ## Decision boundary
 
-No code, task manifest, training run or GPU allocation is approved by this
-document. The next allowed action is a CPU-only feasibility and leakage
-preflight that must produce the frozen manifest, exact-hash audit and a cost
-estimate. Scientific execution requires a separate approval.
+No scientific target evaluation, sealed-answer access, training run or GPU
+allocation is approved by this document. The next allowed action is protocol
+integrity amendment and synthetic runner validation. Scientific execution
+requires a separate explicit approval after the readiness report passes.

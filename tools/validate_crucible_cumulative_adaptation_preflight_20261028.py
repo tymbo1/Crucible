@@ -33,6 +33,8 @@ def main() -> None:
     budget = load("BUDGET_MATCHING.json")
     promotion = load("PROMOTION_FEASIBILITY.json")
     statistics = load("STATISTICAL_FEASIBILITY.json")
+    dependence = load("TARGET_CROSS_SEED_DEPENDENCE.json")
+    grammar = load("GRAMMAR_ENUMERATION.json")
     fixture = load("SYNTHETIC_FIXTURE_RESULTS.json")
     replay = load("REPLAY_COMPARISON.json")
     hashes = load("HASHES.json")
@@ -49,6 +51,12 @@ def main() -> None:
         errors.append("promotion feasibility does not match the registered threshold")
     if statistics.get("paired_units") != 288 or statistics.get("primary_test") != "exact_two_sided_mcnemar":
         errors.append("statistical plan is not the registered paired design")
+    if statistics.get("confidence_interval") != "20000-replicate-stratified-task-cluster-bootstrap":
+        errors.append("statistical confidence interval is not task-clustered")
+    if dependence.get("same_target_task_across_seeds") or not dependence.get("task_ids_unique"):
+        errors.append("cross-seed target dependence audit failed")
+    if grammar.get("representative_pool_rows") != 2730 or grammar.get("full_exhaustive_ast_enumeration"):
+        errors.append("frozen representative grammar-pool declaration is incorrect")
     if not fixture.get("schema_pass") or not fixture.get("promotion_decision") or not fixture.get("adaptive_score_exceeds_controls"):
         errors.append("synthetic update fixture failed")
     if not replay.get("identical"):
