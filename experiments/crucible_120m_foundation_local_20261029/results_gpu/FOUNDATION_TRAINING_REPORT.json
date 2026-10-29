@@ -1,13 +1,13 @@
 {
   "checkpoints": {
     "external_root": "<local-checkpoint-root>",
-    "last_step": 5000
+    "last_step": 15000
   },
   "classification": "substantive_local_crucible_foundation_baseline",
   "data": {
-    "fineweb_manifest_sha256": "7ab923599c85b5510d1f9b8153fbc95a3f9f211fb9be1d0524f5f2969ae92b03",
-    "fineweb_train_sha256": "12984c52f91f54b5f461788e80f49bad3fa25d97b17614feacda690fd8b1f9d4",
-    "fineweb_validation_sha256": "08564ad5d8a7440b37d1087b7c3698b56b28a7807d69819a16202537db6b2c62",
+    "fineweb_manifest_sha256": "5d5602dc4d4a9995c54324ffd8848ec43358f9850a3ac502fb0a7f458dc33528",
+    "fineweb_train_sha256": "287ad99ba4cdf746a53d62bbe0518fed8b6d24cc1308ec5713ad716119c1d183",
+    "fineweb_validation_sha256": "4051e6f73b591577589c9fb844374b852c86295bbd75ce1ee6a44bc46443e324",
     "raw_fineweb_committed_to_git": false,
     "reasoning_train_sha256": "191173b17994c7bc1769e24870007cd3ad54fe1f547cefef50f503ab3e71b26f",
     "reasoning_validation_sha256": "89789b95c52e227574bc8a10f6fcda3a2326d3ddac4a349c9ddba6ff9c3246af",
@@ -15,19 +15,19 @@
   },
   "generation_samples": [
     {
-      "completion": "a that the bowl.",
+      "completion": "the values of 320",
       "prompt": "The goal of science is"
     },
     {
-      "completion": "and the bowl. They said the bowl the smooticer or thanker or equal of the rains.",
+      "completion": "14'",
       "prompt": "In mathematics, a prime number is"
     },
     {
-      "completion": "and geteter than the to play. \"On me day, \"I was made the dooraraturne of the doorame.",
+      "completion": "ro numbers",
       "prompt": "A good explanation should"
     },
     {
-      "completion": "there mome mom with the tooh car.",
+      "completion": "",
       "prompt": "Once upon a time"
     }
   ],
@@ -51,7 +51,7 @@
       "vocab_size": 259
     },
     "family": "Crucible latent-attention + SwiGLU dense",
-    "final_state_sha256": "46c69aedbee1aa1335e98508fc4ed70e17fd18edd5ebb6129a189354d25b5b8a",
+    "final_state_sha256": "b2dc4b94fec9ab1f1b198d1984f6af381c2f5807e2a96f48a5762c8b2633446a",
     "parameter_count": 120842496,
     "size": "120m"
   },
@@ -61,141 +61,165 @@
   "training": {
     "context": 512,
     "effective_batch_size": 8,
-    "elapsed_seconds": 2065.9432918179955,
+    "elapsed_seconds": 4917.714489128004,
     "grad_accumulation": 4,
     "micro_batch_size": 2,
-    "peak_rss_bytes": 2046996480,
+    "peak_rss_bytes": 2820849664,
     "peak_vram_allocated": 2934324224,
     "peak_vram_reserved": 3330277376,
     "reasoning_every": 5,
-    "resumed_from_step": 1000,
+    "resumed_from_step": 5000,
     "seed": 42,
-    "steps_completed": 5000,
-    "tokens_per_second": 4078.459962270009,
-    "training_tokens_recorded": 8425867
+    "steps_completed": 15000,
+    "tokens_per_second": 5138.67713464612,
+    "training_tokens_recorded": 25270547
   },
   "validation": {
     "checkpoints": [
       {
         "finite_gradients": true,
-        "language_loss": 2.0478523541241884,
+        "language_loss": 1.5401149233803153,
         "language_tokens": 65536,
-        "loss": 2.104267954826355,
-        "reasoning_loss": 2.8929546020144894,
+        "loss": 1.9060368835926056,
+        "reasoning_loss": 2.506344192888889,
         "reasoning_tokens": 5902,
         "source": "fineweb_edu",
-        "step": 1001,
-        "training_tokens": 1685469,
+        "step": 5001,
+        "training_tokens": 8427915,
         "valid_tokens": 2048
       },
       {
         "finite_gradients": true,
-        "language_loss": 1.9053056417033076,
+        "language_loss": 1.5378847997635603,
         "language_tokens": 65536,
-        "loss": 1.7099842115452415,
-        "reasoning_loss": 2.5971861751311436,
+        "loss": 1.0228180408477783,
+        "reasoning_loss": 2.7354206447478515,
         "reasoning_tokens": 5902,
         "source": "reasoning",
-        "step": 1500,
-        "training_tokens": 2526407,
-        "valid_tokens": 304
+        "step": 6000,
+        "training_tokens": 10109250,
+        "valid_tokens": 50
       },
       {
         "finite_gradients": true,
-        "language_loss": 1.7974963020533323,
+        "language_loss": 1.5194506896659732,
         "language_tokens": 65536,
-        "loss": 1.8338180308540661,
-        "reasoning_loss": 2.6193449437411225,
+        "loss": 0.08339157291487151,
+        "reasoning_loss": 2.9003688028831474,
         "reasoning_tokens": 5902,
         "source": "reasoning",
-        "step": 2000,
-        "training_tokens": 3368839,
+        "step": 7000,
+        "training_tokens": 11792671,
+        "valid_tokens": 51
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.4763296032324433,
+        "language_tokens": 65536,
+        "loss": 0.3506104638800025,
+        "reasoning_loss": 2.9888618612331843,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 8000,
+        "training_tokens": 13478089,
         "valid_tokens": 96
       },
       {
         "finite_gradients": true,
-        "language_loss": 1.7199890362098813,
+        "language_loss": 1.5230705859139562,
         "language_tokens": 65536,
-        "loss": 0.18230947107076645,
-        "reasoning_loss": 2.7735596320985416,
+        "loss": 0.11942792995250784,
+        "reasoning_loss": 3.4360616689908308,
         "reasoning_tokens": 5902,
         "source": "reasoning",
-        "step": 2500,
-        "training_tokens": 4210443,
+        "step": 9000,
+        "training_tokens": 15161297,
         "valid_tokens": 24
       },
       {
         "finite_gradients": true,
-        "language_loss": 1.6906097438186407,
+        "language_loss": 1.4336928594857454,
         "language_tokens": 65536,
-        "loss": 0.13533963123336434,
-        "reasoning_loss": 2.8327064422056742,
+        "loss": 0.28744611639591405,
+        "reasoning_loss": 3.141653224083578,
         "reasoning_tokens": 5902,
         "source": "reasoning",
-        "step": 3000,
-        "training_tokens": 5052047,
-        "valid_tokens": 24
-      },
-      {
-        "finite_gradients": true,
-        "language_loss": 1.6663760971277952,
-        "language_tokens": 65536,
-        "loss": 1.329678136032897,
-        "reasoning_loss": 2.466628994160246,
-        "reasoning_tokens": 5902,
-        "source": "reasoning",
-        "step": 3500,
-        "training_tokens": 5896877,
-        "valid_tokens": 847
-      },
-      {
-        "finite_gradients": true,
-        "language_loss": 1.620810627937317,
-        "language_tokens": 65536,
-        "loss": 1.132026297887544,
-        "reasoning_loss": 2.5519802637930966,
-        "reasoning_tokens": 5902,
-        "source": "reasoning",
-        "step": 4000,
-        "training_tokens": 6741673,
+        "step": 10000,
+        "training_tokens": 16850923,
         "valid_tokens": 842
       },
       {
         "finite_gradients": true,
-        "language_loss": 1.5946058789268136,
+        "language_loss": 1.4415590520948172,
         "language_tokens": 65536,
-        "loss": 1.2782542778635926,
-        "reasoning_loss": 2.557594733086128,
+        "loss": 0.8689993829057928,
+        "reasoning_loss": 3.1880424256931694,
         "reasoning_tokens": 5902,
         "source": "reasoning",
-        "step": 4500,
-        "training_tokens": 7583695,
-        "valid_tokens": 159
+        "step": 11000,
+        "training_tokens": 18535117,
+        "valid_tokens": 285
       },
       {
         "finite_gradients": true,
-        "language_loss": 1.539786015637219,
+        "language_loss": 1.4389809863641858,
         "language_tokens": 65536,
-        "loss": 1.667990739512862,
-        "reasoning_loss": 2.5079585135245637,
+        "loss": 0.6564119011163712,
+        "reasoning_loss": 3.190263243670465,
         "reasoning_tokens": 5902,
         "source": "reasoning",
-        "step": 5000,
-        "training_tokens": 8425867,
-        "valid_tokens": 285
+        "step": 12000,
+        "training_tokens": 20218500,
+        "valid_tokens": 50
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.4483085041865706,
+        "language_tokens": 65536,
+        "loss": 0.042210606565954635,
+        "reasoning_loss": 3.306558475019527,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 13000,
+        "training_tokens": 21901921,
+        "valid_tokens": 51
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.426714414730668,
+        "language_tokens": 65536,
+        "loss": 0.37845744130512077,
+        "reasoning_loss": 3.316019120028729,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 14000,
+        "training_tokens": 23587339,
+        "valid_tokens": 96
+      },
+      {
+        "finite_gradients": true,
+        "language_loss": 1.4213880617171526,
+        "language_tokens": 65536,
+        "loss": 0.3939262380299624,
+        "reasoning_loss": 3.185885093194757,
+        "reasoning_tokens": 5902,
+        "source": "reasoning",
+        "step": 15000,
+        "training_tokens": 25270547,
+        "valid_tokens": 24
       }
     ],
     "final": {
       "finite_gradients": true,
-      "language_loss": 1.539786015637219,
+      "language_loss": 1.4213880617171526,
       "language_tokens": 65536,
-      "loss": 1.667990739512862,
-      "reasoning_loss": 2.5079585135245637,
+      "loss": 0.3939262380299624,
+      "reasoning_loss": 3.185885093194757,
       "reasoning_tokens": 5902,
       "source": "reasoning",
-      "step": 5000,
-      "training_tokens": 8425867,
-      "valid_tokens": 285
+      "step": 15000,
+      "training_tokens": 25270547,
+      "valid_tokens": 24
     }
   }
 }
