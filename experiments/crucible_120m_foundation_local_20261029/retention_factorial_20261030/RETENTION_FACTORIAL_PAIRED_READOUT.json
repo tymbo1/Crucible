@@ -1,0 +1,920 @@
+{
+  "arms": {
+    "A0": {
+      "paired": {
+        "fixed_depth_2": {
+          "accuracy_after": 16,
+          "accuracy_before": 9,
+          "by_domain": {
+            "bbh": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->correct": 3,
+              "correct->wrong": 4,
+              "wrong->correct": 13,
+              "wrong->wrong": 44
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "scibench": {
+              "wrong->wrong": 48
+            }
+          },
+          "overall": {
+            "correct->correct": 3,
+            "correct->wrong": 6,
+            "wrong->correct": 13,
+            "wrong->wrong": 282
+          },
+          "records": 304
+        },
+        "one_pass": {
+          "accuracy_after": 39,
+          "accuracy_before": 52,
+          "by_domain": {
+            "bbh": {
+              "correct->correct": 3,
+              "correct->wrong": 14,
+              "wrong->correct": 5,
+              "wrong->wrong": 42
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->correct": 23,
+              "correct->wrong": 10,
+              "wrong->correct": 8,
+              "wrong->wrong": 23
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "scibench": {
+              "correct->wrong": 1,
+              "wrong->wrong": 47
+            }
+          },
+          "overall": {
+            "correct->correct": 26,
+            "correct->wrong": 26,
+            "wrong->correct": 13,
+            "wrong->wrong": 239
+          },
+          "records": 304
+        },
+        "op_external": {
+          "accuracy_after": 39,
+          "accuracy_before": 57,
+          "by_domain": {
+            "bbh": {
+              "correct->correct": 5,
+              "correct->wrong": 15,
+              "wrong->correct": 3,
+              "wrong->wrong": 41
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->correct": 24,
+              "correct->wrong": 11,
+              "wrong->correct": 7,
+              "wrong->wrong": 22
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "scibench": {
+              "correct->wrong": 1,
+              "wrong->wrong": 47
+            }
+          },
+          "overall": {
+            "correct->correct": 29,
+            "correct->wrong": 28,
+            "wrong->correct": 10,
+            "wrong->wrong": 237
+          },
+          "records": 304
+        }
+      },
+      "safety": {
+        "status": "PASS"
+      },
+      "scores": {
+        "fixed_depth_2": {
+          "accuracy": 0.05263157894736842,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 16
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 16,
+          "mean_model_tokens": 47.79934210526316,
+          "records": 304
+        },
+        "one_pass": {
+          "accuracy": 0.12828947368421054,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 8
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 31
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 39,
+          "mean_model_tokens": 23.539473684210527,
+          "records": 304
+        },
+        "op_external": {
+          "accuracy": 0.12828947368421054,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 8
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 31
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 39,
+          "mean_model_tokens": 103.25,
+          "records": 304
+        }
+      },
+      "training": {
+        "finite": true,
+        "loss_scale_recovery_events": 0,
+        "peak_vram_allocated": 5194481664,
+        "peak_vram_reserved": 5702156288,
+        "tokens_per_second": 2634.5267629657187,
+        "training_tokens_this_run": 8426042
+      }
+    },
+    "A1": {
+      "paired": {
+        "fixed_depth_2": {
+          "accuracy_after": 3,
+          "accuracy_before": 9,
+          "by_domain": {
+            "bbh": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->correct": 3,
+              "correct->wrong": 4,
+              "wrong->wrong": 57
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "scibench": {
+              "wrong->wrong": 48
+            }
+          },
+          "overall": {
+            "correct->correct": 3,
+            "correct->wrong": 6,
+            "wrong->wrong": 295
+          },
+          "records": 304
+        },
+        "one_pass": {
+          "accuracy_after": 43,
+          "accuracy_before": 52,
+          "by_domain": {
+            "bbh": {
+              "correct->correct": 15,
+              "correct->wrong": 2,
+              "wrong->correct": 1,
+              "wrong->wrong": 46
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->correct": 25,
+              "correct->wrong": 8,
+              "wrong->correct": 2,
+              "wrong->wrong": 29
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "scibench": {
+              "correct->wrong": 1,
+              "wrong->wrong": 47
+            }
+          },
+          "overall": {
+            "correct->correct": 40,
+            "correct->wrong": 12,
+            "wrong->correct": 3,
+            "wrong->wrong": 249
+          },
+          "records": 304
+        },
+        "op_external": {
+          "accuracy_after": 43,
+          "accuracy_before": 57,
+          "by_domain": {
+            "bbh": {
+              "correct->correct": 15,
+              "correct->wrong": 5,
+              "wrong->correct": 1,
+              "wrong->wrong": 43
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->correct": 26,
+              "correct->wrong": 9,
+              "wrong->correct": 1,
+              "wrong->wrong": 28
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "scibench": {
+              "correct->wrong": 1,
+              "wrong->wrong": 47
+            }
+          },
+          "overall": {
+            "correct->correct": 41,
+            "correct->wrong": 16,
+            "wrong->correct": 2,
+            "wrong->wrong": 245
+          },
+          "records": 304
+        }
+      },
+      "safety": {
+        "status": "PASS"
+      },
+      "scores": {
+        "fixed_depth_2": {
+          "accuracy": 0.009868421052631578,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 3
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 3,
+          "mean_model_tokens": 46.766447368421055,
+          "records": 304
+        },
+        "one_pass": {
+          "accuracy": 0.14144736842105263,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 16
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 27
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 43,
+          "mean_model_tokens": 18.111842105263158,
+          "records": 304
+        },
+        "op_external": {
+          "accuracy": 0.14144736842105263,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 16
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 27
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 43,
+          "mean_model_tokens": 106.5592105263158,
+          "records": 304
+        }
+      },
+      "training": {
+        "finite": true,
+        "loss_scale_recovery_events": 0,
+        "peak_vram_allocated": 5194481664,
+        "peak_vram_reserved": 5702156288,
+        "tokens_per_second": 2635.3419469671126,
+        "training_tokens_this_run": 8426042
+      }
+    },
+    "A2": {
+      "paired": {
+        "fixed_depth_2": {
+          "accuracy_after": 1,
+          "accuracy_before": 9,
+          "by_domain": {
+            "bbh": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->wrong": 7,
+              "wrong->correct": 1,
+              "wrong->wrong": 56
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "scibench": {
+              "wrong->wrong": 48
+            }
+          },
+          "overall": {
+            "correct->wrong": 9,
+            "wrong->correct": 1,
+            "wrong->wrong": 294
+          },
+          "records": 304
+        },
+        "one_pass": {
+          "accuracy_after": 42,
+          "accuracy_before": 52,
+          "by_domain": {
+            "bbh": {
+              "correct->correct": 10,
+              "correct->wrong": 7,
+              "wrong->correct": 1,
+              "wrong->wrong": 46
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->correct": 29,
+              "correct->wrong": 4,
+              "wrong->correct": 2,
+              "wrong->wrong": 29
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "scibench": {
+              "correct->wrong": 1,
+              "wrong->wrong": 47
+            }
+          },
+          "overall": {
+            "correct->correct": 39,
+            "correct->wrong": 13,
+            "wrong->correct": 3,
+            "wrong->wrong": 249
+          },
+          "records": 304
+        },
+        "op_external": {
+          "accuracy_after": 42,
+          "accuracy_before": 57,
+          "by_domain": {
+            "bbh": {
+              "correct->correct": 10,
+              "correct->wrong": 10,
+              "wrong->correct": 1,
+              "wrong->wrong": 43
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->correct": 30,
+              "correct->wrong": 5,
+              "wrong->correct": 1,
+              "wrong->wrong": 28
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "scibench": {
+              "correct->wrong": 1,
+              "wrong->wrong": 47
+            }
+          },
+          "overall": {
+            "correct->correct": 40,
+            "correct->wrong": 17,
+            "wrong->correct": 2,
+            "wrong->wrong": 245
+          },
+          "records": 304
+        }
+      },
+      "safety": {
+        "status": "PASS"
+      },
+      "scores": {
+        "fixed_depth_2": {
+          "accuracy": 0.003289473684210526,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 1
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 1,
+          "mean_model_tokens": 36.10526315789474,
+          "records": 304
+        },
+        "one_pass": {
+          "accuracy": 0.13815789473684212,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 11
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 31
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 42,
+          "mean_model_tokens": 13.648026315789474,
+          "records": 304
+        },
+        "op_external": {
+          "accuracy": 0.13815789473684212,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 11
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 31
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 42,
+          "mean_model_tokens": 84.45065789473684,
+          "records": 304
+        }
+      },
+      "training": {
+        "finite": true,
+        "loss_scale_recovery_events": 0,
+        "peak_vram_allocated": 5194481664,
+        "peak_vram_reserved": 5702156288,
+        "tokens_per_second": 2630.658879416563,
+        "training_tokens_this_run": 8426042
+      }
+    },
+    "A3": {
+      "paired": {
+        "fixed_depth_2": {
+          "accuracy_after": 2,
+          "accuracy_before": 9,
+          "by_domain": {
+            "bbh": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->correct": 2,
+              "correct->wrong": 5,
+              "wrong->wrong": 57
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->wrong": 63
+            },
+            "scibench": {
+              "wrong->wrong": 48
+            }
+          },
+          "overall": {
+            "correct->correct": 2,
+            "correct->wrong": 7,
+            "wrong->wrong": 295
+          },
+          "records": 304
+        },
+        "one_pass": {
+          "accuracy_after": 45,
+          "accuracy_before": 52,
+          "by_domain": {
+            "bbh": {
+              "correct->correct": 15,
+              "correct->wrong": 2,
+              "wrong->correct": 1,
+              "wrong->wrong": 46
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->correct": 27,
+              "correct->wrong": 6,
+              "wrong->wrong": 31
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->correct": 2,
+              "wrong->wrong": 61
+            },
+            "scibench": {
+              "correct->wrong": 1,
+              "wrong->wrong": 47
+            }
+          },
+          "overall": {
+            "correct->correct": 42,
+            "correct->wrong": 10,
+            "wrong->correct": 3,
+            "wrong->wrong": 249
+          },
+          "records": 304
+        },
+        "op_external": {
+          "accuracy_after": 50,
+          "accuracy_before": 57,
+          "by_domain": {
+            "bbh": {
+              "correct->correct": 16,
+              "correct->wrong": 4,
+              "wrong->wrong": 44
+            },
+            "bigbench_lite": {
+              "wrong->wrong": 64
+            },
+            "ethics": {
+              "correct->correct": 27,
+              "correct->wrong": 8,
+              "wrong->correct": 5,
+              "wrong->wrong": 24
+            },
+            "math": {
+              "correct->wrong": 1,
+              "wrong->correct": 2,
+              "wrong->wrong": 61
+            },
+            "scibench": {
+              "correct->wrong": 1,
+              "wrong->wrong": 47
+            }
+          },
+          "overall": {
+            "correct->correct": 43,
+            "correct->wrong": 14,
+            "wrong->correct": 7,
+            "wrong->wrong": 240
+          },
+          "records": 304
+        }
+      },
+      "safety": {
+        "status": "PASS"
+      },
+      "scores": {
+        "fixed_depth_2": {
+          "accuracy": 0.006578947368421052,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 2
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 2,
+          "mean_model_tokens": 64.39473684210526,
+          "records": 304
+        },
+        "one_pass": {
+          "accuracy": 0.14802631578947367,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 16
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 27
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 2
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 45,
+          "mean_model_tokens": 25.289473684210527,
+          "records": 304
+        },
+        "op_external": {
+          "accuracy": 0.16447368421052633,
+          "by_domain": {
+            "bbh": {
+              "records": 64,
+              "verified_correct": 16
+            },
+            "bigbench_lite": {
+              "records": 64,
+              "verified_correct": 0
+            },
+            "ethics": {
+              "records": 64,
+              "verified_correct": 32
+            },
+            "math": {
+              "records": 64,
+              "verified_correct": 2
+            },
+            "scibench": {
+              "records": 48,
+              "verified_correct": 0
+            }
+          },
+          "correct": 50,
+          "mean_model_tokens": 156.9375,
+          "records": 304
+        }
+      },
+      "training": {
+        "finite": true,
+        "loss_scale_recovery_events": 0,
+        "peak_vram_allocated": 5194481664,
+        "peak_vram_reserved": 5702156288,
+        "tokens_per_second": 2642.143710979381,
+        "training_tokens_this_run": 8426042
+      }
+    }
+  },
+  "baseline": {
+    "eval": "/home/timbushnell/Crucible/experiments/crucible_120m_foundation_local_20261029/op_eval_step15000_gpu/CHECKPOINT_OP_EVAL.json",
+    "scores": {
+      "fixed_depth_2": {
+        "accuracy": 0.029605263157894735,
+        "by_domain": {
+          "bbh": {
+            "records": 64,
+            "verified_correct": 1
+          },
+          "bigbench_lite": {
+            "records": 64,
+            "verified_correct": 0
+          },
+          "ethics": {
+            "records": 64,
+            "verified_correct": 7
+          },
+          "math": {
+            "records": 64,
+            "verified_correct": 1
+          },
+          "scibench": {
+            "records": 48,
+            "verified_correct": 0
+          }
+        },
+        "correct": 9,
+        "mean_model_tokens": 23.325657894736842,
+        "records": 304
+      },
+      "one_pass": {
+        "accuracy": 0.17105263157894737,
+        "by_domain": {
+          "bbh": {
+            "records": 64,
+            "verified_correct": 17
+          },
+          "bigbench_lite": {
+            "records": 64,
+            "verified_correct": 0
+          },
+          "ethics": {
+            "records": 64,
+            "verified_correct": 33
+          },
+          "math": {
+            "records": 64,
+            "verified_correct": 1
+          },
+          "scibench": {
+            "records": 48,
+            "verified_correct": 1
+          }
+        },
+        "correct": 52,
+        "mean_model_tokens": 9.473684210526315,
+        "records": 304
+      },
+      "op_external": {
+        "accuracy": 0.1875,
+        "by_domain": {
+          "bbh": {
+            "records": 64,
+            "verified_correct": 20
+          },
+          "bigbench_lite": {
+            "records": 64,
+            "verified_correct": 0
+          },
+          "ethics": {
+            "records": 64,
+            "verified_correct": 35
+          },
+          "math": {
+            "records": 64,
+            "verified_correct": 1
+          },
+          "scibench": {
+            "records": 48,
+            "verified_correct": 1
+          }
+        },
+        "correct": 57,
+        "mean_model_tokens": 52.39802631578947,
+        "records": 304
+      }
+    }
+  },
+  "classification": "exploratory_retention_factorial_paired_readout",
+  "controls": {
+    "end_step": 20000,
+    "one_pass_protected_gate": "zero correct->wrong transitions relative to step-15,000 checkpoint",
+    "same_test_manifest": true,
+    "sealed_target_used_for_training": false,
+    "start_step": 15000
+  },
+  "schema_version": "crucible-retention-factorial-readout-v1-20261030"
+}

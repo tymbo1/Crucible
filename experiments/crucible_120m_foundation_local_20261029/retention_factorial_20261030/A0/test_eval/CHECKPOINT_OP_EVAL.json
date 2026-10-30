@@ -1,0 +1,117 @@
+{
+  "checkpoint": {
+    "sha256": "6c163a29e27c31833b368c5cd910418b425c6a9b015dfe6824ff9c7b02a0f6e5",
+    "state_sha256": "99e90e400f67edc242edd0eb9770be282df3d0a7f0c2f0bb2cc84f1257b12588",
+    "step": 20000
+  },
+  "classification": "post_foundation_checkpoint_op_comparison",
+  "data": {
+    "gold_used_only_after_training": true,
+    "records": 304,
+    "test_jsonl_sha256": "79f503ab68ef21f81de2ca441abf0c0d133e0cced0f180cdea5eb934cb181a83"
+  },
+  "limitations": [
+    "The OP mechanism is external and bounded; it is not internalized in model weights.",
+    "This is a single checkpoint and seed, not a preregistered scientific comparison.",
+    "Gold answers are used by the evaluator after training for verification and are not input to proposal generation."
+  ],
+  "model": {
+    "context": 512,
+    "family": "Crucible latent-attention + SwiGLU dense",
+    "parameter_count": 120842496,
+    "size": "120m"
+  },
+  "policies": [
+    {
+      "accuracy": 0.12828947368421054,
+      "by_domain": {
+        "bbh": {
+          "records": 64,
+          "verified_correct": 8
+        },
+        "bigbench_lite": {
+          "records": 64,
+          "verified_correct": 0
+        },
+        "ethics": {
+          "records": 64,
+          "verified_correct": 31
+        },
+        "math": {
+          "records": 64,
+          "verified_correct": 0
+        },
+        "scibench": {
+          "records": 48,
+          "verified_correct": 0
+        }
+      },
+      "mean_model_tokens": 23.539473684210527,
+      "mean_passes": 1.0,
+      "policy": "one_pass",
+      "records": 304,
+      "verified_correct": 39
+    },
+    {
+      "accuracy": 0.05263157894736842,
+      "by_domain": {
+        "bbh": {
+          "records": 64,
+          "verified_correct": 0
+        },
+        "bigbench_lite": {
+          "records": 64,
+          "verified_correct": 0
+        },
+        "ethics": {
+          "records": 64,
+          "verified_correct": 16
+        },
+        "math": {
+          "records": 64,
+          "verified_correct": 0
+        },
+        "scibench": {
+          "records": 48,
+          "verified_correct": 0
+        }
+      },
+      "mean_model_tokens": 47.79934210526316,
+      "mean_passes": 2.0,
+      "policy": "fixed_depth_2",
+      "records": 304,
+      "verified_correct": 16
+    },
+    {
+      "accuracy": 0.12828947368421054,
+      "by_domain": {
+        "bbh": {
+          "records": 64,
+          "verified_correct": 8
+        },
+        "bigbench_lite": {
+          "records": 64,
+          "verified_correct": 0
+        },
+        "ethics": {
+          "records": 64,
+          "verified_correct": 31
+        },
+        "math": {
+          "records": 64,
+          "verified_correct": 0
+        },
+        "scibench": {
+          "records": 48,
+          "verified_correct": 0
+        }
+      },
+      "mean_model_tokens": 103.25,
+      "mean_passes": 1.8717105263157894,
+      "policy": "op_external",
+      "records": 304,
+      "verified_correct": 39
+    }
+  ],
+  "schema_version": "crucible-foundation-checkpoint-eval-v1-20261029"
+}

@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "detail": "20 incidents; unique CT-IDs=True",
+      "name": "ledger_schema",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing regression tests: []",
+      "name": "ledger_regression_tests",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing safety markers=[]; sealed test access=False",
+      "name": "runner_safety_markers:run_crucible_foundation_training_20261029.py",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing safety markers=[]; sealed test access=False",
+      "name": "runner_safety_markers:run_crucible_retention_factorial_20261030.py",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing fields=[]",
+      "name": "checkpoint_schema",
+      "status": "PASS"
+    },
+    {
+      "detail": "model and optimizer floating tensors finite",
+      "name": "checkpoint_finite",
+      "status": "PASS"
+    },
+    {
+      "detail": "step=20000 training_tokens=33696589",
+      "name": "checkpoint_progress",
+      "status": "PASS"
+    },
+    {
+      "detail": "cpu RNG present; CUDA RNG field present=True",
+      "name": "checkpoint_rng",
+      "status": "PASS"
+    }
+  ],
+  "failures": [],
+  "policy": "A PASS means implementation safeguards were found; it never authorizes target evaluation or a long training run.",
+  "schema_version": "crucible-training-preflight-v1-20261030",
+  "scientific_authorization": false,
+  "status": "PASS"
+}

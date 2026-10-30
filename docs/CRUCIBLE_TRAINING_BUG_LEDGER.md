@@ -107,7 +107,7 @@ The command is deliberately a gate, not a replacement for scientific review. It 
 - **Observed:** the first A0 attempt kept student, teacher, optimizer and simultaneous train/replay autograd graphs; it OOMed on the 8GB card before a scientific update.
 - **Impact:** the authorized retention experiment could not start and left only an empty curve artifact.
 - **Fix:** precompute frozen teacher logits/hidden states into a CPU BF16 cache, release the teacher, and backpropagate ordinary and replay losses sequentially before one optimizer step. Add structured OOM abort handling.
-- **Regression test:** A0 must complete a one-update GPU smoke test without OOM; the cache path must be deterministic and replay targets must match the frozen teacher outputs.
+- **Regression test:** A0 completed the full 5,000-update continuation without OOM; the cache path was deterministic and replay targets matched the frozen teacher outputs.
 
 ### CT-010 — Retention runner discarded its target tensor before accounting valid tokens
 
@@ -115,7 +115,7 @@ The command is deliberately a gate, not a replacement for scientific review. It 
 - **Observed:** after the sequential-backward memory fix, the target tensor was released before `valid_tokens` was counted.
 - **Impact:** the run stopped with an `UnboundLocalError`; no scientific result was produced.
 - **Fix:** count valid targets before releasing the tensor.
-- **Regression test:** one-update smoke test must finish and emit a finite curve record with a positive valid-token count.
+- **Regression test:** all four arms emitted finite curve records with positive valid-token counts and completed to step 20,000.
 
 ### CT-011 — Evaluation aggregates hid answer-level regressions
 
@@ -188,6 +188,14 @@ The command is deliberately a gate, not a replacement for scientific review. It 
 - **Impact:** a “GPU unavailable” report could be mistaken for a hardware or driver failure.
 - **Fix:** run an explicit host capability check (`nvidia-smi`, `/dev/nvidia*`, framework CUDA query) before changing drivers; do not make disruptive system changes as a benchmark workaround.
 - **Regression test:** record host-vs-sandbox device visibility in the run metadata.
+
+### CT-020 — Preflight source audit did not follow a local checkpoint-helper dependency
+
+- **Class:** confirmed preflight-tool bug discovered during this run; fixed.
+- **Observed:** the first ledger preflight falsely failed the retention runner because `os.replace` lived in its imported local foundation helper rather than in the retention file itself.
+- **Impact:** a safe runner could be rejected, while a naive marker-only audit would encourage weakening the atomic-write requirement.
+- **Fix:** the preflight follows the known local helper import and audits the helper source as part of the runner dependency closure.
+- **Regression test:** both the foundation runner and dependent retention runner pass the same source audit while sealed-test access remains absent.
 
 ## Open items that must not be silently marked fixed
 
