@@ -1,0 +1,68 @@
+{
+  "classification": "cpu_manifest_and_leakage_preflight_only",
+  "counts": {
+    "seed_1337/source_train": 32,
+    "seed_1337/source_validation": 16,
+    "seed_1337/target_dependent_sealed": 64,
+    "seed_1337/target_dependent_train": 64,
+    "seed_1337/target_dependent_validation": 32,
+    "seed_1337/target_independent_sealed": 64,
+    "seed_1337/target_independent_train": 64,
+    "seed_1337/target_independent_validation": 32,
+    "seed_42/source_train": 32,
+    "seed_42/source_validation": 16,
+    "seed_42/target_dependent_sealed": 64,
+    "seed_42/target_dependent_train": 64,
+    "seed_42/target_dependent_validation": 32,
+    "seed_42/target_independent_sealed": 64,
+    "seed_42/target_independent_train": 64,
+    "seed_42/target_independent_validation": 32
+  },
+  "exhaustive_domain": "four_boolean_inputs_16_rows",
+  "exposure_buckets": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "global_unique_structural_hashes": 736,
+  "global_unique_truth_table_hashes": 736,
+  "overlap_audit": {
+    "cross_seed_functional_overlap": 0,
+    "source_target_functional_overlap": 0,
+    "source_target_structural_overlap": 0
+  },
+  "public_files": {
+    "seed_1337/source_train.jsonl": "76a9f917755fcb97c7d83404caf7792a1af2a28cab0a06fa474ee57191210268",
+    "seed_1337/source_validation.jsonl": "08b3b9f9609f891a3d560154297eab31fb38ebb049b0fb762ddd484e260beaef",
+    "seed_1337/target_dependent_sealed_public.jsonl": "6be5e2dc42dad29f5fc2c33e1f1b9fc53043aeeaca1cab19dc410f0a82602d0b",
+    "seed_1337/target_dependent_train.jsonl": "5330f43b77f3da1fea9fdfe1f6e99f12da6a9451a92748d766f93b3b9fe23aae",
+    "seed_1337/target_dependent_validation.jsonl": "9e8a6755708fa21099ece309688885f4f3ea960c3b2a4e971aae7cf1f7881502",
+    "seed_1337/target_independent_sealed_public.jsonl": "9a9a8f7fd6200d0a58e6d3f242eaa450a6e9d6e13b38c92a9d26e3c17a9e1517",
+    "seed_1337/target_independent_train.jsonl": "f5e1e492d99d512e59ae6dcbe18b2fe49c9a83206f8353c62ba84f6c668bdda8",
+    "seed_1337/target_independent_validation.jsonl": "857784d493696dc00e84e498857a713fd138d951539cd840cbaf89c26151ca89",
+    "seed_42/source_train.jsonl": "88ec12a6884e30278807f5ca677fe7dba7dd92a17675d9f7a24c6ca4f72efa65",
+    "seed_42/source_validation.jsonl": "b601dfb2afa13ad5faa5acf26b8dbbca7ba9c11c36d0f8ff719e6078568e58d3",
+    "seed_42/target_dependent_sealed_public.jsonl": "a8345be69e01671dda652ade4da7ab80ddddba072599b804b9195d0276b5370e",
+    "seed_42/target_dependent_train.jsonl": "5c80defc69d9f371f115a9adaddc88435e83ee5e940fe6455f79c55b53c58f83",
+    "seed_42/target_dependent_validation.jsonl": "eec0af48a4abf6fa3077c730a1abf68a63cb459a67ed52dad1d2316e72fe81a0",
+    "seed_42/target_independent_sealed_public.jsonl": "ca1fd5efd489f296cc759729196358c85e27e8afd32a1d837b6685eebdae2d4f",
+    "seed_42/target_independent_train.jsonl": "c870c932ed1c457098a26369e03ee0972b78e8195c31b4e63d40b82ee66fd637",
+    "seed_42/target_independent_validation.jsonl": "750b811422c4d894618180fc7670a6d1615916354fb27822113c48aac9010ff9"
+  },
+  "schema_version": "crucible-productive-retention-transfer-manifest-v1-20261031",
+  "scientific_authorization": false,
+  "sealed_answer_files_outside_git": {
+    "seed_1337/target_dependent_sealed_answers.jsonl": "9e1d3cd36d883aa14f36873cf03d01a4d098d4ec4fda35465d19417a34f033a9",
+    "seed_1337/target_independent_sealed_answers.jsonl": "2b616c1e196e013bdc7269c7a54a77eedd7101803bed503652a1c7cd61567ec2",
+    "seed_42/target_dependent_sealed_answers.jsonl": "aa57265c3104177c0e650fa0c16615ae3a75299f0d0f19afd79405de19c6825b",
+    "seed_42/target_independent_sealed_answers.jsonl": "294e17db1b32037277206ea0af20a0c993122958ccadeff846bd8a823707870e"
+  },
+  "sealed_root": "<private-sealed-root>",
+  "seeds": [
+    42,
+    1337
+  ],
+  "target_answers_available_to_training": false,
+  "target_answers_used_for_manifest_generation": true
+}

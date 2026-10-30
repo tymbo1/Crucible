@@ -1,0 +1,54 @@
+{
+  "schema_version": "crucible-productive-retention-transfer-v1-20261031",
+  "status": "UNTESTED_PROTOCOL_ONLY",
+  "scientific_authorization": false,
+  "closest_prior": [
+    "836de1e",
+    "5df684c",
+    "0e7bbb2",
+    "CRUCIBLE_CUMULATIVE_ADAPTATION_GATE_PROTOCOL_20261028.md"
+  ],
+  "novelty": "Sequential source-skill acquisition followed by functionally disjoint target acquisition with sample-efficiency and productive-transfer metrics.",
+  "model": {
+    "architecture": "Crucible 120M latent-attention + SwiGLU dense",
+    "initial_checkpoint_step": 15000,
+    "precision": "bf16",
+    "microbatch": 8,
+    "seeds": [42, 1337]
+  },
+  "families": {
+    "source": {"name": "shallow_boolean_composition", "operators": ["and", "or", "xor", "not"], "max_depth": 2},
+    "target_dependent": {"name": "deep_boolean_composition", "operators": ["and", "or", "xor", "not"], "min_depth": 3, "requires_source_skill": true},
+    "target_independent": {"name": "novel_nand_nor_xnor_composition", "operators": ["nand", "nor", "xnor", "not"], "xnor_definition": "1 - (a XOR b)", "requires_source_skill": false}
+  },
+  "splits_per_seed": {
+    "source_train": 32,
+    "source_validation": 16,
+    "target_dependent_train": 64,
+    "target_dependent_validation": 32,
+    "target_dependent_sealed": 64,
+    "target_independent_train": 64,
+    "target_independent_validation": 32,
+    "target_independent_sealed": 64
+  },
+  "exposure_buckets": [8, 16, 32, 64],
+  "conditions": {
+    "C0": "source exposure then reset to theta_0 before target learning",
+    "C1": "ordinary sequential source-skilled continuation without protection",
+    "C2": "source-example memory only; source weight updates discarded",
+    "C3": "source-skilled continuation with output and representation anchoring; no raw source memory"
+  },
+  "source_gate": {"minimum_exact_validation_accuracy": 0.8, "required_seeds": 2},
+  "primary_metrics": ["target_dependent_validation_auc", "target_dependent_sealed_accuracy", "examples_or_updates_to_80_percent"],
+  "success": {
+    "auc_advantage_absolute": 0.1,
+    "bootstrap_confidence": 0.95,
+    "sample_efficiency_reduction": 0.25,
+    "both_seeds_and_target_batches": true,
+    "zero_leakage": true,
+    "post_reset_gate": true
+  },
+  "training": {"source_updates": 1000, "target_updates": 3000, "validation_checkpoints": [250, 500, 1000, 2000, 3000]},
+  "sealed_target_policy": "answers outside Git and unavailable until fixed final checkpoints exist",
+  "scientific_authorization": false
+}

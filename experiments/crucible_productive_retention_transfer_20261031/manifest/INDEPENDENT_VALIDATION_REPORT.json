@@ -1,0 +1,46 @@
+{
+  "checks": {
+    "counts": true,
+    "cross_family_structural_disjoint": true,
+    "episode_shapes": true,
+    "manifest_exists": true,
+    "public_file_hashes": true,
+    "public_rows_have_expected_schema": true,
+    "scientific_authorization_false": true,
+    "sealed_ast_depths": true,
+    "sealed_files_present_and_hashed": true,
+    "sealed_public_answers_hidden": true,
+    "sealed_rows_match_public": true,
+    "sealed_target_functions_do_not_overlap_public_training": true,
+    "source_target_functional_disjoint": true,
+    "source_target_structural_disjoint": true,
+    "task_ids_unique": true
+  },
+  "counts": {
+    "seed_1337/source_train": 32,
+    "seed_1337/source_validation": 16,
+    "seed_1337/target_dependent_sealed": 64,
+    "seed_1337/target_dependent_train": 64,
+    "seed_1337/target_dependent_validation": 32,
+    "seed_1337/target_independent_sealed": 64,
+    "seed_1337/target_independent_train": 64,
+    "seed_1337/target_independent_validation": 32,
+    "seed_42/source_train": 32,
+    "seed_42/source_validation": 16,
+    "seed_42/target_dependent_sealed": 64,
+    "seed_42/target_dependent_train": 64,
+    "seed_42/target_dependent_validation": 32,
+    "seed_42/target_independent_sealed": 64,
+    "seed_42/target_independent_train": 64,
+    "seed_42/target_independent_validation": 32
+  },
+  "failures": [],
+  "limitations": [
+    "This validates task-family separation and sealed-answer handling; it does not establish source competence or productive transfer.",
+    "The Boolean curriculum is a controlled diagnostic and does not establish transfer to natural-language reasoning."
+  ],
+  "manifest_sha256": "d0534a7dcc083bd31b1424d298baacde9f278f4ef00345b3fcf3df5305bc6cd3",
+  "schema_version": "crucible-productive-retention-transfer-independent-validation-v1-20261031",
+  "scientific_authorization": false,
+  "status": "PASS"
+}

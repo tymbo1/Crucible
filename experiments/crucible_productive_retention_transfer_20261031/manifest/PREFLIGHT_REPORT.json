@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "counts": true,
+    "cross_seed_functional_disjoint": true,
+    "sealed_answers_outside_git": true,
+    "sealed_public_rows_have_no_query_output": true,
+    "source_target_functional_disjoint": true,
+    "source_target_structural_disjoint": true,
+    "target_training_answers_unavailable_to_scientific_runner": true
+  },
+  "limitations": [
+    "This is a deterministic manifest/leakage artifact, not evidence of source competence or productive transfer.",
+    "The Boolean curriculum is a new controlled task family; conclusions do not automatically generalize to natural-language reasoning."
+  ],
+  "manifest_sha256": "d0534a7dcc083bd31b1424d298baacde9f278f4ef00345b3fcf3df5305bc6cd3",
+  "schema_version": "crucible-productive-retention-transfer-preflight-v1-20261031",
+  "scientific_authorization": false,
+  "sealed_answer_hashes": {
+    "seed_1337/target_dependent_sealed_answers.jsonl": "9e1d3cd36d883aa14f36873cf03d01a4d098d4ec4fda35465d19417a34f033a9",
+    "seed_1337/target_independent_sealed_answers.jsonl": "2b616c1e196e013bdc7269c7a54a77eedd7101803bed503652a1c7cd61567ec2",
+    "seed_42/target_dependent_sealed_answers.jsonl": "aa57265c3104177c0e650fa0c16615ae3a75299f0d0f19afd79405de19c6825b",
+    "seed_42/target_independent_sealed_answers.jsonl": "294e17db1b32037277206ea0af20a0c993122958ccadeff846bd8a823707870e"
+  },
+  "status": "PASS"
+}
