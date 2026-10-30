@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import os
 import random
 import resource
@@ -67,6 +68,47 @@ def sha256_file(path: Path) -> str:
 def write_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+class NonFiniteTrainingError(RuntimeError):
+    """Raised when a training update cannot be safely committed."""
+
+    def __init__(self, step: int, source: str, reason: str, retries: int = 0):
+        super().__init__(f"non-finite training state at step {step} ({source}): {reason}")
+        self.step = int(step)
+        self.source = str(source)
+        self.reason = str(reason)
+        self.retries = int(retries)
+
+
+def nonfinite_model_parameter(model: torch.nn.Module) -> Optional[str]:
+    for name, parameter in model.named_parameters():
+        if not bool(torch.isfinite(parameter.detach()).all().item()):
+            return name
+    return None
+
+
+def nonfinite_optimizer_state(optimizer: torch.optim.Optimizer) -> Optional[str]:
+    for parameter, state in optimizer.state.items():
+        parameter_name = f"parameter:{id(parameter)}"
+        for name, value in state.items():
+            if not torch.is_tensor(value):
+                continue
+            if not (torch.is_floating_point(value) or torch.is_complex(value)):
+                continue
+            if not bool(torch.isfinite(value).all().item()):
+                return f"{parameter_name}/{name}"
+    return None
+
+
+def finite_state_issue(model: torch.nn.Module, optimizer: torch.optim.Optimizer) -> Optional[str]:
+    parameter = nonfinite_model_parameter(model)
+    if parameter is not None:
+        return f"model:{parameter}"
+    optimizer_state = nonfinite_optimizer_state(optimizer)
+    if optimizer_state is not None:
+        return f"optimizer:{optimizer_state}"
+    return None
 
 
 def load_jsonl(path: Path) -> List[Dict[str, Any]]:
@@ -191,39 +233,120 @@ def evaluate_loss(model: torch.nn.Module, rows: torch.Tensor, samples: Sequence[
     }
 
 
-def train_update(model: torch.nn.Module, optimizer: torch.optim.Optimizer, batches: Sequence[Tuple[torch.Tensor, torch.Tensor]], device: torch.device) -> Dict[str, Any]:
-    optimizer.zero_grad(set_to_none=True)
-    total_loss = 0.0
-    total_valid = 0
+def train_update(
+    model: torch.nn.Module,
+    optimizer: torch.optim.Optimizer,
+    batches: Sequence[Tuple[torch.Tensor, torch.Tensor]],
+    device: torch.device,
+    step: int,
+    source: str,
+    loss_scale: float,
+    max_nonfinite_retries: int,
+    precision: str,
+) -> Dict[str, Any]:
+    """Run one update and never commit a non-finite optimizer step."""
     scale = float(max(1, len(batches)))
-    for x_cpu, y_cpu in batches:
-        x = x_cpu.to(device, non_blocking=True)
-        y = y_cpu.to(device, non_blocking=True)
-        with torch.autocast("cuda", dtype=torch.float16, enabled=device.type == "cuda"):
-            logits = model(x)
-            ce_sum, valid = loss_sum(logits, y)
-            loss = ce_sum / float(max(1, valid))
-        (loss * LOSS_SCALE / scale).backward()
-        total_loss += float(loss.detach().cpu().item()) * valid
-        total_valid += int(valid)
-    finite = unscale_grads(model, LOSS_SCALE)
-    torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-    optimizer.step()
-    return {"loss": total_loss / max(1, total_valid), "valid_tokens": total_valid, "finite_gradients": bool(finite)}
+    current_loss_scale = float(max(1.0, loss_scale))
+    for attempt in range(max(0, int(max_nonfinite_retries)) + 1):
+        optimizer.zero_grad(set_to_none=True)
+        total_loss = 0.0
+        total_valid = 0
+        forward_failure: Optional[str] = None
+        for x_cpu, y_cpu in batches:
+            x = x_cpu.to(device, non_blocking=True)
+            y = y_cpu.to(device, non_blocking=True)
+            autocast_dtype = {"fp16": torch.float16, "bf16": torch.bfloat16, "fp32": torch.float32}[precision]
+            with torch.autocast(
+                "cuda",
+                dtype=autocast_dtype,
+                enabled=device.type == "cuda" and precision != "fp32",
+            ):
+                logits = model(x)
+                if not bool(torch.isfinite(logits).all().item()):
+                    forward_failure = "nonfinite_logits"
+                    break
+                ce_sum, valid = loss_sum(logits, y)
+                loss = ce_sum / float(max(1, valid))
+            if not bool(torch.isfinite(loss).all().item()):
+                forward_failure = "nonfinite_loss"
+                break
+            (loss * current_loss_scale / scale).backward()
+            total_loss += float(loss.detach().cpu().item()) * valid
+            total_valid += int(valid)
+        if forward_failure is not None:
+            raise NonFiniteTrainingError(step, source, forward_failure, attempt)
+
+        finite = unscale_grads(model, current_loss_scale)
+        if not finite:
+            if attempt < max_nonfinite_retries and current_loss_scale > 1.0:
+                current_loss_scale = max(1.0, current_loss_scale / 2.0)
+                continue
+            raise NonFiniteTrainingError(step, source, "nonfinite_gradients", attempt)
+
+        try:
+            gradient_norm = torch.nn.utils.clip_grad_norm_(
+                model.parameters(), 1.0, error_if_nonfinite=True
+            )
+        except RuntimeError as exc:
+            if attempt < max_nonfinite_retries and current_loss_scale > 1.0:
+                current_loss_scale = max(1.0, current_loss_scale / 2.0)
+                continue
+            raise NonFiniteTrainingError(step, source, f"gradient_clip:{exc}", attempt) from exc
+        if not bool(torch.isfinite(gradient_norm).all().item()):
+            if attempt < max_nonfinite_retries and current_loss_scale > 1.0:
+                current_loss_scale = max(1.0, current_loss_scale / 2.0)
+                continue
+            raise NonFiniteTrainingError(step, source, "nonfinite_gradient_norm", attempt)
+
+        optimizer.step()
+        bad_parameter = nonfinite_model_parameter(model)
+        if bad_parameter is not None:
+            raise NonFiniteTrainingError(step, source, f"optimizer_step:model:{bad_parameter}", attempt)
+        final_loss = total_loss / max(1, total_valid)
+        if not math.isfinite(final_loss):
+            raise NonFiniteTrainingError(step, source, "nonfinite_reduced_loss", attempt)
+        return {
+            "loss": final_loss,
+            "valid_tokens": total_valid,
+            "finite_gradients": True,
+            "gradient_norm": float(gradient_norm.detach().cpu().item()),
+            "loss_scale": current_loss_scale,
+            "loss_scale_retries": attempt,
+        }
+    raise NonFiniteTrainingError(step, source, "retry_exhausted", max_nonfinite_retries)
 
 
-def save_checkpoint(path: Path, model: torch.nn.Module, optimizer: torch.optim.Optimizer, step: int, seed: int, training_tokens: int) -> None:
+def save_checkpoint(
+    path: Path,
+    model: torch.nn.Module,
+    optimizer: torch.optim.Optimizer,
+    step: int,
+    seed: int,
+    training_tokens: int,
+    loss_scale: float,
+) -> None:
+    issue = finite_state_issue(model, optimizer)
+    if issue is not None:
+        raise RuntimeError(f"refusing to save non-finite checkpoint at step {step}: {issue}")
     path.parent.mkdir(parents=True, exist_ok=True)
-    torch.save({
+    payload = {
         "schema_version": SCHEMA,
         "step": step,
         "seed": seed,
         "training_tokens": training_tokens,
+        "loss_scale": float(loss_scale),
         "model": model.state_dict(),
         "optimizer": optimizer.state_dict(),
         "torch_rng_state": torch.get_rng_state(),
         "cuda_rng_state_all": torch.cuda.get_rng_state_all() if torch.cuda.is_available() else None,
-    }, path)
+    }
+    temporary = path.with_name(path.name + f".tmp-{os.getpid()}")
+    try:
+        torch.save(payload, temporary)
+        os.replace(temporary, path)
+    finally:
+        if temporary.exists():
+            temporary.unlink()
 
 
 def main() -> int:
@@ -243,6 +366,10 @@ def main() -> int:
     parser.add_argument("--eval-rows", type=int, default=256)
     parser.add_argument("--checkpoint-every", type=int, default=500)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--learning-rate", type=float, default=3e-4)
+    parser.add_argument("--initial-loss-scale", type=float, default=LOSS_SCALE)
+    parser.add_argument("--max-nonfinite-retries", type=int, default=4)
+    parser.add_argument("--precision", choices=("fp16", "bf16", "fp32"), default="fp16")
     parser.add_argument("--device", choices=("cuda", "cpu"), default="cuda")
     parser.add_argument("--resume", type=Path)
     args = parser.parse_args()
@@ -250,6 +377,8 @@ def main() -> int:
     if args.device == "cuda" and not torch.cuda.is_available():
         raise RuntimeError("CUDA unavailable; run with host access or --device cpu")
     device = torch.device(args.device)
+    if args.precision == "bf16" and device.type == "cuda" and not torch.cuda.is_bf16_supported():
+        raise RuntimeError("BF16 is not supported by the active CUDA device")
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
@@ -276,20 +405,26 @@ def main() -> int:
 
     cfg = foundation_model_config(args.model_size, args.activation_checkpointing)
     model = make_model(cfg, device, args.seed)
-    optimizer = torch.optim.AdamW(parameter_groups(model, 0.01), lr=3e-4, betas=(0.9, 0.95), eps=1e-8)
+    optimizer = torch.optim.AdamW(parameter_groups(model, 0.01), lr=args.learning_rate, betas=(0.9, 0.95), eps=1e-8)
     start_step = 0
     resumed_training_tokens = 0
+    resumed_loss_scale: Optional[float] = None
     if args.resume:
         checkpoint = torch.load(args.resume, map_location=device, weights_only=False)
         model.load_state_dict(checkpoint["model"])
         optimizer.load_state_dict(checkpoint["optimizer"])
         start_step = int(checkpoint["step"])
         resumed_training_tokens = int(checkpoint.get("training_tokens", 0))
+        if checkpoint.get("loss_scale") is not None:
+            resumed_loss_scale = float(checkpoint["loss_scale"])
         if checkpoint.get("torch_rng_state") is not None:
             torch.set_rng_state(checkpoint["torch_rng_state"].cpu())
         if device.type == "cuda" and checkpoint.get("cuda_rng_state_all") is not None:
             cuda_states = [state.detach().cpu().to(dtype=torch.uint8) for state in checkpoint["cuda_rng_state_all"]]
             torch.cuda.set_rng_state_all(cuda_states)
+    checkpoint_issue = finite_state_issue(model, optimizer)
+    if checkpoint_issue is not None:
+        raise RuntimeError(f"resume checkpoint is non-finite: {checkpoint_issue}")
 
     output = args.output_dir.resolve()
     output.mkdir(parents=True, exist_ok=True)
@@ -298,11 +433,15 @@ def main() -> int:
     mode = "a" if start_step else "w"
     started = time.perf_counter()
     training_tokens = resumed_training_tokens
+    loss_scale = float(max(1.0, resumed_loss_scale if resumed_loss_scale is not None else args.initial_loss_scale))
+    recovery_events: List[Dict[str, Any]] = []
+    safety_log_path = output / "SAFETY_EVENTS.jsonl"
     if start_step and training_tokens == 0 and curve_path.exists():
         prior_records = [line for line in curve_path.read_text(encoding="utf-8").splitlines() if line.strip()]
         if prior_records:
             training_tokens = int(json.loads(prior_records[-1])["training_tokens"])
     updates = []
+    run_start_training_tokens = training_tokens
     with curve_path.open(mode, encoding="utf-8") as curve:
         for step in range(start_step, args.steps):
             is_reasoning = (step + 1) % max(1, args.reasoning_every) == 0
@@ -316,7 +455,52 @@ def main() -> int:
                     indices = [(step * args.batch_size * max(1, args.grad_accumulation) + micro * args.batch_size + i) % language_train.size(0) for i in range(args.batch_size)]
                     batches.append(batch_from_rows(language_train, indices, context))
                     source = "fineweb_edu"
-            result = train_update(model, optimizer, batches, device)
+            try:
+                result = train_update(
+                    model,
+                    optimizer,
+                    batches,
+                    device,
+                    step + 1,
+                    source,
+                    loss_scale,
+                    args.max_nonfinite_retries,
+                    args.precision,
+                )
+            except NonFiniteTrainingError as exc:
+                write_json(output / "NONFINITE_ABORT.json", {
+                    "schema_version": SCHEMA,
+                    "step": exc.step,
+                    "source": exc.source,
+                    "reason": exc.reason,
+                    "retries": exc.retries,
+                    "last_known_good_checkpoint": f"step_{max(start_step, exc.step - 1):06d}",
+                })
+                raise
+            except torch.cuda.OutOfMemoryError as exc:
+                write_json(output / "RESOURCE_ABORT.json", {
+                    "schema_version": SCHEMA,
+                    "step": step + 1,
+                    "source": source,
+                    "resource": "cuda_oom",
+                    "message": str(exc),
+                    "last_known_good_checkpoint": f"step_{max(start_step, step):06d}",
+                    "micro_batch_size": args.batch_size,
+                    "grad_accumulation": args.grad_accumulation,
+                    "precision": args.precision,
+                })
+                raise
+            loss_scale = float(result["loss_scale"])
+            if int(result["loss_scale_retries"]) > 0:
+                event = {
+                    "step": step + 1,
+                    "source": source,
+                    "retries": int(result["loss_scale_retries"]),
+                    "loss_scale": loss_scale,
+                }
+                recovery_events.append(event)
+                with safety_log_path.open("a", encoding="utf-8") as safety_log:
+                    safety_log.write(json.dumps(event, sort_keys=True) + "\n")
             training_tokens += int(result["valid_tokens"])
             record: Dict[str, Any] = {"step": step + 1, "source": source, **result, "training_tokens": training_tokens}
             if (step + 1) % max(1, args.eval_every) == 0 or step == start_step:
@@ -327,10 +511,12 @@ def main() -> int:
                 curve.flush()
             if (step + 1) % max(1, args.checkpoint_every) == 0 or step + 1 == args.steps:
                 checkpoint_path = checkpoint_root / f"crucible_{args.model_size}_foundation_step_{step + 1:06d}.pt"
-                save_checkpoint(checkpoint_path, model, optimizer, step + 1, args.seed, training_tokens)
+                save_checkpoint(checkpoint_path, model, optimizer, step + 1, args.seed, training_tokens, loss_scale)
     if device.type == "cuda":
         torch.cuda.synchronize(device)
     elapsed = time.perf_counter() - started
+    run_training_tokens = training_tokens - run_start_training_tokens
+    run_steps = args.steps - start_step
 
     prompts = [
         "The goal of science is",
@@ -344,7 +530,7 @@ def main() -> int:
         "classification": "substantive_local_crucible_foundation_baseline",
         "scientific_status": "exploratory_not_500m_not_track_b",
         "model": {"family": "Crucible latent-attention + SwiGLU dense", "size": args.model_size, "config": cfg, "parameter_count": sum(parameter.numel() for parameter in model.parameters()), "final_state_sha256": state_digest(model)},
-        "training": {"steps_completed": args.steps, "resumed_from_step": start_step, "micro_batch_size": args.batch_size, "grad_accumulation": args.grad_accumulation, "effective_batch_size": args.batch_size * args.grad_accumulation, "context": context, "reasoning_every": args.reasoning_every, "seed": args.seed, "training_tokens_recorded": training_tokens, "elapsed_seconds": elapsed, "tokens_per_second": training_tokens / max(elapsed, 1e-9), "peak_rss_bytes": int(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss) * 1024, "peak_vram_allocated": int(torch.cuda.max_memory_allocated(device)) if device.type == "cuda" else None, "peak_vram_reserved": int(torch.cuda.max_memory_reserved(device)) if device.type == "cuda" else None},
+        "training": {"steps_completed": args.steps, "steps_this_run": run_steps, "resumed_from_step": start_step, "micro_batch_size": args.batch_size, "grad_accumulation": args.grad_accumulation, "effective_batch_size": args.batch_size * args.grad_accumulation, "context": context, "reasoning_every": args.reasoning_every, "seed": args.seed, "learning_rate": args.learning_rate, "precision": args.precision, "initial_loss_scale": args.initial_loss_scale, "starting_loss_scale": loss_scale if start_step else args.initial_loss_scale, "final_loss_scale": loss_scale, "loss_scale_recovery_events": len(recovery_events), "max_nonfinite_retries": args.max_nonfinite_retries, "checkpoint_validation": "model_and_optimizer_state_finite_before_atomic_commit", "nonfinite_policy": "abort_before_optimizer_step_after_retry_budget", "training_tokens_start": run_start_training_tokens, "training_tokens_this_run": run_training_tokens, "training_tokens_recorded": training_tokens, "elapsed_seconds": elapsed, "tokens_per_second": run_training_tokens / max(elapsed, 1e-9), "peak_rss_bytes": int(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss) * 1024, "peak_vram_allocated": int(torch.cuda.max_memory_allocated(device)) if device.type == "cuda" else None, "peak_vram_reserved": int(torch.cuda.max_memory_reserved(device)) if device.type == "cuda" else None},
         "data": {"fineweb_manifest_sha256": sha256_file(fineweb_root / "MANIFEST.json"), "fineweb_train_sha256": sha256_file(fineweb_root / fineweb_manifest["packed_files"]["train"]["path"]), "fineweb_validation_sha256": sha256_file(fineweb_root / fineweb_manifest["packed_files"]["validation"]["path"]), "reasoning_train_sha256": sha256_file(reasoning_root / "train.jsonl"), "reasoning_validation_sha256": sha256_file(reasoning_root / "validation.jsonl"), "raw_fineweb_committed_to_git": False, "test_partition_used_for_training": False},
         "validation": {"checkpoints": updates, "final": updates[-1] if updates else None},
         "generation_samples": generations,
@@ -363,7 +549,7 @@ def main() -> int:
         "# Crucible substantive local foundation baseline\n\n"
         "Classification: `substantive_local_crucible_foundation_baseline`\n\n"
         f"Model: `{args.model_size}`, `{report['model']['parameter_count']:,}` parameters; steps: `{args.steps}`; context: `{context}`.\n\n"
-        f"Training tokens recorded: `{training_tokens:,}`; elapsed: `{elapsed:.2f}` s; throughput: `{report['training']['tokens_per_second']:.1f}` tokens/s.\n\n"
+        f"Training tokens this run: `{run_training_tokens:,}`; cumulative recorded: `{training_tokens:,}`; elapsed: `{elapsed:.2f}` s; throughput: `{report['training']['tokens_per_second']:.1f}` tokens/s.\n\n"
         f"Final validation record: `{json.dumps(report['validation']['final'], sort_keys=True)}`\n\n"
         "OP was not scored in this run because the foundation baseline must first demonstrate competence.\n",
         encoding="utf-8",
