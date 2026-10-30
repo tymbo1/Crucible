@@ -165,6 +165,18 @@ Secondary:
 - exact target-retrieval/hash hits;
 - training tokens, wall time, verifier calls and GPU/RAM/VRAM cost.
 
+### Interpretation limitation of T-ind
+
+The independent arm is a primitive-vocabulary negative control, not an
+algebraically independent Boolean world. `nand`, `nor` and `xnor` can be
+constructed from familiar Boolean operations when negation and composition
+are available. Therefore a T-ind gain could reflect legitimate transfer of a
+generic Boolean-composition skill, not only a nonspecific training benefit.
+The registered claim is consequently limited: T-ind must not show a
+comparable unexplained gain if C3 is to support source-specific productive
+transfer. The arm does not prove that transfer between the two Boolean bases
+is impossible.
+
 The primary pooled unit is a target-procedure-by-seed pair. A paired bootstrap stratified by family and seed reports the confidence interval. The four exposure curves are not treated as independent samples.
 
 ## Success and failure criteria

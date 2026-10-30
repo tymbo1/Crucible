@@ -40,6 +40,7 @@
   },
   "source_gate": {"minimum_exact_validation_accuracy": 0.8, "required_seeds": 2},
   "primary_metrics": ["target_dependent_validation_auc", "target_dependent_sealed_accuracy", "examples_or_updates_to_80_percent"],
+  "target_independent_interpretation": "Vocabulary-shift negative control only; nand/nor/xnor/not remain functionally related to the source Boolean basis through composition and negation.",
   "success": {
     "auc_advantage_absolute": 0.1,
     "bootstrap_confidence": 0.95,
