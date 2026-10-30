@@ -1,0 +1,29 @@
+{
+  "schema_version": "crucible-productive-retention-source-gate-integrity-v1-20261031",
+  "classification": "invalid_inconclusive_prerequisite_failure",
+  "scientific_authorization": false,
+  "source_gate_authorized": true,
+  "source_gate_pass_both_seeds": false,
+  "threshold": "13/16 in each seed",
+  "results": {
+    "42": {"update_250": 10, "update_500": 7, "update_750": 8, "update_1000": 6, "trials": 16},
+    "1337": {"update_250": 9, "update_500": 8, "update_750": 11, "update_1000": 11, "trials": 16}
+  },
+  "checkpoint_integrity": {
+    "seed_42_update_1000": {
+      "sha256": "7591947e5b316e46fed45f2a9f806370750c0a0d051245ad62dd89a4dbdb3612",
+      "model_floating_tensors": 185,
+      "optimizer_floating_tensors": 555,
+      "finite": true
+    },
+    "seed_1337_update_1000": {
+      "sha256": "261265938b6b356cabf4382ce862382c3a5e2aaf94593f3e6ce9a32d8771724d",
+      "model_floating_tensors": 185,
+      "optimizer_floating_tensors": 555,
+      "finite": true
+    }
+  },
+  "target_training_started": false,
+  "sealed_target_evaluation_started": false,
+  "interpretation": "Source competence was not established; productive retention remains untested and is not falsified."
+}
