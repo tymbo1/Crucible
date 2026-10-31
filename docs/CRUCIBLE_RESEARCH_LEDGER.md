@@ -52,8 +52,9 @@ reports that still need ledger entries.
 | `track-a-cnss-d-skill-corrective-controls-v1` | INCONCLUSIVE | Rank 32 reached perfect training fit but only 85.94% mean held-out accuracy; no condition reached the 95% D gate, and condition-specific seed offsets limit strict paired capacity/horizon causality. |
 | `track-a-cnss-d-generalization-forensics-v1` | INCONCLUSIVE | Rank-32 errors concentrate in higher output bits and local transition dimensions consistent with carry/high-bit difficulty, but uneven strata prevent a unique mechanistic conclusion. |
 | `track-a-cnss-d-fault-isolation-v1` | INCONCLUSIVE | Canonical reconstruction is exact; high-bit failures have larger adapter displacement and cross decoder boundaries, but mixed local projections do not assign sole responsibility to the adapter or decoder. |
+| `track-a-cnss-d-lambda-acquisition-analysis-v1` | INCONCLUSIVE | Existing rank-32 lambda arms show reduced displacement but non-monotonic held-out D accuracy; alignment geometry alone does not solve acquisition. |
 
-The ledger now contains 67 records and indexes 47 canonical experiment report
+The ledger now contains 68 records and indexes 47 canonical experiment report
 files (`REPORT_FINAL.md` and `REPORT.md`). The 23 older reports were extracted
 from their accepted final reports and linked artifacts on 2026-10-26; no
 outcomes were inferred from filenames or
@@ -119,3 +120,4 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `track-a-cnss-d-skill-corrective-controls-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/D_SKILL_CORRECTIVE_CONTROLS_RESULT.md` |
 | `track-a-cnss-d-generalization-forensics-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_generalization_forensics_v1_20261101/D_GENERALIZATION_FORENSICS_RESULT.md` |
 | `track-a-cnss-d-fault-isolation-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_fault_isolation_v1_corrected_20261101/D_FAULT_ISOLATION_RESULT.md` |
+| `track-a-cnss-d-lambda-acquisition-analysis-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_lambda_acquisition_analysis_v1_20261101/D_LAMBDA_ACQUISITION_ANALYSIS_RESULT.md` |

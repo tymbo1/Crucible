@@ -1607,6 +1607,25 @@
         "experiments/crucible_track_a_cnss_d_fault_isolation_v1_corrected_20261101/D_FAULT_ISOLATION_SUPPLEMENT.md"
       ],
       "novelty_terms": ["canonical-state fault isolation", "decoder-boundary crossing", "matched high-bit error controls", "actual-error interpolation", "adapter displacement versus margin"]
+    },
+    {
+      "id": "track-a-cnss-d-lambda-acquisition-analysis-v1",
+      "status": "INCONCLUSIVE",
+      "title": "CNSS Skill D alignment-strength acquisition analysis",
+      "hypothesis": "Stronger canonical-state alignment will improve D arithmetic acquisition as well as reduce adapter-to-canonical displacement.",
+      "mechanisms": ["alignment-strength", "arithmetic-acquisition", "latent-displacement", "decoder-margin", "lambda-sensitivity"],
+      "interventions": ["read-only comparison of lambda 0.1, 0.4, 0.9 and 1.0", "rank-32 rows", "2,000 and 8,000 update horizons", "three seeds"],
+      "controls": ["existing authorized corrective-control rows", "same rank and parameter count", "training accuracy", "held-out accuracy", "fault-isolation geometry", "no duplicate training", "partner gate remains locked"],
+      "result": "The existing rank-32 arms already provide the proposed lambda comparison. All arms reach 100% training accuracy. Increasing lambda generally reduces displacement and raises decoder margin, but held-out D accuracy is non-monotonic: lambda 0.9 is best at 2,000 updates (86.46%), while lambda 0.1 is best at 8,000 updates (86.46%). No arm reaches the 95% gate. Alignment improves interface geometry without reliably improving arithmetic acquisition under these conditions.",
+      "limits": ["This is a reanalysis rather than a new intervention", "Condition-specific seed offsets limit strict paired causal claims", "The held-out partition contains 64 states", "Reduced displacement does not prove correct arithmetic transformation learning", "No partner composition or cumulative-learning claim is established"],
+      "unresolved": ["Whether a new seed-matched lambda experiment changes the non-monotonic pattern", "Whether a carry-preserving objective improves acquisition rather than only geometry", "Whether decoder robustness and canonical alignment have complementary effects"],
+      "artifacts": [
+        "docs/CRUCIBLE_TRACK_A_CNSS_D_LAMBDA_ACQUISITION_ANALYSIS_V1_20261101.json",
+        "docs/CRUCIBLE_TRACK_A_CNSS_D_LAMBDA_ACQUISITION_ANALYSIS_V1_20261101.md",
+        "experiments/crucible_track_a_cnss_d_lambda_acquisition_analysis_v1_20261101/D_LAMBDA_ACQUISITION_ANALYSIS_RESULT.json",
+        "experiments/crucible_track_a_cnss_d_lambda_acquisition_analysis_v1_20261101/D_LAMBDA_ACQUISITION_ANALYSIS_RESULT.md"
+      ],
+      "novelty_terms": ["lambda acquisition comparison", "alignment versus arithmetic learning", "non-monotonic held-out acquisition", "geometry-acquisition dissociation"]
     }
   ]
 }

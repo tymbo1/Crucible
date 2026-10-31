@@ -1,0 +1,24 @@
+{
+  "schema_version": "crucible-cnss-d-lambda-acquisition-analysis-result-v1-20261101",
+  "classification": "COMPLETED_READ_ONLY_REANALYSIS",
+  "new_training": false,
+  "parameter_count": 16672,
+  "rows": [
+    {"updates": 2000, "lambda": 0.1, "train_accuracy_mean": 1.0, "validation_accuracy_mean": 0.8697916666666666, "test_accuracy_mean": 0.859375, "test_accuracy_min": 0.859375, "displacement_mean": 3.2844742933909097, "canonical_cosine_mean": 0.9784891208012899, "decoder_margin_mean": 5.697474002838135},
+    {"updates": 2000, "lambda": 0.4, "train_accuracy_mean": 1.0, "validation_accuracy_mean": 0.8854166666666666, "test_accuracy_mean": 0.859375, "test_accuracy_min": 0.84375, "displacement_mean": 2.3593258062998452, "canonical_cosine_mean": 0.986924409866333, "decoder_margin_mean": 6.874538580576579},
+    {"updates": 2000, "lambda": 0.9, "train_accuracy_mean": 1.0, "validation_accuracy_mean": 0.8697916666666666, "test_accuracy_mean": 0.8645833333333334, "test_accuracy_min": 0.859375, "displacement_mean": 2.1732583045959473, "canonical_cosine_mean": 0.9881609280904134, "decoder_margin_mean": 7.041918913523356},
+    {"updates": 2000, "lambda": 1.0, "train_accuracy_mean": 1.0, "validation_accuracy_mean": 0.8802083333333334, "test_accuracy_mean": 0.8541666666666666, "test_accuracy_min": 0.84375, "displacement_mean": 2.0173970063527427, "canonical_cosine_mean": 0.9893897573153178, "decoder_margin_mean": 7.545874913523528},
+    {"updates": 8000, "lambda": 0.1, "train_accuracy_mean": 1.0, "validation_accuracy_mean": 0.8697916666666666, "test_accuracy_mean": 0.8645833333333334, "test_accuracy_min": 0.84375, "displacement_mean": 1.670927365620931, "canonical_cosine_mean": 0.9902812441190084, "decoder_margin_mean": 8.47986634572347},
+    {"updates": 8000, "lambda": 0.4, "train_accuracy_mean": 1.0, "validation_accuracy_mean": 0.8489583333333334, "test_accuracy_mean": 0.8489583333333334, "test_accuracy_min": 0.84375, "displacement_mean": 1.5185277462005615, "canonical_cosine_mean": 0.990890363852183, "decoder_margin_mean": 8.75258731842041},
+    {"updates": 8000, "lambda": 0.9, "train_accuracy_mean": 1.0, "validation_accuracy_mean": 0.8697916666666666, "test_accuracy_mean": 0.84375, "test_accuracy_min": 0.8125, "displacement_mean": 1.5102784633636475, "canonical_cosine_mean": 0.9897421995798746, "decoder_margin_mean": 8.760307312011719},
+    {"updates": 8000, "lambda": 1.0, "train_accuracy_mean": 1.0, "validation_accuracy_mean": 0.8854166666666666, "test_accuracy_mean": 0.8541666666666666, "test_accuracy_min": 0.84375, "displacement_mean": 1.4609330495198567, "canonical_cosine_mean": 0.9898325006167094, "decoder_margin_mean": 8.857072194417318}
+  ],
+  "conclusion": "Increasing lambda consistently reduces adapter-to-canonical displacement and generally increases decoder margin, but held-out arithmetic accuracy is non-monotonic. At 2,000 updates lambda 0.9 is best at 86.46%; at 8,000 updates lambda 0.1 is best at 86.46%. Every arm reaches 100% training accuracy, and no arm reaches the 95% individual gate.",
+  "partner_rerun_unlocked": false,
+  "limitations": [
+    "This is a reanalysis of existing rows, not a new intervention.",
+    "Condition-specific seed offsets limit strict paired causal claims.",
+    "The 64-state held-out partition limits precision.",
+    "Reduced displacement alone does not establish better arithmetic acquisition."
+  ]
+}
