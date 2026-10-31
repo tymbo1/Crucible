@@ -1,0 +1,127 @@
+{
+  "ambiguous_fixture": {
+    "compatible_function_count": 20,
+    "compatible_query_outputs": [
+      0,
+      1
+    ],
+    "demonstration_indices": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      11,
+      12
+    ],
+    "expected_ambiguous": true,
+    "query_index": 0,
+    "target_function_index": 0
+  },
+  "classification": "cpu_curriculum_and_evaluator_repair_only",
+  "grammar_truth_tables": 429,
+  "locations": {
+    "oracle_root": "/home/timbushnell/crucible_source_curriculum_repair_oracles_20261031",
+    "output": "/home/timbushnell/Crucible/experiments/crucible_source_curriculum_repair_20261031"
+  },
+  "manifest": {
+    "classification": "cpu_curriculum_and_evaluator_repair_only",
+    "counts": {
+      "seed_1337/execution_test": 16,
+      "seed_1337/execution_train": 16,
+      "seed_1337/execution_validation": 16,
+      "seed_1337/source_function_validation": 16,
+      "seed_1337/source_test": 32,
+      "seed_1337/source_train": 32,
+      "seed_1337/source_validation": 32,
+      "seed_42/execution_test": 16,
+      "seed_42/execution_train": 16,
+      "seed_42/execution_validation": 16,
+      "seed_42/source_function_validation": 16,
+      "seed_42/source_test": 32,
+      "seed_42/source_train": 32,
+      "seed_42/source_validation": 32
+    },
+    "decoder": {
+      "allowed_tokens": [
+        51,
+        52
+      ],
+      "free_running_generation_not_used_for_gate": true,
+      "mode": "one_step_constrained",
+      "non_answer_behavior": "abstain"
+    },
+    "global_function_hash_separation": true,
+    "global_structure_hash_separation": true,
+    "grammar": {
+      "distinct_truth_tables": 429,
+      "max_depth": 2,
+      "operators": [
+        "and",
+        "or",
+        "xor",
+        "not"
+      ]
+    },
+    "identifiability_counts": {
+      "function": 32,
+      "query": 192
+    },
+    "oracle_root": "<private-source-oracle-root>",
+    "public_files": {
+      "seed_1337/execution_test.jsonl": "319800ac8f6e094c38ecaca6359b20dec5cbcb59fd13f13f8781950e7f72fd5a",
+      "seed_1337/execution_train.jsonl": "8d24a0b05727b7415107e3e9bce5605c67f6a11641336b8bed5cf94365e4476e",
+      "seed_1337/execution_validation.jsonl": "e3cace1d9df6361ded5787d0dfd3a004bfe7ac45b5218555c6a41f9164d5e924",
+      "seed_1337/source_function_validation.jsonl": "71fbaa0d38dee790583c5562c1024429edb427fa1572f5c05db3c3a86a4be9ac",
+      "seed_1337/source_test.jsonl": "8af17ebf35f9c8664ce7c0188afcae7df4a422f6f664a3b269fe1107acd69beb",
+      "seed_1337/source_train.jsonl": "1e0401b93dc7eec7dfa81aef6f04f67360315c96fe8ba75b7aba2e3212a5c564",
+      "seed_1337/source_validation.jsonl": "b01dcf7966a3511a85f889b7a391880c8e3a95f276f7c66059392b09983fb097",
+      "seed_42/execution_test.jsonl": "5d016f4e887376fb67ed9917a61b9b702f8914fcd3e0570d12ca273ae48d40b6",
+      "seed_42/execution_train.jsonl": "529a60dea759a6221daa32ab2f8ee1f52b0194cd6f1246949e934653d4e56311",
+      "seed_42/execution_validation.jsonl": "6d02fa32695a86b81e54b324c1ad8c77cc97dbb0cde4583939af94ab5b4b9727",
+      "seed_42/source_function_validation.jsonl": "f7a68c9f72acefdce2555464667b84b15a31e078f424166b28608135f21339ee",
+      "seed_42/source_test.jsonl": "b8ec08dfe0a195cb5d0c5f27b104773a57a68d16d7b2f49329bd8b499b59ba0c",
+      "seed_42/source_train.jsonl": "727f5a875da9ad40576a3c669f984e570b50cd126b76b5da720e5458b815b61f",
+      "seed_42/source_validation.jsonl": "1bb945812d5e30df4bc5f35b45c7fc7e109462560686f3821b3d24870644af90"
+    },
+    "schema_version": "crucible-source-curriculum-repair-v1-20261031",
+    "scientific_authorization": false,
+    "sealed_target_answers_loaded": false,
+    "seeds": [
+      42,
+      1337
+    ],
+    "source_oracle_files_outside_git": {
+      "seed_1337/execution_test.jsonl": "2a7dbf3eadbef4abe2da96db23faaf7a8d8417a7aab53142d5ae2764b2f7a1cd",
+      "seed_1337/execution_train.jsonl": "f493f37616cb2716cc00fd4592ff1d4386ab4a49b5d8912dea76c9e74f96973b",
+      "seed_1337/execution_validation.jsonl": "8fea9c3df227ec3b3171ff0a6302c5f6a145ce6bce7485a06826cbbb43051303",
+      "seed_1337/source_function_validation.jsonl": "88c0fc9b530d1c536b8949d55e6c4c490c25ee3a53cd014fa3f0c32c904a41e5",
+      "seed_1337/source_test.jsonl": "844b581e4708df34388a7a25dbed0e1e48fcb71375e835ba11b5bf9c940b4f26",
+      "seed_1337/source_train.jsonl": "96d20c6fa53446586b05f02f8d8954702eb6b109705cc7621838b5a45ad1f822",
+      "seed_1337/source_validation.jsonl": "0317ba676e0451eacbc3fa915fe1586b1e0523d54c2544f911b1a9bb2ee64a32",
+      "seed_42/execution_test.jsonl": "b09f19a06624364110a84799538903eacc715af450ccc5a2f683c00f3f8b145d",
+      "seed_42/execution_train.jsonl": "72cd8abacfb47211ed4f2a64f0e45bc33b09726c83279202e19b7df034f64d8c",
+      "seed_42/execution_validation.jsonl": "3f8a08ac106e9aadb458df49890da890b5f8c3b17b7019f695d8a82461964623",
+      "seed_42/source_function_validation.jsonl": "5a68f52688677a05707eda668ee1b97fa06bf25a8bdb499b89ce4b8f7b89f024",
+      "seed_42/source_test.jsonl": "e00af0eab2a77b8e486033800155c04a4530830d52cb9baa1f90469f743627a8",
+      "seed_42/source_train.jsonl": "71bfc3d8e08ba5aacb5d427b66a36a162c70020d125600b84c68fb7219754dca",
+      "seed_42/source_validation.jsonl": "c88fdf54b8918ffc0debc5a38412ef54a656083b4749a477a92bde2840545d01"
+    },
+    "split_rules": {
+      "explicit_execution": "canonical AST supplied; validation/test answer labels private",
+      "source_function_validation": "function-identifiable, 15 demonstrations, answer labels private",
+      "source_test": "query-identifiable, 8 demonstrations, answer labels private",
+      "source_train": "query-identifiable, 8 demonstrations, answer labels public for future training",
+      "source_validation": "query-identifiable, 8 demonstrations, answer labels private"
+    },
+    "target_data_loaded": false,
+    "training_started": false
+  },
+  "schema_version": "crucible-source-curriculum-repair-v1-20261031",
+  "scientific_authorization": false,
+  "sealed_target_answers_loaded": false,
+  "status": "PASS",
+  "target_data_loaded": false,
+  "training_started": false
+}

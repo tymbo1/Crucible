@@ -1,0 +1,44 @@
+{
+  "ambiguity_fixture": {
+    "compatible_function_count": 20,
+    "compatible_query_outputs": [
+      0,
+      1
+    ],
+    "demonstration_indices": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      11,
+      12
+    ],
+    "expected_ambiguous": true,
+    "query_index": 0,
+    "target_function_index": 0
+  },
+  "classification": "cpu_curriculum_and_evaluator_repair_validation",
+  "decoder_tests": {
+    "checks": {
+      "fixed_answer_position": true,
+      "non_answer_abstains": true,
+      "nonfinite_rejected": true,
+      "one": true,
+      "ties_abstain": true,
+      "zero": true
+    },
+    "passed": true
+  },
+  "distinct_structures_checked": 320,
+  "distinct_truth_tables_checked": 320,
+  "errors": [],
+  "rows_checked": 320,
+  "schema_version": "crucible-source-curriculum-repair-v1-20261031",
+  "scientific_authorization": false,
+  "sealed_target_answers_loaded": false,
+  "status": "PASS",
+  "target_data_loaded": false,
+  "training_started": false
+}
