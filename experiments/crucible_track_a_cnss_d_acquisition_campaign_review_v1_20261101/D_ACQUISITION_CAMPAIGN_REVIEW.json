@@ -1,0 +1,123 @@
+{
+  "classification": "READ_ONLY_D_ACQUISITION_CAMPAIGN_REVIEW",
+  "established_under_tested_conditions": [
+    "The D oracle, partition boundaries, canonical workspace reconstruction and checkpoint integrity checks are operational.",
+    "Rank 32 is materially more capable than rank 8 on the tested fixed task, but rank 32 does not reach the 95% held-out gate.",
+    "All rank-32 corrective-control rows fit their training partitions at 100% while remaining below the individual held-out gate.",
+    "Canonical input and target states decode exactly across the 256-state domain.",
+    "The original workspace's D transformation has lower pairwise latent-distance correlation and a larger rank-32 affine residual than A, B or C in the read-only geometry proxy.",
+    "The signed-bit alternative workspace is a valid exact-reconstruction control, but it performed worse under the matched registered training protocol.",
+    "All authorized CPU runs in this campaign passed finite-tensor, checkpoint and fresh-process replay safeguards."
+  ],
+  "fixed_evaluation_audit": {
+    "direct_scored_training_rows_on_same_test": {
+      "alternative_workspace": 3,
+      "carry_balanced": 3,
+      "rank_horizon_lambda_corrective_control": 48,
+      "total": 54
+    },
+    "interpretation": "The fixed test was not used for gradient updates, but it was repeatedly used for checkpoint comparison, intervention selection and post-hoc diagnostics. It should now be retired from future model selection and preserved as a historical diagnostic only.",
+    "manifest_sha256": "2e4aa662801f03f7cab65f3c645a452901b5ed2d2ed0f2c881153214ba8b323e",
+    "read_only_reuses": {
+      "carry_error_transition_comparisons": 192,
+      "fault_isolation_checkpoints": 132,
+      "generalization_forensics_checkpoints": 132,
+      "lambda_reanalysis_rows": 8
+    },
+    "test_state_count": 64,
+    "training_candidate_count": 128
+  },
+  "future_evaluation_policy": {
+    "current_test_status": "retire_from_model_selection; preserve as historical_diagnostic_v1",
+    "recommended_next_experiment": "A fresh preregistered arithmetic-acquisition domain that trains on several public constants or operation instances and evaluates on sealed unseen constants, with no further model selection on the current 64-state test.",
+    "required_before_next_major_intervention": [
+      "Generate and seal a fresh manifest before training or architecture selection.",
+      "Use disjoint train, development and final-test manifests with a new manifest hash.",
+      "Hold out entire addition constants or operation instances, not only input states.",
+      "Include carry-balanced coverage in train/development and report full carry-chain strata with sample counts.",
+      "Keep the final test sealed and consult it once for the preregistered comparison.",
+      "Separate explicit execution, generalization to unseen inputs, transfer to unseen constants and composition into distinct gates.",
+      "Select checkpoints and hyperparameters only from training/development evidence.",
+      "Keep the current 95% individual D gate and partner lock unchanged until the fresh domain passes."
+    ]
+  },
+  "hypotheses_weakened_or_rejected_under_documented_conditions": [
+    {
+      "evidence": {
+        "rank32_2000_mean_test": 0.859375,
+        "rank32_8000_mean_test": 0.8528645833333334,
+        "rank8_2000_mean_test": 0.47265625,
+        "rank8_8000_mean_test": 0.5885416666666666
+      },
+      "hypothesis": "More rank or a longer horizon alone will reach reliable D acquisition.",
+      "status": "not_supported"
+    },
+    {
+      "evidence": "The existing lambda analysis found lower displacement but non-monotonic held-out accuracy; no lambda arm reached 95%.",
+      "hypothesis": "Stronger canonical alignment reliably solves D acquisition.",
+      "status": "not_supported"
+    },
+    {
+      "evidence": {
+        "balanced_mean_test": 0.828125,
+        "control_mean_test": 0.859375,
+        "delta": -0.03125
+      },
+      "hypothesis": "Carry-count frequency balancing alone resolves D generalization.",
+      "status": "not_supported"
+    },
+    {
+      "evidence": {
+        "alternative_mean_test_accuracy": 0.7552083333333334,
+        "mean_delta_alternative_minus_original": -0.10416666666666663,
+        "original_mean_test_accuracy": 0.859375,
+        "original_workspace_source_result": "experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/D_SKILL_CORRECTIVE_CONTROLS_RESULT.json",
+        "seed_deltas": {
+          "1337": -0.171875,
+          "2025": -0.125,
+          "42": -0.015625
+        }
+      },
+      "hypothesis": "Explicitly exposed signed bit coordinates make D easier to acquire under the matched protocol.",
+      "status": "failed_for_this_construction"
+    }
+  ],
+  "not_established": [
+    "A reusable carry algorithm inside the neural adapter.",
+    "A general workspace design that improves arithmetic acquisition.",
+    "Reliable neural acquisition at the 95% individual gate.",
+    "Neural skill composition, positive forward transfer or cumulative learning.",
+    "Optimality of the original workspace."
+  ],
+  "partner_rerun_unlocked": false,
+  "remaining_plausible_explanations": [
+    "D's carry-dependent transformation is less compatible with the current adapter's inductive bias or optimization path than the tested A-C transformations.",
+    "The original nonlinear workspace may encode useful relationships that the signed-bit workspace removes, even though both preserve all state values.",
+    "The fixed training support and one addition constant may encourage shortcuts that do not transfer to new constants or carry configurations.",
+    "Coordinate semantics, workspace complexity, optimizer interaction and carry propagation remain confounded in the signed-bit negative control.",
+    "The 64-state test partition is too small and has sparse carry strata for reliable subcategory selection."
+  ],
+  "schema_version": "crucible-cnss-d-acquisition-campaign-review-v1-20261101",
+  "scope": "Consolidation of the registered Skill D acquisition, forensics, geometry, carry-balancing and workspace-accessibility evidence through 2026-11-01.",
+  "source_artifact_sha256": {
+    "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_ACQUISITION_RESULT.json": "26a3bd55d1a006360e91a7f23ba26a11396fd4d62269afb5cd37f295d27bf59f",
+    "experiments/crucible_track_a_cnss_d_fault_isolation_v1_corrected_20261101/D_FAULT_ISOLATION_RESULT.json": "5b8bdb2b4008d5b14f6d48f1a73cc1ca457418aaf95bbd198c9b6708198bfa7a",
+    "experiments/crucible_track_a_cnss_d_generalization_forensics_v1_20261101/D_GENERALIZATION_FORENSICS_RESULT.json": "190cd5523c3573eb22a2bcb333cdfef490918f64bbbc59528635aae030dfb895",
+    "experiments/crucible_track_a_cnss_d_lambda_acquisition_analysis_v1_20261101/D_LAMBDA_ACQUISITION_ANALYSIS_RESULT.json": "08f7eb81836bf15454c6b0030f197eda10402692ba5f433099de86e34cd6649b",
+    "experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/D_SKILL_CORRECTIVE_CONTROLS_RESULT.json": "9979f1498399fb9ac13c228ce3a797aeffdc9a9faaf0c153d8b09e02de1427ab",
+    "experiments/crucible_track_a_cnss_partner_generalization_v1_20261101/CNSS_PARTNER_GENERALIZATION_RESULT.json": "b21ef39f2980072d7eb21eb01d86e80ae8306ca3a8755567d7f04f6dac7079f7",
+    "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/WORKSPACE_ACCESSIBILITY_CAUSAL_CONTROL_RESULT.json": "e045b23d7d62c2a6e76a8c15c12298ac3437204e372af271586dce94d616cb22",
+    "experiments/crucible_track_a_cnss_workspace_transformation_geometry_audit_v1_20261101/WORKSPACE_TRANSFORMATION_GEOMETRY_AUDIT.json": "c38a0bcd34f78aed0832218099f14d8a57f3035daafe4f82969310bbfe51f15b"
+  },
+  "source_artifacts": [
+    "experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/D_SKILL_CORRECTIVE_CONTROLS_RESULT.json",
+    "experiments/crucible_track_a_cnss_d_generalization_forensics_v1_20261101/D_GENERALIZATION_FORENSICS_RESULT.json",
+    "experiments/crucible_track_a_cnss_d_fault_isolation_v1_corrected_20261101/D_FAULT_ISOLATION_RESULT.json",
+    "experiments/crucible_track_a_cnss_d_lambda_acquisition_analysis_v1_20261101/D_LAMBDA_ACQUISITION_ANALYSIS_RESULT.json",
+    "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_ACQUISITION_RESULT.json",
+    "experiments/crucible_track_a_cnss_workspace_transformation_geometry_audit_v1_20261101/WORKSPACE_TRANSFORMATION_GEOMETRY_AUDIT.json",
+    "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/WORKSPACE_ACCESSIBILITY_CAUSAL_CONTROL_RESULT.json",
+    "experiments/crucible_track_a_cnss_partner_generalization_v1_20261101/CNSS_PARTNER_GENERALIZATION_RESULT.json"
+  ],
+  "training_performed_by_review": false
+}

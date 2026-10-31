@@ -1708,6 +1708,24 @@
         "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/runs/seed_2025.json"
       ],
       "novelty_terms": ["matched workspace-accessibility control", "signed-bit coordinate workspace", "operation-independent representation", "paired D acquisition", "geometry versus acquisition"]
+    },
+    {
+      "id": "track-a-cnss-d-acquisition-campaign-review-v1",
+      "status": "ESTABLISHED",
+      "title": "CNSS Skill D acquisition campaign evidence consolidation",
+      "hypothesis": "A repository-backed read-only review can separate established engineering facts, tested negative evidence, unresolved acquisition mechanisms and evaluation-integrity risks across the D campaign.",
+      "mechanisms": ["evidence-consolidation", "evaluation-integrity", "test-set-reuse", "arithmetic-acquisition", "model-selection-governance"],
+      "interventions": ["cross-artifact manifest audit", "cross-condition result reconciliation", "fixed-test reuse count", "future sealed-domain policy"],
+      "controls": ["source artifact hashes", "no training", "no checkpoint mutation", "partner gate remains locked", "ledger validation"],
+      "result": "The review reconciled eight campaign artifacts and found that the same 64-state test manifest (hash 2e4aa662801f03f7cab65f3c645a452901b5ed2d2ed0f2c881153214ba8b323e) was used for at least 54 direct scored model rows plus read-only audits. Rank, alignment, carry balancing and one signed-bit workspace alternative did not produce a qualified D learner. The current test is therefore retired from future model selection and preserved as a historical diagnostic; the next major intervention requires a fresh sealed domain with held-out constants or operation instances.",
+      "limits": ["This is a review of existing evidence rather than a new learning experiment", "Retiring the test does not recover independence for already completed decisions", "The review does not establish a new architecture or arithmetic capability", "The proposed fresh domain still requires a separate preregistered protocol"],
+      "unresolved": ["Which workspace or adapter mechanism can support generalizable arithmetic acquisition", "Whether unseen-constant transfer is achievable at the current scale", "Whether any acquired arithmetic skill can compose or survive subsequent learning", "How much state width and task diversity are required"],
+      "artifacts": [
+        "tools/review_crucible_track_a_cnss_d_acquisition_campaign_v1_20261101.py",
+        "experiments/crucible_track_a_cnss_d_acquisition_campaign_review_v1_20261101/D_ACQUISITION_CAMPAIGN_REVIEW.json",
+        "experiments/crucible_track_a_cnss_d_acquisition_campaign_review_v1_20261101/D_ACQUISITION_CAMPAIGN_REVIEW.md"
+      ],
+      "novelty_terms": ["D campaign review", "fixed-test retirement", "fresh sealed arithmetic domain", "unseen-constant transfer", "evaluation independence"]
     }
   ]
 }
