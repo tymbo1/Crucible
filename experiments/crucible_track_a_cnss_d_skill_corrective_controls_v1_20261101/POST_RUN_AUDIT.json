@@ -1,0 +1,56 @@
+{
+  "schema_version": "crucible-cnss-d-corrective-controls-post-run-audit-v1-20261101",
+  "run_classification": "COMPLETED_WITH_COMPARABILITY_LIMITATION",
+  "result_file": "D_SKILL_CORRECTIVE_CONTROLS_RESULT.json",
+  "protocol_sha256": "72e532672d5cfafbd4d5c0c95162a6c32faf21801b774489035b78af25990526",
+  "result_sha256": "9979f1498399fb9ac13c228ce3a797aeffdc9a9faaf0c153d8b09e02de1427ab",
+  "executed_runner_sha256": "6a19d7f5e34129271cf36c469fbde71d62b8d373da5c18495a37af223fc680b4",
+  "independent_verification": {
+    "fresh_process": true,
+    "checkpoint_count": 264,
+    "expected_checkpoint_count": 264,
+    "checkpoint_paths_exact": true,
+    "finite_payloads": true,
+    "adapter_and_optimizer_reload": true,
+    "workspace_digest_verified": true,
+    "public_artifacts_answer_free": true,
+    "temporary_checkpoint_files": 0,
+    "row_count": 48
+  },
+  "competence_gate": {
+    "required_test_accuracy": 0.95,
+    "maximum_observed_test_accuracy": 0.890625,
+    "passed_any_registered_rank_horizon_condition": false,
+    "partner_rerun_unlocked": false
+  },
+  "condition_summary": {
+    "rank_8_updates_2000": {
+      "mean_train_accuracy": 0.6647135416666666,
+      "mean_test_accuracy": 0.47265625,
+      "minimum_test_accuracy": 0.25
+    },
+    "rank_8_updates_8000": {
+      "mean_train_accuracy": 0.8151041666666666,
+      "mean_test_accuracy": 0.5885416666666666,
+      "minimum_test_accuracy": 0.421875
+    },
+    "rank_32_updates_2000": {
+      "mean_train_accuracy": 1.0,
+      "mean_test_accuracy": 0.859375,
+      "minimum_test_accuracy": 0.84375
+    },
+    "rank_32_updates_8000": {
+      "mean_train_accuracy": 1.0,
+      "mean_test_accuracy": 0.8528645833333334,
+      "minimum_test_accuracy": 0.8125
+    }
+  },
+  "comparability_limitation": {
+    "observed": true,
+    "executed_seed_formula": "base_seed + 100000*skill_index + int(lambda*10000) + 910000 + rank*17 + updates",
+    "prior_partner_seed_formula": "base_seed + 100000*skill_index + int(lambda*10000) + 910000",
+    "consequence": "The rank-8/2,000 rows are not exact initialization replays of the earlier D run, and rank/horizon rows are not paired from identical initial adapter draws.",
+    "interpretation_rule": "Treat the reported outcomes as a fresh bounded acquisition control. Do not claim a strictly paired causal decomposition of capacity versus horizon without a separately registered seed-matched replication."
+  },
+  "scientific_boundary": "No partner-generalization evaluation, composition claim, cumulative-learning claim or architecture-superiority claim is authorized by this run."
+}

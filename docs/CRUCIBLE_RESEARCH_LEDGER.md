@@ -49,8 +49,9 @@ reports that still need ledger entries.
 | `hybrid-neural-controller-proposal-v1` | UNTESTED | CPU preflight generated 512/128/256 manifests, passed leakage and novel-composition checks, and validated exact-memory/search baselines; controller training remains untested. |
 | `track-a-cnss-partner-generalization-v1` | INCONCLUSIVE | The four-skill partnership pilot completed cleanly, but modular-addition skill D failed the 95% individual gate; partnership-locus results remain descriptive. |
 | `track-a-cnss-d-skill-acquisition-diagnostic-v1` | INCONCLUSIVE | Oracle, encoding and partition checks passed, but D reached only 87.5% training and 68.75% test accuracy under the existing rank-8/2,000-update setup. |
+| `track-a-cnss-d-skill-corrective-controls-v1` | INCONCLUSIVE | Rank 32 reached perfect training fit but only 85.94% mean held-out accuracy; no condition reached the 95% D gate, and condition-specific seed offsets limit strict paired capacity/horizon causality. |
 
-The ledger now contains 64 records and indexes 47 canonical experiment report
+The ledger now contains 65 records and indexes 47 canonical experiment report
 files (`REPORT_FINAL.md` and `REPORT.md`). The 23 older reports were extracted
 from their accepted final reports and linked artifacts on 2026-10-26; no
 outcomes were inferred from filenames or
@@ -113,3 +114,4 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `hybrid-neural-controller-proposal-v1` | UNTESTED | `docs/CRUCIBLE_HYBRID_CONTROLLER_LEARNING_PROPOSAL_20261031.md` |
 | `track-a-cnss-partner-generalization-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_partner_generalization_v1_20261101/CNSS_PARTNER_GENERALIZATION_RESULT.md` |
 | `track-a-cnss-d-skill-acquisition-diagnostic-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_skill_acquisition_diagnostic_v1_20261101/D_SKILL_ACQUISITION_DIAGNOSTIC_REPORT.md` |
+| `track-a-cnss-d-skill-corrective-controls-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/D_SKILL_CORRECTIVE_CONTROLS_RESULT.md` |

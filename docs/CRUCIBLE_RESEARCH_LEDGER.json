@@ -1541,6 +1541,28 @@
         "experiments/crucible_track_a_cnss_d_skill_acquisition_diagnostic_v1_20261101/D_SKILL_ACQUISITION_DIAGNOSTIC_REPORT.md"
       ],
       "novelty_terms": ["modular-addition acquisition", "carry-chain diagnostic", "training-competence gate", "capacity-versus-horizon control", "durable checkpoint backup"]
+    },
+    {
+      "id": "track-a-cnss-d-skill-corrective-controls-v1",
+      "status": "INCONCLUSIVE",
+      "title": "CNSS modular-addition capacity and horizon corrective control",
+      "hypothesis": "Increasing adapter capacity or optimization horizon will make the D modular-addition skill individually competent under the existing frozen workspace, allowing the partnership prerequisite to be evaluated.",
+      "mechanisms": ["adapter-capacity", "optimization-horizon", "modular-addition-acquisition", "training-competence-gate", "checkpoint-integrity"],
+      "interventions": ["rank-8 adapter", "rank-32 adapter", "2,000 updates", "8,000 updates", "lambda values 0.1, 0.4, 0.9 and 1.0", "three seeds"],
+      "controls": ["exact recovered workspace", "fixed D oracle and partitions", "CPU-only execution", "finite-loss-gradient-parameter-optimizer checks", "264 durable checkpoints", "fresh-process checkpoint audit", "public answer-free artifacts", "partner rerun locked"],
+      "result": "The authorized CPU control completed 48 rows with all 264 expected checkpoints finite, hash-validated and reloadable. Rank 32 reached 100% mean training accuracy at both horizons, but held-out test accuracy was only 85.94% at 2,000 updates and 85.29% at 8,000 updates; rank 8 reached 47.27% and 58.85% mean test accuracy respectively. The best individual held-out result was 89.0625%, below the preregistered 95% gate. D therefore remains unqualified and partner generalization remains locked. The result supports capacity as a stronger practical bottleneck than rank-8 optimization alone under this workspace, but strict paired capacity-versus-horizon causality is limited because the executed runner used condition-specific seed offsets rather than identical initialization draws across rank and horizon.",
+      "limits": ["No condition reached the 95% individual gate", "Rank-32 training fit did not translate to held-out competence", "The 8-bit state domain remains a bounded mechanism probe", "Condition-specific seed offsets prevent a strict paired comparison with the earlier rank-8/2,000 run", "No partner composition, cumulative learning or forward-transfer claim is authorized"],
+      "unresolved": ["Whether rank and horizon effects replicate under exact seed-matched initialization", "Whether the frozen workspace represents carry structure sufficiently", "Whether a carry-aware objective or state representation is required", "Whether a qualified D can compose with A, B and C"],
+      "artifacts": [
+        "docs/CRUCIBLE_TRACK_A_CNSS_D_SKILL_CORRECTIVE_CONTROLS_V1_20261101.md",
+        "docs/CRUCIBLE_TRACK_A_CNSS_D_SKILL_CORRECTIVE_CONTROLS_V1_20261101.json",
+        "tools/run_crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101.py",
+        "experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/D_SKILL_CORRECTIVE_CONTROLS_RESULT.json",
+        "experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/D_SKILL_CORRECTIVE_CONTROLS_RESULT.md",
+        "experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/POST_RUN_AUDIT.json",
+        "experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/POST_RUN_AUDIT.md"
+      ],
+      "novelty_terms": ["rank-versus-horizon control", "D acquisition gate", "held-out modular addition", "capacity bottleneck", "fresh-process artifact audit"]
     }
   ]
 }

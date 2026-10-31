@@ -1,0 +1,103 @@
+{
+  "checkpoint_count": 6,
+  "checkpoint_hashes": [
+    {
+      "sha256": "f3b4bc7197b8b84cf53bf5d9bcef2530d8a0c0aaf85e3136e3a2cd1cdeaa0a79",
+      "step": 0
+    },
+    {
+      "sha256": "9e7696cc11f192935ffcb1c310386212a7711ee65aeea29f919763f95970d512",
+      "step": 1000
+    },
+    {
+      "sha256": "b859cf2a0817d3471b1897163d28c09c96bf52cfb3ca3749bee96fa271bc967a",
+      "step": 2000
+    },
+    {
+      "sha256": "8ae3465a8eb76bff1524a2cf7d6d4e7d07376150af943dd078e3b0549ed214f8",
+      "step": 4000
+    },
+    {
+      "sha256": "4108998f85843e718d966cdb2b1fbab05b85e2df2b3302464b07029c2e733ad6",
+      "step": 6000
+    },
+    {
+      "sha256": "cc604991b1a8c56411b453648b9434d9f87ac7e1e6c4c47538d8357aef138dcd",
+      "step": 8000
+    }
+  ],
+  "checkpoint_integrity": true,
+  "lambda": 0.1,
+  "loss_tail": [
+    {
+      "contract": 0.3976338505744934,
+      "output": 0.07524648308753967,
+      "step": 7991,
+      "total": 0.11500987410545349
+    },
+    {
+      "contract": 0.4167712926864624,
+      "output": 0.2131529450416565,
+      "step": 7992,
+      "total": 0.2548300623893738
+    },
+    {
+      "contract": 0.3823581337928772,
+      "output": 0.05350731313228607,
+      "step": 7993,
+      "total": 0.09174312651157379
+    },
+    {
+      "contract": 0.41668573021888733,
+      "output": 0.06682199239730835,
+      "step": 7994,
+      "total": 0.10849057137966156
+    },
+    {
+      "contract": 0.46073922514915466,
+      "output": 0.04769422113895416,
+      "step": 7995,
+      "total": 0.0937681496143341
+    },
+    {
+      "contract": 0.31625446677207947,
+      "output": 0.055496327579021454,
+      "step": 7996,
+      "total": 0.08712176978588104
+    },
+    {
+      "contract": 0.3858495056629181,
+      "output": 0.024210261180996895,
+      "step": 7997,
+      "total": 0.06279521435499191
+    },
+    {
+      "contract": 0.3201157748699188,
+      "output": 0.11133891344070435,
+      "step": 7998,
+      "total": 0.1433504968881607
+    },
+    {
+      "contract": 0.48541006445884705,
+      "output": 0.02776840329170227,
+      "step": 7999,
+      "total": 0.07630941271781921
+    },
+    {
+      "contract": 0.43995583057403564,
+      "output": 0.05714723840355873,
+      "step": 8000,
+      "total": 0.10114282369613647
+    }
+  ],
+  "parameter_count": 4168,
+  "rank": 8,
+  "replay_test_exact_accuracy": 0.609375,
+  "seed": 2025,
+  "skill": "D",
+  "test_exact_accuracy": 0.609375,
+  "train_exact_accuracy": 0.890625,
+  "updates": 8000,
+  "validation_exact_accuracy": 0.75,
+  "wall_seconds": 10.052536994044203
+}

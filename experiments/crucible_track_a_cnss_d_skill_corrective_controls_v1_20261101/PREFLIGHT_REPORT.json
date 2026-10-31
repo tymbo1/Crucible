@@ -1,0 +1,45 @@
+{
+  "checkpoints": {
+    "2000": [
+      0,
+      500,
+      1000,
+      1500,
+      2000
+    ],
+    "8000": [
+      0,
+      1000,
+      2000,
+      4000,
+      6000,
+      8000
+    ]
+  },
+  "gpu_used": false,
+  "lambdas": [
+    0.1,
+    0.4,
+    0.9,
+    1.0
+  ],
+  "manifest_sha256": "2e4aa662801f03f7cab65f3c645a452901b5ed2d2ed0f2c881153214ba8b323e",
+  "partner_rerun_authorized": false,
+  "protocol_sha256": "72e532672d5cfafbd4d5c0c95162a6c32faf21801b774489035b78af25990526",
+  "protocol_status": "REGISTERED_SCIENTIFIC_TRAINING_AUTHORIZED",
+  "ranks": [
+    8,
+    32
+  ],
+  "seeds": [
+    42,
+    1337,
+    2025
+  ],
+  "updates": [
+    2000,
+    8000
+  ],
+  "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+  "workspace_finite": true
+}
