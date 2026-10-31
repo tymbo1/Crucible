@@ -1563,6 +1563,28 @@
         "experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/POST_RUN_AUDIT.md"
       ],
       "novelty_terms": ["rank-versus-horizon control", "D acquisition gate", "held-out modular addition", "capacity bottleneck", "fresh-process artifact audit"]
+    },
+    {
+      "id": "track-a-cnss-d-generalization-forensics-v1",
+      "status": "INCONCLUSIVE",
+      "title": "CNSS D rank-32 generalization forensics",
+      "hypothesis": "Rank-32 D failures are structured by carry propagation, high output bits, local input transitions or the held-out partition rather than being uniform output noise.",
+      "mechanisms": ["carry-propagation", "high-bit-representation", "local-transition-generalization", "shortcut-detection", "read-only-checkpoint-forensics"],
+      "interventions": ["all 256 input states", "132 rank-32 checkpoints", "carry-event and chain stratification", "output-bit analysis", "one-input-bit transition audit", "error-mask aggregation"],
+      "controls": ["independent exhaustive arithmetic oracle", "exact D partition", "recovered workspace digest", "checkpoint hash verification", "no optimizer updates", "no parameter mutation", "no GPU", "partner gate remains locked"],
+      "result": "The read-only audit evaluated 132 rank-32 checkpoints and 24 final checkpoints over all 256 states. Training partitions remained perfect, while held-out output-bit accuracy was effectively exact for the three least-significant bits and materially lower for bits 5–7. Local transition accuracy was lowest around input bits 3–6. Carry-event strata varied sharply, but the lowest-count held-out strata contained only one state each. The pattern is consistent with a carry/high-bit propagation bottleneck, but does not prove a unique cause or qualify D for partner generalization.",
+      "limits": ["Held-out carry buckets 0, 1, 2 and 8 contain one state each", "Local transition scores cover all domain edges rather than a test-only subset", "Repeated checkpoints and seeds are not independent observations", "The audit cannot separate frozen-workspace information loss from learned shortcut behavior", "No new neural capability or composition claim is established"],
+      "unresolved": ["Whether a representation preserving carry state improves held-out transfer", "Whether balanced carry-sensitive partitions replicate the pattern", "Whether the high-bit errors arise in the workspace, adapter or decoder", "Whether exact seed-matched controls change the pattern"],
+      "artifacts": [
+        "docs/CRUCIBLE_TRACK_A_CNSS_D_GENERALIZATION_FORENSICS_V1_20261101.json",
+        "docs/CRUCIBLE_TRACK_A_CNSS_D_GENERALIZATION_FORENSICS_V1_20261101.md",
+        "tools/audit_crucible_track_a_cnss_d_generalization_forensics_v1_20261101.py",
+        "experiments/crucible_track_a_cnss_d_generalization_forensics_v1_20261101/D_GENERALIZATION_FORENSICS_RESULT.json",
+        "experiments/crucible_track_a_cnss_d_generalization_forensics_v1_20261101/D_GENERALIZATION_FORENSICS_RESULT.md",
+        "experiments/crucible_track_a_cnss_d_generalization_forensics_v1_20261101/D_GENERALIZATION_FORENSICS_SUPPLEMENT.json",
+        "experiments/crucible_track_a_cnss_d_generalization_forensics_v1_20261101/D_GENERALIZATION_FORENSICS_SUPPLEMENT.md"
+      ],
+      "novelty_terms": ["carry-event stratification", "one-bit transition consistency", "high-bit error localization", "rank-32 D forensics", "read-only arithmetic audit"]
     }
   ]
 }

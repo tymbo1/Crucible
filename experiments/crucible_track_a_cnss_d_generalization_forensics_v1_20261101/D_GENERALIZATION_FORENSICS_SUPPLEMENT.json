@@ -1,0 +1,45 @@
+{
+  "schema_version": "crucible-cnss-d-generalization-forensics-supplement-v1-20261101",
+  "source": "D_GENERALIZATION_FORENSICS_RESULT_SEALED.json",
+  "final_checkpoint_count": 24,
+  "test_carry_event_strata": {
+    "0": {"states_per_checkpoint": 1, "mean_exact_accuracy": 0.0},
+    "1": {"states_per_checkpoint": 1, "mean_exact_accuracy": 0.125},
+    "2": {"states_per_checkpoint": 1, "mean_exact_accuracy": 0.041666666666666664},
+    "3": {"states_per_checkpoint": 12, "mean_exact_accuracy": 0.625},
+    "4": {"states_per_checkpoint": 9, "mean_exact_accuracy": 0.9953703703703703},
+    "5": {"states_per_checkpoint": 15, "mean_exact_accuracy": 0.9861111111111112},
+    "6": {"states_per_checkpoint": 17, "mean_exact_accuracy": 0.9558823529411765},
+    "7": {"states_per_checkpoint": 7, "mean_exact_accuracy": 0.8809523809523809},
+    "8": {"states_per_checkpoint": 1, "mean_exact_accuracy": 0.9583333333333334}
+  },
+  "all_domain_carry_event_strata": {
+    "0": {"states_per_checkpoint": 8, "mean_exact_accuracy": 0.875},
+    "1": {"states_per_checkpoint": 8, "mean_exact_accuracy": 0.890625},
+    "2": {"states_per_checkpoint": 20, "mean_exact_accuracy": 0.95},
+    "3": {"states_per_checkpoint": 31, "mean_exact_accuracy": 0.7634408602150536},
+    "4": {"states_per_checkpoint": 33, "mean_exact_accuracy": 0.9368686868686869},
+    "5": {"states_per_checkpoint": 48, "mean_exact_accuracy": 0.9800347222222222},
+    "6": {"states_per_checkpoint": 60, "mean_exact_accuracy": 0.9625},
+    "7": {"states_per_checkpoint": 32, "mean_exact_accuracy": 0.9427083333333334},
+    "8": {"states_per_checkpoint": 16, "mean_exact_accuracy": 0.9973958333333334}
+  },
+  "test_output_bit_accuracy_lsb_to_msb": [1.0, 1.0, 1.0, 0.9973958333333334, 0.9967447916666666, 0.943359375, 0.90234375, 0.9303385416666666],
+  "all_domain_output_bit_accuracy_lsb_to_msb": [1.0, 1.0, 1.0, 0.9993489583333334, 0.9988606770833334, 0.9747721354166666, 0.95458984375, 0.9676106770833334],
+  "local_transition_analysis": {
+    "edge_count": 1024,
+    "scope": "all one-input-bit hypercube edges; not test-only",
+    "transition_accuracy_by_input_bit_lsb_index": [0.9130859375, 0.9117838541666666, 0.8863932291666666, 0.8642578125, 0.8649088541666666, 0.8645833333333334, 0.8805338541666666, 0.91015625],
+    "both_endpoints_exact_by_input_bit_lsb_index": [0.8948567708333334, 0.8942057291666666, 0.87890625, 0.8642578125, 0.8649088541666666, 0.8645833333333334, 0.8779296875, 0.8929036458333334]
+  },
+  "most_common_error_xor_masks": [
+    {"xor_mask": 128, "occurrences": 101},
+    {"xor_mask": 96, "occurrences": 99},
+    {"xor_mask": 64, "occurrences": 79},
+    {"xor_mask": 192, "occurrences": 78},
+    {"xor_mask": 32, "occurrences": 30},
+    {"xor_mask": 224, "occurrences": 18}
+  ],
+  "total_wrong_outputs_across_final_checkpoints": 417,
+  "interpretation": "The three least-significant output bits are effectively exact on the held-out partition, while errors concentrate in higher output bits and in local transition dimensions around input bits 3 through 6. This is consistent with a carry/high-bit propagation bottleneck, but the held-out carry buckets 0, 1, 2 and 8 contain only one state each and the result does not prove a unique mechanism. The transition audit covered all 1024 one-bit edges and repeated final checkpoints, not independent examples."
+}

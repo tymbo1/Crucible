@@ -1,0 +1,39 @@
+{
+  "schema_version": "crucible-cnss-d-generalization-forensics-v1-20261101",
+  "status": "REGISTERED_READ_ONLY_DIAGNOSTIC_AUTHORIZED",
+  "title": "CNSS D rank-32 generalization forensics",
+  "objective": "Determine whether rank-32 D failures cluster around carry structure, wraparound, output bits, local input transitions or the held-out partition, without changing any model parameters.",
+  "source_experiment": "experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101",
+  "scope": {
+    "ranks": [32],
+    "updates": [2000, 8000],
+    "lambda_values": [0.1, 0.4, 0.9, 1.0],
+    "seeds": [42, 1337, 2025],
+    "all_input_states": 256,
+    "operation": "(x + 0x37) modulo 256"
+  },
+  "measurements": [
+    "exact accuracy on train, validation, test and all 256 states",
+    "accuracy by carry-event count, carry-chain length and modular wraparound",
+    "per-output-bit accuracy and exact error masks",
+    "one-input-bit transition consistency against the arithmetic oracle",
+    "partition and oracle integrity",
+    "checkpoint hash, workspace digest and finite-state verification"
+  ],
+  "controls": [
+    "no optimizer updates",
+    "no parameter mutation",
+    "exact recovered workspace",
+    "independent arithmetic oracle",
+    "rank-32 checkpoints only",
+    "partner-generalization gate remains locked",
+    "public report contains aggregate metrics only"
+  ],
+  "authorization_boundary": {
+    "training_authorized": false,
+    "gpu_authorized": false,
+    "partner_rerun_authorized": false,
+    "read_only_diagnostic": true
+  },
+  "interpretation_rule": "The audit can localize observed error patterns but cannot establish a new learned capability or replace the 95% individual-competence gate."
+}
