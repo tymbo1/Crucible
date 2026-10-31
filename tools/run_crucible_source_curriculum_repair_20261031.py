@@ -244,13 +244,13 @@ def build_source_row(
         ],
         "canonical_ast_sha256": sha256_text(canonical(function)),
         "truth_table_sha256": sha256_text(table),
-        "compatible_function_count": int(evidence["compatible_function_count"]),
-        "compatible_query_outputs": list(evidence["compatible_query_outputs"]),
     }
     if include_answer:
         public["query_output"] = int(table[query_index])
     oracle = {
         **public,
+        "compatible_function_count": int(evidence["compatible_function_count"]),
+        "compatible_query_outputs": list(evidence["compatible_query_outputs"]),
         "query_index": query_index,
         "ast": function,
         "truth_table": table,
@@ -596,13 +596,13 @@ def validate_manifest(functions: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
                     }
                     compatible = compatible_indices(functions, observations)
                     outputs = sorted({int(truth_table(functions[index])[query_index]) for index in compatible})
-                    if len(compatible) != int(public["compatible_function_count"]):
+                    if len(compatible) != int(oracle["compatible_function_count"]):
                         errors.append(f"compatible-count mismatch: {public['task_id']}")
-                    if outputs != list(public["compatible_query_outputs"]):
+                    if outputs != list(oracle["compatible_query_outputs"]):
                         errors.append(f"compatible-output mismatch: {public['task_id']}")
-                    if public["identifiability"] == "query" and len(outputs) != 1:
+                    if oracle["identifiability"] == "query" and len(outputs) != 1:
                         errors.append(f"query-identifiability failure: {public['task_id']}")
-                    if public["identifiability"] == "function" and len(compatible) != 1:
+                    if oracle["identifiability"] == "function" and len(compatible) != 1:
                         errors.append(f"function-identifiability failure: {public['task_id']}")
                     if int(oracle["query_output"]) != int(oracle["truth_table"][query_index]):
                         errors.append(f"query oracle mismatch: {public['task_id']}")
