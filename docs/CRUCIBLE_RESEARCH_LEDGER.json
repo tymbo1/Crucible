@@ -1659,6 +1659,25 @@
         "experiments/crucible_track_a_cnss_d_carry_balanced_error_transition_audit_v1_20261101/D_CARRY_BALANCED_ERROR_TRANSITION_AUDIT_SEALED_HASH.json"
       ],
       "novelty_terms": ["carry-balanced exposure", "candidate-support preservation", "paired step-zero initialization", "curriculum-frequency control"]
+    },
+    {
+      "id": "track-a-cnss-workspace-transformation-geometry-v1",
+      "status": "INCONCLUSIVE",
+      "title": "CNSS canonical workspace transformation geometry across skills",
+      "hypothesis": "The frozen workspace makes Skill D's canonical input-to-output transformation less computationally accessible to a low-rank adapter than the already tested A, B and C transformations.",
+      "mechanisms": ["workspace-geometry", "canonical-transformation-accessibility", "affine-complexity", "carry-nonlocality", "low-rank-proxy"],
+      "interventions": ["read-only exhaustive 256-state canonical-state analysis", "pairwise latent-distance geometry", "rank-truncated affine fits", "output-delta singular-spectrum analysis", "one-bit neighbor transition analysis"],
+      "controls": ["exact recovered workspace digest", "skills A through D under one encoder/decoder", "canonical decoder reconstruction", "no adapter updates", "no optimizer updates", "no GPU", "no partner rerun"],
+      "result": "All four canonical target-state sets decoded exactly. D had substantially lower input-to-target pairwise-distance correlation (0.2951) than A, B and C (0.9451, 0.8642 and 0.9728), lower full-affine fit quality (R2 0.8692 versus at least 0.9997 for A-C), and the largest rank-32 affine residual RMSE (0.2126 versus 0.1265-0.1824). D also had the largest mean canonical displacement (13.8551). However, all skills had numerical output-delta rank 64 and greater than 0.99995 rank-32 energy, so the evidence points to global geometry and affine accessibility rather than a simple output-subspace rank deficit.",
+      "limits": ["These are descriptive in-sample geometry proxies, not a causal measurement of adapter optimization difficulty", "An affine or singular-spectrum proxy is not the registered nonlinear adapter", "The eight-bit domain contains only 256 states and all four operations are state permutations", "Canonical reconstruction does not establish acquisition, transfer or cumulative learning", "No matched training intervention was performed"],
+      "unresolved": ["Whether the measured D geometry predicts held-out rank-32 acquisition under a matched causal control", "Whether a workspace or adapter objective that preserves arithmetic accessibility improves D without harming A-C", "Whether the geometry persists for larger state widths and non-permutation transformations", "Whether carry structure rather than another property of modular addition explains the lower accessibility"],
+      "artifacts": [
+        "tools/audit_crucible_cnss_workspace_transformation_geometry_v1_20261101.py",
+        "experiments/crucible_track_a_cnss_workspace_transformation_geometry_audit_v1_20261101/WORKSPACE_TRANSFORMATION_GEOMETRY_AUDIT.json",
+        "experiments/crucible_track_a_cnss_workspace_transformation_geometry_audit_v1_20261101/WORKSPACE_TRANSFORMATION_GEOMETRY_AUDIT.md",
+        "experiments/crucible_track_a_cnss_workspace_transformation_geometry_audit_v1_20261101/WORKSPACE_TRANSFORMATION_GEOMETRY_SEALED_HASH.json"
+      ],
+      "novelty_terms": ["canonical workspace geometry", "D versus A-B-C accessibility", "pairwise latent-distance distortion", "rank-32 affine proxy", "read-only workspace audit"]
     }
   ]
 }
