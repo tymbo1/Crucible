@@ -1,0 +1,81 @@
+{
+  "schema_version": "crucible-cnss-workspace-accessibility-causal-control-v1-20261101",
+  "status": "REGISTERED_NOT_AUTHORIZED",
+  "title": "CNSS matched workspace-accessibility causal control",
+  "objective": "Test whether a shared, independently verified workspace with explicit bit-coordinate geometry improves Skill D acquisition relative to the recovered nonlinear workspace under the same adapter, optimizer, data support and evaluation protocol.",
+  "hypothesis": "The original frozen workspace makes modular addition less computationally accessible to the registered low-rank adapter than the same operation represented in a shared signed-bit coordinate workspace.",
+  "arms": {
+    "original": "Recovered content-addressed workspace a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+    "alternative": "Deterministic 256-wide signed-bit coordinate workspace with eight groups of 32 repeated coordinates, amplitude 0.8, and a fixed group-mean decoder"
+  },
+  "alternative_workspace": {
+    "construction": "For each 8-bit state, encode each bit as -0.8 or +0.8 and repeat it over a disjoint group of 32 coordinates. Decode each bit from its group mean with a fixed positive logit scale.",
+    "state_width": 256,
+    "bit_count": 8,
+    "group_width": 32,
+    "amplitude": 0.8,
+    "decoder_logit_scale": 12.0,
+    "uses_skill_definition": false,
+    "uses_held_out_answers": false,
+    "uses_sealed_test_outputs": false,
+    "trainable_parameters": 0,
+    "interface_contract": "same 256-dimensional state width and eight-bit output semantics as the original workspace"
+  },
+  "training": {
+    "skill": "D",
+    "operation": "x + 0x37 modulo 256",
+    "rank": 32,
+    "lambda": 0.1,
+    "updates": 2000,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "gradient_clip": 1.0,
+    "seeds": [42, 1337, 2025],
+    "device": "cpu",
+    "deterministic": true,
+    "composition_examples_in_training": false,
+    "composition_examples_in_validation": false,
+    "partner_rerun_authorized": false
+  },
+  "held_constant": [
+    "rank-32 adapter architecture and parameter count",
+    "lambda 0.1",
+    "paired persisted step-zero adapter and optimizer states",
+    "same 128-state training candidate support",
+    "same validation and fixed 64-state test partition",
+    "same standard corrective-control batch schedule",
+    "same AdamW and numerical safeguards",
+    "same update budget and seeds"
+  ],
+  "preflight_requirements": [
+    "both workspaces reconstruct every 8-bit state exactly",
+    "alternative construction is independent of D and sealed test outputs",
+    "both workspaces have the same 256-dimensional interface",
+    "paired step-zero adapter checkpoints are finite and hash-verified",
+    "training candidate support and fixed evaluation partitions are unchanged",
+    "alternative workspace artifact is content-addressed and independently reloadable",
+    "no GPU or partner rerun authorization"
+  ],
+  "primary_measurements": [
+    "training, validation and held-out exact accuracy",
+    "paired per-seed delta versus the original workspace",
+    "canonical reconstruction and decoder margins",
+    "latent displacement and affine accessibility diagnostics",
+    "parameter, wall-clock and numerical-stability cost",
+    "checkpoint integrity and fresh-process replay"
+  ],
+  "success_gate": {
+    "individual_d_gate": "Each arm must be evaluated against the existing 95% held-out D competence threshold; the alternative does not unlock partner evaluation automatically.",
+    "decisive_workspace_support": "Alternative workspace reaches at least 95% held-out accuracy for all three seeds, improves the paired mean by at least 10 percentage points, and no seed is worse than the original workspace.",
+    "partial_workspace_support": "Alternative workspace improves paired mean held-out accuracy but does not meet the decisive criterion.",
+    "null_or_negative": "No paired mean improvement or a negative paired mean does not support the workspace-accessibility hypothesis under this construction."
+  },
+  "authorization_boundary": {
+    "training_authorized": false,
+    "gpu_authorized": false,
+    "partner_rerun_authorized": false,
+    "authorized_by": null
+  },
+  "interpretation_rule": "A difference between workspaces would support a representation-accessibility effect only under the matched protocol; it would not establish that the signed-bit workspace is a general solution, that geometry alone is causal, or that CNSS composes across skills."
+}

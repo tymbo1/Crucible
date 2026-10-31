@@ -55,8 +55,9 @@ reports that still need ledger entries.
 | `track-a-cnss-d-lambda-acquisition-analysis-v1` | INCONCLUSIVE | Existing rank-32 lambda arms show reduced displacement but non-monotonic held-out D accuracy; alignment geometry alone does not solve acquisition. |
 | `track-a-cnss-d-carry-balanced-acquisition-v1` | INCONCLUSIVE | Carry-balanced CPU training completed with 100% train fit but 82.8125% mean held-out accuracy versus 85.9375% for the paired control; a read-only audit found 9 regressions and 3 improvements with no shared regression input across seeds 1337/2025; the 95% D gate remains closed. |
 | `track-a-cnss-workspace-transformation-geometry-v1` | INCONCLUSIVE | The exact frozen workspace decodes all canonical states, but D has much lower input→target latent-distance correlation (0.295) and the largest rank-32 affine residual; this is a descriptive accessibility proxy, not a causal acquisition result. |
+| `track-a-cnss-workspace-accessibility-causal-control-v1` | UNTESTED | A matched original-versus-signed-bit workspace control passed CPU preflight, but training is not authorized and no acquisition result exists. |
 
-The ledger now contains 70 records and indexes 47 canonical experiment report
+The ledger now contains 71 records and indexes 47 canonical experiment report
 files (`REPORT_FINAL.md` and `REPORT.md`). The 23 older reports were extracted
 from their accepted final reports and linked artifacts on 2026-10-26; no
 outcomes were inferred from filenames or
@@ -125,3 +126,4 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `track-a-cnss-d-lambda-acquisition-analysis-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_lambda_acquisition_analysis_v1_20261101/D_LAMBDA_ACQUISITION_ANALYSIS_RESULT.md` |
 | `track-a-cnss-d-carry-balanced-acquisition-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_ACQUISITION_RESULT.md` |
 | `track-a-cnss-workspace-transformation-geometry-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_workspace_transformation_geometry_audit_v1_20261101/WORKSPACE_TRANSFORMATION_GEOMETRY_AUDIT.md` |
+| `track-a-cnss-workspace-accessibility-causal-control-v1` | UNTESTED | `experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/WORKSPACE_ACCESSIBILITY_PREFLIGHT_REPORT.md` |

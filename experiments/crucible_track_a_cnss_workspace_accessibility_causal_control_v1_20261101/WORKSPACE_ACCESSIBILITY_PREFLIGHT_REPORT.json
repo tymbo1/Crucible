@@ -1,0 +1,52 @@
+{
+  "alternative_reconstruction_exact": 1.0,
+  "alternative_workspace_spec_sha256": "8351d0d776711a8e8a678730b9ec29b4abb79a9ba751080658a4aa5c49be867e",
+  "candidate_support_unchanged": true,
+  "canonical_checks": {
+    "A": {
+      "alternative_exact": 1.0,
+      "operation_independent_construction": true,
+      "original_exact": 1.0
+    },
+    "B": {
+      "alternative_exact": 1.0,
+      "operation_independent_construction": true,
+      "original_exact": 1.0
+    },
+    "C": {
+      "alternative_exact": 1.0,
+      "operation_independent_construction": true,
+      "original_exact": 1.0
+    },
+    "D": {
+      "alternative_exact": 1.0,
+      "operation_independent_construction": true,
+      "original_exact": 1.0
+    }
+  },
+  "classification": "PREFLIGHT_PASSED_TRAINING_NOT_AUTHORIZED",
+  "fixed_test_partition": true,
+  "gpu_used": false,
+  "limitations": [
+    "The alternative workspace is a fixed analytical control with zero trainable workspace parameters, so workspace compute and wall-clock cost must be reported.",
+    "The preflight establishes interface and reconstruction integrity, not D acquisition or composability.",
+    "No causal training result exists until separately authorized."
+  ],
+  "manifest_sha256": "2e4aa662801f03f7cab65f3c645a452901b5ed2d2ed0f2c881153214ba8b323e",
+  "original_reconstruction_exact": 1.0,
+  "original_workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+  "paired_step0_checkpoint_hashes": {
+    "1337": "5c16b6478bbde571566620a959c4e87f0a7daa303928d025a00c4853f8e8cae7",
+    "2025": "200b2c26355c597d5704651da8c197b3fca9c96b33ffdb69efa01a3ca5fa938b",
+    "42": "c982a3d53716c518ae99cbb1d90f529dfca6c6a5d21fbde3a9c494b4e4f0b2af"
+  },
+  "partner_rerun_authorized": false,
+  "protocol_sha256": "cddc116a2a13a0f25c6799bf19152b6a7b533ab0d12b4acaf0e7413160e4589a",
+  "same_adapter_parameter_count": true,
+  "same_interface_width": true,
+  "schema_version": "crucible-cnss-workspace-accessibility-causal-control-preflight-v1-20261101",
+  "source_result_sha256": "9979f1498399fb9ac13c228ce3a797aeffdc9a9faaf0c153d8b09e02de1427ab",
+  "training_authorized": false,
+  "uses_held_out_answers_for_alternative": false,
+  "uses_skill_definition_for_alternative": false
+}
