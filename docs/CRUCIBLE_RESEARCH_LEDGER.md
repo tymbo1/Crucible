@@ -53,7 +53,7 @@ reports that still need ledger entries.
 | `track-a-cnss-d-generalization-forensics-v1` | INCONCLUSIVE | Rank-32 errors concentrate in higher output bits and local transition dimensions consistent with carry/high-bit difficulty, but uneven strata prevent a unique mechanistic conclusion. |
 | `track-a-cnss-d-fault-isolation-v1` | INCONCLUSIVE | Canonical reconstruction is exact; high-bit failures have larger adapter displacement and cross decoder boundaries, but mixed local projections do not assign sole responsibility to the adapter or decoder. |
 | `track-a-cnss-d-lambda-acquisition-analysis-v1` | INCONCLUSIVE | Existing rank-32 lambda arms show reduced displacement but non-monotonic held-out D accuracy; alignment geometry alone does not solve acquisition. |
-| `track-a-cnss-d-carry-balanced-acquisition-v1` | INCONCLUSIVE | Carry-balanced CPU training completed with 100% train fit but 82.8125% mean held-out accuracy versus 85.9375% for the paired control; all replay checks passed, but the 95% D gate remains closed. |
+| `track-a-cnss-d-carry-balanced-acquisition-v1` | INCONCLUSIVE | Carry-balanced CPU training completed with 100% train fit but 82.8125% mean held-out accuracy versus 85.9375% for the paired control; a read-only audit found 9 regressions and 3 improvements with no shared regression input across seeds 1337/2025; the 95% D gate remains closed. |
 
 The ledger now contains 69 records and indexes 47 canonical experiment report
 files (`REPORT_FINAL.md` and `REPORT.md`). The 23 older reports were extracted

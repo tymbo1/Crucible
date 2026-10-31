@@ -1,0 +1,1251 @@
+{
+  "aggregate_by_carry_count": {
+    "0": {
+      "balanced_accuracy": 0.0,
+      "balanced_correct": 0,
+      "control_accuracy": 0.0,
+      "control_correct": 0,
+      "count": 3,
+      "delta_balanced_minus_control": 0.0,
+      "improvements": 0,
+      "regressions": 0
+    },
+    "1": {
+      "balanced_accuracy": 0.0,
+      "balanced_correct": 0,
+      "control_accuracy": 0.3333333333333333,
+      "control_correct": 1,
+      "count": 3,
+      "delta_balanced_minus_control": -0.3333333333333333,
+      "improvements": 0,
+      "regressions": 1
+    },
+    "2": {
+      "balanced_accuracy": 0.0,
+      "balanced_correct": 0,
+      "control_accuracy": 0.0,
+      "control_correct": 0,
+      "count": 3,
+      "delta_balanced_minus_control": 0.0,
+      "improvements": 0,
+      "regressions": 0
+    },
+    "3": {
+      "balanced_accuracy": 0.6388888888888888,
+      "balanced_correct": 23,
+      "control_accuracy": 0.6111111111111112,
+      "control_correct": 22,
+      "count": 36,
+      "delta_balanced_minus_control": 0.027777777777777776,
+      "improvements": 2,
+      "regressions": 1
+    },
+    "4": {
+      "balanced_accuracy": 0.9259259259259259,
+      "balanced_correct": 25,
+      "control_accuracy": 1.0,
+      "control_correct": 27,
+      "count": 27,
+      "delta_balanced_minus_control": -0.07407407407407407,
+      "improvements": 0,
+      "regressions": 2
+    },
+    "5": {
+      "balanced_accuracy": 1.0,
+      "balanced_correct": 45,
+      "control_accuracy": 1.0,
+      "control_correct": 45,
+      "count": 45,
+      "delta_balanced_minus_control": 0.0,
+      "improvements": 0,
+      "regressions": 0
+    },
+    "6": {
+      "balanced_accuracy": 0.9215686274509803,
+      "balanced_correct": 47,
+      "control_accuracy": 0.9411764705882353,
+      "control_correct": 48,
+      "count": 51,
+      "delta_balanced_minus_control": -0.0196078431372549,
+      "improvements": 1,
+      "regressions": 2
+    },
+    "7": {
+      "balanced_accuracy": 0.8571428571428571,
+      "balanced_correct": 18,
+      "control_accuracy": 0.9047619047619048,
+      "control_correct": 19,
+      "count": 21,
+      "delta_balanced_minus_control": -0.047619047619047616,
+      "improvements": 0,
+      "regressions": 1
+    },
+    "8": {
+      "balanced_accuracy": 0.3333333333333333,
+      "balanced_correct": 1,
+      "control_accuracy": 1.0,
+      "control_correct": 3,
+      "count": 3,
+      "delta_balanced_minus_control": -0.6666666666666666,
+      "improvements": 0,
+      "regressions": 2
+    }
+  },
+  "aggregate_by_max_carry_chain": {
+    "0": {
+      "balanced_accuracy": 0.0,
+      "balanced_correct": 0,
+      "control_accuracy": 0.0,
+      "control_correct": 0,
+      "count": 3,
+      "delta_balanced_minus_control": 0.0,
+      "improvements": 0,
+      "regressions": 0
+    },
+    "1": {
+      "balanced_accuracy": 0.0,
+      "balanced_correct": 0,
+      "control_accuracy": 0.3333333333333333,
+      "control_correct": 1,
+      "count": 3,
+      "delta_balanced_minus_control": -0.3333333333333333,
+      "improvements": 0,
+      "regressions": 1
+    },
+    "2": {
+      "balanced_accuracy": 0.8,
+      "balanced_correct": 12,
+      "control_accuracy": 0.8,
+      "control_correct": 12,
+      "count": 15,
+      "delta_balanced_minus_control": 0.0,
+      "improvements": 0,
+      "regressions": 0
+    },
+    "3": {
+      "balanced_accuracy": 0.8,
+      "balanced_correct": 60,
+      "control_accuracy": 0.7733333333333333,
+      "control_correct": 58,
+      "count": 75,
+      "delta_balanced_minus_control": 0.02666666666666667,
+      "improvements": 3,
+      "regressions": 1
+    },
+    "4": {
+      "balanced_accuracy": 0.9166666666666666,
+      "balanced_correct": 22,
+      "control_accuracy": 1.0,
+      "control_correct": 24,
+      "count": 24,
+      "delta_balanced_minus_control": -0.08333333333333333,
+      "improvements": 0,
+      "regressions": 2
+    },
+    "5": {
+      "balanced_accuracy": 1.0,
+      "balanced_correct": 21,
+      "control_accuracy": 1.0,
+      "control_correct": 21,
+      "count": 21,
+      "delta_balanced_minus_control": 0.0,
+      "improvements": 0,
+      "regressions": 0
+    },
+    "6": {
+      "balanced_accuracy": 0.9393939393939394,
+      "balanced_correct": 31,
+      "control_accuracy": 1.0,
+      "control_correct": 33,
+      "count": 33,
+      "delta_balanced_minus_control": -0.06060606060606061,
+      "improvements": 0,
+      "regressions": 2
+    },
+    "7": {
+      "balanced_accuracy": 0.8,
+      "balanced_correct": 12,
+      "control_accuracy": 0.8666666666666667,
+      "control_correct": 13,
+      "count": 15,
+      "delta_balanced_minus_control": -0.06666666666666667,
+      "improvements": 0,
+      "regressions": 1
+    },
+    "8": {
+      "balanced_accuracy": 0.3333333333333333,
+      "balanced_correct": 1,
+      "control_accuracy": 1.0,
+      "control_correct": 3,
+      "count": 3,
+      "delta_balanced_minus_control": -0.6666666666666666,
+      "improvements": 0,
+      "regressions": 2
+    }
+  },
+  "aggregate_by_wraparound": {
+    "False": {
+      "balanced_accuracy": 0.8242424242424242,
+      "balanced_correct": 136,
+      "control_accuracy": 0.8545454545454545,
+      "control_correct": 141,
+      "count": 165,
+      "delta_balanced_minus_control": -0.030303030303030304,
+      "improvements": 2,
+      "regressions": 7
+    },
+    "True": {
+      "balanced_accuracy": 0.8518518518518519,
+      "balanced_correct": 23,
+      "control_accuracy": 0.8888888888888888,
+      "control_correct": 24,
+      "count": 27,
+      "delta_balanced_minus_control": -0.037037037037037035,
+      "improvements": 1,
+      "regressions": 2
+    }
+  },
+  "aggregate_improvement_masks": {
+    "0x20": 2,
+    "0x80": 1
+  },
+  "aggregate_regression_by_carry_count": {
+    "1": {
+      "balanced_wrong": 1,
+      "control_wrong": 0,
+      "count": 1,
+      "improvements": 0,
+      "regressions": 1
+    },
+    "3": {
+      "balanced_wrong": 1,
+      "control_wrong": 2,
+      "count": 3,
+      "improvements": 2,
+      "regressions": 1
+    },
+    "4": {
+      "balanced_wrong": 2,
+      "control_wrong": 0,
+      "count": 2,
+      "improvements": 0,
+      "regressions": 2
+    },
+    "6": {
+      "balanced_wrong": 2,
+      "control_wrong": 1,
+      "count": 3,
+      "improvements": 1,
+      "regressions": 2
+    },
+    "7": {
+      "balanced_wrong": 1,
+      "control_wrong": 0,
+      "count": 1,
+      "improvements": 0,
+      "regressions": 1
+    },
+    "8": {
+      "balanced_wrong": 2,
+      "control_wrong": 0,
+      "count": 2,
+      "improvements": 0,
+      "regressions": 2
+    }
+  },
+  "aggregate_regression_by_max_carry_chain": {
+    "1": {
+      "balanced_wrong": 1,
+      "control_wrong": 0,
+      "count": 1,
+      "improvements": 0,
+      "regressions": 1
+    },
+    "3": {
+      "balanced_wrong": 1,
+      "control_wrong": 3,
+      "count": 4,
+      "improvements": 3,
+      "regressions": 1
+    },
+    "4": {
+      "balanced_wrong": 2,
+      "control_wrong": 0,
+      "count": 2,
+      "improvements": 0,
+      "regressions": 2
+    },
+    "6": {
+      "balanced_wrong": 2,
+      "control_wrong": 0,
+      "count": 2,
+      "improvements": 0,
+      "regressions": 2
+    },
+    "7": {
+      "balanced_wrong": 1,
+      "control_wrong": 0,
+      "count": 1,
+      "improvements": 0,
+      "regressions": 1
+    },
+    "8": {
+      "balanced_wrong": 2,
+      "control_wrong": 0,
+      "count": 2,
+      "improvements": 0,
+      "regressions": 2
+    }
+  },
+  "aggregate_regression_by_wraparound": {
+    "False": {
+      "balanced_wrong": 7,
+      "control_wrong": 2,
+      "count": 9,
+      "improvements": 2,
+      "regressions": 7
+    },
+    "True": {
+      "balanced_wrong": 2,
+      "control_wrong": 1,
+      "count": 3,
+      "improvements": 1,
+      "regressions": 2
+    }
+  },
+  "aggregate_regression_masks": {
+    "0x08": 1,
+    "0x10": 3,
+    "0x20": 1,
+    "0x40": 2,
+    "0x80": 1,
+    "0xc0": 1
+  },
+  "aggregate_transition_counts": {
+    "correct_to_wrong": 9,
+    "preserved_correct": 156,
+    "preserved_wrong": 24,
+    "wrong_to_correct": 3
+  },
+  "classification": "READ_ONLY_PAIRED_ERROR_TRANSITION_AUDIT",
+  "cross_seed_overlap": {
+    "improvement_inputs_all_seeds": [],
+    "regression_inputs_1337_and_2025": [],
+    "regression_inputs_all_seeds": []
+  },
+  "limitations": [
+    "This is a read-only paired audit of the already completed fixed test partition.",
+    "It identifies behavioural transitions and arithmetic subcategories but does not identify the internal cause of the transitions.",
+    "The 64-state test partition and three seeds limit uncertainty estimates.",
+    "No training, optimizer update, checkpoint mutation or partner rerun was performed."
+  ],
+  "manifest_sha256": "3669bb275bcc29fa8d5253daaeeed854ddc3297729dc5b3c5a00c35e86f15ccf",
+  "operation": "x + 0x37 modulo 256",
+  "schema_version": "crucible-cnss-d-carry-balanced-error-transition-audit-v1-20261101",
+  "sealed_detail_sha256": "e6113444e574b327e96349363f18fab085157145b2fb04adddb26894fc6258cb",
+  "seed_summaries": [
+    {
+      "balanced_bit_accuracy": 0.974609375,
+      "balanced_run_sha256": "8a4abea21c9ab542e30ca76eac9cb45c2b2165288989deebe734a81456dacb8b",
+      "balanced_test_accuracy": 0.859375,
+      "by_carry_count": {
+        "0": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "1": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "2": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "3": {
+          "balanced_accuracy": 0.6666666666666666,
+          "balanced_correct": 8,
+          "control_accuracy": 0.5833333333333334,
+          "control_correct": 7,
+          "count": 12,
+          "delta_balanced_minus_control": 0.08333333333333333,
+          "improvements": 1,
+          "regressions": 0
+        },
+        "4": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 9,
+          "control_accuracy": 1.0,
+          "control_correct": 9,
+          "count": 9,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "5": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 15,
+          "control_accuracy": 1.0,
+          "control_correct": 15,
+          "count": 15,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "6": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 17,
+          "control_accuracy": 0.9411764705882353,
+          "control_correct": 16,
+          "count": 17,
+          "delta_balanced_minus_control": 0.058823529411764705,
+          "improvements": 1,
+          "regressions": 0
+        },
+        "7": {
+          "balanced_accuracy": 0.8571428571428571,
+          "balanced_correct": 6,
+          "control_accuracy": 1.0,
+          "control_correct": 7,
+          "count": 7,
+          "delta_balanced_minus_control": -0.14285714285714285,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "8": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 1.0,
+          "control_correct": 1,
+          "count": 1,
+          "delta_balanced_minus_control": -1.0,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "by_max_carry_chain": {
+        "0": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "1": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "2": {
+          "balanced_accuracy": 0.8,
+          "balanced_correct": 4,
+          "control_accuracy": 0.8,
+          "control_correct": 4,
+          "count": 5,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "3": {
+          "balanced_accuracy": 0.84,
+          "balanced_correct": 21,
+          "control_accuracy": 0.76,
+          "control_correct": 19,
+          "count": 25,
+          "delta_balanced_minus_control": 0.08,
+          "improvements": 2,
+          "regressions": 0
+        },
+        "4": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 8,
+          "control_accuracy": 1.0,
+          "control_correct": 8,
+          "count": 8,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "5": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 7,
+          "control_accuracy": 1.0,
+          "control_correct": 7,
+          "count": 7,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "6": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 11,
+          "control_accuracy": 1.0,
+          "control_correct": 11,
+          "count": 11,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "7": {
+          "balanced_accuracy": 0.8,
+          "balanced_correct": 4,
+          "control_accuracy": 1.0,
+          "control_correct": 5,
+          "count": 5,
+          "delta_balanced_minus_control": -0.2,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "8": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 1.0,
+          "control_correct": 1,
+          "count": 1,
+          "delta_balanced_minus_control": -1.0,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "by_wraparound": {
+        "False": {
+          "balanced_accuracy": 0.8545454545454545,
+          "balanced_correct": 47,
+          "control_accuracy": 0.8545454545454545,
+          "control_correct": 47,
+          "count": 55,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 1,
+          "regressions": 1
+        },
+        "True": {
+          "balanced_accuracy": 0.8888888888888888,
+          "balanced_correct": 8,
+          "control_accuracy": 0.8888888888888888,
+          "control_correct": 8,
+          "count": 9,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 1,
+          "regressions": 1
+        }
+      },
+      "control_bit_accuracy": 0.966796875,
+      "control_run_sha256": "b2e51208f17f9960c7427c121d053d3e51d546bd386f13ec3b7ea64eda013e8a",
+      "control_test_accuracy": 0.859375,
+      "delta_balanced_minus_control": 0.0,
+      "improvement_error_masks": {
+        "0x20": 1,
+        "0x80": 1
+      },
+      "improvement_input_values": [
+        71,
+        225
+      ],
+      "regression_by_carry_count": {
+        "3": {
+          "balanced_wrong": 0,
+          "control_wrong": 1,
+          "count": 1,
+          "improvements": 1,
+          "regressions": 0
+        },
+        "6": {
+          "balanced_wrong": 0,
+          "control_wrong": 1,
+          "count": 1,
+          "improvements": 1,
+          "regressions": 0
+        },
+        "7": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "8": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "regression_by_max_carry_chain": {
+        "3": {
+          "balanced_wrong": 0,
+          "control_wrong": 2,
+          "count": 2,
+          "improvements": 2,
+          "regressions": 0
+        },
+        "7": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "8": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "regression_by_wraparound": {
+        "False": {
+          "balanced_wrong": 1,
+          "control_wrong": 1,
+          "count": 2,
+          "improvements": 1,
+          "regressions": 1
+        },
+        "True": {
+          "balanced_wrong": 1,
+          "control_wrong": 1,
+          "count": 2,
+          "improvements": 1,
+          "regressions": 1
+        }
+      },
+      "regression_error_masks": {
+        "0x40": 1,
+        "0xc0": 1
+      },
+      "regression_input_values": [
+        75,
+        201
+      ],
+      "seed": 42,
+      "transition_counts": {
+        "correct_to_wrong": 2,
+        "preserved_correct": 53,
+        "preserved_wrong": 7,
+        "wrong_to_correct": 2
+      }
+    },
+    {
+      "balanced_bit_accuracy": 0.966796875,
+      "balanced_run_sha256": "80d829ceb9cd918df96ee2781c68b3b5fb5c8170ef835c72b4110d15c01ee807",
+      "balanced_test_accuracy": 0.8125,
+      "by_carry_count": {
+        "0": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "1": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "2": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "3": {
+          "balanced_accuracy": 0.6666666666666666,
+          "balanced_correct": 8,
+          "control_accuracy": 0.6666666666666666,
+          "control_correct": 8,
+          "count": 12,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 1,
+          "regressions": 1
+        },
+        "4": {
+          "balanced_accuracy": 0.7777777777777778,
+          "balanced_correct": 7,
+          "control_accuracy": 1.0,
+          "control_correct": 9,
+          "count": 9,
+          "delta_balanced_minus_control": -0.2222222222222222,
+          "improvements": 0,
+          "regressions": 2
+        },
+        "5": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 15,
+          "control_accuracy": 1.0,
+          "control_correct": 15,
+          "count": 15,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "6": {
+          "balanced_accuracy": 0.8823529411764706,
+          "balanced_correct": 15,
+          "control_accuracy": 0.9411764705882353,
+          "control_correct": 16,
+          "count": 17,
+          "delta_balanced_minus_control": -0.058823529411764705,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "7": {
+          "balanced_accuracy": 0.8571428571428571,
+          "balanced_correct": 6,
+          "control_accuracy": 0.8571428571428571,
+          "control_correct": 6,
+          "count": 7,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "8": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 1,
+          "control_accuracy": 1.0,
+          "control_correct": 1,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        }
+      },
+      "by_max_carry_chain": {
+        "0": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "1": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "2": {
+          "balanced_accuracy": 0.8,
+          "balanced_correct": 4,
+          "control_accuracy": 0.8,
+          "control_correct": 4,
+          "count": 5,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "3": {
+          "balanced_accuracy": 0.8,
+          "balanced_correct": 20,
+          "control_accuracy": 0.8,
+          "control_correct": 20,
+          "count": 25,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 1,
+          "regressions": 1
+        },
+        "4": {
+          "balanced_accuracy": 0.75,
+          "balanced_correct": 6,
+          "control_accuracy": 1.0,
+          "control_correct": 8,
+          "count": 8,
+          "delta_balanced_minus_control": -0.25,
+          "improvements": 0,
+          "regressions": 2
+        },
+        "5": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 7,
+          "control_accuracy": 1.0,
+          "control_correct": 7,
+          "count": 7,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "6": {
+          "balanced_accuracy": 0.9090909090909091,
+          "balanced_correct": 10,
+          "control_accuracy": 1.0,
+          "control_correct": 11,
+          "count": 11,
+          "delta_balanced_minus_control": -0.09090909090909091,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "7": {
+          "balanced_accuracy": 0.8,
+          "balanced_correct": 4,
+          "control_accuracy": 0.8,
+          "control_correct": 4,
+          "count": 5,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "8": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 1,
+          "control_accuracy": 1.0,
+          "control_correct": 1,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        }
+      },
+      "by_wraparound": {
+        "False": {
+          "balanced_accuracy": 0.8,
+          "balanced_correct": 44,
+          "control_accuracy": 0.8545454545454545,
+          "control_correct": 47,
+          "count": 55,
+          "delta_balanced_minus_control": -0.05454545454545454,
+          "improvements": 1,
+          "regressions": 4
+        },
+        "True": {
+          "balanced_accuracy": 0.8888888888888888,
+          "balanced_correct": 8,
+          "control_accuracy": 0.8888888888888888,
+          "control_correct": 8,
+          "count": 9,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        }
+      },
+      "control_bit_accuracy": 0.970703125,
+      "control_run_sha256": "0612cfbc56f62a47b02baa5dd49018319bac8553451db6a4dfd57c3bb85357b5",
+      "control_test_accuracy": 0.859375,
+      "delta_balanced_minus_control": -0.046875,
+      "improvement_error_masks": {
+        "0x20": 1
+      },
+      "improvement_input_values": [
+        71
+      ],
+      "regression_by_carry_count": {
+        "3": {
+          "balanced_wrong": 1,
+          "control_wrong": 1,
+          "count": 2,
+          "improvements": 1,
+          "regressions": 1
+        },
+        "4": {
+          "balanced_wrong": 2,
+          "control_wrong": 0,
+          "count": 2,
+          "improvements": 0,
+          "regressions": 2
+        },
+        "6": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "regression_by_max_carry_chain": {
+        "3": {
+          "balanced_wrong": 1,
+          "control_wrong": 1,
+          "count": 2,
+          "improvements": 1,
+          "regressions": 1
+        },
+        "4": {
+          "balanced_wrong": 2,
+          "control_wrong": 0,
+          "count": 2,
+          "improvements": 0,
+          "regressions": 2
+        },
+        "6": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "regression_by_wraparound": {
+        "False": {
+          "balanced_wrong": 4,
+          "control_wrong": 1,
+          "count": 5,
+          "improvements": 1,
+          "regressions": 4
+        }
+      },
+      "regression_error_masks": {
+        "0x08": 1,
+        "0x10": 2,
+        "0x20": 1
+      },
+      "regression_input_values": [
+        131,
+        143,
+        156,
+        188
+      ],
+      "seed": 1337,
+      "transition_counts": {
+        "correct_to_wrong": 4,
+        "preserved_correct": 51,
+        "preserved_wrong": 8,
+        "wrong_to_correct": 1
+      }
+    },
+    {
+      "balanced_bit_accuracy": 0.966796875,
+      "balanced_run_sha256": "64420b71e449e179f36cc8602d426d7df48b75f658da409049ec4f03981643bb",
+      "balanced_test_accuracy": 0.8125,
+      "by_carry_count": {
+        "0": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "1": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 1.0,
+          "control_correct": 1,
+          "count": 1,
+          "delta_balanced_minus_control": -1.0,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "2": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "3": {
+          "balanced_accuracy": 0.5833333333333334,
+          "balanced_correct": 7,
+          "control_accuracy": 0.5833333333333334,
+          "control_correct": 7,
+          "count": 12,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "4": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 9,
+          "control_accuracy": 1.0,
+          "control_correct": 9,
+          "count": 9,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "5": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 15,
+          "control_accuracy": 1.0,
+          "control_correct": 15,
+          "count": 15,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "6": {
+          "balanced_accuracy": 0.8823529411764706,
+          "balanced_correct": 15,
+          "control_accuracy": 0.9411764705882353,
+          "control_correct": 16,
+          "count": 17,
+          "delta_balanced_minus_control": -0.058823529411764705,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "7": {
+          "balanced_accuracy": 0.8571428571428571,
+          "balanced_correct": 6,
+          "control_accuracy": 0.8571428571428571,
+          "control_correct": 6,
+          "count": 7,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "8": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 1.0,
+          "control_correct": 1,
+          "count": 1,
+          "delta_balanced_minus_control": -1.0,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "by_max_carry_chain": {
+        "0": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 0.0,
+          "control_correct": 0,
+          "count": 1,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "1": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 1.0,
+          "control_correct": 1,
+          "count": 1,
+          "delta_balanced_minus_control": -1.0,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "2": {
+          "balanced_accuracy": 0.8,
+          "balanced_correct": 4,
+          "control_accuracy": 0.8,
+          "control_correct": 4,
+          "count": 5,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "3": {
+          "balanced_accuracy": 0.76,
+          "balanced_correct": 19,
+          "control_accuracy": 0.76,
+          "control_correct": 19,
+          "count": 25,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "4": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 8,
+          "control_accuracy": 1.0,
+          "control_correct": 8,
+          "count": 8,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "5": {
+          "balanced_accuracy": 1.0,
+          "balanced_correct": 7,
+          "control_accuracy": 1.0,
+          "control_correct": 7,
+          "count": 7,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "6": {
+          "balanced_accuracy": 0.9090909090909091,
+          "balanced_correct": 10,
+          "control_accuracy": 1.0,
+          "control_correct": 11,
+          "count": 11,
+          "delta_balanced_minus_control": -0.09090909090909091,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "7": {
+          "balanced_accuracy": 0.8,
+          "balanced_correct": 4,
+          "control_accuracy": 0.8,
+          "control_correct": 4,
+          "count": 5,
+          "delta_balanced_minus_control": 0.0,
+          "improvements": 0,
+          "regressions": 0
+        },
+        "8": {
+          "balanced_accuracy": 0.0,
+          "balanced_correct": 0,
+          "control_accuracy": 1.0,
+          "control_correct": 1,
+          "count": 1,
+          "delta_balanced_minus_control": -1.0,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "by_wraparound": {
+        "False": {
+          "balanced_accuracy": 0.8181818181818182,
+          "balanced_correct": 45,
+          "control_accuracy": 0.8545454545454545,
+          "control_correct": 47,
+          "count": 55,
+          "delta_balanced_minus_control": -0.03636363636363636,
+          "improvements": 0,
+          "regressions": 2
+        },
+        "True": {
+          "balanced_accuracy": 0.7777777777777778,
+          "balanced_correct": 7,
+          "control_accuracy": 0.8888888888888888,
+          "control_correct": 8,
+          "count": 9,
+          "delta_balanced_minus_control": -0.1111111111111111,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "control_bit_accuracy": 0.974609375,
+      "control_run_sha256": "bf97374b3714e8d0a3307f097e04c3d7f3050ae9b516974db8eb9d1a853fc5de",
+      "control_test_accuracy": 0.859375,
+      "delta_balanced_minus_control": -0.046875,
+      "improvement_error_masks": {},
+      "improvement_input_values": [],
+      "regression_by_carry_count": {
+        "1": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "6": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "8": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "regression_by_max_carry_chain": {
+        "1": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "6": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        },
+        "8": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "regression_by_wraparound": {
+        "False": {
+          "balanced_wrong": 2,
+          "control_wrong": 0,
+          "count": 2,
+          "improvements": 0,
+          "regressions": 2
+        },
+        "True": {
+          "balanced_wrong": 1,
+          "control_wrong": 0,
+          "count": 1,
+          "improvements": 0,
+          "regressions": 1
+        }
+      },
+      "regression_error_masks": {
+        "0x10": 1,
+        "0x40": 1,
+        "0x80": 1
+      },
+      "regression_input_values": [
+        106,
+        196,
+        201
+      ],
+      "seed": 2025,
+      "transition_counts": {
+        "correct_to_wrong": 3,
+        "preserved_correct": 52,
+        "preserved_wrong": 9
+      }
+    }
+  ],
+  "seeds": [
+    42,
+    1337,
+    2025
+  ],
+  "source_experiment": "track-a-cnss-d-carry-balanced-acquisition-v1",
+  "test_count": 64
+}

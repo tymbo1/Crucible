@@ -1635,7 +1635,7 @@
       "mechanisms": ["curriculum-frequency", "carry-coverage", "modular-addition-acquisition", "paired-initialization", "distribution-control"],
       "interventions": ["existing rank-32 lambda-0.1 control", "carry-event-balanced sampling with replacement", "exact 128-draw epochs", "three paired seeds"],
       "controls": ["same 128-state candidate support", "same persisted step-0 adapter states", "same workspace", "same validation/test partitions", "same optimizer and update budget", "no GPU until authorization", "95% D gate", "partner gate locked"],
-      "result": "The authorized CPU arm completed cleanly with 100% training accuracy for all three seeds, but held-out test accuracy was 85.9375%, 81.25% and 81.25% (mean 82.8125%) versus the paired existing-control mean of 85.9375%, a mean delta of -3.125 percentage points. All checkpoint, optimizer, workspace and fresh-process replay checks passed. Carry-balanced exposure therefore did not improve D acquisition under this registered schedule, and the 95% individual gate remains closed.",
+      "result": "The authorized CPU arm completed cleanly with 100% training accuracy for all three seeds, but held-out test accuracy was 85.9375%, 81.25% and 81.25% (mean 82.8125%) versus the paired existing-control mean of 85.9375%, a mean delta of -3.125 percentage points. All checkpoint, optimizer, workspace and fresh-process replay checks passed. Carry-balanced exposure therefore did not improve D acquisition under this registered schedule, and the 95% individual gate remains closed. A read-only paired transition audit found 9 correct-to-wrong and 3 wrong-to-correct changes across the 192 seed/test comparisons; no regression input was shared by seeds 1337 and 2025, and sparse carry subgroups do not support a unique causal explanation.",
       "limits": ["The fixed held-out partition contains 64 states and sparse low-carry strata", "Sampling with replacement changes exposure frequency rather than unique support", "This single quota schedule cannot rule out all curriculum designs", "The result does not identify whether the lower score reflects carry coverage, order, or interaction with the fixed optimizer trajectory", "No carry algorithm, composition or cumulative-learning claim is established"],
       "unresolved": ["Whether another preregistered curriculum can improve D acquisition without changing support", "Whether balanced exposure changes latent displacement or decoder margins relative to the paired control", "Whether any future condition reaches the 95% individual gate", "Whether a qualified D composes with other skills"],
       "artifacts": [
@@ -1652,7 +1652,11 @@
         "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_ACQUISITION_RESULT.md",
         "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/runs/seed_42.json",
         "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/runs/seed_1337.json",
-        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/runs/seed_2025.json"
+        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/runs/seed_2025.json",
+        "tools/audit_crucible_track_a_cnss_d_carry_balanced_error_transitions_v1_20261101.py",
+        "experiments/crucible_track_a_cnss_d_carry_balanced_error_transition_audit_v1_20261101/D_CARRY_BALANCED_ERROR_TRANSITION_AUDIT.json",
+        "experiments/crucible_track_a_cnss_d_carry_balanced_error_transition_audit_v1_20261101/D_CARRY_BALANCED_ERROR_TRANSITION_AUDIT.md",
+        "experiments/crucible_track_a_cnss_d_carry_balanced_error_transition_audit_v1_20261101/D_CARRY_BALANCED_ERROR_TRANSITION_AUDIT_SEALED_HASH.json"
       ],
       "novelty_terms": ["carry-balanced exposure", "candidate-support preservation", "paired step-zero initialization", "curriculum-frequency control"]
     }
