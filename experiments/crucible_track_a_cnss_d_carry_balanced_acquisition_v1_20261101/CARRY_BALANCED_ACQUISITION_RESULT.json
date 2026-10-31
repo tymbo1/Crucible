@@ -1,0 +1,210 @@
+{
+  "balanced_quotas": {
+    "0": 15,
+    "1": 15,
+    "2": 14,
+    "3": 14,
+    "4": 14,
+    "5": 14,
+    "6": 14,
+    "7": 14,
+    "8": 14
+  },
+  "batch_size": 32,
+  "checkpoint_integrity": true,
+  "classification": "COMPLETED_AUTHORIZED_CARRY_BALANCED_ACQUISITION_CONTROL",
+  "competence_gate": {
+    "balanced_all_seed_pass": false,
+    "partner_rerun_unlocked": false,
+    "required_test_accuracy": 0.95,
+    "rule": "Skill D must independently pass the 95% held-out gate before partner-generalization review; this run does not unlock it."
+  },
+  "elapsed_wall_seconds": 14.34689626400359,
+  "fresh_process_replay": {
+    "classification": "FRESH_PROCESS_REPLAY_PASSED",
+    "gpu_used": false,
+    "seeds": [
+      42,
+      1337,
+      2025
+    ]
+  },
+  "gpu_used": false,
+  "lambda": 0.1,
+  "manifest_sha256": "2e4aa662801f03f7cab65f3c645a452901b5ed2d2ed0f2c881153214ba8b323e",
+  "operation": "x + 0x37 modulo 256",
+  "paired_control": {
+    "balanced_mean_test_accuracy": 0.828125,
+    "condition": "rank_32_updates_2000_lambda_0.1",
+    "mean_delta_balanced_minus_control": -0.03125,
+    "mean_test_accuracy": 0.859375,
+    "source_result": "experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/D_SKILL_CORRECTIVE_CONTROLS_RESULT.json"
+  },
+  "protocol": "docs/CRUCIBLE_TRACK_A_CNSS_D_CARRY_BALANCED_ACQUISITION_V1_20261101.json",
+  "protocol_sha256": "8f88c937396a828f22d8f08b20c567afa0d803992260a4dbfcffd425f91c01b9",
+  "rank": 32,
+  "rows": [
+    {
+      "checkpoint_hashes": [
+        {
+          "sha256": "1ef09fa4467b787ad39bb85ead3bf3afd3ab9c7301329792051e0d7ebac09b17",
+          "step": 0
+        },
+        {
+          "sha256": "08cbcf350e4f9b3d59d1df209c2687848aad8995e6e562e285976fdc8b03e5ec",
+          "step": 500
+        },
+        {
+          "sha256": "ae081323b138e7c515a8c43160e026bd1e2f9b080b9e9a7f52b93487a8bfd686",
+          "step": 1000
+        },
+        {
+          "sha256": "46040fc148a3dc67e31bbb9077ab982337ac2eda0e42f1464a70861ad9118b4d",
+          "step": 1500
+        },
+        {
+          "sha256": "16d722aa860a55c0f4316fc7398a595c0f64013d26604240b802eb0ededfb0fb",
+          "step": 2000
+        }
+      ],
+      "checkpoint_integrity": true,
+      "lambda": 0.1,
+      "paired_baseline_result_row": {
+        "test_exact_accuracy": 0.859375,
+        "train_exact_accuracy": 1.0,
+        "validation_exact_accuracy": 0.859375
+      },
+      "paired_baseline_step0_sha256": "c982a3d53716c518ae99cbb1d90f529dfca6c6a5d21fbde3a9c494b4e4f0b2af",
+      "parameter_count": 16672,
+      "rank": 32,
+      "replay_test_exact_accuracy": 0.859375,
+      "schedule_sha256": "20c2cca044eddd1df5bc7f54aed086e53e02599e38fcdf84462403e3ed5d253b",
+      "schema_version": "crucible-cnss-d-carry-balanced-acquisition-run-v1-20261101",
+      "seed": 42,
+      "skill": "D",
+      "test_bit_accuracy": 0.974609375,
+      "test_exact_accuracy": 0.859375,
+      "test_mean_cosine": 0.9670693874359131,
+      "test_mean_displacement": 4.349742889404297,
+      "test_mean_signed_margin": 8.70884895324707,
+      "train_exact_accuracy": 1.0,
+      "train_mean_displacement": 3.2134671211242676,
+      "updates": 2000,
+      "validation_exact_accuracy": 0.875,
+      "validation_mean_displacement": 4.0467400550842285,
+      "wall_seconds": 3.3934182029915974
+    },
+    {
+      "checkpoint_hashes": [
+        {
+          "sha256": "a13bbd55b17b4dd6ea9bf2118357f70ab8e5ada359508589ecf224209dcbd204",
+          "step": 0
+        },
+        {
+          "sha256": "f4d06e785d1f99b27ae2c5142825e49b5d2d648827cff5f6097e07e08bdd055d",
+          "step": 500
+        },
+        {
+          "sha256": "8c0076b5bf8a49a3b51dcad99878b8f19932ec70af2b2981db2869de072799fc",
+          "step": 1000
+        },
+        {
+          "sha256": "313563f758d729cd9c50aebfb857d6b5d7d7eedc686bed46beadb51e1ba2a5b0",
+          "step": 1500
+        },
+        {
+          "sha256": "0e1619214d021ce50985807c70f13097e5d91d8f4e59702cd6f8b7facc263d0a",
+          "step": 2000
+        }
+      ],
+      "checkpoint_integrity": true,
+      "lambda": 0.1,
+      "paired_baseline_result_row": {
+        "test_exact_accuracy": 0.859375,
+        "train_exact_accuracy": 1.0,
+        "validation_exact_accuracy": 0.875
+      },
+      "paired_baseline_step0_sha256": "5c16b6478bbde571566620a959c4e87f0a7daa303928d025a00c4853f8e8cae7",
+      "parameter_count": 16672,
+      "rank": 32,
+      "replay_test_exact_accuracy": 0.8125,
+      "schedule_sha256": "e036b05740014c184ef0360446272e931001081f21864aaaafa4f64e16c4f736",
+      "schema_version": "crucible-cnss-d-carry-balanced-acquisition-run-v1-20261101",
+      "seed": 1337,
+      "skill": "D",
+      "test_bit_accuracy": 0.966796875,
+      "test_exact_accuracy": 0.8125,
+      "test_mean_cosine": 0.9647039771080017,
+      "test_mean_displacement": 4.472049236297607,
+      "test_mean_signed_margin": 9.264890670776367,
+      "train_exact_accuracy": 1.0,
+      "train_mean_displacement": 3.2225804328918457,
+      "updates": 2000,
+      "validation_exact_accuracy": 0.84375,
+      "validation_mean_displacement": 4.062620162963867,
+      "wall_seconds": 3.4131386170047335
+    },
+    {
+      "checkpoint_hashes": [
+        {
+          "sha256": "7ccba8f25a5a6effcfe53f69e8c81a4fa8afdf897456f7792362475fcc31f706",
+          "step": 0
+        },
+        {
+          "sha256": "152a874ecefceb91d05807e3b0086d9176ac2b910fed29ae22cb7b7180440b0a",
+          "step": 500
+        },
+        {
+          "sha256": "7078c1758bd644fb0dcb8d6bc16d2e7a41e3bc5c531f1783c2eb8aff45700363",
+          "step": 1000
+        },
+        {
+          "sha256": "0be09853c99cccf6b29118575f253c22d2e0ebcdd5586681dfa59086d252ce1c",
+          "step": 1500
+        },
+        {
+          "sha256": "754bf87311d2caf2d8c2bfe65b1f36a2afb9458ed4c7505bd5d44b62eb796e94",
+          "step": 2000
+        }
+      ],
+      "checkpoint_integrity": true,
+      "lambda": 0.1,
+      "paired_baseline_result_row": {
+        "test_exact_accuracy": 0.859375,
+        "train_exact_accuracy": 1.0,
+        "validation_exact_accuracy": 0.875
+      },
+      "paired_baseline_step0_sha256": "200b2c26355c597d5704651da8c197b3fca9c96b33ffdb69efa01a3ca5fa938b",
+      "parameter_count": 16672,
+      "rank": 32,
+      "replay_test_exact_accuracy": 0.8125,
+      "schedule_sha256": "60da4afeb3ee150f4dedc5434311fe8d5fba53b4ec78727a39cedbdbdf756033",
+      "schema_version": "crucible-cnss-d-carry-balanced-acquisition-run-v1-20261101",
+      "seed": 2025,
+      "skill": "D",
+      "test_bit_accuracy": 0.966796875,
+      "test_exact_accuracy": 0.8125,
+      "test_mean_cosine": 0.9657696485519409,
+      "test_mean_displacement": 4.163292407989502,
+      "test_mean_signed_margin": 9.013103485107422,
+      "train_exact_accuracy": 1.0,
+      "train_mean_displacement": 3.1534037590026855,
+      "updates": 2000,
+      "validation_exact_accuracy": 0.859375,
+      "validation_mean_displacement": 3.87601900100708,
+      "wall_seconds": 3.397740465006791
+    }
+  ],
+  "schema_version": "crucible-cnss-d-carry-balanced-acquisition-result-v1-20261101",
+  "scientific_boundary": "This is a paired CPU acquisition-frequency control for one 8-bit operation. It does not establish a carry algorithm, composition, cumulative learning or architecture superiority.",
+  "seeds": [
+    42,
+    1337,
+    2025
+  ],
+  "skill": "D",
+  "source_result_sha256": "9979f1498399fb9ac13c228ce3a797aeffdc9a9faaf0c153d8b09e02de1427ab",
+  "source_runner_sha256": "2af3fa70281b71f7698e47a4c4d19925ffb5bcc0ba388ef33a1e110cef64a3e6",
+  "updates": 2000,
+  "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+}

@@ -1,0 +1,50 @@
+{
+  "checkpoint_hashes": [
+    {
+      "sha256": "1ef09fa4467b787ad39bb85ead3bf3afd3ab9c7301329792051e0d7ebac09b17",
+      "step": 0
+    },
+    {
+      "sha256": "08cbcf350e4f9b3d59d1df209c2687848aad8995e6e562e285976fdc8b03e5ec",
+      "step": 500
+    },
+    {
+      "sha256": "ae081323b138e7c515a8c43160e026bd1e2f9b080b9e9a7f52b93487a8bfd686",
+      "step": 1000
+    },
+    {
+      "sha256": "46040fc148a3dc67e31bbb9077ab982337ac2eda0e42f1464a70861ad9118b4d",
+      "step": 1500
+    },
+    {
+      "sha256": "16d722aa860a55c0f4316fc7398a595c0f64013d26604240b802eb0ededfb0fb",
+      "step": 2000
+    }
+  ],
+  "checkpoint_integrity": true,
+  "lambda": 0.1,
+  "paired_baseline_result_row": {
+    "test_exact_accuracy": 0.859375,
+    "train_exact_accuracy": 1.0,
+    "validation_exact_accuracy": 0.859375
+  },
+  "paired_baseline_step0_sha256": "c982a3d53716c518ae99cbb1d90f529dfca6c6a5d21fbde3a9c494b4e4f0b2af",
+  "parameter_count": 16672,
+  "rank": 32,
+  "replay_test_exact_accuracy": 0.859375,
+  "schedule_sha256": "20c2cca044eddd1df5bc7f54aed086e53e02599e38fcdf84462403e3ed5d253b",
+  "schema_version": "crucible-cnss-d-carry-balanced-acquisition-run-v1-20261101",
+  "seed": 42,
+  "skill": "D",
+  "test_bit_accuracy": 0.974609375,
+  "test_exact_accuracy": 0.859375,
+  "test_mean_cosine": 0.9670693874359131,
+  "test_mean_displacement": 4.349742889404297,
+  "test_mean_signed_margin": 8.70884895324707,
+  "train_exact_accuracy": 1.0,
+  "train_mean_displacement": 3.2134671211242676,
+  "updates": 2000,
+  "validation_exact_accuracy": 0.875,
+  "validation_mean_displacement": 4.0467400550842285,
+  "wall_seconds": 3.3934182029915974
+}

@@ -1,0 +1,50 @@
+{
+  "checkpoint_hashes": [
+    {
+      "sha256": "a13bbd55b17b4dd6ea9bf2118357f70ab8e5ada359508589ecf224209dcbd204",
+      "step": 0
+    },
+    {
+      "sha256": "f4d06e785d1f99b27ae2c5142825e49b5d2d648827cff5f6097e07e08bdd055d",
+      "step": 500
+    },
+    {
+      "sha256": "8c0076b5bf8a49a3b51dcad99878b8f19932ec70af2b2981db2869de072799fc",
+      "step": 1000
+    },
+    {
+      "sha256": "313563f758d729cd9c50aebfb857d6b5d7d7eedc686bed46beadb51e1ba2a5b0",
+      "step": 1500
+    },
+    {
+      "sha256": "0e1619214d021ce50985807c70f13097e5d91d8f4e59702cd6f8b7facc263d0a",
+      "step": 2000
+    }
+  ],
+  "checkpoint_integrity": true,
+  "lambda": 0.1,
+  "paired_baseline_result_row": {
+    "test_exact_accuracy": 0.859375,
+    "train_exact_accuracy": 1.0,
+    "validation_exact_accuracy": 0.875
+  },
+  "paired_baseline_step0_sha256": "5c16b6478bbde571566620a959c4e87f0a7daa303928d025a00c4853f8e8cae7",
+  "parameter_count": 16672,
+  "rank": 32,
+  "replay_test_exact_accuracy": 0.8125,
+  "schedule_sha256": "e036b05740014c184ef0360446272e931001081f21864aaaafa4f64e16c4f736",
+  "schema_version": "crucible-cnss-d-carry-balanced-acquisition-run-v1-20261101",
+  "seed": 1337,
+  "skill": "D",
+  "test_bit_accuracy": 0.966796875,
+  "test_exact_accuracy": 0.8125,
+  "test_mean_cosine": 0.9647039771080017,
+  "test_mean_displacement": 4.472049236297607,
+  "test_mean_signed_margin": 9.264890670776367,
+  "train_exact_accuracy": 1.0,
+  "train_mean_displacement": 3.2225804328918457,
+  "updates": 2000,
+  "validation_exact_accuracy": 0.84375,
+  "validation_mean_displacement": 4.062620162963867,
+  "wall_seconds": 3.4131386170047335
+}

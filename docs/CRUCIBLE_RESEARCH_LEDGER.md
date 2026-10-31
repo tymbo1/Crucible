@@ -53,7 +53,7 @@ reports that still need ledger entries.
 | `track-a-cnss-d-generalization-forensics-v1` | INCONCLUSIVE | Rank-32 errors concentrate in higher output bits and local transition dimensions consistent with carry/high-bit difficulty, but uneven strata prevent a unique mechanistic conclusion. |
 | `track-a-cnss-d-fault-isolation-v1` | INCONCLUSIVE | Canonical reconstruction is exact; high-bit failures have larger adapter displacement and cross decoder boundaries, but mixed local projections do not assign sole responsibility to the adapter or decoder. |
 | `track-a-cnss-d-lambda-acquisition-analysis-v1` | INCONCLUSIVE | Existing rank-32 lambda arms show reduced displacement but non-monotonic held-out D accuracy; alignment geometry alone does not solve acquisition. |
-| `track-a-cnss-d-carry-balanced-acquisition-v1` | UNTESTED | Protocol and CPU preflight passed after correcting an impossible one-epoch support assertion; no training has been authorized. |
+| `track-a-cnss-d-carry-balanced-acquisition-v1` | INCONCLUSIVE | Carry-balanced CPU training completed with 100% train fit but 82.8125% mean held-out accuracy versus 85.9375% for the paired control; all replay checks passed, but the 95% D gate remains closed. |
 
 The ledger now contains 69 records and indexes 47 canonical experiment report
 files (`REPORT_FINAL.md` and `REPORT.md`). The 23 older reports were extracted
@@ -122,4 +122,4 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `track-a-cnss-d-generalization-forensics-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_generalization_forensics_v1_20261101/D_GENERALIZATION_FORENSICS_RESULT.md` |
 | `track-a-cnss-d-fault-isolation-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_fault_isolation_v1_corrected_20261101/D_FAULT_ISOLATION_RESULT.md` |
 | `track-a-cnss-d-lambda-acquisition-analysis-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_lambda_acquisition_analysis_v1_20261101/D_LAMBDA_ACQUISITION_ANALYSIS_RESULT.md` |
-| `track-a-cnss-d-carry-balanced-acquisition-v1` | UNTESTED | `experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_PREFLIGHT_REPORT.md` |
+| `track-a-cnss-d-carry-balanced-acquisition-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_ACQUISITION_RESULT.md` |

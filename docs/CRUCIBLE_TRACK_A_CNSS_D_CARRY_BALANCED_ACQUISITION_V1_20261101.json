@@ -1,6 +1,6 @@
 {
   "schema_version": "crucible-cnss-d-carry-balanced-acquisition-v1-20261101",
-  "status": "REGISTERED_NOT_AUTHORIZED",
+  "status": "REGISTERED_SCIENTIFIC_TRAINING_AUTHORIZED",
   "title": "CNSS Skill D carry-balanced acquisition control",
   "objective": "Test whether balancing the frequency of existing carry-event strata improves held-out modular-addition acquisition without changing unique training support, model capacity, optimizer or test states.",
   "source_control": "rank-32, lambda 0.1, 2,000-update rows from experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101",
@@ -45,10 +45,10 @@
   ],
   "success_gate": "Balanced training must improve held-out accuracy over the paired existing control without reducing training integrity; the 95% individual D gate remains unchanged.",
   "authorization_boundary": {
-    "training_authorized": false,
+    "training_authorized": true,
     "gpu_authorized": false,
     "partner_rerun_authorized": false,
-    "authorized_by": null
+    "authorized_by": "explicit user instruction at 2026-11-01 07:45 local time"
   },
   "interpretation_rule": "A positive result would support a curriculum-frequency effect under the fixed workspace; it would not establish a carry algorithm or unlock composition by itself."
 }

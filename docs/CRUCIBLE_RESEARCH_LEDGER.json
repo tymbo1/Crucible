@@ -1629,21 +1629,30 @@
     },
     {
       "id": "track-a-cnss-d-carry-balanced-acquisition-v1",
-      "status": "UNTESTED",
+      "status": "INCONCLUSIVE",
       "title": "CNSS Skill D carry-balanced acquisition control",
       "hypothesis": "Balancing the frequency of existing carry-event strata will improve held-out modular-addition acquisition without changing candidate support, model capacity or the fixed test set.",
       "mechanisms": ["curriculum-frequency", "carry-coverage", "modular-addition-acquisition", "paired-initialization", "distribution-control"],
       "interventions": ["existing rank-32 lambda-0.1 control", "carry-event-balanced sampling with replacement", "exact 128-draw epochs", "three paired seeds"],
       "controls": ["same 128-state candidate support", "same persisted step-0 adapter states", "same workspace", "same validation/test partitions", "same optimizer and update budget", "no GPU until authorization", "95% D gate", "partner gate locked"],
-      "result": "Protocol registered and CPU preflight passed after correcting an implementation assertion. The first preflight incorrectly required a single balanced 128-draw epoch to contain every candidate state, which is impossible under exact quotas and unequal source strata. The corrected preflight checks candidate-support containment, exact quotas, partition isolation and paired checkpoint integrity. No training was performed.",
-      "limits": ["No neural acquisition result exists", "A balanced frequency control cannot distinguish curriculum effects from broader representation limitations until trained", "The fixed test set contains sparse low-carry strata", "Sampling with replacement changes exposure frequency rather than unique support"],
-      "unresolved": ["Whether balanced exposure improves held-out D accuracy", "Whether carry-balanced training changes latent displacement or decoder margins", "Whether any improvement reaches the 95% individual gate", "Whether a qualified D composes with other skills"],
+      "result": "The authorized CPU arm completed cleanly with 100% training accuracy for all three seeds, but held-out test accuracy was 85.9375%, 81.25% and 81.25% (mean 82.8125%) versus the paired existing-control mean of 85.9375%, a mean delta of -3.125 percentage points. All checkpoint, optimizer, workspace and fresh-process replay checks passed. Carry-balanced exposure therefore did not improve D acquisition under this registered schedule, and the 95% individual gate remains closed.",
+      "limits": ["The fixed held-out partition contains 64 states and sparse low-carry strata", "Sampling with replacement changes exposure frequency rather than unique support", "This single quota schedule cannot rule out all curriculum designs", "The result does not identify whether the lower score reflects carry coverage, order, or interaction with the fixed optimizer trajectory", "No carry algorithm, composition or cumulative-learning claim is established"],
+      "unresolved": ["Whether another preregistered curriculum can improve D acquisition without changing support", "Whether balanced exposure changes latent displacement or decoder margins relative to the paired control", "Whether any future condition reaches the 95% individual gate", "Whether a qualified D composes with other skills"],
       "artifacts": [
         "docs/CRUCIBLE_TRACK_A_CNSS_D_CARRY_BALANCED_ACQUISITION_V1_20261101.json",
         "docs/CRUCIBLE_TRACK_A_CNSS_D_CARRY_BALANCED_ACQUISITION_V1_20261101.md",
+        "tools/run_crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101.py",
         "tools/preflight_crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101.py",
         "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_PREFLIGHT_REPORT.json",
-        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_PREFLIGHT_REPORT.md"
+        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_PREFLIGHT_REPORT.md",
+        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/AUTHORIZATION.json",
+        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_AUTHORIZED_PREFLIGHT_REPORT.json",
+        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_AUTHORIZED_PREFLIGHT_REPORT.md",
+        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_ACQUISITION_RESULT.json",
+        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/CARRY_BALANCED_ACQUISITION_RESULT.md",
+        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/runs/seed_42.json",
+        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/runs/seed_1337.json",
+        "experiments/crucible_track_a_cnss_d_carry_balanced_acquisition_v1_20261101/runs/seed_2025.json"
       ],
       "novelty_terms": ["carry-balanced exposure", "candidate-support preservation", "paired step-zero initialization", "curriculum-frequency control"]
     }

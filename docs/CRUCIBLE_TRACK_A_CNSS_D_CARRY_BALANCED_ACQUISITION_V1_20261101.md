@@ -15,5 +15,5 @@ The rank-32, lambda-0.1, 2,000-update control already exists for all three
 seeds. The balanced arm must start from each corresponding persisted step-0
 adapter checkpoint, so initialization is paired rather than regenerated.
 
-This protocol is registered but not authorized for training. The D and partner
-gates remain closed.
+The user authorized this CPU-only control at 2026-11-01 07:45 local time. The
+D and partner gates remain closed.
