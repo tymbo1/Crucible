@@ -1,0 +1,98 @@
+{
+  "schema_version": "crucible-source-training-diagnostic-report-v1-20261031",
+  "status": "completed_execution_gate_failed",
+  "classification": "INCONCLUSIVE_PREREQUISITE_FAILURE",
+  "registration_commit": "d6d983d",
+  "authorization_artifact": "source-training-diagnostic-20261031-1320",
+  "device": "cuda: NVIDIA GeForce RTX 3060 Ti",
+  "precision": "bf16_autocast",
+  "training": {
+    "seeds": [42, 1337],
+    "phase_completed": "execution_positive_control",
+    "phase_blocked": "induction",
+    "execution_updates": 500,
+    "execution_checkpoints": [0, 50, 100, 250, 500],
+    "microbatch_size": 4,
+    "gradient_accumulation_steps": 2,
+    "effective_examples_per_update": 8,
+    "learning_rate": 0.0003,
+    "optimizer": "fresh_adamw",
+    "answer_loss": "fixed_answer_position_only",
+    "seed_elapsed_seconds": {"42": 129.03346619702643, "1337": 120.33387049898738},
+    "total_elapsed_seconds": 249.3673366960144
+  },
+  "final_metrics": {
+    "seed_42": {
+      "execution_train": {"correct": 16, "eligible": 16, "coverage": 1.0, "exact_accuracy": 1.0, "forced_binary_accuracy": 1.0, "majority_baseline_accuracy": 0.625},
+      "execution_validation": {"correct": 7, "eligible": 16, "answered": 16, "coverage": 1.0, "exact_accuracy": 0.4375, "forced_binary_accuracy": 0.4375, "majority_baseline_accuracy": 0.625, "gate_pass": false},
+      "execution_test": {"correct": 8, "eligible": 16, "answered": 16, "coverage": 1.0, "exact_accuracy": 0.5, "forced_binary_accuracy": 0.5},
+      "source_validation": {"correct": 17, "eligible": 32, "answered": 32, "coverage": 1.0, "exact_accuracy": 0.53125, "forced_binary_accuracy": 0.53125, "majority_baseline_accuracy": 0.5},
+      "source_function_validation": {"correct": 11, "eligible": 16, "answered": 16, "coverage": 1.0, "exact_accuracy": 0.6875, "forced_binary_accuracy": 0.6875, "majority_baseline_accuracy": 0.5625},
+      "source_test": {"correct": 20, "eligible": 32, "answered": 32, "coverage": 1.0, "exact_accuracy": 0.625, "forced_binary_accuracy": 0.625}
+    },
+    "seed_1337": {
+      "execution_train": {"correct": 16, "eligible": 16, "coverage": 1.0, "exact_accuracy": 1.0, "forced_binary_accuracy": 1.0, "majority_baseline_accuracy": 0.6875},
+      "execution_validation": {"correct": 9, "eligible": 16, "answered": 16, "coverage": 1.0, "exact_accuracy": 0.5625, "forced_binary_accuracy": 0.5625, "majority_baseline_accuracy": 0.6875, "gate_pass": false},
+      "execution_test": {"correct": 10, "eligible": 16, "answered": 16, "coverage": 1.0, "exact_accuracy": 0.625, "forced_binary_accuracy": 0.625},
+      "source_validation": {"correct": 10, "eligible": 32, "answered": 32, "coverage": 1.0, "exact_accuracy": 0.3125, "forced_binary_accuracy": 0.3125, "majority_baseline_accuracy": 0.5},
+      "source_function_validation": {"correct": 11, "eligible": 16, "answered": 16, "coverage": 1.0, "exact_accuracy": 0.6875, "forced_binary_accuracy": 0.6875, "majority_baseline_accuracy": 0.75},
+      "source_test": {"correct": 16, "eligible": 32, "answered": 32, "coverage": 1.0, "exact_accuracy": 0.5, "forced_binary_accuracy": 0.5}
+    }
+  },
+  "final_transitions_from_frozen_checkpoint": {
+    "seed_42": {
+      "execution_validation": {"abstain_to_correct": 7, "abstain_to_wrong": 9, "regressions": 0},
+      "execution_test": {"abstain_to_correct": 8, "abstain_to_wrong": 8, "regressions": 0},
+      "source_validation": {"abstain_to_correct": 17, "abstain_to_wrong": 15, "regressions": 0},
+      "source_function_validation": {"abstain_to_correct": 11, "abstain_to_wrong": 5, "regressions": 0},
+      "source_test": {"abstain_to_correct": 20, "abstain_to_wrong": 12, "regressions": 0}
+    },
+    "seed_1337": {
+      "execution_validation": {"abstain_to_correct": 9, "abstain_to_wrong": 7, "regressions": 0},
+      "execution_test": {"abstain_to_correct": 10, "abstain_to_wrong": 6, "regressions": 0},
+      "source_validation": {"abstain_to_correct": 10, "abstain_to_wrong": 22, "regressions": 0},
+      "source_function_validation": {"abstain_to_correct": 11, "abstain_to_wrong": 5, "regressions": 0},
+      "source_test": {"abstain_to_correct": 16, "abstain_to_wrong": 16, "regressions": 0}
+    },
+    "interpretation": "The frozen primary decoder abstained on every evaluated row, so zero regressions are vacuous and do not establish retention."
+  },
+  "checkpoint_audit": {
+    "count": 8,
+    "all_loadable": true,
+    "all_model_and_optimizer_tensors_finite": true,
+    "files": [
+      {"seed": 42, "update": 50, "sha256": "7c51e38c91fab38565735cbf8d2d5d1ced1be320bcf5cf17fca56c87bda321bb"},
+      {"seed": 42, "update": 100, "sha256": "6b6dfc31809e68adee7718997e442205800f7d8632d01139a791a1da081eec02"},
+      {"seed": 42, "update": 250, "sha256": "f1b697a8e3d509fcc33a47e6a1ee3453fcf5466d29b33df6938955bab5902786"},
+      {"seed": 42, "update": 500, "sha256": "0bb0e80cda5ddfd504b09718cd2c259c3596c2a78007934368adb21347fc2690"},
+      {"seed": 1337, "update": 50, "sha256": "a78dff48636d99c7ec0f957a12cfd48419357b94e3e3f54e063be1a2f1eee89e"},
+      {"seed": 1337, "update": 100, "sha256": "b60e86cf8e20482662b7f160c67780d9e0084103571a95a40ab9de7e18776cac"},
+      {"seed": 1337, "update": 250, "sha256": "083a60d5dfa098952ac0f672cef23832c64a3c566cf9b7a552ec0874a2deb3be"},
+      {"seed": 1337, "update": 500, "sha256": "15faa1c633d4a6a7829567725c2a6532de92e98479334dd4813fcb3d8c90c2e2"}
+    ]
+  },
+  "phase_classification": {
+    "explicit_procedure_execution": "NOT_ESTABLISHED",
+    "query_identifiable_induction": "NOT_TESTED_TRAINING_BLOCKED",
+    "function_identifiable_induction": "NOT_TESTED_TRAINING_BLOCKED",
+    "productive_retention": "NOT_TESTED",
+    "architectural_superiority": "NOT_TESTED"
+  },
+  "safety": {
+    "target_data_loaded": false,
+    "sealed_target_answers_loaded": false,
+    "induction_started": false,
+    "c0_c3_started": false,
+    "track_b_reopened": false,
+    "numerical_failure": false,
+    "resource_failure": false,
+    "decoder_coverage_at_final": {"seed_42": 1.0, "seed_1337": 1.0}
+  },
+  "interpretation": [
+    "Both seeds reached 16/16 execution training coverage, but neither reached the preregistered 14/16 execution-validation threshold.",
+    "Because coverage was 16/16 at validation, the failure is not explained by primary-decoder abstention.",
+    "The induction phase was correctly blocked and provides no neural induction result.",
+    "This does not falsify neural procedure learning generally; it is a negative prerequisite result under this checkpoint, objective and 500-update budget.",
+    "Zero protected regressions are not evidence of retention because the frozen primary decoder had no initially correct protected instances."
+  ]
+}

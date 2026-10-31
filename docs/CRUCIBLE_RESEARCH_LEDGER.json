@@ -1262,15 +1262,15 @@
     },
     {
       "id": "source-training-diagnostic-v1",
-      "status": "UNTESTED",
+      "status": "INCONCLUSIVE",
       "title": "Bounded source-competence training diagnostic",
       "hypothesis": "Starting from the frozen 120M Crucible checkpoint, answer-position training on repaired public source procedures will establish explicit execution and, separately, query/function-identifiable induction on held-out source procedures.",
       "mechanisms": ["source-task-acquisition", "explicit-procedure-execution", "query-identifiable-induction", "function-identification", "capability-retention"],
       "interventions": ["execution-only positive-control phase", "source-induction phase", "fixed answer-position objective", "protected checkpoint replay"],
       "controls": ["frozen step-15000 checkpoint", "separate seeds", "private source oracles", "majority and balanced baselines", "per-task transition tables", "fail-closed numerical checks", "no target access"],
-      "result": "The protocol and runner were registered and the CPU preflight passed: 320 public/private rows, structural and functional separation, decoder fixtures, finite step-15000 checkpoint and checkpoint round-trip all passed. No source training has started.",
-      "limits": ["No neural acquisition result yet", "No dense architectural comparison", "The function-identification validation set is pilot-sized", "The Boolean grammar and byte prompt remain engineered scaffolding", "Productive retention and C0-C3 remain blocked"],
-      "unresolved": ["Whether explicit execution can be acquired under the fixed answer-position objective", "Whether query-identifiable induction generalizes beyond source examples", "Whether function-identifiable induction reaches its per-seed gate", "Whether later learning preserves and reuses any acquired source capability"],
+      "result": "The CPU preflight passed, then the authorized execution-positive-control phase completed on both seeds. Both seeds reached 16/16 training execution coverage, but held-out execution was 7/16 and 9/16 against the preregistered 14/16 gate. Coverage was 16/16, all eight checkpoints were finite and loadable, and the runner stopped before induction as required.",
+      "limits": ["Explicit execution was not established under this checkpoint, objective and 500-update budget", "Induction was not run because the positive-control gate failed", "No dense architectural comparison", "The function-identification validation set is pilot-sized", "The Boolean grammar and byte prompt remain engineered scaffolding", "Productive retention and C0-C3 remain blocked"],
+      "unresolved": ["Whether the execution failure is caused by prompt/objective alignment, optimization, representation or insufficient source-task budget", "Whether query-identifiable induction generalizes beyond source examples", "Whether function-identifiable induction reaches its per-seed gate", "Whether later learning preserves and reuses any acquired source capability"],
       "artifacts": [
         "docs/CRUCIBLE_SOURCE_TRAINING_DIAGNOSTIC_PROTOCOL_20261031.md",
         "experiments/crucible_source_training_diagnostic_20261031/DIAGNOSTIC_PROTOCOL.json",
@@ -1278,6 +1278,9 @@
         "tools/run_crucible_source_training_diagnostic_20261031.py",
         "experiments/crucible_source_training_diagnostic_20261031/PREFLIGHT_REPORT.json",
         "experiments/crucible_source_training_diagnostic_20261031/PREFLIGHT_REPORT.md",
+        "experiments/crucible_source_training_diagnostic_20261031/SOURCE_TRAINING_DIAGNOSTIC_REPORT.json",
+        "experiments/crucible_source_training_diagnostic_20261031/SOURCE_TRAINING_DIAGNOSTIC_REPORT.md",
+        "experiments/crucible_source_training_diagnostic_20261031/LAST_FAILURE.json",
         "experiments/crucible_source_competence_frozen_diagnostic_20261031/FROZEN_DIAGNOSTIC_REPORT.md"
       ],
       "novelty_terms": ["source-task training", "answer-position objective", "execution positive control", "function-identifiable induction", "protected replay"]
