@@ -1681,22 +1681,31 @@
     },
     {
       "id": "track-a-cnss-workspace-accessibility-causal-control-v1",
-      "status": "UNTESTED",
+      "status": "FAILED",
       "title": "CNSS matched workspace-accessibility causal control",
       "hypothesis": "A shared signed-bit coordinate workspace will improve Skill D acquisition relative to the recovered nonlinear workspace when adapter, optimizer, support, schedule and evaluation are held constant.",
       "mechanisms": ["workspace-accessibility", "representation-geometry", "matched-causal-control", "signed-bit-coordinate-interface"],
       "interventions": ["original recovered workspace", "deterministic 256-wide signed-bit alternative", "paired rank-32 D training if authorized"],
       "controls": ["same 256-dimensional interface", "same rank-32 adapter and parameter count", "same paired step-zero states", "same candidate support and partitions", "same optimizer and update budget", "alternative built without the D rule or held-out answers", "no GPU until authorization", "partner gate locked"],
-      "result": "Protocol registered and CPU preflight passed. The original and deterministic signed-bit workspaces both reconstruct all 256 states exactly and pass canonical A-D reconstruction. The alternative uses eight groups of 32 signed bit coordinates, amplitude 0.8 and a fixed group-mean decoder; it has zero trainable workspace parameters. No training has been authorized or performed.",
-      "limits": ["The alternative is an analytical mechanism control rather than an architecture-equivalent learned workspace", "Workspace compute and wall-clock cost must be reported", "Preflight establishes reconstruction and interface integrity, not acquisition or composition", "A positive result would be bounded to this workspace construction"],
-      "unresolved": ["Whether D generalizes better under the alternative workspace", "Whether any gain is due to geometry, coordinate semantics or reduced workspace complexity", "Whether A-C can be acquired and composed under the alternative without special treatment", "Whether the effect persists at larger state widths"],
+      "result": "The authorized CPU arm completed with 100% training accuracy for all three seeds, but the signed-bit alternative reached 84.375%, 68.75% and 73.4375% held-out test accuracy (mean 75.5208%) versus 85.9375% for the paired original-workspace control, a mean delta of -10.4167 percentage points. No alternative seed passed the 95% D gate and all three conditions failed the decisive workspace-support criterion. Checkpoint, optimizer and fresh-process replay checks passed. The registered signed-bit accessibility hypothesis therefore failed under these conditions; this does not rule out other workspace designs or a broader geometry effect.",
+      "limits": ["The alternative is an analytical mechanism control rather than an architecture-equivalent learned workspace", "Its zero-parameter fixed workspace changes workspace compute and effective representation complexity", "The result tests one signed-bit construction, not all accessible representations", "The negative result does not identify whether the failure arose from coordinate semantics, optimizer interaction or the remaining carry computation", "No composition or cumulative-learning claim is established"],
+      "unresolved": ["Whether a different operation-independent workspace can improve D acquisition", "Whether a workspace preserving both arithmetic structure and the original latent complexity changes the result", "Whether A-C can be acquired and composed under any alternative workspace without special treatment", "Whether the original D geometry remains predictive at larger state widths"],
       "artifacts": [
         "docs/CRUCIBLE_TRACK_A_CNSS_WORKSPACE_ACCESSIBILITY_CAUSAL_CONTROL_V1_20261101.json",
         "docs/CRUCIBLE_TRACK_A_CNSS_WORKSPACE_ACCESSIBILITY_CAUSAL_CONTROL_V1_20261101.md",
         "tools/preflight_crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101.py",
+        "tools/run_crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101.py",
         "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/ALTERNATIVE_WORKSPACE_SPEC.json",
         "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/WORKSPACE_ACCESSIBILITY_PREFLIGHT_REPORT.json",
-        "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/WORKSPACE_ACCESSIBILITY_PREFLIGHT_REPORT.md"
+        "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/WORKSPACE_ACCESSIBILITY_PREFLIGHT_REPORT.md",
+        "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/AUTHORIZATION.json",
+        "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/AUTHORIZED_PREFLIGHT_REPORT.json",
+        "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/MANIFEST_PUBLIC.json",
+        "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/WORKSPACE_ACCESSIBILITY_CAUSAL_CONTROL_RESULT.json",
+        "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/WORKSPACE_ACCESSIBILITY_CAUSAL_CONTROL_RESULT.md",
+        "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/runs/seed_42.json",
+        "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/runs/seed_1337.json",
+        "experiments/crucible_track_a_cnss_workspace_accessibility_causal_control_v1_20261101/runs/seed_2025.json"
       ],
       "novelty_terms": ["matched workspace-accessibility control", "signed-bit coordinate workspace", "operation-independent representation", "paired D acquisition", "geometry versus acquisition"]
     }

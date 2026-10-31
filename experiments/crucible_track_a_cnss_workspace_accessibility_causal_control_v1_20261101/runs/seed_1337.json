@@ -1,0 +1,52 @@
+{
+  "checkpoint_hashes": [
+    {
+      "sha256": "1a1d1b024894421b7f036c9e2463144dc529cbd5df8795a81206c6efe564e641",
+      "step": 0
+    },
+    {
+      "sha256": "cc2f6449b81239fb2072d9cf0aad99c0ec8faddb06f27df7254c1addc385f9e3",
+      "step": 500
+    },
+    {
+      "sha256": "253dcf999d46b5f19e99383a0aa4ca0dacb7fe2a9385399c95ed205a98ee5e9c",
+      "step": 1000
+    },
+    {
+      "sha256": "1cd0884ba8f8251f7d11ab1556b6127e1cadec35ee1a4970d37cf113bbfd9864",
+      "step": 1500
+    },
+    {
+      "sha256": "f47331cc6ea2a984de0547b915f76d40294b22585db09574cc79c9cf5c0ff0d1",
+      "step": 2000
+    }
+  ],
+  "checkpoint_integrity": true,
+  "lambda": 0.1,
+  "paired_original_result_row": {
+    "test_exact_accuracy": 0.859375,
+    "train_exact_accuracy": 1.0,
+    "validation_exact_accuracy": 0.875
+  },
+  "paired_original_step0_sha256": "5c16b6478bbde571566620a959c4e87f0a7daa303928d025a00c4853f8e8cae7",
+  "parameter_count": 16672,
+  "rank": 32,
+  "replay_test_exact_accuracy": 0.6875,
+  "schedule_sha256": "7ab869dbce482ec040289c1205584ac259fa123a1ceae9ce1adc4f58e419aa2e",
+  "schema_version": "crucible-cnss-workspace-accessibility-run-v1-20261101",
+  "seed": 1337,
+  "skill": "D",
+  "test_bit_accuracy": 0.939453125,
+  "test_exact_accuracy": 0.6875,
+  "test_mean_cosine": 0.8249174952507019,
+  "test_mean_displacement": 7.006343364715576,
+  "test_mean_signed_margin": 7.145090103149414,
+  "train_bit_accuracy": 1.0,
+  "train_exact_accuracy": 1.0,
+  "updates": 2000,
+  "validation_bit_accuracy": 0.947265625,
+  "validation_exact_accuracy": 0.6875,
+  "wall_seconds": 2.8417786660138518,
+  "workspace_kind": "signed_bit_coordinate",
+  "workspace_spec_sha256": "8351d0d776711a8e8a678730b9ec29b4abb79a9ba751080658a4aa5c49be867e"
+}

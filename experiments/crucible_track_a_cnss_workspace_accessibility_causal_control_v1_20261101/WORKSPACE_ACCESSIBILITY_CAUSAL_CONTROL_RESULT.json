@@ -1,0 +1,211 @@
+{
+  "alternative_workspace_spec_sha256": "8351d0d776711a8e8a678730b9ec29b4abb79a9ba751080658a4aa5c49be867e",
+  "checkpoint_integrity": true,
+  "classification": "COMPLETED_AUTHORIZED_WORKSPACE_ACCESSIBILITY_CAUSAL_CONTROL",
+  "decision": {
+    "alternative_all_seed_d_gate": false,
+    "decisive_workspace_support": false,
+    "individual_d_gate_required": 0.95,
+    "interpretation": "A positive result supports a bounded workspace-design effect, not a unique geometric cause or automatic composability.",
+    "no_seed_worse": false,
+    "partner_rerun_unlocked": false
+  },
+  "elapsed_wall_seconds": 10.317759800003842,
+  "fresh_process_replay": {
+    "classification": "FRESH_PROCESS_REPLAY_PASSED",
+    "gpu_used": false,
+    "seeds": [
+      42,
+      1337,
+      2025
+    ]
+  },
+  "gpu_used": false,
+  "lambda": 0.1,
+  "manifest_sha256": "2e4aa662801f03f7cab65f3c645a452901b5ed2d2ed0f2c881153214ba8b323e",
+  "operation": "x + 0x37 modulo 256",
+  "original_workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+  "paired_comparison": {
+    "alternative_mean_test_accuracy": 0.7552083333333334,
+    "mean_delta_alternative_minus_original": -0.10416666666666663,
+    "original_mean_test_accuracy": 0.859375,
+    "original_workspace_source_result": "experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101/D_SKILL_CORRECTIVE_CONTROLS_RESULT.json",
+    "seed_deltas": {
+      "1337": -0.171875,
+      "2025": -0.125,
+      "42": -0.015625
+    }
+  },
+  "protocol": "docs/CRUCIBLE_TRACK_A_CNSS_WORKSPACE_ACCESSIBILITY_CAUSAL_CONTROL_V1_20261101.json",
+  "protocol_sha256": "1ed5d5b380530b56803d26dfe4d0f9ccf52a14c2d72511fb4f01c4572990d201",
+  "rank": 32,
+  "rows": [
+    {
+      "checkpoint_hashes": [
+        {
+          "sha256": "04c71c0df26e465505f574c2e9c827a2f34e4969b1763f08cd77d1d885ff3ba3",
+          "step": 0
+        },
+        {
+          "sha256": "0d187b0eee7bf86c3826bcb14f90a2d68cdc316caad87d3fc7f0495d6255380d",
+          "step": 500
+        },
+        {
+          "sha256": "2288991a048cbb6a3b4e38d883dae6c5bb2a778cce5f1fae409601bfb5f9e5b0",
+          "step": 1000
+        },
+        {
+          "sha256": "638ac1b4801b193ac2b1264f65873dd3f7ee141f21965db8dbec0e290f6ca847",
+          "step": 1500
+        },
+        {
+          "sha256": "20e2c6289fa2a0773576f5742e6567bd5e7fd01b345bae828e93c6c9ffe333db",
+          "step": 2000
+        }
+      ],
+      "checkpoint_integrity": true,
+      "lambda": 0.1,
+      "paired_original_result_row": {
+        "test_exact_accuracy": 0.859375,
+        "train_exact_accuracy": 1.0,
+        "validation_exact_accuracy": 0.859375
+      },
+      "paired_original_step0_sha256": "c982a3d53716c518ae99cbb1d90f529dfca6c6a5d21fbde3a9c494b4e4f0b2af",
+      "parameter_count": 16672,
+      "rank": 32,
+      "replay_test_exact_accuracy": 0.84375,
+      "schedule_sha256": "2016937e8d65c72eae76a2540c54561303180c1b12528ceec72e17a0e0093ccf",
+      "schema_version": "crucible-cnss-workspace-accessibility-run-v1-20261101",
+      "seed": 42,
+      "skill": "D",
+      "test_bit_accuracy": 0.966796875,
+      "test_exact_accuracy": 0.84375,
+      "test_mean_cosine": 0.8898032903671265,
+      "test_mean_displacement": 5.956017971038818,
+      "test_mean_signed_margin": 7.613400936126709,
+      "train_bit_accuracy": 1.0,
+      "train_exact_accuracy": 1.0,
+      "updates": 2000,
+      "validation_bit_accuracy": 0.97265625,
+      "validation_exact_accuracy": 0.84375,
+      "wall_seconds": 2.844407021009829,
+      "workspace_kind": "signed_bit_coordinate",
+      "workspace_spec_sha256": "8351d0d776711a8e8a678730b9ec29b4abb79a9ba751080658a4aa5c49be867e"
+    },
+    {
+      "checkpoint_hashes": [
+        {
+          "sha256": "1a1d1b024894421b7f036c9e2463144dc529cbd5df8795a81206c6efe564e641",
+          "step": 0
+        },
+        {
+          "sha256": "cc2f6449b81239fb2072d9cf0aad99c0ec8faddb06f27df7254c1addc385f9e3",
+          "step": 500
+        },
+        {
+          "sha256": "253dcf999d46b5f19e99383a0aa4ca0dacb7fe2a9385399c95ed205a98ee5e9c",
+          "step": 1000
+        },
+        {
+          "sha256": "1cd0884ba8f8251f7d11ab1556b6127e1cadec35ee1a4970d37cf113bbfd9864",
+          "step": 1500
+        },
+        {
+          "sha256": "f47331cc6ea2a984de0547b915f76d40294b22585db09574cc79c9cf5c0ff0d1",
+          "step": 2000
+        }
+      ],
+      "checkpoint_integrity": true,
+      "lambda": 0.1,
+      "paired_original_result_row": {
+        "test_exact_accuracy": 0.859375,
+        "train_exact_accuracy": 1.0,
+        "validation_exact_accuracy": 0.875
+      },
+      "paired_original_step0_sha256": "5c16b6478bbde571566620a959c4e87f0a7daa303928d025a00c4853f8e8cae7",
+      "parameter_count": 16672,
+      "rank": 32,
+      "replay_test_exact_accuracy": 0.6875,
+      "schedule_sha256": "7ab869dbce482ec040289c1205584ac259fa123a1ceae9ce1adc4f58e419aa2e",
+      "schema_version": "crucible-cnss-workspace-accessibility-run-v1-20261101",
+      "seed": 1337,
+      "skill": "D",
+      "test_bit_accuracy": 0.939453125,
+      "test_exact_accuracy": 0.6875,
+      "test_mean_cosine": 0.8249174952507019,
+      "test_mean_displacement": 7.006343364715576,
+      "test_mean_signed_margin": 7.145090103149414,
+      "train_bit_accuracy": 1.0,
+      "train_exact_accuracy": 1.0,
+      "updates": 2000,
+      "validation_bit_accuracy": 0.947265625,
+      "validation_exact_accuracy": 0.6875,
+      "wall_seconds": 2.8417786660138518,
+      "workspace_kind": "signed_bit_coordinate",
+      "workspace_spec_sha256": "8351d0d776711a8e8a678730b9ec29b4abb79a9ba751080658a4aa5c49be867e"
+    },
+    {
+      "checkpoint_hashes": [
+        {
+          "sha256": "7e706317fd6afa5f486db82d3d81a429b27495481672a649a42dcdb3d67613ac",
+          "step": 0
+        },
+        {
+          "sha256": "80d392a6da4ab1630b399c56dc57c6722758104347d7880af400b9c2d2864ee9",
+          "step": 500
+        },
+        {
+          "sha256": "ca1e4337ffcc6c4b4ba2cea7a96e0b98ef470468e75aee384459ce82dc2bf029",
+          "step": 1000
+        },
+        {
+          "sha256": "4a1b54cb422c5d1744f5e6924ee88a468efd9f329abe4fc37d6c1b5b0cf3442e",
+          "step": 1500
+        },
+        {
+          "sha256": "0c651c1be01e001457fc753729e78df582f311d0ee8f38d434aa6b399b86a777",
+          "step": 2000
+        }
+      ],
+      "checkpoint_integrity": true,
+      "lambda": 0.1,
+      "paired_original_result_row": {
+        "test_exact_accuracy": 0.859375,
+        "train_exact_accuracy": 1.0,
+        "validation_exact_accuracy": 0.875
+      },
+      "paired_original_step0_sha256": "200b2c26355c597d5704651da8c197b3fca9c96b33ffdb69efa01a3ca5fa938b",
+      "parameter_count": 16672,
+      "rank": 32,
+      "replay_test_exact_accuracy": 0.734375,
+      "schedule_sha256": "fa794c06b3fb2d99cf4f4c7f6ce75fe5a06dd71b90d7f0fcffaadfd1065d1589",
+      "schema_version": "crucible-cnss-workspace-accessibility-run-v1-20261101",
+      "seed": 2025,
+      "skill": "D",
+      "test_bit_accuracy": 0.947265625,
+      "test_exact_accuracy": 0.734375,
+      "test_mean_cosine": 0.8337872624397278,
+      "test_mean_displacement": 6.866580963134766,
+      "test_mean_signed_margin": 7.2086615562438965,
+      "train_bit_accuracy": 1.0,
+      "train_exact_accuracy": 1.0,
+      "updates": 2000,
+      "validation_bit_accuracy": 0.935546875,
+      "validation_exact_accuracy": 0.625,
+      "wall_seconds": 2.8376852740184404,
+      "workspace_kind": "signed_bit_coordinate",
+      "workspace_spec_sha256": "8351d0d776711a8e8a678730b9ec29b4abb79a9ba751080658a4aa5c49be867e"
+    }
+  ],
+  "schema_version": "crucible-cnss-workspace-accessibility-causal-control-result-v1-20261101",
+  "scientific_boundary": "This is a paired CPU workspace-accessibility control for one 8-bit operation. It does not establish general composability, cumulative learning or architecture superiority.",
+  "seeds": [
+    42,
+    1337,
+    2025
+  ],
+  "skill": "D",
+  "source_runner_sha256": "345d0666d5bebb44417b67c0fe6a641603e83c97927b9fc722d556d7172eab1b",
+  "updates": 2000,
+  "workspace_kind": "signed_bit_coordinate"
+}
