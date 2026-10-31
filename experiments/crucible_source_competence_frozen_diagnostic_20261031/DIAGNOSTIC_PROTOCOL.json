@@ -1,0 +1,42 @@
+{
+  "schema_version": "crucible-source-competence-frozen-diagnostic-v1-20261031",
+  "date": "2026-10-31",
+  "status": "authorized_frozen_inference_only",
+  "scientific_authorization": true,
+  "training_authorized": false,
+  "training_started": false,
+  "target_data_loaded": false,
+  "sealed_target_answers_loaded": false,
+  "execution_environment": {
+    "sandbox_cuda_device_nodes": false,
+    "host_cuda_verified": true,
+    "required_cuda_mode": "host_unsandboxed_execution"
+  },
+  "checkpoint": {
+    "path": "<local-path-redacted>",
+    "sha256": "e49faa226aaa96bc26f4abbed700ecf313ad59cbf68869cfc0327c61f5902d5a",
+    "step": 15000
+  },
+  "curriculum_manifest": {
+    "path": "experiments/crucible_source_curriculum_repair_20261031/MANIFEST.json",
+    "sha256": "699c7a2f82a5ff630ee59df689916131ec4eabd5de1513cdf4665f15141e055c"
+  },
+  "manifest_seeds": [42, 1337],
+  "evaluated_categories": [
+    "explicit_execution",
+    "query_identifiable_induction",
+    "function_identifiable_induction"
+  ],
+  "decoder": {
+    "mode": "fixed_position_one_step",
+    "allowed_answer_tokens": [51, 52],
+    "tie": "abstain",
+    "non_answer": "abstain",
+    "nonfinite": "hard_failure"
+  },
+  "positive_control": "synthetic_finite_logits_through_same_decoder",
+  "protected_test": "record_initial_source_test_correctness_only",
+  "transitions": "not_applicable_without_training",
+  "original_two_arm_comparison": "unchanged_and_blocked",
+  "productive_retention_C0_C3": "blocked"
+}
