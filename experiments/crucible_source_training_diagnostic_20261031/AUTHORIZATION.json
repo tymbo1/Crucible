@@ -1,0 +1,70 @@
+{
+  "schema_version": "crucible-source-training-authorization-v1-20261031",
+  "authorization_id": "source-training-diagnostic-20261031-1320",
+  "authorized_at": "2026-10-31T13:20:00+10:00",
+  "authorized_by": "user",
+  "training_authorized": true,
+  "registration_commit": "d6d983d",
+  "protocol_sha256": "62dcaf3dfa66160f6fa940f83e06caa1ce915e7817abe372625d98b791693af1",
+  "runner_sha256": "9a1ef518c4c485f8a89921a6f9f74a5d30d306c60cae02c2b98e5ef143ecf46f",
+  "dependency_hashes": {
+    "experiments/crucible_heterogeneous_training_throughput_20261029/benchmark.py": "3f9514738b20066a38a53364953bdf9e0ee352bf8785e116af4ad4d638dd66dd",
+    "tools/run_crucible_foundation_training_20261029.py": "79b87286243a8bb5f9e2c905a3e105f2e73b9d4f6adc0092f2c05a9f54cb9c30"
+  },
+  "dirty_worktree_hashes": {
+    "experiments/crucible_120m_foundation_local_20261029/results_gpu/FOUNDATION_TRAINING_REPORT.json": "ce63a7864479d910494a94095f3f8f631bd23e5c40d0aaccbe2937942a9ab0b2",
+    "experiments/crucible_120m_foundation_local_20261029/results_gpu/FOUNDATION_TRAINING_REPORT.md": "2cc5549b7a2fe4b936fd7b479d6bfbd02ce79e46a0e285801e3da726e79bda6b",
+    "experiments/crucible_120m_foundation_local_20261029/results_gpu/HASHES.json": "99d78b88a150eaf7a917c90e5f0b8c653161933093522103148e8eb00d80f234",
+    "experiments/crucible_120m_foundation_local_20261029/results_gpu/TRAINING_CURVE.jsonl": "cfc4ec7445f5a14e67cb3ff4902baf11fc8aef916d923d0568d49481c5c27db7",
+    "tools/crucible_cumulative_adaptation_scientific_runner_20261028.py": "df8b73526415a860299dc68a8e42d10da2fd702866618deaaf81b16097f39f90"
+  },
+  "worktree_audit": {
+    "pre_existing_modified_paths_are_not_imported_by_diagnostic": true,
+    "report_artifacts_are_not_code_or_inputs": true,
+    "cumulative_adaptation_runner_is_not_imported": true,
+    "diagnostic_imports_only_hashed_clean_dependencies": true
+  },
+  "frozen_training_budget": {
+    "seeds": [42, 1337],
+    "execution_positive_control": {
+      "training_split": "execution_train",
+      "updates": 500,
+      "checkpoints": [0, 50, 100, 250, 500]
+    },
+    "induction": {
+      "training_split": "source_train",
+      "updates": 1000,
+      "checkpoints": [0, 100, 250, 500, 750, 1000],
+      "requires_execution_phase_pass": true
+    },
+    "microbatch_size": 4,
+    "gradient_accumulation_steps": 2,
+    "effective_examples_per_update": 8,
+    "learning_rate": 0.0003,
+    "optimizer": "fresh_adamw",
+    "weight_decay": 0.01,
+    "betas": [0.9, 0.95],
+    "eps": 1e-8,
+    "gradient_clip_norm": 1.0,
+    "answer_loss": "fixed_answer_position_only",
+    "cuda_precision": "bf16_autocast_if_supported"
+  },
+  "stopping_rules": {
+    "stop_on_nonfinite_loss_gradient_model_optimizer_logits": true,
+    "stop_on_checkpoint_roundtrip_failure": true,
+    "stop_on_resource_failure": true,
+    "stop_on_leakage_or_hash_mismatch": true,
+    "no_validation_checkpoint_selection": true,
+    "no_target_data_or_sealed_answers": true,
+    "c0_c3_or_track_b_execution": false
+  },
+  "protected_competency_criteria": {
+    "replay_source_test_and_execution_test": true,
+    "record_all_per_task_transitions": true,
+    "record_correct_to_wrong_and_correct_to_abstain": true,
+    "checkpoint_with_protected_regressions_not_promotable": true,
+    "aggregate_accuracy_cannot_hide_regressions": true
+  },
+  "target_data_loaded": false,
+  "sealed_target_answers_loaded": false
+}

@@ -38,6 +38,7 @@ from run_crucible_foundation_training_20261029 import foundation_model_config  #
 
 SCHEMA = "crucible-source-training-diagnostic-v1-20261031"
 PROTOCOL = ROOT / "experiments" / "crucible_source_training_diagnostic_20261031" / "DIAGNOSTIC_PROTOCOL.json"
+AUTHORIZATION = ROOT / "experiments" / "crucible_source_training_diagnostic_20261031" / "AUTHORIZATION.json"
 REPAIR_ROOT = ROOT / "experiments" / "crucible_source_curriculum_repair_20261031"
 ORACLE_ROOT = Path("/home/timbushnell/crucible_source_curriculum_repair_oracles_20261031")
 CHECKPOINT = Path("/home/timbushnell/crucible_120m_checkpoints_20261029/crucible_120m_foundation_step_015000.pt")
@@ -325,6 +326,31 @@ def checkpoint_payload() -> Dict[str, Any]:
     if missing:
         raise DiagnosticError(f"base checkpoint missing fields: {missing}")
     return payload
+
+
+def verify_authorization(path: Path) -> Dict[str, Any]:
+    if not path.is_file():
+        raise DiagnosticError(f"missing authorization artifact: {path}")
+    authorization = read_json(path)
+    if authorization.get("training_authorized") is not True:
+        raise DiagnosticError("authorization artifact does not authorize training")
+    if authorization.get("registration_commit") != "d6d983d":
+        raise DiagnosticError("authorization artifact does not identify the registered protocol commit")
+    if authorization.get("protocol_sha256") != sha256_file(PROTOCOL):
+        raise DiagnosticError("authorization artifact protocol hash mismatch")
+    if authorization.get("runner_sha256") != sha256_file(Path(__file__).resolve()):
+        raise DiagnosticError("authorization artifact runner hash mismatch")
+    for relative, expected in authorization.get("dependency_hashes", {}).items():
+        path_to_check = ROOT / relative
+        if not path_to_check.is_file() or sha256_file(path_to_check) != expected:
+            raise DiagnosticError(f"diagnostic dependency changed: {relative}")
+    for relative, expected in authorization.get("dirty_worktree_hashes", {}).items():
+        path_to_check = ROOT / relative
+        if not path_to_check.is_file() or sha256_file(path_to_check) != expected:
+            raise DiagnosticError(f"pre-existing dirty file changed after audit: {relative}")
+    if authorization.get("target_data_loaded") is not False or authorization.get("sealed_target_answers_loaded") is not False:
+        raise DiagnosticError("authorization artifact has unsafe target-access flags")
+    return authorization
 
 
 def load_model(payload: Mapping[str, Any], seed: int, device: torch.device) -> torch.nn.Module:
@@ -672,6 +698,7 @@ def main() -> int:
     parser.add_argument("--phase", choices=("execution", "induction", "all"), default="all")
     parser.add_argument("--device", choices=("cpu", "cuda"), default="cpu")
     parser.add_argument("--authorize-source-training", action="store_true")
+    parser.add_argument("--authorization-artifact", type=Path, default=AUTHORIZATION)
     args = parser.parse_args()
     try:
         if args.mode == "preflight":
@@ -680,6 +707,7 @@ def main() -> int:
             return 0
         if not args.authorize_source_training:
             raise DiagnosticError("training requires explicit --authorize-source-training")
+        authorization = verify_authorization(args.authorization_artifact.resolve())
         if args.device == "cuda":
             if not torch.cuda.is_available():
                 raise DiagnosticError("CUDA requested but unavailable")
@@ -700,6 +728,8 @@ def main() -> int:
             "training_started": True,
             "target_data_loaded": False,
             "sealed_target_answers_loaded": False,
+            "authorization_artifact": str(args.authorization_artifact.resolve()),
+            "authorization_id": authorization.get("authorization_id"),
             "execution_positive_control_pass_both_seeds": execution_pass,
             "reports": reports,
         }
