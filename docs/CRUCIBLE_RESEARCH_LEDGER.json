@@ -1585,6 +1585,28 @@
         "experiments/crucible_track_a_cnss_d_generalization_forensics_v1_20261101/D_GENERALIZATION_FORENSICS_SUPPLEMENT.md"
       ],
       "novelty_terms": ["carry-event stratification", "one-bit transition consistency", "high-bit error localization", "rank-32 D forensics", "read-only arithmetic audit"]
+    },
+    {
+      "id": "track-a-cnss-d-fault-isolation-v1",
+      "status": "INCONCLUSIVE",
+      "title": "CNSS Skill D canonical-state and high-bit fault isolation",
+      "hypothesis": "Rank-32 modular-addition failures can be separated into canonical workspace reconstruction failure, adapter state-production error and decoder sensitivity by interventions on existing checkpoints.",
+      "mechanisms": ["canonical-state-reconstruction", "adapter-latent-displacement", "decoder-boundary-crossing", "carry-geometry", "high-bit-error-direction"],
+      "interventions": ["exhaustive canonical input/result reconstruction", "carry and chain correlations", "actual-to-canonical displacement", "signed decoder margins", "matched high-bit error controls", "decoder-Jacobian projections", "canonical-to-actual interpolation"],
+      "controls": ["132 saved rank-32 checkpoints", "24 final checkpoints", "exact recovered workspace", "independent modular-addition oracle", "no training", "no parameter updates", "no GPU", "partner gate remains locked"],
+      "result": "Canonical input and result-state reconstruction were both 100% over all 256 states. Error groups for masks 0x80, 0x60, 0x40 and 0xC0 had substantially larger adapter displacement than matched correct controls, and their actual signed decoder margins were negative while controls remained positive. Interpolation remained correct at 25% of the actual error and degraded between 50% and 75%; displacement norm and actual margin had a mean final-checkpoint Pearson correlation of approximately -0.94. Local decoder-boundary projections were mixed across masks. The evidence supports structured adapter state-production error propagating across decoder boundaries, but does not assign sole responsibility to the adapter or decoder and does not establish an internal sequential carry algorithm.",
+      "limits": ["Matched controls use feature-matched states with fallback tiers", "Repeated checkpoints and seeds are not independent observations", "Carry correlations remain descriptive", "No parameter intervention or new training was performed", "The first generated report had a matched-control projection placeholder and was superseded by a corrected artifact path", "No new capability or composition claim is established"],
+      "unresolved": ["Whether a carry-preserving workspace or objective reduces adapter displacement", "Whether decoder robustness training can tolerate the observed structured errors", "Whether the same geometry appears for other non-invertible or arithmetic skills", "Whether exact seed-matched controls change the fault localization"],
+      "artifacts": [
+        "docs/CRUCIBLE_TRACK_A_CNSS_D_FAULT_ISOLATION_V1_20261101.json",
+        "docs/CRUCIBLE_TRACK_A_CNSS_D_FAULT_ISOLATION_V1_20261101.md",
+        "tools/audit_crucible_track_a_cnss_d_fault_isolation_v1_20261101.py",
+        "experiments/crucible_track_a_cnss_d_fault_isolation_v1_corrected_20261101/D_FAULT_ISOLATION_RESULT.json",
+        "experiments/crucible_track_a_cnss_d_fault_isolation_v1_corrected_20261101/D_FAULT_ISOLATION_RESULT.md",
+        "experiments/crucible_track_a_cnss_d_fault_isolation_v1_corrected_20261101/D_FAULT_ISOLATION_SUPPLEMENT.json",
+        "experiments/crucible_track_a_cnss_d_fault_isolation_v1_corrected_20261101/D_FAULT_ISOLATION_SUPPLEMENT.md"
+      ],
+      "novelty_terms": ["canonical-state fault isolation", "decoder-boundary crossing", "matched high-bit error controls", "actual-error interpolation", "adapter displacement versus margin"]
     }
   ]
 }

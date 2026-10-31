@@ -1,0 +1,33 @@
+{
+  "schema_version": "crucible-cnss-d-fault-isolation-supplement-v1-20261101",
+  "source": "D_FAULT_ISOLATION_RESULT.json",
+  "final_checkpoint_count": 24,
+  "canonical_reconstruction": {
+    "input_state_exact_accuracy": 1.0,
+    "result_state_exact_accuracy": 1.0
+  },
+  "final_checkpoint_correlation_means": {
+    "carry_count_vs_displacement_norm_pearson": -0.28728738004904797,
+    "carry_count_vs_displacement_norm_spearman": -0.2759855235135538,
+    "carry_chain_vs_displacement_norm_pearson": -0.21931093355830564,
+    "carry_chain_vs_displacement_norm_spearman": -0.21508984757297978,
+    "carry_count_vs_actual_margin_pearson": 0.20927462599286314,
+    "carry_chain_vs_actual_margin_pearson": 0.149589420099631,
+    "displacement_norm_vs_actual_margin_pearson": -0.9378956041551046,
+    "displacement_norm_vs_actual_margin_spearman": -0.744337740568017
+  },
+  "high_bit_error_groups": {
+    "128": {"error_count": 101, "matched_control_count": 101, "error_displacement_mean": 5.651939040363425, "control_displacement_mean": 2.014086951123606, "error_margin_mean": -4.020359451080313, "control_margin_mean": 7.96459536726522, "error_projection_mean": 0.1232793075539688, "control_projection_mean": -0.05792212404200051, "error_pca_rank_95": 5, "control_pca_rank_95": 10},
+    "96": {"error_count": 99, "matched_control_count": 99, "error_displacement_mean": 7.63096798309172, "control_displacement_mean": 2.0590595127356175, "error_margin_mean": -10.028418156835768, "control_margin_mean": 8.012994765783802, "error_projection_mean": -0.060369123413105207, "control_projection_mean": -0.149905331893777, "error_pca_rank_95": 4, "control_pca_rank_95": 10},
+    "64": {"error_count": 79, "matched_control_count": 79, "error_displacement_mean": 5.908844289900381, "control_displacement_mean": 2.1067666562297678, "error_margin_mean": -4.75317468418728, "control_margin_mean": 7.809171649474132, "error_projection_mean": 0.053859884874258614, "control_projection_mean": -0.21805903805962093, "error_pca_rank_95": 5, "control_pca_rank_95": 11},
+    "192": {"error_count": 78, "matched_control_count": 78, "error_displacement_mean": 7.845195030554747, "control_displacement_mean": 1.825980198688996, "error_margin_mean": -7.153028619595063, "control_margin_mean": 8.774354705443749, "error_projection_mean": 0.05318790497497106, "control_projection_mean": -0.029534908927953206, "error_pca_rank_95": 3, "control_pca_rank_95": 11}
+  },
+  "canonical_to_actual_interpolation_exact_accuracy": {
+    "128": {"0.0": 1.0, "0.25": 1.0, "0.5": 0.9504950495049505, "0.75": 0.6336633663366337, "1.0": 0.0},
+    "96": {"0.0": 1.0, "0.25": 1.0, "0.5": 0.7070707070707071, "0.75": 0.20202020202020202, "1.0": 0.0},
+    "64": {"0.0": 1.0, "0.25": 1.0, "0.5": 1.0, "0.75": 0.5189873417721519, "1.0": 0.0},
+    "192": {"0.0": 1.0, "0.25": 1.0, "0.5": 0.8076923076923077, "0.75": 0.4358974358974359, "1.0": 0.0}
+  },
+  "interpretation": "The frozen workspace can encode and decode every tested input and correct result state exactly. High-bit failure states have substantially larger adapter displacement and negative decoder margins than matched correct controls. The actual adapter state crosses decoder decision boundaries along its error direction, but the local Jacobian projections are mixed across masks. The evidence therefore supports structured upstream state-production error with downstream boundary crossing, while not assigning sole responsibility to the adapter or decoder.",
+  "limitations": ["Matched controls use feature-matched states with documented fallback tiers", "Final checkpoints and seeds are repeated observations, not independent samples", "Carry correlations are descriptive and do not establish a sequential carry algorithm", "No training or causal parameter intervention was performed", "Partner-generalization and the 95% D gate remain locked"]
+}

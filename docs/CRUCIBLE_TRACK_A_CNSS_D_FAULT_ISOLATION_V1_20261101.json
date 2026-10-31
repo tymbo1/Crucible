@@ -1,0 +1,43 @@
+{
+  "schema_version": "crucible-cnss-d-fault-isolation-v1-20261101",
+  "status": "REGISTERED_READ_ONLY_DIAGNOSTIC_AUTHORIZED",
+  "title": "CNSS Skill D canonical-state and high-bit fault isolation",
+  "objective": "Separate canonical workspace reconstruction, adapter transformation error and decoder sensitivity as explanations for rank-32 modular-addition failures.",
+  "source_audit": "experiments/crucible_track_a_cnss_d_generalization_forensics_v1_20261101",
+  "scope": {
+    "rank": 32,
+    "updates": [2000, 8000],
+    "lambda_values": [0.1, 0.4, 0.9, 1.0],
+    "seeds": [42, 1337, 2025],
+    "all_input_states": 256,
+    "error_masks": [128, 96, 64, 192],
+    "interpolation_alphas": [0.0, 0.25, 0.5, 0.75, 1.0]
+  },
+  "diagnostics": [
+    "exhaustive canonical encoder-decoder reconstruction",
+    "carry count and maximum consecutive carry-chain length",
+    "adapter-to-canonical Euclidean displacement and cosine",
+    "signed decoder margins at canonical and actual states",
+    "Pearson and Spearman correlations without linearity assumptions",
+    "matched controls for high-bit error masks",
+    "decoder Jacobian margin projections",
+    "canonical-to-actual interpolation sensitivity",
+    "all-checkpoint trajectory comparison"
+  ],
+  "controls": [
+    "no optimizer updates",
+    "no parameter mutation",
+    "exact recovered workspace digest",
+    "independent modular-addition oracle",
+    "all rank-32 checkpoints, not test-selected checkpoints",
+    "public aggregate report only",
+    "partner-generalization gate remains locked"
+  ],
+  "authorization_boundary": {
+    "training_authorized": false,
+    "gpu_authorized": false,
+    "partner_rerun_authorized": false,
+    "read_only_diagnostic": true
+  },
+  "interpretation_rule": "The audit may localize observed errors and compare interventions, but it cannot establish an internal carry algorithm, a unique representation defect or a new learned capability without a separate causal experiment."
+}
