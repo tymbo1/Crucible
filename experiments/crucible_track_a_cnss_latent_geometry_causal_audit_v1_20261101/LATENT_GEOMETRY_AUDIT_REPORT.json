@@ -1,0 +1,1698 @@
+{
+  "alpha_values": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    1.0
+  ],
+  "classification": "COMPLETED_NO_TRAINING_GEOMETRY_AUDIT",
+  "conditions": [
+    "lambda_0.1",
+    "lambda_1.0"
+  ],
+  "cross_seed": {
+    "lambda_0.1": {
+      "b_actual_accuracy_by_seed": {
+        "1337": 0.8984375,
+        "2025": 0.76171875,
+        "42": 0.8125
+      },
+      "b_canonical_accuracy_by_seed": {
+        "1337": 1.0,
+        "2025": 1.0,
+        "42": 1.0
+      },
+      "mean_canonical_cosine": 0.9450828060507774,
+      "mean_canonical_rescue_count": 45.0,
+      "mean_displacement_l2": 5.138547781544427,
+      "mean_gaussian_norm_matched_accuracy": 1.0
+    },
+    "lambda_1.0": {
+      "b_actual_accuracy_by_seed": {
+        "1337": 0.9921875,
+        "2025": 1.0,
+        "42": 0.98828125
+      },
+      "b_canonical_accuracy_by_seed": {
+        "1337": 1.0,
+        "2025": 1.0,
+        "42": 1.0
+      },
+      "mean_canonical_cosine": 0.9833326338945577,
+      "mean_canonical_rescue_count": 1.6666666666666667,
+      "mean_displacement_l2": 2.7798434388823807,
+      "mean_gaussian_norm_matched_accuracy": 1.0
+    }
+  },
+  "gpu_used": false,
+  "interpretation_boundary": "These are no-training causal diagnostics of existing checkpoints. They do not establish new learning, forward transfer or broad compositional generalization.",
+  "oracle_repair": false,
+  "parameter_updates": false,
+  "schema_version": "crucible-cnss-latent-geometry-causal-audit-v1-20261101",
+  "seeds": [
+    42,
+    1337,
+    2025
+  ],
+  "source_scientific_classification_unchanged": "EXPLORATORY_CPU_SCIENTIFIC_RESULT",
+  "state_count_per_condition": 256,
+  "summaries": [
+    {
+      "a_actual_exact_accuracy": 0.9921875,
+      "actual_error_count": 48,
+      "actual_error_injection_exact_accuracy": 0.8125,
+      "adapter_a_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_primary_lambda_0.1/seed_42/skill_A/checkpoint_2000.pt",
+      "adapter_a_checkpoint_sha256": "835e05eaa310da1b1fc9a3dfb10102760cda09ba92a55d6046fb6dd1fc375644",
+      "adapter_a_digest": "9291e83b912d50fa14b6ce6770673e0f0414d1bf6985fa328e8fabc4cb9e26c8",
+      "adapter_b_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_primary_lambda_0.1/seed_42/skill_B/checkpoint_2000.pt",
+      "adapter_b_checkpoint_sha256": "52876433742598a2e260afdfa4debaa42aae26399c45f83fb56c622edf2501d5",
+      "adapter_b_digest": "a164ed171df0720f825851c954a7342383b9f3c2062054297b282e5761787eaa",
+      "b_actual_exact_accuracy": 0.8125,
+      "b_canonical_exact_accuracy": 1.0,
+      "canonical_cosine": {
+        "count": 256,
+        "max": 0.9909664392471313,
+        "mean": 0.9436913612298667,
+        "median": 0.9435373544692993,
+        "min": 0.8637794852256775,
+        "std": 0.01816472756500109
+      },
+      "canonical_regression_count": 0,
+      "canonical_rescue_count": 48,
+      "checkpoint_step": 2000,
+      "condition": "lambda_0.1",
+      "displacement_l2": {
+        "count": 256,
+        "max": 7.344074249267578,
+        "mean": 5.191833549179137,
+        "median": 5.254707336425781,
+        "min": 2.8249456882476807,
+        "std": 0.8223607782344596
+      },
+      "gaussian_norm_matched_exact_accuracy": 1.0,
+      "interpolation": {
+        "0.00": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.05": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.10": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.15": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.20": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.25": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.30": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.35": {
+          "correct": 253,
+          "count": 256,
+          "exact_accuracy": 0.98828125
+        },
+        "0.40": {
+          "correct": 247,
+          "count": 256,
+          "exact_accuracy": 0.96484375
+        },
+        "0.45": {
+          "correct": 244,
+          "count": 256,
+          "exact_accuracy": 0.953125
+        },
+        "0.50": {
+          "correct": 239,
+          "count": 256,
+          "exact_accuracy": 0.93359375
+        },
+        "0.55": {
+          "correct": 233,
+          "count": 256,
+          "exact_accuracy": 0.91015625
+        },
+        "0.60": {
+          "correct": 230,
+          "count": 256,
+          "exact_accuracy": 0.8984375
+        },
+        "0.65": {
+          "correct": 226,
+          "count": 256,
+          "exact_accuracy": 0.8828125
+        },
+        "0.70": {
+          "correct": 221,
+          "count": 256,
+          "exact_accuracy": 0.86328125
+        },
+        "0.75": {
+          "correct": 217,
+          "count": 256,
+          "exact_accuracy": 0.84765625
+        },
+        "0.80": {
+          "correct": 215,
+          "count": 256,
+          "exact_accuracy": 0.83984375
+        },
+        "0.85": {
+          "correct": 214,
+          "count": 256,
+          "exact_accuracy": 0.8359375
+        },
+        "0.90": {
+          "correct": 212,
+          "count": 256,
+          "exact_accuracy": 0.828125
+        },
+        "0.95": {
+          "correct": 211,
+          "count": 256,
+          "exact_accuracy": 0.82421875
+        },
+        "1.00": {
+          "correct": 208,
+          "count": 256,
+          "exact_accuracy": 0.8125
+        }
+      },
+      "lambda": 0.1,
+      "principal_axis_perturbations": [
+        {
+          "axis": 0,
+          "correct": 137,
+          "count": 256,
+          "exact_accuracy": 0.53515625,
+          "sign": 1
+        },
+        {
+          "axis": 0,
+          "correct": 129,
+          "count": 256,
+          "exact_accuracy": 0.50390625,
+          "sign": -1
+        },
+        {
+          "axis": 1,
+          "correct": 94,
+          "count": 256,
+          "exact_accuracy": 0.3671875,
+          "sign": 1
+        },
+        {
+          "axis": 1,
+          "correct": 113,
+          "count": 256,
+          "exact_accuracy": 0.44140625,
+          "sign": -1
+        },
+        {
+          "axis": 2,
+          "correct": 226,
+          "count": 256,
+          "exact_accuracy": 0.8828125,
+          "sign": 1
+        },
+        {
+          "axis": 2,
+          "correct": 242,
+          "count": 256,
+          "exact_accuracy": 0.9453125,
+          "sign": -1
+        },
+        {
+          "axis": 3,
+          "correct": 159,
+          "count": 256,
+          "exact_accuracy": 0.62109375,
+          "sign": 1
+        },
+        {
+          "axis": 3,
+          "correct": 146,
+          "count": 256,
+          "exact_accuracy": 0.5703125,
+          "sign": -1
+        },
+        {
+          "axis": 4,
+          "correct": 161,
+          "count": 256,
+          "exact_accuracy": 0.62890625,
+          "sign": 1
+        },
+        {
+          "axis": 4,
+          "correct": 150,
+          "count": 256,
+          "exact_accuracy": 0.5859375,
+          "sign": -1
+        },
+        {
+          "axis": 5,
+          "correct": 241,
+          "count": 256,
+          "exact_accuracy": 0.94140625,
+          "sign": 1
+        },
+        {
+          "axis": 5,
+          "correct": 241,
+          "count": 256,
+          "exact_accuracy": 0.94140625,
+          "sign": -1
+        },
+        {
+          "axis": 6,
+          "correct": 174,
+          "count": 256,
+          "exact_accuracy": 0.6796875,
+          "sign": 1
+        },
+        {
+          "axis": 6,
+          "correct": 165,
+          "count": 256,
+          "exact_accuracy": 0.64453125,
+          "sign": -1
+        },
+        {
+          "axis": 7,
+          "correct": 184,
+          "count": 256,
+          "exact_accuracy": 0.71875,
+          "sign": 1
+        },
+        {
+          "axis": 7,
+          "correct": 168,
+          "count": 256,
+          "exact_accuracy": 0.65625,
+          "sign": -1
+        }
+      ],
+      "principal_axis_singular_values_top": [
+        38.37800979614258,
+        33.82728576660156,
+        28.864126205444336,
+        26.771358489990234,
+        26.186138153076172,
+        23.55918312072754,
+        21.28407859802246,
+        17.220932006835938
+      ],
+      "seed": 42,
+      "state_count": 256,
+      "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+    },
+    {
+      "a_actual_exact_accuracy": 1.0,
+      "actual_error_count": 26,
+      "actual_error_injection_exact_accuracy": 0.8984375,
+      "adapter_a_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_primary_lambda_0.1/seed_1337/skill_A/checkpoint_2000.pt",
+      "adapter_a_checkpoint_sha256": "2c9caa1bcfd0241f5646c1d7341e2d3ce2624b990d09afce5d845fa634fe8b75",
+      "adapter_a_digest": "6309a9d64dadb8aa83f03e7b1d6726e17ba7a4a69b9c4c776ea9ef774fbbc13e",
+      "adapter_b_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_primary_lambda_0.1/seed_1337/skill_B/checkpoint_2000.pt",
+      "adapter_b_checkpoint_sha256": "31621df6675470eb31cd3d267528d2b13269aa10512b62a04c710a319b395a66",
+      "adapter_b_digest": "0e38b5a2bf428d8e8bc6a02bb08dc571a7e1b53bfc1aa01c8b690f44df496827",
+      "b_actual_exact_accuracy": 0.8984375,
+      "b_canonical_exact_accuracy": 1.0,
+      "canonical_cosine": {
+        "count": 256,
+        "max": 0.9921449422836304,
+        "mean": 0.9520906000398099,
+        "median": 0.9538492560386658,
+        "min": 0.8664929866790771,
+        "std": 0.01652567594920805
+      },
+      "canonical_regression_count": 0,
+      "canonical_rescue_count": 26,
+      "checkpoint_step": 2000,
+      "condition": "lambda_0.1",
+      "displacement_l2": {
+        "count": 256,
+        "max": 7.259270191192627,
+        "mean": 4.78970545437187,
+        "median": 4.703296661376953,
+        "min": 2.28446364402771,
+        "std": 0.7467992158134479
+      },
+      "gaussian_norm_matched_exact_accuracy": 1.0,
+      "interpolation": {
+        "0.00": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.05": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.10": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.15": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.20": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.25": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.30": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.35": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.40": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.45": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.50": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.55": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.60": {
+          "correct": 255,
+          "count": 256,
+          "exact_accuracy": 0.99609375
+        },
+        "0.65": {
+          "correct": 252,
+          "count": 256,
+          "exact_accuracy": 0.984375
+        },
+        "0.70": {
+          "correct": 247,
+          "count": 256,
+          "exact_accuracy": 0.96484375
+        },
+        "0.75": {
+          "correct": 242,
+          "count": 256,
+          "exact_accuracy": 0.9453125
+        },
+        "0.80": {
+          "correct": 239,
+          "count": 256,
+          "exact_accuracy": 0.93359375
+        },
+        "0.85": {
+          "correct": 237,
+          "count": 256,
+          "exact_accuracy": 0.92578125
+        },
+        "0.90": {
+          "correct": 234,
+          "count": 256,
+          "exact_accuracy": 0.9140625
+        },
+        "0.95": {
+          "correct": 232,
+          "count": 256,
+          "exact_accuracy": 0.90625
+        },
+        "1.00": {
+          "correct": 230,
+          "count": 256,
+          "exact_accuracy": 0.8984375
+        }
+      },
+      "lambda": 0.1,
+      "principal_axis_perturbations": [
+        {
+          "axis": 0,
+          "correct": 200,
+          "count": 256,
+          "exact_accuracy": 0.78125,
+          "sign": 1
+        },
+        {
+          "axis": 0,
+          "correct": 197,
+          "count": 256,
+          "exact_accuracy": 0.76953125,
+          "sign": -1
+        },
+        {
+          "axis": 1,
+          "correct": 183,
+          "count": 256,
+          "exact_accuracy": 0.71484375,
+          "sign": 1
+        },
+        {
+          "axis": 1,
+          "correct": 168,
+          "count": 256,
+          "exact_accuracy": 0.65625,
+          "sign": -1
+        },
+        {
+          "axis": 2,
+          "correct": 251,
+          "count": 256,
+          "exact_accuracy": 0.98046875,
+          "sign": 1
+        },
+        {
+          "axis": 2,
+          "correct": 250,
+          "count": 256,
+          "exact_accuracy": 0.9765625,
+          "sign": -1
+        },
+        {
+          "axis": 3,
+          "correct": 201,
+          "count": 256,
+          "exact_accuracy": 0.78515625,
+          "sign": 1
+        },
+        {
+          "axis": 3,
+          "correct": 211,
+          "count": 256,
+          "exact_accuracy": 0.82421875,
+          "sign": -1
+        },
+        {
+          "axis": 4,
+          "correct": 255,
+          "count": 256,
+          "exact_accuracy": 0.99609375,
+          "sign": 1
+        },
+        {
+          "axis": 4,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": -1
+        },
+        {
+          "axis": 5,
+          "correct": 126,
+          "count": 256,
+          "exact_accuracy": 0.4921875,
+          "sign": 1
+        },
+        {
+          "axis": 5,
+          "correct": 103,
+          "count": 256,
+          "exact_accuracy": 0.40234375,
+          "sign": -1
+        },
+        {
+          "axis": 6,
+          "correct": 178,
+          "count": 256,
+          "exact_accuracy": 0.6953125,
+          "sign": 1
+        },
+        {
+          "axis": 6,
+          "correct": 187,
+          "count": 256,
+          "exact_accuracy": 0.73046875,
+          "sign": -1
+        },
+        {
+          "axis": 7,
+          "correct": 129,
+          "count": 256,
+          "exact_accuracy": 0.50390625,
+          "sign": 1
+        },
+        {
+          "axis": 7,
+          "correct": 129,
+          "count": 256,
+          "exact_accuracy": 0.50390625,
+          "sign": -1
+        }
+      ],
+      "principal_axis_singular_values_top": [
+        33.7148323059082,
+        29.508790969848633,
+        28.189516067504883,
+        26.38704490661621,
+        23.83735466003418,
+        22.262741088867188,
+        20.418397903442383,
+        15.322309494018555
+      ],
+      "seed": 1337,
+      "state_count": 256,
+      "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+    },
+    {
+      "a_actual_exact_accuracy": 0.98046875,
+      "actual_error_count": 61,
+      "actual_error_injection_exact_accuracy": 0.76171875,
+      "adapter_a_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_primary_lambda_0.1/seed_2025/skill_A/checkpoint_2000.pt",
+      "adapter_a_checkpoint_sha256": "74e95c5a28f3a2868d6e87c9db57f6cf7a9714cd5c64275b1810c23fb8c193ba",
+      "adapter_a_digest": "bee8947a99a13b96437b5e90b4a965fa78d505f5a7284c7048d99def99b8199f",
+      "adapter_b_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_primary_lambda_0.1/seed_2025/skill_B/checkpoint_2000.pt",
+      "adapter_b_checkpoint_sha256": "d16d141ca7d9ea5c760468a6b5ae22aff1628d09e86976c4fcc77e7c5747d3ad",
+      "adapter_b_digest": "aea0b886cad91da16780b07d855977da610cae5eb67a649c364b2d0a41b0de9f",
+      "b_actual_exact_accuracy": 0.76171875,
+      "b_canonical_exact_accuracy": 1.0,
+      "canonical_cosine": {
+        "count": 256,
+        "max": 0.9900183081626892,
+        "mean": 0.9394664568826556,
+        "median": 0.9404290318489075,
+        "min": 0.8506934642791748,
+        "std": 0.020450562451099854
+      },
+      "canonical_regression_count": 0,
+      "canonical_rescue_count": 61,
+      "checkpoint_step": 2000,
+      "condition": "lambda_0.1",
+      "displacement_l2": {
+        "count": 256,
+        "max": 8.024802207946777,
+        "mean": 5.434104341082275,
+        "median": 5.502050399780273,
+        "min": 2.5254876613616943,
+        "std": 0.8639306358982245
+      },
+      "gaussian_norm_matched_exact_accuracy": 1.0,
+      "interpolation": {
+        "0.00": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.05": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.10": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.15": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.20": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.25": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.30": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.35": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.40": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.45": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.50": {
+          "correct": 255,
+          "count": 256,
+          "exact_accuracy": 0.99609375
+        },
+        "0.55": {
+          "correct": 250,
+          "count": 256,
+          "exact_accuracy": 0.9765625
+        },
+        "0.60": {
+          "correct": 249,
+          "count": 256,
+          "exact_accuracy": 0.97265625
+        },
+        "0.65": {
+          "correct": 247,
+          "count": 256,
+          "exact_accuracy": 0.96484375
+        },
+        "0.70": {
+          "correct": 243,
+          "count": 256,
+          "exact_accuracy": 0.94921875
+        },
+        "0.75": {
+          "correct": 235,
+          "count": 256,
+          "exact_accuracy": 0.91796875
+        },
+        "0.80": {
+          "correct": 225,
+          "count": 256,
+          "exact_accuracy": 0.87890625
+        },
+        "0.85": {
+          "correct": 220,
+          "count": 256,
+          "exact_accuracy": 0.859375
+        },
+        "0.90": {
+          "correct": 209,
+          "count": 256,
+          "exact_accuracy": 0.81640625
+        },
+        "0.95": {
+          "correct": 202,
+          "count": 256,
+          "exact_accuracy": 0.7890625
+        },
+        "1.00": {
+          "correct": 195,
+          "count": 256,
+          "exact_accuracy": 0.76171875
+        }
+      },
+      "lambda": 0.1,
+      "principal_axis_perturbations": [
+        {
+          "axis": 0,
+          "correct": 90,
+          "count": 256,
+          "exact_accuracy": 0.3515625,
+          "sign": 1
+        },
+        {
+          "axis": 0,
+          "correct": 106,
+          "count": 256,
+          "exact_accuracy": 0.4140625,
+          "sign": -1
+        },
+        {
+          "axis": 1,
+          "correct": 156,
+          "count": 256,
+          "exact_accuracy": 0.609375,
+          "sign": 1
+        },
+        {
+          "axis": 1,
+          "correct": 139,
+          "count": 256,
+          "exact_accuracy": 0.54296875,
+          "sign": -1
+        },
+        {
+          "axis": 2,
+          "correct": 115,
+          "count": 256,
+          "exact_accuracy": 0.44921875,
+          "sign": 1
+        },
+        {
+          "axis": 2,
+          "correct": 98,
+          "count": 256,
+          "exact_accuracy": 0.3828125,
+          "sign": -1
+        },
+        {
+          "axis": 3,
+          "correct": 145,
+          "count": 256,
+          "exact_accuracy": 0.56640625,
+          "sign": 1
+        },
+        {
+          "axis": 3,
+          "correct": 131,
+          "count": 256,
+          "exact_accuracy": 0.51171875,
+          "sign": -1
+        },
+        {
+          "axis": 4,
+          "correct": 79,
+          "count": 256,
+          "exact_accuracy": 0.30859375,
+          "sign": 1
+        },
+        {
+          "axis": 4,
+          "correct": 83,
+          "count": 256,
+          "exact_accuracy": 0.32421875,
+          "sign": -1
+        },
+        {
+          "axis": 5,
+          "correct": 137,
+          "count": 256,
+          "exact_accuracy": 0.53515625,
+          "sign": 1
+        },
+        {
+          "axis": 5,
+          "correct": 133,
+          "count": 256,
+          "exact_accuracy": 0.51953125,
+          "sign": -1
+        },
+        {
+          "axis": 6,
+          "correct": 120,
+          "count": 256,
+          "exact_accuracy": 0.46875,
+          "sign": 1
+        },
+        {
+          "axis": 6,
+          "correct": 111,
+          "count": 256,
+          "exact_accuracy": 0.43359375,
+          "sign": -1
+        },
+        {
+          "axis": 7,
+          "correct": 238,
+          "count": 256,
+          "exact_accuracy": 0.9296875,
+          "sign": 1
+        },
+        {
+          "axis": 7,
+          "correct": 241,
+          "count": 256,
+          "exact_accuracy": 0.94140625,
+          "sign": -1
+        }
+      ],
+      "principal_axis_singular_values_top": [
+        38.6709098815918,
+        36.477230072021484,
+        29.363676071166992,
+        27.335220336914062,
+        26.243671417236328,
+        24.01799774169922,
+        23.0676212310791,
+        20.961198806762695
+      ],
+      "seed": 2025,
+      "state_count": 256,
+      "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+    },
+    {
+      "a_actual_exact_accuracy": 1.0,
+      "actual_error_count": 3,
+      "actual_error_injection_exact_accuracy": 0.98828125,
+      "adapter_a_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_secondary_lambda_1.0/seed_42/skill_A/checkpoint_2000.pt",
+      "adapter_a_checkpoint_sha256": "f432b8d02c00fadbb4bdfcde88e9431de819556e4b1e39eb332c5eb51ecd79b7",
+      "adapter_a_digest": "7a0047686b1a00ce347b99de20454dc961ba5a3b3d032ccb5553ae49aa52f3b9",
+      "adapter_b_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_secondary_lambda_1.0/seed_42/skill_B/checkpoint_2000.pt",
+      "adapter_b_checkpoint_sha256": "3a93b87e646f79ad6b245703580ec5c563ea553f6f3dd35421973595a5b02a5d",
+      "adapter_b_digest": "fd4d2bb34c325f5ef697848e52595e42d8c7a5583e19511ea906dd78f2e59933",
+      "b_actual_exact_accuracy": 0.98828125,
+      "b_canonical_exact_accuracy": 1.0,
+      "canonical_cosine": {
+        "count": 256,
+        "max": 0.99687659740448,
+        "mean": 0.985002719797194,
+        "median": 0.9861931204795837,
+        "min": 0.9532156586647034,
+        "std": 0.006624010683762945
+      },
+      "canonical_regression_count": 0,
+      "canonical_rescue_count": 3,
+      "checkpoint_step": 2000,
+      "condition": "lambda_1.0",
+      "displacement_l2": {
+        "count": 256,
+        "max": 4.415143013000488,
+        "mean": 2.658840104471892,
+        "median": 2.6581339836120605,
+        "min": 1.5213713645935059,
+        "std": 0.5544036648257462
+      },
+      "gaussian_norm_matched_exact_accuracy": 1.0,
+      "interpolation": {
+        "0.00": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.05": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.10": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.15": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.20": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.25": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.30": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.35": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.40": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.45": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.50": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.55": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.60": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.65": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.70": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.75": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.80": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.85": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.90": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.95": {
+          "correct": 254,
+          "count": 256,
+          "exact_accuracy": 0.9921875
+        },
+        "1.00": {
+          "correct": 253,
+          "count": 256,
+          "exact_accuracy": 0.98828125
+        }
+      },
+      "lambda": 1.0,
+      "principal_axis_perturbations": [
+        {
+          "axis": 0,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 0,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": -1
+        },
+        {
+          "axis": 1,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 1,
+          "correct": 252,
+          "count": 256,
+          "exact_accuracy": 0.984375,
+          "sign": -1
+        },
+        {
+          "axis": 2,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 2,
+          "correct": 248,
+          "count": 256,
+          "exact_accuracy": 0.96875,
+          "sign": -1
+        },
+        {
+          "axis": 3,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 3,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": -1
+        },
+        {
+          "axis": 4,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 4,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": -1
+        },
+        {
+          "axis": 5,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 5,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": -1
+        },
+        {
+          "axis": 6,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 6,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": -1
+        },
+        {
+          "axis": 7,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 7,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": -1
+        }
+      ],
+      "principal_axis_singular_values_top": [
+        20.492935180664062,
+        18.903108596801758,
+        15.625683784484863,
+        13.549703598022461,
+        12.565398216247559,
+        10.485790252685547,
+        10.199226379394531,
+        7.485836029052734
+      ],
+      "seed": 42,
+      "state_count": 256,
+      "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+    },
+    {
+      "a_actual_exact_accuracy": 1.0,
+      "actual_error_count": 2,
+      "actual_error_injection_exact_accuracy": 0.9921875,
+      "adapter_a_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_secondary_lambda_1.0/seed_1337/skill_A/checkpoint_2000.pt",
+      "adapter_a_checkpoint_sha256": "f41817550962ae92bb55d3be00f5df5931a7f748f08c0fe6df3f0c62b9583d35",
+      "adapter_a_digest": "f988df63e8e60d4fa33a0638a417619e167d6ea309ac7d22ef4963455e270bee",
+      "adapter_b_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_secondary_lambda_1.0/seed_1337/skill_B/checkpoint_2000.pt",
+      "adapter_b_checkpoint_sha256": "ed8a6984a3f831506b18fd122af756eed3e5da1f5ef87d41f689cb68f89e6e77",
+      "adapter_b_digest": "b9e6e7fdb9aab8987500b40fdc5a676e1cc666b77bcbb24d8c05232cec969899",
+      "b_actual_exact_accuracy": 0.9921875,
+      "b_canonical_exact_accuracy": 1.0,
+      "canonical_cosine": {
+        "count": 256,
+        "max": 0.997859001159668,
+        "mean": 0.9830912267789245,
+        "median": 0.9843038320541382,
+        "min": 0.9415885210037231,
+        "std": 0.008486464124595616
+      },
+      "canonical_regression_count": 0,
+      "canonical_rescue_count": 2,
+      "checkpoint_step": 2000,
+      "condition": "lambda_1.0",
+      "displacement_l2": {
+        "count": 256,
+        "max": 4.512434005737305,
+        "mean": 2.7897570580244064,
+        "median": 2.784768581390381,
+        "min": 1.4542163610458374,
+        "std": 0.6466682130218271
+      },
+      "gaussian_norm_matched_exact_accuracy": 1.0,
+      "interpolation": {
+        "0.00": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.05": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.10": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.15": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.20": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.25": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.30": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.35": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.40": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.45": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.50": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.55": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.60": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.65": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.70": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.75": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.80": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.85": {
+          "correct": 255,
+          "count": 256,
+          "exact_accuracy": 0.99609375
+        },
+        "0.90": {
+          "correct": 255,
+          "count": 256,
+          "exact_accuracy": 0.99609375
+        },
+        "0.95": {
+          "correct": 255,
+          "count": 256,
+          "exact_accuracy": 0.99609375
+        },
+        "1.00": {
+          "correct": 254,
+          "count": 256,
+          "exact_accuracy": 0.9921875
+        }
+      },
+      "lambda": 1.0,
+      "principal_axis_perturbations": [
+        {
+          "axis": 0,
+          "correct": 252,
+          "count": 256,
+          "exact_accuracy": 0.984375,
+          "sign": 1
+        },
+        {
+          "axis": 0,
+          "correct": 242,
+          "count": 256,
+          "exact_accuracy": 0.9453125,
+          "sign": -1
+        },
+        {
+          "axis": 1,
+          "correct": 252,
+          "count": 256,
+          "exact_accuracy": 0.984375,
+          "sign": 1
+        },
+        {
+          "axis": 1,
+          "correct": 254,
+          "count": 256,
+          "exact_accuracy": 0.9921875,
+          "sign": -1
+        },
+        {
+          "axis": 2,
+          "correct": 246,
+          "count": 256,
+          "exact_accuracy": 0.9609375,
+          "sign": 1
+        },
+        {
+          "axis": 2,
+          "correct": 246,
+          "count": 256,
+          "exact_accuracy": 0.9609375,
+          "sign": -1
+        },
+        {
+          "axis": 3,
+          "correct": 249,
+          "count": 256,
+          "exact_accuracy": 0.97265625,
+          "sign": 1
+        },
+        {
+          "axis": 3,
+          "correct": 248,
+          "count": 256,
+          "exact_accuracy": 0.96875,
+          "sign": -1
+        },
+        {
+          "axis": 4,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 4,
+          "correct": 255,
+          "count": 256,
+          "exact_accuracy": 0.99609375,
+          "sign": -1
+        },
+        {
+          "axis": 5,
+          "correct": 225,
+          "count": 256,
+          "exact_accuracy": 0.87890625,
+          "sign": 1
+        },
+        {
+          "axis": 5,
+          "correct": 227,
+          "count": 256,
+          "exact_accuracy": 0.88671875,
+          "sign": -1
+        },
+        {
+          "axis": 6,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 6,
+          "correct": 255,
+          "count": 256,
+          "exact_accuracy": 0.99609375,
+          "sign": -1
+        },
+        {
+          "axis": 7,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 7,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": -1
+        }
+      ],
+      "principal_axis_singular_values_top": [
+        24.696672439575195,
+        18.167600631713867,
+        15.190007209777832,
+        13.16933536529541,
+        12.723573684692383,
+        11.454336166381836,
+        10.731447219848633,
+        7.91404914855957
+      ],
+      "seed": 1337,
+      "state_count": 256,
+      "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+    },
+    {
+      "a_actual_exact_accuracy": 1.0,
+      "actual_error_count": 0,
+      "actual_error_injection_exact_accuracy": 1.0,
+      "adapter_a_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_secondary_lambda_1.0/seed_2025/skill_A/checkpoint_2000.pt",
+      "adapter_a_checkpoint_sha256": "5506498d3eb1288c17ada3b45b478bbbad8cdcfb6acc305faca4b58531cce10f",
+      "adapter_a_digest": "781e2f8d1b5d8596615ed4dda053adadf08f8d2db92fe003172fc2a23d57eb2c",
+      "adapter_b_checkpoint": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/checkpoints/B_shared_contract_secondary_lambda_1.0/seed_2025/skill_B/checkpoint_2000.pt",
+      "adapter_b_checkpoint_sha256": "0ae3c2ffab955c93e4ad1e39518d6e9a8423f9165121a39312586af97a052714",
+      "adapter_b_digest": "83d217eec7a1d532f83ecee639b1a7dfa57f9da5ca361b4c3fdb43278db8c013",
+      "b_actual_exact_accuracy": 1.0,
+      "b_canonical_exact_accuracy": 1.0,
+      "canonical_cosine": {
+        "count": 256,
+        "max": 0.9971088767051697,
+        "mean": 0.9819039551075548,
+        "median": 0.9838901162147522,
+        "min": 0.9365377426147461,
+        "std": 0.009495582671512157
+      },
+      "canonical_regression_count": 0,
+      "canonical_rescue_count": 0,
+      "checkpoint_step": 2000,
+      "condition": "lambda_1.0",
+      "displacement_l2": {
+        "count": 256,
+        "max": 4.825140953063965,
+        "mean": 2.8909331541508436,
+        "median": 2.906489610671997,
+        "min": 1.3876861333847046,
+        "std": 0.7245906598436482
+      },
+      "gaussian_norm_matched_exact_accuracy": 1.0,
+      "interpolation": {
+        "0.00": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.05": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.10": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.15": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.20": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.25": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.30": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.35": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.40": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.45": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.50": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.55": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.60": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.65": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.70": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.75": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.80": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.85": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.90": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "0.95": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        },
+        "1.00": {
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0
+        }
+      },
+      "lambda": 1.0,
+      "principal_axis_perturbations": [
+        {
+          "axis": 0,
+          "correct": 241,
+          "count": 256,
+          "exact_accuracy": 0.94140625,
+          "sign": 1
+        },
+        {
+          "axis": 0,
+          "correct": 252,
+          "count": 256,
+          "exact_accuracy": 0.984375,
+          "sign": -1
+        },
+        {
+          "axis": 1,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 1,
+          "correct": 254,
+          "count": 256,
+          "exact_accuracy": 0.9921875,
+          "sign": -1
+        },
+        {
+          "axis": 2,
+          "correct": 253,
+          "count": 256,
+          "exact_accuracy": 0.98828125,
+          "sign": 1
+        },
+        {
+          "axis": 2,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": -1
+        },
+        {
+          "axis": 3,
+          "correct": 249,
+          "count": 256,
+          "exact_accuracy": 0.97265625,
+          "sign": 1
+        },
+        {
+          "axis": 3,
+          "correct": 255,
+          "count": 256,
+          "exact_accuracy": 0.99609375,
+          "sign": -1
+        },
+        {
+          "axis": 4,
+          "correct": 235,
+          "count": 256,
+          "exact_accuracy": 0.91796875,
+          "sign": 1
+        },
+        {
+          "axis": 4,
+          "correct": 244,
+          "count": 256,
+          "exact_accuracy": 0.953125,
+          "sign": -1
+        },
+        {
+          "axis": 5,
+          "correct": 232,
+          "count": 256,
+          "exact_accuracy": 0.90625,
+          "sign": 1
+        },
+        {
+          "axis": 5,
+          "correct": 237,
+          "count": 256,
+          "exact_accuracy": 0.92578125,
+          "sign": -1
+        },
+        {
+          "axis": 6,
+          "correct": 251,
+          "count": 256,
+          "exact_accuracy": 0.98046875,
+          "sign": 1
+        },
+        {
+          "axis": 6,
+          "correct": 255,
+          "count": 256,
+          "exact_accuracy": 0.99609375,
+          "sign": -1
+        },
+        {
+          "axis": 7,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": 1
+        },
+        {
+          "axis": 7,
+          "correct": 256,
+          "count": 256,
+          "exact_accuracy": 1.0,
+          "sign": -1
+        }
+      ],
+      "principal_axis_singular_values_top": [
+        28.36348533630371,
+        18.292984008789062,
+        15.409178733825684,
+        14.337515830993652,
+        13.452558517456055,
+        11.871809005737305,
+        8.598121643066406,
+        6.825530052185059
+      ],
+      "seed": 2025,
+      "state_count": 256,
+      "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+    }
+  ],
+  "training": false,
+  "workspace_architecture_schema": "crucible-cnss-frozen-workspace-architecture-v1-20261101",
+  "workspace_artifact": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/workspace_artifacts/a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+  "workspace_artifact_file_sha256": "ee81037f63b0fba7d30a6620a2f379be4c6ec0cb474d0b8186e23e302290a6f7",
+  "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+  "workspace_reconstruction": false
+}
