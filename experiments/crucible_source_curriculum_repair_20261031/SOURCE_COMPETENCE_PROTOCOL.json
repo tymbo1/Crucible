@@ -1,0 +1,94 @@
+{
+  "schema_version": "crucible-source-competence-qualification-v1-20261031",
+  "date": "2026-10-31",
+  "status": "design_frozen_for_review",
+  "execution_authorized": false,
+  "training_started": false,
+  "target_data_loaded": false,
+  "sealed_target_answers_loaded": false,
+  "manifest": {
+    "path": "experiments/crucible_source_curriculum_repair_20261031/MANIFEST.json",
+    "sha256": "699c7a2f82a5ff630ee59df689916131ec4eabd5de1513cdf4665f15141e055c",
+    "hashes_path": "experiments/crucible_source_curriculum_repair_20261031/HASHES.json",
+    "hashes_sha256": "c5450b6a50574a24a146a557d611564954edb22451c6877f9ce6c96662608f0c"
+  },
+  "seeds": [42, 1337],
+  "training_splits": ["source_train", "execution_train"],
+  "validation_splits": ["source_validation", "source_function_validation", "execution_validation"],
+  "held_out_splits": ["source_test", "execution_test"],
+  "checkpoint_updates": [0, 250, 500, 750, 1000],
+  "capabilities": {
+    "explicit_execution": {
+      "validation_rows_per_seed": 16,
+      "minimum_exact_correct_per_seed": 14,
+      "minimum_coverage_numerator_per_seed": 15,
+      "minimum_coverage_denominator_per_seed": 16
+    },
+    "query_identifiable_induction": {
+      "validation_rows_per_seed": 32,
+      "minimum_exact_correct_per_seed": 26,
+      "minimum_coverage_numerator_per_seed": 29,
+      "minimum_coverage_denominator_per_seed": 32
+    },
+    "function_identifiable_induction": {
+      "validation_rows_per_seed": 16,
+      "minimum_exact_correct_per_seed": 13,
+      "minimum_coverage_numerator_per_seed": 14,
+      "minimum_coverage_denominator_per_seed": 16,
+      "claim_limit": "pilot_qualification_requires_larger_replication_for_established_claim"
+    }
+  },
+  "metrics": {
+    "exact_accuracy_denominator": "all_eligible_tasks",
+    "selective_accuracy_denominator": "answered_tasks_only",
+    "coverage_denominator": "all_eligible_tasks",
+    "abstention_counts_as_primary_error": true,
+    "report_per_task_transitions": true,
+    "transition_categories": [
+      "correct_to_correct",
+      "correct_to_wrong",
+      "correct_to_abstain",
+      "wrong_to_correct",
+      "wrong_to_abstain",
+      "abstain_to_correct",
+      "abstain_to_wrong",
+      "wrong_to_wrong",
+      "abstain_to_abstain"
+    ],
+    "report_per_seed": true,
+    "report_pooled_with_uncertainty": true
+  },
+  "decoder": {
+    "mode": "fixed_position_one_step",
+    "allowed_answer_tokens": [51, 52],
+    "non_answer": "abstain",
+    "tie": "abstain",
+    "nonfinite": "hard_failure",
+    "free_running_generation_primary_gate": false
+  },
+  "protected_instances": {
+    "source": "source_test",
+    "baseline_correct_rows_become_protected_instances": true,
+    "correct_to_wrong_or_abstain": "checkpoint_not_promotion_eligible",
+    "individual_instance_is_not_general_capability": true,
+    "test_results_cannot_select_checkpoint": true
+  },
+  "integrity": {
+    "nonfinite_loss_gradient_parameter_optimizer_checkpoint": "terminate_and_invalidate",
+    "checkpoint_round_trip_required": true,
+    "oracle_access_during_training": false,
+    "target_data_access": false,
+    "protocol_changes_after_training_start": false
+  },
+  "classification": {
+    "source_gate_failure": "inconclusive_prerequisite_failure",
+    "productive_retention_falsified_by_source_failure": false,
+    "function_identification_pass": "pilot_limited_until_replication"
+  },
+  "blockers_before_execution": [
+    "hash exact dense-baseline architecture manifest",
+    "verify parameter-matched compute and resource accounting",
+    "verify the runner emits all transition and coverage fields",
+    "keep C0-C3 and target data locked"
+  ]
+}
