@@ -1,0 +1,50 @@
+{
+  "schema_version": "crucible-cnss-d-skill-acquisition-diagnostic-v1-20261101",
+  "status": "REGISTERED_READ_ONLY_DIAGNOSTIC_AUTHORIZED",
+  "title": "CNSS skill D modular-addition acquisition diagnostic",
+  "objective": "Determine whether skill D failed because of task specification, implementation semantics, optimization, representational capacity or generalization, without changing the original partner experiment.",
+  "scientific_boundary": "This is a read-only acquisition diagnostic over the completed partner-generalization artifacts. It cannot establish a new neural capability or retroactively qualify the partner experiment.",
+  "source_experiment": {
+    "commit": "d9fa9fe",
+    "result": "experiments/crucible_track_a_cnss_partner_generalization_v1_20261101/CNSS_PARTNER_GENERALIZATION_RESULT.json",
+    "classification": "INCONCLUSIVE_PREREQUISITE_FAILURE",
+    "frozen_workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+    "durable_artifact_root": "/home/timbushnell/crucible_artifacts/crucible_cnss_partner_generalization_sealed_20261101"
+  },
+  "operation": {
+    "skill": "D",
+    "definition": "f_D(x) = (x + 0x37) mod 256",
+    "operand": "0x37",
+    "input_domain": 256,
+    "target_is_exhaustive_and_deterministic": true
+  },
+  "read_only_diagnostics": [
+    "independently verify the exhaustive modular-addition oracle and bit ordering",
+    "audit train/validation/test partitions, target uniqueness and composition leakage boundaries",
+    "compare D with A, B and C under the identical 4-lambda, 3-seed, 2,000-update artifact set",
+    "evaluate simple non-neural baselines including exact oracle, identity, no-carry XOR and target-bit majority",
+    "replay final adapters and checkpoint trajectories from durable artifacts",
+    "stratify D failures by carry count, carry-chain length, modular wraparound, Hamming weight, output bit and error pattern",
+    "measure final read-only loss and gradient norms without optimizer updates"
+  ],
+  "training_authorized": false,
+  "gpu_authorized": false,
+  "partner_rerun_authorized": false,
+  "required_gate_before_partner_rerun": {
+    "every_skill_final_test_accuracy_at_least": 0.95,
+    "D_must_pass_individual_gate": true,
+    "new_seed_validation_required": true
+  },
+  "corrective_training_controls": {
+    "status": "REGISTERED_NOT_AUTHORIZED",
+    "design": "Matched 2x2 control crossing adapter rank 8 versus 32 with 2,000 versus 8,000 updates, preserving the same workspace, operation, partitions, seeds, optimizer family, numerical safeguards and held-out gate. The four registered lambda values remain separate conditions; no result is selected from the current diagnostic.",
+    "purpose": "Separate optimization horizon from adapter capacity before changing the operation representation.",
+    "not_run": true
+  },
+  "artifact_policy": {
+    "original_partner_result_immutable": true,
+    "public_report_answer_free": true,
+    "raw_checkpoint_backup_verified": true,
+    "raw_checkpoint_backup_location": "/home/timbushnell/crucible_artifacts/crucible_cnss_partner_generalization_sealed_20261101"
+  }
+}

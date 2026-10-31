@@ -1,0 +1,37 @@
+{
+  "schema_version": "crucible-cnss-d-skill-corrective-controls-v1-20261101",
+  "status": "REGISTERED_NOT_AUTHORIZED",
+  "title": "CNSS D-skill capacity versus optimization-horizon controls",
+  "objective": "Separate adapter capacity from optimization horizon as explanations for D's failure to fit its own training partition.",
+  "source_diagnostic": "docs/CRUCIBLE_TRACK_A_CNSS_D_SKILL_ACQUISITION_DIAGNOSTIC_V1_20261101.json",
+  "factors": {
+    "adapter_rank": [8, 32],
+    "updates": [2000, 8000],
+    "lambda_values": [0.1, 0.4, 0.9, 1.0],
+    "seeds": [42, 1337, 2025]
+  },
+  "held_constant": [
+    "exact recovered workspace",
+    "D operation and operand 0x37",
+    "manifest partitions",
+    "AdamW family and learning rate",
+    "batch size and deterministic batch schedule",
+    "gradient clipping and fail-closed numerical checks",
+    "checkpoint and independent replay safeguards"
+  ],
+  "primary_measurements": [
+    "training exact accuracy",
+    "validation exact accuracy",
+    "held-out test exact accuracy",
+    "per-bit accuracy",
+    "loss trajectory",
+    "checkpoint integrity and replay"
+  ],
+  "authorization_boundary": {
+    "training_authorized": false,
+    "gpu_authorized": false,
+    "partner_rerun_authorized": false,
+    "required_before_execution": "review the read-only acquisition report and explicitly authorize this separate control"
+  },
+  "interpretation_rule": "No capacity or optimization conclusion is accepted unless training competence is reported alongside held-out accuracy and all checkpoint/replay gates pass."
+}

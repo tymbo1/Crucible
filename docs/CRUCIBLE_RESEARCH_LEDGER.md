@@ -44,8 +44,13 @@ reports that still need ledger entries.
 | `track-b-procedure-interface-design-v1` | UNTESTED | The canonical AST interface, exact XOR semantics and exhaustive structural/functional novelty criteria are specified but untested. |
 | `track-b-neural-proposer-protocol-v1` | UNTESTED | The preregistered learned-proposer versus deterministic AST-search comparison is defined but has not been executed. |
 | `source-training-diagnostic-v1` | INCONCLUSIVE | Both seeds fit explicit execution training examples but failed the held-out execution gate; induction was correctly blocked. |
+| `hybrid-procedural-controller-interface-audit-v1` | ESTABLISHED | A CPU-only synthetic audit passed 15/15 checks for a typed proposal boundary, independent AST verification, persistent reset execution, unsupported-request abstention and append-only revision; no neural learning claim. |
+| `hybrid-reference-controller-substrate-path-v1` | ESTABLISHED | An engineered reference controller passed six end-to-end fixtures covering renamed/reordered bindings, unseen values, novel composition, reset execution, abstention and semantic mismatch detection; no neural learning claim. |
+| `hybrid-neural-controller-proposal-v1` | UNTESTED | CPU preflight generated 512/128/256 manifests, passed leakage and novel-composition checks, and validated exact-memory/search baselines; controller training remains untested. |
+| `track-a-cnss-partner-generalization-v1` | INCONCLUSIVE | The four-skill partnership pilot completed cleanly, but modular-addition skill D failed the 95% individual gate; partnership-locus results remain descriptive. |
+| `track-a-cnss-d-skill-acquisition-diagnostic-v1` | INCONCLUSIVE | Oracle, encoding and partition checks passed, but D reached only 87.5% training and 68.75% test accuracy under the existing rank-8/2,000-update setup. |
 
-The ledger now contains 53 records and indexes 47 canonical experiment report
+The ledger now contains 64 records and indexes 47 canonical experiment report
 files (`REPORT_FINAL.md` and `REPORT.md`). The 23 older reports were extracted
 from their accepted final reports and linked artifacts on 2026-10-26; no
 outcomes were inferred from filenames or
@@ -103,3 +108,8 @@ for the evidence consolidation, overlap groups and cardinality training audit.
 | `track-b-procedure-interface-design-v1` | UNTESTED | design documents only |
 | `track-b-neural-proposer-protocol-v1` | UNTESTED | design documents only |
 | `source-training-diagnostic-v1` | INCONCLUSIVE | `experiments/crucible_source_training_diagnostic_20261031/SOURCE_TRAINING_DIAGNOSTIC_REPORT.md` |
+| `hybrid-procedural-controller-interface-audit-v1` | ESTABLISHED | `experiments/crucible_hybrid_procedural_controller_novelty_audit_20261031/AUDIT_REPORT.md` |
+| `hybrid-reference-controller-substrate-path-v1` | ESTABLISHED | `experiments/crucible_hybrid_reference_controller_test_20261031/REFERENCE_CONTROLLER_TEST_REPORT.md` |
+| `hybrid-neural-controller-proposal-v1` | UNTESTED | `docs/CRUCIBLE_HYBRID_CONTROLLER_LEARNING_PROPOSAL_20261031.md` |
+| `track-a-cnss-partner-generalization-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_partner_generalization_v1_20261101/CNSS_PARTNER_GENERALIZATION_RESULT.md` |
+| `track-a-cnss-d-skill-acquisition-diagnostic-v1` | INCONCLUSIVE | `experiments/crucible_track_a_cnss_d_skill_acquisition_diagnostic_v1_20261101/D_SKILL_ACQUISITION_DIAGNOSTIC_REPORT.md` |

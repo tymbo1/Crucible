@@ -1,0 +1,31 @@
+{
+  "backup_verification": {
+    "durable_backup_verified": true,
+    "durable_checkpoint_count": 240,
+    "durable_file_count": 290,
+    "durable_root": "/home/timbushnell/crucible_artifacts/crucible_cnss_partner_generalization_sealed_20261101",
+    "tmp_and_durable_hashes_match": true,
+    "tmp_root_present": true
+  },
+  "gpu_used": false,
+  "optimizer_updates": 0,
+  "oracle_audit": {
+    "D_partition_cardinality": {
+      "test": true,
+      "train": true,
+      "validation": true
+    },
+    "D_partition_disjoint": true,
+    "all_targets_unique": true,
+    "bit_roundtrip_matches_integer_encoding": true,
+    "definition": "target = (input + 0x37) mod 256",
+    "domain_count": 256,
+    "implementation_matches_independent_oracle": true,
+    "oracle_exact_accuracy": 1.0,
+    "target_bijection": true
+  },
+  "protocol_status": "REGISTERED_READ_ONLY_DIAGNOSTIC_AUTHORIZED",
+  "read_only": true,
+  "source_classification": "INCONCLUSIVE_PREREQUISITE_FAILURE",
+  "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+}
