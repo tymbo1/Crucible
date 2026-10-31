@@ -1,0 +1,152 @@
+{
+  "answers_not_persisted_in_public_artifacts": true,
+  "checkpoints": [
+    0,
+    500,
+    1000,
+    1500,
+    2000
+  ],
+  "collision_free_counts": {
+    "A_to_B": 21,
+    "A_to_C": 23,
+    "A_to_D": 26,
+    "B_to_A": 16,
+    "B_to_C": 15,
+    "B_to_D": 14,
+    "C_to_A": 28,
+    "C_to_B": 20,
+    "C_to_D": 23,
+    "D_to_A": 12,
+    "D_to_B": 13,
+    "D_to_C": 17
+  },
+  "development_partnerships": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "C"
+    ],
+    [
+      "C",
+      "D"
+    ],
+    [
+      "D",
+      "A"
+    ],
+    [
+      "A",
+      "C"
+    ],
+    [
+      "B",
+      "D"
+    ]
+  ],
+  "gpu_status": "not_available",
+  "gpu_used": false,
+  "lambda_values": [
+    0.1,
+    0.4,
+    0.9,
+    1.0
+  ],
+  "manifest_checks": {
+    "all_directed_pairs_present": true,
+    "all_skills_present": true,
+    "answers_absent": true,
+    "development_partnerships_registered": true,
+    "development_test_partnerships_disjoint": true,
+    "minimum_collision_free_inputs": true,
+    "no_composition_training_or_validation": true,
+    "partition_checks": {
+      "A": {
+        "test_cardinality": true,
+        "train_cardinality": true,
+        "train_test_disjoint": true,
+        "train_validation_disjoint": true,
+        "validation_cardinality": true,
+        "validation_test_disjoint": true
+      },
+      "B": {
+        "test_cardinality": true,
+        "train_cardinality": true,
+        "train_test_disjoint": true,
+        "train_validation_disjoint": true,
+        "validation_cardinality": true,
+        "validation_test_disjoint": true
+      },
+      "C": {
+        "test_cardinality": true,
+        "train_cardinality": true,
+        "train_test_disjoint": true,
+        "train_validation_disjoint": true,
+        "validation_cardinality": true,
+        "validation_test_disjoint": true
+      },
+      "D": {
+        "test_cardinality": true,
+        "train_cardinality": true,
+        "train_test_disjoint": true,
+        "train_validation_disjoint": true,
+        "validation_cardinality": true,
+        "validation_test_disjoint": true
+      }
+    },
+    "test_partnerships_registered": true
+  },
+  "manifest_seed": 20261101,
+  "manifest_sha256": "2e4aa662801f03f7cab65f3c645a452901b5ed2d2ed0f2c881153214ba8b323e",
+  "original_cnss_artifacts_immutable": true,
+  "protocol": "docs/CRUCIBLE_TRACK_A_CNSS_PARTNER_GENERALIZATION_V1_20261101.json",
+  "protocol_sha256": "2d7bfd005c21ef450ab440b8c5d441e648028cb5420ac841797cb34b2725db8a",
+  "protocol_status": "REGISTERED_SCIENTIFIC_TRAINING_AUTHORIZED",
+  "raw_checkpoints_outside_git": true,
+  "schema_version": "crucible-cnss-partner-generalization-preflight-v1-20261101",
+  "seeds": [
+    42,
+    1337,
+    2025
+  ],
+  "skills": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "test_partnerships": [
+    [
+      "B",
+      "A"
+    ],
+    [
+      "C",
+      "B"
+    ],
+    [
+      "D",
+      "C"
+    ],
+    [
+      "A",
+      "D"
+    ],
+    [
+      "C",
+      "A"
+    ],
+    [
+      "D",
+      "B"
+    ]
+  ],
+  "updates_per_skill": 2000,
+  "workspace_artifact": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/workspace_artifacts/a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+  "workspace_digest_expected": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+  "workspace_digest_loaded": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+  "workspace_finite": true
+}

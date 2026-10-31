@@ -1,0 +1,119 @@
+{
+  "adapter_digest": "d902655d5b0c0f011eb878113a93b4a9a4451e5fb03c5a7b6820a22b69fcd8bf",
+  "checkpoint_count": 5,
+  "checkpoint_integrity": true,
+  "checkpoints": [
+    {
+      "path": "/tmp/crucible_cnss_partner_generalization_sealed_20261101/checkpoints/lambda_0.9/seed_42/skill_B/checkpoint_0000.pt",
+      "sha256": "1ec07368c39bf991973acb53f6c05ccc6e79d2b4cdd2678345e79cf197f8f221",
+      "step": 0
+    },
+    {
+      "path": "/tmp/crucible_cnss_partner_generalization_sealed_20261101/checkpoints/lambda_0.9/seed_42/skill_B/checkpoint_0500.pt",
+      "sha256": "497a30de6a68c55116df1434785b409b81a46b6ec9762967ea8e9c4aabf10f28",
+      "step": 500
+    },
+    {
+      "path": "/tmp/crucible_cnss_partner_generalization_sealed_20261101/checkpoints/lambda_0.9/seed_42/skill_B/checkpoint_1000.pt",
+      "sha256": "7f97f3a63cdb71a9709cb0dfe6433707b575862962ed8f9bf6e2583de5c75c6f",
+      "step": 1000
+    },
+    {
+      "path": "/tmp/crucible_cnss_partner_generalization_sealed_20261101/checkpoints/lambda_0.9/seed_42/skill_B/checkpoint_1500.pt",
+      "sha256": "8f6f8bb2181d285b8c3e2408f1a7bfe719731ac6692e1a5e709d92b08fcd37a1",
+      "step": 1500
+    },
+    {
+      "path": "/tmp/crucible_cnss_partner_generalization_sealed_20261101/checkpoints/lambda_0.9/seed_42/skill_B/checkpoint_2000.pt",
+      "sha256": "b6a3ab923e18453f247add2ea72a6d4dd74612c824a5d2024490c4257a8afb6f",
+      "step": 2000
+    }
+  ],
+  "lambda": 0.9,
+  "loss_tail": [
+    {
+      "contract": 0.007873542606830597,
+      "output": 1.5405423255288042e-05,
+      "step": 1991,
+      "total": 0.007101593539118767
+    },
+    {
+      "contract": 0.008471434004604816,
+      "output": 1.553438778501004e-05,
+      "step": 1992,
+      "total": 0.007639824878424406
+    },
+    {
+      "contract": 0.008634991943836212,
+      "output": 1.4383713278220966e-05,
+      "step": 1993,
+      "total": 0.007785876281559467
+    },
+    {
+      "contract": 0.008424623869359493,
+      "output": 1.704287205939181e-05,
+      "step": 1994,
+      "total": 0.00759920384734869
+    },
+    {
+      "contract": 0.0070683760568499565,
+      "output": 1.460014573240187e-05,
+      "step": 1995,
+      "total": 0.006376138422638178
+    },
+    {
+      "contract": 0.007559783756732941,
+      "output": 1.6777874407125637e-05,
+      "step": 1996,
+      "total": 0.006820582784712315
+    },
+    {
+      "contract": 0.007860190235078335,
+      "output": 1.4639101209468208e-05,
+      "step": 1997,
+      "total": 0.007088810205459595
+    },
+    {
+      "contract": 0.007066193036735058,
+      "output": 1.236364732903894e-05,
+      "step": 1998,
+      "total": 0.0063719372265040874
+    },
+    {
+      "contract": 0.008091610856354237,
+      "output": 1.4383663256012369e-05,
+      "step": 1999,
+      "total": 0.007296833209693432
+    },
+    {
+      "contract": 0.008358029648661613,
+      "output": 1.640563459659461e-05,
+      "step": 2000,
+      "total": 0.007538632024079561
+    }
+  ],
+  "replay_test": {
+    "contract_mse": 0.006855566054582596,
+    "count": 64,
+    "exact_accuracy": 1.0,
+    "loss": 1.2319449524511583e-05
+  },
+  "retention_drop_after_reload": 0.0,
+  "seed": 42,
+  "skill": "B",
+  "test": {
+    "contract_mse": 0.006855566054582596,
+    "count": 64,
+    "exact_accuracy": 1.0,
+    "loss": 1.2319449524511583e-05
+  },
+  "train_count": 128,
+  "updates": 2000,
+  "validation": {
+    "contract_mse": 0.006795343942940235,
+    "count": 64,
+    "exact_accuracy": 1.0,
+    "loss": 1.4091756384004839e-05
+  },
+  "wall_seconds": 2.499336200999096
+}

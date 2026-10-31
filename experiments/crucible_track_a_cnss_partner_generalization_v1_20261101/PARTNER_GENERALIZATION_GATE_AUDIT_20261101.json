@@ -1,0 +1,22 @@
+{
+  "schema_version": "crucible-cnss-partner-generalization-gate-audit-v1-20261101",
+  "source_result": "CNSS_PARTNER_GENERALIZATION_RESULT.json",
+  "classification": "INCONCLUSIVE_PREREQUISITE_FAILURE",
+  "required_individual_test_accuracy": 0.95,
+  "skill_maximum_test_accuracy": {
+    "A": 1.0,
+    "B": 1.0,
+    "C": 1.0,
+    "D": 0.6875
+  },
+  "failing_skill": "D",
+  "failing_skill_description": "8-bit modular addition by 0x37",
+  "checkpoint_inventory": {
+    "expected": 240,
+    "verified": 240,
+    "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+    "non_finite_or_mismatched_headers": 0
+  },
+  "interpretation": "The bounded run and artifact checks passed, but the registered individual-skill prerequisite failed for D. Partnership results remain descriptive and cannot establish sender-specific, receiver-specific, or pair-specific compatibility.",
+  "next_action": "Do not select an alignment locus or launch adaptive contracts/transition bridges from this result. Diagnose or separately preregister a D-skill acquisition experiment first."
+}

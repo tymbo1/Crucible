@@ -1,0 +1,92 @@
+{
+  "schema_version": "crucible-cnss-partner-generalization-protocol-v1-20261101",
+  "status": "REGISTERED_SCIENTIFIC_TRAINING_AUTHORIZED",
+  "title": "CNSS Partner Generalization and Contract-Locus Matrix v1",
+  "objective": "Determine whether composition requirements are primarily sender-specific, receiver-specific, or partnership-specific.",
+  "scientific_boundary": "This is a bounded 8-bit neural-composition mechanism probe. It does not establish broad reasoning, lifelong learning, or general architectural superiority.",
+  "workspace": {
+    "artifact_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+    "frozen": true,
+    "reused_from": "crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101"
+  },
+  "skills": {
+    "A": "8-bit rotate-left by 1",
+    "B": "8-bit XOR with 0x59",
+    "C": "8-bit high/low nibble swap",
+    "D": "8-bit modular addition by 0x37"
+  },
+  "lambda_candidates": [0.1, 0.4, 0.9, 1.0],
+  "seeds": [42, 1337, 2025],
+  "training": {
+    "updates_per_skill": 2000,
+    "batch_size": 32,
+    "checkpoints": [0, 500, 1000, 1500, 2000],
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "gradient_clip": 1.0,
+    "device": "cpu",
+    "composition_examples_in_training": false,
+    "composition_examples_in_validation": false
+  },
+  "manifest": {
+    "state_count": 256,
+    "partitions_per_skill": {
+      "train": 128,
+      "validation": 64,
+      "test": 64
+    },
+    "partition_selection": "deterministic stratified candidate search; choose the first manifest seed yielding at least 8 collision-free primary inputs for every directed pair",
+    "primary_composition_inputs": "sender test states whose transformed intermediate values are absent from receiver train and validation inputs",
+    "pair_value_collision_reporting": true
+  },
+  "partnerships": {
+    "development": [
+      ["A", "B"],
+      ["B", "C"],
+      ["C", "D"],
+      ["D", "A"],
+      ["A", "C"],
+      ["B", "D"]
+    ],
+    "test": [
+      ["B", "A"],
+      ["C", "B"],
+      ["D", "C"],
+      ["A", "D"],
+      ["C", "A"],
+      ["D", "B"]
+    ],
+    "all_pairs_are_directed": true,
+    "test_partnerships_are_not_used_for_lambda_selection": true
+  },
+  "selection_policies": {
+    "global": "one lambda selected from pooled development partnerships and applied to both skills",
+    "sender_only": "sender lambda selected from outgoing development partnerships; receiver uses selected global lambda",
+    "receiver_only": "receiver lambda selected from incoming development partnerships; sender uses selected global lambda",
+    "skill_shared": "one lambda selected per skill from all its development appearances and used whenever that skill participates",
+    "pair_tensor": "report all sender-lambda/receiver-lambda combinations descriptively; do not treat test-pair oracle selection as deployable"
+  },
+  "primary_metrics": [
+    "collision-free directed composition accuracy",
+    "full directed composition accuracy",
+    "weakest direction accuracy",
+    "individual skill exact accuracy",
+    "retention after independent skill training",
+    "latent displacement and canonical cosine",
+    "training wall time and checkpoint integrity"
+  ],
+  "gates": {
+    "workspace_digest_exact": true,
+    "all_individual_test_accuracy_at_least": 0.95,
+    "minimum_collision_free_inputs_per_pair": 8,
+    "checkpoint_finite_and_hash_valid": true,
+    "new_seed_validation_required_before_claim": true,
+    "larger_domain_validation_required_before_claim": true
+  },
+  "artifact_policy": {
+    "original_cnss_artifacts_immutable": true,
+    "public_outputs_exclude_answers_and_raw_checkpoints": true,
+    "raw_checkpoints_outside_git": true
+  }
+}
