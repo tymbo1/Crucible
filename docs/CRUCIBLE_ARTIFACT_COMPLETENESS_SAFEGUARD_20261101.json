@@ -1,0 +1,18 @@
+{
+  "schema_version": "crucible-artifact-completeness-safeguard-v1-20261101",
+  "status": "CNSS_IMPLEMENTED_GENERAL_PIPELINE_ADOPTION_PENDING",
+  "content_addressed_dependency": "frozen workspace state and architecture bundle",
+  "required_files": ["state.pt", "architecture.json", "serialization.json", "HASHES.json"],
+  "dependent_checkpoint_fields": ["workspace_artifact_sha256", "workspace_schema_version", "workspace_tensor_digest"],
+  "fresh_process_checks": ["file_hash", "tensor_hashes", "architecture_hash", "workspace_digest", "fixed_probe_output", "dependent_checkpoint_reference"],
+  "failure_policy": "reject recoverable/completed classification; never silently regenerate or substitute weights",
+  "deterministic_reconstruction_policy": {
+    "allowed_only_as_explicit_recovery": true,
+    "required_identity_check": "exact full state digest match",
+    "required_execution_check": "fresh-process disk-only replay of fixed probe and every registered dependent checkpoint",
+    "required_negative_tests": ["missing", "corrupted", "incompatible"],
+    "classification_label": "DETERMINISTIC_RECONSTRUCTION",
+    "must_not_claim_original_serialized_bytes": true
+  },
+  "applies_to": ["CNSS", "frozen encoders", "frozen decoders", "adapters", "external memory modules", "any dependent checkpoint"]
+}

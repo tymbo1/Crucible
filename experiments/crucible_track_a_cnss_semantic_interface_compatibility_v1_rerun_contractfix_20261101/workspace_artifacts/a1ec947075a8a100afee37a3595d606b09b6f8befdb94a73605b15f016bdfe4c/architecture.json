@@ -1,0 +1,102 @@
+{
+  "decoder": [
+    {
+      "bias": true,
+      "in_features": 256,
+      "out_features": 64,
+      "type": "Linear"
+    },
+    {
+      "type": "GELU"
+    },
+    {
+      "bias": true,
+      "in_features": 64,
+      "out_features": 8,
+      "type": "Linear"
+    }
+  ],
+  "encoder": [
+    {
+      "bias": true,
+      "in_features": 8,
+      "out_features": 64,
+      "type": "Linear"
+    },
+    {
+      "type": "GELU"
+    },
+    {
+      "bias": true,
+      "in_features": 64,
+      "out_features": 256,
+      "type": "Linear"
+    }
+  ],
+  "module": "Workspace",
+  "schema_version": "crucible-cnss-frozen-workspace-architecture-v1-20261101",
+  "state_bits": 8,
+  "state_schema": {
+    "decoder.0.bias": {
+      "dtype": "torch.float32",
+      "requires_grad": false,
+      "shape": [
+        64
+      ]
+    },
+    "decoder.0.weight": {
+      "dtype": "torch.float32",
+      "requires_grad": false,
+      "shape": [
+        64,
+        256
+      ]
+    },
+    "decoder.2.bias": {
+      "dtype": "torch.float32",
+      "requires_grad": false,
+      "shape": [
+        8
+      ]
+    },
+    "decoder.2.weight": {
+      "dtype": "torch.float32",
+      "requires_grad": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    "encoder.0.bias": {
+      "dtype": "torch.float32",
+      "requires_grad": false,
+      "shape": [
+        64
+      ]
+    },
+    "encoder.0.weight": {
+      "dtype": "torch.float32",
+      "requires_grad": false,
+      "shape": [
+        64,
+        8
+      ]
+    },
+    "encoder.2.bias": {
+      "dtype": "torch.float32",
+      "requires_grad": false,
+      "shape": [
+        256
+      ]
+    },
+    "encoder.2.weight": {
+      "dtype": "torch.float32",
+      "requires_grad": false,
+      "shape": [
+        256,
+        64
+      ]
+    }
+  },
+  "state_width": 256
+}

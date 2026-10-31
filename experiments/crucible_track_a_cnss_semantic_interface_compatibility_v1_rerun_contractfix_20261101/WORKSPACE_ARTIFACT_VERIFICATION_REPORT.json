@@ -1,0 +1,16 @@
+{
+  "classification": "WORKSPACE_ARTIFACT_VERIFY_PASS",
+  "dependent_checkpoints_verified": 210,
+  "dependent_outputs_reproduced": 210,
+  "fresh_process_load": true,
+  "gpu_used": false,
+  "negative_tests": {
+    "corrupted": "corrupted workspace: PASS (state file hash mismatch)",
+    "incompatible": "incompatible workspace: PASS (architecture/state tensor mismatch for decoder.0.bias)",
+    "missing": "missing workspace: PASS (required workspace artifact file is missing)"
+  },
+  "schema_version": "crucible-cnss-workspace-artifact-verification-v1-20261101",
+  "scientific_training_performed": false,
+  "state_tensor_count": 8,
+  "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+}

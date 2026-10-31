@@ -1,0 +1,10 @@
+{
+  "format": "torch.save",
+  "loader": "torch.load(path, map_location='cpu', weights_only=False)['state_dict']",
+  "map_location": "cpu",
+  "python_version": "3.12.3",
+  "schema_version": "crucible-cnss-frozen-workspace-serialization-v1-20261101",
+  "state_file_schema": "crucible-cnss-frozen-workspace-state-v1-20261101",
+  "tensor_layout": "CPU contiguous tensors; state_dict keys and tensor dtypes are fixed by architecture.json",
+  "torch_version": "2.12.0+cu130"
+}

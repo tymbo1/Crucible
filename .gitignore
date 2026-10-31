@@ -7,6 +7,13 @@
 *.tar
 *.tar.gz
 
+# Content-addressed frozen workspace artifacts are reproducibility dependencies.
+# Keep ordinary training checkpoints ignored, but allow these small immutable
+# dependency bundles to be versioned and pushed with their metadata.
+!experiments/**/workspace_artifacts/
+!experiments/**/workspace_artifacts/**/
+!experiments/**/workspace_artifacts/**/state.pt
+
 # Python/build caches
 __pycache__/
 *.py[cod]
