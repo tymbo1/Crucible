@@ -1,0 +1,59 @@
+{
+  "balanced_carry_counts": {
+    "0": 15,
+    "1": 15,
+    "2": 14,
+    "3": 14,
+    "4": 14,
+    "5": 14,
+    "6": 14,
+    "7": 14,
+    "8": 14
+  },
+  "balanced_chain_counts": {
+    "0": 15,
+    "1": 15,
+    "2": 25,
+    "3": 21,
+    "4": 5,
+    "5": 8,
+    "6": 12,
+    "7": 13,
+    "8": 14
+  },
+  "balanced_pool_size": 128,
+  "balanced_wrap_counts": {
+    "false": 103,
+    "true": 25
+  },
+  "candidate_support_unchanged": true,
+  "classification": "PREFLIGHT_PASSED_TRAINING_NOT_AUTHORIZED",
+  "existing_train_carry_counts": {
+    "0": 7,
+    "1": 7,
+    "2": 14,
+    "3": 12,
+    "4": 12,
+    "5": 18,
+    "6": 29,
+    "7": 18,
+    "8": 11
+  },
+  "fixed_test_manifest": true,
+  "gpu_used": false,
+  "initial_preflight_correction": "The first preflight implementation incorrectly required one balanced epoch to contain every candidate state; exact quotas and unequal source strata make that impossible. The corrected gate checks candidate-support containment instead. No training occurred during the failed preflight.",
+  "manifest_sha256": "2e4aa662801f03f7cab65f3c645a452901b5ed2d2ed0f2c881153214ba8b323e",
+  "paired_step0_checkpoint_hashes": {
+    "1337": "5c16b6478bbde571566620a959c4e87f0a7daa303928d025a00c4853f8e8cae7",
+    "2025": "200b2c26355c597d5704651da8c197b3fca9c96b33ffdb69efa01a3ca5fa938b",
+    "42": "c982a3d53716c518ae99cbb1d90f529dfca6c6a5d21fbde3a9c494b4e4f0b2af"
+  },
+  "partner_rerun_unlocked": false,
+  "protocol_sha256": "0e8e37a89fd1f8b5496a476d0d414cd20e31404c852c91fd7b8add4adcf6313d",
+  "schema_version": "crucible-cnss-d-carry-balanced-acquisition-preflight-v1-20261101",
+  "source_result_sha256": "9979f1498399fb9ac13c228ce3a797aeffdc9a9faaf0c153d8b09e02de1427ab",
+  "train_validation_test_overlap": false,
+  "training_authorized": false,
+  "unique_train_states": 128,
+  "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "crucible-cnss-d-carry-balanced-acquisition-v1-20261101",
+  "status": "REGISTERED_NOT_AUTHORIZED",
+  "title": "CNSS Skill D carry-balanced acquisition control",
+  "objective": "Test whether balancing the frequency of existing carry-event strata improves held-out modular-addition acquisition without changing unique training support, model capacity, optimizer or test states.",
+  "source_control": "rank-32, lambda 0.1, 2,000-update rows from experiments/crucible_track_a_cnss_d_skill_corrective_controls_v1_20261101",
+  "design": {
+    "control_arm": "existing rank-32 lambda-0.1 2,000-update rows, three seeds",
+    "balanced_arm": "same seed-specific step-0 adapter states and same 128-state candidate support, with each deterministic 128-draw epoch sampled with replacement to carry-event quotas [15,15,14,14,14,14,14,14,14] for carry counts 0 through 8",
+    "rank": 32,
+    "lambda": 0.1,
+    "updates": 2000,
+    "seeds": [42, 1337, 2025],
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "gradient_clip": 1.0,
+    "device": "cpu",
+    "deterministic": true
+  },
+  "held_constant": [
+    "exact recovered workspace",
+    "rank-32 adapter and parameter count",
+    "lambda 0.1",
+    "same seed-specific step-0 adapter initialization",
+    "same 128-state training candidate support",
+    "same validation and fixed 64-state test partitions",
+    "AdamW and numerical safeguards",
+    "2,000 updates and batch size 32"
+  ],
+  "preflight_requirements": [
+    "balanced sampler draws only from existing training states",
+    "balanced pool has no validation or test overlap",
+    "training candidate support is unchanged",
+    "test manifest hash is unchanged",
+    "balanced quotas are deterministic and exact",
+    "baseline step-0 checkpoints are finite and hash-verified"
+  ],
+  "primary_measurements": [
+    "training, validation and held-out exact accuracy",
+    "accuracy by carry-event count, chain length and wraparound",
+    "adapter displacement and decoder margins",
+    "parameter and compute cost",
+    "checkpoint integrity and replay"
+  ],
+  "success_gate": "Balanced training must improve held-out accuracy over the paired existing control without reducing training integrity; the 95% individual D gate remains unchanged.",
+  "authorization_boundary": {
+    "training_authorized": false,
+    "gpu_authorized": false,
+    "partner_rerun_authorized": false,
+    "authorized_by": null
+  },
+  "interpretation_rule": "A positive result would support a curriculum-frequency effect under the fixed workspace; it would not establish a carry algorithm or unlock composition by itself."
+}
