@@ -1,0 +1,29 @@
+{
+  "authorization_source": "explicit user instruction: test lambda 0.1 through 1.0 in 0.1 increments",
+  "gpu": false,
+  "lambda_values": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "larger_domain_validation": false,
+  "manifest_sha256": "73d1ecb0a35460f97c4da464542c6adfee6b05acf67af3fec696503761c58dc4",
+  "new_seed_validation": false,
+  "original_artifacts_preserved": true,
+  "schema_version": "crucible-cnss-lambda-sweep-authorization-v1-20261101",
+  "scientific_training": true,
+  "seeds": [
+    42,
+    1337,
+    2025
+  ],
+  "updates_per_skill": 2000,
+  "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+}

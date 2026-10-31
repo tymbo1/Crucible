@@ -1,0 +1,286 @@
+{
+  "adapter_a_digest": "5f091542bde4e89162f62b1c4bf289bc7c6891393edc26473d80704cf1e96f73",
+  "adapter_b_digest": "b44baa8e5f3c17843e86c901be2c3ab274506da758c7ee7f01aafa5aa5d11470",
+  "arm": "B_shared_contract",
+  "composition_a_to_b": {
+    "count": 64,
+    "exact_accuracy": 1.0,
+    "first_intermediate_contract_mse": 0.04588359594345093,
+    "first_state_decode_accuracy": 1.0,
+    "order": "A_to_B",
+    "second_on_canonical_state_accuracy": 1.0
+  },
+  "composition_b_to_a": {
+    "count": 64,
+    "exact_accuracy": 0.953125,
+    "first_intermediate_contract_mse": 0.01534459087997675,
+    "first_state_decode_accuracy": 1.0,
+    "order": "B_to_A",
+    "second_on_canonical_state_accuracy": 1.0
+  },
+  "config": "lambda_0.4",
+  "gamma": 0.0,
+  "lambda": 0.4,
+  "latent_geometry": {
+    "max_displacement_l2": 5.297527313232422,
+    "mean_canonical_cosine": 0.977576494216919,
+    "mean_displacement_l2": 3.3737423419952393,
+    "min_canonical_cosine": 0.9359214901924133,
+    "state_count": 64
+  },
+  "retention_a_after_b": {
+    "contract_mse": 0.04588359594345093,
+    "count": 64,
+    "exact_accuracy": 1.0,
+    "loss": 0.0009157804888673127
+  },
+  "retention_drop": 0.0,
+  "seed": 1337,
+  "skill_a": {
+    "adapter_digest": "5f091542bde4e89162f62b1c4bf289bc7c6891393edc26473d80704cf1e96f73",
+    "arm": "B_shared_contract",
+    "checkpoints": [
+      {
+        "path": "experiments/crucible_track_a_cnss_lambda_sweep_v1_20261101/checkpoints/B_shared_contract_lambda_0.4/seed_1337/skill_A/checkpoint_0000.pt",
+        "sha256": "cff3377f0e9bc9421e2952e56be0d54a8ca972837f089a9926818c960b1d903f",
+        "step": 0
+      },
+      {
+        "path": "experiments/crucible_track_a_cnss_lambda_sweep_v1_20261101/checkpoints/B_shared_contract_lambda_0.4/seed_1337/skill_A/checkpoint_0500.pt",
+        "sha256": "0e66928314bf469ea20a9e3d8318665967d8131b61dca0cb765a560bd31cdd82",
+        "step": 500
+      },
+      {
+        "path": "experiments/crucible_track_a_cnss_lambda_sweep_v1_20261101/checkpoints/B_shared_contract_lambda_0.4/seed_1337/skill_A/checkpoint_1000.pt",
+        "sha256": "0999d2fa82a9ff2ddb73248600c9cae8c5cb6fdd87461c07fb18f4fcc68d4e3f",
+        "step": 1000
+      },
+      {
+        "path": "experiments/crucible_track_a_cnss_lambda_sweep_v1_20261101/checkpoints/B_shared_contract_lambda_0.4/seed_1337/skill_A/checkpoint_1500.pt",
+        "sha256": "66d8e31a2131d59044e9469d7f3b8377eb1973ba7778bfb2b150e6ac2b4e6903",
+        "step": 1500
+      },
+      {
+        "path": "experiments/crucible_track_a_cnss_lambda_sweep_v1_20261101/checkpoints/B_shared_contract_lambda_0.4/seed_1337/skill_A/checkpoint_2000.pt",
+        "sha256": "95ef9963ef523c6fb80d8a98ad76b830ebe5ae0da1a931a5fbbd8897d2868cf3",
+        "step": 2000
+      }
+    ],
+    "config": "lambda_0.4",
+    "gamma": 0.0,
+    "lambda": 0.4,
+    "loss_tail": [
+      {
+        "contract": 0.041056834161281586,
+        "distribution": 0.02685399353504181,
+        "output": 0.0005187154747545719,
+        "step": 1991,
+        "total": 0.01694144867360592
+      },
+      {
+        "contract": 0.03891231492161751,
+        "distribution": 0.03403032198548317,
+        "output": 0.0005204657791182399,
+        "step": 1992,
+        "total": 0.016085391864180565
+      },
+      {
+        "contract": 0.04220535606145859,
+        "distribution": 0.02569185011088848,
+        "output": 0.0005088394973427057,
+        "step": 1993,
+        "total": 0.017390981316566467
+      },
+      {
+        "contract": 0.04182238131761551,
+        "distribution": 0.029322385787963867,
+        "output": 0.000508632103446871,
+        "step": 1994,
+        "total": 0.0172375850379467
+      },
+      {
+        "contract": 0.04089581221342087,
+        "distribution": 0.026842845603823662,
+        "output": 0.0005136996041983366,
+        "step": 1995,
+        "total": 0.016872024163603783
+      },
+      {
+        "contract": 0.03875655308365822,
+        "distribution": 0.03403056785464287,
+        "output": 0.0005161046865396202,
+        "step": 1996,
+        "total": 0.01601872593164444
+      },
+      {
+        "contract": 0.04204605147242546,
+        "distribution": 0.025690957903862,
+        "output": 0.0005041651311330497,
+        "step": 1997,
+        "total": 0.017322586849331856
+      },
+      {
+        "contract": 0.041664790362119675,
+        "distribution": 0.029314566403627396,
+        "output": 0.0005042579141445458,
+        "step": 1998,
+        "total": 0.017170174047350883
+      },
+      {
+        "contract": 0.04073525592684746,
+        "distribution": 0.026831690222024918,
+        "output": 0.0005087046301923692,
+        "step": 1999,
+        "total": 0.01680280826985836
+      },
+      {
+        "contract": 0.03860122710466385,
+        "distribution": 0.03403082489967346,
+        "output": 0.0005117682158015668,
+        "step": 2000,
+        "total": 0.015952259302139282
+      }
+    ],
+    "seed": 1337,
+    "skill": "A",
+    "test": {
+      "contract_mse": 0.04588359594345093,
+      "count": 64,
+      "exact_accuracy": 1.0,
+      "loss": 0.0009157804888673127
+    },
+    "train_values": 128,
+    "updates": 2000,
+    "validation": {
+      "contract_mse": 0.04452262073755264,
+      "count": 64,
+      "exact_accuracy": 1.0,
+      "loss": 0.0010637599043548107
+    },
+    "wall_seconds": 3.335272194002755
+  },
+  "skill_b": {
+    "adapter_digest": "b44baa8e5f3c17843e86c901be2c3ab274506da758c7ee7f01aafa5aa5d11470",
+    "arm": "B_shared_contract",
+    "checkpoints": [
+      {
+        "path": "experiments/crucible_track_a_cnss_lambda_sweep_v1_20261101/checkpoints/B_shared_contract_lambda_0.4/seed_1337/skill_B/checkpoint_0000.pt",
+        "sha256": "b1c550c24b784cf097e0b4e8c9c34c43a2025fbdc92cc262237512baf175a5ad",
+        "step": 0
+      },
+      {
+        "path": "experiments/crucible_track_a_cnss_lambda_sweep_v1_20261101/checkpoints/B_shared_contract_lambda_0.4/seed_1337/skill_B/checkpoint_0500.pt",
+        "sha256": "c350ff7a27caa260b1b3c35965a1be566a2ae37082b950aaa77a46c25046c063",
+        "step": 500
+      },
+      {
+        "path": "experiments/crucible_track_a_cnss_lambda_sweep_v1_20261101/checkpoints/B_shared_contract_lambda_0.4/seed_1337/skill_B/checkpoint_1000.pt",
+        "sha256": "d1da69597628040650fa11b4095be83143b834e681ef2ddafa776de8f61bb01f",
+        "step": 1000
+      },
+      {
+        "path": "experiments/crucible_track_a_cnss_lambda_sweep_v1_20261101/checkpoints/B_shared_contract_lambda_0.4/seed_1337/skill_B/checkpoint_1500.pt",
+        "sha256": "d5dd230e8679e210a1dbcf490875644a104e425c2a12a43ce22502ccbca5b4de",
+        "step": 1500
+      },
+      {
+        "path": "experiments/crucible_track_a_cnss_lambda_sweep_v1_20261101/checkpoints/B_shared_contract_lambda_0.4/seed_1337/skill_B/checkpoint_2000.pt",
+        "sha256": "6d1a8f98d7a833bf1e8961c778adbac76ef5ffa8466f015c367e24a2ab54735d",
+        "step": 2000
+      }
+    ],
+    "config": "lambda_0.4",
+    "gamma": 0.0,
+    "lambda": 0.4,
+    "loss_tail": [
+      {
+        "contract": 0.013729225844144821,
+        "distribution": 0.01550276204943657,
+        "output": 4.661087950807996e-05,
+        "step": 1991,
+        "total": 0.0055383010767400265
+      },
+      {
+        "contract": 0.01305265910923481,
+        "distribution": 0.028482893481850624,
+        "output": 4.116960917599499e-05,
+        "step": 1992,
+        "total": 0.005262233316898346
+      },
+      {
+        "contract": 0.01246595662087202,
+        "distribution": 0.031212206929922104,
+        "output": 3.1367148039862514e-05,
+        "step": 1993,
+        "total": 0.0050177494995296
+      },
+      {
+        "contract": 0.01361093483865261,
+        "distribution": 0.01699608936905861,
+        "output": 4.662366700358689e-05,
+        "step": 1994,
+        "total": 0.005490997806191444
+      },
+      {
+        "contract": 0.013659394346177578,
+        "distribution": 0.015475298278033733,
+        "output": 4.614876161213033e-05,
+        "step": 1995,
+        "total": 0.00550990691408515
+      },
+      {
+        "contract": 0.012982113286852837,
+        "distribution": 0.028478924185037613,
+        "output": 4.080589133081958e-05,
+        "step": 1996,
+        "total": 0.005233651492744684
+      },
+      {
+        "contract": 0.012399913743138313,
+        "distribution": 0.03120323270559311,
+        "output": 3.111205296590924e-05,
+        "step": 1997,
+        "total": 0.004991077817976475
+      },
+      {
+        "contract": 0.013539480045437813,
+        "distribution": 0.0169718898832798,
+        "output": 4.616798833012581e-05,
+        "step": 1998,
+        "total": 0.005461960099637508
+      },
+      {
+        "contract": 0.013590147718787193,
+        "distribution": 0.015448028221726418,
+        "output": 4.5696015149587765e-05,
+        "step": 1999,
+        "total": 0.005481754895299673
+      },
+      {
+        "contract": 0.012912155129015446,
+        "distribution": 0.028475040569901466,
+        "output": 4.0442821045871824e-05,
+        "step": 2000,
+        "total": 0.005205304827541113
+      }
+    ],
+    "seed": 1337,
+    "skill": "B",
+    "test": {
+      "contract_mse": 0.015475943684577942,
+      "count": 64,
+      "exact_accuracy": 1.0,
+      "loss": 6.564102659467608e-05
+    },
+    "train_values": 128,
+    "updates": 2000,
+    "validation": {
+      "contract_mse": 0.015854185447096825,
+      "count": 64,
+      "exact_accuracy": 1.0,
+      "loss": 5.041489202994853e-05
+    },
+    "wall_seconds": 3.3048032950027846
+  },
+  "training_wall_seconds": 6.64007548900554
+}

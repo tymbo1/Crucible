@@ -1,0 +1,63 @@
+{
+  "checkpoints": [
+    0,
+    500,
+    1000,
+    1500,
+    2000
+  ],
+  "composition_rows_in_training_or_validation": false,
+  "gpu_used": false,
+  "lambda_values": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "manifest_checks": {
+    "b_training_isolated_from_a_test_inputs": true,
+    "b_training_isolated_from_a_test_outputs": true,
+    "composition_provenance_is_test_only": true,
+    "partition_cardinality": true,
+    "partition_disjoint": true,
+    "test_answers_not_in_rows": true,
+    "training_no_composition": true,
+    "validation_no_composition": true
+  },
+  "manifest_sha256": "73d1ecb0a35460f97c4da464542c6adfee6b05acf67af3fec696503761c58dc4",
+  "same_manifest_as_original": true,
+  "schema_version": "crucible-cnss-lambda-sweep-preflight-v1-20261101",
+  "seeds": [
+    42,
+    1337,
+    2025
+  ],
+  "updates_per_skill": 2000,
+  "workspace_artifact": "experiments/crucible_track_a_cnss_semantic_interface_compatibility_v1_rerun_contractfix_20261101/workspace_artifacts/a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c",
+  "workspace_artifact_hashes": {
+    "architecture_file_sha256": "72cd48967973542f99c77bf5aa5d7b7d0ccf7a0ea4a6a99469e71271962c7679",
+    "protocol_sha256": "7dd0031590534a9ef9d2d122471a0398098b354f13c0e1b3e622bef26c7687a0",
+    "schema_version": "crucible-cnss-frozen-workspace-hashes-v1-20261101",
+    "serialization_file_sha256": "fff78a5c266c574001a8024e5b4e7bf9f9a0ec397ad90b7cab6238312d9c31c1",
+    "source_runner_sha256": "25e1051a51e0ceca9cae9c637a9711170afd9acb295d7ce8ac3ac69972b0bedc",
+    "state_file_sha256": "ee81037f63b0fba7d30a6620a2f379be4c6ec0cb474d0b8186e23e302290a6f7",
+    "tensor_sha256": {
+      "decoder.0.bias": "a94c78ce97e069dc3d15384c84ae569e7734720ba1615a969e4ecfd7d66723e0",
+      "decoder.0.weight": "86841a2818b603215b4846a16713b47f09942bf1c9324a09e681a147e32f5f7e",
+      "decoder.2.bias": "de27bc8dcf6b67ce8030aa64233b0c4fe552950bdc9703cf0442cf8de6f75654",
+      "decoder.2.weight": "a42adaea1bbb5bf28b8cf1d660c5aade6635f1a4d7ae6f5a50e5b8f6bcba5c08",
+      "encoder.0.bias": "0dcf9dd39d864cda789eaad0fd69712eba6dfde0f84dad3189df3a1e2d1c5e6e",
+      "encoder.0.weight": "795066e393c98b4a891a2e402e9adbc0f55d0a9eef55b3719fb7815b7d7b6b7a",
+      "encoder.2.bias": "4573081f60267afa7bf9b5bc83aaefc68756c8f83cc9e537cfde736dd3f60b8d",
+      "encoder.2.weight": "8b53a4b01bccacaf59a68b104f7f0af9189c92cdf2273c07d60e1cb1e09f9dae"
+    },
+    "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+  },
+  "workspace_digest": "a1ec947075a8a100afee37a3595d606b09b6f8befdb94a73605b15f016bdfe4c"
+}
