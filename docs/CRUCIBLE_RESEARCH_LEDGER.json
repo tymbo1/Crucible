@@ -1,6 +1,6 @@
 {
   "schema_version": "crucible_research_ledger_v1",
-  "updated": "2026-10-28",
+  "updated": "2026-10-31",
   "status_values": [
     "ESTABLISHED",
     "FAILED",
@@ -1259,6 +1259,27 @@
         "experiments/crucible_cumulative_adaptation_motif_comparison_20261028/HASHES.json"
       ],
       "novelty_terms": ["fresh operator-validation manifest", "16-task applicability allocation", "no-guidance same-memory ablation", "unactivated adaptive comparison", "measured target acquisition"]
+    },
+    {
+      "id": "source-training-diagnostic-v1",
+      "status": "UNTESTED",
+      "title": "Bounded source-competence training diagnostic",
+      "hypothesis": "Starting from the frozen 120M Crucible checkpoint, answer-position training on repaired public source procedures will establish explicit execution and, separately, query/function-identifiable induction on held-out source procedures.",
+      "mechanisms": ["source-task-acquisition", "explicit-procedure-execution", "query-identifiable-induction", "function-identification", "capability-retention"],
+      "interventions": ["execution-only positive-control phase", "source-induction phase", "fixed answer-position objective", "protected checkpoint replay"],
+      "controls": ["frozen step-15000 checkpoint", "separate seeds", "private source oracles", "majority and balanced baselines", "per-task transition tables", "fail-closed numerical checks", "no target access"],
+      "result": "The protocol and runner were registered and the CPU preflight passed: 320 public/private rows, structural and functional separation, decoder fixtures, finite step-15000 checkpoint and checkpoint round-trip all passed. No source training has started.",
+      "limits": ["No neural acquisition result yet", "No dense architectural comparison", "The function-identification validation set is pilot-sized", "The Boolean grammar and byte prompt remain engineered scaffolding", "Productive retention and C0-C3 remain blocked"],
+      "unresolved": ["Whether explicit execution can be acquired under the fixed answer-position objective", "Whether query-identifiable induction generalizes beyond source examples", "Whether function-identifiable induction reaches its per-seed gate", "Whether later learning preserves and reuses any acquired source capability"],
+      "artifacts": [
+        "docs/CRUCIBLE_SOURCE_TRAINING_DIAGNOSTIC_PROTOCOL_20261031.md",
+        "experiments/crucible_source_training_diagnostic_20261031/DIAGNOSTIC_PROTOCOL.json",
+        "tools/run_crucible_source_training_diagnostic_20261031.py",
+        "experiments/crucible_source_training_diagnostic_20261031/PREFLIGHT_REPORT.json",
+        "experiments/crucible_source_training_diagnostic_20261031/PREFLIGHT_REPORT.md",
+        "experiments/crucible_source_competence_frozen_diagnostic_20261031/FROZEN_DIAGNOSTIC_REPORT.md"
+      ],
+      "novelty_terms": ["source-task training", "answer-position objective", "execution positive control", "function-identifiable induction", "protected replay"]
     }
   ]
 }

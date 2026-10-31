@@ -1,0 +1,87 @@
+{
+  "answer_position_smoke": {
+    "finite": true,
+    "logits_shape": [
+      2,
+      259
+    ],
+    "rows": 2
+  },
+  "base_checkpoint": {
+    "finite_model": true,
+    "finite_optimizer": true,
+    "parameter_count": 120842496,
+    "sha256": "e49faa226aaa96bc26f4abbed700ecf313ad59cbf68869cfc0327c61f5902d5a",
+    "step": 15000
+  },
+  "checkpoint_roundtrip": true,
+  "cuda_training": "not run by preflight",
+  "curriculum": {
+    "function_hashes_unique": true,
+    "manifest_sha256": "699c7a2f82a5ff630ee59df689916131ec4eabd5de1513cdf4665f15141e055c",
+    "private_oracle_hashes_verified": true,
+    "public_hashes_verified": true,
+    "rows_checked": 320,
+    "structure_hashes_unique": true
+  },
+  "decoder_fixture": {
+    "non_answer_abstains": true,
+    "one": true,
+    "passed": true,
+    "ties_abstain": true,
+    "zero": true
+  },
+  "interpretation_boundary": [
+    "Preflight validates implementation and data boundaries only.",
+    "No source-task updates or held-out scientific training occurred.",
+    "The original frozen diagnostic and old source-gate run remain unchanged.",
+    "C0-C3 and the original two-arm comparison remain blocked."
+  ],
+  "schema_version": "crucible-source-training-diagnostic-v1-20261031",
+  "scientific_authorization": false,
+  "sealed_target_answers_loaded": false,
+  "status": "preflight_passed",
+  "target_data_loaded": false,
+  "training_authorized": false,
+  "training_configuration": {
+    "answer_loss": "fixed_answer_position_only",
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "gradient_accumulation_steps": 2,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 0.0003,
+    "microbatch_size": 4,
+    "phases": {
+      "execution": {
+        "checkpoints": [
+          0,
+          50,
+          100,
+          250,
+          500
+        ],
+        "seed_offset": 1701,
+        "training_split": "execution_train",
+        "updates": 500
+      },
+      "induction": {
+        "checkpoints": [
+          0,
+          100,
+          250,
+          500,
+          750,
+          1000
+        ],
+        "seed_offset": 2701,
+        "training_split": "source_train",
+        "updates": 1000
+      }
+    },
+    "weight_decay": 0.01
+  },
+  "training_started": false
+}

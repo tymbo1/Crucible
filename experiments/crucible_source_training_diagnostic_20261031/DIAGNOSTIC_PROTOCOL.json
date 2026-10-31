@@ -1,0 +1,70 @@
+{
+  "schema_version": "crucible-source-training-diagnostic-v1-20261031",
+  "date": "2026-10-31",
+  "status": "registered_preflight_only",
+  "scientific_authorization": false,
+  "training_authorized": false,
+  "training_started": false,
+  "target_data_loaded": false,
+  "sealed_target_answers_loaded": false,
+  "base_checkpoint": {
+    "path": "<local-path-redacted>",
+    "step": 15000,
+    "sha256": "e49faa226aaa96bc26f4abbed700ecf313ad59cbf68869cfc0327c61f5902d5a"
+  },
+  "curriculum": {
+    "manifest": "experiments/crucible_source_curriculum_repair_20261031/MANIFEST.json",
+    "manifest_sha256": "699c7a2f82a5ff630ee59df689916131ec4eabd5de1513cdf4665f15141e055c",
+    "seeds": [42, 1337],
+    "private_oracles": "<outside-git-local-only>"
+  },
+  "phases": {
+    "execution_positive_control": {
+      "training_split": "execution_train",
+      "updates": 500,
+      "checkpoints": [0, 50, 100, 250, 500]
+    },
+    "induction": {
+      "training_split": "source_train",
+      "updates": 1000,
+      "checkpoints": [0, 100, 250, 500, 750, 1000],
+      "requires_execution_phase_pass": true
+    }
+  },
+  "training": {
+    "model": "120m_existing_crucible",
+    "microbatch_size": 4,
+    "gradient_accumulation_steps": 2,
+    "effective_examples_per_update": 8,
+    "optimizer": "fresh_adamw",
+    "learning_rate": 0.0003,
+    "betas": [0.9, 0.95],
+    "eps": 1e-8,
+    "weight_decay": 0.01,
+    "context": 512,
+    "gradient_clip_norm": 1.0,
+    "cuda_precision": "bf16_autocast_if_supported",
+    "cpu_precision": "fp32",
+    "answer_loss": "fixed_answer_position_only"
+  },
+  "decoder": {
+    "mode": "fixed_position_one_step",
+    "allowed_answer_tokens": [51, 52],
+    "tie": "abstain",
+    "non_answer": "abstain",
+    "free_running_generation": false
+  },
+  "validation_thresholds": {
+    "explicit_procedure_execution": {"rows_per_seed": 16, "min_correct": 14, "min_coverage": 15},
+    "query_identifiable_induction": {"rows_per_seed": 32, "min_correct": 26, "min_coverage": 29},
+    "function_identifiable_induction": {"rows_per_seed": 16, "min_correct": 13, "min_coverage": 14}
+  },
+  "safety": {
+    "stop_on_nonfinite": true,
+    "atomic_checkpoint_write": true,
+    "checkpoint_roundtrip_required": true,
+    "protected_replay": true,
+    "target_access_prohibited": true,
+    "c0_c3_unlocked": false
+  }
+}
